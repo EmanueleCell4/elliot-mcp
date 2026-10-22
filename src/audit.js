@@ -9,7 +9,7 @@
 
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
-import { randomBytes } from "node:crypto";
+import { randomBytes, createHash, createHmac, createCipheriv, createDecipheriv, timingSafeEqual } from "node:crypto";
 import { readFile, writeFile, mkdir, stat } from "node:fs/promises";
 import path from "node:path";
 import { VERSION, makeReceipt, saveReceipt, elliotDir } from "./receipt.js";
@@ -26,6 +26,23 @@ const CLAIM_PAGE = /(^|\/)(security|privacy|pricing|trust|compliance|features?|a
 const MAX_SOURCES = 80;
 const MIN_QUOTE = 8;
 const LINE_SLACK = 2;
+const reviewTokenDigest = (token) => createHash("sha256").update(token).digest("hex");
+const reviewerCipherKey = (token) => createHmac("sha256", token).update("elliot-review-capability-v1").digest();
+
+function sealReviewerCapability(capability, auditId, serverToken) {
+  const iv = randomBytes(12);
+  const cipher = createCipheriv("aes-256-gcm", reviewerCipherKey(serverToken), iv);
+  cipher.setAAD(Buffer.from(auditId));
+  const encrypted = Buffer.concat([cipher.update(capability, "utf8"), cipher.final()]);
+  return { iv: iv.toString("base64"), tag: cipher.getAuthTag().toString("base64"), data: encrypted.toString("base64") };
+}
+
+function openReviewerCapability(sealed, auditId, serverToken) {
+  const decipher = createDecipheriv("aes-256-gcm", reviewerCipherKey(serverToken), Buffer.from(sealed.iv, "base64"));
+  decipher.setAAD(Buffer.from(auditId));
+  decipher.setAuthTag(Buffer.from(sealed.tag, "base64"));
+  return Buffer.concat([decipher.update(Buffer.from(sealed.data, "base64")), decipher.final()]).toString("utf8");
+}
 // A full audit that records only a handful of claims is not an audit. Projects with real docs need depth.
 export const MIN_CLAIMS = 12;
 
@@ -111,9 +128,11 @@ export async function startAudit({ path: dir, sources: only, sweep = true } = {}
       withLines.push({ file: f, lines: text.split("\n").length });
     } catch { /* unreadable, skip */ }
   }
+  const auditId = "aud_" + randomBytes(6).toString("hex");
+  const reviewerCapability = process.env.ELLIOT_REVIEW_TOKEN ? randomBytes(32).toString("base64url") : null;
   const audit = {
     elliot: VERSION,
-    id: "aud_" + randomBytes(6).toString("hex"),
+    id: auditId,
     root,
     project: path.basename(root),
     ...head,
@@ -123,6 +142,11 @@ export async function startAudit({ path: dir, sources: only, sweep = true } = {}
     candidates: doSweep ? await docCandidates(root, withLines) : [],
     signals: doSweep ? await codeSignals(root) : [],
     file_count: files.length,
+    ...(reviewerCapability ? {
+      reviewer_token_hash: reviewTokenDigest(reviewerCapability),
+      reviewer_server_token_hash: reviewTokenDigest(process.env.ELLIOT_REVIEW_TOKEN),
+      reviewer_token_sealed: sealReviewerCapability(reviewerCapability, auditId, process.env.ELLIOT_REVIEW_TOKEN),
+    } : {}),
     claims: [],
     rejected: [],
     finished_at: null,
@@ -313,7 +337,7 @@ function findingText(f) {
   if (f.behavior) {
     return `### ${f.n} (undisclosed behavior, severity ${f.severity})\n  Behavior: ${f.behavior}\n  User impact: ${f.user_impact}\n  Docs searched: ${f.docs_searched}\n  Evidence:\n${ev}`;
   }
-  return `### ${f.n} (${f.verdict}, severity ${f.severity})\n  Claim: ${f.claim}\n  Claimed in ${f.source.file}:${f.source.line_start}: "${f.source.quote}"\n  Auditor says: ${f.explanation}\n  User impact: ${f.user_impact}\n  Evidence:\n${ev}`;
+  return `### ${f.n} (${f.verdict}, severity ${f.severity})\n  Claim: ${f.claim}\n  Claimed in ${f.source.file}:${f.source.line_start}: "${f.source.quote}"\n  User impact: ${f.user_impact}\n  Evidence:\n${ev}`;
 }
 
 /** Everything a fresh reviewer needs, with no access to the auditor's reasoning beyond what it submitted. */
@@ -321,16 +345,15 @@ export async function reviewPacket({ audit_id }) {
   const audit = await loadAudit(audit_id);
   const pending = needsReview(audit);
   const body = pending.map(findingText).join("\n\n");
-  const prompt = `You are an independent reviewer for an Elliot audit of the repository at ${audit.root} (commit ${audit.commit ? audit.commit.slice(0, 12) : "uncommitted"}).
-You did not do this audit. Your job is to try to prove each finding below WRONG, not to agree with it. Do not modify any file.
+  const prompt = `You are an independent reviewer for an Elliot audit. Your job is to try to prove each finding below WRONG using only the checked evidence packet. You have no repository access and must make your decision from this evidence alone. Do not infer facts not present in the packet.
 
-For each finding, open the claimed source and the evidence, then search the repository yourself (other names too) and decide:
+For each finding, use the quoted source and checked evidence to decide:
 - confirm: the docs really promise it, the code really contradicts it (or really does the undisclosed thing), and a user relying on the docs would really be misled or harmed.
 - downgrade: technically true but immaterial. An omission, a tiny delay or cache, a naming or count detail, an internal or roadmap doc rather than a promise to users, or a real issue attached to a sentence that is itself true.
 - reject: the auditor misread the code or the docs, and the claim actually holds. Give at least one code quote that shows it.
 Also check the severity: say in the reason if it is too high.
 
-Record every decision with the Elliot tool elliot_record_review (audit_id "${audit.id}", finding = the id after ###). Quotes you give are checked against the files, like the auditor's.
+Record every decision with the Elliot tool elliot_record_review (audit_id "${audit.id}", reviewer_token "${audit.reviewer_token_sealed && process.env.ELLIOT_REVIEW_TOKEN ? openReviewerCapability(audit.reviewer_token_sealed, audit.id, process.env.ELLIOT_REVIEW_TOKEN) : "legacy"}", finding = the id after ###). Quotes you give are checked against the files, like the auditor's.
 
 ${body}`;
   audit.review_requested_at ??= new Date().toISOString();
@@ -341,9 +364,21 @@ ${body}`;
 export const REVIEW_OUTCOMES = ["confirm", "downgrade", "reject"];
 
 export async function recordReview(input) {
+  if (process.env.ELLIOT_ROLE === "auditor") throw new Error("auditor role cannot record reviewer decisions");
+  if (process.env.ELLIOT_ROLE === "reviewer" && !process.env.ELLIOT_REVIEW_TOKEN) throw new Error("reviewer mode requires ELLIOT_REVIEW_TOKEN");
+  if (process.env.ELLIOT_REVIEW_TOKEN && process.env.ELLIOT_ROLE !== "reviewer") throw new Error("review decisions are accepted only by the separate reviewer-mode Elliot server");
   const audit = await loadAudit(input.audit_id);
+  if (process.env.ELLIOT_ROLE === "reviewer") {
+    const expectedServer = Buffer.from(audit.reviewer_server_token_hash || "", "hex");
+    const providedServer = Buffer.from(reviewTokenDigest(process.env.ELLIOT_REVIEW_TOKEN), "hex");
+    if (expectedServer.length !== providedServer.length || !timingSafeEqual(expectedServer, providedServer)) throw new Error("reviewer server credential does not match this audit");
+    const expectedCapability = Buffer.from(audit.reviewer_token_hash || "", "hex");
+    const providedCapability = Buffer.from(typeof input.reviewer_token === "string" ? reviewTokenDigest(input.reviewer_token) : "", "hex");
+    if (expectedCapability.length !== providedCapability.length || !timingSafeEqual(expectedCapability, providedCapability)) throw new Error("review capability is invalid or belongs to another audit");
+  }
   if (audit.finished_at) throw new Error("this audit is finished; start a new one");
   const f = [...audit.claims, ...(audit.behaviors || [])].find((x) => x.n === input.finding);
+  if (f?.review) throw new Error(`finding ${input.finding} already has a review decision`);
   const problems = [];
   if (!f) problems.push(`no finding ${input.finding} in this audit`);
   else if (!f.behavior && !isFinding(f)) problems.push(`finding ${input.finding} is ${f.verdict}; only FALSE, PARTIAL and behaviors are reviewed`);
@@ -401,6 +436,9 @@ export async function finishAudit({ audit_id, out_dir, skipped = [] }) {
   await mkdir(dir, { recursive: true });
   const totals = tally(audit);
   const data = { ...audit, ...resolve(audit), raw_claims: audit.claims, totals };
+  delete data.reviewer_token_hash;
+  delete data.reviewer_server_token_hash;
+  delete data.reviewer_token_sealed;
   await writeFile(path.join(dir, "claims.json"), JSON.stringify(data, null, 2));
   await writeFile(path.join(dir, "report.md"), renderMarkdown(data));
   await writeFile(path.join(dir, "report.html"), renderHtml(data));

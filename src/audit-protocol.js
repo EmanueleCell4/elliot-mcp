@@ -57,8 +57,9 @@ Never change a verdict just to get it accepted. Do not write exploit code; descr
 
 ## 5. Independent review (required)
 Call elliot_review_packet. Start a FRESH subagent (Claude Code: the Agent/Task tool) and give it the
-returned prompt exactly; it records a decision on every finding with elliot_record_review. Do not review
-your own findings and do not argue with its decisions.
+returned evidence packet. In isolated mode, connect that subagent only to the reviewer-only MCP server;
+the auditor server does not expose elliot_record_review. The reviewer must decide from the checked
+evidence packet and record every decision with elliot_record_review. Do not review your own findings.
 
 ## 6. Finish
 Call elliot_audit_finish with audit_id "{{AUDIT_ID}}", passing in \`skipped\` the sweep items that need no
@@ -93,8 +94,8 @@ PARTIAL and FALSE need \`user_impact\` and a severity. When something claimed is
 Submit each with elliot_record_claim (source = the exact sentence in the source file).
 
 ## 3. Independent review (required for any PARTIAL or FALSE)
-Call elliot_review_packet and give the returned prompt to a FRESH subagent; it records decisions with
-elliot_record_review.
+Call elliot_review_packet and give the evidence packet to a FRESH subagent. In isolated mode, connect
+that subagent only to the reviewer-only MCP server, which exposes elliot_record_review.
 
 ## 4. Finish
 Call elliot_audit_finish with audit_id "{{AUDIT_ID}}". Then report the totals and the most important finding.

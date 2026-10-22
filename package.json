@@ -8,7 +8,9 @@
   },
   "scripts": {
     "start": "node src/index.js",
-    "test": "node --test test/*.test.js"
+    "test": "node --test --test-reporter=tap test/*.test.js",
+    "check": "node scripts/check-static.mjs",
+    "demo": "node examples/reproduce-value.mjs"
   },
   "keywords": [
     "mcp",

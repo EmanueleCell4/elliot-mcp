@@ -5,11 +5,12 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
-import { VERSION, makeReceipt, saveReceipt, readReceipts } from "./receipt.js";
+import { VERSION, makeReceipt, saveReceipt, readReceipts, verifyAttestation } from "./receipt.js";
 import { checkUrl } from "./checks/url.js";
 import { checkNpm } from "./checks/npm.js";
 import { checkGithub } from "./checks/github.js";
 import { snapshot, checkChanges } from "./checks/changes.js";
+import { checkOutcome } from "./checks/outcome.js";
 import { startAudit, recordClaim, recordBehavior, reviewPacket, recordReview, finishAudit, AUDIT_VERDICTS, SEVERITIES, REVIEW_OUTCOMES } from "./audit.js";
 import { AUDIT_PROTOCOL, FOCUSED_PROTOCOL } from "./audit-protocol.js";
 
@@ -24,13 +25,28 @@ Rules for the agent:
 1. Before starting a task that should modify files, call elliot_snapshot and keep the snapshot_id.
 2. Before telling the user a task is done, call the elliot tool that matches the claim:
    - files were changed/fixed/cleaned -> verify_changes (with the snapshot_id)
+   - a functional behavior works -> verify_outcome (provide the test command and arguments)
    - something is deployed or live     -> verify_url
    - a PR is merged / CI is green / a commit is pushed -> verify_github
    - a package is published            -> verify_npm
 3. Report Elliot's verdict to the user verbatim with the receipt id. Never say a task is done if the verdict is NOT_VERIFIED; say what Elliot found instead. INCONCLUSIVE means: say you could not confirm it.
 4. When the user asks for a claim audit ("/elliot-audit", "audit this repo", "does the code do what the README says"), call elliot_audit_start and follow the protocol it returns. Elliot checks every citation you give it; uncheckable claims are rejected.`;
 
-const server = new McpServer({ name: "elliot", version: VERSION }, { instructions: INSTRUCTIONS });
+const reviewerMode = process.env.ELLIOT_ROLE === "reviewer";
+const reviewToken = process.env.ELLIOT_REVIEW_TOKEN;
+if (process.env.ELLIOT_ROLE && !["auditor", "reviewer"].includes(process.env.ELLIOT_ROLE)) throw new Error("ELLIOT_ROLE must be auditor or reviewer");
+if (reviewerMode && !reviewToken) throw new Error("reviewer mode requires ELLIOT_REVIEW_TOKEN");
+if (process.env.ELLIOT_ROLE === "auditor" && !reviewToken) throw new Error("isolated auditor mode requires ELLIOT_REVIEW_TOKEN");
+const serverInstructions = reviewerMode
+  ? "Reviewer-only Elliot endpoint. It exposes only elliot_record_review and accepts decisions against the checked evidence packet supplied to you. Do not request or inspect repository files."
+  : `${INSTRUCTIONS}${reviewToken ? "\n\nIsolated review is enabled: send the evidence packet to a separate reviewer process configured with ELLIOT_ROLE=reviewer and the same ELLIOT_REVIEW_TOKEN. This server cannot record review decisions." : ""}`;
+const server = new McpServer({ name: "elliot", version: VERSION }, { instructions: serverInstructions });
+const registerTool = server.registerTool.bind(server);
+server.registerTool = (name, ...args) => {
+  if (reviewerMode && name !== "elliot_record_review") return;
+  if (!reviewerMode && (reviewToken || process.env.ELLIOT_ROLE === "auditor") && name === "elliot_record_review") return;
+  return registerTool(name, ...args);
+};
 
 const claim = z.string().max(500).optional().describe("The claim being checked, in the agent's own words, e.g. 'Deployed the landing page'.");
 
@@ -61,6 +77,37 @@ server.registerTool(
     annotations: readOnly,
   },
   async (input) => respond("url", input, await checkUrl(input)),
+);
+
+server.registerTool(
+  "verify_outcome",
+  {
+    title: "Run a functional check in isolation",
+    description: "Run a command and arguments in a disposable repository copy under the host OS sandbox. Writes stay in the copy, network is blocked, and VERIFIED requires exit code zero. If the OS sandbox cannot start, returns INCONCLUSIVE without running the command.",
+    inputSchema: {
+      path: z.string().optional().describe("Repository path (default: server working directory)."),
+      command: z.string().min(1).max(500).describe("Executable, for example npm, node or pytest. No shell is used."),
+      args: z.array(z.string().max(2000)).max(100).optional().describe("Executable arguments, e.g. [\"test\"] for npm test."),
+      timeout_ms: z.number().int().min(1000).max(600000).optional().describe("Timeout, default 120000ms."),
+      claim,
+    },
+    annotations: { readOnlyHint: true, openWorldHint: false },
+  },
+  async (input) => respond("outcome", input, await checkOutcome(input)),
+);
+
+server.registerTool(
+  "verify_attestation",
+  {
+    title: "Verify a signed receipt",
+    description: "Verify an Ed25519-signed Elliot receipt and its digest. Returns valid=true only when the signature passes and an explicitly supplied public key matches; without one it reports cryptographic validity but marks signer identity untrusted.",
+    inputSchema: { receipt: z.record(z.string(), z.unknown()), public_key: z.string().optional().describe("Public key independently trusted by the verifier. Omit to check only mathematical signature validity; valid remains false.") },
+    annotations: readOnly,
+  },
+  async ({ receipt, public_key }) => {
+    const result = verifyAttestation(receipt, public_key);
+    return { content: [{ type: "text", text: JSON.stringify(result, null, 2) }] };
+  },
 );
 
 server.registerTool(
@@ -236,7 +283,7 @@ server.registerTool(
   "elliot_review_packet",
   {
     title: "Get the independent review packet",
-    description: "Returns a self-contained prompt listing every FALSE, PARTIAL and undisclosed-behavior finding that still needs review. Give it to a FRESH subagent that has not seen the audit (in Claude Code, the Agent/Task tool), and let that subagent record its decisions with elliot_record_review. Do not review your own findings.",
+    description: "Returns only findings and checked evidence for review. Give it to a fresh reviewer process. With ELLIOT_REVIEW_TOKEN configured, the auditor endpoint cannot record review decisions; connect the reviewer only to a separate ELLIOT_ROLE=reviewer server.",
     inputSchema: { audit_id: z.string().regex(/^aud_[0-9a-f]{12}$/) },
     annotations: { readOnlyHint: false, openWorldHint: false },
   },
@@ -251,9 +298,10 @@ server.registerTool(
   "elliot_record_review",
   {
     title: "Record an independent review decision",
-    description: "For the reviewer subagent: confirm, downgrade or reject one finding. Reject needs a code quote showing the claim holds; quotes are checked against the files.",
+    description: "For the reviewer process: confirm, downgrade or reject one finding. In isolated mode provide the audit-scoped reviewer_token from the evidence packet. Reject needs a code quote showing the claim holds; quotes are checked against the files.",
     inputSchema: {
       audit_id: z.string().regex(/^aud_[0-9a-f]{12}$/),
+      reviewer_token: z.string().max(200).optional().describe("Per-audit capability included in the evidence packet when isolated review is enabled."),
       finding: z.string().regex(/^(\d+|b\d+)$/).describe("The finding id, e.g. 3 or b1."),
       outcome: z.enum(REVIEW_OUTCOMES).describe("confirm: real and material. downgrade: true but immaterial. reject: the claim actually holds."),
       reason: z.string().min(10).max(800),
@@ -289,7 +337,7 @@ server.registerTool(
     const r = await finishAudit(input);
     if (!r.finished && r.missing) return { isError: true, content: [{ type: "text", text: `⏸ Not finished: ${r.missing.length} risk-sweep items are not addressed yet.\n${r.missing.map((m) => `- ${m.kind === "candidate" ? m.id : "signal " + m.id} ${m.where}: ${m.text}`).join("\n")}\nFor a doc candidate: record a claim whose source is that line, or skip it with a reason. For a code signal: record a claim on the doc sentence that promises something about it, or an elliot_record_behavior if the docs say nothing, or skip it with a reason. Then call elliot_audit_finish again.` }] };
     if (!r.finished && r.too_few) return { isError: true, content: [{ type: "text", text: `⏸ Not finished: only ${r.too_few.have} claims recorded; a full audit needs at least ${r.too_few.need}. Go back to the README, user docs and product pages and record more concrete, checkable claims (defaults, flags, supported platforms, security and data handling, limits). If the docs genuinely contain fewer checkable promises, call elliot_audit_finish again with {"few_claims": "<why>"} added to skipped.` }] };
-    if (!r.finished) return { isError: true, content: [{ type: "text", text: `⏸ Not finished: ${r.unreviewed.length} findings (${r.unreviewed.join(", ")}) have not been independently reviewed. Call elliot_review_packet, give its prompt to a fresh subagent, and when it has recorded every decision call elliot_audit_finish again with the same skipped list.` }] };
+    if (!r.finished) return { isError: true, content: [{ type: "text", text: `⏸ Not finished: ${r.unreviewed.length} findings (${r.unreviewed.join(", ")}) have not been independently reviewed. Call elliot_review_packet and pass its evidence packet to a fresh reviewer. When ELLIOT_REVIEW_TOKEN is configured, the reviewer must connect through the separate reviewer-only MCP server. After every decision is recorded, call elliot_audit_finish again with the same skipped list.` }] };
     const t = r.totals;
     return { content: [{ type: "text", text: `📄 Report written to ${r.dir}\n${t.claims} claims: ${t.VERIFIED} verified, ${t.PARTIAL} partial, ${t.FALSE} false, ${t.UNVERIFIABLE} unverifiable. ${t.behaviors} undisclosed behaviors. The independent review downgraded ${t.downgraded} findings to notes and retracted ${t.retracted}. ${t.rejected_citations} citations were rejected and corrected along the way.\nFiles:\n- ${r.files.join("\n- ")}` }] };
   },

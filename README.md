@@ -179,6 +179,7 @@ The same server also checks individual claims while the agent works. It ships in
 | The agent says | Tool | What Elliot looks at |
 |---|---|---|
 | "I fixed / cleaned / refactored the code" | `elliot_snapshot`, then `verify_changes` | the content hash of every file before and after the task |
+| "The behavior works" | `verify_outcome` | runs the requested test command in a temporary OS sandbox; only exit code 0 is VERIFIED |
 | "It's deployed / live" | `verify_url` | the HTTP status and the text really served at the URL |
 | "PR merged", "CI is green", "pushed" | `verify_github` | the GitHub API: merge state, check runs, whether the commit exists |
 | "Published to npm" | `verify_npm` | the npm registry: version exists, published after a given time |
@@ -198,6 +199,8 @@ These checks answer `VERIFIED`, `NOT_VERIFIED` or `INCONCLUSIVE`. Inconclusive m
 | `elliot_audit_finish` | the agent | Refuses to finish while risk-sweep items or reviews are missing, then writes the report. |
 | `elliot_snapshot` | the agent | Fingerprints the working tree before a task. |
 | `verify_changes` | the agent | Compares the tree with a snapshot, or with HEAD. |
+| `verify_outcome` | the agent | Runs a command and arguments against a disposable copy, with writes confined to the copy and network blocked. |
+| `verify_attestation` | anyone | Checks an Ed25519 signature and receipt digest, optionally against a separately trusted public key. |
 | `verify_url` | the agent | Checks status and expected text at a URL. |
 | `verify_github` | the agent | Checks `pr_merged`, `checks_passing` or `commit_exists`. |
 | `verify_npm` | the agent | Checks a package version on the registry. |
@@ -249,6 +252,10 @@ All settings are optional environment variables.
 | `ELLIOT_DIR` | `.elliot/` in the working directory | Where receipts and audit state are stored. |
 | `ELLIOT_GITHUB_API` | `https://api.github.com` | GitHub API base URL, for GitHub Enterprise or tests. |
 | `ELLIOT_NPM_REGISTRY` | `https://registry.npmjs.org` | Registry used by `verify_npm`. |
+| `ELLIOT_SIGNING_KEY` | unset | Path to an Ed25519 PKCS#8 private key. When set, every saved receipt is signed. Keep it outside the repository. |
+| `ELLIOT_SIGNER_ID` | public-key fingerprint | Human-readable signer label included in signed receipts. The label is not an identity proof by itself. |
+| `ELLIOT_ROLE` | unset | Set to `reviewer` for a separate reviewer-only MCP server process. |
+| `ELLIOT_REVIEW_TOKEN` | unset | Enables isolated review mode; configure the same non-empty secret on auditor and reviewer server processes. |
 
 ## Network access and data
 
@@ -297,7 +304,41 @@ A receipt looks like this:
 }
 ```
 
-The digest makes a receipt tamper-evident: change a field and the digest no longer matches. A local receipt is still produced on your own machine, so it proves nothing to a third party. Independently signed receipts are on the roadmap.
+The digest detects changes to a receipt. For third-party verification, configure a private key outside the repository:
+
+```bash
+openssl genpkey -algorithm Ed25519 -out "$HOME/.elliot-signing-key.pem"
+chmod 600 "$HOME/.elliot-signing-key.pem"
+export ELLIOT_SIGNING_KEY="$HOME/.elliot-signing-key.pem"
+export ELLIOT_SIGNER_ID="acme-ci"
+```
+
+Saved receipts then include the Ed25519 public key, its SHA-256 fingerprint, signer label and signature. A verifier checks the digest and signature with `verify_attestation`; `valid` is true only when a separately trusted public key is supplied and matches. Without that key, the verifier reports cryptographic validity while marking signer identity untrusted. The embedded key proves which key made the signature, not that the key belongs to a particular person or organization. Publish or distribute the trusted public key through a channel your verifiers already trust. Protect and back up the private key outside the repo. Receipts created without `ELLIOT_SIGNING_KEY` remain unsigned for compatibility.
+
+### Isolated review
+
+For enforced reviewer separation, run Elliot twice with the same `ELLIOT_DIR` and a private `ELLIOT_REVIEW_TOKEN` (generate one with `openssl rand -hex 32`). The auditor process uses `ELLIOT_ROLE=auditor`; the independent reviewer process uses `ELLIOT_ROLE=reviewer`. The auditor server omits `elliot_record_review`; the reviewer server exposes only that tool. `elliot_review_packet` gives the reviewer the finding, checked quotes, impact and an audit-scoped capability, without repository access or the auditor's explanation. Elliot encrypts the capability in audit state, checks its hash and the reviewer server credential on submission, and rejects cross-audit reuse and duplicate decisions. Keep the shared `ELLIOT_REVIEW_TOKEN` in the two host configurations; only the single-audit capability travels in the review packet.
+
+```json
+{
+  "mcpServers": {
+    "elliot-auditor": {
+      "command": "node", "args": ["/path/to/elliot-mcp/src/index.js"],
+      "env": { "ELLIOT_ROLE": "auditor", "ELLIOT_REVIEW_TOKEN": "<same-random-secret>", "ELLIOT_DIR": "/path/to/project/.elliot" }
+    },
+    "elliot-reviewer": {
+      "command": "node", "args": ["/path/to/elliot-mcp/src/index.js"],
+      "env": { "ELLIOT_ROLE": "reviewer", "ELLIOT_REVIEW_TOKEN": "<same-random-secret>", "ELLIOT_DIR": "/path/to/project/.elliot" }
+    }
+  }
+}
+```
+
+The host must give the reviewer only the packet and the reviewer MCP connection. The default unconfigured mode retains the original combined tool surface for existing MCP clients. Separate processes and tool permissions enforce the boundary; deployments where the auditor can read reviewer host configuration or impersonate its MCP connection do not provide a separate trust domain.
+
+### Functional outcome checks
+
+Call `verify_outcome` with an executable and argument array, for example `command: "npm", args: ["test"]`. Elliot copies the working tree to a temporary directory, then runs the command in the OS sandbox (`sandbox-exec` on macOS or `bwrap` on Linux), with network access blocked and writes limited to the temporary copy. A zero exit code is `VERIFIED`; a failing check is `NOT_VERIFIED`. If the OS sandbox is unavailable, the result is `INCONCLUSIVE` and the command is not run. Dependencies already present in `node_modules` are copied into the temporary tree. No shell expansion is performed; pass flags as separate arguments.
 
 ## FAQ
 
@@ -328,10 +369,10 @@ Please open an issue with the report's `claims.json` entry. False positives are 
 - [x] `/elliot-audit`: claim audit with checked citations, report in `elliot-report/`
 - [x] Risk sweep, undisclosed behaviours, materiality test and independent review
 - [ ] Authorization checks: unauthenticated handlers, missing ownership checks
-- [ ] Verify the agent's own "done" at the end of every task, by running tests and the app
+- [x] Run functional outcome checks in an OS sandbox
 - [ ] Hooks that run Elliot automatically when the agent stops (Claude Code, Codex)
 - [ ] A GitHub Action that audits the claims touched by each pull request
-- [ ] Independently signed receipts with a public verification link
+- [x] Ed25519 signed receipts with offline verification
 
 ## Development
 
@@ -351,7 +392,7 @@ The server is plain Node (ES modules) with two dependencies: the MCP SDK and zod
 | `src/audit-protocol.js` | The protocol the agent follows |
 | `src/audit-report.js` | HTML and Markdown reports |
 | `src/init.js` | Registers Elliot in Claude Code, Cursor and Codex |
-| `src/checks/` | `verify_changes`, `verify_url`, `verify_github`, `verify_npm` |
+| `src/checks/` | `verify_changes`, `verify_outcome`, `verify_url`, `verify_github`, `verify_npm` |
 
 Issues, false positives and stories of agents telling you they were done are very welcome.
 
