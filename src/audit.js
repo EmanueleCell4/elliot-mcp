@@ -24,6 +24,7 @@ const DOC_EXT = /\.(md|mdx|markdown|rst|txt|adoc)$/i;
 const SKIP_DOCS = /(^|\/)(CHANGELOG|CHANGES|HISTORY|CONTRIBUTING|CODE_OF_CONDUCT|LICENSE|LICENCE|NOTICE|SECURITY_POLICY|AGENTS|CLAUDE|GEMINI)(\.[a-z]+)?$/i;
 const CLAIM_PAGE = /(^|\/)(security|privacy|pricing|trust|compliance|features?|about)(\/page)?\.(tsx|jsx|ts|js|html|vue|svelte|astro|md|mdx)$/i;
 const MAX_SOURCES = 80;
+const MAX_SWEEP_DOCS = 1500;
 const MIN_QUOTE = 8;
 const LINE_SLACK = 2;
 const reviewTokenDigest = (token) => createHash("sha256").update(token).digest("hex");
@@ -119,7 +120,8 @@ export async function startAudit({ path: dir, sources: only, sweep = true } = {}
     const missingFiles = only.filter((f) => !files.includes(f));
     if (missingFiles.length) throw new Error(`source files not found in the repository: ${missingFiles.join(", ")}`);
   }
-  const sources = focused ? only : files.filter(isClaimSource).sort((a, b) => rank(a) - rank(b) || a.localeCompare(b)).slice(0, MAX_SOURCES);
+  const allDocs = files.filter(isClaimSource).sort((a, b) => rank(a) - rank(b) || a.localeCompare(b));
+  const sources = focused ? only : allDocs.slice(0, MAX_SOURCES);
   const doSweep = sweep && !focused;
   const withLines = [];
   for (const f of sources) {
@@ -139,7 +141,9 @@ export async function startAudit({ path: dir, sources: only, sweep = true } = {}
     started_at: new Date().toISOString(),
     sources: withLines,
     focused,
-    candidates: doSweep ? await docCandidates(root, withLines) : [],
+    // The sweep reads every user-facing doc, not only the sources listed for the agent, so a
+    // promise on page 200 of a large docs site is still found.
+    candidates: doSweep ? await docCandidates(root, allDocs.slice(0, MAX_SWEEP_DOCS).map((file) => ({ file }))) : [],
     signals: doSweep ? await codeSignals(root) : [],
     file_count: files.length,
     ...(reviewerCapability ? {
