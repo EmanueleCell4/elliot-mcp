@@ -1,8 +1,6 @@
 <p align="center">
-  <img src="docs/assets/demo.gif" alt="An AI agent reports &quot;Done. Code cleaned 100%.&quot; Elliot stamps it NOT VERIFIED: 0 files changed." width="100%">
+  <img src="docs/assets/cover.png" alt="Elliot, a white robot leaning with its arms crossed, next to the words: your agent says it's done. elliot checks." width="100%">
 </p>
-
-<h1 align="center">Your agent says it's done. Elliot checks.</h1>
 
 <p align="center">
   <b>Independent verification for code written by AI agents.</b><br>
