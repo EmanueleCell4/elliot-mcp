@@ -210,6 +210,18 @@ All settings are optional environment variables.
 | `ELLIOT_GITHUB_API` | `https://api.github.com` | GitHub API base URL, for GitHub Enterprise or tests. |
 | `ELLIOT_NPM_REGISTRY` | `https://registry.npmjs.org` | Registry used by `verify_npm`. |
 
+## Network access and data
+
+Elliot has no telemetry and no server of its own. What it touches:
+
+- **Audit (`/elliot-audit`, `/elliot:audit`):** reads files in the repository and runs `git` locally. It makes no network calls.
+- **`verify_url`:** sends one GET request to the URL the agent passes in.
+- **`verify_github`:** calls `api.github.com` (or `ELLIOT_GITHUB_API`). If a GitHub token is set (the `GITHUB_TOKEN` env var, or the plugin's optional `github_token` setting), it is sent only to that API.
+- **`verify_npm`:** calls `registry.npmjs.org` (or `ELLIOT_NPM_REGISTRY`).
+- **On disk:** receipts in `.elliot/` (or `ELLIOT_DIR`) and reports in `elliot-report/`, both inside your repository.
+
+The Claude Code plugin runs the server bundled in this repository (`node src/index.js`). Claude Code installs its two npm dependencies from `package-lock.json` when you install the plugin.
+
 ## Output
 
 ```
