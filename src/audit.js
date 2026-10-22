@@ -26,6 +26,8 @@ const CLAIM_PAGE = /(^|\/)(security|privacy|pricing|trust|compliance|features?|a
 const MAX_SOURCES = 80;
 const MIN_QUOTE = 8;
 const LINE_SLACK = 2;
+// A full audit that records only a handful of claims is not an audit. Projects with real docs need depth.
+export const MIN_CLAIMS = 12;
 
 async function git(cwd, args) {
   const { stdout } = await run("git", args, { cwd, maxBuffer: 256 * 1024 * 1024 });
@@ -376,6 +378,9 @@ export async function finishAudit({ audit_id, out_dir, skipped = [] }) {
   const audit = await loadAudit(audit_id);
   const missing = coverage(audit, skipped);
   if (missing.length) return { finished: false, missing };
+  const recorded = audit.claims.length + (audit.behaviors || []).length;
+  const fewOk = skipped.some((s) => s.few_claims);
+  if (!audit.focused && audit.sources.length >= 3 && recorded < MIN_CLAIMS && !fewOk) return { finished: false, too_few: { have: recorded, need: MIN_CLAIMS } };
   const unreviewed = needsReview(audit);
   if (unreviewed.length) return { finished: false, unreviewed: unreviewed.map((f) => f.n) };
   audit.skipped = skipped;
