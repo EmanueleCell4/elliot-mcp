@@ -406,7 +406,8 @@ async function reviewPacketUnlocked({ audit_id }) {
 
 For each finding, use the quoted source and checked evidence to decide:
 - confirm: the docs really promise it, the code really contradicts it (or really does the undisclosed thing), and a user relying on the docs would really be misled or harmed. Pass as evidence the quote (from the packet) that shows the contradiction.
-- downgrade: technically true but immaterial. An omission, a tiny delay or cache, a naming or count detail, an internal or roadmap doc rather than a promise to users, or a real issue attached to a sentence that is itself true.
+- downgrade: technically true but immaterial. An omission, a wording or naming detail, a recap of something stated precisely elsewhere, an internal, policy or roadmap doc rather than a promise to users, or a real issue attached to a sentence that is itself true.
+- A documented number, default, limit, timeout, version or supported value that differs from what the code uses is never immaterial: users configure and rely on exactly these. Confirm it, with severity low if the practical effect is small.
 - reject: the auditor misread the code or the docs, and the claim actually holds. Give at least one code quote that shows it.
 Also check the severity: say in the reason if it is too high.
 
