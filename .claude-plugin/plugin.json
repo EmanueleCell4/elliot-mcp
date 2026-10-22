@@ -3,15 +3,38 @@
   "displayName": "Elliot",
   "version": "0.3.0",
   "description": "Independent verification for code written by AI agents. Checks your agent's \"done\" claims and whether a repo does what its docs say, with proof from the code.",
-  "author": { "name": "Emanuele Cella", "url": "https://github.com/EmanueleCell4" },
+  "author": {
+    "name": "Emanuele Cella",
+    "url": "https://github.com/EmanueleCell4"
+  },
   "homepage": "https://github.com/EmanueleCell4/elliot-mcp",
   "repository": "https://github.com/EmanueleCell4/elliot-mcp",
   "license": "MIT",
-  "keywords": ["verification", "code-review", "security", "audit", "mcp", "ai-agents"],
+  "keywords": [
+    "verification",
+    "code-review",
+    "security",
+    "audit",
+    "mcp",
+    "ai-agents"
+  ],
   "mcpServers": {
     "elliot": {
-      "command": "npx",
-      "args": ["-y", "github:EmanueleCell4/elliot-mcp"]
+      "command": "node",
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/src/index.js"
+      ],
+      "env": {
+        "GITHUB_TOKEN": "${user_config.github_token}"
+      }
+    }
+  },
+  "userConfig": {
+    "github_token": {
+      "type": "string",
+      "title": "GitHub token (optional)",
+      "description": "Only needed to check private repos or to raise GitHub's rate limit for verify_github. Sent only to api.github.com.",
+      "sensitive": true
     }
   }
 }
