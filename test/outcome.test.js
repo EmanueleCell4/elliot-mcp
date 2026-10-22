@@ -14,7 +14,7 @@ test("outcome verification fails closed when the host cannot start its sandbox",
       assert.equal(result.evidence.network, "not-run");
       assert.doesNotMatch(result.evidence.stdout || "", /OUTCOME_COMMAND_RAN/);
     } else {
-      assert.equal(result.verdict, "VERIFIED");
+      assert.equal(result.verdict, "VERIFIED", "sandbox check: " + JSON.stringify({reason: result.reason, code: result.evidence.exit_code, stderr: String(result.evidence.stderr || "").slice(-800)}));
       await assert.rejects(readFile(path.join(root, "OUTCOME_COMMAND_RAN")));
     }
   } finally { await rm(root, { recursive: true, force: true }); }
@@ -38,7 +38,7 @@ test("sandbox denies host file reads/writes and network; timeout terminates chil
       t.skip("host OS denied sandbox startup; isolation probes were not executed");
       return;
     }
-    assert.equal(probe.verdict, "VERIFIED", "the host-only file must be unreadable in the sandbox");
+    assert.equal(probe.verdict, "VERIFIED", "sandbox check: " + JSON.stringify({reason: probe.reason, code: probe.evidence.exit_code, stderr: String(probe.evidence.stderr || "").slice(-800)}));
 
     const symlinkProbe = await checkOutcome({
       path: source, command: process.execPath,
