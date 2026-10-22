@@ -14,7 +14,7 @@ import path from "node:path";
 const run = promisify(execFile);
 
 // Tier A: promises about privacy, data, secrets and access. A user is hurt when these are false.
-const TIER_A = /\b(telemetry|analytics (data|events|are|is|collect\w*)|usage (data|tracking|events)|event tracking|tracking (is|data|events)|track(s|ed)? (usage|events)|anonymous|anonymi[sz]ed|opt[- ]?in|opt[- ]?out|consent|personal data|no data|data (never )?leaves|stays? on your (machine|device|computer)|local[- ]only|all data|encrypt\w*|plain ?text|read[- ]only|access control|row[- ]level|\bRLS\b|\bSSO\b|SAML|OIDC|tamper\w*|audit log|sandbox\w*|never (sends?|stores?|shares?|collects?|logs?|uploads?)|stored? (securely|locally))\b/i;
+const TIER_A = /\b(telemetry|analytics (data|events|are|is|collect\w*)|usage (data|tracking|events)|event tracking|tracking (is|data|events)|track(s|ed)? (usage|events)|anonymous|anonymi[sz]ed|opt[- ]?in|opt[- ]?out|consent|personal data|no data|data (never )?leaves|stays? on your (machine|device|computer)|local[- ]only|all data|encrypt\w*|plain ?text|read[- ]only|access control|row[- ]level|\bRLS\b|\bSSO\b|SAML|OIDC|tamper\w*|audit log|sandbox\w*|never (sends?|stores?|shares?|collects?|logs?|uploads?)|stored? (securely|locally)|only (you|the owner|authenticated users|logged[- ]in users)|private (by default|to you)|(their|your) own (files|data))\b/i;
 // Tier B: security words that matter when paired with a promise.
 const TIER_B = /\b(privacy|api keys?|secrets?|passwords?|credentials?|tokens?|permissions?|authenticat\w*|authori[sz]\w*|isolat\w*|redact\w*|delet\w*)\b/i;
 const GUARANTEE = /\b(never|always|by default|defaults? to|automatically|immediately|guarantee\w*|no longer|cannot|can't|only (reads?|local))\b/i;
@@ -66,6 +66,70 @@ export async function docCandidates(root, sources) {
   return kept.map(({ rankIdx, score, ...c }, i) => ({ id: `c${i + 1}`, ...c }));
 }
 
+// Missing authorization is hard to see one handler at a time and easy to see between siblings:
+// in a file where most exported handlers check the caller, the one that doesn't is worth a look.
+const AUTH = /context\.user\b|req\.user\b|request\.user\b|ctx\.(session|user|state\.user)\b|getServerSession|\bauth\(\)|currentUser|current_user|requireAuth|requireUser|requireSession|isAuthenticated|is_authenticated|login_required|ensureAuth|session\.user\b|assertOwner|checkPermission|has_perm|permission_required/;
+// Only functions that receive a request or a request context are handlers.
+const HANDLER_SIG = /\b(req|request|ctx|context|event)\b/;
+const NOT_SERVER = /(^|\/)(frontend|client|components?|ui|web\/src|pages\/_|public|static|fake[-_]?\w*|mocks?|stubs?|testing)\//i;
+const CODE_EXT = /\.(ts|tsx|js|jsx|mjs|py)$/;
+const JS_FN = /^export\s+(?:default\s+)?(?:const\s+([A-Za-z_$][\w$]*)|(?:async\s+)?function\s*\*?\s*([A-Za-z_$][\w$]*)?)/;
+const PY_ROUTE = /^@(?:\w+\.)?(?:route|get|post|put|patch|delete|api_view|action)\b/;
+const PY_FN = /^(?:async\s+)?def\s+([A-Za-z_]\w*)/;
+const MAX_AUTH_FILES = 400;
+
+function handlers(text, file) {
+  const lines = text.split("\n");
+  const starts = [];
+  if (file.endsWith(".py")) {
+    for (let i = 0; i < lines.length; i++) {
+      if (!PY_ROUTE.test(lines[i])) continue;
+      let j = i;
+      while (j < lines.length && !PY_FN.test(lines[j])) j++;
+      if (j < lines.length) { starts.push({ name: lines[j].match(PY_FN)[1], line: j + 1, at: i }); i = j; }
+    }
+  } else {
+    for (let i = 0; i < lines.length; i++) {
+      const m = lines[i].match(JS_FN);
+      if (!m) continue;
+      // An exported const counts only when it is a function (arrow or function expression within a few lines).
+      if (m[1] && !/=>|function\b/.test(lines.slice(i, i + 6).join(" "))) continue;
+      starts.push({ name: m[1] || m[2] || "default", line: i + 1, at: i });
+    }
+  }
+  return starts.map((s, k) => ({ ...s, body: lines.slice(s.at, k + 1 < starts.length ? starts[k + 1].at : lines.length).join("\n") }));
+}
+
+/** Exported handlers that skip the auth check their siblings in the same file perform. */
+export async function authGaps(root) {
+  let files = [];
+  try {
+    files = (await run("git", ["ls-files", "-z", "--cached", "--others", "--exclude-standard"], { cwd: root, maxBuffer: 256 * 1024 * 1024 })).stdout.split("\0").filter(Boolean);
+  } catch { return []; }
+  files = files.filter((f) => CODE_EXT.test(f) && !SKIP_PATH.test(f) && !NOT_SERVER.test(f) && !f.startsWith(".elliot") && !f.startsWith("elliot-report"));
+  const hits = [];
+  let scanned = 0;
+  for (const f of files) {
+    if (scanned >= MAX_AUTH_FILES * 10) break;
+    let text;
+    try { text = await readFile(path.join(root, f), "utf8"); } catch { continue; }
+    scanned++;
+    if (text.length > 400_000 || !AUTH.test(text)) continue;
+    // A handler takes a request or context, or is declared with the same typed shape as its
+    // siblings (e.g. `export const getX: GetX<...> = async (args) =>`, which is how a handler that
+    // forgot its context parameter looks).
+    const typed = (h) => /^export\s+const\s+[\w$]+\s*:\s*[A-Z][\w$]*\s*</.test(h.body);
+    const all = handlers(text, f);
+    const hs = all.filter((h) => HANDLER_SIG.test(h.body.split("\n").slice(0, 6).join(" ")) || (typed(h) && all.filter(typed).length >= 3));
+    if (hs.length < 3) continue;
+    const withAuth = hs.filter((h) => AUTH.test(h.body));
+    const without = hs.filter((h) => !AUTH.test(h.body));
+    if (withAuth.length < 2 || withAuth.length < hs.length / 2 || !without.length) continue;
+    for (const h of without) hits.push({ file: f, line: h.line, text: `${h.name}: no auth check, while ${withAuth.length} of ${hs.length} handlers in this file check the caller` });
+  }
+  return hits;
+}
+
 /** Code locations that often contradict privacy and security promises. */
 export async function codeSignals(root) {
   const out = [];
@@ -82,6 +146,10 @@ export async function codeSignals(root) {
     if (!hits.length) continue;
     const files = [...new Set(hits.map((h) => h.file))];
     out.push({ id: sig.id, label: sig.label, hit_count: hits.length, files, examples: hits.slice(0, 4) });
+  }
+  const gaps = await authGaps(root);
+  if (gaps.length) {
+    out.push({ id: "auth_gap", label: "exported handlers with no authorization check while their sibling handlers have one (check whether each is meant to be public)", hit_count: gaps.length, files: [...new Set(gaps.map((g) => g.file))], examples: gaps.slice(0, 6) });
   }
   return out;
 }

@@ -21,6 +21,9 @@ written to disk).
   - if a doc sentence promises something about it, record a claim on THAT sentence;
   - if no doc sentence mentions it and it affects users, record it with elliot_record_behavior;
   - if it is harmless (tests, dev-only, an opt-in feature that is documented), skip it with a reason.
+  For an auth_gap signal: open each handler and decide whether it is meant to be public. If it returns or
+  changes data that belongs to a user without checking who is calling, that is a finding: a claim on the doc
+  sentence that promises access control, or a behavior if the docs say nothing.
   Never attach a signal to a sentence that is about something else.
 
 ## 2. Add the other claims users rely on (aim for 12-25 claims in total)

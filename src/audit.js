@@ -197,7 +197,12 @@ async function checkEvidence(root, ev, claimFiles) {
 }
 
 // Files that describe how the project is built, not what it promises its users.
-const NON_PROMISE = /(^|\/)(CHANGELOG|CHANGES|HISTORY|AGENTS|CLAUDE|GEMINI|CONTRIBUTING)[^/]*$|(^|\/)(\.taskmaster|\.claude|\.cursor|\.github|\.sinapsi|adrs?|rfcs?|internal|design-docs?)\/|(^|\/)[^/]*(prd|rfc|adr|design|architecture|roadmap)[^/]*\.(md|mdx|txt)$|(^|\/)(src|lib|main|crates|packages\/[^/]+\/src)\/.*\.(md|mdx|txt)$/i;
+const NON_PROMISE_HARD = /(^|\/)(CHANGELOG|CHANGES|HISTORY|AGENTS|CLAUDE|GEMINI|CONTRIBUTING)[^/]*$|(^|\/)(\.taskmaster|\.claude|\.cursor|\.github|\.sinapsi|adrs?|rfcs?|internal|design-docs?)\/|(^|\/)[^/]*(prd|rfc|adr|design|architecture|roadmap)[^/]*\.(md|mdx|txt)$/i;
+// Markdown next to source code is usually developer notes, except in docs sites (Astro, Docusaurus,
+// Next) that keep user documentation under src/content/docs, src/pages and similar.
+const CODE_DOC = /(^|\/)(src|lib|main|crates|packages\/[^/]+\/src)\/.*\.(md|mdx|txt)$/i;
+const DOCS_SITE = /(^|\/)(content\/docs|docs|guides?|pages|tutorials?)\//i;
+const NON_PROMISE = { test: (f) => NON_PROMISE_HARD.test(f) || (CODE_DOC.test(f) && !DOCS_SITE.test(f)) };
 const MIN_IMPACT = 20;
 const isFinding = (c) => c.verdict === "FALSE" || c.verdict === "PARTIAL";
 
