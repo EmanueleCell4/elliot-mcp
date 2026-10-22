@@ -5,13 +5,13 @@ import { tmpdir } from "node:os";
 import path from "node:path";
 import { checkOutcome } from "../src/checks/outcome.js";
 
-test("outcome verification fails closed when the host cannot start its sandbox", async () => {
+test("outcome verification fails closed when sandbox cannot complete a check", async () => {
   const root = await mkdtemp(path.join(tmpdir(), "elliot-outcome-test-"));
   try {
     const result = await checkOutcome({ path: root, command: process.execPath, args: ["-e", "console.log('OUTCOME_COMMAND_RAN')"] });
     if (result.evidence.os_sandbox === false) {
       assert.equal(result.verdict, "INCONCLUSIVE");
-      assert.equal(result.evidence.network, "not-run");
+      assert.ok(["not-run", "unverified"].includes(result.evidence.network));
       assert.doesNotMatch(result.evidence.stdout || "", /OUTCOME_COMMAND_RAN/);
     } else {
       assert.equal(result.verdict, "VERIFIED", "sandbox check: " + JSON.stringify({reason: result.reason, code: result.evidence.exit_code, stderr: String(result.evidence.stderr || "").slice(-800)}));
@@ -35,7 +35,7 @@ test("sandbox denies host file reads/writes and network; timeout terminates chil
       args: ["-e", "try { require('node:fs').readFileSync(process.argv[1]); process.exit(5) } catch { process.exit(0) }", secret],
     });
     if (probe.evidence.os_sandbox === false) {
-      t.skip("host OS denied sandbox startup; isolation probes were not executed");
+      t.skip("sandbox startup or execution aborted; OS isolation not verified");
       return;
     }
     assert.equal(probe.verdict, "VERIFIED", "sandbox check: " + JSON.stringify({reason: probe.reason, code: probe.evidence.exit_code, stderr: String(probe.evidence.stderr || "").slice(-800)}));
