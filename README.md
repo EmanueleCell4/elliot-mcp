@@ -101,7 +101,7 @@ I found this out the hard way. My own legal-tech app had a security page promisi
 
 The usual fix is to ask a second AI to review the first one. That gives you another opinion from the same kind of system that made the mistake. In the first automatic audit I ran, the agent doing the checking cited line numbers that don't exist in 4 of 17 submissions.
 
-Elliot works the other way around: **the agent proposes, Elliot verifies.** Every quote must really be in the file, at that line, at that commit. Every "this doesn't exist" is searched by Elliot itself. A fresh reviewer then tries to prove each finding wrong before it reaches the report.
+Elliot works the other way around: **the agent proposes, Elliot verifies.** Every quote must really be in the file, at that line, at that commit: the audit fingerprints the tree when it starts (tracked changes and untracked files included) and refuses evidence once anything changes, and symlinks that lead outside the repository are not evidence. Every "this doesn't exist" is searched by Elliot itself. A fresh reviewer then tries to prove each finding wrong before it reaches the report.
 
 ## What it found
 
@@ -111,9 +111,11 @@ Elliot works the other way around: **the agent proposes, Elliot verifies.** Ever
 
 Elliot 0.3 ran unattended inside Claude Code on 9 popular open-source tools from the AI coding-agent ecosystem (October 2026). A separate reviewer that had not seen the audits then checked every finding against the code.
 
-| Findings in the reports | Confirmed correct | Wrong | Time per repo |
-|---|---|---|---|
-| 13 | 12 | 0 | 1 to 3 minutes |
+| Findings in the reports | Confirmed correct | Left unconfirmed by the reviewer | Wrong | Time per repo |
+|---|---|---|---|---|
+| 13 | 12 | 1 | 0 | 1 to 3 minutes |
+
+"Wrong" means a factual error: the code does not show what the finding says.
 
 Some of what it caught:
 
@@ -123,7 +125,7 @@ Some of what it caught:
 - Docs saying an **API key is stored encrypted** while the code writes it as plain JSON.
 - A popular agent tool that sends users' **full AI prompts and responses to a third-party error tracker by default**, under an option named "anonymousTelemetry". Reported privately to the maintainers; details will be published after a fix.
 
-What it still misses: on the same 9 repos it found 6 of the 10 serious issues I had found by hand. The most common miss is a missing authorization check (for example, a download endpoint that doesn't check who is asking). Elliot doesn't look for those yet; see the [roadmap](#roadmap).
+What it still misses: on the same 9 repos it found 6 of the 10 serious issues I had found by hand beforehand (a small, hand-picked set, so read it as a rough coverage figure, not a recall estimate). The most common miss is a missing authorization check (for example, a download endpoint that doesn't check who is asking). Elliot doesn't look for those yet; see the [roadmap](#roadmap).
 
 ## How it works
 
@@ -262,7 +264,7 @@ All settings are optional environment variables.
 Elliot has no telemetry and no server of its own. What it touches:
 
 - **Audit (`/elliot-audit`, `/elliot:audit`):** reads files in the repository and runs `git` locally. It makes no network calls.
-- **`verify_url`:** sends one GET request to the URL the agent passes in.
+- **`verify_url`:** sends one GET request to the URL the agent passes in. Loopback, private-network and link-local addresses (including cloud metadata) are refused on every redirect hop unless you set `ELLIOT_ALLOW_PRIVATE_URLS=1`; one 15-second deadline covers the whole request and the body stops at 2 MiB.
 - **`verify_github`:** calls `api.github.com` (or `ELLIOT_GITHUB_API`). If a GitHub token is set (the `GITHUB_TOKEN` env var, or the plugin's optional `github_token` setting), it is sent only to that API.
 - **`verify_npm`:** calls `registry.npmjs.org` (or `ELLIOT_NPM_REGISTRY`).
 - **GitHub Action:** runs Claude Code in your CI with your `ANTHROPIC_API_KEY`, reads the PR description and code, and posts one comment through the GitHub API.

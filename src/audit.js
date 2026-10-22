@@ -10,7 +10,7 @@
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { randomBytes, createHash, createHmac, createCipheriv, createDecipheriv, timingSafeEqual } from "node:crypto";
-import { readFile, writeFile, mkdir, stat } from "node:fs/promises";
+import { readFile, writeFile, mkdir, stat, realpath, open, unlink } from "node:fs/promises";
 import path from "node:path";
 import { VERSION, makeReceipt, saveReceipt, elliotDir } from "./receipt.js";
 import { renderMarkdown, renderHtml, badge } from "./audit-report.js";
@@ -60,11 +60,60 @@ async function resolveRoot(dir) {
   }
 }
 
+const ELLIOT_OUTPUT = [":(exclude).elliot", ":(exclude)elliot-report"];
+
+/**
+ * A digest of everything an audit can read: HEAD, tracked changes and the content of untracked
+ * files. It is taken when the audit starts and checked on every write, so evidence can only come
+ * from the tree the report names.
+ */
+export async function treeFingerprint(root) {
+  const h = createHash("sha256");
+  try {
+    h.update((await git(root, ["rev-parse", "HEAD"])).trim());
+    h.update(await git(root, ["diff", "HEAD", "--binary", "--", ".", ...ELLIOT_OUTPUT]));
+    const untracked = (await git(root, ["ls-files", "--others", "--exclude-standard", "-z", "--", ".", ...ELLIOT_OUTPUT])).split("\0").filter(Boolean).sort();
+    for (const f of untracked.slice(0, 5000)) {
+      h.update("\0" + f + "\0");
+      try { h.update(await readFile(path.join(root, f))); } catch { h.update("unreadable"); }
+    }
+    if (untracked.length > 5000) h.update(`+${untracked.length - 5000} more`);
+  } catch {
+    return null; // not a git repository: nothing to pin to
+  }
+  return h.digest("hex");
+}
+
+async function assertTreeUnchanged(audit) {
+  if (!audit.tree_fingerprint) return;
+  if ((await treeFingerprint(audit.root)) !== audit.tree_fingerprint) {
+    throw new Error(`the working tree changed after this audit started at ${audit.commit ? audit.commit.slice(0, 7) : "an uncommitted tree"}; evidence must come from the tree the report names. Start a new audit.`);
+  }
+}
+
+// One writer per audit at a time, across processes (auditor and reviewer are separate servers).
+async function withAuditLock(id, fn) {
+  if (!/^aud_[0-9a-f]{12}$/.test(id)) throw new Error(`unknown audit id: ${id}`);
+  const lock = auditFile(id) + ".lock";
+  await mkdir(path.dirname(lock), { recursive: true });
+  const deadline = Date.now() + 10_000;
+  let fh;
+  for (;;) {
+    try { fh = await open(lock, "wx"); break; } catch (err) {
+      if (err.code !== "EEXIST") throw err;
+      try { if (Date.now() - (await stat(lock)).mtimeMs > 60_000) { await unlink(lock); continue; } } catch { /* raced */ }
+      if (Date.now() > deadline) throw new Error("audit is busy; retry");
+      await new Promise((r) => setTimeout(r, 25));
+    }
+  }
+  try { return await fn(); } finally { await fh.close(); await unlink(lock).catch(() => {}); }
+}
+
 async function headInfo(root) {
   try {
     const commit = (await git(root, ["rev-parse", "HEAD"])).trim();
     const date = (await git(root, ["log", "-1", "--format=%cI"])).trim();
-    const dirty = (await git(root, ["status", "--porcelain", "--untracked-files=no"])).trim().length > 0;
+    const dirty = (await git(root, ["status", "--porcelain", "--untracked-files=all", "--", ".", ...ELLIOT_OUTPUT])).trim().length > 0;
     let remote = null;
     try { remote = (await git(root, ["remote", "get-url", "origin"])).trim(); } catch { /* no remote */ }
     return { commit, date, dirty, remote };
@@ -138,6 +187,7 @@ export async function startAudit({ path: dir, sources: only, sweep = true } = {}
     root,
     project: path.basename(root),
     ...head,
+    tree_fingerprint: await treeFingerprint(root),
     started_at: new Date().toISOString(),
     sources: withLines,
     focused,
@@ -185,8 +235,11 @@ export async function checkQuote(root, { file, line_start, line_end, quote }) {
   if (!abs) return { ok: false, where, reason: "path is outside the repository" };
   let text;
   try {
-    if (!(await stat(abs)).isFile()) return { ok: false, where, reason: "not a file" };
-    text = await readFile(abs, "utf8");
+    // Resolve symlinks: a link inside the repository must not turn outside text into evidence.
+    const real = await realpath(abs);
+    if (!insideRoot(await realpath(root), path.relative(await realpath(root), real))) return { ok: false, where, reason: "path resolves outside the repository" };
+    if (!(await stat(real)).isFile()) return { ok: false, where, reason: "not a file" };
+    text = await readFile(real, "utf8");
   } catch {
     return { ok: false, where, reason: "file does not exist" };
   }
@@ -197,7 +250,7 @@ export async function checkQuote(root, { file, line_start, line_end, quote }) {
   const lo = Math.max(0, line_start - 1 - LINE_SLACK);
   const hi = Math.min(lines.length, end + LINE_SLACK);
   const q = normalize(quote);
-  if (normalize(lines.slice(lo, hi).join("\n")).includes(q)) return { ok: true, where };
+  if (normalize(lines.slice(lo, hi).join("\n")).includes(q)) return { ok: true, where, file_sha256: createHash("sha256").update(text).digest("hex") };
   const elsewhere = normalize(text).includes(q);
   return { ok: false, where, reason: elsewhere ? "quote is in the file but not at these lines" : "quote does not appear in the file" };
 }
@@ -258,7 +311,7 @@ async function receiptFor(audit, check, claim, verdict, reason, evidence) {
   return r.id;
 }
 
-export async function recordClaim(input) {
+async function recordClaimUnlocked(input) {
   const audit = await loadAudit(input.audit_id);
   if (audit.finished_at) throw new Error("this audit is finished; start a new one");
   const problems = [];
@@ -303,7 +356,7 @@ export async function recordClaim(input) {
 }
 
 /** Risky code behaviour the docs do not mention at all. Not a verdict on any sentence. */
-export async function recordBehavior(input) {
+async function recordBehaviorUnlocked(input) {
   const audit = await loadAudit(input.audit_id);
   if (audit.finished_at) throw new Error("this audit is finished; start a new one");
   audit.behaviors ??= [];
@@ -345,14 +398,14 @@ function findingText(f) {
 }
 
 /** Everything a fresh reviewer needs, with no access to the auditor's reasoning beyond what it submitted. */
-export async function reviewPacket({ audit_id }) {
+async function reviewPacketUnlocked({ audit_id }) {
   const audit = await loadAudit(audit_id);
   const pending = needsReview(audit);
   const body = pending.map(findingText).join("\n\n");
   const prompt = `You are an independent reviewer for an Elliot audit. Your job is to try to prove each finding below WRONG using only the checked evidence packet. You have no repository access and must make your decision from this evidence alone. Do not infer facts not present in the packet.
 
 For each finding, use the quoted source and checked evidence to decide:
-- confirm: the docs really promise it, the code really contradicts it (or really does the undisclosed thing), and a user relying on the docs would really be misled or harmed.
+- confirm: the docs really promise it, the code really contradicts it (or really does the undisclosed thing), and a user relying on the docs would really be misled or harmed. Pass as evidence the quote (from the packet) that shows the contradiction.
 - downgrade: technically true but immaterial. An omission, a tiny delay or cache, a naming or count detail, an internal or roadmap doc rather than a promise to users, or a real issue attached to a sentence that is itself true.
 - reject: the auditor misread the code or the docs, and the claim actually holds. Give at least one code quote that shows it.
 Also check the severity: say in the reason if it is too high.
@@ -367,7 +420,7 @@ ${body}`;
 
 export const REVIEW_OUTCOMES = ["confirm", "downgrade", "reject"];
 
-export async function recordReview(input) {
+async function recordReviewUnlocked(input) {
   if (process.env.ELLIOT_ROLE === "auditor") throw new Error("auditor role cannot record reviewer decisions");
   if (process.env.ELLIOT_ROLE === "reviewer" && !process.env.ELLIOT_REVIEW_TOKEN) throw new Error("reviewer mode requires ELLIOT_REVIEW_TOKEN");
   if (process.env.ELLIOT_REVIEW_TOKEN && process.env.ELLIOT_ROLE !== "reviewer") throw new Error("review decisions are accepted only by the separate reviewer-mode Elliot server");
@@ -389,6 +442,7 @@ export async function recordReview(input) {
   if (!REVIEW_OUTCOMES.includes(input.outcome)) problems.push(`outcome must be one of ${REVIEW_OUTCOMES.join(", ")}`);
   const evidence = input.evidence || [];
   if (input.outcome === "reject" && !evidence.some((e) => e.type === "quote")) problems.push("reject needs at least one code quote showing the claim holds");
+  if (input.outcome === "confirm" && !evidence.length) problems.push("confirm needs evidence you checked yourself: a code quote, or an absent search for something the docs promise");
   const checks = await checkAll(audit, evidence);
   checks.forEach((c) => { if (!c.ok) problems.push(`evidence ${c.where}: ${c.reason}`); });
   if (problems.length) return { accepted: false, problems };
@@ -427,7 +481,7 @@ export function tally(audit) {
   return { claims: claims.length, ...t, behaviors: behaviors.length, downgraded: notes.length, retracted: retracted.length, rejected_citations: audit.rejected.length };
 }
 
-export async function finishAudit({ audit_id, out_dir, skipped = [] }) {
+async function finishAuditUnlocked({ audit_id, out_dir, skipped = [] }) {
   const audit = await loadAudit(audit_id);
   const missing = coverage(audit, skipped);
   if (missing.length) return { finished: false, missing };
@@ -453,4 +507,39 @@ export async function finishAudit({ audit_id, out_dir, skipped = [] }) {
   await saveAudit(audit);
   const b = badge(data);
   return { finished: true, dir, totals, files: ["report.html", "report.md", "claims.json"].map((f) => path.join(dir, f)), ...(b ? { readme_badge: b.markdown } : {}) };
+}
+
+export async function recordClaim(args) {
+  return withAuditLock(args?.audit_id, async () => {
+    await assertTreeUnchanged(await loadAudit(args.audit_id));
+    return recordClaimUnlocked(args);
+  });
+}
+
+export async function recordBehavior(args) {
+  return withAuditLock(args?.audit_id, async () => {
+    await assertTreeUnchanged(await loadAudit(args.audit_id));
+    return recordBehaviorUnlocked(args);
+  });
+}
+
+export async function reviewPacket(args) {
+  return withAuditLock(args?.audit_id, async () => {
+    
+    return reviewPacketUnlocked(args);
+  });
+}
+
+export async function recordReview(args) {
+  return withAuditLock(args?.audit_id, async () => {
+    await assertTreeUnchanged(await loadAudit(args.audit_id));
+    return recordReviewUnlocked(args);
+  });
+}
+
+export async function finishAudit(args) {
+  return withAuditLock(args?.audit_id, async () => {
+    await assertTreeUnchanged(await loadAudit(args.audit_id));
+    return finishAuditUnlocked(args);
+  });
 }

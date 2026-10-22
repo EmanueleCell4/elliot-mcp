@@ -2,15 +2,15 @@
 
 import { createHash } from "node:crypto";
 import { Verdict } from "../receipt.js";
-import { fetchWithTimeout, describeError } from "../http.js";
+import { fetchCapped, describeError } from "../http.js";
 
 const MAX_BODY = 2 * 1024 * 1024;
 
 export async function checkUrl({ url, expect_status = 200, expect_text }) {
   const started = Date.now();
-  let res;
+  let res, body, finalUrl, truncated;
   try {
-    res = await fetchWithTimeout(url, { timeoutMs: 15_000 });
+    ({ res, body, finalUrl, truncated } = await fetchCapped(url, { timeoutMs: 15_000, maxBytes: MAX_BODY }));
   } catch (err) {
     return {
       target: url,
@@ -20,16 +20,15 @@ export async function checkUrl({ url, expect_status = 200, expect_text }) {
     };
   }
 
-  const buf = Buffer.from(await res.arrayBuffer());
-  const body = buf.subarray(0, MAX_BODY);
   const text = body.toString("utf8");
   const evidence = {
     url,
-    final_url: res.url,
+    final_url: finalUrl,
     status: res.status,
     expected_status: expect_status,
     content_type: res.headers.get("content-type"),
-    bytes: buf.length,
+    bytes: body.length,
+    truncated,
     body_sha256: createHash("sha256").update(body).digest("hex"),
     response_ms: Date.now() - started,
   };

@@ -180,7 +180,8 @@ test("finish waits for the independent review, then writes the report", async ()
   assert.match(text(badReject), /reject needs at least one code quote/);
 
   for (const [finding, outcome] of [["1", "confirm"], ["2", "confirm"], ["3", "downgrade"], ["b1", "confirm"]]) {
-    const r = await call("elliot_record_review", { audit_id: auditId, finding, outcome, reason: `reviewed ${finding} against the code` });
+    const evidence = outcome === "confirm" ? [{ type: "quote", file: "src/config.js", line_start: 2, quote: "enabled: true," }] : undefined;
+    const r = await call("elliot_record_review", { audit_id: auditId, finding, outcome, reason: `reviewed ${finding} against the code`, ...(evidence ? { evidence } : {}) });
     assert.ok(!r.isError, text(r));
   }
 

@@ -35,7 +35,7 @@ test("risky promises and code signals block finishing until addressed", async ()
   assert.ok(r.accepted, JSON.stringify(r.problems));
   const unreviewed = await finishAudit({ audit_id: a.id });
   assert.deepEqual(unreviewed.unreviewed, ["1"]);
-  await recordReview({ audit_id: a.id, finding: "1", outcome: "confirm", reason: "posthog.init runs on import" });
+  await recordReview({ audit_id: a.id, finding: "1", outcome: "confirm", reason: "posthog.init runs on import", evidence: [{ type: "quote", file: "src/analytics.js", line_start: 2, quote: "posthog.init('phc_x');" }] });
   const done = await finishAudit({ audit_id: a.id });
   assert.equal(done.finished, true);
   await rm(repo, { recursive: true, force: true });

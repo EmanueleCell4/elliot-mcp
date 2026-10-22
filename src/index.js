@@ -298,7 +298,7 @@ server.registerTool(
   "elliot_record_review",
   {
     title: "Record an independent review decision",
-    description: "For the reviewer process: confirm, downgrade or reject one finding. In isolated mode provide the audit-scoped reviewer_token from the evidence packet. Reject needs a code quote showing the claim holds; quotes are checked against the files.",
+    description: "For the reviewer process: confirm, downgrade or reject one finding. In isolated mode provide the audit-scoped reviewer_token from the evidence packet. Confirm needs evidence you checked yourself (a code quote or an absent search); reject needs a code quote showing the claim holds. All evidence is checked against the files.",
     inputSchema: {
       audit_id: z.string().regex(/^aud_[0-9a-f]{12}$/),
       reviewer_token: z.string().max(200).optional().describe("Per-audit capability included in the evidence packet when isolated review is enabled."),

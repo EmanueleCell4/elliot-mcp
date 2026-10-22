@@ -34,7 +34,7 @@ test("isolated review capabilities are audit-scoped, credential checked and non-
 
     const first = await makeAudit();
     const second = await makeAudit();
-    const review = { finding: "1", outcome: "confirm", reason: "The supplied checked evidence supports this finding." };
+    const review = { finding: "1", outcome: "confirm", reason: "The supplied checked evidence supports this finding.", evidence: [{ type: "quote", file: "README.md", line_start: 2, quote: "Feature is always enabled." }] };
 
     process.env.ELLIOT_ROLE = "reviewer";
     process.env.ELLIOT_REVIEW_TOKEN = "wrong-server-secret";
