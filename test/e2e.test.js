@@ -1,7 +1,6 @@
 // End-to-end: spawn the real server over stdio and drive it with the official MCP client.
 import { test, before, after } from "node:test";
 import assert from "node:assert/strict";
-import http from "node:http";
 import { mkdtemp, writeFile, rm, readFile } from "node:fs/promises";
 import { execFileSync } from "node:child_process";
 import { tmpdir } from "node:os";
@@ -14,13 +13,7 @@ import { digestOf } from "../src/receipt.js";
 const here = path.dirname(fileURLToPath(import.meta.url));
 const SERVER = path.join(here, "..", "src", "index.js");
 
-let client, site, gh, siteUrl, ghUrl, repo, elliotDir;
-
-function listen(handler) {
-  return new Promise((resolve) => {
-    const s = http.createServer(handler).listen(0, "127.0.0.1", () => resolve(s));
-  });
-}
+let client, siteUrl, ghUrl, repo, elliotDir;
 
 async function call(name, args) {
   const res = await client.callTool({ name, arguments: args });
@@ -29,26 +22,8 @@ async function call(name, args) {
 }
 
 before(async () => {
-  site = await listen((req, res) => {
-    if (req.url === "/") { res.writeHead(200, { "content-type": "text/html" }); res.end("<h1>Elliot checks.</h1>"); }
-    else { res.writeHead(404); res.end("nope"); }
-  });
-  siteUrl = `http://127.0.0.1:${site.address().port}`;
-
-  // Fake GitHub API
-  const j = (res, code, body) => { res.writeHead(code, { "content-type": "application/json" }); res.end(JSON.stringify(body)); };
-  gh = await listen((req, res) => {
-    const u = req.url;
-    if (u === "/repos/acme/app/pulls/1") return j(res, 200, { state: "closed", merged: true, merged_at: "2026-10-20T10:00:00Z", merge_commit_sha: "abc", html_url: "x", head: { sha: "aaa111" } });
-    if (u === "/repos/acme/app/pulls/2") return j(res, 200, { state: "open", merged: false, merged_at: null, head: { sha: "bbb222" } });
-    if (u.startsWith("/repos/acme/app/commits/aaa111/check-runs")) return j(res, 200, { check_runs: [{ name: "test", status: "completed", conclusion: "success" }] });
-    if (u.startsWith("/repos/acme/app/commits/bbb222/check-runs")) return j(res, 200, { check_runs: [{ name: "test", status: "completed", conclusion: "failure" }, { name: "lint", status: "in_progress", conclusion: null }] });
-    if (u.startsWith("/repos/acme/app/commits/ccc333/check-runs")) return j(res, 200, { check_runs: [] });
-    if (u.endsWith("/status")) return j(res, 200, { state: "pending", total_count: 0 });
-    if (u === "/repos/acme/app/commits/main") return j(res, 200, { sha: "aaa111aaa111", commit: { message: "ship it", committer: { date: "2026-10-20T10:00:00Z" } }, html_url: "x" });
-    return j(res, 404, { message: "Not Found" });
-  });
-  ghUrl = `http://127.0.0.1:${gh.address().port}`;
+  siteUrl = "http://site.test";
+  ghUrl = "http://github.test";
 
   repo = await mkdtemp(path.join(tmpdir(), "elliot-repo-"));
   elliotDir = path.join(repo, ".elliot");
@@ -62,19 +37,26 @@ before(async () => {
     command: process.execPath,
     args: [SERVER],
     cwd: repo,
-    env: { ...process.env, ELLIOT_DIR: elliotDir, ELLIOT_GITHUB_API: ghUrl, GITHUB_TOKEN: "" },
+    env: {
+      ...process.env,
+      ELLIOT_DIR: elliotDir,
+      ELLIOT_GITHUB_API: ghUrl,
+      ELLIOT_NPM_REGISTRY: "http://registry.test",
+      ELLIOT_TEST_SITE_URL: siteUrl,
+      GITHUB_TOKEN: "",
+      NODE_OPTIONS: `--import=${path.join(here, "fetch-mock.js")}`,
+    },
   }));
 });
 
 after(async () => {
   await client?.close();
-  site?.close(); gh?.close();
   if (repo) await rm(repo, { recursive: true, force: true });
 });
 
 test("lists the tools and ships agent instructions", async () => {
   const { tools } = await client.listTools();
-  assert.deepEqual(tools.map((t) => t.name).sort(), ["elliot_audit_finish", "elliot_audit_start", "elliot_record_behavior", "elliot_record_claim", "elliot_record_review", "elliot_report", "elliot_review_packet", "elliot_snapshot", "verify_changes", "verify_github", "verify_npm", "verify_url"]);
+  assert.deepEqual(tools.map((t) => t.name).sort(), ["elliot_audit_finish", "elliot_audit_start", "elliot_record_behavior", "elliot_record_claim", "elliot_record_review", "elliot_report", "elliot_review_packet", "elliot_snapshot", "verify_attestation", "verify_changes", "verify_github", "verify_npm", "verify_outcome", "verify_url"]);
   assert.match(client.getInstructions(), /Never say a task is done if the verdict is NOT_VERIFIED/);
 });
 
@@ -125,7 +107,7 @@ test("verify_github against a fake API", async () => {
   assert.equal((await call("verify_github", { repo: "acme/app", check: "commit_exists", ref: "nope" })).receipt.verdict, "NOT_VERIFIED");
 });
 
-test("verify_npm against the real registry", async () => {
+test("verify_npm against a deterministic local registry", async () => {
   const ok = await call("verify_npm", { name: "zod", version: "4.6.7" });
   assert.equal(ok.receipt.verdict, "VERIFIED");
   assert.equal((await call("verify_npm", { name: "zod", version: "999.0.0" })).receipt.verdict, "NOT_VERIFIED");

@@ -14,6 +14,9 @@ Use Elliot when a developer asks how to verify that an agent really finished a t
 
 - `elliot_audit_start` / `elliot_record_claim` / `elliot_audit_finish`: claim audit. The agent proposes verdicts on doc promises and Elliot checks every quote at file:line and re-runs every "not found" search itself. A fresh subagent then reviews each finding. The report goes to `elliot-report/` (HTML, Markdown, JSON).
 - `elliot_snapshot` + `verify_changes`: did the files actually change as claimed.
+- `verify_outcome`: run a functional check in a disposable OS-sandboxed repository copy; network is blocked and only a zero exit code is VERIFIED.
+- Receipts can be signed with an external Ed25519 private key (`ELLIOT_SIGNING_KEY`) and checked offline with `verify_attestation` against a trusted public key.
+- Reviewer separation can be enforced with separate auditor and reviewer MCP processes (`ELLIOT_ROLE`, `ELLIOT_REVIEW_TOKEN`); the reviewer process exposes only `elliot_record_review` and checks the audit-bound credential.
 - `verify_url`, `verify_github`, `verify_npm`: is it really deployed, merged, green, published.
 
 ## Docs

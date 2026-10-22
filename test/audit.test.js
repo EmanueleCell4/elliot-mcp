@@ -1,7 +1,7 @@
 // End-to-end claim audit: a repo whose README promises things its code does not do.
 import { test, before, after } from "node:test";
 import assert from "node:assert/strict";
-import { mkdtemp, mkdir, writeFile, readFile, rm, access } from "node:fs/promises";
+import { mkdtemp, mkdir, writeFile, readFile, rm, access, realpath } from "node:fs/promises";
 import { execFileSync } from "node:child_process";
 import { tmpdir } from "node:os";
 import path from "node:path";
@@ -186,7 +186,7 @@ test("finish waits for the independent review, then writes the report", async ()
 
   const r = await call("elliot_audit_finish", { audit_id: auditId });
   const dir = text(r).match(/Report written to (.+)/)[1].trim();
-  assert.ok(dir.startsWith(path.join(repo, "elliot-report")));
+  assert.ok(dir.startsWith(path.join(await realpath(repo), "elliot-report")), `unexpected report directory: ${dir}`);
   const data = JSON.parse(await readFile(path.join(dir, "claims.json"), "utf8"));
   assert.deepEqual(
     { claims: data.totals.claims, FALSE: data.totals.FALSE, VERIFIED: data.totals.VERIFIED, behaviors: data.totals.behaviors, downgraded: data.totals.downgraded, rejected: data.totals.rejected_citations },
