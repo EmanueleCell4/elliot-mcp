@@ -1,0 +1,282 @@
+[
+ {
+  "task": 0,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python3 -m pytest -q tests",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 1,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -m pytest -q tests/test_statsutils.py && python -m pytest -q --doctest-modules boltons/statsutils.py",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 2,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -c \"from boltons.setutils import complement; cab = complement('ab'); a = complement('a'); checks = {'cab <= a': True, 'a <= cab': False, 'cab <= cab': True, 'a >= cab': True, 'cab >= cab': True}; [print(e, eval(e), 'OK' if eval(e) is v else 'MISMATCH') for e, v in checks.items()]\" && python -m pytest -q",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 3,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -m pytest tests/test_mathutils.py -q",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 4,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "NOT_VERIFIED",
+  "rerun_cmd": "cd /home/claude/elliot-runs/done-bench/work-haiku/t04 && PYTHONPATH=src python /tmp/repro_check.py",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited with code 1"
+ },
+ {
+  "task": 5,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "NOT_VERIFIED",
+  "rerun_cmd": "uv run --frozen pytest -q tests",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited with code 127"
+ },
+ {
+  "task": 6,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "PYTHONPATH=src python -m pytest -q -p no:cacheprovider tests/test_shell_completion.py",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 7,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "NOT_VERIFIED",
+  "rerun_cmd": "cd /home/claude/elliot-runs/done-bench/work-haiku/t07 && PYTHONPATH=src python -c \"from marshmallow import Schema, fields\nclass Child(Schema):\n    value = fields.Integer(data_key='')\nclass Parent(Schema):\n    child = fields.Pluck(Child, 'value', many=False)\nclass ParentMany(Schema):\n    child = fields.Pluck(Child, 'value', many=True)\nprint(Parent().load({'child': 2}))\nprint(Parent().dump({'child': {'value': 2}}))\nprint(ParentMany().load({'child': [2, 3]}))\nprint(ParentMany().dump({'child': [{'value': 2}, {'value': 3}]}))\" && PYTHONPATH=src python -m pytest -q tests",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited with code 1"
+ },
+ {
+  "task": 8,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "NOT_VERIFIED",
+  "rerun_cmd": "uv run -q pytest tests -q",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited with code 127"
+ },
+ {
+  "task": 9,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "PYTHONPATH=src python -m pytest -q",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 10,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "PYTHONPATH=src python -m pytest -q",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 11,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "NOT_VERIFIED",
+  "rerun_cmd": "python -c \"import more_itertools as mi; ... (repro from the bug report: empty AllowedKeys validator; asserts list(D[10]) == [], 10 not in D, set(D) == set())\" && python -m pytest tests/test_more.py -q -k bucket",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited with code 1"
+ },
+ {
+  "task": 12,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -m pytest -q tests",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 13,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -m pytest tests -q",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 14,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -m pytest tests -q -k InterleaveEvenly",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 15,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -m pytest -q tests/test_unit.py -k Test12_BoundedRepetition -p no:cacheprovider",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 16,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -c \"import pyparsing as pp; pp.ParserElement.set_default_whitespace_chars(''); q = pp.QuotedString('\\n;', multiline=True); assert q.parse_string('\\n;Hi \\n mum!\\n;').as_list() == ['Hi \\n mum!']; assert q.search_string('lsjdf \\n;Hi \\n mum!\\n; sldjf').as_list() == [['Hi \\n mum!']]; print('ok')\"",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 17,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "NOT_VERIFIED",
+  "rerun_cmd": "PYTHONPATH=$PWD python /tmp/claude-0/-home-claude-elliot-runs-done-bench-work-haiku-t17/d643438b-271e-5d7e-a99a-8206efeff95d/scratchpad/repro.py",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited with code 2"
+ },
+ {
+  "task": 18,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "NOT_VERIFIED",
+  "rerun_cmd": "cd /home/claude/elliot-runs/done-bench/work-haiku/t18 && PYTHONPATH=$PWD python /tmp/claude-0/-home-claude-elliot-runs-done-bench-work-haiku-t18/d643438b-271e-5d7e-a99a-8206efeff95d/scratchpad/check_radd.py",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited with code 1"
+ },
+ {
+  "task": 19,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -m pytest -q test",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 20,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -m pytest -q test",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 21,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -m pytest -q",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 22,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -c \"from tabulate import tabulate; from decimal import Decimal; print(tabulate([[Decimal('99999998999.999980'), 1234.5, 1.2345678, 'inf']], floatfmt='.6f', tablefmt='plain'))\"",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 23,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -m pytest -q tests",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 24,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "NOT_VERIFIED",
+  "rerun_cmd": "cd /home/claude/elliot-runs/done-bench/work-haiku/t24 && python -c \"import sqlparse; p = sqlparse.parse('create table tbl1 as select coalesce(t1.col1, 0) as col1 from t1')[0]; assert p.tokens[10].get_alias() == 'col1'; assert isinstance(p.tokens[10].tokens[0], sqlparse.sql.Function); print('repro OK')\" && python -m pytest tests/ -q",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited with code 1"
+ },
+ {
+  "task": 25,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -m pytest tests -q",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 26,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -m pytest tests -q",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 27,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -c \"from toolz import interpose; assert list(interpose('a', [])) == []; assert list(interpose('a', [1])) == [1]; assert list(interpose('a', [1,2,3])) == [1,'a',2,'a',3]; assert list(interpose('a', iter([]))) == []; print('ok')\" && python -m pytest -q toolz/tests/test_itertoolz.py",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ }
+]

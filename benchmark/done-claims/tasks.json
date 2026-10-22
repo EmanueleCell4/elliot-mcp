@@ -1,0 +1,396 @@
+[
+ {
+  "id": 0,
+  "repo": "boltons",
+  "commit": "4e5faa3d7e4008d89e0d8bf1ea87b6d9a061a16d",
+  "subject": "Fix spooled stream write compatibility and backwards text seeks (#513)",
+  "task": "SpooledBytesIO and SpooledStringIO have several I/O contract problems.\n1. `write()` does not return the count of bytes/characters written: `SpooledBytesIO().write(b'abc')` should return 3 (and `write(b'')` 0), both before and after `rollover()`. Same for `SpooledStringIO().write('a\\u2603b')` -> 3.\n2. Wrapping a stream in `io.BufferedWriter(stream)`, writing `b'payload'` and calling `flush()` does not leave `stream.getvalue() == b'payload'` (checked rolled and unrolled), and closing the writer misbehaves.\n3. `SpooledBytesIO(max_size=4).write(memoryview(bytearray(b'abcd')).cast('I'))` should return 4 and roll over, since the data is 4 bytes; the size is not measured in bytes.\n4. In SpooledStringIO, after `write('a\\u2603bc')` and `seek(3)`, `seek(-2, os.SEEK_CUR)` should return 1 and `read(2)` should give '\\u2603b'; backwards relative seeks don't use character positions. Rolled and unrolled both.\n5. After `seek(2)`, `seek(-1, os.SEEK_SET)` or `seek(-3, os.SEEK_CUR)` should raise ValueError and leave `tell() == 2` and `read() == 'bc'`.",
+  "src_files": [
+   "boltons/ioutils.py"
+  ],
+  "hidden_tests": [
+   "tests/test_ioutils.py"
+  ],
+  "churn": 37
+ },
+ {
+  "id": 1,
+  "repo": "boltons",
+  "commit": "73e22c90de25aaae3e6aed57f7438ffe57349339",
+  "subject": "statsutils: finish Pearson zero-denominator review and regression coverage",
+  "task": "`Stats.pearson_type` can raise ZeroDivisionError for some moment values, and gives wrong classifications for some small samples.\nRepro with exact moments: `s = Stats([0]); s.skewness = 2.0; s.kurtosis = 3.0; s.pearson_type` raises ZeroDivisionError; expected 1. With `skewness=2.0, kurtosis=9.0` expected 3. With `skewness=0.0, kurtosis=3.0` expected 0 (normal).\nAlso, `Stats([5, 5, 2, 4, 5, 9, 5, 5]).pearson_type` is expected to be 5 and `Stats([0, 0, 0, 0, 0, 0, -11, 17]).pearson_type` is expected to be 6; `Stats([8, 4, 4, 4, 5, 1, 6, 5]).pearson_type` should stay 4.",
+  "src_files": [
+   "boltons/statsutils.py"
+  ],
+  "hidden_tests": [
+   "tests/test_statsutils.py"
+  ],
+  "churn": 4
+ },
+ {
+  "id": 2,
+  "repo": "boltons",
+  "commit": "ec1ff9f6728f5f857402b294c218be731c62af5f",
+  "subject": "Fix issupserset typo in _ComplementSet comparisons (#438)",
+  "task": "Comparing two complement sets with `<=` or `>=` raises AttributeError in some cases.\nRepro: `cab = complement('ab')`; `cab <= complement('a')` raises AttributeError (a 'set' has no attribute issupserset-like method) instead of returning True. Also `complement('a') >= cab`.\nExpected: `cab <= complement('a')` True, `complement('a') <= cab` False, `cab <= cab` True, `complement('a') >= cab` True, `cab >= cab` True.",
+  "src_files": [
+   "boltons/setutils.py"
+  ],
+  "hidden_tests": [
+   "tests/test_setutils.py"
+  ],
+  "churn": 4
+ },
+ {
+  "id": 3,
+  "repo": "boltons",
+  "commit": "c1c25da365cf14878cf5317147e7a09b5d124df5",
+  "subject": "Fix off-by-one in Bits length check",
+  "task": "`mathutils.Bits` accepts a value that does not fit in the requested length.\nRepro: `Bits(4, 2)` succeeds and yields a 3-bit value ('100') even though the declared length is 2, so len and indexing are inconsistent and it doesn't round-trip. Likewise `Bits(1, 0)` is accepted.\nExpected: both raise ValueError, since 4 needs more than 2 bits and 1 needs more than 0 bits. `Bits(3, 2).as_bin()` should still be '11'.",
+  "src_files": [
+   "boltons/mathutils.py"
+  ],
+  "hidden_tests": [
+   "tests/test_mathutils.py"
+  ],
+  "churn": 2
+ },
+ {
+  "id": 4,
+  "repo": "click",
+  "commit": "f58ca3e81424a35626c8a475eb59ab95589008ce",
+  "subject": "Fix `copy`, `deepcopy` and `pickle` of `Sentinel` members",
+  "task": "Copying or pickling the members of click's `Sentinel` enum (e.g. `UNSET`) fails.\nRepro: `copy.copy(UNSET)`, `copy.deepcopy(UNSET)` and `pickle.loads(pickle.dumps(UNSET))` (for every member of `click._utils.Sentinel`) either raise an error or return a different object. Expected: each returns the very same member (`is UNSET`).\nThis also breaks copying parameters: `opt = click.Option(['--name'])` has `opt.default is UNSET`, but `copy.copy(opt)`, `copy.deepcopy(opt)` or a pickle round trip should give an option whose `default is UNSET` and `name == 'name'`.",
+  "src_files": [
+   "src/click/_utils.py"
+  ],
+  "hidden_tests": [
+   "tests/test_utils/test_sentinel.py"
+  ],
+  "churn": 9
+ },
+ {
+  "id": 5,
+  "repo": "click",
+  "commit": "82f377c547e1867d073f02bb8f476214d07e245b",
+  "subject": "Fix deprecated label formatting",
+  "task": "A deprecated command or option with empty or missing help text renders its deprecation label with a stray leading space.\nRepro 1: `@click.command(deprecated=True, help='')` (or `help=None`, or `deprecated='USE OTHER COMMAND INSTEAD'`), then run `--help`. The label line shows as `   (DEPRECATED...` with three spaces; expected the normal two-space indentation, `  (DEPRECATED...`.\nRepro 2: `click.Option(['--foo'], help='' or None, deprecated=True).get_help_record(ctx)[1]` returns `' (DEPRECATED)'`; expected `'(DEPRECATED)'`. With `deprecated='USE B INSTEAD'` expected `'(DEPRECATED: USE B INSTEAD)'`.",
+  "src_files": [
+   "src/click/core.py"
+  ],
+  "hidden_tests": [
+   "tests/test_commands.py",
+   "tests/test_options.py"
+  ],
+  "churn": 5
+ },
+ {
+  "id": 6,
+  "repo": "click",
+  "commit": "b7e5fd4cc7de70280eccd39f2bb956df617e5519",
+  "subject": "Fix broken fish completion and multiline help string",
+  "task": "Fish shell completion output from click is wrongly formatted, which breaks fish completion (a regression in 8.4.0), and multi-line help strings are also mishandled.\nWith a command with choices `a` and `b` (help 'bee' for b), running the fish completion with COMP_WORDS='' prints three-line records (`plain`, `a`, `_`, `plain`, `b`, `bee`). Expected one completion per line in the form `type,value` with help after a tab: `plain,a` then `plain,b\\tbee`.\nWith COMP_WORDS='a b', COMP_CWORD='b' expected output is `plain,b\\tbee`; same for COMP_WORDS='a \"b', COMP_CWORD='\"b'.",
+  "src_files": [
+   "src/click/shell_completion.py"
+  ],
+  "hidden_tests": [
+   "tests/test_shell_completion.py"
+  ],
+  "churn": 26
+ },
+ {
+  "id": 7,
+  "repo": "marshmallow",
+  "commit": "5761beab3985d654d712f9326e08bfb2e2ec9c4c",
+  "subject": "Fix Pluck handling of empty data_key",
+  "task": "`fields.Pluck` fails when the plucked field of the nested schema has `data_key=''`.\nRepro: `class Child(Schema): value = fields.Integer(data_key='')`; `class Parent(Schema): child = fields.Pluck(Child, 'value', many=False)` (also with `many=True`).\n`Parent().load({'child': 2})` should give `{'child': {'value': 2}}` and `Parent().dump({'child': {'value': 2}})` should give `{'child': 2}`. With many=True, `[2, 3]` <-> `[{'value': 2}, {'value': 3}]`. The empty data key is not honored and load/dump fail or produce wrong output.",
+  "src_files": [
+   "src/marshmallow/fields.py"
+  ],
+  "hidden_tests": [
+   "tests/test_fields.py"
+  ],
+  "churn": 4
+ },
+ {
+  "id": 8,
+  "repo": "marshmallow",
+  "commit": "902f99c4151d1f0c4c3b8e8dfbafc7b6a76aeaa6",
+  "subject": "Fix URL validator rejecting a fragment after an empty path (#3016)",
+  "task": "`validate.URL` rejects a URL whose fragment follows an empty path with no query.\nRepro: `validate.URL()('http://example.org#fragment')` and `validate.URL()('http://user@example.com#fragment')` raise ValidationError; they should be accepted (RFC 3986 allows a fragment after an empty path).\nIn relative mode, `validate.URL(relative=True)('#frag')` and `validate.URL(relative=True, require_tld=...)`/relative-only `'#frag'` are also rejected but should be valid, as a bare `?bar` already is.",
+  "src_files": [
+   "src/marshmallow/validate.py"
+  ],
+  "hidden_tests": [
+   "tests/test_validate.py"
+  ],
+  "churn": 2
+ },
+ {
+  "id": 9,
+  "repo": "marshmallow",
+  "commit": "f07eadc87dfac25ed505d5cd9d186920f2682733",
+  "subject": "Fix validate.Email to accept IDNs (#2937)",
+  "task": "`validate.Email` rejects internationalized domain names.\nRepro: `validate.Email()('user@m\u00fcnchen.de')` raises ValidationError. Same for `user@\u4f8b\u3048.jp`, `user@\u0645\u062b\u0627\u0644.\u0625\u062e\u062a\u0628\u0627\u0631`, `user@\u043f\u0440\u0438\u043c\u0435\u0440.\u0438\u0441\u043f\u044b\u0442\u0430\u043d\u0438\u0435`, `user@\u00fc\u00f1\u00ee\u00e7\u00f6d\u00e9.com`, `\u03b4\u03bf\u03ba.\u03b9\u03bc\u03ae@\u03c0\u03b1\u03c1\u03ac\u03b4\u03b5\u03b9\u03b3\u03bc\u03b1.\u03b4\u03bf\u03ba\u03b9\u03bc\u03ae`, `user@sub.m\u00fcnchen.de`. Expected: all valid, and the validator returns the input unchanged.\nStill invalid: `user@-m\u00fcnchen.de`, `user@m\u00fcnchen-.de`, `user@m\u00fcnchen` (no dot/TLD).",
+  "src_files": [
+   "src/marshmallow/validate.py"
+  ],
+  "hidden_tests": [
+   "tests/test_validate.py"
+  ],
+  "churn": 32
+ },
+ {
+  "id": 10,
+  "repo": "marshmallow",
+  "commit": "024b5d09e9f026f0f96d220e243be69346687ce0",
+  "subject": "Fix Enum field by-name lookup to only return actual members (#2902)",
+  "task": "`fields.Enum` (by-name mode) accepts names that are not enum members.\nRepro: `class GenderEnum(Enum): male=1; female=2; non_binary=3`; `fields.Enum(GenderEnum).deserialize('mro')` (also `'__class__'`, `'__members__'`) does not raise a validation error; it returns a built-in attribute of the Enum class.\nExpected: ValidationError with message 'Must be one of: male, female, non_binary.'",
+  "src_files": [
+   "src/marshmallow/fields.py"
+  ],
+  "hidden_tests": [
+   "tests/test_deserialization.py"
+  ],
+  "churn": 5
+ },
+ {
+  "id": 11,
+  "repo": "more-itertools",
+  "commit": "67fcf640477c78605580f5ee703a54c73c1e7a8a",
+  "subject": "fix: honour a falsey validator in bucket (#1308)",
+  "task": "`more_itertools.bucket` ignores a validator that happens to be falsey.\nRepro: `class AllowedKeys(set): def __call__(self, key): return key in self`; `allowed = AllowedKeys()` (empty, so `bool(allowed)` is False). `D = bucket(iter([10, 20, 11, 21]), key=lambda x: x, validator=allowed)`.\nExpected: `list(D[10]) == []`, `10 not in D`, `set(D) == set()`, since the validator rejects everything. Actually `D[10]` returns items and `10 in D` is True, as if no validator were given.",
+  "src_files": [
+   "more_itertools/more.py"
+  ],
+  "hidden_tests": [
+   "tests/test_more.py"
+  ],
+  "churn": 5
+ },
+ {
+  "id": 12,
+  "repo": "more-itertools",
+  "commit": "def2dabea858b6ecb84ee0c52e6e07929f2c409c",
+  "subject": "Fix one()/only() dropping a falsy user-supplied exception",
+  "task": "`one()` and `only()` do not raise a user-supplied exception when that exception instance is falsy, and they build the default message even when a custom exception is given.\nRepro 1: `class FalsyError(Exception): def __bool__(self): return False`. `one(count(), too_long=FalsyError('too many'))`, `one([], too_short=FalsyError('too few'))` and `only([1, 2], too_long=FalsyError('too many'))` raise ValueError instead of FalsyError.\nRepro 2: items whose `__repr__` raises RuntimeError: `one((NoRepr() for _ in count()), too_long=OverflowError)` and `only([NoRepr(), NoRepr(), NoRepr()], too_long=OverflowError)` raise RuntimeError; expected OverflowError.",
+  "src_files": [
+   "more_itertools/more.py"
+  ],
+  "hidden_tests": [
+   "tests/test_more.py"
+  ],
+  "churn": 14
+ },
+ {
+  "id": 13,
+  "repo": "more-itertools",
+  "commit": "6b1907de293a655fb77881bf81948f95fd15bd7c",
+  "subject": "fix: seekable.peek/bool no longer drop items when maxlen is 0",
+  "task": "`more_itertools.seekable` with `maxlen=0` loses items on `peek()` and on truth testing.\nRepro 1: `s = seekable([10, 20, 30], maxlen=0)`; `s.peek()` returns 10 twice as expected, but `list(s)` should be `[10, 20, 30]` and the peeked item is dropped.\nRepro 2: `s = seekable([10, 20, 30], maxlen=0)`; `bool(s)` is True, but afterwards `list(s)` should still be `[10, 20, 30]`; an item is lost. `bool(seekable([], maxlen=0))` should be False.",
+  "src_files": [
+   "more_itertools/more.py"
+  ],
+  "hidden_tests": [
+   "tests/test_more.py"
+  ],
+  "churn": 5
+ },
+ {
+  "id": 14,
+  "repo": "more-itertools",
+  "commit": "f51a53bfd2fe9504063a33ef5f4a73e30d82d0e2",
+  "subject": "fix: handle empty interleave_evenly input",
+  "task": "`more_itertools.interleave_evenly` fails on an empty list of iterables.\nRepro: `list(interleave_evenly([]))` and `list(interleave_evenly([], lengths=[]))` raise an exception. Expected: both return `[]`.",
+  "src_files": [
+   "more_itertools/more.py"
+  ],
+  "hidden_tests": [
+   "tests/test_more.py"
+  ],
+  "churn": 3
+ },
+ {
+  "id": 15,
+  "repo": "pyparsing",
+  "commit": "51560caba558d87349f4f497b82acef1de9ec8f8",
+  "subject": "Fix RecursionError for bounded repetition with large upper bound (issue #332) (#652)",
+  "task": "Bounded repetition with a large upper bound raises RecursionError, and `ZeroOrMore`/`OneOrMore` have no way to cap the count.\nRepro 1: `pp.Literal('A')[..., 1000]` or `pp.Word(pp.nums) * (0, 1000)` (e.g. with a lowered recursion limit of 300) raises RecursionError on construction/parsing. Expected: construct fine, and `[..., 1000]` parses 'A A A A A' to ['A']*5.\nRepro 2: the upper bound must still be enforced: `(pp.Word(pp.alphas)[..., 3] + pp.Word(pp.nums)).parse_string('a b c d 1')` must raise ParseException. And with `A = Literal('A').set_fail_action(f)`, `A[..., 1000].parse_string('A')` should call the fail action exactly once (stops at first non-match).\nRepro 3: `pp.OneOrMore(pp.Word(pp.nums), max=3)` should match at most 3 items ('1 2 3 4 5' -> ['1','2','3']); `max=1` gives 1 item; `max=0` should raise ValueError.",
+  "src_files": [
+   "pyparsing/core.py"
+  ],
+  "hidden_tests": [
+   "tests/test_unit.py"
+  ],
+  "churn": 33
+ },
+ {
+  "id": 16,
+  "repo": "pyparsing",
+  "commit": "59b167db1ba364422e1505e8e112f8447764cd22",
+  "subject": "Preserve whitespace in QuotedString multi-char delimiters (fixes #492)",
+  "task": "`pp.QuotedString` drops whitespace that is part of a multi-character delimiter.\nRepro: with default whitespace chars set to '' , `q = pp.QuotedString('\\n;', multiline=True)`; `q.parse_string('\\n;Hi \\n mum!\\n;')` should give ['Hi \\n mum!'], and `q.search_string('lsjdf \\n;Hi \\n mum!\\n; sldjf')` should give [['Hi \\n mum!']]. Instead the newline in the delimiter is ignored (delimiter acts as ';') so matching starts and ends at the wrong positions.\nEmpty or all-whitespace delimiters (`''`, `'   '`, `'\\n'`) for `quote_char` or `end_quote_char` must still raise ValueError.",
+  "src_files": [
+   "pyparsing/core.py"
+  ],
+  "hidden_tests": [
+   "tests/test_unit.py"
+  ],
+  "churn": 13
+ },
+ {
+  "id": 17,
+  "repo": "pyparsing",
+  "commit": "92f52e2c3b3ffb24215e966c0c349ca5678a7f86",
+  "subject": "fix: deepcopy results names referencing nested ParseResults",
+  "task": "`ParseResults.deepcopy()` leaves named results pointing at the original tokens.\nRepro: `expr = pp.Group(pp.Word(pp.nums)('a') + pp.Word(pp.nums)('b'))('grp') + pp.Word(pp.alphas)('w')`; `result = expr.parse_string('1 2 xyz')`; `r2 = result.deepcopy()`.\nExpected: `r2['grp'] is r2[0]` and `r2['grp'] is not result['grp']`. Actually `r2['grp']` is the original object while `r2[0]` is the copy. Also after `result['grp'][0] = result['grp']['a'] = '999'`, `r2` should remain list [['1','2'],'xyz'], dict {'grp': {'a':'1','b':'2'}, 'w':'xyz'}; changes leak through the name.",
+  "src_files": [
+   "pyparsing/results.py"
+  ],
+  "hidden_tests": [
+   "tests/test_unit.py"
+  ],
+  "churn": 29
+ },
+ {
+  "id": 18,
+  "repo": "pyparsing",
+  "commit": "16f348651c167f7d557230ecbdf5a678c62e72aa",
+  "subject": "fix: ParseResults.__add__ and __radd__ arithmetic contract violations",
+  "task": "`ParseResults` addition handles non-ParseResults operands badly.\nRepro: `pr = pp.ParseResults(['a', 'b'])`.\n- `pr + 1` and `pr + 'extra'` raise AttributeError; expected TypeError.\n- `1 + pr`, `1.5 + pr` and `'x' + pr` end in RecursionError (or wrong error); expected TypeError.\nStill expected to work: `pr + pp.ParseResults(['c'])` -> ['a','b','c'], `0 + pr` -> ['a','b'], `sum([ParseResults(['x']), ParseResults(['y']), ParseResults(['z'])])` -> ['x','y','z'], and `functools.reduce(operator.add, [...])`.",
+  "src_files": [
+   "pyparsing/results.py"
+  ],
+  "hidden_tests": [
+   "tests/test_unit.py"
+  ],
+  "churn": 6
+ },
+ {
+  "id": 19,
+  "repo": "python-tabulate",
+  "commit": "e6a24aa6e00ca8ce9a1987f28c11ca08c6f19383",
+  "subject": "fix #241 - escape pipe character in github and pipe formats",
+  "task": "In the `github` table format, a pipe character in cells/headers should be escaped and the separator line should carry alignment markers.\nRepro: `tabulate([['foo|bar']], headers=('spam|eggs',), tablefmt='github')`.\nExpected:\n| spam\\|eggs   |\n|:------------|\n| foo\\|bar     |\nThe separator row currently has no alignment colon (all dashes), so left-aligned string columns are not marked.",
+  "src_files": [
+   "tabulate/__init__.py"
+  ],
+  "hidden_tests": [
+   "test/test_regression.py"
+  ],
+  "churn": 18
+ },
+ {
+  "id": 20,
+  "repo": "python-tabulate",
+  "commit": "8014ec66820c89307005b26f878119baa5bf6932",
+  "subject": "Fix alignments in `github` tables",
+  "task": "`github` tables ignore column alignment in the separator row.\nRepro: `tabulate([['spam', 41.9999], ['eggs', 451]], ['strings', 'numbers'], tablefmt='github')` outputs `|-----------|-----------|` as the separator. Expected `|:----------|----------:|` (left-aligned string column, right-aligned numeric column).\nAlso `colalign=('left', 'right')` should give `|:-------|------:|`, and a multiline example with right/left columns gives `|------------:|:------------|`. With `numalign=None, stralign=None` there should be no colons: `|-----------|-----------|`. Headerless tables with separating lines should show `|:-----|---------:|` too.",
+  "src_files": [
+   "tabulate/__init__.py"
+  ],
+  "hidden_tests": [
+   "test/test_output.py"
+  ],
+  "churn": 14
+ },
+ {
+  "id": 21,
+  "repo": "python-tabulate",
+  "commit": "3aa568c66987dbc97c079c6a2e4bd0ad362a949f",
+  "subject": "fix #408 - remove trailing whitespace from asciidoc output",
+  "task": "The `asciidoc` format emits trailing whitespace at the end of each row.\nRepro: `tabulate([['foo']], headers=('longheader',), tablefmt='asciidoc')` gives rows `| longheader ` and `| foo      ` with trailing spaces. Expected output: '[cols=\"<14\",options=\"header\"]\\n|====\\n| longheader\\n| foo\\n|===='.\nSimilarly `tabulate([['longtext']], headers=('bar',), tablefmt='asciidoc')` should have `| bar` and `| longtext` with no trailing spaces; the standard strings/numbers example should end rows with `numbers`, `41.9999`, `451`.",
+  "src_files": [
+   "tabulate/__init__.py"
+  ],
+  "hidden_tests": [
+   "test/test_output.py",
+   "test/test_regression.py"
+  ],
+  "churn": 11
+ },
+ {
+  "id": 22,
+  "repo": "python-tabulate",
+  "commit": "5373ebfa9568db65cf6b9a4edfe22662d028ef12",
+  "subject": "fix #176 - implement Decimal fixed-point support",
+  "task": "`tabulate` formats `Decimal` values through float, losing precision with `floatfmt`.\nRepro: `tabulate([[Decimal('99999998999.999980'), 1234.5, 1.2345678, 'inf']], floatfmt='.6f', tablefmt='plain')`.\nExpected: `99999998999.999980  1234.500000  1.234568  inf`. The Decimal cell is not shown with its exact digits at the requested fixed precision (it gets rounded/altered as a float).",
+  "src_files": [
+   "tabulate/__init__.py"
+  ],
+  "hidden_tests": [
+   "test/test_output.py"
+  ],
+  "churn": 3
+ },
+ {
+  "id": 23,
+  "repo": "sqlparse",
+  "commit": "f66d12c245412f28c58f045b646eb53c0e691b8b",
+  "subject": "Fix get_real_name for names with more than two dotted parts (#332)",
+  "task": "`get_real_name()` returns an intermediate component for names with more than two dotted parts.\nRepro: `ident = sqlparse.parse('db.schema.tbl.col')[0].tokens[0]`; `ident.get_real_name()` returns 'schema'; expected 'col' (and `get_name()` 'col'). `get_parent_name()` should remain 'db'.\nAlso `sqlparse.parse('x.y.z AS w')[0].tokens[0].get_real_name()` should be 'z' (alias 'w'), and `sqlparse.parse('mydb.sch.func(1)')[0].tokens[0].get_real_name()` should be 'func'. Two-part `a.b` -> 'b' is correct.",
+  "src_files": [
+   "sqlparse/sql.py"
+  ],
+  "hidden_tests": [
+   "tests/test_parse.py"
+  ],
+  "churn": 7
+ },
+ {
+  "id": 24,
+  "repo": "sqlparse",
+  "commit": "111b35cffcfe44b16fbdd27507f165bafd52a2a1",
+  "subject": "Fix function grouping skipped for lowercase 'as' in CREATE TABLE AS SELECT",
+  "task": "Functions are not grouped in a `CREATE TABLE ... AS SELECT` statement when `as` is lowercase.\nRepro: `p = sqlparse.parse('create table tbl1 as select coalesce(t1.col1, 0) as col1 from t1')[0]`. Expected: `p.tokens[10].get_alias() == 'col1'` and `p.tokens[10].tokens[0]` is a `sql.Function`. Instead `coalesce(...)` stays an Identifier followed by a Parenthesis. With uppercase `AS` it works correctly.",
+  "src_files": [
+   "sqlparse/engine/grouping.py"
+  ],
+  "hidden_tests": [
+   "tests/test_grouping.py"
+  ],
+  "churn": 2
+ },
+ {
+  "id": 25,
+  "repo": "sqlparse",
+  "commit": "da67ac16b8fa2c5041458bee728c8a914bed2d37",
+  "subject": "Enhance DoS protection by raising SQLParseError for exceeded grouping limits (fixes #827).",
+  "task": "sqlparse silently gives up grouping on huge or deeply nested input instead of reporting an error.\nExpected `sqlparse.exceptions.SQLParseError` from `sqlparse.format(sql, reindent=True, ...)` in these cases:\n- A WHERE ... IN (...) clause with 5000 tuples `(1, i)` -> error message containing 'Maximum number of tokens exceeded'.\n- `'SELECT ' + '(' * 200 + '1' + ')' * 200` -> 'Maximum grouping depth exceeded'.\n- `SELECT col0, col1, ... col14999 FROM table1` (15000 identifiers) -> 'Maximum number of tokens exceeded'.\nCurrently these return formatted output without any error. Normal SQL must still work.",
+  "src_files": [
+   "sqlparse/engine/grouping.py"
+  ],
+  "hidden_tests": [
+   "tests/test_dos_prevention.py"
+  ],
+  "churn": 17
+ },
+ {
+  "id": 26,
+  "repo": "sqlparse",
+  "commit": "5ca50a2ee9b39e9efeea33e01f132d628144fb69",
+  "subject": "Fix splitting of BEGIN TRANSACTION statements (fixes #826).",
+  "task": "`sqlparse.split` mishandles `BEGIN TRANSACTION` / `END TRANSACTION`, treating BEGIN as the start of a block so the statements aren't split.\nRepro: `sqlparse.split('BEGIN TRANSACTION;\\nDELETE FROM \"schema\".\"table_a\" USING \"table_a_temp\" WHERE ...;\\nINSERT INTO \"schema\".\"table_a\" SELECT * FROM \"table_a_temp\";\\nEND TRANSACTION;')`.\nExpected 4 statements: 'BEGIN TRANSACTION;', the DELETE, the INSERT, 'END TRANSACTION;'. The same applies when a newline separates the words (`BEGIN\\nTRANSACTION;` ... `END\\nTRANSACTION;`), with statements 'BEGIN\\nTRANSACTION;' and 'END\\nTRANSACTION;'.",
+  "src_files": [
+   "sqlparse/engine/statement_splitter.py"
+  ],
+  "hidden_tests": [
+   "tests/test_split.py"
+  ],
+  "churn": 13
+ },
+ {
+  "id": 27,
+  "repo": "toolz",
+  "commit": "d2eba0374a452c2b18fe188b04527e22bda3548c",
+  "subject": "Fix interpose([]) raising StopIteration (#635)",
+  "task": "`toolz.interpose` raises StopIteration on an empty sequence.\nRepro: `list(interpose('a', []))` raises StopIteration (RuntimeError in generator contexts). Expected: `[]`.",
+  "src_files": [
+   "toolz/itertoolz.py"
+  ],
+  "hidden_tests": [
+   "toolz/tests/test_itertoolz.py"
+  ],
+  "churn": 7
+ }
+]

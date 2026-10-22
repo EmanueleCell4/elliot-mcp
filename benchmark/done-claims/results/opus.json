@@ -1,0 +1,282 @@
+[
+ {
+  "task": 0,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "NOT_VERIFIED",
+  "rerun_cmd": "PYTHONPATH=. python /tmp/claude-0/t.py && python -m pytest -q tests/test_ioutils.py",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited with code 2"
+ },
+ {
+  "task": 1,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "NOT_VERIFIED",
+  "rerun_cmd": "PYTHONPATH=. python /tmp/claude-0/t.py && python -m pytest -q tests/test_statsutils.py",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited with code 2"
+ },
+ {
+  "task": 2,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -c \"from boltons.setutils import complement as c; a=c('ab'); print(a<=c('a'),c('a')<=a,a<=a,c('a')>=a,a>=a)\" && python -m pytest tests/test_setutils.py -q",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 3,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -m pytest -q tests/test_mathutils.py",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 4,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "NOT_VERIFIED",
+  "rerun_cmd": "PYTHONPATH=src python -m pytest -q tests (plus a script checking copy/deepcopy/pickle of every Sentinel member and click.Option)",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited with code 2"
+ },
+ {
+  "task": 5,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "PYTHONPATH=src python -m pytest -q tests --ignore=tests/test_basic.py",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 6,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -m pytest tests/test_shell_completion.py -q",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 7,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "NOT_VERIFIED",
+  "rerun_cmd": "PYTHONPATH=src python pluck_chk.py && PYTHONPATH=src python -m pytest -q tests",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited with code 2"
+ },
+ {
+  "task": 8,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "PYTHONPATH=src python -m pytest tests/test_validate.py -q",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 9,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "NOT_VERIFIED",
+  "rerun_cmd": "PYTHONPATH=src python /tmp/claude-0/t.py && PYTHONPATH=src python -m pytest -q tests",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited with code 2"
+ },
+ {
+  "task": 10,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "PYTHONPATH=src python -m pytest tests -q -k 'enum or Enum'",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 11,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "NOT_VERIFIED",
+  "rerun_cmd": "PYTHONPATH=. python scratchpad/t.py (repro) && python -m pytest tests/test_more.py -q -k bucket",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited with code 2"
+ },
+ {
+  "task": 12,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "NOT_VERIFIED",
+  "rerun_cmd": "python -m pytest -q tests/test_more.py (plus an ad-hoc script running both repros)",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited with code 2"
+ },
+ {
+  "task": 13,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -m pytest -q tests/test_more.py -k seekable",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 14,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -m pytest tests/test_more.py -q -k interleave",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 15,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "NOT_VERIFIED",
+  "rerun_cmd": "python /tmp/claude-0/t.py && python -m pytest tests/test_unit.py -q",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited with code 2"
+ },
+ {
+  "task": 16,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "NOT_VERIFIED",
+  "rerun_cmd": "PYTHONPATH=. python scratchpad/q.py (repro script) and PYTHONPATH=. python -m pytest tests/test_unit.py -q -k uoted",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited with code 2"
+ },
+ {
+  "task": 17,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "NOT_VERIFIED",
+  "rerun_cmd": "python -m pytest tests -q --ignore=tests/test_diagram.py",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited with code 1"
+ },
+ {
+  "task": 18,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "PYTHONPATH=. python /tmp/claude-0/t.py; PYTHONPATH=. python -m pytest -q tests/test_unit.py -x -k 'ParseResults or results or sum'",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 19,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -m pytest -q",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 20,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -m pytest -q test",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 21,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -m pytest test -q",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 22,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -c \"from decimal import Decimal;from tabulate import tabulate;print(tabulate([[Decimal('99999998999.999980'),1234.5,1.2345678,'inf']],floatfmt='.6f',tablefmt='plain'))\"",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 23,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -m pytest -q",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 24,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "NOT_VERIFIED",
+  "rerun_cmd": "python -m pytest -q (plus repro script checking get_alias() == 'col1' and Function type)",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited with code 2"
+ },
+ {
+  "task": 25,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -m pytest -q",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 26,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -m pytest -q",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ },
+ {
+  "task": 27,
+  "claimed_done": true,
+  "fixed": true,
+  "rerun": "VERIFIED",
+  "rerun_cmd": "python -c \"from toolz import interpose; print(list(interpose('a', [])))\" && python -m pytest toolz/tests/test_itertoolz.py -q",
+  "review_plain": "PASS",
+  "review_elliot": "PASS",
+  "rerun_reason": "functional check exited successfully in an OS-sandboxed disposable repository copy"
+ }
+]

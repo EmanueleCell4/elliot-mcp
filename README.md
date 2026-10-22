@@ -139,6 +139,10 @@ Eight widely used SDKs, 18 broken promises planted by flipping a value behind a 
 
 Elliot raises about a third as many false alarms and finds slightly more planted bugs; Claude alone casts a wider net. When the two blind judges (Claude and Codex) disagreed, reading the code showed Codex had misstated the code 9 times: a second model is not a check unless something re-reads the source. Method, limits and all raw outputs: [`benchmark/planted-promises`](benchmark/planted-promises).
 
+### Benchmark: can anyone re-check what the agent says it verified?
+
+56 real bug fixes (28 tasks, Opus and Haiku). Every fix was correct and no agent claimed "done" falsely. But in **19 of 56 runs (34%)** the check the agent said it ran could not be re-run by anyone else: a deleted scratch script, a check described in prose, a path on the agent's own machine. The work was right; the evidence was gone. [`benchmark/done-claims`](benchmark/done-claims)
+
 ## How it works
 
 <p align="center">
