@@ -1,0 +1,53 @@
+From ff5e57f76989c1704d015da0f9abeaa657fc4284 Mon Sep 17 00:00:00 2001
+From: bench <b@b>
+Date: Thu, 22 Oct 2026 15:47:08 +0000
+Subject: [PATCH] bench mutations
+
+---
+ src/auth/workload-identity-auth.ts | 2 +-
+ src/client.ts                      | 2 +-
+ src/resources/webhooks/webhooks.ts | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/src/auth/workload-identity-auth.ts b/src/auth/workload-identity-auth.ts
+index 81c5d4f..7c628b7 100644
+--- a/src/auth/workload-identity-auth.ts
++++ b/src/auth/workload-identity-auth.ts
+@@ -42,7 +42,7 @@ function calculateRefreshAt(
+   lifetimeSeconds: number,
+   refreshBufferSeconds: number | undefined,
+ ): number {
+-  const configuredBufferMs = (refreshBufferSeconds ?? 1200) * 1000;
++  const configuredBufferMs = (refreshBufferSeconds ?? 2401) * 1000;
+   const effectiveBufferMs = Math.min(
+     configuredBufferMs,
+     lifetimeSeconds * 1000 * MAX_REFRESH_BUFFER_FRACTION,
+diff --git a/src/client.ts b/src/client.ts
+index 948243d..f699e7f 100644
+--- a/src/client.ts
++++ b/src/client.ts
+@@ -2574,7 +2574,7 @@ export class OpenAI {
+   }
+ 
+   static OpenAI = this;
+-  static DEFAULT_TIMEOUT = 600000; // 10 minutes
++  static DEFAULT_TIMEOUT = 1200001; // 10 minutes
+ 
+   static OpenAIError = Errors.OpenAIError;
+   static APIError = Errors.APIError;
+diff --git a/src/resources/webhooks/webhooks.ts b/src/resources/webhooks/webhooks.ts
+index a942aae..836143c 100644
+--- a/src/resources/webhooks/webhooks.ts
++++ b/src/resources/webhooks/webhooks.ts
+@@ -405,7 +405,7 @@ export class Webhooks extends APIResource {
+     payload: string,
+     headers: HeadersLike,
+     secret: string | undefined | null = this._client.webhookSecret,
+-    tolerance: number = 300,
++    tolerance: number = 601,
+   ): Promise<void> {
+     if (
+       typeof crypto === 'undefined' ||
+-- 
+2.43.0
+

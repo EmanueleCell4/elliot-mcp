@@ -127,6 +127,18 @@ Some of what it caught:
 
 What it still misses: on the same 9 repos it found 6 of the 10 serious issues I had found by hand beforehand (a small, hand-picked set, so read it as a rough coverage figure, not a recall estimate). The most common miss is a missing authorization check (for example, a download endpoint that doesn't check who is asking). Elliot doesn't look for those yet; see the [roadmap](#roadmap).
 
+### Benchmark: Claude with Elliot vs Claude alone
+
+Eight widely used SDKs, 17 broken promises planted by flipping a value behind a documented default, two runs per condition, same model and instructions. A blind judge checked every finding that was not a planted bug.
+
+| | Claude alone | Claude + Elliot |
+|---|---|---|
+| Planted bugs found (2 runs) | 26 / 34 (76%) | 30 / 34 (88%) |
+| False alarms (judged not real) | 21% of findings | 6% of findings |
+| Real unplanted problems found | 12 | 5 |
+
+Elliot finds more of the planted bugs and raises about a third as many false alarms; Claude alone casts a wider net. Method, limits and all raw outputs: [`benchmark/planted-promises`](benchmark/planted-promises).
+
 ## How it works
 
 <p align="center">

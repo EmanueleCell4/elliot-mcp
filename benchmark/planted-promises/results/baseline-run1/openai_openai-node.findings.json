@@ -1,0 +1,47 @@
+[
+  {
+    "claim": "Requests time out after 10 minutes by default (timeout default is 10 minutes)",
+    "doc_file": "README.md",
+    "doc_line": 439,
+    "code_file": "src/client.ts",
+    "code_line": 2577,
+    "verdict": "FALSE",
+    "explanation": "OpenAI.DEFAULT_TIMEOUT is 1200001 ms (about 20 minutes), not 600000 ms. The trailing comment says '10 minutes' but the value is double that, and the constructor uses it as the default timeout (client.ts:636)."
+  },
+  {
+    "claim": "The default request timeout is 10 minutes",
+    "doc_file": "docs/configuration.md",
+    "doc_line": 90,
+    "code_file": "src/client.ts",
+    "code_line": 2577,
+    "verdict": "FALSE",
+    "explanation": "DEFAULT_TIMEOUT = 1200001 ms (about 20 minutes), so the effective default is not 10 minutes."
+  },
+  {
+    "claim": "Workload identity subject-token refresh buffer defaults to 1200 seconds (20 minutes) before expiration",
+    "doc_file": "README.md",
+    "doc_line": 188,
+    "code_file": "src/auth/workload-identity-auth.ts",
+    "code_line": 45,
+    "verdict": "FALSE",
+    "explanation": "calculateRefreshAt falls back to 2401 seconds (about 40 minutes) when refreshBufferSeconds is undefined, not 1200. Only the X.509 path uses 20 * 60 * 1000 (x509-workload-identity-auth.ts:29). The half-lifetime cap is implemented correctly."
+  },
+  {
+    "claim": "The default refresh buffer is 1,200 seconds, or 20 minutes",
+    "doc_file": "docs/authentication.md",
+    "doc_line": 215,
+    "code_file": "src/auth/workload-identity-auth.ts",
+    "code_line": 45,
+    "verdict": "FALSE",
+    "explanation": "The subject-token workload identity flow uses a 2401 second default refresh buffer, not 1200, so tokens are refreshed about 40 minutes before expiry (or at half their lifetime if shorter)."
+  },
+  {
+    "claim": "Webhook verification default tolerance is 300 seconds (both unwrap() and verifySignature())",
+    "doc_file": "docs/webhooks.md",
+    "doc_line": 103,
+    "code_file": "src/resources/webhooks/webhooks.ts",
+    "code_line": 408,
+    "verdict": "PARTIAL",
+    "explanation": "unwrap() defaults tolerance to 300 (line 387), but verifySignature() defaults to 601 seconds even though its own JSDoc (line 402) says 300. Events up to about 10 minutes old are accepted when calling verifySignature() without a tolerance."
+  }
+]

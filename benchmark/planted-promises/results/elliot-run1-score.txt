@@ -1,0 +1,19 @@
+CAUGHT                       anthropics_anthropic-sdk-pyt Only True from confirm approves; any other answer refuses the call
+MISSED (checked the claim)   openai_openai-python         By default requests time out after 10 minutes.
+CAUGHT                       openai_openai-node           Requests time out after 10 minutes by default
+CAUGHT                       openai_openai-node           X.509 credential refreshBufferSeconds defaults to 1,200 seconds and is
+CAUGHT                       openai_openai-node           Webhook verification default tolerance is 300 seconds, rejects timesta
+CAUGHT                       openai_openai-agents-python  include_tracing_api_key=True is required to put the tracing API key in
+CAUGHT                       openai_openai-agents-python  UnixLocalSandboxClient passes the full host environment by default; in
+CAUGHT                       openai_openai-agents-python  For local ShellTool and ApplyPatchTool approval is opt-in: needs_appro
+CAUGHT                       modelcontextprotocol_python- Legacy sessions close after session_idle_timeout (default 1800 s) with
+CAUGHT                       modelcontextprotocol_python- The default SSE event cap is 1 MiB per event, configurable (None disab
+CAUGHT                       modelcontextprotocol_python- Client retry loop is capped by input_required_max_rounds (default 10);
+CAUGHT                       modelcontextprotocol_typescr Every @modelcontextprotocol/* package requires Node.js 20.
+MISSED (claim not picked)    modelcontextprotocol_typescr On 2026-07-28 Streamable HTTP, aborting an in-flight client request cl
+CAUGHT                       modelcontextprotocol_typescr PrivateKeyJwtProvider signs a fresh assertion with a 300-second defaul
+CAUGHT                       vercel_ai                    Telemetry is opt-out per call with telemetry: { isEnabled: false }; re
+CAUGHT                       vercel_ai                    If telemetry.includeRuntimeContext is omitted, no runtime context prop
+CAUGHT                       openai_codex                 Standalone installers download from releases.openai.com by default and
+
+recall: 15/17 = 88%

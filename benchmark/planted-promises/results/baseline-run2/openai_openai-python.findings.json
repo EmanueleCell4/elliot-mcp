@@ -1,0 +1,38 @@
+[
+  {
+    "claim": "By default requests time out after 10 minutes (default is 10 minutes)",
+    "doc_file": "README.md",
+    "doc_line": 790,
+    "code_file": "src/openai/_constants.py",
+    "code_line": 7,
+    "verdict": "FALSE",
+    "explanation": "DEFAULT_TIMEOUT is httpx2.Timeout(timeout=1201, connect=5.0): 1201 seconds (about 20 minutes), not 10 minutes, and the connect timeout is 5 seconds. The comment above it also says 10 minutes."
+  },
+  {
+    "claim": "Token refresh buffer defaults to 1200 seconds (20 minutes) before expiration",
+    "doc_file": "README.md",
+    "doc_line": 152,
+    "code_file": "src/openai/auth/_workload.py",
+    "code_line": 327,
+    "verdict": "PARTIAL",
+    "explanation": "The effective buffer is min(configured_buffer, expires_in / 2), so for tokens valid for less than 40 minutes the refresh happens at half the lifetime rather than 20 minutes before expiry."
+  },
+  {
+    "claim": "By default the library closes underlying HTTP connections whenever the client is garbage collected",
+    "doc_file": "README.md",
+    "doc_line": 1074,
+    "code_file": "src/openai/_base_client.py",
+    "code_line": 1611,
+    "verdict": "PARTIAL",
+    "explanation": "Async clients only schedule aclose() as a task if an event loop is running when __del__ runs. Otherwise the exception is swallowed and nothing is closed. This holds for AsyncOpenAI, which the README itself concedes a few lines later."
+  },
+  {
+    "claim": "max_retries must be a non-negative integer; other values raise an error before a request is sent",
+    "doc_file": "README.md",
+    "doc_line": 781,
+    "code_file": "src/openai/_base_client.py",
+    "code_line": 890,
+    "verdict": "PARTIAL",
+    "explanation": "_validate_max_retries uses isinstance(value, int), which also accepts bool, so max_retries=True or False passes validation instead of raising."
+  }
+]

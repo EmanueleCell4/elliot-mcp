@@ -1,0 +1,20 @@
+[
+  {
+    "claim": "Non-http(s) schemes are rejected when fetching a URL taken from a provider response.",
+    "doc_file": "content/docs/06-advanced/11-secure-url-fetching.mdx",
+    "doc_line": 32,
+    "code_file": "packages/provider-utils/src/validate-download-url.ts",
+    "code_line": 25,
+    "verdict": "PARTIAL",
+    "explanation": "validateDownloadUrl returns early for `data:` URLs and only rejects other non-http(s) schemes. The docs say non-http(s) schemes are rejected without mentioning this exception."
+  },
+  {
+    "claim": "Caller headers (Authorization, Cookie, provider API-key headers) are not sent to a host on a different origin than the provider's.",
+    "doc_file": "content/docs/06-advanced/11-secure-url-fetching.mdx",
+    "doc_line": 41,
+    "code_file": "packages/provider-utils/src/fetch-with-validated-redirects.ts",
+    "code_line": 142,
+    "verdict": "PARTIAL",
+    "explanation": "fetchWithValidatedRedirects only sanitizes risky headers on the first request. It still sends Authorization and custom API-key headers to whatever origin the response-supplied URL points to, and drops them only on a later cross-origin redirect. Only the opt-in fetchUntrustedUrl isolates credentials on the first hop. The same page admits this at line 81, which contradicts the unconditional claim at line 41."
+  }
+]

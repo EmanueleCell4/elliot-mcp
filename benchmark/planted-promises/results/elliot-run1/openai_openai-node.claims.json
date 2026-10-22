@@ -1,0 +1,2854 @@
+{
+  "elliot": "0.5.0",
+  "id": "aud_bc7d493fd800",
+  "root": "/home/claude/elliot-runs/bench/repos/openai_openai-node",
+  "project": "openai_openai-node",
+  "commit": "ff5e57f76989c1704d015da0f9abeaa657fc4284",
+  "date": "2026-10-22T15:47:08+00:00",
+  "dirty": true,
+  "remote": "https://github.com/openai/openai-node.git",
+  "tree_fingerprint": "9772d3078cc543079968d462748a2eef33bc4c1dda9dd50cc74c43ea55cfd609",
+  "started_at": "2026-10-22T21:24:27.128Z",
+  "sources": [
+    {
+      "file": "README.md",
+      "lines": 908
+    },
+    {
+      "file": ".github/SECURITY.md",
+      "lines": 47
+    },
+    {
+      "file": "docs/agents/helpers.md",
+      "lines": 212
+    },
+    {
+      "file": "docs/architecture/security-model.md",
+      "lines": 386
+    },
+    {
+      "file": "docs/authentication.md",
+      "lines": 242
+    },
+    {
+      "file": "docs/azure.md",
+      "lines": 97
+    },
+    {
+      "file": "docs/bedrock.md",
+      "lines": 267
+    },
+    {
+      "file": "docs/browser-navigation.md",
+      "lines": 12
+    },
+    {
+      "file": "docs/browser-pointer.md",
+      "lines": 19
+    },
+    {
+      "file": "docs/browser-providers.md",
+      "lines": 8
+    },
+    {
+      "file": "docs/browser.md",
+      "lines": 620
+    },
+    {
+      "file": "docs/computer.md",
+      "lines": 115
+    },
+    {
+      "file": "docs/configuration.md",
+      "lines": 216
+    },
+    {
+      "file": "docs/helpers.md",
+      "lines": 868
+    },
+    {
+      "file": "docs/live.md",
+      "lines": 30
+    },
+    {
+      "file": "docs/realtime-translations.md",
+      "lines": 70
+    },
+    {
+      "file": "docs/realtime.md",
+      "lines": 207
+    },
+    {
+      "file": "docs/responses-websocket-session.md",
+      "lines": 224
+    },
+    {
+      "file": "docs/responses.md",
+      "lines": 238
+    },
+    {
+      "file": "docs/streaming.md",
+      "lines": 260
+    },
+    {
+      "file": "docs/structured-outputs.md",
+      "lines": 264
+    },
+    {
+      "file": "docs/tools.md",
+      "lines": 262
+    },
+    {
+      "file": "docs/uploads.md",
+      "lines": 224
+    },
+    {
+      "file": "docs/vertex.md",
+      "lines": 33
+    },
+    {
+      "file": "docs/webhooks.md",
+      "lines": 117
+    },
+    {
+      "file": "docs/webrtc.md",
+      "lines": 120
+    },
+    {
+      "file": "ecosystem-tests/bun/README.md",
+      "lines": 19
+    },
+    {
+      "file": "scripts/_vendor/tsc-multi/README.md",
+      "lines": 17
+    },
+    {
+      "file": "scripts/castiron/README.md",
+      "lines": 30
+    },
+    {
+      "file": "src/_vendor/partial-json-parser/README.md",
+      "lines": 14
+    },
+    {
+      "file": "src/_vendor/zod-to-json-schema/README.md",
+      "lines": 4
+    },
+    {
+      "file": "src/core/README.md",
+      "lines": 4
+    },
+    {
+      "file": "src/internal/qs/README.md",
+      "lines": 4
+    },
+    {
+      "file": "src/internal/README.md",
+      "lines": 4
+    },
+    {
+      "file": ".github/codex/prompts/node-version-review.md",
+      "lines": 55
+    },
+    {
+      "file": ".github/pull_request_template.md",
+      "lines": 10
+    },
+    {
+      "file": "api.md",
+      "lines": 1796
+    },
+    {
+      "file": "elliot-report-v1/2026-10-22-ff5e57f/report.md",
+      "lines": 274
+    },
+    {
+      "file": "MIGRATION.md",
+      "lines": 613
+    },
+    {
+      "file": "NODE_VERSION_POLICY.md",
+      "lines": 73
+    },
+    {
+      "file": "scripts/castiron/CUSTOM_CODE.md",
+      "lines": 183
+    },
+    {
+      "file": "src/resources/conversations/api.md",
+      "lines": 38
+    },
+    {
+      "file": "src/resources/live/api.md",
+      "lines": 100
+    },
+    {
+      "file": "src/resources/realtime/api.md",
+      "lines": 159
+    },
+    {
+      "file": "src/resources/responses/api.md",
+      "lines": 201
+    },
+    {
+      "file": "src/resources/webhooks/api.md",
+      "lines": 59
+    },
+    {
+      "file": "tasks/plan.md",
+      "lines": 549
+    },
+    {
+      "file": "tasks/todo.md",
+      "lines": 126
+    }
+  ],
+  "focused": false,
+  "candidates": [
+    {
+      "id": "c1",
+      "file": "README.md",
+      "line": 231,
+      "text": "The SDK owns the credential's verified TLS transport, caches short-lived tokens in memory, isolates certificate generations, and bounds retries and cancellation. Set `refreshBufferSeconds` on the credential to configure ",
+      "risk": "high"
+    },
+    {
+      "id": "c2",
+      "file": "docs/architecture/security-model.md",
+      "line": 144,
+      "text": "read-only token permissions remain in place (`.github/workflows/ci.yml`).",
+      "risk": "high"
+    },
+    {
+      "id": "c3",
+      "file": "docs/architecture/security-model.md",
+      "line": 333,
+      "text": "Codex with read-only repository access and an API key. Fresh validation and",
+      "risk": "high"
+    },
+    {
+      "id": "c4",
+      "file": "docs/architecture/security-model.md",
+      "line": 383,
+      "text": "credentials with explicit opt-in; or modifying one's own tracked executable",
+      "risk": "high"
+    },
+    {
+      "id": "c5",
+      "file": "docs/browser.md",
+      "line": 17,
+      "text": "On Linux, if bundled Chromium cannot start with its sandbox enabled, select",
+      "risk": "high"
+    },
+    {
+      "id": "c6",
+      "file": "docs/browser.md",
+      "line": 346,
+      "text": "An empty `always: {}` or `never: {}` filter applies to every tool. Read-only",
+      "risk": "high"
+    },
+    {
+      "id": "c7",
+      "file": "docs/browser.md",
+      "line": 602,
+      "text": "On Linux, when bundled Chromium cannot start with the host's sandbox, install",
+      "risk": "high"
+    },
+    {
+      "id": "c8",
+      "file": "scripts/castiron/CUSTOM_CODE.md",
+      "line": 79,
+      "text": "on `pull_request` with read-only permissions.",
+      "risk": "high"
+    },
+    {
+      "id": "c9",
+      "file": "README.md",
+      "line": 530,
+      "text": "Realtime model sessions can opt in to reconnection with `reconnect: true`. Each reconnection starts a new server session, so your application must restore its state. See [the Realtime guide](docs/realtime.md) for connect",
+      "risk": "high"
+    },
+    {
+      "id": "c10",
+      "file": "README.md",
+      "line": 844,
+      "text": "See the runnable [Node.js, Deno, and Bun mTLS examples](./examples/mtls/README.md) for certificate-chain setup, optional Node.js encrypted-key support, and runtime-specific transport cleanup.",
+      "risk": "high"
+    },
+    {
+      "id": "c11",
+      "file": "docs/agents/helpers.md",
+      "line": 210,
+      "text": "directories. They are convenience helpers, not a filesystem sandbox; file contents",
+      "risk": "high"
+    },
+    {
+      "id": "c12",
+      "file": "docs/architecture/security-model.md",
+      "line": 101,
+      "text": "browser opt-in. Malicious code already executing with that application",
+      "risk": "high"
+    },
+    {
+      "id": "c13",
+      "file": "docs/architecture/security-model.md",
+      "line": 157,
+      "text": "denial control. This differs from ordinary clients' explicit browser opt-in",
+      "risk": "high"
+    },
+    {
+      "id": "c14",
+      "file": "docs/architecture/security-model.md",
+      "line": 319,
+      "text": "- **PR code to ordinary CI:** visible PR/push jobs use read-only contents",
+      "risk": "high"
+    },
+    {
+      "id": "c15",
+      "file": "docs/architecture/security-model.md",
+      "line": 336,
+      "text": "Validation has read-only access; the publisher has repository/PR write access",
+      "risk": "high"
+    },
+    {
+      "id": "c16",
+      "file": "docs/bedrock.md",
+      "line": 100,
+      "text": "The bearer example requires `AWS_BEARER_TOKEN_BEDROCK` to be configured. Streaming remains opt-in and depends on support for the selected AWS deployment and model.",
+      "risk": "high"
+    },
+    {
+      "id": "c17",
+      "file": "docs/browser.md",
+      "line": 25,
+      "text": "keep the browser sandbox enabled.",
+      "risk": "high"
+    },
+    {
+      "id": "c18",
+      "file": "docs/browser.md",
+      "line": 97,
+      "text": "For consent tied to a specific page or control, the driver must check the original target at execution.",
+      "risk": "high"
+    },
+    {
+      "id": "c19",
+      "file": "docs/browser.md",
+      "line": 105,
+      "text": "`{ signal }` as a second argument, including navigation, reads, input, and opt-in methods.",
+      "risk": "high"
+    },
+    {
+      "id": "c20",
+      "file": "docs/browser.md",
+      "line": 142,
+      "text": "rejected before reading state or asking for consent. Omitting `members` preserves the default methods,",
+      "risk": "high"
+    },
+    {
+      "id": "c21",
+      "file": "README.md",
+      "line": 188,
+      "text": "You can also customize the subject-token refresh buffer (default is 1200 seconds (20 minutes) before expiration; the effective buffer is capped at half of the actual token lifetime):",
+      "risk": "default"
+    },
+    {
+      "id": "c22",
+      "file": "README.md",
+      "line": 206,
+      "text": "Applications enrolled for X.509 workload identity can authenticate using a certificate-backed credential instead of a subject-token provider or API key. This Node.js-only integration requires the optional `undici` peer a",
+      "risk": "default"
+    },
+    {
+      "id": "c23",
+      "file": "docs/bedrock.md",
+      "line": 34,
+      "text": "The region defaults to `AWS_REGION` or `AWS_DEFAULT_REGION`. Pass `baseURL` or set `AWS_BEDROCK_BASE_URL` to override the derived endpoint. If `endpoint` is omitted, recognized canonical AWS hostnames—including Runtime F",
+      "risk": "default"
+    },
+    {
+      "id": "c24",
+      "file": "docs/browser.md",
+      "line": 244,
+      "text": "and at most 256 UTF-8 bytes. The grant identifies one approved, task-scoped file;",
+      "risk": "default"
+    },
+    {
+      "id": "c25",
+      "file": "docs/browser.md",
+      "line": 343,
+      "text": "Approval is required by default. The runner enforces `always`, `never`, and unambiguous",
+      "risk": "default"
+    },
+    {
+      "id": "c26",
+      "file": "NODE_VERSION_POLICY.md",
+      "line": 50,
+      "text": "The next SDK major requires Node.js 22 or later. The final Node.js",
+      "risk": "default"
+    },
+    {
+      "id": "c27",
+      "file": "docs/configuration.md",
+      "line": 79,
+      "text": "by default. Configure the normal retry count with `maxRetries`; set it to `0` to disable those retries.",
+      "risk": "default"
+    },
+    {
+      "id": "c28",
+      "file": "docs/configuration.md",
+      "line": 90,
+      "text": "The default request timeout is 10 minutes. A timed-out request can also be retried unless retries are",
+      "risk": "default"
+    },
+    {
+      "id": "c29",
+      "file": "docs/uploads.md",
+      "line": 155,
+      "text": "The default interval is five seconds and the default maximum wait is 30 minutes.",
+      "risk": "default"
+    },
+    {
+      "id": "c30",
+      "file": "docs/webhooks.md",
+      "line": 103,
+      "text": "The default tolerance is 300 seconds. Timestamp validation rejects events that are too far in the past",
+      "risk": "default"
+    },
+    {
+      "id": "c31",
+      "file": "docs/agents/helpers.md",
+      "line": 105,
+      "text": "Creation handlers require `stream: true` and run while consuming events or collecting a final result. Callbacks stay local; only tool definitions and results are sent to the API.",
+      "risk": "default"
+    },
+    {
+      "id": "c32",
+      "file": "docs/bedrock.md",
+      "line": 54,
+      "text": "The OpenAI Runtime identifiers `us.openai.gpt-5.6-sol`, `us.openai.gpt-5.6-terra`, and `us.openai.gpt-5.6-luna` are cross-Region inference (CRIS) profile IDs: `us.` selects US CRIS, while an ID such as `global.openai.gpt",
+      "risk": "default"
+    },
+    {
+      "id": "c33",
+      "file": "docs/browser-navigation.md",
+      "line": 9,
+      "text": "`wait_for({text, timeout_ms, tab_id})` is a read. It does not ask for irrelevant action confirmation or URL policy. The SDK accepts nonempty Unicode text up to 256 UTF-8 bytes after whitespace normalization and an intege",
+      "risk": "default"
+    },
+    {
+      "id": "c34",
+      "file": "docs/computer.md",
+      "line": 36,
+      "text": "`run` supplies `{ type: 'computer' }` by default. You can pass exactly one",
+      "risk": "default"
+    },
+    {
+      "id": "c35",
+      "file": "docs/helpers.md",
+      "line": 412,
+      "text": "When a completion requests multiple tool calls, `runTools` executes them concurrently by default and",
+      "risk": "default"
+    },
+    {
+      "id": "c36",
+      "file": "docs/live.md",
+      "line": 12,
+      "text": "backoff: `maxRetries` defaults to 5, `initialDelay` to 500 ms and `maxDelay`",
+      "risk": "default"
+    },
+    {
+      "id": "c37",
+      "file": "docs/realtime.md",
+      "line": 161,
+      "text": "By default, Realtime does not retry or reconnect. A protocol `error` can leave",
+      "risk": "default"
+    },
+    {
+      "id": "c38",
+      "file": "docs/realtime.md",
+      "line": 190,
+      "text": "sends by default. Set `maxQueueBytes` to retain unsent commands up to that byte",
+      "risk": "default"
+    },
+    {
+      "id": "c39",
+      "file": "docs/responses-websocket-session.md",
+      "line": 205,
+      "text": "Connections last up to 60 minutes. Plan rotation at completed-turn boundaries;",
+      "risk": "default"
+    },
+    {
+      "id": "c40",
+      "file": "docs/tools.md",
+      "line": 220,
+      "text": "concurrently by default; set `parallel_tool_calls: false` to request sequential execution.",
+      "risk": "default"
+    }
+  ],
+  "signals": [
+    {
+      "id": "permission_bypass",
+      "label": "permission or sandbox checks turned off",
+      "hit_count": 10,
+      "files": [
+        "ecosystem-tests/browser-direct-import/src/test.ts",
+        "ecosystem-tests/ts-browser-webpack/src/test-bundle.ts",
+        "ecosystem-tests/ts-browser-webpack/src/test.ts",
+        "elliot-report-v1/2026-10-22-ff5e57f/claims.json",
+        "elliot-report-v1/2026-10-22-ff5e57f/report.html"
+      ],
+      "examples": [
+        {
+          "file": "ecosystem-tests/browser-direct-import/src/test.ts",
+          "line": 5,
+          "text": "args: ['--no-sandbox'],"
+        },
+        {
+          "file": "ecosystem-tests/ts-browser-webpack/src/test-bundle.ts",
+          "line": 6,
+          "text": "const browser = await launch({ args: ['--no-sandbox'] });"
+        },
+        {
+          "file": "ecosystem-tests/ts-browser-webpack/src/test.ts",
+          "line": 5,
+          "text": "args: ['--no-sandbox'],"
+        },
+        {
+          "file": "elliot-report-v1/2026-10-22-ff5e57f/claims.json",
+          "line": 358,
+          "text": "\"text\": \"args: ['--no-sandbox'],\""
+        }
+      ]
+    }
+  ],
+  "file_count": 1311,
+  "claims": [
+    {
+      "n": "1",
+      "claim": "The default request timeout is 10 minutes.",
+      "verdict": "FALSE",
+      "severity": "medium",
+      "explanation": "DEFAULT_TIMEOUT is 1,200,001 ms (about 20 minutes), twice the documented 10 minutes; the code comment also says 10 minutes, which is wrong.",
+      "user_impact": "A user who relies on the documented 10 minute ceiling for hung requests (and for sizing retry/queue budgets) will actually wait about 20 minutes per attempt before a timeout error, and up to 20 minutes more on each retry.",
+      "note": null,
+      "source": {
+        "file": "docs/configuration.md",
+        "line_start": 90,
+        "quote": "The default request timeout is 10 minutes."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/client.ts",
+          "line_start": 2577,
+          "quote": "static DEFAULT_TIMEOUT = 1200001; // 10 minutes",
+          "checked": {
+            "ok": true,
+            "where": "src/client.ts:2577",
+            "file_sha256": "64dcc83da35bc9b597f060fecd897145078f8ce70ea1658d5a4681a6b04b746d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/client.ts",
+          "line_start": 636,
+          "quote": "this.timeout = options.timeout ?? OpenAI.DEFAULT_TIMEOUT; /* 10 minutes */",
+          "checked": {
+            "ok": true,
+            "where": "src/client.ts:636",
+            "file_sha256": "64dcc83da35bc9b597f060fecd897145078f8ce70ea1658d5a4681a6b04b746d"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "1200001 ms is about 20 minutes, not 10. The comment is stale and the doc promises 10. Severity medium is acceptable.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/client.ts",
+            "line_start": 2577,
+            "quote": "static DEFAULT_TIMEOUT = 1200001; // 10 minutes",
+            "checked": {
+              "ok": true,
+              "where": "src/client.ts:2577",
+              "file_sha256": "64dcc83da35bc9b597f060fecd897145078f8ce70ea1658d5a4681a6b04b746d"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:27:45.776Z"
+      },
+      "receipt": "rcpt_8df39ac69156"
+    },
+    {
+      "n": "2",
+      "claim": "Subject-token refresh buffer default is 1200 seconds (20 minutes) before expiration, capped at half the token lifetime.",
+      "verdict": "PARTIAL",
+      "severity": "low",
+      "explanation": "The cap at a fraction of token lifetime exists, but the default buffer is 2401 seconds (about 40 minutes), not 1200.",
+      "user_impact": "Tokens are refreshed about twice as early as documented, so more token-exchange calls happen than a user sizing for a 20 minute buffer expects. Failure is not caused, only more refresh traffic.",
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 188,
+        "quote": "default is 1200 seconds (20 minutes) before expiration; the effective buffer is capped at half of the actual token lifetime"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/auth/workload-identity-auth.ts",
+          "line_start": 45,
+          "quote": "const configuredBufferMs = (refreshBufferSeconds ?? 2401) * 1000;",
+          "checked": {
+            "ok": true,
+            "where": "src/auth/workload-identity-auth.ts:45",
+            "file_sha256": "f1e40bf9ef9963eef15cfef4eb93b1cc8827fed5fa7aac239b7cb27998e97c2c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/auth/workload-identity-auth.ts",
+          "line_start": 46,
+          "quote": "const effectiveBufferMs = Math.min(",
+          "checked": {
+            "ok": true,
+            "where": "src/auth/workload-identity-auth.ts:46",
+            "file_sha256": "f1e40bf9ef9963eef15cfef4eb93b1cc8827fed5fa7aac239b7cb27998e97c2c"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "The default is 2401 seconds (about 40 minutes), not the documented 1200. Impact is only extra refresh traffic, so low severity is right.",
+        "severity": "low",
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/auth/workload-identity-auth.ts",
+            "line_start": 45,
+            "quote": "const configuredBufferMs = (refreshBufferSeconds ?? 2401) * 1000;",
+            "checked": {
+              "ok": true,
+              "where": "src/auth/workload-identity-auth.ts:45",
+              "file_sha256": "f1e40bf9ef9963eef15cfef4eb93b1cc8827fed5fa7aac239b7cb27998e97c2c"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:27:47.246Z"
+      },
+      "receipt": "rcpt_907654093fd5"
+    },
+    {
+      "n": "3",
+      "claim": "Webhook default tolerance is 300 seconds.",
+      "verdict": "PARTIAL",
+      "severity": "medium",
+      "explanation": "unwrap defaults to 300 s but verifySignature defaults to 601 s, though its JSDoc says 300. The doc says both methods share the default.",
+      "user_impact": "Users calling verifySignature directly and relying on a 5 minute replay window actually accept events up to about 10 minutes old, doubling the replay window.",
+      "note": null,
+      "source": {
+        "file": "docs/webhooks.md",
+        "line_start": 103,
+        "quote": "The default tolerance is 300 seconds."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/resources/webhooks/webhooks.ts",
+          "line_start": 387,
+          "quote": "tolerance: number = 300,",
+          "checked": {
+            "ok": true,
+            "where": "src/resources/webhooks/webhooks.ts:387",
+            "file_sha256": "8dbef0ac2e067977afa1139d45c82ba2910c177be76908042870ac668309a8ff"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/resources/webhooks/webhooks.ts",
+          "line_start": 408,
+          "quote": "tolerance: number = 601,",
+          "checked": {
+            "ok": true,
+            "where": "src/resources/webhooks/webhooks.ts:408",
+            "file_sha256": "8dbef0ac2e067977afa1139d45c82ba2910c177be76908042870ac668309a8ff"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "The documented default is 300 seconds, but a second default of 601 seconds (about 10 minutes) appears in the code. That doubles the replay window where it applies. The packet does not show which function line 408 belongs to. Medium severity is acceptable but could be lower.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/resources/webhooks/webhooks.ts",
+            "line_start": 408,
+            "quote": "tolerance: number = 601,",
+            "checked": {
+              "ok": true,
+              "where": "src/resources/webhooks/webhooks.ts:408",
+              "file_sha256": "8dbef0ac2e067977afa1139d45c82ba2910c177be76908042870ac668309a8ff"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:27:48.715Z"
+      },
+      "receipt": "rcpt_911902600d92"
+    },
+    {
+      "n": "4",
+      "claim": "Default retries are two; retries on connection errors and 408, 409, 429, 500+; maxRetries 0 disables.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default 2 via normalizeRetries; 408/409/429/>=500 retried; 0 is accepted and yields no retries.",
+      "user_impact": null,
+      "note": "An x-should-retry header from the server can override the status list.",
+      "source": {
+        "file": "docs/configuration.md",
+        "line_start": 78,
+        "quote": "The client retries temporary connection errors and HTTP 408, 409, 429, and 500-or-higher responses twice"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/client.ts",
+          "line_start": 1037,
+          "quote": "return typeof value === 'number' && Number.isSafeInteger(value) && value >= 0 ? value : 2;",
+          "checked": {
+            "ok": true,
+            "where": "src/client.ts:1037",
+            "file_sha256": "64dcc83da35bc9b597f060fecd897145078f8ce70ea1658d5a4681a6b04b746d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/client.ts",
+          "line_start": 2154,
+          "quote": "if (response.status >= 500) return true;",
+          "checked": {
+            "ok": true,
+            "where": "src/client.ts:2154",
+            "file_sha256": "64dcc83da35bc9b597f060fecd897145078f8ce70ea1658d5a4681a6b04b746d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/client.ts",
+          "line_start": 2151,
+          "quote": "if (response.status === 429) return true;",
+          "checked": {
+            "ok": true,
+            "where": "src/client.ts:2151",
+            "file_sha256": "64dcc83da35bc9b597f060fecd897145078f8ce70ea1658d5a4681a6b04b746d"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_96e40ca28c0a"
+    },
+    {
+      "n": "5",
+      "claim": "files.waitForProcessing default interval five seconds, maximum wait 30 minutes.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Defaults are 5000 ms and 30 minutes.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/uploads.md",
+        "line_start": 155,
+        "quote": "The default interval is five seconds and the default maximum wait is 30 minutes."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/resources/files.ts",
+          "line_start": 319,
+          "quote": "{ pollInterval = 5000, maxWait = 30 * 60 * 1000 }",
+          "checked": {
+            "ok": true,
+            "where": "src/resources/files.ts:319",
+            "file_sha256": "ca78d34f73bef9a683b5fb2bbeb57af219478027b54ee243b611a1d4a12e04d7"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_d8d1fdb0bf95"
+    },
+    {
+      "n": "6",
+      "claim": "Live reconnect backoff: maxRetries defaults to 5, initialDelay 500 ms, maxDelay 8 s; maxRetries 0 disables.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Defaults match; maxRetries 0 short-circuits reconnect.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/live.md",
+        "line_start": 12,
+        "quote": "backoff: `maxRetries` defaults to 5, `initialDelay` to 500 ms and `maxDelay`"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/internal/ws-connection-controller.ts",
+          "line_start": 631,
+          "quote": "const maxRetries = this._reconnectOptions.maxRetries ?? 5;",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/ws-connection-controller.ts:631",
+            "file_sha256": "c8de0169305bb6bfc99dcc11c26d12e16bb18891146bd3e7b834cb0490b4ae1a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/internal/ws-connection-controller.ts",
+          "line_start": 632,
+          "quote": "const initialDelay = this._reconnectOptions.initialDelay ?? 500;",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/ws-connection-controller.ts:632",
+            "file_sha256": "c8de0169305bb6bfc99dcc11c26d12e16bb18891146bd3e7b834cb0490b4ae1a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/internal/ws-connection-controller.ts",
+          "line_start": 633,
+          "quote": "const maxDelay = this._reconnectOptions.maxDelay ?? 8000;",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/ws-connection-controller.ts:633",
+            "file_sha256": "c8de0169305bb6bfc99dcc11c26d12e16bb18891146bd3e7b834cb0490b4ae1a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/internal/ws-connection-controller.ts",
+          "line_start": 518,
+          "quote": "if (this._reconnectOptions.maxRetries === 0) {",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/ws-connection-controller.ts:518",
+            "file_sha256": "c8de0169305bb6bfc99dcc11c26d12e16bb18891146bd3e7b834cb0490b4ae1a"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_d5f465f33ac6"
+    },
+    {
+      "n": "7",
+      "claim": "Realtime reconnect: five attempts default, delays 500 ms growing to 8 s, configurable via maxReconnectAttempts, reconnectInitialDelay, reconnectMaxDelay; sends rejected by default, maxQueueBytes retains commands.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Option names and defaults match; queue size defaults to 0 so sends are not retained.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/realtime.md",
+        "line_start": 183,
+        "quote": "The SDK allows five reconnect attempts in total by default. Set"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/internal/realtime-recovery.ts",
+          "line_start": 110,
+          "quote": "maxRetries: options.maxReconnectAttempts ?? 5,",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/realtime-recovery.ts:110",
+            "file_sha256": "9fb73903361f212c6d97b5ce7ce2f1acc2a07f3cde5629a0775deef61ea618de"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/internal/realtime-recovery.ts",
+          "line_start": 111,
+          "quote": "initialDelay: options.reconnectInitialDelay ?? 500,",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/realtime-recovery.ts:111",
+            "file_sha256": "9fb73903361f212c6d97b5ce7ce2f1acc2a07f3cde5629a0775deef61ea618de"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/internal/realtime-recovery.ts",
+          "line_start": 112,
+          "quote": "maxDelay: options.reconnectMaxDelay ?? 8000,",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/realtime-recovery.ts:112",
+            "file_sha256": "9fb73903361f212c6d97b5ce7ce2f1acc2a07f3cde5629a0775deef61ea618de"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/internal/realtime-recovery.ts",
+          "line_start": 105,
+          "quote": "maxQueueSize: options.maxQueueBytes ?? 0,",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/realtime-recovery.ts:105",
+            "file_sha256": "9fb73903361f212c6d97b5ce7ce2f1acc2a07f3cde5629a0775deef61ea618de"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_ce6431baaf5c"
+    },
+    {
+      "n": "8",
+      "claim": "runTools executes multiple tool calls concurrently by default; parallel_tool_calls: false runs them sequentially, results in order.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Sequential loop when parallel_tool_calls is false, otherwise Promise.allSettled with order preserved.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/helpers.md",
+        "line_start": 412,
+        "quote": "When a completion requests multiple tool calls, `runTools` executes them concurrently by default and"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/lib/AbstractChatCompletionRunner.ts",
+          "line_start": 595,
+          "quote": "if (singleFunctionToCall || params.parallel_tool_calls === false) {",
+          "checked": {
+            "ok": true,
+            "where": "src/lib/AbstractChatCompletionRunner.ts:595",
+            "file_sha256": "b70f1a73ddbfc3e4afe7b414ac723891a52836db92aee8a6dba909186b6991b3"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/lib/AbstractChatCompletionRunner.ts",
+          "line_start": 611,
+          "quote": "const results = await Promise.allSettled(message.tool_calls.map(runToolCall));",
+          "checked": {
+            "ok": true,
+            "where": "src/lib/AbstractChatCompletionRunner.ts:611",
+            "file_sha256": "b70f1a73ddbfc3e4afe7b414ac723891a52836db92aee8a6dba909186b6991b3"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_cf1a0ff3818e"
+    },
+    {
+      "n": "9",
+      "claim": "Web browsers: disabled by default; enable by explicitly setting dangerouslyAllowBrowser to true.",
+      "verdict": "PARTIAL",
+      "severity": "medium",
+      "explanation": "For AzureOpenAI, supplying an azureADTokenProvider silently turns browser use on unless the caller passes an explicit false. Only the internal security-model doc mentions this; README and azure docs do not.",
+      "user_impact": "A developer bundling AzureOpenAI with a token provider into browser code gets no browser-use guard, contrary to the README's explicit opt-in promise, and may expose credentials or tokens client-side without noticing.",
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 873,
+        "quote": "Web browsers: disabled by default to avoid exposing your secret API credentials. Enable browser support by explicitly setting `dangerouslyAllowBrowser` to `true`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/azure.ts",
+          "line_start": 105,
+          "quote": "if (typeof azureADTokenProvider === 'function') {",
+          "checked": {
+            "ok": true,
+            "where": "src/azure.ts:105",
+            "file_sha256": "bdf0309d714c1dbed66ae8070be4f22e779229a9b1bc25f64a5ac67c05596fb0"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/azure.ts",
+          "line_start": 106,
+          "quote": "dangerouslyAllowBrowser ??= true;",
+          "checked": {
+            "ok": true,
+            "where": "src/azure.ts:106",
+            "file_sha256": "bdf0309d714c1dbed66ae8070be4f22e779229a9b1bc25f64a5ac67c05596fb0"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "With a token provider, AzureOpenAI sets dangerouslyAllowBrowser to true by default. That bypasses the README's promise of an explicit opt-in.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/azure.ts",
+            "line_start": 105,
+            "line_end": 106,
+            "quote": "if (typeof azureADTokenProvider === 'function') {\n      dangerouslyAllowBrowser ??= true;",
+            "checked": {
+              "ok": true,
+              "where": "src/azure.ts:105-106",
+              "file_sha256": "bdf0309d714c1dbed66ae8070be4f22e779229a9b1bc25f64a5ac67c05596fb0"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:27:50.083Z"
+      },
+      "receipt": "rcpt_1f4ba13ed6d3"
+    },
+    {
+      "n": "10",
+      "claim": "Bedrock credentials are sent only to the configured API-root origin; mismatched absolute URLs are rejected.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Origin of the finalized request is compared with the configured base URL and an error is thrown before credentials are attached.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/bedrock.md",
+        "line_start": 46,
+        "quote": "Bedrock credentials are sent only to the configured API-root origin; absolute resource URLs targeting a different origin are rejected."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/internal/bedrock.ts",
+          "line_start": 246,
+          "quote": "`Bedrock request origin \\`${requestOrigin}\\` does not match the configured base URL origin \\`${expectedOrigin}\\`.`,",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/bedrock.ts:246",
+            "file_sha256": "08f7dce7575ec8af1b0af645ae7da3c6f2bd0ece48ecfe690906f45a3fb5f331"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_950a823e6419"
+    },
+    {
+      "n": "11",
+      "claim": "All Bedrock auth modes disable automatic redirects, even if fetchOptions sets redirect follow.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Each Bedrock auth hook (bearer, SigV4 provider, legacy client) sets redirect to manual on the final request.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/bedrock.md",
+        "line_start": 48,
+        "quote": "disable automatic redirects, including same-origin redirects, even when client or per-request `fetchOptions` specifies `redirect: 'follow'`"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/internal/bedrock.ts",
+          "line_start": 511,
+          "quote": "request.redirect = 'manual';",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/bedrock.ts:511",
+            "file_sha256": "08f7dce7575ec8af1b0af645ae7da3c6f2bd0ece48ecfe690906f45a3fb5f331"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/providers/bedrock/aws.ts",
+          "line_start": 248,
+          "quote": "request.redirect = 'manual';",
+          "checked": {
+            "ok": true,
+            "where": "src/providers/bedrock/aws.ts:248",
+            "file_sha256": "6f2bedf3739f500ae88a566964eb70d6c332f002926060f11896702e07520b10"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/bedrock.ts",
+          "line_start": 246,
+          "quote": "request.redirect = 'manual';",
+          "checked": {
+            "ok": true,
+            "where": "src/bedrock.ts:246",
+            "file_sha256": "cdfd862776fad39481fd16a06e080cedc75d553468a0689ecce8d16aa2d975a5"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_6838d009a71f"
+    },
+    {
+      "n": "12",
+      "claim": "Bedrock region defaults to AWS_REGION or AWS_DEFAULT_REGION; AWS_BEDROCK_BASE_URL overrides endpoint.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Env fallbacks are read in the documented order.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/bedrock.md",
+        "line_start": 34,
+        "quote": "The region defaults to `AWS_REGION` or `AWS_DEFAULT_REGION`. Pass `baseURL` or set `AWS_BEDROCK_BASE_URL` to override the derived endpoint."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/internal/bedrock.ts",
+          "line_start": 195,
+          "quote": "normalizeOptionalString(readEnv('AWS_REGION')) ??",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/bedrock.ts:195",
+            "file_sha256": "08f7dce7575ec8af1b0af645ae7da3c6f2bd0ece48ecfe690906f45a3fb5f331"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/internal/bedrock.ts",
+          "line_start": 196,
+          "quote": "normalizeOptionalString(readEnv('AWS_DEFAULT_REGION'));",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/bedrock.ts:196",
+            "file_sha256": "08f7dce7575ec8af1b0af645ae7da3c6f2bd0ece48ecfe690906f45a3fb5f331"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/internal/bedrock.ts",
+          "line_start": 204,
+          "quote": "? normalizeOptionalString(readEnv('AWS_BEDROCK_BASE_URL'))",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/bedrock.ts:204",
+            "file_sha256": "08f7dce7575ec8af1b0af645ae7da3c6f2bd0ece48ecfe690906f45a3fb5f331"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9ca04b185f02"
+    },
+    {
+      "n": "13",
+      "claim": "Bearer example requires AWS_BEARER_TOKEN_BEDROCK; apiKey: null prevents env bearer token taking precedence.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The env token is used only when apiKey is not null; otherwise absent token causes the credentials error.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/bedrock.md",
+        "line_start": 100,
+        "quote": "The bearer example requires `AWS_BEARER_TOKEN_BEDROCK` to be configured."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/internal/bedrock.ts",
+          "line_start": 567,
+          "quote": "if (allowEnvironment && options.apiKey !== null && readEnv('AWS_BEARER_TOKEN_BEDROCK')) {",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/bedrock.ts:567",
+            "file_sha256": "08f7dce7575ec8af1b0af645ae7da3c6f2bd0ece48ecfe690906f45a3fb5f331"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/internal/bedrock.ts",
+          "line_start": 576,
+          "quote": "'Could not find credentials for Bedrock. Set `AWS_BEARER_TOKEN_BEDROCK` or configure AWS credential authentication.',",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/bedrock.ts:576",
+            "file_sha256": "08f7dce7575ec8af1b0af645ae7da3c6f2bd0ece48ecfe690906f45a3fb5f331"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_058da5fccba2"
+    },
+    {
+      "n": "14",
+      "claim": "Browser toolset requires confirm for state-changing or sensitive members and urlPolicy for navigate/new_tab; confirm must return exactly true.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Constructor throws without callbacks, and a non-true confirm result declines the action. Context is a structuredClone.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/browser.md",
+        "line_start": 84,
+        "quote": "`confirm` is required when a selected method can change browser state or read diagnostics. Only exactly `true`"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/helpers/browser.ts",
+          "line_start": 1209,
+          "quote": "if (requiresConsent(name) && !configuredOption(options, 'confirm')) {",
+          "checked": {
+            "ok": true,
+            "where": "src/helpers/browser.ts:1209",
+            "file_sha256": "24996fc2dd4ff0aca816ba679328df8861055529672cd705e7f866dd5ac4ad6f"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/helpers/browser.ts",
+          "line_start": 1212,
+          "quote": "if ((name === 'navigate' || name === 'new_tab') && !configuredOption(options, 'urlPolicy')) {",
+          "checked": {
+            "ok": true,
+            "where": "src/helpers/browser.ts:1212",
+            "file_sha256": "24996fc2dd4ff0aca816ba679328df8861055529672cd705e7f866dd5ac4ad6f"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/helpers/browser.ts",
+          "line_start": 1577,
+          "quote": "(await policy.confirm?.(protectBrowserOutput(structuredClone(context)), { signal })) !== true",
+          "checked": {
+            "ok": true,
+            "where": "src/helpers/browser.ts:1577",
+            "file_sha256": "24996fc2dd4ff0aca816ba679328df8861055529672cd705e7f866dd5ac4ad6f"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9a909ebc2c06"
+    },
+    {
+      "n": "15",
+      "claim": "wait_for is a read needing no confirmation, text up to 256 UTF-8 bytes, timeout 1 to 30000 ms.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "wait_for is marked non-changing and the schema bounds match; text validated at 256 bytes (line 507).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/browser.md",
+        "line_start": 124,
+        "quote": "`wait_for({text, timeout_ms, tab_id}, {signal})` is a read. Use a nonempty text condition of at most"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/helpers/browser.ts",
+          "line_start": 208,
+          "quote": "wait_for: {",
+          "checked": {
+            "ok": true,
+            "where": "src/helpers/browser.ts:208",
+            "file_sha256": "24996fc2dd4ff0aca816ba679328df8861055529672cd705e7f866dd5ac4ad6f"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/helpers/browser.ts",
+          "line_start": 210,
+          "quote": "changes: false,",
+          "checked": {
+            "ok": true,
+            "where": "src/helpers/browser.ts:210",
+            "file_sha256": "24996fc2dd4ff0aca816ba679328df8861055529672cd705e7f866dd5ac4ad6f"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/helpers/browser.ts",
+          "line_start": 26,
+          "quote": "timeout: { type: 'integer', minimum: 1, maximum: 30_000 },",
+          "checked": {
+            "ok": true,
+            "where": "src/helpers/browser.ts:26",
+            "file_sha256": "24996fc2dd4ff0aca816ba679328df8861055529672cd705e7f866dd5ac4ad6f"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_abc758562b0e"
+    },
+    {
+      "n": "16",
+      "claim": "MCP approval is required by default; runner enforces always/never filters; empty always/never filter applies to every tool.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Missing policy defaults to always; a filter without tool_names matches every tool; read_only filters return undefined (left to API policy).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/browser.md",
+        "line_start": 343,
+        "quote": "Approval is required by default. The runner enforces `always`, `never`, and unambiguous"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/helpers/responses-tool-runner.ts",
+          "line_start": 1772,
+          "quote": "if (policy === undefined || policy === null) {",
+          "checked": {
+            "ok": true,
+            "where": "src/helpers/responses-tool-runner.ts:1772",
+            "file_sha256": "b231ab2411620494c3071cc529a3a2732f19903b1135d31866eb1000a541b338"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/helpers/responses-tool-runner.ts",
+          "line_start": 1792,
+          "quote": "!hasOwn(filter, 'tool_names') ||",
+          "checked": {
+            "ok": true,
+            "where": "src/helpers/responses-tool-runner.ts:1792",
+            "file_sha256": "b231ab2411620494c3071cc529a3a2732f19903b1135d31866eb1000a541b338"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/helpers/responses-tool-runner.ts",
+          "line_start": 1786,
+          "quote": "hasOwn(filter, 'read_only') ||",
+          "checked": {
+            "ok": true,
+            "where": "src/helpers/responses-tool-runner.ts:1786",
+            "file_sha256": "b231ab2411620494c3071cc529a3a2732f19903b1135d31866eb1000a541b338"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_eb511839e8e5"
+    },
+    {
+      "n": "17",
+      "claim": "Browser quickstart keeps the browser sandbox enabled (bundled Chromium or Chrome channel).",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Doc quickstart and the runnable examples launch with chromiumSandbox true for both channels; no example passes --no-sandbox (only ecosystem tests do).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/browser.md",
+        "line_start": 24,
+        "quote": "Leave the variable unset to use Playwright's bundled Chromium. Both choices"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "docs/browser.md",
+          "line_start": 44,
+          "quote": "chromiumSandbox: true,",
+          "checked": {
+            "ok": true,
+            "where": "docs/browser.md:44",
+            "file_sha256": "ca10ee67d7b084a28e6a43cbd1840c03f522b54a5b337f36e131972272a73d83"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "examples/responses/browser/read-only.mjs",
+          "line_start": 108,
+          "quote": "chromiumSandbox: true,",
+          "checked": {
+            "ok": true,
+            "where": "examples/responses/browser/read-only.mjs:108",
+            "file_sha256": "6b9ceca0b8a273d18abdafb2ed2f49fe6b5734a52a7b2d1abfc368932e1f1f52"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_2cb492a75d70"
+    },
+    {
+      "n": "18",
+      "claim": "computer run supplies { type: 'computer' } by default.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default tool list is a single computer tool.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/computer.md",
+        "line_start": 36,
+        "quote": "`run` supplies `{ type: 'computer' }` by default."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/helpers/computer.ts",
+          "line_start": 267,
+          "quote": "const tools = suppliedTools === undefined ? [{ type: 'computer' as const }] : suppliedTools;",
+          "checked": {
+            "ok": true,
+            "where": "src/helpers/computer.ts:267",
+            "file_sha256": "ba8ff19d513232896ce7abc77aa2a0dfa321dd76d1ca6548596275da156a46ab"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_73ecdfde05fa"
+    },
+    {
+      "n": "19",
+      "claim": "X.509 workload identity supports only the global https://mtls.api.openai.com/v1 endpoint.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Other origins and URL credentials are rejected.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 206,
+        "quote": "currently supports only the global `https://mtls.api.openai.com/v1` API endpoint."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/internal/auth/x509-api-origin.ts",
+          "line_start": 5,
+          "quote": "export const X509_API_BASE_URL = 'https://mtls.api.openai.com/v1';",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/auth/x509-api-origin.ts:5",
+            "file_sha256": "505430f1163f88b7ab7d6905fdb220ed1176221d82122b5dcaa4259c10dffdf7"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/internal/auth/x509-api-origin.ts",
+          "line_start": 16,
+          "quote": "if (target.origin !== 'https://mtls.api.openai.com' || target.username || target.password) {",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/auth/x509-api-origin.ts:16",
+            "file_sha256": "505430f1163f88b7ab7d6905fdb220ed1176221d82122b5dcaa4259c10dffdf7"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_631a19a93a91"
+    },
+    {
+      "n": "20",
+      "claim": "The X.509 credential's refreshBufferSeconds defaults to 1,200 seconds (20 minutes), capped at half the token lifetime.",
+      "verdict": "PARTIAL",
+      "severity": "low",
+      "explanation": "The X.509 credential passes an unset buffer through to the shared refresh calculation, whose default is 2401 seconds, not 1200.",
+      "user_impact": "Tokens refresh about 40 minutes ahead of expiry rather than 20, so more exchange calls than expected for users who tuned around the documented default.",
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 231,
+        "quote": "it defaults to 1,200 seconds (20 minutes) and is capped at half of the token's lifetime."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/auth/workload-identity-auth.ts",
+          "line_start": 45,
+          "quote": "const configuredBufferMs = (refreshBufferSeconds ?? 2401) * 1000;",
+          "checked": {
+            "ok": true,
+            "where": "src/auth/workload-identity-auth.ts:45",
+            "file_sha256": "f1e40bf9ef9963eef15cfef4eb93b1cc8827fed5fa7aac239b7cb27998e97c2c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/auth/x509-transport.ts",
+          "line_start": 349,
+          "quote": "...(configured.refreshBufferSeconds === undefined",
+          "checked": {
+            "ok": true,
+            "where": "src/auth/x509-transport.ts:349",
+            "file_sha256": "bf238bf5d2b109181708f0e7a497d965d6aa6fe52b7cc82ea1883068b69ddcbd"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "The shared default is 2401 seconds rather than the documented 1200. The impact is only extra refreshes, so low severity is right.",
+        "severity": "low",
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/auth/workload-identity-auth.ts",
+            "line_start": 45,
+            "quote": "const configuredBufferMs = (refreshBufferSeconds ?? 2401) * 1000;",
+            "checked": {
+              "ok": true,
+              "where": "src/auth/workload-identity-auth.ts:45",
+              "file_sha256": "f1e40bf9ef9963eef15cfef4eb93b1cc8827fed5fa7aac239b7cb27998e97c2c"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:27:51.231Z"
+      },
+      "receipt": "rcpt_57e9c8f08c7f"
+    },
+    {
+      "n": "21",
+      "claim": "Responses WebSocket connections last up to 60 minutes.",
+      "verdict": "UNVERIFIABLE",
+      "severity": null,
+      "explanation": "The limit is a server-side property of the API; the SDK has no constant or logic enforcing a 60 minute cap.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/responses-websocket-session.md",
+        "line_start": 205,
+        "quote": "Connections last up to 60 minutes."
+      },
+      "evidence": [
+        {
+          "type": "absent",
+          "pattern": "MAX_CONNECTION_LIFETIME",
+          "checked": {
+            "ok": true,
+            "where": "absent:MAX_CONNECTION_LIFETIME",
+            "doc_hits": 0
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_26c85b1383f2"
+    },
+    {
+      "n": "22",
+      "claim": "Local path and directory upload helpers are convenience helpers, not a filesystem sandbox.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "This is a disclaimer, consistent with code that has no path-confinement option; the helper reads whatever path the application passes.",
+      "user_impact": null,
+      "note": "No sandbox/confinement code exists, matching the disclaimer.",
+      "source": {
+        "file": "docs/agents/helpers.md",
+        "line_start": 209,
+        "quote": "Local path and directory uploads assume application-owned paths and stable source"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "docs/agents/helpers.md",
+          "line_start": 210,
+          "quote": "directories. They are convenience helpers, not a filesystem sandbox; file contents",
+          "checked": {
+            "ok": true,
+            "where": "docs/agents/helpers.md:210",
+            "file_sha256": "027f6987d17b1df0a9e29212f60803a14319cbf718d2d9f4fc3619bcf2f98614"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_c4d048b61e63"
+    },
+    {
+      "n": "23",
+      "claim": "Secret-bearing examples CI job runs only on main push with a protected environment and read-only token permissions.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Job is main-push only, uses ubuntu-latest, environment ci, and contents: read.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/architecture/security-model.md",
+        "line_start": 142,
+        "quote": "The secret-bearing `examples` job explicitly uses `ubuntu-latest`, independent"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": ".github/workflows/ci.yml",
+          "line_start": 317,
+          "quote": "runs-on: ubuntu-latest",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/ci.yml:317",
+            "file_sha256": "cb9423a91912fdb9d48876cf5ab6aeacb169ea6e55d7da18d3bb4bbae9e30e89"
+          }
+        },
+        {
+          "type": "quote",
+          "file": ".github/workflows/ci.yml",
+          "line_start": 322,
+          "quote": "github.ref == 'refs/heads/main' &&",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/ci.yml:322",
+            "file_sha256": "cb9423a91912fdb9d48876cf5ab6aeacb169ea6e55d7da18d3bb4bbae9e30e89"
+          }
+        },
+        {
+          "type": "quote",
+          "file": ".github/workflows/ci.yml",
+          "line_start": 325,
+          "quote": "environment: ci",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/ci.yml:325",
+            "file_sha256": "cb9423a91912fdb9d48876cf5ab6aeacb169ea6e55d7da18d3bb4bbae9e30e89"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_0d4d7e33575a"
+    },
+    {
+      "n": "24",
+      "claim": "Azure token provider implicitly enables dangerouslyAllowBrowser unless caller passes a value; explicit false denies.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The security doc accurately describes the nullish assignment.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/architecture/security-model.md",
+        "line_start": 154,
+        "quote": "- **Azure token providers to browser exposure:** supplying an"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/azure.ts",
+          "line_start": 106,
+          "quote": "dangerouslyAllowBrowser ??= true;",
+          "checked": {
+            "ok": true,
+            "where": "src/azure.ts:106",
+            "file_sha256": "bdf0309d714c1dbed66ae8070be4f22e779229a9b1bc25f64a5ac67c05596fb0"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_0b2708a1d1e0"
+    }
+  ],
+  "rejected": [
+    {
+      "claim": "Responses WebSocket connections last up to 60 minutes.",
+      "verdict": "UNVERIFIABLE",
+      "problems": [
+        "evidence absent:60 * 60 * 1000: pattern found in code: scripts/steady/cache.cjs:11:const MAX_IDLE_MS = 30 * 24 * 60 * 60 * 1000; | tests/auth/workload-identity-expiration.test.ts:396:    currentTime += 30 * 24 * 60 * 60 * 1000; | tests/auth/workload-identity-expiration.test.ts:418:    currentTime += 30 * 24 * 60 * 60 * 1000;"
+      ],
+      "at": "2026-10-22T21:26:58.634Z"
+    }
+  ],
+  "finished_at": "2026-10-22T21:28:10.835Z",
+  "review_requested_at": "2026-10-22T21:27:14.587Z",
+  "skipped": [
+    {
+      "signal": "permission_bypass",
+      "reason": "The --no-sandbox hits are only in ecosystem-tests (browser bundling smoke tests) and earlier audit report artifacts; documented user examples use chromiumSandbox: true."
+    },
+    {
+      "candidate": "c3",
+      "reason": "Describes the maintainers' internal CI/Codex review workflow, not SDK behaviour users rely on."
+    },
+    {
+      "candidate": "c4",
+      "reason": "Repository threat-model prose about contributor authority, not a checkable user-facing promise."
+    },
+    {
+      "candidate": "c5",
+      "reason": "Same sandbox-enabled guidance as the recorded browser quickstart claim (browser.md:24); the example code launches with chromiumSandbox: true."
+    },
+    {
+      "candidate": "c7",
+      "reason": "Same sandbox-enabled guidance as the recorded browser quickstart claim; examples use chromiumSandbox: true."
+    },
+    {
+      "candidate": "c8",
+      "reason": "Internal maintainer doc for the castiron codegen workflow, not a user promise."
+    },
+    {
+      "candidate": "c9",
+      "reason": "Covered by the recorded Realtime reconnect claim (docs/realtime.md:183) with reconnect: true handled in realtime-recovery.ts."
+    },
+    {
+      "candidate": "c10",
+      "reason": "A pointer to example docs, not a behavioural promise."
+    },
+    {
+      "candidate": "c12",
+      "reason": "Threat-model statement about trust boundaries, not a testable feature."
+    },
+    {
+      "candidate": "c14",
+      "reason": "Internal CI description; the ci.yml permissions are contents: read per job, consistent with it, and it is not a user promise."
+    },
+    {
+      "candidate": "c15",
+      "reason": "Internal release/validation workflow description, not a user-facing promise."
+    },
+    {
+      "candidate": "c18",
+      "reason": "Guidance to driver authors about their own responsibility, not SDK behaviour."
+    },
+    {
+      "candidate": "c19",
+      "reason": "The driver call signature is covered by the recorded browser policy claims (handler(args, { signal }) at browser.ts:1453)."
+    },
+    {
+      "candidate": "c20",
+      "reason": "Member selection rules are covered by the recorded browser confirm/urlPolicy claim; no divergence found."
+    },
+    {
+      "candidate": "c24",
+      "reason": "The 256-byte limit is covered by the recorded wait_for/limits claim (fileGrant bounded at 256 in browser.ts:542)."
+    },
+    {
+      "candidate": "c26",
+      "reason": "A future-major Node.js version policy, a roadmap statement."
+    },
+    {
+      "candidate": "c31",
+      "reason": "Minor usage note on agent helper handlers; not a security or default promise."
+    },
+    {
+      "candidate": "c32",
+      "reason": "Describes AWS-side Bedrock model and inference-profile behaviour, which the SDK does not control."
+    },
+    {
+      "candidate": "c33",
+      "reason": "Duplicate of the recorded wait_for claim (browser.md:124)."
+    },
+    {
+      "candidate": "c37",
+      "reason": "Covered by the recorded Realtime reconnect claim; reconnect is opt-in and defaults off in realtime-recovery.ts."
+    },
+    {
+      "candidate": "c38",
+      "reason": "Covered by the recorded Realtime reconnect claim; maxQueueSize defaults to 0 via maxQueueBytes ?? 0."
+    },
+    {
+      "candidate": "c40",
+      "reason": "Duplicate of the recorded runTools concurrency claim (AbstractChatCompletionRunner.ts:595-611)."
+    }
+  ],
+  "behaviors": [],
+  "notes": [],
+  "retracted": [],
+  "raw_claims": [
+    {
+      "n": "1",
+      "claim": "The default request timeout is 10 minutes.",
+      "verdict": "FALSE",
+      "severity": "medium",
+      "explanation": "DEFAULT_TIMEOUT is 1,200,001 ms (about 20 minutes), twice the documented 10 minutes; the code comment also says 10 minutes, which is wrong.",
+      "user_impact": "A user who relies on the documented 10 minute ceiling for hung requests (and for sizing retry/queue budgets) will actually wait about 20 minutes per attempt before a timeout error, and up to 20 minutes more on each retry.",
+      "note": null,
+      "source": {
+        "file": "docs/configuration.md",
+        "line_start": 90,
+        "quote": "The default request timeout is 10 minutes."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/client.ts",
+          "line_start": 2577,
+          "quote": "static DEFAULT_TIMEOUT = 1200001; // 10 minutes",
+          "checked": {
+            "ok": true,
+            "where": "src/client.ts:2577",
+            "file_sha256": "64dcc83da35bc9b597f060fecd897145078f8ce70ea1658d5a4681a6b04b746d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/client.ts",
+          "line_start": 636,
+          "quote": "this.timeout = options.timeout ?? OpenAI.DEFAULT_TIMEOUT; /* 10 minutes */",
+          "checked": {
+            "ok": true,
+            "where": "src/client.ts:636",
+            "file_sha256": "64dcc83da35bc9b597f060fecd897145078f8ce70ea1658d5a4681a6b04b746d"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "1200001 ms is about 20 minutes, not 10. The comment is stale and the doc promises 10. Severity medium is acceptable.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/client.ts",
+            "line_start": 2577,
+            "quote": "static DEFAULT_TIMEOUT = 1200001; // 10 minutes",
+            "checked": {
+              "ok": true,
+              "where": "src/client.ts:2577",
+              "file_sha256": "64dcc83da35bc9b597f060fecd897145078f8ce70ea1658d5a4681a6b04b746d"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:27:45.776Z"
+      },
+      "receipt": "rcpt_8df39ac69156"
+    },
+    {
+      "n": "2",
+      "claim": "Subject-token refresh buffer default is 1200 seconds (20 minutes) before expiration, capped at half the token lifetime.",
+      "verdict": "PARTIAL",
+      "severity": "low",
+      "explanation": "The cap at a fraction of token lifetime exists, but the default buffer is 2401 seconds (about 40 minutes), not 1200.",
+      "user_impact": "Tokens are refreshed about twice as early as documented, so more token-exchange calls happen than a user sizing for a 20 minute buffer expects. Failure is not caused, only more refresh traffic.",
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 188,
+        "quote": "default is 1200 seconds (20 minutes) before expiration; the effective buffer is capped at half of the actual token lifetime"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/auth/workload-identity-auth.ts",
+          "line_start": 45,
+          "quote": "const configuredBufferMs = (refreshBufferSeconds ?? 2401) * 1000;",
+          "checked": {
+            "ok": true,
+            "where": "src/auth/workload-identity-auth.ts:45",
+            "file_sha256": "f1e40bf9ef9963eef15cfef4eb93b1cc8827fed5fa7aac239b7cb27998e97c2c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/auth/workload-identity-auth.ts",
+          "line_start": 46,
+          "quote": "const effectiveBufferMs = Math.min(",
+          "checked": {
+            "ok": true,
+            "where": "src/auth/workload-identity-auth.ts:46",
+            "file_sha256": "f1e40bf9ef9963eef15cfef4eb93b1cc8827fed5fa7aac239b7cb27998e97c2c"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "The default is 2401 seconds (about 40 minutes), not the documented 1200. Impact is only extra refresh traffic, so low severity is right.",
+        "severity": "low",
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/auth/workload-identity-auth.ts",
+            "line_start": 45,
+            "quote": "const configuredBufferMs = (refreshBufferSeconds ?? 2401) * 1000;",
+            "checked": {
+              "ok": true,
+              "where": "src/auth/workload-identity-auth.ts:45",
+              "file_sha256": "f1e40bf9ef9963eef15cfef4eb93b1cc8827fed5fa7aac239b7cb27998e97c2c"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:27:47.246Z"
+      },
+      "receipt": "rcpt_907654093fd5"
+    },
+    {
+      "n": "3",
+      "claim": "Webhook default tolerance is 300 seconds.",
+      "verdict": "PARTIAL",
+      "severity": "medium",
+      "explanation": "unwrap defaults to 300 s but verifySignature defaults to 601 s, though its JSDoc says 300. The doc says both methods share the default.",
+      "user_impact": "Users calling verifySignature directly and relying on a 5 minute replay window actually accept events up to about 10 minutes old, doubling the replay window.",
+      "note": null,
+      "source": {
+        "file": "docs/webhooks.md",
+        "line_start": 103,
+        "quote": "The default tolerance is 300 seconds."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/resources/webhooks/webhooks.ts",
+          "line_start": 387,
+          "quote": "tolerance: number = 300,",
+          "checked": {
+            "ok": true,
+            "where": "src/resources/webhooks/webhooks.ts:387",
+            "file_sha256": "8dbef0ac2e067977afa1139d45c82ba2910c177be76908042870ac668309a8ff"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/resources/webhooks/webhooks.ts",
+          "line_start": 408,
+          "quote": "tolerance: number = 601,",
+          "checked": {
+            "ok": true,
+            "where": "src/resources/webhooks/webhooks.ts:408",
+            "file_sha256": "8dbef0ac2e067977afa1139d45c82ba2910c177be76908042870ac668309a8ff"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "The documented default is 300 seconds, but a second default of 601 seconds (about 10 minutes) appears in the code. That doubles the replay window where it applies. The packet does not show which function line 408 belongs to. Medium severity is acceptable but could be lower.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/resources/webhooks/webhooks.ts",
+            "line_start": 408,
+            "quote": "tolerance: number = 601,",
+            "checked": {
+              "ok": true,
+              "where": "src/resources/webhooks/webhooks.ts:408",
+              "file_sha256": "8dbef0ac2e067977afa1139d45c82ba2910c177be76908042870ac668309a8ff"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:27:48.715Z"
+      },
+      "receipt": "rcpt_911902600d92"
+    },
+    {
+      "n": "4",
+      "claim": "Default retries are two; retries on connection errors and 408, 409, 429, 500+; maxRetries 0 disables.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default 2 via normalizeRetries; 408/409/429/>=500 retried; 0 is accepted and yields no retries.",
+      "user_impact": null,
+      "note": "An x-should-retry header from the server can override the status list.",
+      "source": {
+        "file": "docs/configuration.md",
+        "line_start": 78,
+        "quote": "The client retries temporary connection errors and HTTP 408, 409, 429, and 500-or-higher responses twice"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/client.ts",
+          "line_start": 1037,
+          "quote": "return typeof value === 'number' && Number.isSafeInteger(value) && value >= 0 ? value : 2;",
+          "checked": {
+            "ok": true,
+            "where": "src/client.ts:1037",
+            "file_sha256": "64dcc83da35bc9b597f060fecd897145078f8ce70ea1658d5a4681a6b04b746d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/client.ts",
+          "line_start": 2154,
+          "quote": "if (response.status >= 500) return true;",
+          "checked": {
+            "ok": true,
+            "where": "src/client.ts:2154",
+            "file_sha256": "64dcc83da35bc9b597f060fecd897145078f8ce70ea1658d5a4681a6b04b746d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/client.ts",
+          "line_start": 2151,
+          "quote": "if (response.status === 429) return true;",
+          "checked": {
+            "ok": true,
+            "where": "src/client.ts:2151",
+            "file_sha256": "64dcc83da35bc9b597f060fecd897145078f8ce70ea1658d5a4681a6b04b746d"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_96e40ca28c0a"
+    },
+    {
+      "n": "5",
+      "claim": "files.waitForProcessing default interval five seconds, maximum wait 30 minutes.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Defaults are 5000 ms and 30 minutes.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/uploads.md",
+        "line_start": 155,
+        "quote": "The default interval is five seconds and the default maximum wait is 30 minutes."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/resources/files.ts",
+          "line_start": 319,
+          "quote": "{ pollInterval = 5000, maxWait = 30 * 60 * 1000 }",
+          "checked": {
+            "ok": true,
+            "where": "src/resources/files.ts:319",
+            "file_sha256": "ca78d34f73bef9a683b5fb2bbeb57af219478027b54ee243b611a1d4a12e04d7"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_d8d1fdb0bf95"
+    },
+    {
+      "n": "6",
+      "claim": "Live reconnect backoff: maxRetries defaults to 5, initialDelay 500 ms, maxDelay 8 s; maxRetries 0 disables.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Defaults match; maxRetries 0 short-circuits reconnect.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/live.md",
+        "line_start": 12,
+        "quote": "backoff: `maxRetries` defaults to 5, `initialDelay` to 500 ms and `maxDelay`"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/internal/ws-connection-controller.ts",
+          "line_start": 631,
+          "quote": "const maxRetries = this._reconnectOptions.maxRetries ?? 5;",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/ws-connection-controller.ts:631",
+            "file_sha256": "c8de0169305bb6bfc99dcc11c26d12e16bb18891146bd3e7b834cb0490b4ae1a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/internal/ws-connection-controller.ts",
+          "line_start": 632,
+          "quote": "const initialDelay = this._reconnectOptions.initialDelay ?? 500;",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/ws-connection-controller.ts:632",
+            "file_sha256": "c8de0169305bb6bfc99dcc11c26d12e16bb18891146bd3e7b834cb0490b4ae1a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/internal/ws-connection-controller.ts",
+          "line_start": 633,
+          "quote": "const maxDelay = this._reconnectOptions.maxDelay ?? 8000;",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/ws-connection-controller.ts:633",
+            "file_sha256": "c8de0169305bb6bfc99dcc11c26d12e16bb18891146bd3e7b834cb0490b4ae1a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/internal/ws-connection-controller.ts",
+          "line_start": 518,
+          "quote": "if (this._reconnectOptions.maxRetries === 0) {",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/ws-connection-controller.ts:518",
+            "file_sha256": "c8de0169305bb6bfc99dcc11c26d12e16bb18891146bd3e7b834cb0490b4ae1a"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_d5f465f33ac6"
+    },
+    {
+      "n": "7",
+      "claim": "Realtime reconnect: five attempts default, delays 500 ms growing to 8 s, configurable via maxReconnectAttempts, reconnectInitialDelay, reconnectMaxDelay; sends rejected by default, maxQueueBytes retains commands.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Option names and defaults match; queue size defaults to 0 so sends are not retained.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/realtime.md",
+        "line_start": 183,
+        "quote": "The SDK allows five reconnect attempts in total by default. Set"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/internal/realtime-recovery.ts",
+          "line_start": 110,
+          "quote": "maxRetries: options.maxReconnectAttempts ?? 5,",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/realtime-recovery.ts:110",
+            "file_sha256": "9fb73903361f212c6d97b5ce7ce2f1acc2a07f3cde5629a0775deef61ea618de"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/internal/realtime-recovery.ts",
+          "line_start": 111,
+          "quote": "initialDelay: options.reconnectInitialDelay ?? 500,",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/realtime-recovery.ts:111",
+            "file_sha256": "9fb73903361f212c6d97b5ce7ce2f1acc2a07f3cde5629a0775deef61ea618de"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/internal/realtime-recovery.ts",
+          "line_start": 112,
+          "quote": "maxDelay: options.reconnectMaxDelay ?? 8000,",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/realtime-recovery.ts:112",
+            "file_sha256": "9fb73903361f212c6d97b5ce7ce2f1acc2a07f3cde5629a0775deef61ea618de"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/internal/realtime-recovery.ts",
+          "line_start": 105,
+          "quote": "maxQueueSize: options.maxQueueBytes ?? 0,",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/realtime-recovery.ts:105",
+            "file_sha256": "9fb73903361f212c6d97b5ce7ce2f1acc2a07f3cde5629a0775deef61ea618de"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_ce6431baaf5c"
+    },
+    {
+      "n": "8",
+      "claim": "runTools executes multiple tool calls concurrently by default; parallel_tool_calls: false runs them sequentially, results in order.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Sequential loop when parallel_tool_calls is false, otherwise Promise.allSettled with order preserved.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/helpers.md",
+        "line_start": 412,
+        "quote": "When a completion requests multiple tool calls, `runTools` executes them concurrently by default and"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/lib/AbstractChatCompletionRunner.ts",
+          "line_start": 595,
+          "quote": "if (singleFunctionToCall || params.parallel_tool_calls === false) {",
+          "checked": {
+            "ok": true,
+            "where": "src/lib/AbstractChatCompletionRunner.ts:595",
+            "file_sha256": "b70f1a73ddbfc3e4afe7b414ac723891a52836db92aee8a6dba909186b6991b3"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/lib/AbstractChatCompletionRunner.ts",
+          "line_start": 611,
+          "quote": "const results = await Promise.allSettled(message.tool_calls.map(runToolCall));",
+          "checked": {
+            "ok": true,
+            "where": "src/lib/AbstractChatCompletionRunner.ts:611",
+            "file_sha256": "b70f1a73ddbfc3e4afe7b414ac723891a52836db92aee8a6dba909186b6991b3"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_cf1a0ff3818e"
+    },
+    {
+      "n": "9",
+      "claim": "Web browsers: disabled by default; enable by explicitly setting dangerouslyAllowBrowser to true.",
+      "verdict": "PARTIAL",
+      "severity": "medium",
+      "explanation": "For AzureOpenAI, supplying an azureADTokenProvider silently turns browser use on unless the caller passes an explicit false. Only the internal security-model doc mentions this; README and azure docs do not.",
+      "user_impact": "A developer bundling AzureOpenAI with a token provider into browser code gets no browser-use guard, contrary to the README's explicit opt-in promise, and may expose credentials or tokens client-side without noticing.",
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 873,
+        "quote": "Web browsers: disabled by default to avoid exposing your secret API credentials. Enable browser support by explicitly setting `dangerouslyAllowBrowser` to `true`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/azure.ts",
+          "line_start": 105,
+          "quote": "if (typeof azureADTokenProvider === 'function') {",
+          "checked": {
+            "ok": true,
+            "where": "src/azure.ts:105",
+            "file_sha256": "bdf0309d714c1dbed66ae8070be4f22e779229a9b1bc25f64a5ac67c05596fb0"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/azure.ts",
+          "line_start": 106,
+          "quote": "dangerouslyAllowBrowser ??= true;",
+          "checked": {
+            "ok": true,
+            "where": "src/azure.ts:106",
+            "file_sha256": "bdf0309d714c1dbed66ae8070be4f22e779229a9b1bc25f64a5ac67c05596fb0"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "With a token provider, AzureOpenAI sets dangerouslyAllowBrowser to true by default. That bypasses the README's promise of an explicit opt-in.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/azure.ts",
+            "line_start": 105,
+            "line_end": 106,
+            "quote": "if (typeof azureADTokenProvider === 'function') {\n      dangerouslyAllowBrowser ??= true;",
+            "checked": {
+              "ok": true,
+              "where": "src/azure.ts:105-106",
+              "file_sha256": "bdf0309d714c1dbed66ae8070be4f22e779229a9b1bc25f64a5ac67c05596fb0"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:27:50.083Z"
+      },
+      "receipt": "rcpt_1f4ba13ed6d3"
+    },
+    {
+      "n": "10",
+      "claim": "Bedrock credentials are sent only to the configured API-root origin; mismatched absolute URLs are rejected.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Origin of the finalized request is compared with the configured base URL and an error is thrown before credentials are attached.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/bedrock.md",
+        "line_start": 46,
+        "quote": "Bedrock credentials are sent only to the configured API-root origin; absolute resource URLs targeting a different origin are rejected."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/internal/bedrock.ts",
+          "line_start": 246,
+          "quote": "`Bedrock request origin \\`${requestOrigin}\\` does not match the configured base URL origin \\`${expectedOrigin}\\`.`,",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/bedrock.ts:246",
+            "file_sha256": "08f7dce7575ec8af1b0af645ae7da3c6f2bd0ece48ecfe690906f45a3fb5f331"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_950a823e6419"
+    },
+    {
+      "n": "11",
+      "claim": "All Bedrock auth modes disable automatic redirects, even if fetchOptions sets redirect follow.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Each Bedrock auth hook (bearer, SigV4 provider, legacy client) sets redirect to manual on the final request.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/bedrock.md",
+        "line_start": 48,
+        "quote": "disable automatic redirects, including same-origin redirects, even when client or per-request `fetchOptions` specifies `redirect: 'follow'`"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/internal/bedrock.ts",
+          "line_start": 511,
+          "quote": "request.redirect = 'manual';",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/bedrock.ts:511",
+            "file_sha256": "08f7dce7575ec8af1b0af645ae7da3c6f2bd0ece48ecfe690906f45a3fb5f331"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/providers/bedrock/aws.ts",
+          "line_start": 248,
+          "quote": "request.redirect = 'manual';",
+          "checked": {
+            "ok": true,
+            "where": "src/providers/bedrock/aws.ts:248",
+            "file_sha256": "6f2bedf3739f500ae88a566964eb70d6c332f002926060f11896702e07520b10"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/bedrock.ts",
+          "line_start": 246,
+          "quote": "request.redirect = 'manual';",
+          "checked": {
+            "ok": true,
+            "where": "src/bedrock.ts:246",
+            "file_sha256": "cdfd862776fad39481fd16a06e080cedc75d553468a0689ecce8d16aa2d975a5"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_6838d009a71f"
+    },
+    {
+      "n": "12",
+      "claim": "Bedrock region defaults to AWS_REGION or AWS_DEFAULT_REGION; AWS_BEDROCK_BASE_URL overrides endpoint.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Env fallbacks are read in the documented order.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/bedrock.md",
+        "line_start": 34,
+        "quote": "The region defaults to `AWS_REGION` or `AWS_DEFAULT_REGION`. Pass `baseURL` or set `AWS_BEDROCK_BASE_URL` to override the derived endpoint."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/internal/bedrock.ts",
+          "line_start": 195,
+          "quote": "normalizeOptionalString(readEnv('AWS_REGION')) ??",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/bedrock.ts:195",
+            "file_sha256": "08f7dce7575ec8af1b0af645ae7da3c6f2bd0ece48ecfe690906f45a3fb5f331"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/internal/bedrock.ts",
+          "line_start": 196,
+          "quote": "normalizeOptionalString(readEnv('AWS_DEFAULT_REGION'));",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/bedrock.ts:196",
+            "file_sha256": "08f7dce7575ec8af1b0af645ae7da3c6f2bd0ece48ecfe690906f45a3fb5f331"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/internal/bedrock.ts",
+          "line_start": 204,
+          "quote": "? normalizeOptionalString(readEnv('AWS_BEDROCK_BASE_URL'))",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/bedrock.ts:204",
+            "file_sha256": "08f7dce7575ec8af1b0af645ae7da3c6f2bd0ece48ecfe690906f45a3fb5f331"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9ca04b185f02"
+    },
+    {
+      "n": "13",
+      "claim": "Bearer example requires AWS_BEARER_TOKEN_BEDROCK; apiKey: null prevents env bearer token taking precedence.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The env token is used only when apiKey is not null; otherwise absent token causes the credentials error.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/bedrock.md",
+        "line_start": 100,
+        "quote": "The bearer example requires `AWS_BEARER_TOKEN_BEDROCK` to be configured."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/internal/bedrock.ts",
+          "line_start": 567,
+          "quote": "if (allowEnvironment && options.apiKey !== null && readEnv('AWS_BEARER_TOKEN_BEDROCK')) {",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/bedrock.ts:567",
+            "file_sha256": "08f7dce7575ec8af1b0af645ae7da3c6f2bd0ece48ecfe690906f45a3fb5f331"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/internal/bedrock.ts",
+          "line_start": 576,
+          "quote": "'Could not find credentials for Bedrock. Set `AWS_BEARER_TOKEN_BEDROCK` or configure AWS credential authentication.',",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/bedrock.ts:576",
+            "file_sha256": "08f7dce7575ec8af1b0af645ae7da3c6f2bd0ece48ecfe690906f45a3fb5f331"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_058da5fccba2"
+    },
+    {
+      "n": "14",
+      "claim": "Browser toolset requires confirm for state-changing or sensitive members and urlPolicy for navigate/new_tab; confirm must return exactly true.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Constructor throws without callbacks, and a non-true confirm result declines the action. Context is a structuredClone.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/browser.md",
+        "line_start": 84,
+        "quote": "`confirm` is required when a selected method can change browser state or read diagnostics. Only exactly `true`"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/helpers/browser.ts",
+          "line_start": 1209,
+          "quote": "if (requiresConsent(name) && !configuredOption(options, 'confirm')) {",
+          "checked": {
+            "ok": true,
+            "where": "src/helpers/browser.ts:1209",
+            "file_sha256": "24996fc2dd4ff0aca816ba679328df8861055529672cd705e7f866dd5ac4ad6f"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/helpers/browser.ts",
+          "line_start": 1212,
+          "quote": "if ((name === 'navigate' || name === 'new_tab') && !configuredOption(options, 'urlPolicy')) {",
+          "checked": {
+            "ok": true,
+            "where": "src/helpers/browser.ts:1212",
+            "file_sha256": "24996fc2dd4ff0aca816ba679328df8861055529672cd705e7f866dd5ac4ad6f"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/helpers/browser.ts",
+          "line_start": 1577,
+          "quote": "(await policy.confirm?.(protectBrowserOutput(structuredClone(context)), { signal })) !== true",
+          "checked": {
+            "ok": true,
+            "where": "src/helpers/browser.ts:1577",
+            "file_sha256": "24996fc2dd4ff0aca816ba679328df8861055529672cd705e7f866dd5ac4ad6f"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9a909ebc2c06"
+    },
+    {
+      "n": "15",
+      "claim": "wait_for is a read needing no confirmation, text up to 256 UTF-8 bytes, timeout 1 to 30000 ms.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "wait_for is marked non-changing and the schema bounds match; text validated at 256 bytes (line 507).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/browser.md",
+        "line_start": 124,
+        "quote": "`wait_for({text, timeout_ms, tab_id}, {signal})` is a read. Use a nonempty text condition of at most"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/helpers/browser.ts",
+          "line_start": 208,
+          "quote": "wait_for: {",
+          "checked": {
+            "ok": true,
+            "where": "src/helpers/browser.ts:208",
+            "file_sha256": "24996fc2dd4ff0aca816ba679328df8861055529672cd705e7f866dd5ac4ad6f"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/helpers/browser.ts",
+          "line_start": 210,
+          "quote": "changes: false,",
+          "checked": {
+            "ok": true,
+            "where": "src/helpers/browser.ts:210",
+            "file_sha256": "24996fc2dd4ff0aca816ba679328df8861055529672cd705e7f866dd5ac4ad6f"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/helpers/browser.ts",
+          "line_start": 26,
+          "quote": "timeout: { type: 'integer', minimum: 1, maximum: 30_000 },",
+          "checked": {
+            "ok": true,
+            "where": "src/helpers/browser.ts:26",
+            "file_sha256": "24996fc2dd4ff0aca816ba679328df8861055529672cd705e7f866dd5ac4ad6f"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_abc758562b0e"
+    },
+    {
+      "n": "16",
+      "claim": "MCP approval is required by default; runner enforces always/never filters; empty always/never filter applies to every tool.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Missing policy defaults to always; a filter without tool_names matches every tool; read_only filters return undefined (left to API policy).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/browser.md",
+        "line_start": 343,
+        "quote": "Approval is required by default. The runner enforces `always`, `never`, and unambiguous"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/helpers/responses-tool-runner.ts",
+          "line_start": 1772,
+          "quote": "if (policy === undefined || policy === null) {",
+          "checked": {
+            "ok": true,
+            "where": "src/helpers/responses-tool-runner.ts:1772",
+            "file_sha256": "b231ab2411620494c3071cc529a3a2732f19903b1135d31866eb1000a541b338"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/helpers/responses-tool-runner.ts",
+          "line_start": 1792,
+          "quote": "!hasOwn(filter, 'tool_names') ||",
+          "checked": {
+            "ok": true,
+            "where": "src/helpers/responses-tool-runner.ts:1792",
+            "file_sha256": "b231ab2411620494c3071cc529a3a2732f19903b1135d31866eb1000a541b338"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/helpers/responses-tool-runner.ts",
+          "line_start": 1786,
+          "quote": "hasOwn(filter, 'read_only') ||",
+          "checked": {
+            "ok": true,
+            "where": "src/helpers/responses-tool-runner.ts:1786",
+            "file_sha256": "b231ab2411620494c3071cc529a3a2732f19903b1135d31866eb1000a541b338"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_eb511839e8e5"
+    },
+    {
+      "n": "17",
+      "claim": "Browser quickstart keeps the browser sandbox enabled (bundled Chromium or Chrome channel).",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Doc quickstart and the runnable examples launch with chromiumSandbox true for both channels; no example passes --no-sandbox (only ecosystem tests do).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/browser.md",
+        "line_start": 24,
+        "quote": "Leave the variable unset to use Playwright's bundled Chromium. Both choices"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "docs/browser.md",
+          "line_start": 44,
+          "quote": "chromiumSandbox: true,",
+          "checked": {
+            "ok": true,
+            "where": "docs/browser.md:44",
+            "file_sha256": "ca10ee67d7b084a28e6a43cbd1840c03f522b54a5b337f36e131972272a73d83"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "examples/responses/browser/read-only.mjs",
+          "line_start": 108,
+          "quote": "chromiumSandbox: true,",
+          "checked": {
+            "ok": true,
+            "where": "examples/responses/browser/read-only.mjs:108",
+            "file_sha256": "6b9ceca0b8a273d18abdafb2ed2f49fe6b5734a52a7b2d1abfc368932e1f1f52"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_2cb492a75d70"
+    },
+    {
+      "n": "18",
+      "claim": "computer run supplies { type: 'computer' } by default.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default tool list is a single computer tool.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/computer.md",
+        "line_start": 36,
+        "quote": "`run` supplies `{ type: 'computer' }` by default."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/helpers/computer.ts",
+          "line_start": 267,
+          "quote": "const tools = suppliedTools === undefined ? [{ type: 'computer' as const }] : suppliedTools;",
+          "checked": {
+            "ok": true,
+            "where": "src/helpers/computer.ts:267",
+            "file_sha256": "ba8ff19d513232896ce7abc77aa2a0dfa321dd76d1ca6548596275da156a46ab"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_73ecdfde05fa"
+    },
+    {
+      "n": "19",
+      "claim": "X.509 workload identity supports only the global https://mtls.api.openai.com/v1 endpoint.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Other origins and URL credentials are rejected.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 206,
+        "quote": "currently supports only the global `https://mtls.api.openai.com/v1` API endpoint."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/internal/auth/x509-api-origin.ts",
+          "line_start": 5,
+          "quote": "export const X509_API_BASE_URL = 'https://mtls.api.openai.com/v1';",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/auth/x509-api-origin.ts:5",
+            "file_sha256": "505430f1163f88b7ab7d6905fdb220ed1176221d82122b5dcaa4259c10dffdf7"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/internal/auth/x509-api-origin.ts",
+          "line_start": 16,
+          "quote": "if (target.origin !== 'https://mtls.api.openai.com' || target.username || target.password) {",
+          "checked": {
+            "ok": true,
+            "where": "src/internal/auth/x509-api-origin.ts:16",
+            "file_sha256": "505430f1163f88b7ab7d6905fdb220ed1176221d82122b5dcaa4259c10dffdf7"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_631a19a93a91"
+    },
+    {
+      "n": "20",
+      "claim": "The X.509 credential's refreshBufferSeconds defaults to 1,200 seconds (20 minutes), capped at half the token lifetime.",
+      "verdict": "PARTIAL",
+      "severity": "low",
+      "explanation": "The X.509 credential passes an unset buffer through to the shared refresh calculation, whose default is 2401 seconds, not 1200.",
+      "user_impact": "Tokens refresh about 40 minutes ahead of expiry rather than 20, so more exchange calls than expected for users who tuned around the documented default.",
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 231,
+        "quote": "it defaults to 1,200 seconds (20 minutes) and is capped at half of the token's lifetime."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/auth/workload-identity-auth.ts",
+          "line_start": 45,
+          "quote": "const configuredBufferMs = (refreshBufferSeconds ?? 2401) * 1000;",
+          "checked": {
+            "ok": true,
+            "where": "src/auth/workload-identity-auth.ts:45",
+            "file_sha256": "f1e40bf9ef9963eef15cfef4eb93b1cc8827fed5fa7aac239b7cb27998e97c2c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/auth/x509-transport.ts",
+          "line_start": 349,
+          "quote": "...(configured.refreshBufferSeconds === undefined",
+          "checked": {
+            "ok": true,
+            "where": "src/auth/x509-transport.ts:349",
+            "file_sha256": "bf238bf5d2b109181708f0e7a497d965d6aa6fe52b7cc82ea1883068b69ddcbd"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "The shared default is 2401 seconds rather than the documented 1200. The impact is only extra refreshes, so low severity is right.",
+        "severity": "low",
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/auth/workload-identity-auth.ts",
+            "line_start": 45,
+            "quote": "const configuredBufferMs = (refreshBufferSeconds ?? 2401) * 1000;",
+            "checked": {
+              "ok": true,
+              "where": "src/auth/workload-identity-auth.ts:45",
+              "file_sha256": "f1e40bf9ef9963eef15cfef4eb93b1cc8827fed5fa7aac239b7cb27998e97c2c"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:27:51.231Z"
+      },
+      "receipt": "rcpt_57e9c8f08c7f"
+    },
+    {
+      "n": "21",
+      "claim": "Responses WebSocket connections last up to 60 minutes.",
+      "verdict": "UNVERIFIABLE",
+      "severity": null,
+      "explanation": "The limit is a server-side property of the API; the SDK has no constant or logic enforcing a 60 minute cap.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/responses-websocket-session.md",
+        "line_start": 205,
+        "quote": "Connections last up to 60 minutes."
+      },
+      "evidence": [
+        {
+          "type": "absent",
+          "pattern": "MAX_CONNECTION_LIFETIME",
+          "checked": {
+            "ok": true,
+            "where": "absent:MAX_CONNECTION_LIFETIME",
+            "doc_hits": 0
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_26c85b1383f2"
+    },
+    {
+      "n": "22",
+      "claim": "Local path and directory upload helpers are convenience helpers, not a filesystem sandbox.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "This is a disclaimer, consistent with code that has no path-confinement option; the helper reads whatever path the application passes.",
+      "user_impact": null,
+      "note": "No sandbox/confinement code exists, matching the disclaimer.",
+      "source": {
+        "file": "docs/agents/helpers.md",
+        "line_start": 209,
+        "quote": "Local path and directory uploads assume application-owned paths and stable source"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "docs/agents/helpers.md",
+          "line_start": 210,
+          "quote": "directories. They are convenience helpers, not a filesystem sandbox; file contents",
+          "checked": {
+            "ok": true,
+            "where": "docs/agents/helpers.md:210",
+            "file_sha256": "027f6987d17b1df0a9e29212f60803a14319cbf718d2d9f4fc3619bcf2f98614"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_c4d048b61e63"
+    },
+    {
+      "n": "23",
+      "claim": "Secret-bearing examples CI job runs only on main push with a protected environment and read-only token permissions.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Job is main-push only, uses ubuntu-latest, environment ci, and contents: read.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/architecture/security-model.md",
+        "line_start": 142,
+        "quote": "The secret-bearing `examples` job explicitly uses `ubuntu-latest`, independent"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": ".github/workflows/ci.yml",
+          "line_start": 317,
+          "quote": "runs-on: ubuntu-latest",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/ci.yml:317",
+            "file_sha256": "cb9423a91912fdb9d48876cf5ab6aeacb169ea6e55d7da18d3bb4bbae9e30e89"
+          }
+        },
+        {
+          "type": "quote",
+          "file": ".github/workflows/ci.yml",
+          "line_start": 322,
+          "quote": "github.ref == 'refs/heads/main' &&",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/ci.yml:322",
+            "file_sha256": "cb9423a91912fdb9d48876cf5ab6aeacb169ea6e55d7da18d3bb4bbae9e30e89"
+          }
+        },
+        {
+          "type": "quote",
+          "file": ".github/workflows/ci.yml",
+          "line_start": 325,
+          "quote": "environment: ci",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/ci.yml:325",
+            "file_sha256": "cb9423a91912fdb9d48876cf5ab6aeacb169ea6e55d7da18d3bb4bbae9e30e89"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_0d4d7e33575a"
+    },
+    {
+      "n": "24",
+      "claim": "Azure token provider implicitly enables dangerouslyAllowBrowser unless caller passes a value; explicit false denies.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The security doc accurately describes the nullish assignment.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/architecture/security-model.md",
+        "line_start": 154,
+        "quote": "- **Azure token providers to browser exposure:** supplying an"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/azure.ts",
+          "line_start": 106,
+          "quote": "dangerouslyAllowBrowser ??= true;",
+          "checked": {
+            "ok": true,
+            "where": "src/azure.ts:106",
+            "file_sha256": "bdf0309d714c1dbed66ae8070be4f22e779229a9b1bc25f64a5ac67c05596fb0"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_0b2708a1d1e0"
+    }
+  ],
+  "totals": {
+    "claims": 24,
+    "VERIFIED": 18,
+    "PARTIAL": 4,
+    "FALSE": 1,
+    "UNVERIFIABLE": 1,
+    "behaviors": 0,
+    "downgraded": 0,
+    "retracted": 0,
+    "rejected_citations": 1
+  }
+}

@@ -1,0 +1,87 @@
+{
+ "j5": {
+  "id": "j5",
+  "verdict": "NOT_REAL",
+  "reason": "README.md:435 describes the SDK's default behavior with plain `async for` iteration, and that holds. The raise at realtime.py:485-487 only happens in the opt-in `dispatch_events()` loop when no error or event handler is registered, and its docstring documents it."
+ },
+ "j6": {
+  "id": "j6",
+  "verdict": "NOT_REAL",
+  "reason": "The 1200s default holds (_workload.py:326). The `min(..., expires_in/2)` clamp at line 327 only matters for tokens that live under 40 minutes. That is a minor edge case, not a broken promise."
+ },
+ "j8": {
+  "id": "j8",
+  "verdict": "NOT_REAL",
+  "reason": "The code matches the auditor's description: src/azure.ts:105-106 sets `dangerouslyAllowBrowser ??= true` when `azureADTokenProvider` is a function, and an explicit false still blocks browser use. This is a deliberate, documented exception (docs/architecture/security-model.md:155). A token provider doesn't embed a static secret, and the generic README line (README.md:873) describes the default for API-key clients. This is a narrow edge case and a documentation gap, not a broken promise a user would be hurt by."
+ },
+ "j1": {
+  "id": "j1",
+  "verdict": "REAL",
+  "reason": "README.md:141-145 lists four `x-proxy-error` values as exhaustive, but responses.rs:57-58 also emits `blocked-by-mitm-hook` and `blocked-by-mitm-required`. The documented list is incomplete, though the impact is minor."
+ },
+ "j2": {
+  "id": "j2",
+  "verdict": "REAL",
+  "reason": "mxc-sandbox/README.md:56-57 states 1,000,000-byte payload and 4096-byte chunk limits. The mxc-sandbox crate has no such constants, and the shared transport at windows-sandbox-rs/src/environment_transport.rs:14-15 uses 16 KiB chunks and a 16 MiB maximum."
+ },
+ "j3": {
+  "id": "j3",
+  "verdict": "NOT_REAL",
+  "reason": "launcher.rs:201-217 does keep an old system bwrap that lacks `--argv0` and uses the no-argv0 path. It rejects only bwrap that also lacks `--perms` or `--as-pid-1`, which is far older than 0.9.0, so the README holds for the realistic 'too old for --argv0' case."
+ },
+ "j12": {
+  "id": "j12",
+  "verdict": "REAL",
+  "reason": "responses-api-proxy/README.md:126 says the backoff caps at 30 seconds, but auth.rs:46 sets MAX_RENEWAL_BACKOFF to 61 seconds and auth.rs:252 doubles up to that cap."
+ },
+ "j15": {
+  "id": "j15",
+  "verdict": "REAL",
+  "reason": "docs/install.md:7 says Windows 11 is supported only via WSL2. The repo ships a native Windows installer (scripts/install/install.ps1) and native Windows sandbox crates (windows-sandbox-rs, mxc-sandbox), so the table is outdated."
+ },
+ "j9": {
+  "id": "j9",
+  "verdict": "REAL",
+  "reason": "The docs (05-anthropic.mdx:103) say authToken defaults to ANTHROPIC_AUTH_TOKEN. anthropic-provider.ts:161-169 uses only options.authToken, otherwise loadApiKey on ANTHROPIC_API_KEY. The variable appears only in a JSDoc comment (line 106)."
+ },
+ "j10": {
+  "id": "j10",
+  "verdict": "NOT_REAL",
+  "reason": "validate-download-url.ts:25-35 rejects every non-http(s) scheme except `data:`. `data:` URLs are inline content with no network fetch, so the doc's claim holds for anything that could be fetched."
+ },
+ "j16": {
+  "id": "j16",
+  "verdict": "REAL",
+  "reason": "The doc (03-openai.mdx:2186) says compaction items are returned as text parts. openai-responses-language-model.ts:1485-1488 emits `type: 'custom'` parts with kind 'openai.compaction', so code that checks for text parts won't find them."
+ },
+ "j17": {
+  "id": "j17",
+  "verdict": "NOT_REAL",
+  "reason": "The page's own caveat (secure-url-fetching.mdx:81-85) says fetchWithValidatedRedirects and getFromApi keep first-request behavior, and only fetchUntrustedUrl isolates credentials on the first hop. So line 41 is loosely worded, but the doc discloses the exception and drops credentials on cross-origin redirects."
+ },
+ "j13": {
+  "id": "j13",
+  "verdict": "REAL",
+  "reason": "The doc at docs/models/index.md:568 says the SDK does not retry general model requests unless ModelSettings(retry=...) is set. In model_retry.py:545-549, `_should_disable_provider_managed_retries` returns False when retry_settings is None, and the comment at lines 539-542 says provider retries stay the only recovery path. So the OpenAI client's built-in retries remain on by default, which contradicts the doc, and the docs only describe the runner-managed layer as opt-in."
+ },
+ "j14": {
+  "id": "j14",
+  "verdict": "REAL",
+  "reason": "docs/realtime/transport.md:64 says the SDK default for max_size is None (unlimited). openai_realtime.py:689 sets max_size to 8 * 1024 * 1024 by default, and the docstring at line 551 also says the default is 8 MiB. The transport_config override at lines 699-700 only applies when the user passes a value."
+ },
+ "j4": {
+  "id": "j4",
+  "verdict": "UNCLEAR",
+  "reason": "The SDK never type-checks header values (`_base_client.py:2781` just does `headers[name] = value`). Whether bytes raises therefore depends on `httpx2.Headers.__setitem__`, which isn't installed in the repo and which I couldn't run, so the MIGRATION.md:370 claim can't be confirmed or refuted."
+ },
+ "j7": {
+  "id": "j7",
+  "verdict": "NOT_REAL",
+  "reason": "`x-stainless-helper` is the only header handled differently (`_base_client.py:2745-2748, 2779-2780`). It accumulates as a comma-separated list rather than being replaced. It's an internal telemetry header, and MIGRATION.md:349-366 documents the case-insensitive replacement using `User-Agent` and `X-Stainless-Timeout`. Users relying on that doc won't notice the exception."
+ },
+ "j11": {
+  "id": "j11",
+  "verdict": "NOT_REAL",
+  "reason": "`_client.py:321-340` shows the parent constructor does read the env vars, but the results are discarded: `api_key` and `auth_token` are set to None, `auth_headers` returns `{}`, and a non-None `base_url` is passed. So the env vars never affect auth or the URL, and the README's user-facing promise holds."
+ }
+}

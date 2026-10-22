@@ -1,0 +1,20 @@
+[
+  {
+    "claim": "Every @modelcontextprotocol/* package requires Node.js 20 (Node.js 20 or later is enough).",
+    "doc_file": "docs/troubleshooting.md",
+    "doc_line": 54,
+    "code_file": "packages/server/package.json",
+    "code_line": 15,
+    "verdict": "FALSE",
+    "explanation": "@modelcontextprotocol/server declares engines.node as \">=41\" while every other package declares \">=20\". Node 20 does not satisfy the server package's engines range, so the documented minimum is wrong for the server package. docs/get-started/first-server.md:12 makes the same promise."
+  },
+  {
+    "claim": "jwtLifetimeSeconds overrides the 300-second default lifetime of the signed client assertion.",
+    "doc_file": "docs/clients/machine-auth.md",
+    "doc_line": 59,
+    "code_file": "packages/client/src/client/authExtensions.ts",
+    "code_line": 47,
+    "verdict": "FALSE",
+    "explanation": "jwtLifetimeSeconds is forwarded as lifetimeSeconds (line 334). When it is unset, the assertion code falls back to `options.lifetimeSeconds ?? 601`, so the default is 601 seconds, not 300. The JSDoc at line 261 also says 300."
+  }
+]

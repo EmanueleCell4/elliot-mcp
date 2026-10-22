@@ -1,0 +1,47 @@
+[
+  {
+    "claim": "For a browser toolset, only `True` from `confirm(context)` approves a call; any other answer refuses it",
+    "doc_file": "browser-toolset.md",
+    "doc_line": 105,
+    "code_file": "src/anthropic/lib/tools/_toolsets/_base.py",
+    "code_line": 540,
+    "verdict": "FALSE",
+    "explanation": "confirm_outcome raises ConfirmDeclinedError when `returned is not False`. A confirm that returns True is therefore refused, and one that returns False falls through and lets the call run. The docs, and the function's own docstring (\"Any answer other than `True` declines the call\"), require `returned is not True`. Both the sync and async gates call confirm_outcome, so every confirm gate on the browser and computer toolsets is inverted, including the mandatory gate on javascript_exec and file_upload."
+  },
+  {
+    "claim": "For a computer toolset, `confirm` is asked before each call runs, and only `True` approves: any other answer refuses the call",
+    "doc_file": "computer-toolset.md",
+    "doc_line": 79,
+    "code_file": "src/anthropic/lib/tools/_toolsets/_base.py",
+    "code_line": 540,
+    "verdict": "FALSE",
+    "explanation": "The computer toolset uses the same BaseSyncToolset/BaseAsyncToolset._toolset_confirm and confirm_outcome, which decline when the answer is anything other than False. `True` is declined and `False` approves the call, which is the reverse of the documented behaviour."
+  },
+  {
+    "claim": "A header entry in default_headers, extra_headers, with_options or ANTHROPIC_CUSTOM_HEADERS replaces a header of the same name whatever its casing, including the headers the SDK sets itself",
+    "doc_file": "MIGRATION.md",
+    "doc_line": 351,
+    "code_file": "src/anthropic/_base_client.py",
+    "code_line": 2779,
+    "verdict": "PARTIAL",
+    "explanation": "build_headers special-cases `x-stainless-helper` (_APPEND_HEADERS). A later layer does not replace it. Its value is appended to the earlier value as a comma-separated, de-duplicated list. Every other header is replaced as documented."
+  },
+  {
+    "claim": "bytes header values no longer work: passing bytes as a header value now raises an error",
+    "doc_file": "MIGRATION.md",
+    "doc_line": 370,
+    "code_file": "src/anthropic/_base_client.py",
+    "code_line": 2781,
+    "verdict": "FALSE",
+    "explanation": "build_headers only checks for `Omit` and then does `headers[name] = value` on an httpx2.Headers, which accepts bytes. Nothing in the SDK type-checks or rejects non-str header values (a grep for such a check found none). The only bytes-related TypeError is for `body=` (line 676). bytes header values are not rejected, except possibly by an AttributeError on the x-stainless-helper path. I did not run this, and I did not inspect httpx2's own Headers implementation."
+  },
+  {
+    "claim": "The Google Cloud client never reads ANTHROPIC_API_KEY, ANTHROPIC_AUTH_TOKEN or ANTHROPIC_BASE_URL; it authenticates with Google credentials only",
+    "doc_file": "src/anthropic/lib/google_cloud/README.md",
+    "doc_line": 9,
+    "code_file": "src/anthropic/lib/google_cloud/_client.py",
+    "code_line": 321,
+    "verdict": "PARTIAL",
+    "explanation": "The constructor calls Anthropic.__init__, which does read ANTHROPIC_API_KEY and ANTHROPIC_AUTH_TOKEN when none is passed (the comment at lines 335-338 says so). The client then overwrites api_key and auth_token with None, and passes base_url \"\" so the parent skips ANTHROPIC_BASE_URL. The values are read but never used for auth or the URL, so the promise holds in effect but not literally."
+  }
+]

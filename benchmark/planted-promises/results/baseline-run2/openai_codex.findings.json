@@ -1,0 +1,56 @@
+[
+  {
+    "claim": "A failed OIDC renewal delays further exchange attempts by one second, doubling after each failure up to 30 seconds.",
+    "doc_file": "codex-rs/responses-api-proxy/README.md",
+    "doc_line": 126,
+    "code_file": "codex-rs/responses-api-proxy/src/auth.rs",
+    "code_line": 46,
+    "verdict": "FALSE",
+    "explanation": "MAX_RENEWAL_BACKOFF is Duration::from_secs(61), and the backoff is computed as (delay * 2).min(MAX_RENEWAL_BACKOFF) at auth.rs:252. The delay sequence is 1,2,4,8,16,32,61 seconds, so it caps at 61 seconds, not 30."
+  },
+  {
+    "claim": "The standalone installers download from releases.openai.com by default and fall back to GitHub Releases only if a metadata or asset download is unavailable; setting CODEX_INSTALLER_USE_RELEASES_OPENAI_COM=false forces GitHub.",
+    "doc_file": "README.md",
+    "doc_line": 28,
+    "code_file": "scripts/install/install.sh",
+    "code_line": 8,
+    "verdict": "PARTIAL",
+    "explanation": "install.sh sets DEFAULT_PREFER_RELEASES_OPENAI_COM=\"false\" and only tries releases.openai.com when the variable is 1/true/yes (install.sh:420-428). On macOS and Linux the default source is therefore GitHub Releases. Only install.ps1 defaults to releases.openai.com ($DefaultPreferReleasesOpenAICom = $true)."
+  },
+  {
+    "claim": "When a request is blocked the proxy sets x-proxy-error to one of blocked-by-allowlist, blocked-by-denylist, blocked-by-method-policy, or blocked-by-policy.",
+    "doc_file": "codex-rs/network-proxy/README.md",
+    "doc_line": 141,
+    "code_file": "codex-rs/network-proxy/src/responses.rs",
+    "code_line": 57,
+    "verdict": "PARTIAL",
+    "explanation": "blocked_header_value also emits blocked-by-mitm-hook (REASON_MITM_HOOK_DENIED) and blocked-by-mitm-required (REASON_MITM_REQUIRED). The documented closed set of four values is incomplete, so clients that treat it as exhaustive will mishandle these two."
+  },
+  {
+    "claim": "The Phase 2 memory consolidation agent runs with no approvals, no network, and local write access only.",
+    "doc_file": "codex-rs/memories/README.md",
+    "doc_line": 114,
+    "code_file": "codex-rs/memories/write/src/phase2.rs",
+    "code_line": 325,
+    "verdict": "PARTIAL",
+    "explanation": "Approvals are forced to Never, but the restricted WorkspaceWrite policy with network_access=false is applied only when the parent permission profile is Managed. If the parent profile is Disabled or External{network}, the agent inherits that profile unchanged (phase2.rs:326-331), so it can run unsandboxed and, for External, with the parent's network setting."
+  },
+  {
+    "claim": "For memories with no last_usage, Phase 2 selection falls back to generated_at, and eligible memories are ranked by usage_count and then by the most recent last_usage / generated_at.",
+    "doc_file": "codex-rs/memories/README.md",
+    "doc_line": 91,
+    "code_file": "codex-rs/state/src/runtime/memories.rs",
+    "code_line": 479,
+    "verdict": "FALSE",
+    "explanation": "get_phase2_input_selection filters and ranks with COALESCE(last_usage, source_updated_at) and never uses generated_at (memories.rs:479-486). The fallback timestamp is source_updated_at, the rollout's last update time, which can differ materially from when the memory was generated."
+  },
+  {
+    "claim": "When bubblewrap is active, the helper applies PR_SET_NO_NEW_PRIVS and a seccomp filter in-process after establishing the filesystem view.",
+    "doc_file": "codex-rs/linux-sandbox/README.md",
+    "doc_line": 53,
+    "code_file": "codex-rs/linux-sandbox/src/seccomp.rs",
+    "code_line": 72,
+    "verdict": "PARTIAL",
+    "explanation": "set_no_new_privs() runs only if a network seccomp mode is selected or legacy Landlock is used. With full-disk-write access and unrestricted network, network_seccomp_mode is None, so neither NO_NEW_PRIVS nor a seccomp filter is installed even though bubblewrap is active. The code comment says this is deliberate, to keep setuid bwrap working."
+  }
+]

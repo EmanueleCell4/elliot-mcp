@@ -1,0 +1,20 @@
+[
+  {
+    "claim": "Every @modelcontextprotocol/* package requires Node.js 20 (and first-server says Node.js 20 or later is all you need)",
+    "doc_file": "docs/troubleshooting.md",
+    "doc_line": 54,
+    "code_file": "packages/server/package.json",
+    "code_line": 15,
+    "verdict": "PARTIAL",
+    "explanation": "All other packages declare engines.node >=20, but @modelcontextprotocol/server declares engines.node >=41. No Node release satisfies that, so the server package's engines field contradicts the documented Node 20 requirement. Installs under engine-strict fail on Node 20 despite the docs."
+  },
+  {
+    "claim": "PrivateKeyJwtProvider: `jwtLifetimeSeconds` overrides the 300-second default",
+    "doc_file": "docs/clients/machine-auth.md",
+    "doc_line": 59,
+    "code_file": "packages/client/src/client/authExtensions.ts",
+    "code_line": 47,
+    "verdict": "FALSE",
+    "explanation": "The assertion lifetime default is `options.lifetimeSeconds ?? 601`, not 300. PrivateKeyJwtProvider forwards jwtLifetimeSeconds as lifetimeSeconds (line 334) with no other default, so the JWT lives 601 seconds when unset."
+  }
+]

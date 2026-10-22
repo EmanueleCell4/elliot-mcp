@@ -1,0 +1,3588 @@
+{
+  "elliot": "0.6.0",
+  "id": "aud_9638601d7549",
+  "root": "/home/claude/elliot-runs/bench/repos/modelcontextprotocol_python-sdk",
+  "project": "modelcontextprotocol_python-sdk",
+  "commit": "f6ccd13df9e15741f55aec26727d7ad11fc4f311",
+  "date": "2026-10-22T15:47:08+00:00",
+  "dirty": true,
+  "remote": "https://github.com/modelcontextprotocol/python-sdk.git",
+  "tree_fingerprint": "821c4609adb41bdc8bae52fb020e31af4876669939d8cc4bfbb91f3c9ad07408",
+  "started_at": "2026-10-22T21:40:17.970Z",
+  "sources": [
+    {
+      "file": "README.md",
+      "lines": 127
+    },
+    {
+      "file": "SECURITY.md",
+      "lines": 36
+    },
+    {
+      "file": "docs/advanced/apps.md",
+      "lines": 182
+    },
+    {
+      "file": "docs/advanced/extensions.md",
+      "lines": 306
+    },
+    {
+      "file": "docs/advanced/header-parameters.md",
+      "lines": 61
+    },
+    {
+      "file": "docs/advanced/index.md",
+      "lines": 32
+    },
+    {
+      "file": "docs/advanced/low-level-server.md",
+      "lines": 221
+    },
+    {
+      "file": "docs/advanced/middleware.md",
+      "lines": 142
+    },
+    {
+      "file": "docs/advanced/pagination.md",
+      "lines": 85
+    },
+    {
+      "file": "docs/advanced/skills.md",
+      "lines": 137
+    },
+    {
+      "file": "docs/client/caching.md",
+      "lines": 132
+    },
+    {
+      "file": "docs/client/callbacks.md",
+      "lines": 150
+    },
+    {
+      "file": "docs/client/identity-assertion.md",
+      "lines": 148
+    },
+    {
+      "file": "docs/client/index.md",
+      "lines": 227
+    },
+    {
+      "file": "docs/client/oauth-clients.md",
+      "lines": 151
+    },
+    {
+      "file": "docs/client/session-groups.md",
+      "lines": 83
+    },
+    {
+      "file": "docs/client/subscriptions.md",
+      "lines": 87
+    },
+    {
+      "file": "docs/client/transports.md",
+      "lines": 162
+    },
+    {
+      "file": "docs/deprecated.md",
+      "lines": 153
+    },
+    {
+      "file": "docs/get-started/first-steps.md",
+      "lines": 139
+    },
+    {
+      "file": "docs/get-started/index.md",
+      "lines": 53
+    },
+    {
+      "file": "docs/get-started/installation.md",
+      "lines": 43
+    },
+    {
+      "file": "docs/get-started/real-host.md",
+      "lines": 178
+    },
+    {
+      "file": "docs/get-started/testing.md",
+      "lines": 110
+    },
+    {
+      "file": "docs/handlers/cancellation.md",
+      "lines": 56
+    },
+    {
+      "file": "docs/handlers/context.md",
+      "lines": 130
+    },
+    {
+      "file": "docs/handlers/dependencies.md",
+      "lines": 159
+    },
+    {
+      "file": "docs/handlers/elicitation.md",
+      "lines": 187
+    },
+    {
+      "file": "docs/handlers/index.md",
+      "lines": 34
+    },
+    {
+      "file": "docs/handlers/lifespan.md",
+      "lines": 90
+    },
+    {
+      "file": "docs/handlers/logging.md",
+      "lines": 84
+    },
+    {
+      "file": "docs/handlers/multi-round-trip.md",
+      "lines": 187
+    },
+    {
+      "file": "docs/handlers/progress.md",
+      "lines": 119
+    },
+    {
+      "file": "docs/handlers/sampling-and-roots.md",
+      "lines": 47
+    },
+    {
+      "file": "docs/handlers/subscriptions.md",
+      "lines": 188
+    },
+    {
+      "file": "docs/index.md",
+      "lines": 98
+    },
+    {
+      "file": "docs/migration.md",
+      "lines": 2859
+    },
+    {
+      "file": "docs/protocol-versions.md",
+      "lines": 137
+    },
+    {
+      "file": "docs/run/asgi.md",
+      "lines": 141
+    },
+    {
+      "file": "docs/run/authorization.md",
+      "lines": 130
+    },
+    {
+      "file": "docs/run/deploy.md",
+      "lines": 193
+    },
+    {
+      "file": "docs/run/index.md",
+      "lines": 157
+    },
+    {
+      "file": "docs/run/legacy-clients.md",
+      "lines": 172
+    },
+    {
+      "file": "docs/run/opentelemetry.md",
+      "lines": 108
+    },
+    {
+      "file": "docs/servers/completions.md",
+      "lines": 126
+    },
+    {
+      "file": "docs/servers/handling-errors.md",
+      "lines": 158
+    },
+    {
+      "file": "docs/servers/index.md",
+      "lines": 31
+    },
+    {
+      "file": "docs/servers/media.md",
+      "lines": 137
+    },
+    {
+      "file": "docs/servers/prompts.md",
+      "lines": 198
+    },
+    {
+      "file": "docs/servers/resources.md",
+      "lines": 142
+    },
+    {
+      "file": "docs/servers/structured-output.md",
+      "lines": 253
+    },
+    {
+      "file": "docs/servers/tools.md",
+      "lines": 175
+    },
+    {
+      "file": "docs/servers/uri-templates.md",
+      "lines": 270
+    },
+    {
+      "file": "docs/translations.md",
+      "lines": 26
+    },
+    {
+      "file": "docs/troubleshooting.md",
+      "lines": 439
+    },
+    {
+      "file": "docs/whats-new.md",
+      "lines": 214
+    },
+    {
+      "file": "i18n/README.md",
+      "lines": 21
+    },
+    {
+      "file": "schema/README.md",
+      "lines": 14
+    },
+    {
+      "file": "src/mcp-types/README.md",
+      "lines": 17
+    },
+    {
+      "file": ".claude/commands/review-pr.md",
+      "lines": 119
+    },
+    {
+      "file": ".claude/skills/test-quality/SKILL.md",
+      "lines": 151
+    },
+    {
+      "file": ".github/pull_request_template.md",
+      "lines": 39
+    },
+    {
+      "file": "DEPENDENCY_POLICY.md",
+      "lines": 16
+    },
+    {
+      "file": "elliot-report-v1/2026-10-22-f6ccd13/report.md",
+      "lines": 461
+    },
+    {
+      "file": "i18n/de/instructions.md",
+      "lines": 174
+    },
+    {
+      "file": "i18n/de/notices.md",
+      "lines": 21
+    },
+    {
+      "file": "i18n/de/pages/advanced/apps.md",
+      "lines": 144
+    },
+    {
+      "file": "i18n/de/pages/advanced/extensions.md",
+      "lines": 192
+    },
+    {
+      "file": "i18n/de/pages/advanced/header-parameters.md",
+      "lines": 66
+    },
+    {
+      "file": "i18n/de/pages/advanced/index.md",
+      "lines": 37
+    },
+    {
+      "file": "i18n/de/pages/advanced/low-level-server.md",
+      "lines": 226
+    },
+    {
+      "file": "i18n/de/pages/advanced/middleware.md",
+      "lines": 155
+    },
+    {
+      "file": "i18n/de/pages/advanced/pagination.md",
+      "lines": 90
+    },
+    {
+      "file": "i18n/de/pages/client/caching.md",
+      "lines": 138
+    },
+    {
+      "file": "i18n/de/pages/client/callbacks.md",
+      "lines": 155
+    },
+    {
+      "file": "i18n/de/pages/client/identity-assertion.md",
+      "lines": 157
+    },
+    {
+      "file": "i18n/de/pages/client/index.md",
+      "lines": 232
+    },
+    {
+      "file": "i18n/de/pages/client/oauth-clients.md",
+      "lines": 156
+    },
+    {
+      "file": "i18n/de/pages/client/session-groups.md",
+      "lines": 88
+    },
+    {
+      "file": "i18n/de/pages/client/subscriptions.md",
+      "lines": 92
+    }
+  ],
+  "focused": false,
+  "candidates": [
+    {
+      "id": "c1",
+      "file": "docs/handlers/multi-round-trip.md",
+      "line": 92,
+      "text": "`MCPServer` protects it by default. Every server seals outgoing `requestState` and verifies every echo — resolver state and hand-built state alike — under a key generated at process start. You configure nothing, write pl",
+      "risk": "high"
+    },
+    {
+      "id": "c2",
+      "file": "docs/handlers/multi-round-trip.md",
+      "line": 109,
+      "text": "Default or configured, `requestState` on the wire is an encrypted, authenticated token. Your code never sees it: handlers and resolvers write plaintext and read plaintext (`ctx.request_state`); the SDK seals on the way o",
+      "risk": "high"
+    },
+    {
+      "id": "c3",
+      "file": "docs/migration.md",
+      "line": 2583,
+      "text": "Under OIDC, omitting `application_type` defaults to `\"web\"`, which an authorization server may reject for the `localhost` redirect URIs native clients use; sending `\"native\"` avoids that. Non-OIDC servers ignore the para",
+      "risk": "high"
+    },
+    {
+      "id": "c4",
+      "file": "docs/advanced/apps.md",
+      "line": 13,
+      "text": "result into that iframe via `postMessage`. Your server never sends or receives any",
+      "risk": "high"
+    },
+    {
+      "id": "c5",
+      "file": "docs/advanced/extensions.md",
+      "line": 154,
+      "text": "short-circuiting interceptor never produces an anonymous or off-schema",
+      "risk": "high"
+    },
+    {
+      "id": "c6",
+      "file": "docs/client/caching.md",
+      "line": 22,
+      "text": "never use `cacheScope` as access control: it is a label, not a lock.",
+      "risk": "high"
+    },
+    {
+      "id": "c7",
+      "file": "docs/client/session-groups.md",
+      "line": 71,
+      "text": "`ClientSessionGroup` is built on `ClientSession`, not on `Client`. Each `connect_to_server` runs the classic `initialize` handshake. It never sends the `server/discover` probe described in **[Protocol versions](../protoc",
+      "risk": "high"
+    },
+    {
+      "id": "c8",
+      "file": "docs/handlers/elicitation.md",
+      "line": 116,
+      "text": "Some things must not go through the model or the client: credentials, card numbers, OAuth consent. For those you don't ask for data; you ask the user to go somewhere:",
+      "risk": "high"
+    },
+    {
+      "id": "c9",
+      "file": "docs/handlers/multi-round-trip.md",
+      "line": 134,
+      "text": "`RequestStateSecurity(codec=...)` takes anything with `seal(bytes) -> str` and `unseal(str) -> bytes` that raises `InvalidRequestState` for any token it did not mint. The classic shape is envelope encryption against a KM",
+      "risk": "high"
+    },
+    {
+      "id": "c10",
+      "file": "docs/migration.md",
+      "line": 2524,
+      "text": "the requested scope, the authorization request also carries `prompt=consent`, as OIDC requires",
+      "risk": "high"
+    },
+    {
+      "id": "c11",
+      "file": "docs/migration.md",
+      "line": 2541,
+      "text": "authorization where OIDC providers previously re-authorized returning users silently, the",
+      "risk": "high"
+    },
+    {
+      "id": "c12",
+      "file": "docs/migration.md",
+      "line": 2547,
+      "text": "To keep the v1 behavior (no `offline_access` request, no consent prompt, no refresh tokens),",
+      "risk": "high"
+    },
+    {
+      "id": "c13",
+      "file": "docs/migration.md",
+      "line": 2559,
+      "text": "disabled; there is no knob for refresh tokens without the forced consent screen, since",
+      "risk": "high"
+    },
+    {
+      "id": "c14",
+      "file": "docs/migration.md",
+      "line": 2844,
+      "text": "`log_level=None` (the default) means no opt-in — a `logging_callback` alone is not one — and a single request can override the client-wide default by supplying the key in its own `meta=` (e.g. `meta={LOG_LEVEL_META_KEY: ",
+      "risk": "high"
+    },
+    {
+      "id": "c15",
+      "file": "docs/run/asgi.md",
+      "line": 107,
+      "text": "* `allow_headers` is the half everyone forgets. A browser **preflights** every MCP request, because `Content-Type: application/json` and the `Mcp-*` request headers are not on the CORS safelist, and a header the prefligh",
+      "risk": "high"
+    },
+    {
+      "id": "c16",
+      "file": "docs/run/authorization.md",
+      "line": 109,
+      "text": "The SDK gives you the resource-server half: verify, advertise, refuse. It does not give you a login page, a consent screen, or a token.",
+      "risk": "high"
+    },
+    {
+      "id": "c17",
+      "file": "docs/run/authorization.md",
+      "line": 118,
+      "text": "An authorization server can also accept an enterprise identity provider's signed assertion in place of a user clicking through a consent screen, and the SDK supports both sides of that exchange. The grant, and the client",
+      "risk": "high"
+    },
+    {
+      "id": "c18",
+      "file": "docs/servers/completions.md",
+      "line": 65,
+      "text": "`None` means *\"no suggestions\"*, never an error. A UI falls back to a plain text box.",
+      "risk": "high"
+    },
+    {
+      "id": "c19",
+      "file": "docs/servers/completions.md",
+      "line": 86,
+      "text": "well-behaved client checks it and never sends the request you can't answer.",
+      "risk": "high"
+    },
+    {
+      "id": "c20",
+      "file": "docs/servers/resources.md",
+      "line": 121,
+      "text": "`mime_type` is yours to declare, and it defaults to `text/plain`. The SDK never inspects what you return to guess it, so a `dict` resource you don't label is still advertised as plain text.",
+      "risk": "high"
+    },
+    {
+      "id": "c21",
+      "file": "docs/client/caching.md",
+      "line": 97,
+      "text": "By default even `\"public\"` entries stay within their partition. `share_public=True` serves entries the server marked `cacheScope: \"public\"` to **every** partition using the store, trusting the server's classification on ",
+      "risk": "default"
+    },
+    {
+      "id": "c22",
+      "file": "docs/client/transports.md",
+      "line": 31,
+      "text": "The moment you need an `Authorization` header, a cookie, a proxy, mTLS, or a different timeout, build the `httpx2.AsyncClient` yourself and hand it to `streamable_http_client`:",
+      "risk": "default"
+    },
+    {
+      "id": "c23",
+      "file": "docs/client/transports.md",
+      "line": 62,
+      "text": "the error and retries the stream. Set `max_sse_event_size=None` to disable the cap when you trust the",
+      "risk": "default"
+    },
+    {
+      "id": "c24",
+      "file": "docs/get-started/real-host.md",
+      "line": 98,
+      "text": "entry's `env` field. `--name` overrides the entry name; it defaults to the server's `name`.",
+      "risk": "default"
+    },
+    {
+      "id": "c25",
+      "file": "docs/handlers/logging.md",
+      "line": 33,
+      "text": "The standard library already does the right thing: log output goes to `sys.stderr` by default. Your `logger.info(...)` lines land in the terminal (or wherever the host collects the subprocess's stderr), and the protocol ",
+      "risk": "default"
+    },
+    {
+      "id": "c26",
+      "file": "docs/migration.md",
+      "line": 28,
+      "text": "| `Client` defaults to `mode='auto'` | servers log an unexpected `server/discover` request | [`mode='auto'`](#client-defaults-to-modeauto) |",
+      "risk": "default"
+    },
+    {
+      "id": "c27",
+      "file": "docs/migration.md",
+      "line": 691,
+      "text": "A server constructed without a name now defaults to `mcp-server` instead of `FastMCP`. This is the name reported to clients as `serverInfo.name` in the initialize result, so it is visible in client UIs, logs, and monitor",
+      "risk": "default"
+    },
+    {
+      "id": "c28",
+      "file": "docs/run/deploy.md",
+      "line": 99,
+      "text": "The first round reaches worker A. Worker A seals `refund:120` under **its** key and returns the token. The client puts the question in front of a person, gets a yes, and retries. The retry is a brand-new HTTP request.",
+      "risk": "default"
+    },
+    {
+      "id": "c29",
+      "file": "docs/run/deploy.md",
+      "line": 134,
+      "text": "* **`keys=[...]`** is the half everyone finds. Give every instance the same secret (at least 32 bytes of it), and every instance can unseal what any sibling minted. `keys[0]` seals and every key in the list unseals, whic",
+      "risk": "default"
+    },
+    {
+      "id": "c30",
+      "file": "docs/troubleshooting.md",
+      "line": 164,
+      "text": "By far the most common cause is a freshly deployed Streamable HTTP server. `streamable_http_app()` (and `mcp.run(\"streamable-http\")`) with no `transport_security=` defaults to **DNS-rebinding protection**: it accepts onl",
+      "risk": "default"
+    },
+    {
+      "id": "c31",
+      "file": "docs/whats-new.md",
+      "line": 187,
+      "text": "[SEP-2577](https://github.com/modelcontextprotocol/modelcontextprotocol/pull/2577) deprecates three whole *capabilities*, on every protocol version: roots, sampling, and MCP-level logging (`ctx.info()` and friends). That",
+      "risk": "default"
+    },
+    {
+      "id": "c32",
+      "file": "docs/client/caching.md",
+      "line": 40,
+      "text": "On a 2026-07-28 session, `Client` honors the hints for you: it has a built-in response cache, on by default. A result that arrives carrying a `ttlMs` is stored, and an identical call within that TTL is served from the ca",
+      "risk": "default"
+    },
+    {
+      "id": "c33",
+      "file": "docs/client/index.md",
+      "line": 44,
+      "text": "* `client.server_info`: the server's identity, or `None` for a 2026-era server that does not report one (python-sdk servers do by default). `server_info.name` here is `\"Bookshop\"`, `server_info.version` is whatever the s",
+      "risk": "default"
+    },
+    {
+      "id": "c34",
+      "file": "docs/deprecated.md",
+      "line": 146,
+      "text": "* Deprecated is advisory: no wire changes, everything keeps working against pre-2026 sessions, and you get a visible `MCPDeprecationWarning` (a `UserWarning`, so it is on by default).",
+      "risk": "default"
+    },
+    {
+      "id": "c35",
+      "file": "docs/handlers/multi-round-trip.md",
+      "line": 67,
+      "text": "The loop is bounded. `Client(..., input_required_max_rounds=10)` is the default cap; a server that keeps returning `InputRequiredResult` past it makes `call_tool` raise. If a round carries only `request_state` and no `in",
+      "risk": "default"
+    },
+    {
+      "id": "c36",
+      "file": "docs/troubleshooting.md",
+      "line": 263,
+      "text": "The server does not recognise the `Mcp-Session-Id` your client sent. Either the server **restarted** (or you were routed to a different instance), or the session **expired** because nothing was in flight for `session_idl",
+      "risk": "default"
+    },
+    {
+      "id": "c37",
+      "file": "docs/whats-new.md",
+      "line": 157,
+      "text": "A 2026-07-28 client does not open a connection, negotiate, and then talk. Every request carries its protocol version, client info, and client capabilities in `_meta`, and the one discovery call, `server/discover`, is a p",
+      "risk": "default"
+    },
+    {
+      "id": "c38",
+      "file": "docs/advanced/extensions.md",
+      "line": 191,
+      "text": "unrecognized `resultType`. Off by default, on both ends of the wire.",
+      "risk": "default"
+    },
+    {
+      "id": "c39",
+      "file": "docs/advanced/low-level-server.md",
+      "line": 81,
+      "text": "A JSON-RPC error, code `-32603`, with a deliberately generic message: the SDK won't leak your traceback to a remote caller. The model never finds out what it did wrong, so it can't retry. (In a test, `raise_exceptions=Tr",
+      "risk": "default"
+    },
+    {
+      "id": "c40",
+      "file": "docs/client/identity-assertion.md",
+      "line": 97,
+      "text": "demo's), and `iss` and `exp`, per [RFC 7523](https://datatracker.ietf.org/doc/html/rfc7523) §3. Require the JWT header's `typ` to be",
+      "risk": "default"
+    }
+  ],
+  "signals": [],
+  "file_count": 1729,
+  "claims": [
+    {
+      "n": "1",
+      "claim": "MCPServer seals outgoing requestState and verifies every echo under a key generated at process start, with no configuration",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "MCPServer always installs RequestStateBoundary; with no policy it uses an ephemeral os.urandom(32) key. The boundary unseals every inbound requestState on tools/call, prompts/get and resources/read, and seals outgoing input-required results.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/handlers/multi-round-trip.md",
+        "line_start": 92,
+        "quote": "`MCPServer` protects it by default. Every server seals outgoing `requestState` and verifies every echo"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/mcpserver/server.py",
+          "line_start": 237,
+          "line_end": 238,
+          "quote": "if request_state_security is None:\n            security = RequestStateSecurity.ephemeral()",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/mcpserver/server.py:237-238",
+            "file_sha256": "2fe1d0b76795fe432b842d400379494e6fff48891bcf46474634c45598e4749a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/mcpserver/server.py",
+          "line_start": 245,
+          "quote": "self._lowlevel_server.middleware.append(RequestStateBoundary(security, default_audience=self.name))",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/mcpserver/server.py:245",
+            "file_sha256": "2fe1d0b76795fe432b842d400379494e6fff48891bcf46474634c45598e4749a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/request_state.py",
+          "line_start": 149,
+          "quote": "return cls(keys=[os.urandom(32)], ttl=ttl, audience=audience)",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/request_state.py:149",
+            "file_sha256": "0dabe65f9d113b85e17e38dac1cb6c543dab6e0d8adcf45c931b212ea4dec429"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_17854968fc09"
+    },
+    {
+      "n": "2",
+      "claim": "requestState on the wire is an encrypted, authenticated token, bound to a time window (ttl default 600s), principal, originating request and audience",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "AES-256-GCM encrypts the payload. Envelope claims enforce expiry (fresh exp on each seal), method, target, argument digest, audience and principal, failing closed on drift.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/handlers/multi-round-trip.md",
+        "line_start": 109,
+        "quote": "Default or configured, `requestState` on the wire is an encrypted, authenticated token."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/request_state.py",
+          "line_start": 229,
+          "quote": "sealed = self._ring[kid].encrypt(nonce, payload, _TOKEN_PREFIX.encode() + kid)",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/request_state.py:229",
+            "file_sha256": "0dabe65f9d113b85e17e38dac1cb6c543dab6e0d8adcf45c931b212ea4dec429"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/request_state.py",
+          "line_start": 391,
+          "quote": "if claims.get(\"m\") != ctx.method or claims.get(\"t\") != target or claims.get(\"a\") != args_digest:",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/request_state.py:391",
+            "file_sha256": "0dabe65f9d113b85e17e38dac1cb6c543dab6e0d8adcf45c931b212ea4dec429"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/request_state.py",
+          "line_start": 123,
+          "quote": "ttl: float = 600.0,",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/request_state.py:123",
+            "file_sha256": "0dabe65f9d113b85e17e38dac1cb6c543dab6e0d8adcf45c931b212ea4dec429"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/request_state.py",
+          "line_start": 401,
+          "quote": "if (claim is None) != (principal is None):",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/request_state.py:401",
+            "file_sha256": "0dabe65f9d113b85e17e38dac1cb6c543dab6e0d8adcf45c931b212ea4dec429"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_999c70589354"
+    },
+    {
+      "n": "3",
+      "claim": "`Client(..., input_required_max_rounds=10)` is the default cap on input-required rounds",
+      "verdict": "FALSE",
+      "severity": "low",
+      "explanation": "The default is 21, not 10. The 50ms to 250ms state-only backoff in the same sentence is accurate.",
+      "user_impact": "A user who relies on a 10-round bound (to size loops, cost or timeouts) actually gets up to 21 rounds before the error. The docs repeat 10 in the recap.",
+      "note": null,
+      "source": {
+        "file": "docs/handlers/multi-round-trip.md",
+        "line_start": 67,
+        "quote": "`Client(..., input_required_max_rounds=10)` is the default cap"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/client/_input_required.py",
+          "line_start": 23,
+          "quote": "DEFAULT_INPUT_REQUIRED_MAX_ROUNDS = 21",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/_input_required.py:23",
+            "file_sha256": "2e746c9c0635e6ed9971805b4bc67d5738015c69e6009a2f71813989eff497d6"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/client/client.py",
+          "line_start": 352,
+          "quote": "input_required_max_rounds: int = DEFAULT_INPUT_REQUIRED_MAX_ROUNDS",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/client.py:352",
+            "file_sha256": "65daef44015ed09c28fc3bb95baf8af6ce09ed92403e788f594d347c06e2754b"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "Docs state default cap of 10 rounds; code default is 21. Real mismatch, low severity is right.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/mcp/client/_input_required.py",
+            "line_start": 23,
+            "quote": "DEFAULT_INPUT_REQUIRED_MAX_ROUNDS = 21",
+            "checked": {
+              "ok": true,
+              "where": "src/mcp/client/_input_required.py:23",
+              "file_sha256": "2e746c9c0635e6ed9971805b4bc67d5738015c69e6009a2f71813989eff497d6"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:45:52.561Z"
+      },
+      "receipt": "rcpt_881663e0a5f9"
+    },
+    {
+      "n": "4",
+      "claim": "With OAuth client defaults, offline_access is added to the scope when the AS advertises it and prompt=consent is then sent",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Scope selection appends offline_access when advertised and refresh_token is a grant type (default); the authorization URL adds prompt=consent whenever the final scope contains offline_access, independent of how it got there.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/migration.md",
+        "line_start": 2523,
+        "line_end": 2524,
+        "quote": "the requested scope, the authorization request also carries `prompt=consent`, as OIDC requires"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/client/auth/utils.py",
+          "line_start": 127,
+          "line_end": 129,
+          "quote": "and \"offline_access\" in authorization_server_metadata.scopes_supported\n        and client_grant_types is not None\n        and \"refresh_token\" in client_grant_types",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/auth/utils.py:127-129",
+            "file_sha256": "e41cc477b2a597e3f7268ad74ca3b6eb3f500c1def3e74d4b6997f0603507d5d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/client/auth/oauth2.py",
+          "line_start": 425,
+          "line_end": 426,
+          "quote": "if \"offline_access\" in self.context.client_metadata.scope.split():\n                auth_params[\"prompt\"] = \"consent\"",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/auth/oauth2.py:425-426",
+            "file_sha256": "df8701d8d1eb952003b0c2aef2aad4d6a6213d8e3f2699da00f929537eb6a645"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/shared/auth.py",
+          "line_start": 14,
+          "quote": "DEFAULT_GRANT_TYPES = [\"authorization_code\", \"refresh_token\"]",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/shared/auth.py:14",
+            "file_sha256": "899afdfa4f368e89d6672141431b6a32f839f9e38a7f0b3a6e6654cda25200e2"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9300eee49c06"
+    },
+    {
+      "n": "5",
+      "claim": "Restricting grant_types to authorization_code keeps v1 behaviour (no offline_access, no consent prompt, no refresh tokens); no knob for refresh without forced consent",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Without refresh_token in grant_types the scope helper never appends offline_access, so the prompt=consent branch (keyed off the final scope) does not fire. prompt=consent depends only on the final scope, matching the stated lack of a knob.",
+      "user_impact": null,
+      "note": "If the user's own scope already lists offline_access, consent is still forced, as the docs acknowledge.",
+      "source": {
+        "file": "docs/migration.md",
+        "line_start": 2547,
+        "line_end": 2548,
+        "quote": "To keep the v1 behavior (no `offline_access` request, no consent prompt, no refresh tokens),"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/client/auth/utils.py",
+          "line_start": 128,
+          "line_end": 129,
+          "quote": "and client_grant_types is not None\n        and \"refresh_token\" in client_grant_types",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/auth/utils.py:128-129",
+            "file_sha256": "e41cc477b2a597e3f7268ad74ca3b6eb3f500c1def3e74d4b6997f0603507d5d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/client/auth/oauth2.py",
+          "line_start": 423,
+          "line_end": 426,
+          "quote": "# OIDC requires prompt=consent when offline_access is requested",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/auth/oauth2.py:423-426",
+            "file_sha256": "df8701d8d1eb952003b0c2aef2aad4d6a6213d8e3f2699da00f929537eb6a645"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_ccd23d5c4752"
+    },
+    {
+      "n": "6",
+      "claim": "log_level=None is the default (no opt-in) and a single request can override it via its own meta LOG_LEVEL_META_KEY",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default None adds nothing to _meta; when set, setdefault lets a per-request meta value win.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/migration.md",
+        "line_start": 2844,
+        "quote": "`log_level=None` (the default) means no opt-in"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/client/client.py",
+          "line_start": 319,
+          "quote": "log_level: LoggingLevel | None = None",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/client.py:319",
+            "file_sha256": "65daef44015ed09c28fc3bb95baf8af6ce09ed92403e788f594d347c06e2754b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/client/session.py",
+          "line_start": 170,
+          "line_end": 171,
+          "quote": "if log_level is not None:\n            meta.setdefault(LOG_LEVEL_META_KEY, log_level)",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/session.py:170-171",
+            "file_sha256": "031512d2cd20670f542534274e39c514d2a8e4dba678256d97ed57e60f4bc5ac"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_b9dfe5988956"
+    },
+    {
+      "n": "7",
+      "claim": "A completion handler returning None means no suggestions (empty list), never an error",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "None is mapped to an empty Completion.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/servers/completions.md",
+        "line_start": 65,
+        "quote": "`None` means *\"no suggestions\"*, never an error."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/mcpserver/server.py",
+          "line_start": 765,
+          "quote": "completion=result if result is not None else Completion(values=[], total=None, has_more=None),",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/mcpserver/server.py:765",
+            "file_sha256": "2fe1d0b76795fe432b842d400379494e6fff48891bcf46474634c45598e4749a"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_23e3016f10a5"
+    },
+    {
+      "n": "8",
+      "claim": "Registering a completion handler declares the completions capability; without it the call fails with Method not found",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The capability is derived from the presence of the completion/complete handler; unregistered methods are not routed.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/servers/completions.md",
+        "line_start": 85,
+        "line_end": 86,
+        "quote": "well-behaved client checks it and never sends the request you can't answer."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/lowlevel/server.py",
+          "line_start": 625,
+          "line_end": 626,
+          "quote": "if \"completion/complete\" in self._request_handlers:\n            completions_capability = types.CompletionsCapability()",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/lowlevel/server.py:625-626",
+            "file_sha256": "9436877f4fb6c9696ae96ee9f2483a701b084062d15b7d72fe8737dd772e8e2a"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9b1e95d52e66"
+    },
+    {
+      "n": "9",
+      "claim": "Resource mime_type defaults to text/plain and the SDK never guesses it",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default text/plain in the resource model and at read time; no content sniffing.",
+      "user_impact": null,
+      "note": "The library's DirectoryResource/ready-made JSON resources default to application/json, which the page does not claim otherwise.",
+      "source": {
+        "file": "docs/servers/resources.md",
+        "line_start": 121,
+        "quote": "`mime_type` is yours to declare, and it defaults to `text/plain`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/mcpserver/resources/base.py",
+          "line_start": 25,
+          "quote": "mime_type: str = Field(default=\"text/plain\", description=\"MIME type of the resource content\")",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/mcpserver/resources/base.py:25",
+            "file_sha256": "624106db8a446dbb186014f01065f8a97781464a5085291cfe8e985ed635c3ed"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/mcpserver/server.py",
+          "line_start": 494,
+          "quote": "mime_type=item.mime_type or \"text/plain\",",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/mcpserver/server.py:494",
+            "file_sha256": "2fe1d0b76795fe432b842d400379494e6fff48891bcf46474634c45598e4749a"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_b55fec9a9af4"
+    },
+    {
+      "n": "10",
+      "claim": "By default even \"public\" cache entries stay within their partition; share_public=True shares them across all partitions",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The partition is part of the cache key for every arm except the public arm when share_public is enabled; the flag is constructor-level only.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/client/caching.md",
+        "line_start": 97,
+        "quote": "By default even `\"public\"` entries stay within their partition."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/client/caching.py",
+          "line_start": 119,
+          "quote": "share_public: bool = False",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/caching.py:119",
+            "file_sha256": "2c8ff3bd7aaea93f6099a1f91b58243d61e321f770f2a0131a0987a0f59cd6a8"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/client/caching.py",
+          "line_start": 217,
+          "line_end": 218,
+          "quote": "if scope == \"private\" or not self._share_public:\n            fields.append(self._partition)",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/caching.py:217-218",
+            "file_sha256": "2c8ff3bd7aaea93f6099a1f91b58243d61e321f770f2a0131a0987a0f59cd6a8"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_7991b4015931"
+    },
+    {
+      "n": "11",
+      "claim": "Client has a built-in response cache on by default; hint-less results get default_ttl_ms=0 (uncached); cache=None disables it; custom store requires explicit partition",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default CacheConfig() is installed unless cache=None; default TTL 0; custom store without partition raises.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/client/caching.md",
+        "line_start": 40,
+        "quote": "On a 2026-07-28 session, `Client` honors the hints for you: it has a built-in response cache, on by default."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/client/client.py",
+          "line_start": 364,
+          "quote": "cache: CacheConfig | None = field(default_factory=CacheConfig)",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/client.py:364",
+            "file_sha256": "65daef44015ed09c28fc3bb95baf8af6ce09ed92403e788f594d347c06e2754b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/client/caching.py",
+          "line_start": 113,
+          "quote": "default_ttl_ms: int = 0",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/caching.py:113",
+            "file_sha256": "2c8ff3bd7aaea93f6099a1f91b58243d61e321f770f2a0131a0987a0f59cd6a8"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/client/caching.py",
+          "line_start": 127,
+          "line_end": 128,
+          "quote": "if self.store is not None and not self.partition:\n            raise ValueError(\"a custom store requires an explicit partition\")",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/caching.py:127-128",
+            "file_sha256": "2c8ff3bd7aaea93f6099a1f91b58243d61e321f770f2a0131a0987a0f59cd6a8"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_a3d313a29b1f"
+    },
+    {
+      "n": "12",
+      "claim": "The default max_sse_event_size is 1 MiB per SSE event",
+      "verdict": "FALSE",
+      "severity": "low",
+      "explanation": "The default limit constant is 2049*1024 bytes, not 1024*1024. The None-disables-limit behaviour is implemented as described.",
+      "user_impact": "The real cap is 2049 KiB (about 2 MiB). A user sizing server output or memory limits around 1 MiB would be off by a factor of two; events between 1 and 2 MiB succeed although the docs imply they fail.",
+      "note": null,
+      "source": {
+        "file": "docs/client/transports.md",
+        "line_start": 59,
+        "quote": "The default is 1 MiB per event, measured in bytes before the event is parsed."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/client/streamable_http.py",
+          "line_start": 61,
+          "quote": "DEFAULT_MAX_SSE_EVENT_SIZE = 2049 * 1024",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/streamable_http.py:61",
+            "file_sha256": "b2f0ed1aaa6a76f3b2df9f3a30b95123f22a8d44978185f4a4217a0188f9d854"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/client/streamable_http.py",
+          "line_start": 114,
+          "quote": "def __init__(self, url: str, *, max_sse_event_size: int | None = DEFAULT_MAX_SSE_EVENT_SIZE) -> None:",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/streamable_http.py:114",
+            "file_sha256": "b2f0ed1aaa6a76f3b2df9f3a30b95123f22a8d44978185f4a4217a0188f9d854"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "Docs say 1 MiB default; code default is 2049 KiB. Real mismatch, low severity is appropriate.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/mcp/client/streamable_http.py",
+            "line_start": 61,
+            "quote": "DEFAULT_MAX_SSE_EVENT_SIZE = 2049 * 1024",
+            "checked": {
+              "ok": true,
+              "where": "src/mcp/client/streamable_http.py:61",
+              "file_sha256": "b2f0ed1aaa6a76f3b2df9f3a30b95123f22a8d44978185f4a4217a0188f9d854"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:45:53.703Z"
+      },
+      "receipt": "rcpt_c0be257013b3"
+    },
+    {
+      "n": "13",
+      "claim": "The SDK's own httpx client uses a 30 second timeout and 300 seconds for reads",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The default client is built with 30s general and 300s read timeouts.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/client/transports.md",
+        "line_start": 42,
+        "quote": "It is the one the SDK's own client uses (30 seconds, 300 for reads)"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/shared/_httpx_utils.py",
+          "line_start": 13,
+          "line_end": 14,
+          "quote": "MCP_DEFAULT_TIMEOUT = 30.0  # General operations (seconds)\nMCP_DEFAULT_SSE_READ_TIMEOUT = 300.0",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/shared/_httpx_utils.py:13-14",
+            "file_sha256": "f758208d93eb85d6061650d3257f2fc072fae1d04f871257e9cc4464d33b3e1c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/shared/_httpx_utils.py",
+          "line_start": 58,
+          "quote": "timeout = httpx2.Timeout(MCP_DEFAULT_TIMEOUT, read=MCP_DEFAULT_SSE_READ_TIMEOUT)",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/shared/_httpx_utils.py:58",
+            "file_sha256": "f758208d93eb85d6061650d3257f2fc072fae1d04f871257e9cc4464d33b3e1c"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_36cabd1a551b"
+    },
+    {
+      "n": "14",
+      "claim": "ClientSessionGroup is built on ClientSession and runs the classic initialize handshake",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "session_group.py constructs ClientSession directly and calls initialize(); it does not use Client or its discovery path.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/client/session-groups.md",
+        "line_start": 71,
+        "quote": "`ClientSessionGroup` is built on `ClientSession`, not on `Client`. Each `connect_to_server` runs the classic `initialize` handshake."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/client/session_group.py",
+          "line_start": 345,
+          "quote": "mcp.ClientSession(",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/session_group.py:345",
+            "file_sha256": "7a06d3248d941a336e2f95b85210962db91cd9593423d986cb6b6ed76e01c24d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/client/session_group.py",
+          "line_start": 358,
+          "quote": "result = await session.initialize()",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/session_group.py:358",
+            "file_sha256": "7a06d3248d941a336e2f95b85210962db91cd9593423d986cb6b6ed76e01c24d"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_ebcd57b78302"
+    },
+    {
+      "n": "15",
+      "claim": "streamable_http_app()/run(\"streamable-http\") with no transport_security defaults to DNS-rebinding protection accepting only localhost Host headers",
+      "verdict": "PARTIAL",
+      "severity": "medium",
+      "explanation": "The default settings are only built for loopback host values; for any other host (e.g. 0.0.0.0) no settings are passed and the transport security default is protection disabled. The loopback default (the common case in the troubleshooting scenario) behaves as described.",
+      "user_impact": "The protection is only armed when the host argument is 127.0.0.1, localhost or ::1. A server run with host='0.0.0.0' (as the migration guide's examples do) gets no DNS-rebinding protection at all, and nothing warns the user; someone reading this page would assume the default always protects them.",
+      "note": null,
+      "source": {
+        "file": "docs/troubleshooting.md",
+        "line_start": 164,
+        "quote": "with no `transport_security=` defaults to **DNS-rebinding protection**: it accepts only requests whose `Host` header is localhost."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/lowlevel/server.py",
+          "line_start": 753,
+          "line_end": 757,
+          "quote": "if transport_security is None and host in (\"127.0.0.1\", \"localhost\", \"::1\"):\n            transport_security = TransportSecuritySettings(\n                enable_dns_rebinding_protection=True,\n                allowed_hosts=[\"127.0.0.1:*\", \"localhost:*\", \"[::1]:*\"],",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/lowlevel/server.py:753-757",
+            "file_sha256": "9436877f4fb6c9696ae96ee9f2483a701b084062d15b7d72fe8737dd772e8e2a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/transport_security.py",
+          "line_start": 48,
+          "quote": "self.settings = settings or TransportSecuritySettings(enable_dns_rebinding_protection=False)",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/transport_security.py:48",
+            "file_sha256": "0ef1be70594071ed248bf0438de405cb27fe9b07c234213da9103caaeb917a7c"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "Protection is only enabled when host is loopback; otherwise the default settings disable it. The doc statement is unconditional, so it misleads users running on 0.0.0.0. Medium severity is reasonable.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/mcp/server/lowlevel/server.py",
+            "line_start": 753,
+            "quote": "if transport_security is None and host in (\"127.0.0.1\", \"localhost\", \"::1\"):",
+            "checked": {
+              "ok": true,
+              "where": "src/mcp/server/lowlevel/server.py:753",
+              "file_sha256": "9436877f4fb6c9696ae96ee9f2483a701b084062d15b7d72fe8737dd772e8e2a"
+            }
+          },
+          {
+            "type": "quote",
+            "file": "src/mcp/server/transport_security.py",
+            "line_start": 48,
+            "quote": "self.settings = settings or TransportSecuritySettings(enable_dns_rebinding_protection=False)",
+            "checked": {
+              "ok": true,
+              "where": "src/mcp/server/transport_security.py:48",
+              "file_sha256": "0ef1be70594071ed248bf0438de405cb27fe9b07c234213da9103caaeb917a7c"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:45:55.838Z"
+      },
+      "receipt": "rcpt_afbd305ad561"
+    },
+    {
+      "n": "16",
+      "claim": "A server constructed without a name defaults to \"mcp-server\" (reported as serverInfo.name) instead of FastMCP",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The lowlevel server is constructed with name or 'mcp-server'.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/migration.md",
+        "line_start": 691,
+        "quote": "A server constructed without a name now defaults to `mcp-server` instead of `FastMCP`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/mcpserver/server.py",
+          "line_start": 213,
+          "quote": "name=name or \"mcp-server\",",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/mcpserver/server.py:213",
+            "file_sha256": "2fe1d0b76795fe432b842d400379494e6fff48891bcf46474634c45598e4749a"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_e3d1cb83210c"
+    },
+    {
+      "n": "17",
+      "claim": "session_idle_timeout defaults to 30 minutes (1800 s)",
+      "verdict": "FALSE",
+      "severity": "medium",
+      "explanation": "The constant is 3660 seconds; its own docstring still says 30 minutes. Both troubleshooting.md and legacy-clients.md repeat the wrong figure.",
+      "user_impact": "The real default is 61*60 = 3660 seconds (61 minutes). Operators sizing memory or capacity from the documented 30 minutes (and docs/run/legacy-clients.md, which states 1800) will keep idle sessions twice as long as expected, and clients that assume expiry after 30 minutes idle will still find the session alive.",
+      "note": null,
+      "source": {
+        "file": "docs/troubleshooting.md",
+        "line_start": 263,
+        "quote": "nothing was in flight for `session_idle_timeout`, which is 30 minutes by default."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/streamable_http_manager.py",
+          "line_start": 38,
+          "quote": "DEFAULT_SESSION_IDLE_TIMEOUT: Final = 61 * 60",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/streamable_http_manager.py:38",
+            "file_sha256": "2658336e891fb066784826b072f3491a5c747c57ef75f764eace883ca2f3caae"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/streamable_http_manager.py",
+          "line_start": 94,
+          "quote": "session_idle_timeout: float | None = DEFAULT_SESSION_IDLE_TIMEOUT,",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/streamable_http_manager.py:94",
+            "file_sha256": "2658336e891fb066784826b072f3491a5c747c57ef75f764eace883ca2f3caae"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "docs/run/legacy-clients.md",
+          "line_start": 78,
+          "quote": "| `session_idle_timeout` | `1800` (30 min) |",
+          "checked": {
+            "ok": true,
+            "where": "docs/run/legacy-clients.md:78",
+            "file_sha256": "c98330aece20fb09a7a6c61ec1f69949cebd501bc409f49dd484289ab121b076"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "Docs say 30 minutes; code default is 61*60 seconds. Real mismatch affecting capacity expectations. Medium is slightly high, but acceptable (low-medium).",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/mcp/server/streamable_http_manager.py",
+            "line_start": 38,
+            "quote": "DEFAULT_SESSION_IDLE_TIMEOUT: Final = 61 * 60",
+            "checked": {
+              "ok": true,
+              "where": "src/mcp/server/streamable_http_manager.py:38",
+              "file_sha256": "2658336e891fb066784826b072f3491a5c747c57ef75f764eace883ca2f3caae"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:45:57.509Z"
+      },
+      "receipt": "rcpt_463a255321e4"
+    },
+    {
+      "n": "18",
+      "claim": "An exception raised from a low-level handler becomes a -32603 error with a generic message, not leaking the traceback",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Unexpected exceptions are logged server-side and replaced with INTERNAL_ERROR and a fixed message.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/advanced/low-level-server.md",
+        "line_start": 81,
+        "quote": "A JSON-RPC error, code `-32603`, with a deliberately generic message: the SDK won't leak your traceback to a remote caller."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/runner.py",
+          "line_start": 547,
+          "line_end": 548,
+          "quote": "logger.exception(\"modern request handler raised\")\n    return ErrorData(code=INTERNAL_ERROR, message=\"Internal server error\")",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/runner.py:547-548",
+            "file_sha256": "be55cb42cbca261c2997bb4f54e2ac892fbb5c35935409ef951ac9f73b527b29"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_aed001b4862b"
+    },
+    {
+      "n": "19",
+      "claim": "Deprecation is advisory and surfaces as an MCPDeprecationWarning, a UserWarning, so it is on by default",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The class subclasses UserWarning, which Python shows by default (unlike DeprecationWarning).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/deprecated.md",
+        "line_start": 146,
+        "quote": "you get a visible `MCPDeprecationWarning` (a `UserWarning`, so it is on by default)."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/shared/exceptions.py",
+          "line_start": 8,
+          "quote": "class MCPDeprecationWarning(UserWarning):",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/shared/exceptions.py:8",
+            "file_sha256": "3f78550758342eca46c8c17cf4a8659d4a5f3e1e074b032e940fc07e0f8b5fae"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_e0893f5bd193"
+    },
+    {
+      "n": "20",
+      "claim": "A short-circuiting extension interceptor never produces an anonymous or off-schema response (result is still serialized and serverInfo-stamped)",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Interceptors wrap the tools/call handler, so their output goes through ServerRunner._serialize, which validates core results against the per-version surface and stamps serverInfo on 2026-era results.",
+      "user_impact": null,
+      "note": "An interceptor returning a non-core extension resultType is exempt from the sieve (a TODO in runner.py notes server-side rejection is not implemented); the claim concerns the interceptor path for core results.",
+      "source": {
+        "file": "docs/advanced/extensions.md",
+        "line_start": 152,
+        "line_end": 155,
+        "quote": "result, including the 2026-era `serverInfo` identity stamp, so a\n  short-circuiting interceptor never produces an anonymous or off-schema\n  response."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/mcpserver/server.py",
+          "line_start": 360,
+          "quote": "pass, so a short-circuiting interceptor's result is sieved and stamped",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/mcpserver/server.py:360",
+            "file_sha256": "2fe1d0b76795fe432b842d400379494e6fff48891bcf46474634c45598e4749a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/runner.py",
+          "line_start": 394,
+          "quote": "return self._stamp_server_info(version, dumped)",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/runner.py:394",
+            "file_sha256": "be55cb42cbca261c2997bb4f54e2ac892fbb5c35935409ef951ac9f73b527b29"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_e53008e010ba"
+    },
+    {
+      "n": "21",
+      "claim": "mcp install records -v/-f environment variables in the entry's env field; --name overrides the entry name, defaulting to the server's name",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "--name is used if given, otherwise the imported server's name attribute.",
+      "user_impact": null,
+      "note": "If the server module cannot be imported, the file name stem is used instead.",
+      "source": {
+        "file": "docs/get-started/real-host.md",
+        "line_start": 98,
+        "quote": "entry's `env` field. `--name` overrides the entry name; it defaults to the server's `name`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/cli/cli.py",
+          "line_start": 437,
+          "line_end": 442,
+          "quote": "name = server_name\n    server = None\n    if not name:\n        try:\n            server = _import_server(file, server_object)\n            name = server.name",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/cli/cli.py:437-442",
+            "file_sha256": "a6ad3bc5887e35b724644e5846c0b326bf046ebe8317903418892e4b0e25022a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/cli/cli.py",
+          "line_start": 395,
+          "line_end": 396,
+          "quote": "\"--env-var\",\n            \"-v\",",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/cli/cli.py:395-396",
+            "file_sha256": "a6ad3bc5887e35b724644e5846c0b326bf046ebe8317903418892e4b0e25022a"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_a87c1149bdda"
+    },
+    {
+      "n": "22",
+      "claim": "Every server (MCPServer and low-level) emits an OpenTelemetry SERVER span per inbound message with mcp.method.name, mcp.protocol.version, jsonrpc.request.id and gen_ai.* attributes on tools/call and prompts/get, using only opentelemetry-api",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The middleware is installed first on every low-level Server (MCPServer wraps one), creating a SERVER span per message; the runtime dependency is only opentelemetry-api.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/run/opentelemetry.md",
+        "line_start": 5,
+        "line_end": 6,
+        "quote": "Every server you create emits an [OpenTelemetry](https://opentelemetry.io/) span for every\nmessage it handles."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/lowlevel/server.py",
+          "line_start": 451,
+          "quote": "self.middleware: list[ServerMiddleware[LifespanResultT]] = [OpenTelemetryMiddleware()]",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/lowlevel/server.py:451",
+            "file_sha256": "9436877f4fb6c9696ae96ee9f2483a701b084062d15b7d72fe8737dd772e8e2a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/_otel.py",
+          "line_start": 29,
+          "line_end": 31,
+          "quote": "attributes[\"gen_ai.operation.name\"] = \"execute_tool\"\n            if target is not None:\n                attributes[\"gen_ai.tool.name\"] = target",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/_otel.py:29-31",
+            "file_sha256": "93bd634a50f553bb908f1d305879035bd5bec2a52f75d64871ee6c342ac98e6b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "pyproject.toml",
+          "line_start": 150,
+          "quote": "\"opentelemetry-api>=1.28.0\",",
+          "checked": {
+            "ok": true,
+            "where": "pyproject.toml:150",
+            "file_sha256": "84ff93013491d4a24dd1abf379281b61b740907e119e8eb43e21fca1071d99d0"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_536e673c3785"
+    },
+    {
+      "n": "23",
+      "claim": "Apps server code never sends or receives ui/* messages; the app resource is served as text/html;profile=mcp-app and the extension is advertised when passed to extensions=",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The Apps extension only stamps tool metadata and serves HTML resources; the server package defines no ui/ JSON-RPC methods.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/advanced/apps.md",
+        "line_start": 13,
+        "line_end": 14,
+        "quote": "result into that iframe via `postMessage`. Your server never sends or receives any\n`ui/*` messages"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/apps.py",
+          "line_start": 43,
+          "line_end": 46,
+          "quote": "EXTENSION_ID = \"io.modelcontextprotocol/ui\"",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/apps.py:43-46",
+            "file_sha256": "b2b92c3041050478edcab6764bdabbba94358e1122ba3e1f3fd866f6004f3aca"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/apps.py",
+          "line_start": 46,
+          "quote": "APP_MIME_TYPE = \"text/html;profile=mcp-app\"",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/apps.py:46",
+            "file_sha256": "b2b92c3041050478edcab6764bdabbba94358e1122ba3e1f3fd866f6004f3aca"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_43791376447b"
+    },
+    {
+      "n": "24",
+      "claim": "ctx.elicit validates the client's answer against the model and raises ValueError on mismatch; elicit_url returns only an action (\"accept\" means consent, no content comes back)",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "URL-mode elicitation returns only an Accepted/Declined/Cancelled marker with no data; form-mode answers are model-validated.",
+      "user_impact": null,
+      "note": "The SDK does not stop a server author from asking for credentials in form mode; the sentence is guidance, with URL mode as the provided mechanism.",
+      "source": {
+        "file": "docs/handlers/elicitation.md",
+        "line_start": 116,
+        "quote": "Some things must not go through the model or the client: credentials, card numbers, OAuth consent."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/elicitation.py",
+          "line_start": 134,
+          "line_end": 139,
+          "quote": "validated_data = schema.model_validate(result.content)\n        except ValidationError as e:\n            raise ValueError(\n                \"Received an accepted elicitation whose content does not match the requested schema\"",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/elicitation.py:134-139",
+            "file_sha256": "bba56eeeb8853a03e887f4453d09adba69528f933118d08be859ff1ec65c7a11"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/elicitation.py",
+          "line_start": 183,
+          "line_end": 184,
+          "quote": "if result.action == \"accept\":\n        return AcceptedUrlElicitation()",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/elicitation.py:183-184",
+            "file_sha256": "bba56eeeb8853a03e887f4453d09adba69528f933118d08be859ff1ec65c7a11"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_b38d8ec83cf3"
+    },
+    {
+      "n": "25",
+      "claim": "client.server_info is None for a 2026-era server that does not report one; python-sdk servers report one by default",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The property is optional and the server runner stamps serverInfo into every 2026-era result.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/client/index.md",
+        "line_start": 44,
+        "quote": "`client.server_info`: the server's identity, or `None` for a 2026-era server that does not report one (python-sdk servers do by default)."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/client/client.py",
+          "line_start": 523,
+          "quote": "def server_info(self) -> Implementation | None:",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/client.py:523",
+            "file_sha256": "65daef44015ed09c28fc3bb95baf8af6ce09ed92403e788f594d347c06e2754b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/runner.py",
+          "line_start": 413,
+          "quote": "result[\"_meta\"] = {SERVER_INFO_META_KEY: self.server.server_info_stamp}",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/runner.py:413",
+            "file_sha256": "be55cb42cbca261c2997bb4f54e2ac892fbb5c35935409ef951ac9f73b527b29"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_37a9a4798c07"
+    },
+    {
+      "n": "26",
+      "claim": "Client defaults to mode='auto': it probes server/discover once and falls back to initialize for older servers",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The default mode is 'auto', documented in the type alias as discover with fallback to the handshake.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/whats-new.md",
+        "line_start": 157,
+        "quote": "`Client` does the right thing by default: it probes `server/discover` once and falls back to the `initialize` handshake if the server is older."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/client/client.py",
+          "line_start": 336,
+          "quote": "mode: ConnectMode = \"auto\"",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/client.py:336",
+            "file_sha256": "65daef44015ed09c28fc3bb95baf8af6ce09ed92403e788f594d347c06e2754b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/client/client.py",
+          "line_start": 467,
+          "quote": "elif self.mode == \"auto\":",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/client.py:467",
+            "file_sha256": "65daef44015ed09c28fc3bb95baf8af6ce09ed92403e788f594d347c06e2754b"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_8f66d6b07f1e"
+    },
+    {
+      "n": "27",
+      "claim": "Logging (ctx.info etc.), sampling and roots APIs emit MCPDeprecationWarning (printed by default) while still working",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The logging, sampling and roots methods are decorated with @deprecated using the UserWarning-based category.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/whats-new.md",
+        "line_start": 187,
+        "quote": "What you notice is `MCPDeprecationWarning`, which is a `UserWarning`, so it prints by default; expect your first `ctx.info(...)` after the upgrade to say so."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/context.py",
+          "line_start": 108,
+          "quote": "@deprecated(\"The logging capability is deprecated as of 2026-07-28 (SEP-2577).\", category=MCPDeprecationWarning)",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/context.py:108",
+            "file_sha256": "796c7c8b479e77877ba906f51dd07ccb6e3157a5809789238fb5fc7fdbfedace"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/session.py",
+          "line_start": 182,
+          "quote": "@deprecated(\"The sampling capability is deprecated as of 2026-07-28 (SEP-2577).\", category=MCPDeprecationWarning)",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/session.py:182",
+            "file_sha256": "6132ca68285d0f2a20d19f0e346b11fb866f2cf4850a09b0efd44df974520726"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/session.py",
+          "line_start": 316,
+          "quote": "@deprecated(\"The roots capability is deprecated as of 2026-07-28 (SEP-2577).\", category=MCPDeprecationWarning)",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/session.py:316",
+            "file_sha256": "6132ca68285d0f2a20d19f0e346b11fb866f2cf4850a09b0efd44df974520726"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_62d9332b1ce7"
+    },
+    {
+      "n": "28",
+      "claim": "Identity assertion: client_secret is required (ValueError), client_secret_post is the default auth method, identity_assertion_enabled defaults off with /token answering unsupported_grant_type, and public clients are refused",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "All described gates exist: disabled by default, public clients get unauthorized_client, the client provider requires a secret and defaults to form-body secret.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/client/identity-assertion.md",
+        "line_start": 87,
+        "quote": "`identity_assertion_enabled=True` gates everything. Off, which is the default, `/token` answers this grant with `unsupported_grant_type`"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/auth/routes.py",
+          "line_start": 81,
+          "quote": "identity_assertion_enabled: bool = False,",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/auth/routes.py:81",
+            "file_sha256": "f0d0bb5d076b0384d59623970af9150c78d519808438eb081fef7e9773043df7"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/auth/handlers/token.py",
+          "line_start": 243,
+          "line_end": 246,
+          "quote": "if not self.identity_assertion_enabled:\n                    return self.response(\n                        TokenErrorResponse(\n                            error=\"unsupported_grant_type\",",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/auth/handlers/token.py:243-246",
+            "file_sha256": "e687ba9560901995faa20dfb99520204b3541c200833135193277c8944a12ca6"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/auth/handlers/token.py",
+          "line_start": 255,
+          "quote": "if not client_info.client_secret:",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/auth/handlers/token.py:255",
+            "file_sha256": "e687ba9560901995faa20dfb99520204b3541c200833135193277c8944a12ca6"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/client/auth/extensions/identity_assertion.py",
+          "line_start": 118,
+          "quote": "raise ValueError(\"client_secret is required: this provider supports confidential clients only\")",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/auth/extensions/identity_assertion.py:118",
+            "file_sha256": "0e98b631d8a243d5372ea79cdf621c22db849a8b1bf03bc380ed528602a2c00c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/client/auth/extensions/identity_assertion.py",
+          "line_start": 99,
+          "quote": "token_endpoint_auth_method: Literal[\"client_secret_basic\", \"client_secret_post\"] = \"client_secret_post\",",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/auth/extensions/identity_assertion.py:99",
+            "file_sha256": "0e98b631d8a243d5372ea79cdf621c22db849a8b1bf03bc380ed528602a2c00c"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_8aa775ec4923"
+    },
+    {
+      "n": "29",
+      "claim": "The cli extra adds the mcp command with dev, run and install subcommands; Python 3.11+ is required",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The console script and the three commands exist; the minimum Python is 3.11.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 40,
+        "quote": "The `cli` extra adds the `mcp` command-line tool (`mcp dev`, `mcp run`, `mcp install`)"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "pyproject.toml",
+          "line_start": 32,
+          "quote": "mcp = \"mcp.cli:app [cli]\"",
+          "checked": {
+            "ok": true,
+            "where": "pyproject.toml:32",
+            "file_sha256": "84ff93013491d4a24dd1abf379281b61b740907e119e8eb43e21fca1071d99d0"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "pyproject.toml",
+          "line_start": 6,
+          "quote": "requires-python = \">=3.11\"",
+          "checked": {
+            "ok": true,
+            "where": "pyproject.toml:6",
+            "file_sha256": "84ff93013491d4a24dd1abf379281b61b740907e119e8eb43e21fca1071d99d0"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/cli/cli.py",
+          "line_start": 221,
+          "quote": "def dev(",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/cli/cli.py:221",
+            "file_sha256": "a6ad3bc5887e35b724644e5846c0b326bf046ebe8317903418892e4b0e25022a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/cli/cli.py",
+          "line_start": 304,
+          "quote": "def run(",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/cli/cli.py:304",
+            "file_sha256": "a6ad3bc5887e35b724644e5846c0b326bf046ebe8317903418892e4b0e25022a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/cli/cli.py",
+          "line_start": 361,
+          "quote": "def install(",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/cli/cli.py:361",
+            "file_sha256": "a6ad3bc5887e35b724644e5846c0b326bf046ebe8317903418892e4b0e25022a"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_deab132c7a88"
+    },
+    {
+      "n": "30",
+      "claim": "The default no-configuration request-state key is process-local: a retry reaching another worker or surviving a restart is rejected",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "A fresh random key per process means other processes find no matching key id and reject with the frozen error.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/handlers/multi-round-trip.md",
+        "line_start": 103,
+        "quote": "A retry that lands on a different worker, a different instance behind a load balancer, or the same server after a restart is sealed under a key that process doesn't have"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/request_state.py",
+          "line_start": 149,
+          "quote": "return cls(keys=[os.urandom(32)], ttl=ttl, audience=audience)",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/request_state.py:149",
+            "file_sha256": "0dabe65f9d113b85e17e38dac1cb6c543dab6e0d8adcf45c931b212ea4dec429"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/request_state.py",
+          "line_start": 243,
+          "line_end": 244,
+          "quote": "if aead is None:\n            raise InvalidRequestState(\"unknown key\")",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/request_state.py:243-244",
+            "file_sha256": "0dabe65f9d113b85e17e38dac1cb6c543dab6e0d8adcf45c931b212ea4dec429"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_460e31c6ec84"
+    }
+  ],
+  "rejected": [
+    {
+      "claim": "ClientSessionGroup is built on ClientSession and runs the classic initialize handshake, never server/discover",
+      "verdict": "VERIFIED",
+      "problems": [
+        "evidence absent:discover: pattern found in code: .github/actions/conformance/client.py:55:from mcp.client.auth.utils import build_protected_resource_metadata_discovery_urls | .github/actions/conformance/client.py:80:    On a modern leg (2026-07-28+) -> 'auto' so Client.discover() runs and the | .github/actions/conformance/client.py:83:    as before (no server/discover probe is sent against a mock that would 400 it)."
+      ],
+      "at": "2026-10-22T21:42:43.026Z"
+    },
+    {
+      "claim": "ClientSessionGroup is built on ClientSession and runs the classic initialize handshake, never server/discover",
+      "verdict": "VERIFIED",
+      "problems": [
+        "evidence absent:server/discover: pattern found in code: .github/actions/conformance/client.py:83:    as before (no server/discover probe is sent against a mock that would 400 it). | .github/actions/conformance/client.py:297:    server/discover (covering the unsupported-version retry check), then adopt | .github/actions/conformance/client.py:320:    server/discover and never sends them."
+      ],
+      "at": "2026-10-22T21:42:48.543Z"
+    },
+    {
+      "claim": "Sealed request-state keys must be at least 32 bytes, and every token carries the server name as an audience claim checked strictly on the way in",
+      "verdict": "VERIFIED",
+      "problems": [
+        "the explanation describes a mismatch between the claim and the code, but the verdict is VERIFIED. If the code contradicts the claim, record PARTIAL or FALSE with user_impact; if it doesn't, rewrite the explanation"
+      ],
+      "at": "2026-10-22T21:45:10.524Z"
+    }
+  ],
+  "finished_at": "2026-10-22T21:46:18.038Z",
+  "behaviors": [],
+  "review_requested_at": "2026-10-22T21:45:37.179Z",
+  "skipped": [
+    {
+      "candidate": "c3",
+      "reason": "Describes how third-party OIDC servers treat a missing application_type; not a checkable SDK promise."
+    },
+    {
+      "candidate": "c6",
+      "reason": "Advisory guidance, not a behavioural promise; cache partitioning is covered in other claims."
+    },
+    {
+      "candidate": "c9",
+      "reason": "Codec protocol contract; seal/unseal and fail-closed handling were verified in the request-state claims."
+    },
+    {
+      "candidate": "c11",
+      "reason": "Consequences of the offline_access/prompt=consent change; mechanism verified in the claim on c10."
+    },
+    {
+      "candidate": "c13",
+      "reason": "Covered by the claim on c12."
+    },
+    {
+      "candidate": "c15",
+      "reason": "Describes browser CORS preflight and Starlette behaviour, which live outside this repository."
+    },
+    {
+      "candidate": "c16",
+      "reason": "Negative scope statement about what the SDK does not provide; nothing to check."
+    },
+    {
+      "candidate": "c17",
+      "reason": "Pointer to the identity-assertion page; substantive claims checked there."
+    },
+    {
+      "candidate": "c22",
+      "reason": "Usage advice; the 30s/300s default timeouts it refers to were verified in a separate claim on line 42."
+    },
+    {
+      "candidate": "c25",
+      "reason": "Describes Python stdlib logging behaviour, not SDK code."
+    },
+    {
+      "candidate": "c26",
+      "reason": "Migration table row; mode='auto' default verified in the claim on whats-new.md:157."
+    },
+    {
+      "candidate": "c28",
+      "reason": "Illustrative worked example of the process-local key; behaviour verified in the claim on multi-round-trip.md:103."
+    },
+    {
+      "candidate": "c29",
+      "reason": "Recorded as a claim on deploy.md:134; the sweep item points at the same sentence."
+    },
+    {
+      "candidate": "c38",
+      "reason": "Extension opt-in and client-side resultType rejection overlap the extensions interceptor claim; a server-side rejection TODO is noted there."
+    },
+    {
+      "candidate": "c40",
+      "reason": "Guidance for implementers of the exchange_identity_assertion hook; the SDK intentionally does not decode the assertion, and the surrounding gates were verified in the identity-assertion claim."
+    }
+  ],
+  "notes": [
+    {
+      "n": "b1",
+      "behavior": "When a handler raises an unexpected exception, the OpenTelemetry middleware records the full exception (message and stack) on the span and sets the span status to str(e), even though the wire response to the client is sanitized to a generic \"Internal server error\".",
+      "signal": null,
+      "severity": "low",
+      "user_impact": "Operators who install an OpenTelemetry exporter (the documented way to light up tracing) will ship raw exception text and tracebacks, which may contain request data, SQL, secrets or paths, to their tracing backend. The docs only say the span status is set to error and describe the wire message as non-leaking.",
+      "docs_searched": "docs/run/opentelemetry.md (attributes list and 'A handler that raises sets the span status to error'), docs/advanced/low-level-server.md and docs/servers/handling-errors.md for exception handling; none mention exception details being recorded on spans.",
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/_otel.py",
+          "line_start": 56,
+          "line_end": 59,
+          "quote": "except Exception as e:\n                span.set_attribute(\"error.type\", type(e).__qualname__)\n                span.record_exception(e)\n                span.set_status(StatusCode.ERROR, str(e))",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/_otel.py:56-59",
+            "file_sha256": "93bd634a50f553bb908f1d305879035bd5bec2a52f75d64871ee6c342ac98e6b"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "downgrade",
+        "reason": "Recording exceptions and error status on spans is standard OpenTelemetry behavior, and the docs do not promise exceptions are excluded from spans. The packet shows only that the docs say the wire message is non-leaking, not that traces are scrubbed. It is a worthwhile note but not a contradiction of any doc promise.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/mcp/server/_otel.py",
+            "line_start": 56,
+            "line_end": 59,
+            "quote": "span.record_exception(e)",
+            "checked": {
+              "ok": true,
+              "where": "src/mcp/server/_otel.py:56-59",
+              "file_sha256": "93bd634a50f553bb908f1d305879035bd5bec2a52f75d64871ee6c342ac98e6b"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:45:59.204Z"
+      },
+      "receipt": "rcpt_d6920fc715a6",
+      "note": "Recording exceptions and error status on spans is standard OpenTelemetry behavior, and the docs do not promise exceptions are excluded from spans. The packet shows only that the docs say the wire message is non-leaking, not that traces are scrubbed. It is a worthwhile note but not a contradiction of any doc promise."
+    }
+  ],
+  "retracted": [],
+  "raw_claims": [
+    {
+      "n": "1",
+      "claim": "MCPServer seals outgoing requestState and verifies every echo under a key generated at process start, with no configuration",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "MCPServer always installs RequestStateBoundary; with no policy it uses an ephemeral os.urandom(32) key. The boundary unseals every inbound requestState on tools/call, prompts/get and resources/read, and seals outgoing input-required results.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/handlers/multi-round-trip.md",
+        "line_start": 92,
+        "quote": "`MCPServer` protects it by default. Every server seals outgoing `requestState` and verifies every echo"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/mcpserver/server.py",
+          "line_start": 237,
+          "line_end": 238,
+          "quote": "if request_state_security is None:\n            security = RequestStateSecurity.ephemeral()",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/mcpserver/server.py:237-238",
+            "file_sha256": "2fe1d0b76795fe432b842d400379494e6fff48891bcf46474634c45598e4749a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/mcpserver/server.py",
+          "line_start": 245,
+          "quote": "self._lowlevel_server.middleware.append(RequestStateBoundary(security, default_audience=self.name))",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/mcpserver/server.py:245",
+            "file_sha256": "2fe1d0b76795fe432b842d400379494e6fff48891bcf46474634c45598e4749a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/request_state.py",
+          "line_start": 149,
+          "quote": "return cls(keys=[os.urandom(32)], ttl=ttl, audience=audience)",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/request_state.py:149",
+            "file_sha256": "0dabe65f9d113b85e17e38dac1cb6c543dab6e0d8adcf45c931b212ea4dec429"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_17854968fc09"
+    },
+    {
+      "n": "2",
+      "claim": "requestState on the wire is an encrypted, authenticated token, bound to a time window (ttl default 600s), principal, originating request and audience",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "AES-256-GCM encrypts the payload. Envelope claims enforce expiry (fresh exp on each seal), method, target, argument digest, audience and principal, failing closed on drift.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/handlers/multi-round-trip.md",
+        "line_start": 109,
+        "quote": "Default or configured, `requestState` on the wire is an encrypted, authenticated token."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/request_state.py",
+          "line_start": 229,
+          "quote": "sealed = self._ring[kid].encrypt(nonce, payload, _TOKEN_PREFIX.encode() + kid)",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/request_state.py:229",
+            "file_sha256": "0dabe65f9d113b85e17e38dac1cb6c543dab6e0d8adcf45c931b212ea4dec429"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/request_state.py",
+          "line_start": 391,
+          "quote": "if claims.get(\"m\") != ctx.method or claims.get(\"t\") != target or claims.get(\"a\") != args_digest:",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/request_state.py:391",
+            "file_sha256": "0dabe65f9d113b85e17e38dac1cb6c543dab6e0d8adcf45c931b212ea4dec429"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/request_state.py",
+          "line_start": 123,
+          "quote": "ttl: float = 600.0,",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/request_state.py:123",
+            "file_sha256": "0dabe65f9d113b85e17e38dac1cb6c543dab6e0d8adcf45c931b212ea4dec429"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/request_state.py",
+          "line_start": 401,
+          "quote": "if (claim is None) != (principal is None):",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/request_state.py:401",
+            "file_sha256": "0dabe65f9d113b85e17e38dac1cb6c543dab6e0d8adcf45c931b212ea4dec429"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_999c70589354"
+    },
+    {
+      "n": "3",
+      "claim": "`Client(..., input_required_max_rounds=10)` is the default cap on input-required rounds",
+      "verdict": "FALSE",
+      "severity": "low",
+      "explanation": "The default is 21, not 10. The 50ms to 250ms state-only backoff in the same sentence is accurate.",
+      "user_impact": "A user who relies on a 10-round bound (to size loops, cost or timeouts) actually gets up to 21 rounds before the error. The docs repeat 10 in the recap.",
+      "note": null,
+      "source": {
+        "file": "docs/handlers/multi-round-trip.md",
+        "line_start": 67,
+        "quote": "`Client(..., input_required_max_rounds=10)` is the default cap"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/client/_input_required.py",
+          "line_start": 23,
+          "quote": "DEFAULT_INPUT_REQUIRED_MAX_ROUNDS = 21",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/_input_required.py:23",
+            "file_sha256": "2e746c9c0635e6ed9971805b4bc67d5738015c69e6009a2f71813989eff497d6"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/client/client.py",
+          "line_start": 352,
+          "quote": "input_required_max_rounds: int = DEFAULT_INPUT_REQUIRED_MAX_ROUNDS",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/client.py:352",
+            "file_sha256": "65daef44015ed09c28fc3bb95baf8af6ce09ed92403e788f594d347c06e2754b"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "Docs state default cap of 10 rounds; code default is 21. Real mismatch, low severity is right.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/mcp/client/_input_required.py",
+            "line_start": 23,
+            "quote": "DEFAULT_INPUT_REQUIRED_MAX_ROUNDS = 21",
+            "checked": {
+              "ok": true,
+              "where": "src/mcp/client/_input_required.py:23",
+              "file_sha256": "2e746c9c0635e6ed9971805b4bc67d5738015c69e6009a2f71813989eff497d6"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:45:52.561Z"
+      },
+      "receipt": "rcpt_881663e0a5f9"
+    },
+    {
+      "n": "4",
+      "claim": "With OAuth client defaults, offline_access is added to the scope when the AS advertises it and prompt=consent is then sent",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Scope selection appends offline_access when advertised and refresh_token is a grant type (default); the authorization URL adds prompt=consent whenever the final scope contains offline_access, independent of how it got there.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/migration.md",
+        "line_start": 2523,
+        "line_end": 2524,
+        "quote": "the requested scope, the authorization request also carries `prompt=consent`, as OIDC requires"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/client/auth/utils.py",
+          "line_start": 127,
+          "line_end": 129,
+          "quote": "and \"offline_access\" in authorization_server_metadata.scopes_supported\n        and client_grant_types is not None\n        and \"refresh_token\" in client_grant_types",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/auth/utils.py:127-129",
+            "file_sha256": "e41cc477b2a597e3f7268ad74ca3b6eb3f500c1def3e74d4b6997f0603507d5d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/client/auth/oauth2.py",
+          "line_start": 425,
+          "line_end": 426,
+          "quote": "if \"offline_access\" in self.context.client_metadata.scope.split():\n                auth_params[\"prompt\"] = \"consent\"",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/auth/oauth2.py:425-426",
+            "file_sha256": "df8701d8d1eb952003b0c2aef2aad4d6a6213d8e3f2699da00f929537eb6a645"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/shared/auth.py",
+          "line_start": 14,
+          "quote": "DEFAULT_GRANT_TYPES = [\"authorization_code\", \"refresh_token\"]",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/shared/auth.py:14",
+            "file_sha256": "899afdfa4f368e89d6672141431b6a32f839f9e38a7f0b3a6e6654cda25200e2"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9300eee49c06"
+    },
+    {
+      "n": "5",
+      "claim": "Restricting grant_types to authorization_code keeps v1 behaviour (no offline_access, no consent prompt, no refresh tokens); no knob for refresh without forced consent",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Without refresh_token in grant_types the scope helper never appends offline_access, so the prompt=consent branch (keyed off the final scope) does not fire. prompt=consent depends only on the final scope, matching the stated lack of a knob.",
+      "user_impact": null,
+      "note": "If the user's own scope already lists offline_access, consent is still forced, as the docs acknowledge.",
+      "source": {
+        "file": "docs/migration.md",
+        "line_start": 2547,
+        "line_end": 2548,
+        "quote": "To keep the v1 behavior (no `offline_access` request, no consent prompt, no refresh tokens),"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/client/auth/utils.py",
+          "line_start": 128,
+          "line_end": 129,
+          "quote": "and client_grant_types is not None\n        and \"refresh_token\" in client_grant_types",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/auth/utils.py:128-129",
+            "file_sha256": "e41cc477b2a597e3f7268ad74ca3b6eb3f500c1def3e74d4b6997f0603507d5d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/client/auth/oauth2.py",
+          "line_start": 423,
+          "line_end": 426,
+          "quote": "# OIDC requires prompt=consent when offline_access is requested",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/auth/oauth2.py:423-426",
+            "file_sha256": "df8701d8d1eb952003b0c2aef2aad4d6a6213d8e3f2699da00f929537eb6a645"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_ccd23d5c4752"
+    },
+    {
+      "n": "6",
+      "claim": "log_level=None is the default (no opt-in) and a single request can override it via its own meta LOG_LEVEL_META_KEY",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default None adds nothing to _meta; when set, setdefault lets a per-request meta value win.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/migration.md",
+        "line_start": 2844,
+        "quote": "`log_level=None` (the default) means no opt-in"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/client/client.py",
+          "line_start": 319,
+          "quote": "log_level: LoggingLevel | None = None",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/client.py:319",
+            "file_sha256": "65daef44015ed09c28fc3bb95baf8af6ce09ed92403e788f594d347c06e2754b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/client/session.py",
+          "line_start": 170,
+          "line_end": 171,
+          "quote": "if log_level is not None:\n            meta.setdefault(LOG_LEVEL_META_KEY, log_level)",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/session.py:170-171",
+            "file_sha256": "031512d2cd20670f542534274e39c514d2a8e4dba678256d97ed57e60f4bc5ac"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_b9dfe5988956"
+    },
+    {
+      "n": "7",
+      "claim": "A completion handler returning None means no suggestions (empty list), never an error",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "None is mapped to an empty Completion.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/servers/completions.md",
+        "line_start": 65,
+        "quote": "`None` means *\"no suggestions\"*, never an error."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/mcpserver/server.py",
+          "line_start": 765,
+          "quote": "completion=result if result is not None else Completion(values=[], total=None, has_more=None),",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/mcpserver/server.py:765",
+            "file_sha256": "2fe1d0b76795fe432b842d400379494e6fff48891bcf46474634c45598e4749a"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_23e3016f10a5"
+    },
+    {
+      "n": "8",
+      "claim": "Registering a completion handler declares the completions capability; without it the call fails with Method not found",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The capability is derived from the presence of the completion/complete handler; unregistered methods are not routed.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/servers/completions.md",
+        "line_start": 85,
+        "line_end": 86,
+        "quote": "well-behaved client checks it and never sends the request you can't answer."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/lowlevel/server.py",
+          "line_start": 625,
+          "line_end": 626,
+          "quote": "if \"completion/complete\" in self._request_handlers:\n            completions_capability = types.CompletionsCapability()",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/lowlevel/server.py:625-626",
+            "file_sha256": "9436877f4fb6c9696ae96ee9f2483a701b084062d15b7d72fe8737dd772e8e2a"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9b1e95d52e66"
+    },
+    {
+      "n": "9",
+      "claim": "Resource mime_type defaults to text/plain and the SDK never guesses it",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default text/plain in the resource model and at read time; no content sniffing.",
+      "user_impact": null,
+      "note": "The library's DirectoryResource/ready-made JSON resources default to application/json, which the page does not claim otherwise.",
+      "source": {
+        "file": "docs/servers/resources.md",
+        "line_start": 121,
+        "quote": "`mime_type` is yours to declare, and it defaults to `text/plain`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/mcpserver/resources/base.py",
+          "line_start": 25,
+          "quote": "mime_type: str = Field(default=\"text/plain\", description=\"MIME type of the resource content\")",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/mcpserver/resources/base.py:25",
+            "file_sha256": "624106db8a446dbb186014f01065f8a97781464a5085291cfe8e985ed635c3ed"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/mcpserver/server.py",
+          "line_start": 494,
+          "quote": "mime_type=item.mime_type or \"text/plain\",",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/mcpserver/server.py:494",
+            "file_sha256": "2fe1d0b76795fe432b842d400379494e6fff48891bcf46474634c45598e4749a"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_b55fec9a9af4"
+    },
+    {
+      "n": "10",
+      "claim": "By default even \"public\" cache entries stay within their partition; share_public=True shares them across all partitions",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The partition is part of the cache key for every arm except the public arm when share_public is enabled; the flag is constructor-level only.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/client/caching.md",
+        "line_start": 97,
+        "quote": "By default even `\"public\"` entries stay within their partition."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/client/caching.py",
+          "line_start": 119,
+          "quote": "share_public: bool = False",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/caching.py:119",
+            "file_sha256": "2c8ff3bd7aaea93f6099a1f91b58243d61e321f770f2a0131a0987a0f59cd6a8"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/client/caching.py",
+          "line_start": 217,
+          "line_end": 218,
+          "quote": "if scope == \"private\" or not self._share_public:\n            fields.append(self._partition)",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/caching.py:217-218",
+            "file_sha256": "2c8ff3bd7aaea93f6099a1f91b58243d61e321f770f2a0131a0987a0f59cd6a8"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_7991b4015931"
+    },
+    {
+      "n": "11",
+      "claim": "Client has a built-in response cache on by default; hint-less results get default_ttl_ms=0 (uncached); cache=None disables it; custom store requires explicit partition",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default CacheConfig() is installed unless cache=None; default TTL 0; custom store without partition raises.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/client/caching.md",
+        "line_start": 40,
+        "quote": "On a 2026-07-28 session, `Client` honors the hints for you: it has a built-in response cache, on by default."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/client/client.py",
+          "line_start": 364,
+          "quote": "cache: CacheConfig | None = field(default_factory=CacheConfig)",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/client.py:364",
+            "file_sha256": "65daef44015ed09c28fc3bb95baf8af6ce09ed92403e788f594d347c06e2754b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/client/caching.py",
+          "line_start": 113,
+          "quote": "default_ttl_ms: int = 0",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/caching.py:113",
+            "file_sha256": "2c8ff3bd7aaea93f6099a1f91b58243d61e321f770f2a0131a0987a0f59cd6a8"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/client/caching.py",
+          "line_start": 127,
+          "line_end": 128,
+          "quote": "if self.store is not None and not self.partition:\n            raise ValueError(\"a custom store requires an explicit partition\")",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/caching.py:127-128",
+            "file_sha256": "2c8ff3bd7aaea93f6099a1f91b58243d61e321f770f2a0131a0987a0f59cd6a8"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_a3d313a29b1f"
+    },
+    {
+      "n": "12",
+      "claim": "The default max_sse_event_size is 1 MiB per SSE event",
+      "verdict": "FALSE",
+      "severity": "low",
+      "explanation": "The default limit constant is 2049*1024 bytes, not 1024*1024. The None-disables-limit behaviour is implemented as described.",
+      "user_impact": "The real cap is 2049 KiB (about 2 MiB). A user sizing server output or memory limits around 1 MiB would be off by a factor of two; events between 1 and 2 MiB succeed although the docs imply they fail.",
+      "note": null,
+      "source": {
+        "file": "docs/client/transports.md",
+        "line_start": 59,
+        "quote": "The default is 1 MiB per event, measured in bytes before the event is parsed."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/client/streamable_http.py",
+          "line_start": 61,
+          "quote": "DEFAULT_MAX_SSE_EVENT_SIZE = 2049 * 1024",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/streamable_http.py:61",
+            "file_sha256": "b2f0ed1aaa6a76f3b2df9f3a30b95123f22a8d44978185f4a4217a0188f9d854"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/client/streamable_http.py",
+          "line_start": 114,
+          "quote": "def __init__(self, url: str, *, max_sse_event_size: int | None = DEFAULT_MAX_SSE_EVENT_SIZE) -> None:",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/streamable_http.py:114",
+            "file_sha256": "b2f0ed1aaa6a76f3b2df9f3a30b95123f22a8d44978185f4a4217a0188f9d854"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "Docs say 1 MiB default; code default is 2049 KiB. Real mismatch, low severity is appropriate.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/mcp/client/streamable_http.py",
+            "line_start": 61,
+            "quote": "DEFAULT_MAX_SSE_EVENT_SIZE = 2049 * 1024",
+            "checked": {
+              "ok": true,
+              "where": "src/mcp/client/streamable_http.py:61",
+              "file_sha256": "b2f0ed1aaa6a76f3b2df9f3a30b95123f22a8d44978185f4a4217a0188f9d854"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:45:53.703Z"
+      },
+      "receipt": "rcpt_c0be257013b3"
+    },
+    {
+      "n": "13",
+      "claim": "The SDK's own httpx client uses a 30 second timeout and 300 seconds for reads",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The default client is built with 30s general and 300s read timeouts.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/client/transports.md",
+        "line_start": 42,
+        "quote": "It is the one the SDK's own client uses (30 seconds, 300 for reads)"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/shared/_httpx_utils.py",
+          "line_start": 13,
+          "line_end": 14,
+          "quote": "MCP_DEFAULT_TIMEOUT = 30.0  # General operations (seconds)\nMCP_DEFAULT_SSE_READ_TIMEOUT = 300.0",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/shared/_httpx_utils.py:13-14",
+            "file_sha256": "f758208d93eb85d6061650d3257f2fc072fae1d04f871257e9cc4464d33b3e1c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/shared/_httpx_utils.py",
+          "line_start": 58,
+          "quote": "timeout = httpx2.Timeout(MCP_DEFAULT_TIMEOUT, read=MCP_DEFAULT_SSE_READ_TIMEOUT)",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/shared/_httpx_utils.py:58",
+            "file_sha256": "f758208d93eb85d6061650d3257f2fc072fae1d04f871257e9cc4464d33b3e1c"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_36cabd1a551b"
+    },
+    {
+      "n": "14",
+      "claim": "ClientSessionGroup is built on ClientSession and runs the classic initialize handshake",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "session_group.py constructs ClientSession directly and calls initialize(); it does not use Client or its discovery path.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/client/session-groups.md",
+        "line_start": 71,
+        "quote": "`ClientSessionGroup` is built on `ClientSession`, not on `Client`. Each `connect_to_server` runs the classic `initialize` handshake."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/client/session_group.py",
+          "line_start": 345,
+          "quote": "mcp.ClientSession(",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/session_group.py:345",
+            "file_sha256": "7a06d3248d941a336e2f95b85210962db91cd9593423d986cb6b6ed76e01c24d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/client/session_group.py",
+          "line_start": 358,
+          "quote": "result = await session.initialize()",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/session_group.py:358",
+            "file_sha256": "7a06d3248d941a336e2f95b85210962db91cd9593423d986cb6b6ed76e01c24d"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_ebcd57b78302"
+    },
+    {
+      "n": "15",
+      "claim": "streamable_http_app()/run(\"streamable-http\") with no transport_security defaults to DNS-rebinding protection accepting only localhost Host headers",
+      "verdict": "PARTIAL",
+      "severity": "medium",
+      "explanation": "The default settings are only built for loopback host values; for any other host (e.g. 0.0.0.0) no settings are passed and the transport security default is protection disabled. The loopback default (the common case in the troubleshooting scenario) behaves as described.",
+      "user_impact": "The protection is only armed when the host argument is 127.0.0.1, localhost or ::1. A server run with host='0.0.0.0' (as the migration guide's examples do) gets no DNS-rebinding protection at all, and nothing warns the user; someone reading this page would assume the default always protects them.",
+      "note": null,
+      "source": {
+        "file": "docs/troubleshooting.md",
+        "line_start": 164,
+        "quote": "with no `transport_security=` defaults to **DNS-rebinding protection**: it accepts only requests whose `Host` header is localhost."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/lowlevel/server.py",
+          "line_start": 753,
+          "line_end": 757,
+          "quote": "if transport_security is None and host in (\"127.0.0.1\", \"localhost\", \"::1\"):\n            transport_security = TransportSecuritySettings(\n                enable_dns_rebinding_protection=True,\n                allowed_hosts=[\"127.0.0.1:*\", \"localhost:*\", \"[::1]:*\"],",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/lowlevel/server.py:753-757",
+            "file_sha256": "9436877f4fb6c9696ae96ee9f2483a701b084062d15b7d72fe8737dd772e8e2a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/transport_security.py",
+          "line_start": 48,
+          "quote": "self.settings = settings or TransportSecuritySettings(enable_dns_rebinding_protection=False)",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/transport_security.py:48",
+            "file_sha256": "0ef1be70594071ed248bf0438de405cb27fe9b07c234213da9103caaeb917a7c"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "Protection is only enabled when host is loopback; otherwise the default settings disable it. The doc statement is unconditional, so it misleads users running on 0.0.0.0. Medium severity is reasonable.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/mcp/server/lowlevel/server.py",
+            "line_start": 753,
+            "quote": "if transport_security is None and host in (\"127.0.0.1\", \"localhost\", \"::1\"):",
+            "checked": {
+              "ok": true,
+              "where": "src/mcp/server/lowlevel/server.py:753",
+              "file_sha256": "9436877f4fb6c9696ae96ee9f2483a701b084062d15b7d72fe8737dd772e8e2a"
+            }
+          },
+          {
+            "type": "quote",
+            "file": "src/mcp/server/transport_security.py",
+            "line_start": 48,
+            "quote": "self.settings = settings or TransportSecuritySettings(enable_dns_rebinding_protection=False)",
+            "checked": {
+              "ok": true,
+              "where": "src/mcp/server/transport_security.py:48",
+              "file_sha256": "0ef1be70594071ed248bf0438de405cb27fe9b07c234213da9103caaeb917a7c"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:45:55.838Z"
+      },
+      "receipt": "rcpt_afbd305ad561"
+    },
+    {
+      "n": "16",
+      "claim": "A server constructed without a name defaults to \"mcp-server\" (reported as serverInfo.name) instead of FastMCP",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The lowlevel server is constructed with name or 'mcp-server'.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/migration.md",
+        "line_start": 691,
+        "quote": "A server constructed without a name now defaults to `mcp-server` instead of `FastMCP`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/mcpserver/server.py",
+          "line_start": 213,
+          "quote": "name=name or \"mcp-server\",",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/mcpserver/server.py:213",
+            "file_sha256": "2fe1d0b76795fe432b842d400379494e6fff48891bcf46474634c45598e4749a"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_e3d1cb83210c"
+    },
+    {
+      "n": "17",
+      "claim": "session_idle_timeout defaults to 30 minutes (1800 s)",
+      "verdict": "FALSE",
+      "severity": "medium",
+      "explanation": "The constant is 3660 seconds; its own docstring still says 30 minutes. Both troubleshooting.md and legacy-clients.md repeat the wrong figure.",
+      "user_impact": "The real default is 61*60 = 3660 seconds (61 minutes). Operators sizing memory or capacity from the documented 30 minutes (and docs/run/legacy-clients.md, which states 1800) will keep idle sessions twice as long as expected, and clients that assume expiry after 30 minutes idle will still find the session alive.",
+      "note": null,
+      "source": {
+        "file": "docs/troubleshooting.md",
+        "line_start": 263,
+        "quote": "nothing was in flight for `session_idle_timeout`, which is 30 minutes by default."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/streamable_http_manager.py",
+          "line_start": 38,
+          "quote": "DEFAULT_SESSION_IDLE_TIMEOUT: Final = 61 * 60",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/streamable_http_manager.py:38",
+            "file_sha256": "2658336e891fb066784826b072f3491a5c747c57ef75f764eace883ca2f3caae"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/streamable_http_manager.py",
+          "line_start": 94,
+          "quote": "session_idle_timeout: float | None = DEFAULT_SESSION_IDLE_TIMEOUT,",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/streamable_http_manager.py:94",
+            "file_sha256": "2658336e891fb066784826b072f3491a5c747c57ef75f764eace883ca2f3caae"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "docs/run/legacy-clients.md",
+          "line_start": 78,
+          "quote": "| `session_idle_timeout` | `1800` (30 min) |",
+          "checked": {
+            "ok": true,
+            "where": "docs/run/legacy-clients.md:78",
+            "file_sha256": "c98330aece20fb09a7a6c61ec1f69949cebd501bc409f49dd484289ab121b076"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "Docs say 30 minutes; code default is 61*60 seconds. Real mismatch affecting capacity expectations. Medium is slightly high, but acceptable (low-medium).",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/mcp/server/streamable_http_manager.py",
+            "line_start": 38,
+            "quote": "DEFAULT_SESSION_IDLE_TIMEOUT: Final = 61 * 60",
+            "checked": {
+              "ok": true,
+              "where": "src/mcp/server/streamable_http_manager.py:38",
+              "file_sha256": "2658336e891fb066784826b072f3491a5c747c57ef75f764eace883ca2f3caae"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:45:57.509Z"
+      },
+      "receipt": "rcpt_463a255321e4"
+    },
+    {
+      "n": "18",
+      "claim": "An exception raised from a low-level handler becomes a -32603 error with a generic message, not leaking the traceback",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Unexpected exceptions are logged server-side and replaced with INTERNAL_ERROR and a fixed message.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/advanced/low-level-server.md",
+        "line_start": 81,
+        "quote": "A JSON-RPC error, code `-32603`, with a deliberately generic message: the SDK won't leak your traceback to a remote caller."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/runner.py",
+          "line_start": 547,
+          "line_end": 548,
+          "quote": "logger.exception(\"modern request handler raised\")\n    return ErrorData(code=INTERNAL_ERROR, message=\"Internal server error\")",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/runner.py:547-548",
+            "file_sha256": "be55cb42cbca261c2997bb4f54e2ac892fbb5c35935409ef951ac9f73b527b29"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_aed001b4862b"
+    },
+    {
+      "n": "19",
+      "claim": "Deprecation is advisory and surfaces as an MCPDeprecationWarning, a UserWarning, so it is on by default",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The class subclasses UserWarning, which Python shows by default (unlike DeprecationWarning).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/deprecated.md",
+        "line_start": 146,
+        "quote": "you get a visible `MCPDeprecationWarning` (a `UserWarning`, so it is on by default)."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/shared/exceptions.py",
+          "line_start": 8,
+          "quote": "class MCPDeprecationWarning(UserWarning):",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/shared/exceptions.py:8",
+            "file_sha256": "3f78550758342eca46c8c17cf4a8659d4a5f3e1e074b032e940fc07e0f8b5fae"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_e0893f5bd193"
+    },
+    {
+      "n": "20",
+      "claim": "A short-circuiting extension interceptor never produces an anonymous or off-schema response (result is still serialized and serverInfo-stamped)",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Interceptors wrap the tools/call handler, so their output goes through ServerRunner._serialize, which validates core results against the per-version surface and stamps serverInfo on 2026-era results.",
+      "user_impact": null,
+      "note": "An interceptor returning a non-core extension resultType is exempt from the sieve (a TODO in runner.py notes server-side rejection is not implemented); the claim concerns the interceptor path for core results.",
+      "source": {
+        "file": "docs/advanced/extensions.md",
+        "line_start": 152,
+        "line_end": 155,
+        "quote": "result, including the 2026-era `serverInfo` identity stamp, so a\n  short-circuiting interceptor never produces an anonymous or off-schema\n  response."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/mcpserver/server.py",
+          "line_start": 360,
+          "quote": "pass, so a short-circuiting interceptor's result is sieved and stamped",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/mcpserver/server.py:360",
+            "file_sha256": "2fe1d0b76795fe432b842d400379494e6fff48891bcf46474634c45598e4749a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/runner.py",
+          "line_start": 394,
+          "quote": "return self._stamp_server_info(version, dumped)",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/runner.py:394",
+            "file_sha256": "be55cb42cbca261c2997bb4f54e2ac892fbb5c35935409ef951ac9f73b527b29"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_e53008e010ba"
+    },
+    {
+      "n": "21",
+      "claim": "mcp install records -v/-f environment variables in the entry's env field; --name overrides the entry name, defaulting to the server's name",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "--name is used if given, otherwise the imported server's name attribute.",
+      "user_impact": null,
+      "note": "If the server module cannot be imported, the file name stem is used instead.",
+      "source": {
+        "file": "docs/get-started/real-host.md",
+        "line_start": 98,
+        "quote": "entry's `env` field. `--name` overrides the entry name; it defaults to the server's `name`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/cli/cli.py",
+          "line_start": 437,
+          "line_end": 442,
+          "quote": "name = server_name\n    server = None\n    if not name:\n        try:\n            server = _import_server(file, server_object)\n            name = server.name",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/cli/cli.py:437-442",
+            "file_sha256": "a6ad3bc5887e35b724644e5846c0b326bf046ebe8317903418892e4b0e25022a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/cli/cli.py",
+          "line_start": 395,
+          "line_end": 396,
+          "quote": "\"--env-var\",\n            \"-v\",",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/cli/cli.py:395-396",
+            "file_sha256": "a6ad3bc5887e35b724644e5846c0b326bf046ebe8317903418892e4b0e25022a"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_a87c1149bdda"
+    },
+    {
+      "n": "22",
+      "claim": "Every server (MCPServer and low-level) emits an OpenTelemetry SERVER span per inbound message with mcp.method.name, mcp.protocol.version, jsonrpc.request.id and gen_ai.* attributes on tools/call and prompts/get, using only opentelemetry-api",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The middleware is installed first on every low-level Server (MCPServer wraps one), creating a SERVER span per message; the runtime dependency is only opentelemetry-api.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/run/opentelemetry.md",
+        "line_start": 5,
+        "line_end": 6,
+        "quote": "Every server you create emits an [OpenTelemetry](https://opentelemetry.io/) span for every\nmessage it handles."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/lowlevel/server.py",
+          "line_start": 451,
+          "quote": "self.middleware: list[ServerMiddleware[LifespanResultT]] = [OpenTelemetryMiddleware()]",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/lowlevel/server.py:451",
+            "file_sha256": "9436877f4fb6c9696ae96ee9f2483a701b084062d15b7d72fe8737dd772e8e2a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/_otel.py",
+          "line_start": 29,
+          "line_end": 31,
+          "quote": "attributes[\"gen_ai.operation.name\"] = \"execute_tool\"\n            if target is not None:\n                attributes[\"gen_ai.tool.name\"] = target",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/_otel.py:29-31",
+            "file_sha256": "93bd634a50f553bb908f1d305879035bd5bec2a52f75d64871ee6c342ac98e6b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "pyproject.toml",
+          "line_start": 150,
+          "quote": "\"opentelemetry-api>=1.28.0\",",
+          "checked": {
+            "ok": true,
+            "where": "pyproject.toml:150",
+            "file_sha256": "84ff93013491d4a24dd1abf379281b61b740907e119e8eb43e21fca1071d99d0"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_536e673c3785"
+    },
+    {
+      "n": "23",
+      "claim": "Apps server code never sends or receives ui/* messages; the app resource is served as text/html;profile=mcp-app and the extension is advertised when passed to extensions=",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The Apps extension only stamps tool metadata and serves HTML resources; the server package defines no ui/ JSON-RPC methods.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/advanced/apps.md",
+        "line_start": 13,
+        "line_end": 14,
+        "quote": "result into that iframe via `postMessage`. Your server never sends or receives any\n`ui/*` messages"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/apps.py",
+          "line_start": 43,
+          "line_end": 46,
+          "quote": "EXTENSION_ID = \"io.modelcontextprotocol/ui\"",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/apps.py:43-46",
+            "file_sha256": "b2b92c3041050478edcab6764bdabbba94358e1122ba3e1f3fd866f6004f3aca"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/apps.py",
+          "line_start": 46,
+          "quote": "APP_MIME_TYPE = \"text/html;profile=mcp-app\"",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/apps.py:46",
+            "file_sha256": "b2b92c3041050478edcab6764bdabbba94358e1122ba3e1f3fd866f6004f3aca"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_43791376447b"
+    },
+    {
+      "n": "24",
+      "claim": "ctx.elicit validates the client's answer against the model and raises ValueError on mismatch; elicit_url returns only an action (\"accept\" means consent, no content comes back)",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "URL-mode elicitation returns only an Accepted/Declined/Cancelled marker with no data; form-mode answers are model-validated.",
+      "user_impact": null,
+      "note": "The SDK does not stop a server author from asking for credentials in form mode; the sentence is guidance, with URL mode as the provided mechanism.",
+      "source": {
+        "file": "docs/handlers/elicitation.md",
+        "line_start": 116,
+        "quote": "Some things must not go through the model or the client: credentials, card numbers, OAuth consent."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/elicitation.py",
+          "line_start": 134,
+          "line_end": 139,
+          "quote": "validated_data = schema.model_validate(result.content)\n        except ValidationError as e:\n            raise ValueError(\n                \"Received an accepted elicitation whose content does not match the requested schema\"",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/elicitation.py:134-139",
+            "file_sha256": "bba56eeeb8853a03e887f4453d09adba69528f933118d08be859ff1ec65c7a11"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/elicitation.py",
+          "line_start": 183,
+          "line_end": 184,
+          "quote": "if result.action == \"accept\":\n        return AcceptedUrlElicitation()",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/elicitation.py:183-184",
+            "file_sha256": "bba56eeeb8853a03e887f4453d09adba69528f933118d08be859ff1ec65c7a11"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_b38d8ec83cf3"
+    },
+    {
+      "n": "25",
+      "claim": "client.server_info is None for a 2026-era server that does not report one; python-sdk servers report one by default",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The property is optional and the server runner stamps serverInfo into every 2026-era result.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/client/index.md",
+        "line_start": 44,
+        "quote": "`client.server_info`: the server's identity, or `None` for a 2026-era server that does not report one (python-sdk servers do by default)."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/client/client.py",
+          "line_start": 523,
+          "quote": "def server_info(self) -> Implementation | None:",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/client.py:523",
+            "file_sha256": "65daef44015ed09c28fc3bb95baf8af6ce09ed92403e788f594d347c06e2754b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/runner.py",
+          "line_start": 413,
+          "quote": "result[\"_meta\"] = {SERVER_INFO_META_KEY: self.server.server_info_stamp}",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/runner.py:413",
+            "file_sha256": "be55cb42cbca261c2997bb4f54e2ac892fbb5c35935409ef951ac9f73b527b29"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_37a9a4798c07"
+    },
+    {
+      "n": "26",
+      "claim": "Client defaults to mode='auto': it probes server/discover once and falls back to initialize for older servers",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The default mode is 'auto', documented in the type alias as discover with fallback to the handshake.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/whats-new.md",
+        "line_start": 157,
+        "quote": "`Client` does the right thing by default: it probes `server/discover` once and falls back to the `initialize` handshake if the server is older."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/client/client.py",
+          "line_start": 336,
+          "quote": "mode: ConnectMode = \"auto\"",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/client.py:336",
+            "file_sha256": "65daef44015ed09c28fc3bb95baf8af6ce09ed92403e788f594d347c06e2754b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/client/client.py",
+          "line_start": 467,
+          "quote": "elif self.mode == \"auto\":",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/client.py:467",
+            "file_sha256": "65daef44015ed09c28fc3bb95baf8af6ce09ed92403e788f594d347c06e2754b"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_8f66d6b07f1e"
+    },
+    {
+      "n": "27",
+      "claim": "Logging (ctx.info etc.), sampling and roots APIs emit MCPDeprecationWarning (printed by default) while still working",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The logging, sampling and roots methods are decorated with @deprecated using the UserWarning-based category.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/whats-new.md",
+        "line_start": 187,
+        "quote": "What you notice is `MCPDeprecationWarning`, which is a `UserWarning`, so it prints by default; expect your first `ctx.info(...)` after the upgrade to say so."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/context.py",
+          "line_start": 108,
+          "quote": "@deprecated(\"The logging capability is deprecated as of 2026-07-28 (SEP-2577).\", category=MCPDeprecationWarning)",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/context.py:108",
+            "file_sha256": "796c7c8b479e77877ba906f51dd07ccb6e3157a5809789238fb5fc7fdbfedace"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/session.py",
+          "line_start": 182,
+          "quote": "@deprecated(\"The sampling capability is deprecated as of 2026-07-28 (SEP-2577).\", category=MCPDeprecationWarning)",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/session.py:182",
+            "file_sha256": "6132ca68285d0f2a20d19f0e346b11fb866f2cf4850a09b0efd44df974520726"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/session.py",
+          "line_start": 316,
+          "quote": "@deprecated(\"The roots capability is deprecated as of 2026-07-28 (SEP-2577).\", category=MCPDeprecationWarning)",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/session.py:316",
+            "file_sha256": "6132ca68285d0f2a20d19f0e346b11fb866f2cf4850a09b0efd44df974520726"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_62d9332b1ce7"
+    },
+    {
+      "n": "28",
+      "claim": "Identity assertion: client_secret is required (ValueError), client_secret_post is the default auth method, identity_assertion_enabled defaults off with /token answering unsupported_grant_type, and public clients are refused",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "All described gates exist: disabled by default, public clients get unauthorized_client, the client provider requires a secret and defaults to form-body secret.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/client/identity-assertion.md",
+        "line_start": 87,
+        "quote": "`identity_assertion_enabled=True` gates everything. Off, which is the default, `/token` answers this grant with `unsupported_grant_type`"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/auth/routes.py",
+          "line_start": 81,
+          "quote": "identity_assertion_enabled: bool = False,",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/auth/routes.py:81",
+            "file_sha256": "f0d0bb5d076b0384d59623970af9150c78d519808438eb081fef7e9773043df7"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/auth/handlers/token.py",
+          "line_start": 243,
+          "line_end": 246,
+          "quote": "if not self.identity_assertion_enabled:\n                    return self.response(\n                        TokenErrorResponse(\n                            error=\"unsupported_grant_type\",",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/auth/handlers/token.py:243-246",
+            "file_sha256": "e687ba9560901995faa20dfb99520204b3541c200833135193277c8944a12ca6"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/auth/handlers/token.py",
+          "line_start": 255,
+          "quote": "if not client_info.client_secret:",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/auth/handlers/token.py:255",
+            "file_sha256": "e687ba9560901995faa20dfb99520204b3541c200833135193277c8944a12ca6"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/client/auth/extensions/identity_assertion.py",
+          "line_start": 118,
+          "quote": "raise ValueError(\"client_secret is required: this provider supports confidential clients only\")",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/auth/extensions/identity_assertion.py:118",
+            "file_sha256": "0e98b631d8a243d5372ea79cdf621c22db849a8b1bf03bc380ed528602a2c00c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/client/auth/extensions/identity_assertion.py",
+          "line_start": 99,
+          "quote": "token_endpoint_auth_method: Literal[\"client_secret_basic\", \"client_secret_post\"] = \"client_secret_post\",",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/client/auth/extensions/identity_assertion.py:99",
+            "file_sha256": "0e98b631d8a243d5372ea79cdf621c22db849a8b1bf03bc380ed528602a2c00c"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_8aa775ec4923"
+    },
+    {
+      "n": "29",
+      "claim": "The cli extra adds the mcp command with dev, run and install subcommands; Python 3.11+ is required",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The console script and the three commands exist; the minimum Python is 3.11.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 40,
+        "quote": "The `cli` extra adds the `mcp` command-line tool (`mcp dev`, `mcp run`, `mcp install`)"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "pyproject.toml",
+          "line_start": 32,
+          "quote": "mcp = \"mcp.cli:app [cli]\"",
+          "checked": {
+            "ok": true,
+            "where": "pyproject.toml:32",
+            "file_sha256": "84ff93013491d4a24dd1abf379281b61b740907e119e8eb43e21fca1071d99d0"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "pyproject.toml",
+          "line_start": 6,
+          "quote": "requires-python = \">=3.11\"",
+          "checked": {
+            "ok": true,
+            "where": "pyproject.toml:6",
+            "file_sha256": "84ff93013491d4a24dd1abf379281b61b740907e119e8eb43e21fca1071d99d0"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/cli/cli.py",
+          "line_start": 221,
+          "quote": "def dev(",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/cli/cli.py:221",
+            "file_sha256": "a6ad3bc5887e35b724644e5846c0b326bf046ebe8317903418892e4b0e25022a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/cli/cli.py",
+          "line_start": 304,
+          "quote": "def run(",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/cli/cli.py:304",
+            "file_sha256": "a6ad3bc5887e35b724644e5846c0b326bf046ebe8317903418892e4b0e25022a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/cli/cli.py",
+          "line_start": 361,
+          "quote": "def install(",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/cli/cli.py:361",
+            "file_sha256": "a6ad3bc5887e35b724644e5846c0b326bf046ebe8317903418892e4b0e25022a"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_deab132c7a88"
+    },
+    {
+      "n": "30",
+      "claim": "The default no-configuration request-state key is process-local: a retry reaching another worker or surviving a restart is rejected",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "A fresh random key per process means other processes find no matching key id and reject with the frozen error.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/handlers/multi-round-trip.md",
+        "line_start": 103,
+        "quote": "A retry that lands on a different worker, a different instance behind a load balancer, or the same server after a restart is sealed under a key that process doesn't have"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/mcp/server/request_state.py",
+          "line_start": 149,
+          "quote": "return cls(keys=[os.urandom(32)], ttl=ttl, audience=audience)",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/request_state.py:149",
+            "file_sha256": "0dabe65f9d113b85e17e38dac1cb6c543dab6e0d8adcf45c931b212ea4dec429"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/mcp/server/request_state.py",
+          "line_start": 243,
+          "line_end": 244,
+          "quote": "if aead is None:\n            raise InvalidRequestState(\"unknown key\")",
+          "checked": {
+            "ok": true,
+            "where": "src/mcp/server/request_state.py:243-244",
+            "file_sha256": "0dabe65f9d113b85e17e38dac1cb6c543dab6e0d8adcf45c931b212ea4dec429"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_460e31c6ec84"
+    }
+  ],
+  "totals": {
+    "claims": 30,
+    "VERIFIED": 26,
+    "PARTIAL": 1,
+    "FALSE": 3,
+    "UNVERIFIABLE": 0,
+    "behaviors": 0,
+    "downgraded": 1,
+    "retracted": 0,
+    "rejected_citations": 3
+  }
+}

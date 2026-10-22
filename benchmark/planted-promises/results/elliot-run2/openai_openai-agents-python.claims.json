@@ -1,0 +1,2931 @@
+{
+  "elliot": "0.6.0",
+  "id": "aud_d357181180b0",
+  "root": "/home/claude/elliot-runs/bench/repos/openai_openai-agents-python",
+  "project": "openai_openai-agents-python",
+  "commit": "e23f0ba276932ec2e45c90d386189a559a8b206a",
+  "date": "2026-10-22T15:47:08+00:00",
+  "dirty": true,
+  "remote": "https://github.com/openai/openai-agents-python.git",
+  "tree_fingerprint": "03b6704bcb6ac359b8ec9aad09bd0eb10ada18f4db2f9a5ce61011b8ef59802b",
+  "started_at": "2026-10-22T21:40:15.580Z",
+  "sources": [
+    {
+      "file": "README.md",
+      "lines": 195
+    },
+    {
+      "file": "SECURITY.md",
+      "lines": 43
+    },
+    {
+      "file": "docs/config.md",
+      "lines": 253
+    },
+    {
+      "file": "docs/context.md",
+      "lines": 169
+    },
+    {
+      "file": "docs/examples.md",
+      "lines": 4
+    },
+    {
+      "file": "docs/guardrails.md",
+      "lines": 263
+    },
+    {
+      "file": "docs/handoffs.md",
+      "lines": 170
+    },
+    {
+      "file": "docs/human_in_the_loop.md",
+      "lines": 237
+    },
+    {
+      "file": "docs/index.md",
+      "lines": 99
+    },
+    {
+      "file": "docs/ja/config.md",
+      "lines": 256
+    },
+    {
+      "file": "docs/ja/context.md",
+      "lines": 160
+    },
+    {
+      "file": "docs/ja/examples.md",
+      "lines": 7
+    },
+    {
+      "file": "docs/ja/guardrails.md",
+      "lines": 253
+    },
+    {
+      "file": "docs/ja/handoffs.md",
+      "lines": 168
+    },
+    {
+      "file": "docs/ja/human_in_the_loop.md",
+      "lines": 226
+    },
+    {
+      "file": "docs/ja/index.md",
+      "lines": 102
+    },
+    {
+      "file": "docs/ja/mcp.md",
+      "lines": 540
+    },
+    {
+      "file": "docs/ja/models/index.md",
+      "lines": 714
+    },
+    {
+      "file": "docs/ja/models/litellm.md",
+      "lines": 13
+    },
+    {
+      "file": "docs/ja/multi_agent.md",
+      "lines": 64
+    },
+    {
+      "file": "docs/ja/quickstart.md",
+      "lines": 226
+    },
+    {
+      "file": "docs/ja/realtime/guide.md",
+      "lines": 430
+    },
+    {
+      "file": "docs/ja/realtime/quickstart.md",
+      "lines": 158
+    },
+    {
+      "file": "docs/ja/realtime/transport.md",
+      "lines": 108
+    },
+    {
+      "file": "docs/ja/release.md",
+      "lines": 240
+    },
+    {
+      "file": "docs/ja/repl.md",
+      "lines": 24
+    },
+    {
+      "file": "docs/ja/results.md",
+      "lines": 234
+    },
+    {
+      "file": "docs/ja/running_agents.md",
+      "lines": 606
+    },
+    {
+      "file": "docs/ja/sandbox_agents.md",
+      "lines": 117
+    },
+    {
+      "file": "docs/ja/sandbox/clients.md",
+      "lines": 229
+    },
+    {
+      "file": "docs/ja/sandbox/guide.md",
+      "lines": 896
+    },
+    {
+      "file": "docs/ja/sandbox/memory.md",
+      "lines": 185
+    },
+    {
+      "file": "docs/ja/sessions.md",
+      "lines": 459
+    },
+    {
+      "file": "docs/ja/sessions/advanced_sqlite_session.md",
+      "lines": 321
+    },
+    {
+      "file": "docs/ja/sessions/encrypted_session.md",
+      "lines": 200
+    },
+    {
+      "file": "docs/ja/sessions/index.md",
+      "lines": 759
+    },
+    {
+      "file": "docs/ja/sessions/sqlalchemy_session.md",
+      "lines": 105
+    },
+    {
+      "file": "docs/ja/streaming.md",
+      "lines": 152
+    },
+    {
+      "file": "docs/ja/testing.md",
+      "lines": 575
+    },
+    {
+      "file": "docs/ja/tools.md",
+      "lines": 922
+    },
+    {
+      "file": "docs/ja/tracing.md",
+      "lines": 258
+    },
+    {
+      "file": "docs/ja/usage.md",
+      "lines": 136
+    },
+    {
+      "file": "docs/ja/visualization.md",
+      "lines": 111
+    },
+    {
+      "file": "docs/ja/voice/pipeline.md",
+      "lines": 158
+    },
+    {
+      "file": "docs/ja/voice/quickstart.md",
+      "lines": 197
+    },
+    {
+      "file": "docs/ja/voice/tracing.md",
+      "lines": 18
+    },
+    {
+      "file": "docs/ko/config.md",
+      "lines": 256
+    },
+    {
+      "file": "docs/ko/context.md",
+      "lines": 160
+    },
+    {
+      "file": "docs/ko/examples.md",
+      "lines": 7
+    },
+    {
+      "file": "docs/ko/guardrails.md",
+      "lines": 253
+    },
+    {
+      "file": "docs/ko/handoffs.md",
+      "lines": 168
+    },
+    {
+      "file": "docs/ko/human_in_the_loop.md",
+      "lines": 226
+    },
+    {
+      "file": "docs/ko/index.md",
+      "lines": 102
+    },
+    {
+      "file": "docs/ko/mcp.md",
+      "lines": 542
+    },
+    {
+      "file": "docs/ko/models/index.md",
+      "lines": 716
+    },
+    {
+      "file": "docs/ko/models/litellm.md",
+      "lines": 13
+    },
+    {
+      "file": "docs/ko/multi_agent.md",
+      "lines": 64
+    },
+    {
+      "file": "docs/ko/quickstart.md",
+      "lines": 226
+    },
+    {
+      "file": "docs/ko/realtime/guide.md",
+      "lines": 430
+    },
+    {
+      "file": "docs/ko/realtime/quickstart.md",
+      "lines": 158
+    },
+    {
+      "file": "docs/ko/realtime/transport.md",
+      "lines": 108
+    },
+    {
+      "file": "docs/ko/release.md",
+      "lines": 240
+    },
+    {
+      "file": "docs/ko/repl.md",
+      "lines": 24
+    },
+    {
+      "file": "docs/ko/results.md",
+      "lines": 234
+    },
+    {
+      "file": "docs/ko/running_agents.md",
+      "lines": 605
+    },
+    {
+      "file": "docs/ko/sandbox_agents.md",
+      "lines": 117
+    },
+    {
+      "file": "docs/ko/sandbox/clients.md",
+      "lines": 229
+    },
+    {
+      "file": "docs/ko/sandbox/guide.md",
+      "lines": 896
+    },
+    {
+      "file": "docs/ko/sandbox/memory.md",
+      "lines": 185
+    },
+    {
+      "file": "docs/ko/sessions.md",
+      "lines": 460
+    },
+    {
+      "file": "docs/ko/sessions/advanced_sqlite_session.md",
+      "lines": 321
+    },
+    {
+      "file": "docs/ko/sessions/encrypted_session.md",
+      "lines": 200
+    },
+    {
+      "file": "docs/ko/sessions/index.md",
+      "lines": 759
+    },
+    {
+      "file": "docs/ko/sessions/sqlalchemy_session.md",
+      "lines": 105
+    },
+    {
+      "file": "docs/ko/streaming.md",
+      "lines": 152
+    },
+    {
+      "file": "docs/ko/testing.md",
+      "lines": 575
+    },
+    {
+      "file": "docs/ko/tools.md",
+      "lines": 922
+    },
+    {
+      "file": "docs/ko/tracing.md",
+      "lines": 258
+    },
+    {
+      "file": "docs/ko/usage.md",
+      "lines": 136
+    },
+    {
+      "file": "docs/ko/visualization.md",
+      "lines": 113
+    }
+  ],
+  "focused": false,
+  "candidates": [
+    {
+      "id": "c1",
+      "file": "docs/context.md",
+      "line": 30,
+      "text": "Within a single run, derived wrappers share the same underlying app context, approval state, and usage tracking. Nested [`Agent.as_tool()`][agents.agent.Agent.as_tool] runs may attach a different `tool_input`, but they d",
+      "risk": "high"
+    },
+    {
+      "id": "c2",
+      "file": "docs/sandbox/guide.md",
+      "line": 25,
+      "text": "The outer runtime still owns approvals, tracing, handoffs, and tracking the state needed to resume runs. The sandbox session manages commands and file changes through its backend. The backend determines which isolation c",
+      "risk": "high"
+    },
+    {
+      "id": "c3",
+      "file": "docs/sessions/index.md",
+      "line": 506,
+      "text": "The application must authorize access to each session and restrict access to the database file, its containing storage, and backups. For deployments that require tamper detection on shared or untrusted storage, use stora",
+      "risk": "high"
+    },
+    {
+      "id": "c4",
+      "file": "docs/tools.md",
+      "line": 254,
+      "text": "Local `ShellTool` and `ApplyPatchTool` default to `needs_approval=False`. With this setting, the SDK can invoke your executor or editor without requesting approval. Your implementation determines where commands run or fi",
+      "risk": "high"
+    },
+    {
+      "id": "c5",
+      "file": ".agents/references/sandbox-runtime-boundary.md",
+      "line": 52,
+      "text": "Remote mounts should default to one narrow lifecycle: declare them during sandbox creation, keep their contents outside workspace persistence, and unmount them during close. When tar persistence or hydration requires det",
+      "risk": "high"
+    },
+    {
+      "id": "c6",
+      "file": ".agents/references/tracing-lifecycle.md",
+      "line": 18,
+      "text": "- Tracing API keys are omitted from serialized `RunState` by default. A hash can verify that the caller supplied the same explicit key without persisting the secret; raw key persistence is opt-in.",
+      "risk": "high"
+    },
+    {
+      "id": "c7",
+      "file": ".agents/skills/code-change-verification/SKILL.md",
+      "line": 32,
+      "text": "Repository verification and all child processes must remain in the normal Codex workspace sandbox. Never request elevated sandbox permissions for the verification wrapper, and never retry the wrapper with broader host ac",
+      "risk": "high"
+    },
+    {
+      "id": "c8",
+      "file": ".agents/skills/implementation-final-review/SKILL.md",
+      "line": 36,
+      "text": "The reviewer performs one read-only pass, does not edit, recursively delegate review, or run broad suites. Focused non-mutating probes are allowed only within existing execution and credential permissions. Keep task cont",
+      "risk": "high"
+    },
+    {
+      "id": "c9",
+      "file": ".agents/skills/test-coverage-improver/SKILL.md",
+      "line": 12,
+      "text": "For assessment or proposal-only requests, report gaps and suggested tests without editing. When the user requests test improvements or has approved a plan, implement the scoped tests and complete review and verification ",
+      "risk": "high"
+    },
+    {
+      "id": "c10",
+      "file": "src/agents/sandbox/memory/prompts/memory_consolidation_prompt.md",
+      "line": 45,
+      "text": "- Redact secrets: never store tokens/keys/passwords; replace with [REDACTED_SECRET].",
+      "risk": "high"
+    },
+    {
+      "id": "c11",
+      "file": "SECURITY.md",
+      "line": 33,
+      "text": "- Credentials and sensitive payloads stay within their intended request, storage, and telemetry destinations. Redaction controls must be checked at the actual logging, exception, tracing, and serialization paths; a traci",
+      "risk": "high"
+    },
+    {
+      "id": "c12",
+      "file": "docs/human_in_the_loop.md",
+      "line": 45,
+      "text": "For local `ShellTool` and `ApplyPatchTool`, approval is opt-in: `needs_approval` defaults to `False`. An `on_approval` callback alone does not enable approval. Set `needs_approval=True` or a callable approval policy as w",
+      "risk": "high"
+    },
+    {
+      "id": "c13",
+      "file": "docs/human_in_the_loop.md",
+      "line": 220,
+      "text": "Replacing `context` with `context_override`, setting `strict_context=True`, or removing only the serialized approval records does not make an untrusted snapshot safe. Other fields still control resumed execution. If an a",
+      "risk": "high"
+    },
+    {
+      "id": "c14",
+      "file": "docs/index.md",
+      "line": 21,
+      "text": "- **Sandbox agents**: Run specialists inside real isolated workspaces. Sandbox agents support manifest-defined files, sandbox client selection, and resumable sandbox sessions.",
+      "risk": "high"
+    },
+    {
+      "id": "c15",
+      "file": "docs/index.md",
+      "line": 81,
+      "text": "- If the task depends on real files, repos, or isolated per-agent workspace state, read the [Sandbox agents quickstart](sandbox_agents.md).",
+      "risk": "high"
+    },
+    {
+      "id": "c16",
+      "file": "docs/index.md",
+      "line": 92,
+      "text": "| Run a coding, review, or document agent inside a real isolated workspace | [Sandbox agents quickstart](sandbox_agents.md) and [Sandbox clients](sandbox/clients.md) |",
+      "risk": "high"
+    },
+    {
+      "id": "c17",
+      "file": "docs/llms-full.txt",
+      "line": 59,
+      "text": "- [usage tracking](https://openai.github.io/openai-agents-python/ref/usage/): Inspect token usage, durations, and cost metrics from completed runs.",
+      "risk": "high"
+    },
+    {
+      "id": "c18",
+      "file": "docs/models/index.md",
+      "line": 179,
+      "text": "By default, OpenAI Responses API requests use HTTP transport. You can opt in to websocket transport when using the OpenAI Responses provider path.",
+      "risk": "high"
+    },
+    {
+      "id": "c19",
+      "file": "docs/quickstart.md",
+      "line": 107,
+      "text": "Use a plain `Agent` plus `Runner` when the task mainly lives in prompts, tools, and conversation state. If the agent should inspect or modify real files in an isolated workspace, jump to the [Sandbox agents quickstart](s",
+      "risk": "high"
+    },
+    {
+      "id": "c20",
+      "file": "docs/sandbox_agents.md",
+      "line": 33,
+      "text": "On Linux, `UnixLocalSandboxClient` adds no OS-level confinement to commands. On macOS, it applies filesystem restrictions through `sandbox-exec`, but does not provide network isolation. Use this example for trusted local",
+      "risk": "high"
+    },
+    {
+      "id": "c21",
+      "file": "docs/config.md",
+      "line": 36,
+      "text": "By default, the SDK uses the `OPENAI_API_KEY` environment variable for LLM requests and tracing. The key is resolved when the SDK first creates an OpenAI client (lazy initialization), so set the environment variable befo",
+      "risk": "default"
+    },
+    {
+      "id": "c22",
+      "file": "docs/config.md",
+      "line": 205,
+      "text": "The SDK defines two Python loggers (`openai.agents` and `openai.agents.tracing`) and does not attach handlers by default. Logs follow your application's Python logging configuration.",
+      "risk": "default"
+    },
+    {
+      "id": "c23",
+      "file": "docs/guardrails.md",
+      "line": 79,
+      "text": "- If a function tool requires approval, input tool guardrails normally run after approval and immediately before execution. Set [`RunConfig.tool_execution`][agents.run.RunConfig.tool_execution] to [`ToolExecutionConfig(p",
+      "risk": "default"
+    },
+    {
+      "id": "c24",
+      "file": "docs/human_in_the_loop.md",
+      "line": 13,
+      "text": "Set `needs_approval` to `True` to always require approval or provide an async function that decides per call. The callable receives the run context, parsed tool parameters, and the tool call ID.",
+      "risk": "default"
+    },
+    {
+      "id": "c25",
+      "file": "docs/human_in_the_loop.md",
+      "line": 65,
+      "text": "When executors or editors have different permissions, use per-call decisions: call `state.approve(interruption)` or `state.reject(interruption)`, leaving `always_approve` and `always_reject` at their default `False` valu",
+      "risk": "default"
+    },
+    {
+      "id": "c26",
+      "file": "docs/mcp.md",
+      "line": 268,
+      "text": "- `True` requires approval for all tools, and `False` requires approval for none (equivalent to `\"always\"` and `\"never\"`, respectively).",
+      "risk": "default"
+    },
+    {
+      "id": "c27",
+      "file": "docs/mcp.md",
+      "line": 271,
+      "text": "- A synchronous or asynchronous callable with the signature `(run_context, agent, tool) -> bool | Awaitable[bool]`. Return `True` to require approval or `False` to allow the call without approval.",
+      "risk": "default"
+    },
+    {
+      "id": "c28",
+      "file": "docs/models/index.md",
+      "line": 295,
+      "text": "This integration is experimental and uses the Responses WebSocket transport so local function outputs can be returned to an active hosted agent with `response.inject`. It requires a build of `openai[realtime]` version 2.",
+      "risk": "default"
+    },
+    {
+      "id": "c29",
+      "file": "docs/models/index.md",
+      "line": 564,
+      "text": "If an attempt exceeds the limit, the SDK cancels the attempt and waits for its cleanup to finish before raising [`ModelTimeoutError`][agents.exceptions.ModelTimeoutError]. When runner-managed retries are enabled, the SDK",
+      "risk": "default"
+    },
+    {
+      "id": "c30",
+      "file": "docs/sandbox/clients.md",
+      "line": 44,
+      "text": "By default, `UnixLocalSandboxClient` starts every command environment from the complete host process environment. Set `inherit_host_environment=False` to pass only a conservative allowlist of host variables instead:",
+      "risk": "default"
+    },
+    {
+      "id": "c31",
+      "file": "docs/sandbox/clients.md",
+      "line": 55,
+      "text": "When `inherit_host_environment=False` and `host_environment_allowlist` is omitted, the SDK allows `PATH`, `LANG`, `LC_ALL`, `LC_COLLATE`, `LC_CTYPE`, `LC_MESSAGES`, `LC_MONETARY`, `LC_NUMERIC`, `LC_TIME`, `TZ`, `TERM`, `",
+      "risk": "default"
+    },
+    {
+      "id": "c32",
+      "file": "docs/sandbox/memory.md",
+      "line": 49,
+      "text": "Memory can become stale. Agents are instructed to treat memories as guidance only and trust the current environment. By default, memory reads have `live_update` enabled, so if the agent discovers stale memory, it can upd",
+      "risk": "default"
+    },
+    {
+      "id": "c33",
+      "file": "docs/sandbox/memory.md",
+      "line": 94,
+      "text": "If recent raw memories exceed `max_raw_memories_for_consolidation` (defaults to 256), Phase 2 keeps only memories from the newest conversations and removes older ones. Recency is based on the last time the conversation i",
+      "risk": "default"
+    },
+    {
+      "id": "c34",
+      "file": "docs/sessions/advanced_sqlite_session.md",
+      "line": 71,
+      "text": "- `logger` (logging.Logger | None): Custom logger for the session. Defaults to module logger",
+      "risk": "default"
+    },
+    {
+      "id": "c35",
+      "file": "docs/tracing.md",
+      "line": 151,
+      "text": "By default, `trace_include_sensitive_data` is `True`. You can set the default without code by exporting the `OPENAI_AGENTS_TRACE_INCLUDE_SENSITIVE_DATA` environment variable to `true/1` or `false/0` before running your a",
+      "risk": "default"
+    },
+    {
+      "id": "c36",
+      "file": "integration_tests/README.md",
+      "line": 27,
+      "text": "When the host requires a SOCKS proxy, the runner installs `httpx[socks]` as a test-harness dependency without changing the SDK's published requirements. Set `OPENAI_AGENTS_INTEGRATION_DISABLE_PROXY=1` when the selected e",
+      "risk": "default"
+    },
+    {
+      "id": "c37",
+      "file": "integration_tests/README.md",
+      "line": 31,
+      "text": "The security profile requires a reachable local Docker daemon and pulls `busybox:1.36.1` by default. Set `OPENAI_AGENTS_INTEGRATION_SECURITY_IMAGE` to use a pre-approved replacement image. An unavailable daemon or image ",
+      "risk": "default"
+    },
+    {
+      "id": "c38",
+      "file": ".agents/references/local-mcp-server-lifecycle.md",
+      "line": 34,
+      "text": "- Dynamic filters require both `run_context` and agent. A filter exception excludes that tool and logs the failure rather than exposing it by default.",
+      "risk": "default"
+    },
+    {
+      "id": "c39",
+      "file": "docs/tools.md",
+      "line": 614,
+      "text": "When a timeout is reached, the default behavior is `timeout_behavior=\"error_as_result\"`, which sends a model-visible timeout message (for example, `Tool 'slow_lookup' timed out after 2 seconds.`).",
+      "risk": "default"
+    },
+    {
+      "id": "c40",
+      "file": "docs/tools.md",
+      "line": 972,
+      "text": "- Stream limits: `codex_options.codex_subprocess_stream_limit_bytes` (or `OPENAI_AGENTS_CODEX_SUBPROCESS_STREAM_LIMIT_BYTES`) controls stdout/stderr reader limits. Valid range is `65536` to `67108864`; default is `838860",
+      "risk": "default"
+    }
+  ],
+  "signals": [],
+  "file_count": 1689,
+  "claims": [
+    {
+      "n": "1",
+      "claim": "Local ShellTool and ApplyPatchTool default to needs_approval=False.",
+      "verdict": "FALSE",
+      "severity": "medium",
+      "explanation": "ApplyPatchTool defaults to False, but ShellTool's dataclass default is True, contradicting the doc for ShellTool.",
+      "user_impact": "A reader believes ShellTool runs without approval unless they opt in. In the code ShellTool defaults to needs_approval=True, so runs pause with interruptions unless the user sets False. Hosted ShellTool also raises UserError unless needs_approval=False is passed explicitly. ApplyPatchTool does default to False.",
+      "note": null,
+      "source": {
+        "file": "docs/tools.md",
+        "line_start": 254,
+        "quote": "Local `ShellTool` and `ApplyPatchTool` default to `needs_approval=False`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/tool.py",
+          "line_start": 1498,
+          "quote": "needs_approval: bool | ShellApprovalFunction = True",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/tool.py:1498",
+            "file_sha256": "71c110bf3c167816350d7f15f885827a73cb579ae6202965c90fa739d07929a2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/tool.py",
+          "line_start": 1553,
+          "quote": "needs_approval: bool | ApplyPatchApprovalFunction = False",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/tool.py:1553",
+            "file_sha256": "71c110bf3c167816350d7f15f885827a73cb579ae6202965c90fa739d07929a2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/tool.py",
+          "line_start": 1535,
+          "quote": "if self.needs_approval is not False or self.on_approval is not None:",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/tool.py:1535",
+            "file_sha256": "71c110bf3c167816350d7f15f885827a73cb579ae6202965c90fa739d07929a2"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "Docs say local ShellTool defaults to needs_approval=False but code defaults to True.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/agents/tool.py",
+            "line_start": 1498,
+            "quote": "needs_approval: bool | ShellApprovalFunction = True",
+            "checked": {
+              "ok": true,
+              "where": "src/agents/tool.py:1498",
+              "file_sha256": "71c110bf3c167816350d7f15f885827a73cb579ae6202965c90fa739d07929a2"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:44:18.578Z"
+      },
+      "receipt": "rcpt_6a2c37391eb1"
+    },
+    {
+      "n": "2",
+      "claim": "For local ShellTool and ApplyPatchTool, approval is opt-in: needs_approval defaults to False.",
+      "verdict": "FALSE",
+      "severity": "medium",
+      "explanation": "The same ShellTool default of True contradicts the stated opt-in default.",
+      "user_impact": "Approval is on by default for ShellTool in code, not opt-in. A user who adds only on_approval or expects automatic execution gets a paused run, and hosted ShellTool construction without needs_approval=False raises.",
+      "note": null,
+      "source": {
+        "file": "docs/human_in_the_loop.md",
+        "line_start": 45,
+        "quote": "approval is opt-in: `needs_approval` defaults to `False`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/tool.py",
+          "line_start": 1498,
+          "quote": "needs_approval: bool | ShellApprovalFunction = True",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/tool.py:1498",
+            "file_sha256": "71c110bf3c167816350d7f15f885827a73cb579ae6202965c90fa739d07929a2"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "Same contradiction: ShellTool approval is on by default, not opt-in.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/agents/tool.py",
+            "line_start": 1498,
+            "quote": "needs_approval: bool | ShellApprovalFunction = True",
+            "checked": {
+              "ok": true,
+              "where": "src/agents/tool.py:1498",
+              "file_sha256": "71c110bf3c167816350d7f15f885827a73cb579ae6202965c90fa739d07929a2"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:44:19.739Z"
+      },
+      "receipt": "rcpt_366c084de881"
+    },
+    {
+      "n": "3",
+      "claim": "By default trace_include_sensitive_data is True, and OPENAI_AGENTS_TRACE_INCLUDE_SENSITIVE_DATA sets the default.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default is \"true\"; 1/true/yes/on count as true.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/tracing.md",
+        "line_start": 151,
+        "quote": "By default, `trace_include_sensitive_data` is `True`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/run_config.py",
+          "line_start": 55,
+          "quote": "val = os.getenv(\"OPENAI_AGENTS_TRACE_INCLUDE_SENSITIVE_DATA\", \"true\")",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/run_config.py:55",
+            "file_sha256": "07a9d6cd57b3c4b3885cf7d6a58b7e24d051b75f4416ed67a3aa604b3eada920"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_47a41dfa370d"
+    },
+    {
+      "n": "4",
+      "claim": "The SDK uses OPENAI_API_KEY for LLM requests and tracing by default.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The tracing exporter reads OPENAI_API_KEY when no key is supplied; the OpenAI client does likewise.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/config.md",
+        "line_start": 36,
+        "quote": "By default, the SDK uses the `OPENAI_API_KEY` environment variable for LLM requests and tracing."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/tracing/processors.py",
+          "line_start": 113,
+          "quote": "api_key = os.environ.get(\"OPENAI_API_KEY\")",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/tracing/processors.py:113",
+            "file_sha256": "510ccad6e22356c9544277324e2c94eae2d8535582972cd8c3d84616f4915500"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_450c04985d75"
+    },
+    {
+      "n": "5",
+      "claim": "By default UnixLocalSandboxClient starts every command environment from the complete host process environment.",
+      "verdict": "FALSE",
+      "severity": "medium",
+      "explanation": "With the default False, the client builds a frozenset from the built-in allowlist and filters os.environ to it; full inheritance only happens when True is passed.",
+      "user_impact": "The constructor default is inherit_host_environment=False, so by default only a small allowlist (PATH, LANG, SSL_CERT_FILE, ...) reaches commands. A user following the docs who relies on host variables such as proxy settings or tool credentials being present will find them missing; a reviewer reading the docs will also wrongly assume the default exposes all host secrets to commands.",
+      "note": null,
+      "source": {
+        "file": "docs/sandbox/clients.md",
+        "line_start": 44,
+        "quote": "By default, `UnixLocalSandboxClient` starts every command environment from the complete host process environment."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/sandbox/sandboxes/unix_local.py",
+          "line_start": 1539,
+          "quote": "inherit_host_environment: bool = False,",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/sandbox/sandboxes/unix_local.py:1539",
+            "file_sha256": "be228d5bfeb91d6872a68e96fbf84a7f88793bf3666290976886189589b14c3b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/sandbox/sandboxes/unix_local.py",
+          "line_start": 1553,
+          "quote": "self._host_environment_allowlist = frozenset(",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/sandbox/sandboxes/unix_local.py:1553",
+            "file_sha256": "be228d5bfeb91d6872a68e96fbf84a7f88793bf3666290976886189589b14c3b"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "Constructor default inherit_host_environment=False contradicts the doc's complete-inheritance default.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/agents/sandbox/sandboxes/unix_local.py",
+            "line_start": 1539,
+            "quote": "inherit_host_environment: bool = False,",
+            "checked": {
+              "ok": true,
+              "where": "src/agents/sandbox/sandboxes/unix_local.py:1539",
+              "file_sha256": "be228d5bfeb91d6872a68e96fbf84a7f88793bf3666290976886189589b14c3b"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:44:20.975Z"
+      },
+      "receipt": "rcpt_073267c45231"
+    },
+    {
+      "n": "6",
+      "claim": "With inherit_host_environment=False and no allowlist, the SDK allows PATH, LANG, LC_*, TZ, TERM, TMPDIR, SSL_CERT_FILE, SSL_CERT_DIR, REQUESTS_CA_BUNDLE, NODE_EXTRA_CA_CERTS, UV_PYTHON, NO_COLOR, FORCE_COLOR, CI.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The built-in allowlist matches the documented names and a custom allowlist with inherit=True raises ValueError.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/sandbox/clients.md",
+        "line_start": 55,
+        "quote": "When `inherit_host_environment=False` and `host_environment_allowlist` is omitted, the SDK allows `PATH`, `LANG`"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/sandbox/sandboxes/unix_local.py",
+          "line_start": 104,
+          "quote": "\"NODE_EXTRA_CA_CERTS\",",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/sandbox/sandboxes/unix_local.py:104",
+            "file_sha256": "be228d5bfeb91d6872a68e96fbf84a7f88793bf3666290976886189589b14c3b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/sandbox/sandboxes/unix_local.py",
+          "line_start": 1542,
+          "quote": "if inherit_host_environment and host_environment_allowlist is not None:",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/sandbox/sandboxes/unix_local.py:1542",
+            "file_sha256": "be228d5bfeb91d6872a68e96fbf84a7f88793bf3666290976886189589b14c3b"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_ef652c330741"
+    },
+    {
+      "n": "7",
+      "claim": "Codex stream limit: valid range 65536 to 67108864, default 8388608, via codex_subprocess_stream_limit_bytes or env var.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Constants equal 8388608, 65536 and 67108864; values outside the range raise UserError.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/tools.md",
+        "line_start": 972,
+        "quote": "Valid range is `65536` to `67108864`; default is `8388608`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/extensions/experimental/codex/exec.py",
+          "line_start": 20,
+          "quote": "_DEFAULT_SUBPROCESS_STREAM_LIMIT_BYTES = 8 * 1024 * 1024",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/extensions/experimental/codex/exec.py:20",
+            "file_sha256": "e02df968a30a488c18563bc4e93095e6ad72406105799cd701240abd3bf97a95"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/extensions/experimental/codex/exec.py",
+          "line_start": 21,
+          "quote": "_MIN_SUBPROCESS_STREAM_LIMIT_BYTES = 64 * 1024",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/extensions/experimental/codex/exec.py:21",
+            "file_sha256": "e02df968a30a488c18563bc4e93095e6ad72406105799cd701240abd3bf97a95"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/extensions/experimental/codex/exec.py",
+          "line_start": 22,
+          "quote": "_MAX_SUBPROCESS_STREAM_LIMIT_BYTES = 64 * 1024 * 1024",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/extensions/experimental/codex/exec.py:22",
+            "file_sha256": "e02df968a30a488c18563bc4e93095e6ad72406105799cd701240abd3bf97a95"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_aad6dec75892"
+    },
+    {
+      "n": "8",
+      "claim": "max_raw_memories_for_consolidation defaults to 256.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default is 256 and consolidation keeps the first N items.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/sandbox/memory.md",
+        "line_start": 94,
+        "quote": "`max_raw_memories_for_consolidation` (defaults to 256)"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/sandbox/config.py",
+          "line_start": 45,
+          "quote": "max_raw_memories_for_consolidation: int = 256",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/sandbox/config.py:45",
+            "file_sha256": "b133653523cbdd4b96f2b54f840550b1949f79050dcfa024e45b02bb123965a9"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/sandbox/memory/storage.py",
+          "line_start": 131,
+          "quote": "selected = current_items[:max_raw_memories_for_consolidation]",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/sandbox/memory/storage.py:131",
+            "file_sha256": "75fe67c6394c8250e5515f413cabf290fa4321866501f78029ab8981c629d64f"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_3e47c711ab8a"
+    },
+    {
+      "n": "9",
+      "claim": "Memory reads have live_update enabled by default.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "MemoryReadConfig.live_update defaults to True.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/sandbox/memory.md",
+        "line_start": 49,
+        "quote": "By default, memory reads have `live_update` enabled"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/sandbox/config.py",
+          "line_start": 138,
+          "quote": "live_update: bool = True",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/sandbox/config.py:138",
+            "file_sha256": "b133653523cbdd4b96f2b54f840550b1949f79050dcfa024e45b02bb123965a9"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_b057c19ebc4b"
+    },
+    {
+      "n": "10",
+      "claim": "By default OpenAI Responses API requests use HTTP transport; websocket is opt-in.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default is \"http\"; websocket only via use_responses_websocket or set_default_openai_responses_transport.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/models/index.md",
+        "line_start": 179,
+        "quote": "By default, OpenAI Responses API requests use HTTP transport."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/models/_openai_shared.py",
+          "line_start": 13,
+          "quote": "_default_openai_responses_transport: OpenAIResponsesTransport = \"http\"",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/models/_openai_shared.py:13",
+            "file_sha256": "d4895d4c4c8d4b8eabfd9274a0767a96e4ce60a4fb90f587a75a9422d158cc85"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/models/openai_provider.py",
+          "line_start": 113,
+          "quote": "if use_responses_websocket is not None:",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/models/openai_provider.py:113",
+            "file_sha256": "189b421c1507544238a5de40cfc2f603fa3d2452f30a9b4accba06183b13e455"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_139a06435db8"
+    },
+    {
+      "n": "11",
+      "claim": "The SDK defines two loggers (openai.agents and openai.agents.tracing) and does not attach handlers by default.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The only addHandler call is inside the opt-in enable_verbose_stdout_logging().",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/config.md",
+        "line_start": 205,
+        "quote": "The SDK defines two Python loggers (`openai.agents` and `openai.agents.tracing`) and does not attach handlers by default."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/logger.py",
+          "line_start": 7,
+          "quote": "logger = logging.getLogger(\"openai.agents\")",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/logger.py:7",
+            "file_sha256": "4b53b754ec5b629d6c9b4e28e652ca827ade9e47e076d33ecf14c098c24136a0"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/tracing/logger.py",
+          "line_start": 3,
+          "quote": "logger = logging.getLogger(\"openai.agents.tracing\")",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/tracing/logger.py:3",
+            "file_sha256": "2782940d14866bbc795157d4c167be81b2b0a1aabc01e11346a90fb7742fb468"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/__init__.py",
+          "line_start": 365,
+          "quote": "logger.addHandler(_verbose_stdout_handler)",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/__init__.py:365",
+            "file_sha256": "3877fa1f1126020413a17a03015acf13f1f52d77eeaadf87505f54ecbd40ab15"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_deba62bebe32"
+    },
+    {
+      "n": "12",
+      "claim": "Function tool timeout default behavior is timeout_behavior=\"error_as_result\", returning a model-visible message.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default is error_as_result; raise_exception is the only branch that raises.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/tools.md",
+        "line_start": 614,
+        "quote": "the default behavior is `timeout_behavior=\"error_as_result\"`"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/tool.py",
+          "line_start": 518,
+          "quote": "timeout_behavior: ToolTimeoutBehavior = \"error_as_result\"",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/tool.py:518",
+            "file_sha256": "71c110bf3c167816350d7f15f885827a73cb579ae6202965c90fa739d07929a2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/tool.py",
+          "line_start": 2318,
+          "quote": "if function_tool.timeout_behavior == \"raise_exception\":",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/tool.py:2318",
+            "file_sha256": "71c110bf3c167816350d7f15f885827a73cb579ae6202965c90fa739d07929a2"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_88ccd4aec3b2"
+    },
+    {
+      "n": "13",
+      "claim": "AdvancedSQLiteSession logger parameter defaults to the module logger.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Falls back to logging.getLogger(__name__).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/sessions/advanced_sqlite_session.md",
+        "line_start": 71,
+        "quote": "`logger` (logging.Logger | None): Custom logger for the session. Defaults to module logger"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/extensions/memory/advanced_sqlite_session.py",
+          "line_start": 102,
+          "quote": "self._logger = logger if logger is not None else logging.getLogger(__name__)",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/extensions/memory/advanced_sqlite_session.py:102",
+            "file_sha256": "85c5832dd56674ef7bb653e1fd3c313ed328d36c01218972a66863631b596ff9"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_4b72d9ba2c9d"
+    },
+    {
+      "n": "14",
+      "claim": "The tracing API key is only included in serialized RunState when the caller passes include_tracing_api_key=True (opt-in).",
+      "verdict": "PARTIAL",
+      "severity": "high",
+      "explanation": "to_string() and the trace layer exclude the key by default, but RunState.to_json() includes it by default, and to_json is the method the docs name for storing state.",
+      "user_impact": "RunState.to_json() defaults include_tracing_api_key to True, so a plain state.to_json() writes the raw tracing API key into the snapshot. Users who store or send snapshots to clients, trusting that the key is only included on opt-in, will persist or expose the secret. to_string() and the trace layer default to False, so the behaviour is inconsistent.",
+      "note": null,
+      "source": {
+        "file": "docs/human_in_the_loop.md",
+        "line_start": 230,
+        "quote": "`include_tracing_api_key=True`: Include the tracing API key in the serialized trace payload when you need resumed work to keep exporting traces with the same credentials."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/run_state.py",
+          "line_start": 1904,
+          "quote": "include_tracing_api_key: bool = True,",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/run_state.py:1904",
+            "file_sha256": "1975da8075f958009477c6e21843e13dbc696f2646ffcb05606dc9bb9fbdd147"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/run_state.py",
+          "line_start": 2276,
+          "quote": "include_tracing_api_key: bool = False,",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/run_state.py:2276",
+            "file_sha256": "1975da8075f958009477c6e21843e13dbc696f2646ffcb05606dc9bb9fbdd147"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/tracing/traces.py",
+          "line_start": 175,
+          "quote": "include_tracing_api_key: When True, include the tracing API key. Defaults to False",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/tracing/traces.py:175",
+            "file_sha256": "ae5b5585a2c1c2a285d99722543395d6806b01e60522f3bf7ff60456e40d060d"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "to_json defaults include_tracing_api_key to True, so the secret is persisted by default, contrary to the opt-in wording; high severity is defensible.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/agents/run_state.py",
+            "line_start": 1904,
+            "quote": "include_tracing_api_key: bool = True,",
+            "checked": {
+              "ok": true,
+              "where": "src/agents/run_state.py:1904",
+              "file_sha256": "1975da8075f958009477c6e21843e13dbc696f2646ffcb05606dc9bb9fbdd147"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:44:22.186Z"
+      },
+      "receipt": "rcpt_b3087d5e6fd8"
+    },
+    {
+      "n": "15",
+      "claim": "MCP require_approval: True requires approval for all tools and False for none (\"always\"/\"never\" equivalents).",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Booleans pass through; \"always\"/\"never\" map to True/False; the policy is applied to every tool.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/mcp.md",
+        "line_start": 268,
+        "quote": "`True` requires approval for all tools, and `False` requires approval for none"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/mcp/server.py",
+          "line_start": 753,
+          "quote": "if value == \"always\":",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/mcp/server.py:753",
+            "file_sha256": "f2596229ed74af0c879e966c695f8095813d6e53ee083db22be551f8d8c0506b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/mcp/server.py",
+          "line_start": 839,
+          "quote": "if isinstance(require_approval, bool):",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/mcp/server.py:839",
+            "file_sha256": "f2596229ed74af0c879e966c695f8095813d6e53ee083db22be551f8d8c0506b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/mcp/server.py",
+          "line_start": 875,
+          "quote": "return bool(policy)",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/mcp/server.py:875",
+            "file_sha256": "f2596229ed74af0c879e966c695f8095813d6e53ee083db22be551f8d8c0506b"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_a5b24e5ef077"
+    },
+    {
+      "n": "16",
+      "claim": "MCP require_approval may be a sync or async callable (run_context, agent, tool) -> bool; True requires approval.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The callable is invoked with those three args, awaited if needed and coerced to bool. If no agent is available it fails closed (True).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/mcp.md",
+        "line_start": 271,
+        "quote": "A synchronous or asynchronous callable with the signature `(run_context, agent, tool) -> bool | Awaitable[bool]`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/mcp/server.py",
+          "line_start": 865,
+          "quote": "result = policy(run_context, agent, tool)",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/mcp/server.py:865",
+            "file_sha256": "f2596229ed74af0c879e966c695f8095813d6e53ee083db22be551f8d8c0506b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/mcp/server.py",
+          "line_start": 866,
+          "quote": "if inspect.isawaitable(result):",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/mcp/server.py:866",
+            "file_sha256": "f2596229ed74af0c879e966c695f8095813d6e53ee083db22be551f8d8c0506b"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_6e3af3a470b4"
+    },
+    {
+      "n": "17",
+      "claim": "Python 3.10 or newer is required; voice, redis extras exist.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Package metadata matches; voice and redis extras are declared.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 27,
+        "quote": "Python 3.10 or newer required"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "pyproject.toml",
+          "line_start": 6,
+          "quote": "requires-python = \">=3.10\"",
+          "checked": {
+            "ok": true,
+            "where": "pyproject.toml:6",
+            "file_sha256": "887c25d93dd306236f7f066433c44996314eda1406c68a15149678bce0d58c97"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "pyproject.toml",
+          "line_start": 44,
+          "quote": "voice = [\"numpy>=2.2.0, <3; python_version>='3.10'\"",
+          "checked": {
+            "ok": true,
+            "where": "pyproject.toml:44",
+            "file_sha256": "887c25d93dd306236f7f066433c44996314eda1406c68a15149678bce0d58c97"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "pyproject.toml",
+          "line_start": 54,
+          "quote": "redis = [\"redis>=7\"]",
+          "checked": {
+            "ok": true,
+            "where": "pyproject.toml:54",
+            "file_sha256": "887c25d93dd306236f7f066433c44996314eda1406c68a15149678bce0d58c97"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_a2373d68df3a"
+    },
+    {
+      "n": "18",
+      "claim": "UnixLocalSandboxClient is supported on macOS and Linux, not on Windows; Docker extra exists.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The module refuses to import on Windows; the docker extra is declared.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 77,
+        "quote": "This example uses `UnixLocalSandboxClient`, which is supported on macOS and Linux."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/sandbox/sandboxes/unix_local.py",
+          "line_start": 3,
+          "quote": "if sys.platform == \"win32\":  # pragma: no cover",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/sandbox/sandboxes/unix_local.py:3",
+            "file_sha256": "be228d5bfeb91d6872a68e96fbf84a7f88793bf3666290976886189589b14c3b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "pyproject.toml",
+          "line_start": 62,
+          "quote": "docker = [\"docker>=6.1\"]",
+          "checked": {
+            "ok": true,
+            "where": "pyproject.toml:62",
+            "file_sha256": "887c25d93dd306236f7f066433c44996314eda1406c68a15149678bce0d58c97"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_36e525e94ded"
+    },
+    {
+      "n": "19",
+      "claim": "On Linux UnixLocalSandboxClient adds no OS-level confinement; on macOS it applies sandbox-exec filesystem restrictions without network isolation.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "sandbox-exec wrapping happens only on darwin; other platforms get no confinement, matching the warning.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/sandbox_agents.md",
+        "line_start": 33,
+        "quote": "On Linux, `UnixLocalSandboxClient` adds no OS-level confinement to commands."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/sandbox/sandboxes/unix_local.py",
+          "line_start": 752,
+          "quote": "if sys.platform != \"darwin\":",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/sandbox/sandboxes/unix_local.py:752",
+            "file_sha256": "be228d5bfeb91d6872a68e96fbf84a7f88793bf3666290976886189589b14c3b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/sandbox/sandboxes/unix_local.py",
+          "line_start": 755,
+          "quote": "sandbox_exec = shutil.which(\"sandbox-exec\")",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/sandbox/sandboxes/unix_local.py:755",
+            "file_sha256": "be228d5bfeb91d6872a68e96fbf84a7f88793bf3666290976886189589b14c3b"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_64429266c230"
+    },
+    {
+      "n": "20",
+      "claim": "Realtime agents are built with gpt-realtime-2.1.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The default realtime model matches.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 14,
+        "quote": "Build powerful voice agents with `gpt-realtime-2.1` and full agent features"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/realtime/openai_realtime.py",
+          "line_start": 168,
+          "quote": "DEFAULT_REALTIME_MODEL = \"gpt-realtime-2.1\"",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/realtime/openai_realtime.py:168",
+            "file_sha256": "d0a94f682439876df35c0bb3b8953c2a2d44a869264a5420d42ee849fb97b550"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_f0ab01e5748c"
+    },
+    {
+      "n": "21",
+      "claim": "SQLiteSession skips rows whose message_data cannot be decoded as JSON without an integrity error.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Undecodable rows are silently skipped.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/sessions/index.md",
+        "line_start": 504,
+        "quote": "Rows whose `message_data` cannot be decoded as JSON are skipped without an integrity error."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/memory/sqlite_session.py",
+          "line_start": 304,
+          "quote": "except (json.JSONDecodeError, TypeError):",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/memory/sqlite_session.py:304",
+            "file_sha256": "7a229344eef38f3c805d43274589f25c7bde2e64aa33717fdab3b38b2debeabb"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/memory/sqlite_session.py",
+          "line_start": 305,
+          "quote": "# Skip invalid JSON entries",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/memory/sqlite_session.py:305",
+            "file_sha256": "7a229344eef38f3c805d43274589f25c7bde2e64aa33717fdab3b38b2debeabb"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_2643c6406520"
+    },
+    {
+      "n": "23",
+      "claim": "Pass max_turns=None to disable the turn limit; otherwise MaxTurnsExceeded is raised.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The limit check is skipped when max_turns is None; the default is 10.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/running_agents.md",
+        "line_start": 42,
+        "quote": "Pass `max_turns=None` to disable this turn limit."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/run_internal/run_loop.py",
+          "line_start": 1779,
+          "quote": "if max_turns is not None and current_turn > max_turns:",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/run_internal/run_loop.py:1779",
+            "file_sha256": "aa9d6d92be26128a4a708843e65a93fc8aee3d74fa3798bdcf2ee3e620b37613"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/run.py",
+          "line_start": 287,
+          "quote": "max_turns: int | None = DEFAULT_MAX_TURNS,",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/run.py:287",
+            "file_sha256": "3cdd652446db22646f24dd8e283dc39d54724a7a76822856c17e39a8f549d997"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_da7f29731d1d"
+    },
+    {
+      "n": "24",
+      "claim": "Derived wrappers share the same app context, approval state and usage; nested as_tool runs may attach a different tool_input but get no isolated copy of app state.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The fork reuses the same context object and usage, shares tool state (approvals) and sets only tool_input.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/context.md",
+        "line_start": 30,
+        "quote": "Within a single run, derived wrappers share the same underlying app context, approval state, and usage tracking."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/run_context.py",
+          "line_start": 1699,
+          "quote": "fork = RunContextWrapper(context=self.context)",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/run_context.py:1699",
+            "file_sha256": "80046edd13783cd8c62ebe6f7bde966331b6f87234aa7a3c1f04b4e7def4da7b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/run_context.py",
+          "line_start": 1700,
+          "quote": "fork.usage = self.usage",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/run_context.py:1700",
+            "file_sha256": "80046edd13783cd8c62ebe6f7bde966331b6f87234aa7a3c1f04b4e7def4da7b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/run_context.py",
+          "line_start": 1703,
+          "quote": "fork.tool_input = tool_input",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/run_context.py:1703",
+            "file_sha256": "80046edd13783cd8c62ebe6f7bde966331b6f87234aa7a3c1f04b4e7def4da7b"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_d5a566d4bb5e"
+    },
+    {
+      "n": "22",
+      "claim": "The EncryptedSession wrapper accepts unencrypted items.",
+      "verdict": "VERIFIED",
+      "severity": "low",
+      "explanation": "_unwrap returns None for non-envelope items and get_items drops them; the sentence contradicts the class docstring and behaviour.",
+      "user_impact": "The code skips plaintext records on read rather than accepting them, so injected plaintext rows do not reach the agent. A reader may overestimate the exposure, or expect legacy plaintext history to still load after wrapping a store. The completeness/order caveat still holds.",
+      "note": "Doc wording is loose, but the code skips unencrypted items and the completeness/order caveat holds, so the practical impact is minimal and the gap is immaterial.",
+      "source": {
+        "file": "docs/sessions/index.md",
+        "line_start": 506,
+        "quote": "does not verify the completeness or order of conversation history and accepts unencrypted items"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/extensions/memory/encrypt_session.py",
+          "line_start": 123,
+          "quote": "Only authenticated, unexpired encrypted envelopes are returned as history.",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/extensions/memory/encrypt_session.py:123",
+            "file_sha256": "f1a61b3ec913a9c4e8385a8a2b64e87e7bd9f6d0a315cae2fc0f4533ebaae5fd"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/extensions/memory/encrypt_session.py",
+          "line_start": 326,
+          "quote": "if not _is_encrypted_envelope(item):",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/extensions/memory/encrypt_session.py:326",
+            "file_sha256": "f1a61b3ec913a9c4e8385a8a2b64e87e7bd9f6d0a315cae2fc0f4533ebaae5fd"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "downgrade",
+        "reason": "Doc wording is loose, but the code skips unencrypted items and the completeness/order caveat holds, so the practical impact is minimal and the gap is immaterial.",
+        "severity": null,
+        "evidence": [],
+        "at": "2026-10-22T21:44:23.381Z"
+      },
+      "receipt": "rcpt_9678a3907e27",
+      "original_verdict": "PARTIAL"
+    }
+  ],
+  "rejected": [
+    {
+      "claim": "MCP require_approval accepts True/False, \"always\"/\"never\", per-tool maps, grouped objects, and callables.",
+      "verdict": "UNVERIFIABLE",
+      "problems": [
+        "evidence absent:require_approval: pattern found in code: elliot-report-v1/2026-10-22-e23f0ba/claims.json:738:      \"explanation\": \"parse_function_tool_arguments returns None for all listed cases and evaluate_function_tool_approval then returns \\\"require_approval\\\" before calling the callable.\", | elliot-report-v1/2026-10-22-e23f0ba/claims.json:1984:      \"explanation\": \"parse_function_tool_arguments returns None for all listed cases and evaluate_function_tool_approval then returns \\\"require_approval\\\" before calling the callable.\", | elliot-report-v1/2026-10-22-e23f0ba/report.html:117:    <p class=\"why\">parse_function_tool_arguments returns None for all listed cases and evaluate_function_tool_approval then returns &quot;require_approval&quot; before calling the callable.</p>"
+      ],
+      "at": "2026-10-22T21:42:30.167Z"
+    }
+  ],
+  "finished_at": "2026-10-22T21:44:40.153Z",
+  "behaviors": [],
+  "review_requested_at": "2026-10-22T21:44:02.595Z",
+  "skipped": [
+    {
+      "candidate": "c2",
+      "reason": "Describes the architectural split between the outer runtime and sandbox backend; covered by the UnixLocal confinement and host-environment claims."
+    },
+    {
+      "candidate": "c3",
+      "reason": "Covered by claims on the SQLite skip behaviour and the EncryptedSession sentence from the same paragraph."
+    },
+    {
+      "candidate": "c5",
+      "reason": "Internal contributor reference under .agents, not a user-facing promise."
+    },
+    {
+      "candidate": "c6",
+      "reason": "Internal contributor reference; the user-facing tracing-key claim was recorded from docs/human_in_the_loop.md instead."
+    },
+    {
+      "candidate": "c7",
+      "reason": "Internal agent skill instructions for contributors, not a product promise."
+    },
+    {
+      "candidate": "c8",
+      "reason": "Internal agent skill instructions for contributors, not a product promise."
+    },
+    {
+      "candidate": "c9",
+      "reason": "Internal agent skill instructions for contributors, not a product promise."
+    },
+    {
+      "candidate": "c10",
+      "reason": "A prompt file, not a doc promise; recorded as undisclosed behavior b1."
+    },
+    {
+      "candidate": "c11",
+      "reason": "A security review checklist for maintainers, not a concrete checkable user promise."
+    },
+    {
+      "candidate": "c13",
+      "reason": "Guidance warning about untrusted snapshots; describes application responsibility, not SDK behavior to verify."
+    },
+    {
+      "candidate": "c14",
+      "reason": "Marketing summary of sandbox agents; concrete behavior covered by sandbox claims."
+    },
+    {
+      "candidate": "c15",
+      "reason": "Navigation advice pointing to the sandbox quickstart, not a checkable claim."
+    },
+    {
+      "candidate": "c16",
+      "reason": "Navigation table row, not a checkable claim."
+    },
+    {
+      "candidate": "c17",
+      "reason": "Generated llms-full index link description, not a user promise."
+    },
+    {
+      "candidate": "c19",
+      "reason": "Navigation advice on when to use a plain Agent versus a sandbox agent."
+    },
+    {
+      "candidate": "c23",
+      "reason": "Not traced in this audit; tool_execution guardrail ordering was not examined, so no verdict is given."
+    },
+    {
+      "candidate": "c24",
+      "reason": "Needs_approval callable behavior is covered indirectly by the MCP and shell approval claims; this sentence was not traced separately."
+    },
+    {
+      "candidate": "c25",
+      "reason": "Sticky-approval semantics of always_approve/always_reject were not traced in this audit; no verdict is given."
+    },
+    {
+      "candidate": "c28",
+      "reason": "Experimental hosted-agent websocket integration with a version requirement on openai[realtime]; not traced in this audit."
+    },
+    {
+      "candidate": "c29",
+      "reason": "Model timeout and retry classification was not traced in this audit; no verdict is given."
+    },
+    {
+      "candidate": "c36",
+      "reason": "Integration-test harness documentation for contributors, not a user-facing promise."
+    },
+    {
+      "candidate": "c37",
+      "reason": "Integration-test harness documentation for contributors, not a user-facing promise."
+    },
+    {
+      "candidate": "c38",
+      "reason": "Internal contributor reference under .agents, not a user-facing promise."
+    }
+  ],
+  "notes": [
+    {
+      "n": "22",
+      "claim": "The EncryptedSession wrapper accepts unencrypted items.",
+      "verdict": "VERIFIED",
+      "severity": "low",
+      "explanation": "_unwrap returns None for non-envelope items and get_items drops them; the sentence contradicts the class docstring and behaviour.",
+      "user_impact": "The code skips plaintext records on read rather than accepting them, so injected plaintext rows do not reach the agent. A reader may overestimate the exposure, or expect legacy plaintext history to still load after wrapping a store. The completeness/order caveat still holds.",
+      "note": "Doc wording is loose, but the code skips unencrypted items and the completeness/order caveat holds, so the practical impact is minimal and the gap is immaterial.",
+      "source": {
+        "file": "docs/sessions/index.md",
+        "line_start": 506,
+        "quote": "does not verify the completeness or order of conversation history and accepts unencrypted items"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/extensions/memory/encrypt_session.py",
+          "line_start": 123,
+          "quote": "Only authenticated, unexpired encrypted envelopes are returned as history.",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/extensions/memory/encrypt_session.py:123",
+            "file_sha256": "f1a61b3ec913a9c4e8385a8a2b64e87e7bd9f6d0a315cae2fc0f4533ebaae5fd"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/extensions/memory/encrypt_session.py",
+          "line_start": 326,
+          "quote": "if not _is_encrypted_envelope(item):",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/extensions/memory/encrypt_session.py:326",
+            "file_sha256": "f1a61b3ec913a9c4e8385a8a2b64e87e7bd9f6d0a315cae2fc0f4533ebaae5fd"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "downgrade",
+        "reason": "Doc wording is loose, but the code skips unencrypted items and the completeness/order caveat holds, so the practical impact is minimal and the gap is immaterial.",
+        "severity": null,
+        "evidence": [],
+        "at": "2026-10-22T21:44:23.381Z"
+      },
+      "receipt": "rcpt_9678a3907e27",
+      "original_verdict": "PARTIAL"
+    },
+    {
+      "n": "b1",
+      "behavior": "Sandbox memory generation stores model-written summaries of agent rollouts and tool outputs; secret redaction relies only on a prompt instruction to the LLM, with no code-level scrubbing before memory files are written.",
+      "signal": null,
+      "severity": "low",
+      "user_impact": "Users enabling sandbox memory may assume credentials seen during runs are never persisted. Redaction is best-effort model behaviour, so tokens or passwords from tool output can end up in stored memory files.",
+      "docs_searched": "docs/sandbox/memory.md (no mention of secrets, redaction or credentials), docs/sandbox/guide.md, README.md.",
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/sandbox/memory/prompts/memory_consolidation_prompt.md",
+          "line_start": 45,
+          "quote": "- Redact secrets: never store tokens/keys/passwords; replace with [REDACTED_SECRET].",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/sandbox/memory/prompts/memory_consolidation_prompt.md:45",
+            "file_sha256": "720c50b770e688ae1939cde90d23b3447c44399b96baa50286d47765c0ce80a3"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/sandbox/memory/prompts/rollout_extraction_prompt.md",
+          "line_start": 23,
+          "quote": "- Redact secrets: never store tokens/keys/passwords; replace with [REDACTED_SECRET].",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/sandbox/memory/prompts/rollout_extraction_prompt.md:23",
+            "file_sha256": "4b315040afad8b9991d86ed6cef50dafda667f672abbbfb9bfe2c2d637870f0b"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "downgrade",
+        "reason": "The prompts show redaction is requested and the behavior is a speculative, best-effort LLM limitation of an opt-in feature, which makes it an immaterial note.",
+        "severity": null,
+        "evidence": [],
+        "at": "2026-10-22T21:44:24.356Z"
+      },
+      "receipt": "rcpt_6d32820149f9",
+      "note": "The prompts show redaction is requested and the behavior is a speculative, best-effort LLM limitation of an opt-in feature, which makes it an immaterial note."
+    }
+  ],
+  "retracted": [],
+  "raw_claims": [
+    {
+      "n": "1",
+      "claim": "Local ShellTool and ApplyPatchTool default to needs_approval=False.",
+      "verdict": "FALSE",
+      "severity": "medium",
+      "explanation": "ApplyPatchTool defaults to False, but ShellTool's dataclass default is True, contradicting the doc for ShellTool.",
+      "user_impact": "A reader believes ShellTool runs without approval unless they opt in. In the code ShellTool defaults to needs_approval=True, so runs pause with interruptions unless the user sets False. Hosted ShellTool also raises UserError unless needs_approval=False is passed explicitly. ApplyPatchTool does default to False.",
+      "note": null,
+      "source": {
+        "file": "docs/tools.md",
+        "line_start": 254,
+        "quote": "Local `ShellTool` and `ApplyPatchTool` default to `needs_approval=False`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/tool.py",
+          "line_start": 1498,
+          "quote": "needs_approval: bool | ShellApprovalFunction = True",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/tool.py:1498",
+            "file_sha256": "71c110bf3c167816350d7f15f885827a73cb579ae6202965c90fa739d07929a2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/tool.py",
+          "line_start": 1553,
+          "quote": "needs_approval: bool | ApplyPatchApprovalFunction = False",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/tool.py:1553",
+            "file_sha256": "71c110bf3c167816350d7f15f885827a73cb579ae6202965c90fa739d07929a2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/tool.py",
+          "line_start": 1535,
+          "quote": "if self.needs_approval is not False or self.on_approval is not None:",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/tool.py:1535",
+            "file_sha256": "71c110bf3c167816350d7f15f885827a73cb579ae6202965c90fa739d07929a2"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "Docs say local ShellTool defaults to needs_approval=False but code defaults to True.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/agents/tool.py",
+            "line_start": 1498,
+            "quote": "needs_approval: bool | ShellApprovalFunction = True",
+            "checked": {
+              "ok": true,
+              "where": "src/agents/tool.py:1498",
+              "file_sha256": "71c110bf3c167816350d7f15f885827a73cb579ae6202965c90fa739d07929a2"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:44:18.578Z"
+      },
+      "receipt": "rcpt_6a2c37391eb1"
+    },
+    {
+      "n": "2",
+      "claim": "For local ShellTool and ApplyPatchTool, approval is opt-in: needs_approval defaults to False.",
+      "verdict": "FALSE",
+      "severity": "medium",
+      "explanation": "The same ShellTool default of True contradicts the stated opt-in default.",
+      "user_impact": "Approval is on by default for ShellTool in code, not opt-in. A user who adds only on_approval or expects automatic execution gets a paused run, and hosted ShellTool construction without needs_approval=False raises.",
+      "note": null,
+      "source": {
+        "file": "docs/human_in_the_loop.md",
+        "line_start": 45,
+        "quote": "approval is opt-in: `needs_approval` defaults to `False`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/tool.py",
+          "line_start": 1498,
+          "quote": "needs_approval: bool | ShellApprovalFunction = True",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/tool.py:1498",
+            "file_sha256": "71c110bf3c167816350d7f15f885827a73cb579ae6202965c90fa739d07929a2"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "Same contradiction: ShellTool approval is on by default, not opt-in.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/agents/tool.py",
+            "line_start": 1498,
+            "quote": "needs_approval: bool | ShellApprovalFunction = True",
+            "checked": {
+              "ok": true,
+              "where": "src/agents/tool.py:1498",
+              "file_sha256": "71c110bf3c167816350d7f15f885827a73cb579ae6202965c90fa739d07929a2"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:44:19.739Z"
+      },
+      "receipt": "rcpt_366c084de881"
+    },
+    {
+      "n": "3",
+      "claim": "By default trace_include_sensitive_data is True, and OPENAI_AGENTS_TRACE_INCLUDE_SENSITIVE_DATA sets the default.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default is \"true\"; 1/true/yes/on count as true.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/tracing.md",
+        "line_start": 151,
+        "quote": "By default, `trace_include_sensitive_data` is `True`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/run_config.py",
+          "line_start": 55,
+          "quote": "val = os.getenv(\"OPENAI_AGENTS_TRACE_INCLUDE_SENSITIVE_DATA\", \"true\")",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/run_config.py:55",
+            "file_sha256": "07a9d6cd57b3c4b3885cf7d6a58b7e24d051b75f4416ed67a3aa604b3eada920"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_47a41dfa370d"
+    },
+    {
+      "n": "4",
+      "claim": "The SDK uses OPENAI_API_KEY for LLM requests and tracing by default.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The tracing exporter reads OPENAI_API_KEY when no key is supplied; the OpenAI client does likewise.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/config.md",
+        "line_start": 36,
+        "quote": "By default, the SDK uses the `OPENAI_API_KEY` environment variable for LLM requests and tracing."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/tracing/processors.py",
+          "line_start": 113,
+          "quote": "api_key = os.environ.get(\"OPENAI_API_KEY\")",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/tracing/processors.py:113",
+            "file_sha256": "510ccad6e22356c9544277324e2c94eae2d8535582972cd8c3d84616f4915500"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_450c04985d75"
+    },
+    {
+      "n": "5",
+      "claim": "By default UnixLocalSandboxClient starts every command environment from the complete host process environment.",
+      "verdict": "FALSE",
+      "severity": "medium",
+      "explanation": "With the default False, the client builds a frozenset from the built-in allowlist and filters os.environ to it; full inheritance only happens when True is passed.",
+      "user_impact": "The constructor default is inherit_host_environment=False, so by default only a small allowlist (PATH, LANG, SSL_CERT_FILE, ...) reaches commands. A user following the docs who relies on host variables such as proxy settings or tool credentials being present will find them missing; a reviewer reading the docs will also wrongly assume the default exposes all host secrets to commands.",
+      "note": null,
+      "source": {
+        "file": "docs/sandbox/clients.md",
+        "line_start": 44,
+        "quote": "By default, `UnixLocalSandboxClient` starts every command environment from the complete host process environment."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/sandbox/sandboxes/unix_local.py",
+          "line_start": 1539,
+          "quote": "inherit_host_environment: bool = False,",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/sandbox/sandboxes/unix_local.py:1539",
+            "file_sha256": "be228d5bfeb91d6872a68e96fbf84a7f88793bf3666290976886189589b14c3b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/sandbox/sandboxes/unix_local.py",
+          "line_start": 1553,
+          "quote": "self._host_environment_allowlist = frozenset(",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/sandbox/sandboxes/unix_local.py:1553",
+            "file_sha256": "be228d5bfeb91d6872a68e96fbf84a7f88793bf3666290976886189589b14c3b"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "Constructor default inherit_host_environment=False contradicts the doc's complete-inheritance default.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/agents/sandbox/sandboxes/unix_local.py",
+            "line_start": 1539,
+            "quote": "inherit_host_environment: bool = False,",
+            "checked": {
+              "ok": true,
+              "where": "src/agents/sandbox/sandboxes/unix_local.py:1539",
+              "file_sha256": "be228d5bfeb91d6872a68e96fbf84a7f88793bf3666290976886189589b14c3b"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:44:20.975Z"
+      },
+      "receipt": "rcpt_073267c45231"
+    },
+    {
+      "n": "6",
+      "claim": "With inherit_host_environment=False and no allowlist, the SDK allows PATH, LANG, LC_*, TZ, TERM, TMPDIR, SSL_CERT_FILE, SSL_CERT_DIR, REQUESTS_CA_BUNDLE, NODE_EXTRA_CA_CERTS, UV_PYTHON, NO_COLOR, FORCE_COLOR, CI.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The built-in allowlist matches the documented names and a custom allowlist with inherit=True raises ValueError.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/sandbox/clients.md",
+        "line_start": 55,
+        "quote": "When `inherit_host_environment=False` and `host_environment_allowlist` is omitted, the SDK allows `PATH`, `LANG`"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/sandbox/sandboxes/unix_local.py",
+          "line_start": 104,
+          "quote": "\"NODE_EXTRA_CA_CERTS\",",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/sandbox/sandboxes/unix_local.py:104",
+            "file_sha256": "be228d5bfeb91d6872a68e96fbf84a7f88793bf3666290976886189589b14c3b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/sandbox/sandboxes/unix_local.py",
+          "line_start": 1542,
+          "quote": "if inherit_host_environment and host_environment_allowlist is not None:",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/sandbox/sandboxes/unix_local.py:1542",
+            "file_sha256": "be228d5bfeb91d6872a68e96fbf84a7f88793bf3666290976886189589b14c3b"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_ef652c330741"
+    },
+    {
+      "n": "7",
+      "claim": "Codex stream limit: valid range 65536 to 67108864, default 8388608, via codex_subprocess_stream_limit_bytes or env var.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Constants equal 8388608, 65536 and 67108864; values outside the range raise UserError.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/tools.md",
+        "line_start": 972,
+        "quote": "Valid range is `65536` to `67108864`; default is `8388608`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/extensions/experimental/codex/exec.py",
+          "line_start": 20,
+          "quote": "_DEFAULT_SUBPROCESS_STREAM_LIMIT_BYTES = 8 * 1024 * 1024",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/extensions/experimental/codex/exec.py:20",
+            "file_sha256": "e02df968a30a488c18563bc4e93095e6ad72406105799cd701240abd3bf97a95"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/extensions/experimental/codex/exec.py",
+          "line_start": 21,
+          "quote": "_MIN_SUBPROCESS_STREAM_LIMIT_BYTES = 64 * 1024",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/extensions/experimental/codex/exec.py:21",
+            "file_sha256": "e02df968a30a488c18563bc4e93095e6ad72406105799cd701240abd3bf97a95"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/extensions/experimental/codex/exec.py",
+          "line_start": 22,
+          "quote": "_MAX_SUBPROCESS_STREAM_LIMIT_BYTES = 64 * 1024 * 1024",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/extensions/experimental/codex/exec.py:22",
+            "file_sha256": "e02df968a30a488c18563bc4e93095e6ad72406105799cd701240abd3bf97a95"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_aad6dec75892"
+    },
+    {
+      "n": "8",
+      "claim": "max_raw_memories_for_consolidation defaults to 256.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default is 256 and consolidation keeps the first N items.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/sandbox/memory.md",
+        "line_start": 94,
+        "quote": "`max_raw_memories_for_consolidation` (defaults to 256)"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/sandbox/config.py",
+          "line_start": 45,
+          "quote": "max_raw_memories_for_consolidation: int = 256",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/sandbox/config.py:45",
+            "file_sha256": "b133653523cbdd4b96f2b54f840550b1949f79050dcfa024e45b02bb123965a9"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/sandbox/memory/storage.py",
+          "line_start": 131,
+          "quote": "selected = current_items[:max_raw_memories_for_consolidation]",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/sandbox/memory/storage.py:131",
+            "file_sha256": "75fe67c6394c8250e5515f413cabf290fa4321866501f78029ab8981c629d64f"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_3e47c711ab8a"
+    },
+    {
+      "n": "9",
+      "claim": "Memory reads have live_update enabled by default.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "MemoryReadConfig.live_update defaults to True.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/sandbox/memory.md",
+        "line_start": 49,
+        "quote": "By default, memory reads have `live_update` enabled"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/sandbox/config.py",
+          "line_start": 138,
+          "quote": "live_update: bool = True",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/sandbox/config.py:138",
+            "file_sha256": "b133653523cbdd4b96f2b54f840550b1949f79050dcfa024e45b02bb123965a9"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_b057c19ebc4b"
+    },
+    {
+      "n": "10",
+      "claim": "By default OpenAI Responses API requests use HTTP transport; websocket is opt-in.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default is \"http\"; websocket only via use_responses_websocket or set_default_openai_responses_transport.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/models/index.md",
+        "line_start": 179,
+        "quote": "By default, OpenAI Responses API requests use HTTP transport."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/models/_openai_shared.py",
+          "line_start": 13,
+          "quote": "_default_openai_responses_transport: OpenAIResponsesTransport = \"http\"",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/models/_openai_shared.py:13",
+            "file_sha256": "d4895d4c4c8d4b8eabfd9274a0767a96e4ce60a4fb90f587a75a9422d158cc85"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/models/openai_provider.py",
+          "line_start": 113,
+          "quote": "if use_responses_websocket is not None:",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/models/openai_provider.py:113",
+            "file_sha256": "189b421c1507544238a5de40cfc2f603fa3d2452f30a9b4accba06183b13e455"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_139a06435db8"
+    },
+    {
+      "n": "11",
+      "claim": "The SDK defines two loggers (openai.agents and openai.agents.tracing) and does not attach handlers by default.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The only addHandler call is inside the opt-in enable_verbose_stdout_logging().",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/config.md",
+        "line_start": 205,
+        "quote": "The SDK defines two Python loggers (`openai.agents` and `openai.agents.tracing`) and does not attach handlers by default."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/logger.py",
+          "line_start": 7,
+          "quote": "logger = logging.getLogger(\"openai.agents\")",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/logger.py:7",
+            "file_sha256": "4b53b754ec5b629d6c9b4e28e652ca827ade9e47e076d33ecf14c098c24136a0"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/tracing/logger.py",
+          "line_start": 3,
+          "quote": "logger = logging.getLogger(\"openai.agents.tracing\")",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/tracing/logger.py:3",
+            "file_sha256": "2782940d14866bbc795157d4c167be81b2b0a1aabc01e11346a90fb7742fb468"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/__init__.py",
+          "line_start": 365,
+          "quote": "logger.addHandler(_verbose_stdout_handler)",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/__init__.py:365",
+            "file_sha256": "3877fa1f1126020413a17a03015acf13f1f52d77eeaadf87505f54ecbd40ab15"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_deba62bebe32"
+    },
+    {
+      "n": "12",
+      "claim": "Function tool timeout default behavior is timeout_behavior=\"error_as_result\", returning a model-visible message.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default is error_as_result; raise_exception is the only branch that raises.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/tools.md",
+        "line_start": 614,
+        "quote": "the default behavior is `timeout_behavior=\"error_as_result\"`"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/tool.py",
+          "line_start": 518,
+          "quote": "timeout_behavior: ToolTimeoutBehavior = \"error_as_result\"",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/tool.py:518",
+            "file_sha256": "71c110bf3c167816350d7f15f885827a73cb579ae6202965c90fa739d07929a2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/tool.py",
+          "line_start": 2318,
+          "quote": "if function_tool.timeout_behavior == \"raise_exception\":",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/tool.py:2318",
+            "file_sha256": "71c110bf3c167816350d7f15f885827a73cb579ae6202965c90fa739d07929a2"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_88ccd4aec3b2"
+    },
+    {
+      "n": "13",
+      "claim": "AdvancedSQLiteSession logger parameter defaults to the module logger.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Falls back to logging.getLogger(__name__).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/sessions/advanced_sqlite_session.md",
+        "line_start": 71,
+        "quote": "`logger` (logging.Logger | None): Custom logger for the session. Defaults to module logger"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/extensions/memory/advanced_sqlite_session.py",
+          "line_start": 102,
+          "quote": "self._logger = logger if logger is not None else logging.getLogger(__name__)",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/extensions/memory/advanced_sqlite_session.py:102",
+            "file_sha256": "85c5832dd56674ef7bb653e1fd3c313ed328d36c01218972a66863631b596ff9"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_4b72d9ba2c9d"
+    },
+    {
+      "n": "14",
+      "claim": "The tracing API key is only included in serialized RunState when the caller passes include_tracing_api_key=True (opt-in).",
+      "verdict": "PARTIAL",
+      "severity": "high",
+      "explanation": "to_string() and the trace layer exclude the key by default, but RunState.to_json() includes it by default, and to_json is the method the docs name for storing state.",
+      "user_impact": "RunState.to_json() defaults include_tracing_api_key to True, so a plain state.to_json() writes the raw tracing API key into the snapshot. Users who store or send snapshots to clients, trusting that the key is only included on opt-in, will persist or expose the secret. to_string() and the trace layer default to False, so the behaviour is inconsistent.",
+      "note": null,
+      "source": {
+        "file": "docs/human_in_the_loop.md",
+        "line_start": 230,
+        "quote": "`include_tracing_api_key=True`: Include the tracing API key in the serialized trace payload when you need resumed work to keep exporting traces with the same credentials."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/run_state.py",
+          "line_start": 1904,
+          "quote": "include_tracing_api_key: bool = True,",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/run_state.py:1904",
+            "file_sha256": "1975da8075f958009477c6e21843e13dbc696f2646ffcb05606dc9bb9fbdd147"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/run_state.py",
+          "line_start": 2276,
+          "quote": "include_tracing_api_key: bool = False,",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/run_state.py:2276",
+            "file_sha256": "1975da8075f958009477c6e21843e13dbc696f2646ffcb05606dc9bb9fbdd147"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/tracing/traces.py",
+          "line_start": 175,
+          "quote": "include_tracing_api_key: When True, include the tracing API key. Defaults to False",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/tracing/traces.py:175",
+            "file_sha256": "ae5b5585a2c1c2a285d99722543395d6806b01e60522f3bf7ff60456e40d060d"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "to_json defaults include_tracing_api_key to True, so the secret is persisted by default, contrary to the opt-in wording; high severity is defensible.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/agents/run_state.py",
+            "line_start": 1904,
+            "quote": "include_tracing_api_key: bool = True,",
+            "checked": {
+              "ok": true,
+              "where": "src/agents/run_state.py:1904",
+              "file_sha256": "1975da8075f958009477c6e21843e13dbc696f2646ffcb05606dc9bb9fbdd147"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:44:22.186Z"
+      },
+      "receipt": "rcpt_b3087d5e6fd8"
+    },
+    {
+      "n": "15",
+      "claim": "MCP require_approval: True requires approval for all tools and False for none (\"always\"/\"never\" equivalents).",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Booleans pass through; \"always\"/\"never\" map to True/False; the policy is applied to every tool.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/mcp.md",
+        "line_start": 268,
+        "quote": "`True` requires approval for all tools, and `False` requires approval for none"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/mcp/server.py",
+          "line_start": 753,
+          "quote": "if value == \"always\":",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/mcp/server.py:753",
+            "file_sha256": "f2596229ed74af0c879e966c695f8095813d6e53ee083db22be551f8d8c0506b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/mcp/server.py",
+          "line_start": 839,
+          "quote": "if isinstance(require_approval, bool):",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/mcp/server.py:839",
+            "file_sha256": "f2596229ed74af0c879e966c695f8095813d6e53ee083db22be551f8d8c0506b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/mcp/server.py",
+          "line_start": 875,
+          "quote": "return bool(policy)",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/mcp/server.py:875",
+            "file_sha256": "f2596229ed74af0c879e966c695f8095813d6e53ee083db22be551f8d8c0506b"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_a5b24e5ef077"
+    },
+    {
+      "n": "16",
+      "claim": "MCP require_approval may be a sync or async callable (run_context, agent, tool) -> bool; True requires approval.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The callable is invoked with those three args, awaited if needed and coerced to bool. If no agent is available it fails closed (True).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/mcp.md",
+        "line_start": 271,
+        "quote": "A synchronous or asynchronous callable with the signature `(run_context, agent, tool) -> bool | Awaitable[bool]`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/mcp/server.py",
+          "line_start": 865,
+          "quote": "result = policy(run_context, agent, tool)",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/mcp/server.py:865",
+            "file_sha256": "f2596229ed74af0c879e966c695f8095813d6e53ee083db22be551f8d8c0506b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/mcp/server.py",
+          "line_start": 866,
+          "quote": "if inspect.isawaitable(result):",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/mcp/server.py:866",
+            "file_sha256": "f2596229ed74af0c879e966c695f8095813d6e53ee083db22be551f8d8c0506b"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_6e3af3a470b4"
+    },
+    {
+      "n": "17",
+      "claim": "Python 3.10 or newer is required; voice, redis extras exist.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Package metadata matches; voice and redis extras are declared.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 27,
+        "quote": "Python 3.10 or newer required"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "pyproject.toml",
+          "line_start": 6,
+          "quote": "requires-python = \">=3.10\"",
+          "checked": {
+            "ok": true,
+            "where": "pyproject.toml:6",
+            "file_sha256": "887c25d93dd306236f7f066433c44996314eda1406c68a15149678bce0d58c97"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "pyproject.toml",
+          "line_start": 44,
+          "quote": "voice = [\"numpy>=2.2.0, <3; python_version>='3.10'\"",
+          "checked": {
+            "ok": true,
+            "where": "pyproject.toml:44",
+            "file_sha256": "887c25d93dd306236f7f066433c44996314eda1406c68a15149678bce0d58c97"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "pyproject.toml",
+          "line_start": 54,
+          "quote": "redis = [\"redis>=7\"]",
+          "checked": {
+            "ok": true,
+            "where": "pyproject.toml:54",
+            "file_sha256": "887c25d93dd306236f7f066433c44996314eda1406c68a15149678bce0d58c97"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_a2373d68df3a"
+    },
+    {
+      "n": "18",
+      "claim": "UnixLocalSandboxClient is supported on macOS and Linux, not on Windows; Docker extra exists.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The module refuses to import on Windows; the docker extra is declared.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 77,
+        "quote": "This example uses `UnixLocalSandboxClient`, which is supported on macOS and Linux."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/sandbox/sandboxes/unix_local.py",
+          "line_start": 3,
+          "quote": "if sys.platform == \"win32\":  # pragma: no cover",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/sandbox/sandboxes/unix_local.py:3",
+            "file_sha256": "be228d5bfeb91d6872a68e96fbf84a7f88793bf3666290976886189589b14c3b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "pyproject.toml",
+          "line_start": 62,
+          "quote": "docker = [\"docker>=6.1\"]",
+          "checked": {
+            "ok": true,
+            "where": "pyproject.toml:62",
+            "file_sha256": "887c25d93dd306236f7f066433c44996314eda1406c68a15149678bce0d58c97"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_36e525e94ded"
+    },
+    {
+      "n": "19",
+      "claim": "On Linux UnixLocalSandboxClient adds no OS-level confinement; on macOS it applies sandbox-exec filesystem restrictions without network isolation.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "sandbox-exec wrapping happens only on darwin; other platforms get no confinement, matching the warning.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/sandbox_agents.md",
+        "line_start": 33,
+        "quote": "On Linux, `UnixLocalSandboxClient` adds no OS-level confinement to commands."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/sandbox/sandboxes/unix_local.py",
+          "line_start": 752,
+          "quote": "if sys.platform != \"darwin\":",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/sandbox/sandboxes/unix_local.py:752",
+            "file_sha256": "be228d5bfeb91d6872a68e96fbf84a7f88793bf3666290976886189589b14c3b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/sandbox/sandboxes/unix_local.py",
+          "line_start": 755,
+          "quote": "sandbox_exec = shutil.which(\"sandbox-exec\")",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/sandbox/sandboxes/unix_local.py:755",
+            "file_sha256": "be228d5bfeb91d6872a68e96fbf84a7f88793bf3666290976886189589b14c3b"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_64429266c230"
+    },
+    {
+      "n": "20",
+      "claim": "Realtime agents are built with gpt-realtime-2.1.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The default realtime model matches.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 14,
+        "quote": "Build powerful voice agents with `gpt-realtime-2.1` and full agent features"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/realtime/openai_realtime.py",
+          "line_start": 168,
+          "quote": "DEFAULT_REALTIME_MODEL = \"gpt-realtime-2.1\"",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/realtime/openai_realtime.py:168",
+            "file_sha256": "d0a94f682439876df35c0bb3b8953c2a2d44a869264a5420d42ee849fb97b550"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_f0ab01e5748c"
+    },
+    {
+      "n": "21",
+      "claim": "SQLiteSession skips rows whose message_data cannot be decoded as JSON without an integrity error.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Undecodable rows are silently skipped.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/sessions/index.md",
+        "line_start": 504,
+        "quote": "Rows whose `message_data` cannot be decoded as JSON are skipped without an integrity error."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/memory/sqlite_session.py",
+          "line_start": 304,
+          "quote": "except (json.JSONDecodeError, TypeError):",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/memory/sqlite_session.py:304",
+            "file_sha256": "7a229344eef38f3c805d43274589f25c7bde2e64aa33717fdab3b38b2debeabb"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/memory/sqlite_session.py",
+          "line_start": 305,
+          "quote": "# Skip invalid JSON entries",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/memory/sqlite_session.py:305",
+            "file_sha256": "7a229344eef38f3c805d43274589f25c7bde2e64aa33717fdab3b38b2debeabb"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_2643c6406520"
+    },
+    {
+      "n": "22",
+      "claim": "The EncryptedSession wrapper accepts unencrypted items.",
+      "verdict": "PARTIAL",
+      "severity": "low",
+      "explanation": "_unwrap returns None for non-envelope items and get_items drops them; the sentence contradicts the class docstring and behaviour.",
+      "user_impact": "The code skips plaintext records on read rather than accepting them, so injected plaintext rows do not reach the agent. A reader may overestimate the exposure, or expect legacy plaintext history to still load after wrapping a store. The completeness/order caveat still holds.",
+      "note": null,
+      "source": {
+        "file": "docs/sessions/index.md",
+        "line_start": 506,
+        "quote": "does not verify the completeness or order of conversation history and accepts unencrypted items"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/extensions/memory/encrypt_session.py",
+          "line_start": 123,
+          "quote": "Only authenticated, unexpired encrypted envelopes are returned as history.",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/extensions/memory/encrypt_session.py:123",
+            "file_sha256": "f1a61b3ec913a9c4e8385a8a2b64e87e7bd9f6d0a315cae2fc0f4533ebaae5fd"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/extensions/memory/encrypt_session.py",
+          "line_start": 326,
+          "quote": "if not _is_encrypted_envelope(item):",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/extensions/memory/encrypt_session.py:326",
+            "file_sha256": "f1a61b3ec913a9c4e8385a8a2b64e87e7bd9f6d0a315cae2fc0f4533ebaae5fd"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "downgrade",
+        "reason": "Doc wording is loose, but the code skips unencrypted items and the completeness/order caveat holds, so the practical impact is minimal and the gap is immaterial.",
+        "severity": null,
+        "evidence": [],
+        "at": "2026-10-22T21:44:23.381Z"
+      },
+      "receipt": "rcpt_9678a3907e27"
+    },
+    {
+      "n": "23",
+      "claim": "Pass max_turns=None to disable the turn limit; otherwise MaxTurnsExceeded is raised.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The limit check is skipped when max_turns is None; the default is 10.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/running_agents.md",
+        "line_start": 42,
+        "quote": "Pass `max_turns=None` to disable this turn limit."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/run_internal/run_loop.py",
+          "line_start": 1779,
+          "quote": "if max_turns is not None and current_turn > max_turns:",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/run_internal/run_loop.py:1779",
+            "file_sha256": "aa9d6d92be26128a4a708843e65a93fc8aee3d74fa3798bdcf2ee3e620b37613"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/run.py",
+          "line_start": 287,
+          "quote": "max_turns: int | None = DEFAULT_MAX_TURNS,",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/run.py:287",
+            "file_sha256": "3cdd652446db22646f24dd8e283dc39d54724a7a76822856c17e39a8f549d997"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_da7f29731d1d"
+    },
+    {
+      "n": "24",
+      "claim": "Derived wrappers share the same app context, approval state and usage; nested as_tool runs may attach a different tool_input but get no isolated copy of app state.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The fork reuses the same context object and usage, shares tool state (approvals) and sets only tool_input.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/context.md",
+        "line_start": 30,
+        "quote": "Within a single run, derived wrappers share the same underlying app context, approval state, and usage tracking."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/agents/run_context.py",
+          "line_start": 1699,
+          "quote": "fork = RunContextWrapper(context=self.context)",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/run_context.py:1699",
+            "file_sha256": "80046edd13783cd8c62ebe6f7bde966331b6f87234aa7a3c1f04b4e7def4da7b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/run_context.py",
+          "line_start": 1700,
+          "quote": "fork.usage = self.usage",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/run_context.py:1700",
+            "file_sha256": "80046edd13783cd8c62ebe6f7bde966331b6f87234aa7a3c1f04b4e7def4da7b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/agents/run_context.py",
+          "line_start": 1703,
+          "quote": "fork.tool_input = tool_input",
+          "checked": {
+            "ok": true,
+            "where": "src/agents/run_context.py:1703",
+            "file_sha256": "80046edd13783cd8c62ebe6f7bde966331b6f87234aa7a3c1f04b4e7def4da7b"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_d5a566d4bb5e"
+    }
+  ],
+  "totals": {
+    "claims": 24,
+    "VERIFIED": 20,
+    "PARTIAL": 1,
+    "FALSE": 3,
+    "UNVERIFIABLE": 0,
+    "behaviors": 0,
+    "downgraded": 2,
+    "retracted": 0,
+    "rejected_citations": 1
+  }
+}

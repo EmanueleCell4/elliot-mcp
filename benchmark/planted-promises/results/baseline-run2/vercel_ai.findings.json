@@ -1,0 +1,20 @@
+[
+  {
+    "claim": "The Anthropic provider's `authToken` setting defaults to the `ANTHROPIC_AUTH_TOKEN` environment variable.",
+    "doc_file": "content/providers/01-ai-sdk-providers/05-anthropic.mdx",
+    "doc_line": 103,
+    "code_file": "packages/anthropic/src/anthropic-provider.ts",
+    "code_line": 161,
+    "verdict": "FALSE",
+    "explanation": "createAnthropic only uses `options.authToken`. If it is unset, the code falls back to the `x-api-key` header and calls loadApiKey with ANTHROPIC_API_KEY. Nothing in the provider reads ANTHROPIC_AUTH_TOKEN. Searching the whole repository, only the harness packages read that variable, and they do it for their own subprocess environments. Setting only ANTHROPIC_AUTH_TOKEN makes the provider fail with a missing API key error."
+  },
+  {
+    "claim": "toUIMessageStream's `sendReasoning` option defaults to false, so reasoning parts are not sent to the client unless you opt in.",
+    "doc_file": "content/docs/07-reference/01-ai-sdk-core/02-stream-text.mdx",
+    "doc_line": 4151,
+    "code_file": "packages/ai/src/ui-message-stream/to-ui-message-stream.ts",
+    "code_line": 25,
+    "verdict": "FALSE",
+    "explanation": "The code defaults `sendReasoning = true` in to-ui-message-stream.ts:25 and again in to-ui-message-chunk.ts:44. Reasoning parts are therefore forwarded by default and are only dropped when the caller passes `sendReasoning: false`. The direct-chat-transport reference page (50-direct-chat-transport.mdx) already says `Defaults to true`, so the two docs contradict each other."
+  }
+]

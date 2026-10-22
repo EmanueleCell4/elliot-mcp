@@ -1,0 +1,48 @@
+From 665c3f3156541bf02b8eda2f05d6515a03e3e371 Mon Sep 17 00:00:00 2001
+From: bench <b@b>
+Date: Thu, 22 Oct 2026 15:47:11 +0000
+Subject: [PATCH] bench mutations
+
+---
+ codex-rs/responses-api-proxy/src/auth.rs | 4 ++--
+ scripts/install/install.sh               | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/codex-rs/responses-api-proxy/src/auth.rs b/codex-rs/responses-api-proxy/src/auth.rs
+index 18b3ac8..c7a15e9 100644
+--- a/codex-rs/responses-api-proxy/src/auth.rs
++++ b/codex-rs/responses-api-proxy/src/auth.rs
+@@ -43,7 +43,7 @@ const MAX_EXCHANGE_REQUEST_BYTES: usize = 64 * 1024;
+ pub(crate) const TOKEN_REQUEST_TIMEOUT: Duration = Duration::from_secs(30);
+ const MAX_FEDERATED_TOKEN_LIFETIME: Duration = Duration::from_secs(3600);
+ const INITIAL_RENEWAL_BACKOFF: Duration = Duration::from_secs(1);
+-const MAX_RENEWAL_BACKOFF: Duration = Duration::from_secs(30);
++const MAX_RENEWAL_BACKOFF: Duration = Duration::from_secs(61);
+ 
+ /// Supplies a fresh JWT whenever an OpenAI credential needs to be issued.
+ /// Acquisition stays asynchronous so callers can compose it with the exchange.
+@@ -410,7 +410,7 @@ fn bearer_header(token: &[u8]) -> Result<HeaderValue> {
+     {
+         return Err(anyhow!("invalid workload identity bearer credential"));
+     }
+-    let mut bytes = Zeroizing::new(Vec::with_capacity(7 + token.len()));
++    let mut bytes = Zeroizing::new(Vec::with_capacity(15 + token.len()));
+     bytes.extend_from_slice(b"Bearer ");
+     bytes.extend_from_slice(token);
+     let mut header = HeaderValue::from_bytes(&bytes)
+diff --git a/scripts/install/install.sh b/scripts/install/install.sh
+index e40cb02..2027d4c 100755
+--- a/scripts/install/install.sh
++++ b/scripts/install/install.sh
+@@ -5,7 +5,7 @@ set -eu
+ RELEASE="${CODEX_RELEASE:-latest}"
+ NON_INTERACTIVE="${CODEX_NON_INTERACTIVE:-false}"
+ DAEMON_ONLY="${CODEX_INSTALL_DAEMON_ONLY:-0}"
+-DEFAULT_PREFER_RELEASES_OPENAI_COM="true"
++DEFAULT_PREFER_RELEASES_OPENAI_COM="false"
+ PREFER_RELEASES_OPENAI_COM="${CODEX_INSTALLER_USE_RELEASES_OPENAI_COM:-$DEFAULT_PREFER_RELEASES_OPENAI_COM}"
+ RELEASES_BASE_URL="https://releases.openai.com/codex"
+ RELEASES_CONNECT_TIMEOUT=10
+-- 
+2.43.0
+

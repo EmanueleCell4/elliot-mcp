@@ -1,0 +1,2935 @@
+{
+  "elliot": "0.5.0",
+  "id": "aud_e68164d6848e",
+  "root": "/home/claude/elliot-runs/bench/repos/openai_codex",
+  "project": "openai_codex",
+  "commit": "665c3f3156541bf02b8eda2f05d6515a03e3e371",
+  "date": "2026-10-22T15:47:11+00:00",
+  "dirty": true,
+  "remote": "https://github.com/openai/codex.git",
+  "tree_fingerprint": "58a2aee4e7988a25d45990a230991c02fb0c3abb339edb7047cfe11620eefec1",
+  "started_at": "2026-10-22T21:24:26.882Z",
+  "sources": [
+    {
+      "file": "README.md",
+      "lines": 82
+    },
+    {
+      "file": "SECURITY.md",
+      "lines": 18
+    },
+    {
+      "file": "codex-rs/docs/bazel.md",
+      "lines": 181
+    },
+    {
+      "file": "codex-rs/docs/protocol_v1.md",
+      "lines": 193
+    },
+    {
+      "file": "docs/agents_md.md",
+      "lines": 4
+    },
+    {
+      "file": "docs/authentication.md",
+      "lines": 4
+    },
+    {
+      "file": "docs/CLA.md",
+      "lines": 50
+    },
+    {
+      "file": "docs/config.md",
+      "lines": 16
+    },
+    {
+      "file": "docs/example-config.md",
+      "lines": 4
+    },
+    {
+      "file": "docs/exec.md",
+      "lines": 4
+    },
+    {
+      "file": "docs/execpolicy.md",
+      "lines": 4
+    },
+    {
+      "file": "docs/getting-started.md",
+      "lines": 4
+    },
+    {
+      "file": "docs/install.md",
+      "lines": 66
+    },
+    {
+      "file": "docs/open-source-fund.md",
+      "lines": 9
+    },
+    {
+      "file": "docs/sandbox.md",
+      "lines": 4
+    },
+    {
+      "file": "docs/skills.md",
+      "lines": 4
+    },
+    {
+      "file": "docs/slash_commands.md",
+      "lines": 4
+    },
+    {
+      "file": "sdk/python/docs/api-reference.md",
+      "lines": 421
+    },
+    {
+      "file": "sdk/python/docs/faq.md",
+      "lines": 170
+    },
+    {
+      "file": "sdk/python/docs/getting-started.md",
+      "lines": 172
+    },
+    {
+      "file": ".github/scripts/macos-signing/README.md",
+      "lines": 41
+    },
+    {
+      "file": ".github/workflows/README.md",
+      "lines": 38
+    },
+    {
+      "file": "codex-cli/scripts/README.md",
+      "lines": 24
+    },
+    {
+      "file": "codex-rs/ansi-escape/README.md",
+      "lines": 16
+    },
+    {
+      "file": "codex-rs/app-server-client/README.md",
+      "lines": 67
+    },
+    {
+      "file": "codex-rs/app-server-daemon/README.md",
+      "lines": 196
+    },
+    {
+      "file": "codex-rs/app-server-test-client/README.md",
+      "lines": 186
+    },
+    {
+      "file": "codex-rs/app-server/README.md",
+      "lines": 619
+    },
+    {
+      "file": "codex-rs/chatgpt/README.md",
+      "lines": 6
+    },
+    {
+      "file": "codex-rs/cloud-client/README.md",
+      "lines": 41
+    },
+    {
+      "file": "codex-rs/codex-api/README.md",
+      "lines": 31
+    },
+    {
+      "file": "codex-rs/codex-client/README.md",
+      "lines": 9
+    },
+    {
+      "file": "codex-rs/codex-mcp/README.md",
+      "lines": 38
+    },
+    {
+      "file": "codex-rs/config/src/loader/README.md",
+      "lines": 91
+    },
+    {
+      "file": "codex-rs/core/README.md",
+      "lines": 99
+    },
+    {
+      "file": "codex-rs/exec-server/README.md",
+      "lines": 562
+    },
+    {
+      "file": "codex-rs/exec-server/testing/README.md",
+      "lines": 6
+    },
+    {
+      "file": "codex-rs/execpolicy/README.md",
+      "lines": 98
+    },
+    {
+      "file": "codex-rs/ext/agent-message-board/README.md",
+      "lines": 55
+    },
+    {
+      "file": "codex-rs/file-search/README.md",
+      "lines": 6
+    },
+    {
+      "file": "codex-rs/git-utils/README.md",
+      "lines": 27
+    },
+    {
+      "file": "codex-rs/http-client/README.md",
+      "lines": 127
+    },
+    {
+      "file": "codex-rs/linux-sandbox/README.md",
+      "lines": 125
+    },
+    {
+      "file": "codex-rs/memories/README.md",
+      "lines": 158
+    },
+    {
+      "file": "codex-rs/mermaid/README.md",
+      "lines": 81
+    },
+    {
+      "file": "codex-rs/mxc-sandbox/README.md",
+      "lines": 101
+    },
+    {
+      "file": "codex-rs/network-proxy/README.md",
+      "lines": 286
+    },
+    {
+      "file": "codex-rs/otel/README.md",
+      "lines": 267
+    },
+    {
+      "file": "codex-rs/process-hardening/README.md",
+      "lines": 8
+    },
+    {
+      "file": "codex-rs/protocol/README.md",
+      "lines": 8
+    },
+    {
+      "file": "codex-rs/README.md",
+      "lines": 4
+    },
+    {
+      "file": "codex-rs/responses-api-proxy/npm/README.md",
+      "lines": 14
+    },
+    {
+      "file": "codex-rs/responses-api-proxy/README.md",
+      "lines": 199
+    },
+    {
+      "file": "codex-rs/rollout-trace/README.md",
+      "lines": 215
+    },
+    {
+      "file": "codex-rs/stdio-to-uds/README.md",
+      "lines": 21
+    },
+    {
+      "file": "codex-rs/tcp-tunnel/README.md",
+      "lines": 26
+    },
+    {
+      "file": "codex-rs/thread-manager-sample/README.md",
+      "lines": 28
+    },
+    {
+      "file": "codex-rs/thread-store/README.md",
+      "lines": 36
+    },
+    {
+      "file": "codex-rs/tools/README.md",
+      "lines": 75
+    },
+    {
+      "file": "codex-rs/user-verification/README.md",
+      "lines": 60
+    },
+    {
+      "file": "codex-rs/utils/cargo-bin/README.md",
+      "lines": 23
+    },
+    {
+      "file": "codex-rs/utils/pty/README.md",
+      "lines": 65
+    },
+    {
+      "file": "codex-rs/utils/stream-parser/README.md",
+      "lines": 98
+    },
+    {
+      "file": "codex-rs/utils/template/README.md",
+      "lines": 42
+    },
+    {
+      "file": "codex-rs/voice-host/README.md",
+      "lines": 107
+    },
+    {
+      "file": "scripts/codex_package/README.md",
+      "lines": 102
+    },
+    {
+      "file": "scripts/mcp_conformance/README.md",
+      "lines": 122
+    },
+    {
+      "file": "sdk/python-runtime/README.md",
+      "lines": 10
+    },
+    {
+      "file": "sdk/python/README.md",
+      "lines": 76
+    },
+    {
+      "file": "sdk/typescript/README.md",
+      "lines": 161
+    },
+    {
+      "file": "third_party/v8/README.md",
+      "lines": 138
+    },
+    {
+      "file": "third_party/voice/README.md",
+      "lines": 307
+    },
+    {
+      "file": "tools/argument-comment-lint/README.md",
+      "lines": 177
+    },
+    {
+      "file": ".github/actions/publish-dotslash/requirements.txt",
+      "lines": 112
+    },
+    {
+      "file": ".github/blob-size-allowlist.txt",
+      "lines": 12
+    },
+    {
+      "file": ".github/codex/labels/codex-attempt.md",
+      "lines": 10
+    },
+    {
+      "file": ".github/codex/labels/codex-review.md",
+      "lines": 8
+    },
+    {
+      "file": ".github/codex/labels/codex-rust-review.md",
+      "lines": 140
+    },
+    {
+      "file": ".github/codex/labels/codex-triage.md",
+      "lines": 8
+    },
+    {
+      "file": "codex-rs/collaboration-mode-templates/templates/default.md",
+      "lines": 20
+    }
+  ],
+  "focused": false,
+  "candidates": [
+    {
+      "id": "c1",
+      "file": "codex-rs/responses-api-proxy/README.md",
+      "line": 147,
+      "text": "- By default reads the API key from `stdin`. With `--github-oidc`, reads the GitHub OIDC request credential instead; see above.",
+      "risk": "high"
+    },
+    {
+      "id": "c2",
+      "file": "codex-rs/memories/write/templates/memories/consolidation.md",
+      "line": 45,
+      "text": "- Redact secrets: never store tokens/keys/passwords; replace with [REDACTED_SECRET].",
+      "risk": "high"
+    },
+    {
+      "id": "c3",
+      "file": "codex-rs/prompts/templates/permissions/approval_policy/on_request_rule_request_permission.md",
+      "line": 23,
+      "text": "Use full escalation only when sandboxed additional permissions cannot satisfy the task.",
+      "risk": "high"
+    },
+    {
+      "id": "c4",
+      "file": "codex-rs/skills/src/assets/samples/openai-docs/references/mcp-diagnostics.md",
+      "line": 27,
+      "text": "Only perform a local installation or configuration change when the user explicitly authorizes that change. Never request sandbox escalation, edit hosted configuration, install a dependency, or ask the user to restart a h",
+      "risk": "high"
+    },
+    {
+      "id": "c5",
+      "file": "codex-rs/docs/bazel.md",
+      "line": 170,
+      "text": "test itself uses Seatbelt (the sandbox does as well, and it cannot be nested).",
+      "risk": "high"
+    },
+    {
+      "id": "c6",
+      "file": "docs/install.md",
+      "line": 56,
+      "text": "The TUI records diagnostics in bounded local stores by default. Set `log_dir` explicitly to enable a plaintext TUI log for a run:",
+      "risk": "high"
+    },
+    {
+      "id": "c7",
+      "file": "codex-rs/app-server/README.md",
+      "line": 533,
+      "text": "cannot open a browser before initialization. Explicit opt-in is shared by gateway",
+      "risk": "high"
+    },
+    {
+      "id": "c8",
+      "file": "codex-rs/cloud-client/README.md",
+      "line": 10,
+      "text": "factory. This exception bypasses proxies to keep plaintext credentials local.",
+      "risk": "high"
+    },
+    {
+      "id": "c9",
+      "file": "codex-rs/core/README.md",
+      "line": 61,
+      "text": "for bubblewrap sandboxing because it cannot create the required user",
+      "risk": "high"
+    },
+    {
+      "id": "c10",
+      "file": "codex-rs/exec-server/README.md",
+      "line": 50,
+      "text": "Direct WebSocket listeners support app-server's opt-in auth flags, including `--ws-auth capability-token --ws-token-sha256 HEX`, token files, and signed bearer tokens; clients send `Authorization: Bearer TOKEN` on each c",
+      "risk": "high"
+    },
+    {
+      "id": "c11",
+      "file": "codex-rs/linux-sandbox/README.md",
+      "line": 27,
+      "text": "it cannot create the required user namespaces, so Codex rejects sandboxed shell",
+      "risk": "high"
+    },
+    {
+      "id": "c12",
+      "file": "codex-rs/linux-sandbox/README.md",
+      "line": 58,
+      "text": "- When bubblewrap is active, the filesystem is read-only by default via `--ro-bind / /`.",
+      "risk": "high"
+    },
+    {
+      "id": "c13",
+      "file": "codex-rs/responses-api-proxy/README.md",
+      "line": 33,
+      "text": "short-lived OpenAI credentials obtained through GitHub Actions OIDC. Other",
+      "risk": "high"
+    },
+    {
+      "id": "c14",
+      "file": "codex-rs/responses-api-proxy/README.md",
+      "line": 39,
+      "text": "**IMPORTANT:** `codex-responses-api-proxy` is designed to be run by a privileged user with access to `OPENAI_API_KEY` so that an unprivileged user cannot inspect or tamper with the process. Though if `--http-shutdown` is",
+      "risk": "high"
+    },
+    {
+      "id": "c15",
+      "file": "codex-rs/responses-api-proxy/README.md",
+      "line": 75,
+      "text": "the minted GitHub OIDC JWT or an OpenAI API key. The proxy needs that request",
+      "risk": "high"
+    },
+    {
+      "id": "c16",
+      "file": "codex-rs/responses-api-proxy/README.md",
+      "line": 141,
+      "text": "OIDC mode uses sensitive HTTP headers and zeroizes temporary credential",
+      "risk": "high"
+    },
+    {
+      "id": "c17",
+      "file": "codex-rs/responses-api-proxy/README.md",
+      "line": 168,
+      "text": "- Authentication is `Authorization: Bearer <key>` in API-key mode and `Authorization: Bearer <OpenAI access token>` in OIDC mode.",
+      "risk": "high"
+    },
+    {
+      "id": "c18",
+      "file": "codex-rs/rollout-trace/README.md",
+      "line": 3,
+      "text": "> **Privacy:** Rollout tracing is not telemetry. Codex does **not** upload or",
+      "risk": "high"
+    },
+    {
+      "id": "c19",
+      "file": "codex-rs/prompts/templates/guardian/classifier_instructions.md",
+      "line": 42,
+      "text": "- Do not assign `high` or `critical` to a user-requested deletion of a specific local path solely because it uses `rm -rf`. If a read-only check shows the target is missing, empty, or narrowly scoped, such as a single sm",
+      "risk": "high"
+    },
+    {
+      "id": "c20",
+      "file": "codex-rs/prompts/templates/guardian/policy.md",
+      "line": 4,
+      "text": "- No organization-specific code hosts, storage systems, or third-party SaaS destinations are trusted by default unless this config or read-only evidence clearly marks them as trusted.",
+      "risk": "high"
+    },
+    {
+      "id": "c21",
+      "file": "sdk/python/docs/api-reference.md",
+      "line": 6,
+      "text": "Thread starts default to `ApprovalMode.auto_review`; turn starts accept an optional `approval_mode` override.",
+      "risk": "default"
+    },
+    {
+      "id": "c22",
+      "file": "codex-rs/app-server/README.md",
+      "line": 151,
+      "text": "The host-owned HTTP `codex_apps` server uses Legacy by default in app-server and",
+      "risk": "default"
+    },
+    {
+      "id": "c23",
+      "file": "codex-rs/app-server/README.md",
+      "line": 246,
+      "text": "description is at most 4096 bytes. The UI obtains approval for that display",
+      "risk": "default"
+    },
+    {
+      "id": "c24",
+      "file": "codex-rs/network-proxy/README.md",
+      "line": 113,
+      "text": "`true` to enable it explicitly. The proxy requires `network.enabled = true` and rejects unknown",
+      "risk": "default"
+    },
+    {
+      "id": "c25",
+      "file": "codex-rs/otel/README.md",
+      "line": 129,
+      "text": "`final_answer`. The default is false, independent of `otel.log_user_prompt`;",
+      "risk": "default"
+    },
+    {
+      "id": "c26",
+      "file": "sdk/typescript/README.md",
+      "line": 13,
+      "text": "Requires Node.js 18+.",
+      "risk": "default"
+    },
+    {
+      "id": "c27",
+      "file": "sdk/typescript/README.md",
+      "line": 121,
+      "text": "By default, the Codex CLI inherits the Node.js process environment. Provide the optional `env` parameter when instantiating the",
+      "risk": "default"
+    },
+    {
+      "id": "c28",
+      "file": "third_party/voice/README.md",
+      "line": 197,
+      "text": "path-bearing imports are rejected. Native tests require Python 3.12, a C compiler",
+      "risk": "default"
+    },
+    {
+      "id": "c29",
+      "file": "codex-rs/skills/src/assets/samples/skill-creator/references/openai_yaml.md",
+      "line": 39,
+      "text": "- `interface.icon_large`: Path to a larger logo asset (relative to skill dir). Default to `./assets/` and place icons in the skill's `assets/` folder.",
+      "risk": "default"
+    },
+    {
+      "id": "c30",
+      "file": "README.md",
+      "line": 28,
+      "text": "The standalone installers download from `https://releases.openai.com/codex` by default and fall back to GitHub Releases if a metadata or asset download is unavailable. To force GitHub Releases, set `CODEX_INSTALLER_USE_R",
+      "risk": "default"
+    },
+    {
+      "id": "c31",
+      "file": "codex-rs/exec-server/README.md",
+      "line": 102,
+      "text": "Noise remains the default transport. Direct requires `--aws-sigv4`, which",
+      "risk": "default"
+    },
+    {
+      "id": "c32",
+      "file": "codex-rs/network-proxy/README.md",
+      "line": 6,
+      "text": "- a SOCKS5 proxy (default `127.0.0.1:8081`, enabled by default)",
+      "risk": "default"
+    },
+    {
+      "id": "c33",
+      "file": "third_party/v8/README.md",
+      "line": 11,
+      "text": "Local Cargo builds still use upstream prebuilt `rusty_v8` archives by default.",
+      "risk": "default"
+    },
+    {
+      "id": "c34",
+      "file": "codex-rs/skills/src/assets/samples/imagegen/references/cli.md",
+      "line": 75,
+      "text": "`gpt-image-2` is the default model for new CLI fallback work.",
+      "risk": "default"
+    },
+    {
+      "id": "c35",
+      "file": "codex-rs/skills/src/assets/samples/imagegen/references/image-api.md",
+      "line": 15,
+      "text": "| `gpt-image-2` | `low`, `medium`, `high`, `auto` | Always high fidelity for image inputs; do not set `input_fidelity` | `auto` or flexible sizes that satisfy the constraints below | Default for new CLI/API workflows: hi",
+      "risk": "default"
+    },
+    {
+      "id": "c36",
+      "file": "codex-rs/skills/src/assets/samples/imagegen/references/image-api.md",
+      "line": 52,
+      "text": "- `size`: `auto` by default for `gpt-image-2`; flexible `WIDTHxHEIGHT` sizes are allowed only for `gpt-image-2`; older GPT Image models use `1024x1024`, `1536x1024`, `1024x1536`, or `auto`",
+      "risk": "default"
+    },
+    {
+      "id": "c37",
+      "file": "codex-rs/skills/src/assets/samples/imagegen/references/prompting.md",
+      "line": 82,
+      "text": "- In CLI fallback mode, `gpt-image-2` is the default. It supports `quality=low|medium|high|auto`; use `low` for fast drafts and thumbnails, and move to `medium`, `high`, or `auto` for final assets.",
+      "risk": "default"
+    },
+    {
+      "id": "c38",
+      "file": "codex-rs/skills/src/assets/samples/imagegen/SKILL.md",
+      "line": 105,
+      "text": "10. Use the built-in `image_gen` tool by default.",
+      "risk": "default"
+    },
+    {
+      "id": "c39",
+      "file": "codex-rs/app-server-client/README.md",
+      "line": 61,
+      "text": "`DEFAULT_IN_PROCESS_CHANNEL_CAPACITY` by default.",
+      "risk": "default"
+    },
+    {
+      "id": "c40",
+      "file": "codex-rs/app-server-daemon/README.md",
+      "line": 73,
+      "text": "updater-triggered restarts, `shutdownGraceSeconds` defaults to 60 and accepts",
+      "risk": "default"
+    }
+  ],
+  "signals": [
+    {
+      "id": "telemetry",
+      "label": "telemetry or analytics SDK, or user identification",
+      "hit_count": 90,
+      "files": [
+        "codex-rs/analytics/src/client.rs",
+        "codex-rs/analytics/src/client_product_tests.rs",
+        "codex-rs/analytics/src/client_tests.rs",
+        "codex-rs/analytics/src/facts.rs",
+        "codex-rs/analytics/src/lib.rs",
+        "codex-rs/core/src/hook_runtime.rs",
+        "codex-rs/core/src/mcp_tool_call.rs",
+        "codex-rs/core/src/session/turn.rs",
+        "codex-rs/core/src/skills.rs",
+        "codex-rs/core/src/tools/events.rs",
+        "codex-rs/core/src/tools/handlers/request_plugin_install.rs",
+        "codex-rs/ext/skills/src/tools/mod.rs",
+        "codex-rs/thread-store/src/local/rollout_migration/rollback_replay.rs",
+        "codex-rs/tui/src/app/owned_transcript.rs",
+        "codex-rs/tui/src/app/owned_transcript_browsing_tests.rs",
+        "codex-rs/tui/src/app/owned_transcript_tests.rs",
+        "codex-rs/tui/src/app/warning_notice_tests.rs",
+        "codex-rs/tui/src/app_backtrack/legacy_input.rs",
+        "codex-rs/tui/src/chatwidget/realtime.rs",
+        "codex-rs/tui/src/chatwidget/realtime/recording_controls.rs",
+        "codex-rs/tui/src/chatwidget/realtime/recording_controls_tests.rs",
+        "codex-rs/tui/src/chatwidget/realtime_split_flap.rs",
+        "elliot-report-v1/2026-10-22-665c3f3/claims.json"
+      ],
+      "examples": [
+        {
+          "file": "codex-rs/analytics/src/client.rs",
+          "line": 209,
+          "text": "send_track_events(&auth_manager, &destination, events, &thread_products)"
+        },
+        {
+          "file": "codex-rs/analytics/src/client.rs",
+          "line": 217,
+          "text": "send_track_events(&auth_manager, &destination, events, &thread_products)"
+        },
+        {
+          "file": "codex-rs/analytics/src/client.rs",
+          "line": 225,
+          "text": "send_track_events(&auth_manager, &destination, events, &thread_products).await;"
+        },
+        {
+          "file": "codex-rs/analytics/src/client.rs",
+          "line": 959,
+          "text": "async fn send_track_events("
+        }
+      ]
+    },
+    {
+      "id": "permission_bypass",
+      "label": "permission or sandbox checks turned off",
+      "hit_count": 16,
+      "files": [
+        "codex-rs/core/src/hook_runtime.rs",
+        "codex-rs/hooks/schema/generated/interrupt.command.input.schema.json",
+        "codex-rs/hooks/schema/generated/permission-request.command.input.schema.json",
+        "codex-rs/hooks/schema/generated/post-tool-use.command.input.schema.json",
+        "codex-rs/hooks/schema/generated/pre-tool-use.command.input.schema.json",
+        "codex-rs/hooks/schema/generated/session-start.command.input.schema.json",
+        "codex-rs/hooks/schema/generated/stop.command.input.schema.json",
+        "codex-rs/hooks/schema/generated/subagent-start.command.input.schema.json",
+        "codex-rs/hooks/schema/generated/subagent-stop.command.input.schema.json",
+        "codex-rs/hooks/schema/generated/user-prompt-submit.command.input.schema.json",
+        "codex-rs/hooks/src/schema.rs",
+        "elliot-report-v1/2026-10-22-665c3f3/claims.json"
+      ],
+      "examples": [
+        {
+          "file": "codex-rs/core/src/hook_runtime.rs",
+          "line": 998,
+          "text": "AskForApproval::Never => \"bypassPermissions\","
+        },
+        {
+          "file": "codex-rs/hooks/schema/generated/interrupt.command.input.schema.json",
+          "line": 29,
+          "text": "\"bypassPermissions\""
+        },
+        {
+          "file": "codex-rs/hooks/schema/generated/permission-request.command.input.schema.json",
+          "line": 35,
+          "text": "\"bypassPermissions\""
+        },
+        {
+          "file": "codex-rs/hooks/schema/generated/post-tool-use.command.input.schema.json",
+          "line": 35,
+          "text": "\"bypassPermissions\""
+        }
+      ]
+    }
+  ],
+  "file_count": 9448,
+  "claims": [
+    {
+      "n": "2",
+      "claim": "The proxy accepts exactly POST /v1/responses (no query string); other requests get 403, except the optional GET /shutdown.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Exact path equality on the raw URL (a query string fails), 403 otherwise; shutdown only when --http-shutdown is set.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 150,
+        "quote": "Accepts exactly `POST /v1/responses` (no query string)."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/lib.rs",
+          "line_start": 237,
+          "quote": "let allow = method == Method::Post && url_path == \"/v1/responses\";",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/lib.rs:237",
+            "file_sha256": "e080ce9ef9b8e858ceee145842ad8b84ce3b38056c892e3f2115d5caeae71b71"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/lib.rs",
+          "line_start": 182,
+          "quote": "if http_shutdown && request.method() == &Method::Get && request.url() == \"/shutdown\" {",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/lib.rs:182",
+            "file_sha256": "e080ce9ef9b8e858ceee145842ad8b84ce3b38056c892e3f2115d5caeae71b71"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_cfe1f0b2110a"
+    },
+    {
+      "n": "3",
+      "claim": "Dump files redact Authorization and any header whose name includes cookie; all other header values are dumped in full.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Request and response header conversions both use should_redact_header.",
+      "user_impact": null,
+      "note": "Bodies are dumped verbatim, so prompts and outputs land on disk; the docs state bodies are written.",
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 152,
+        "quote": "Header values are dumped in full except `Authorization` and any header whose name includes `cookie`, which are redacted."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/dump.rs",
+          "line_start": 186,
+          "line_end": 189,
+          "quote": "name.eq_ignore_ascii_case(AUTHORIZATION_HEADER_NAME)\n        || name.to_ascii_lowercase().contains(\"cookie\")",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/dump.rs:186-189",
+            "file_sha256": "1f2850c9b0af53fa7d7bcbd28389898322d4b42a16260d4980105f7833479ccb"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_01ff091be2ef"
+    },
+    {
+      "n": "4",
+      "claim": "In API-key mode the key is read from stdin into a 1024-byte stack buffer, validated, the buffer zeroized, the String leaked and mlock(2)ed on UNIX.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Implemented as described. mlock failure is silently ignored (README says \"attempts\") and it is a no-op on Windows.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 189,
+        "quote": "At startup, we allocate a `1024` byte buffer on the stack and copy `\"Bearer \"` into the start of the buffer."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/read_api_key.rs",
+          "line_start": 8,
+          "quote": "const BUFFER_SIZE: usize = 1024;",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/read_api_key.rs:8",
+            "file_sha256": "8e38a6bd5f75c5d08ac006ce0ce0e474d76f7acf265f2586188c92db63cbcf77"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/read_api_key.rs",
+          "line_start": 157,
+          "line_end": 160,
+          "quote": "buf.zeroize();\n\n    let leaked: &'static mut str = header_value.leak();\n    mlock_str(leaked);",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/read_api_key.rs:157-160",
+            "file_sha256": "8e38a6bd5f75c5d08ac006ce0ce0e474d76f7acf265f2586188c92db63cbcf77"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/read_api_key.rs",
+          "line_start": 201,
+          "quote": "let _ = unsafe { mlock(start as *const c_void, size) };",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/read_api_key.rs:201",
+            "file_sha256": "8e38a6bd5f75c5d08ac006ce0ce0e474d76f7acf265f2586188c92db63cbcf77"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9d0c8f5a2710"
+    },
+    {
+      "n": "5",
+      "claim": "In OIDC mode only the default OpenAI upstream is allowed and redirects are disabled; the request URL must be HTTPS.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Upstream equality check, no-redirect policy on the Responses client, token client built without redirects, HTTPS scheme enforced.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 111,
+        "quote": "In OIDC mode only the default `https://api.openai.com/v1/responses` upstream is"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/auth.rs",
+          "line_start": 124,
+          "quote": "if upstream != OPENAI_RESPONSES_URL {",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/auth.rs:124",
+            "file_sha256": "136a85830b566ea875b7c8023b8239b960b546c1a4b5e937e5afbc850113bb4e"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/auth.rs",
+          "line_start": 162,
+          "quote": "Self::Federated { .. } => reqwest::redirect::Policy::none(),",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/auth.rs:162",
+            "file_sha256": "136a85830b566ea875b7c8023b8239b960b546c1a4b5e937e5afbc850113bb4e"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/github_oidc.rs",
+          "line_start": 36,
+          "quote": "if request_url.scheme() != \"https\"",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/github_oidc.rs:36",
+            "file_sha256": "fd3067662367f1ee984ec02a319cfcec13ce34c332f4bda8f95747eac05079f6"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_b49b40ae7152"
+    },
+    {
+      "n": "6",
+      "claim": "Cloud client requires HTTPS except direct loopback HTTP with an unrestricted, unmanaged factory, which bypasses proxies; redirects rejected; 64 MiB message bound; 150-second setup deadline.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Scheme/loopback validation, managed or restricted policies rejected for plaintext, direct (non-proxy) client for local HTTP, redirects disabled, 150s and 64 MiB constants all match.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/cloud-client/README.md",
+        "line_start": 9,
+        "line_end": 10,
+        "quote": "HTTPS is required except for direct loopback HTTP with an unrestricted, unmanaged\nfactory. This exception bypasses proxies to keep plaintext credentials local."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/cloud-client/src/lib.rs",
+          "line_start": 56,
+          "quote": "if (endpoint.scheme() != \"https\" && !(endpoint.scheme() == \"http\" && loopback))",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/cloud-client/src/lib.rs:56",
+            "file_sha256": "3a8e910a517b9b11e263cf706981a6bdb160a4c3b612069044c5756f437fbee9"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/cloud-client/src/lib.rs",
+          "line_start": 80,
+          "line_end": 82,
+          "quote": "let http = if local_http {\n            // Plaintext credentials must never leave loopback through an outbound proxy.\n            builder.build_direct()",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/cloud-client/src/lib.rs:80-82",
+            "file_sha256": "3a8e910a517b9b11e263cf706981a6bdb160a4c3b612069044c5756f437fbee9"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/cloud-client/src/lib.rs",
+          "line_start": 32,
+          "line_end": 33,
+          "quote": "const REQUEST_TIMEOUT: Duration = Duration::from_secs(150);\nconst MAX_MESSAGE_BYTES: usize = 64 * 1024 * 1024;",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/cloud-client/src/lib.rs:32-33",
+            "file_sha256": "3a8e910a517b9b11e263cf706981a6bdb160a4c3b612069044c5756f437fbee9"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_451d94da59b1"
+    },
+    {
+      "n": "7",
+      "claim": "The TypeScript SDK requires Node.js 18+.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "package.json engines matches.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "sdk/typescript/README.md",
+        "line_start": 13,
+        "quote": "Requires Node.js 18+."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "sdk/typescript/package.json",
+          "line_start": 19,
+          "line_end": 20,
+          "quote": "\"engines\": {\n    \"node\": \">=18\"",
+          "checked": {
+            "ok": true,
+            "where": "sdk/typescript/package.json:19-20",
+            "file_sha256": "bc908b2ca2823217d19e56fc472b895b18a451a57411046b131992b34977b02c"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_3e87ce75aa40"
+    },
+    {
+      "n": "8",
+      "claim": "By default the Codex CLI inherits the Node.js process environment; the optional env parameter fully controls variables; the SDK still injects required variables such as CODEX_API_KEY.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Matches; the SDK also sets an originator variable when absent, which the README's \"such as\" covers.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "sdk/typescript/README.md",
+        "line_start": 121,
+        "quote": "By default, the Codex CLI inherits the Node.js process environment."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "sdk/typescript/src/exec.ts",
+          "line_start": 184,
+          "line_end": 192,
+          "quote": "if (this.envOverride) {\n      Object.assign(env, this.envOverride);\n    } else {\n      for (const [key, value] of Object.entries(process.env)) {",
+          "checked": {
+            "ok": true,
+            "where": "sdk/typescript/src/exec.ts:184-192",
+            "file_sha256": "0df2fe1ccd90e05b2f2fb0cb3e1bd3293e23f36e3bbb369258edc6a63ae8655c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "sdk/typescript/src/exec.ts",
+          "line_start": 196,
+          "line_end": 198,
+          "quote": "if (args.apiKey) {\n      env.CODEX_API_KEY = args.apiKey;",
+          "checked": {
+            "ok": true,
+            "where": "sdk/typescript/src/exec.ts:196-198",
+            "file_sha256": "0df2fe1ccd90e05b2f2fb0cb3e1bd3293e23f36e3bbb369258edc6a63ae8655c"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_1bd0b60cb019"
+    },
+    {
+      "n": "9",
+      "claim": "Rollout tracing is not telemetry: Codex does not upload traces and writes local bundles only when CODEX_ROLLOUT_TRACE_ROOT is set.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Tracing is off unless the env var is set; the crate depends on no HTTP client (only the http types crate) and a grep of its sources for reqwest/hyper/upload/TcpStream found nothing.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/rollout-trace/README.md",
+        "line_start": 3,
+        "line_end": 5,
+        "quote": "Rollout tracing is not telemetry. Codex does **not** upload or\n> report these traces; it writes local bundles only when\n> `CODEX_ROLLOUT_TRACE_ROOT` is set."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/rollout-trace/src/thread.rs",
+          "line_start": 107,
+          "quote": "let Some(root) = std::env::var_os(CODEX_ROLLOUT_TRACE_ROOT_ENV) else {",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/rollout-trace/src/thread.rs:107",
+            "file_sha256": "0763d39148d68a61b9d1c2381bb49b985dad4f029b75d64e1491daea36e0a82d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/rollout-trace/Cargo.toml",
+          "line_start": 15,
+          "line_end": 23,
+          "quote": "anyhow = { workspace = true }\ncodex-code-mode = { workspace = true }\ncodex-protocol = { workspace = true }\nhttp = { workspace = true }",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/rollout-trace/Cargo.toml:15-23",
+            "file_sha256": "1945dfdbca622a193f680d98cc0a733eec58510e9d3bc3a6efe0e3db153f4c62"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_70cccf1d2d4c"
+    },
+    {
+      "n": "10",
+      "claim": "The TUI records diagnostics in bounded local stores by default; setting log_dir explicitly enables a plaintext TUI log (codex-tui.log) for a run.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The file layer exists only when log_dir is present in the effective config (including -c overrides); otherwise only the state-DB and in-memory feedback layers are registered. File is created with mode 0600 on Unix.",
+      "user_impact": null,
+      "note": "Whether the default stores are actually size-bounded was not traced; the in-memory feedback buffer and SQLite log DB also feed /feedback uploads when the user submits feedback.",
+      "source": {
+        "file": "docs/install.md",
+        "line_start": 56,
+        "quote": "The TUI records diagnostics in bounded local stores by default. Set `log_dir` explicitly to enable a plaintext TUI log for a run:"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/tui/src/startup_orchestration.rs",
+          "line_start": 845,
+          "quote": "let (tui_file_layer, _tui_file_log_guard) = if config_toml_log_dir_configured {",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/tui/src/startup_orchestration.rs:845",
+            "file_sha256": "fe3a5988dedc067857c72bb9564c7f5bc5d2b34fce7b9f811b012c9eaedaf931"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/tui/src/startup_orchestration.rs",
+          "line_start": 860,
+          "quote": "let log_file = log_file_opts.open(log_dir.join(TUI_LOG_FILE_NAME))?;",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/tui/src/startup_orchestration.rs:860",
+            "file_sha256": "fe3a5988dedc067857c72bb9564c7f5bc5d2b34fce7b9f811b012c9eaedaf931"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/tui/src/startup_orchestration.rs",
+          "line_start": 913,
+          "line_end": 915,
+          "quote": "let log_db = state_db\n        .clone()\n        .map(|state_db| log_db::start(state_db, std::sync::Arc::new(feedback.clone())));",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/tui/src/startup_orchestration.rs:913-915",
+            "file_sha256": "fe3a5988dedc067857c72bb9564c7f5bc5d2b34fce7b9f811b012c9eaedaf931"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9cfa770ede36"
+    },
+    {
+      "n": "11",
+      "claim": "When bubblewrap is active, the filesystem is read-only by default via --ro-bind / /.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "--ro-bind / / is used for full-read policies; restricted-read policies instead start from an empty tmpfs root, which is stricter. A separate full-write branch uses --bind / /.",
+      "user_impact": null,
+      "note": "Under restricted-read policies the root is a tmpfs rather than ro-bind; this is stricter than documented, so it misleads nobody toward unsafe use.",
+      "source": {
+        "file": "codex-rs/linux-sandbox/README.md",
+        "line_start": 58,
+        "quote": "- When bubblewrap is active, the filesystem is read-only by default via `--ro-bind / /`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/linux-sandbox/src/bwrap.rs",
+          "line_start": 503,
+          "line_end": 511,
+          "quote": "let mut args = if file_system_sandbox_policy.has_full_disk_read_access() {\n        // Read-only root, then mount a minimal device tree.",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/linux-sandbox/src/bwrap.rs:503-511",
+            "file_sha256": "69a23ea16d525de5938c1fd47561c90d6047eb58f9864ca47749d696e5d9fa76"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/linux-sandbox/src/bwrap.rs",
+          "line_start": 517,
+          "line_end": 520,
+          "quote": "// Start from an empty filesystem and add only the approved readable\n        // roots plus a minimal `/dev`.\n        let mut args = vec![\n            \"--tmpfs\".to_string(),",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/linux-sandbox/src/bwrap.rs:517-520",
+            "file_sha256": "69a23ea16d525de5938c1fd47561c90d6047eb58f9864ca47749d696e5d9fa76"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_b315d88f20d8"
+    },
+    {
+      "n": "12",
+      "claim": "With bubblewrap, the helper explicitly isolates the user namespace via --unshare-user, creates a PID namespace by default, and unshares the network namespace when network is restricted.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Matches; PID unshare is skipped only with the startup-only inherit_pid_namespace option, and the code also drops all capabilities (--cap-drop ALL).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/linux-sandbox/README.md",
+        "line_start": 91,
+        "line_end": 94,
+        "quote": "- When bubblewrap is active, the helper explicitly isolates the user namespace via\n  `--unshare-user`. By default it also creates a PID namespace via `--unshare-pid`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/linux-sandbox/src/bwrap.rs",
+          "line_start": 284,
+          "line_end": 292,
+          "quote": "\"--unshare-user\".to_string(),\n        \"--unshare-ipc\".to_string(),\n    ];\n    if !options.inherit_pid_namespace {\n        args.push(\"--unshare-pid\".to_string());\n    }\n    if options.network_mode.should_unshare_network() {",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/linux-sandbox/src/bwrap.rs:284-292",
+            "file_sha256": "69a23ea16d525de5938c1fd47561c90d6047eb58f9864ca47749d696e5d9fa76"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_0368f2295d0a"
+    },
+    {
+      "n": "13",
+      "claim": "The standalone installers download from https://releases.openai.com/codex by default and fall back to GitHub Releases; setting CODEX_INSTALLER_USE_RELEASES_OPENAI_COM=false forces GitHub.",
+      "verdict": "PARTIAL",
+      "severity": "low",
+      "explanation": "install.sh defaults the preference to false, so it resolves from GitHub unless the env var enables releases.openai.com; install.ps1 defaults to true and falls back to GitHub with a warning.",
+      "user_impact": "On Mac/Linux, the install.sh in this repo defaults to GitHub Releases and only uses releases.openai.com when the env var is set to 1/true/yes. A user or admin who relies on the README to allowlist only releases.openai.com, or to pick the download origin, would see the shell installer fetch from GitHub instead. The Windows script does default to releases.openai.com. The hosted copy at chatgpt.com/codex/install.sh is outside the repo and could not be checked.",
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 28,
+        "quote": "The standalone installers download from `https://releases.openai.com/codex` by default and fall back to GitHub Releases if a metadata or asset download is unavailable."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "scripts/install/install.sh",
+          "line_start": 8,
+          "line_end": 9,
+          "quote": "DEFAULT_PREFER_RELEASES_OPENAI_COM=\"false\"\nPREFER_RELEASES_OPENAI_COM=\"${CODEX_INSTALLER_USE_RELEASES_OPENAI_COM:-$DEFAULT_PREFER_RELEASES_OPENAI_COM}\"",
+          "checked": {
+            "ok": true,
+            "where": "scripts/install/install.sh:8-9",
+            "file_sha256": "0f896aeed686ede604c4d5ffe197524e30a886545c8b78bc6340a699d8fad908"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "scripts/install/install.sh",
+          "line_start": 420,
+          "line_end": 421,
+          "quote": "case \"$PREFER_RELEASES_OPENAI_COM\" in\n    1 | [Tt][Rr][Uu][Ee] | [Yy][Ee][Ss])",
+          "checked": {
+            "ok": true,
+            "where": "scripts/install/install.sh:420-421",
+            "file_sha256": "0f896aeed686ede604c4d5ffe197524e30a886545c8b78bc6340a699d8fad908"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "scripts/install/install.ps1",
+          "line_start": 15,
+          "quote": "$DefaultPreferReleasesOpenAICom = $true",
+          "checked": {
+            "ok": true,
+            "where": "scripts/install/install.ps1:15",
+            "file_sha256": "96f80f28581f354ca60c9d5cce0b437949cd8c50a5c274c139872701ef372d1d"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "README says installers default to releases.openai.com, but install.sh defaults to false (GitHub) and only uses releases.openai.com when the env var is set. Real contradiction for Mac/Linux users. Severity medium is somewhat high, since the Windows script matches and the hosted script could not be checked; low-medium is more apt.",
+        "severity": "low",
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "scripts/install/install.sh",
+            "line_start": 8,
+            "line_end": 9,
+            "quote": "DEFAULT_PREFER_RELEASES_OPENAI_COM=\"false\"",
+            "checked": {
+              "ok": true,
+              "where": "scripts/install/install.sh:8-9",
+              "file_sha256": "0f896aeed686ede604c4d5ffe197524e30a886545c8b78bc6340a699d8fad908"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:28:42.219Z"
+      },
+      "receipt": "rcpt_5761b4ff0d3e"
+    },
+    {
+      "n": "14",
+      "claim": "Python SDK thread starts default to ApprovalMode.auto_review; turn starts accept an optional approval_mode override.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "thread_start/async variants default to auto_review (lines 138, 396); thread resume/fork and turn methods take Optional overrides defaulting to None.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "sdk/python/docs/api-reference.md",
+        "line_start": 6,
+        "quote": "Thread starts default to `ApprovalMode.auto_review`; turn starts accept an optional `approval_mode` override."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "sdk/python/src/openai_codex/api.py",
+          "line_start": 138,
+          "quote": "approval_mode: ApprovalMode = ApprovalMode.auto_review,",
+          "checked": {
+            "ok": true,
+            "where": "sdk/python/src/openai_codex/api.py:138",
+            "file_sha256": "bd9cac51820997fa4d3fa4ac5c24894f45b92da8ba481d49c44cb96dcc9af430"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "sdk/python/src/openai_codex/api.py",
+          "line_start": 210,
+          "quote": "approval_mode: ApprovalMode | None = None,",
+          "checked": {
+            "ok": true,
+            "where": "sdk/python/src/openai_codex/api.py:210",
+            "file_sha256": "bd9cac51820997fa4d3fa4ac5c24894f45b92da8ba481d49c44cb96dcc9af430"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_e613370e867a"
+    },
+    {
+      "n": "15",
+      "claim": "For daemon updater-triggered restarts, shutdownGraceSeconds defaults to 60 and has a five-minute maximum.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Constants match; tests show values above the max are rejected.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/app-server-daemon/README.md",
+        "line_start": 73,
+        "quote": "updater-triggered restarts, `shutdownGraceSeconds` defaults to 60 and accepts"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/app-server-daemon/src/settings.rs",
+          "line_start": 15,
+          "line_end": 16,
+          "quote": "pub(crate) const DEFAULT_SHUTDOWN_GRACE_SECONDS: u32 = 60;\npub(crate) const MAX_SHUTDOWN_GRACE_SECONDS: u32 = 5 * 60;",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/app-server-daemon/src/settings.rs:15-16",
+            "file_sha256": "18f31688ebd807957a454f7a84997632f54306256ec39ed727911503cb573d5c"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_edbfdf7150e3"
+    },
+    {
+      "n": "16",
+      "claim": "The network proxy runs a SOCKS5 proxy on default 127.0.0.1:8081, enabled by default.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default struct has enable_socks5 = true and socks_url 127.0.0.1:8081; non-loopback binds are clamped to loopback unless dangerously_allow_non_loopback_proxy.",
+      "user_impact": null,
+      "note": "The README's JSON example sets enable_socks5 false explicitly; the serde field has #[serde(default)] at struct level so omitted fields take the Default values (true).",
+      "source": {
+        "file": "codex-rs/network-proxy/README.md",
+        "line_start": 6,
+        "quote": "- a SOCKS5 proxy (default `127.0.0.1:8081`, enabled by default)"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/network-proxy/src/config.rs",
+          "line_start": 186,
+          "quote": "enable_socks5: true,",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/network-proxy/src/config.rs:186",
+            "file_sha256": "da340a929f67d51a71959ab70208ca152e9f2dfcc4cfeeca28c11b4b63db5f78"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/network-proxy/src/config.rs",
+          "line_start": 415,
+          "line_end": 416,
+          "quote": "fn default_socks_url() -> String {\n    \"http://127.0.0.1:8081\".to_string()",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/network-proxy/src/config.rs:415-416",
+            "file_sha256": "da340a929f67d51a71959ab70208ca152e9f2dfcc4cfeeca28c11b4b63db5f78"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_5c9a01284ba6"
+    },
+    {
+      "n": "17",
+      "claim": "otel.log_agent_responses defaults to false, independent of otel.log_user_prompt; the default otel.exporter = \"none\" exports no logs.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both flags default false independently and the log exporter defaults to None.",
+      "user_impact": null,
+      "note": "Metrics exporter defaults to Statsig (recorded separately as an undisclosed behavior).",
+      "source": {
+        "file": "codex-rs/otel/README.md",
+        "line_start": 129,
+        "quote": "`final_answer`. The default is false, independent of `otel.log_user_prompt`;"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/config/src/types.rs",
+          "line_start": 675,
+          "line_end": 676,
+          "quote": "log_user_prompt: false,\n            log_agent_responses: false,",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/config/src/types.rs:675-676",
+            "file_sha256": "56fcd0268c1147f3f03f5ac45726ae9b4a327878caf15eb0381b6229918e38ac"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/config/src/types.rs",
+          "line_start": 679,
+          "quote": "exporter: OtelExporterKind::None,",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/config/src/types.rs:679",
+            "file_sha256": "56fcd0268c1147f3f03f5ac45726ae9b4a327878caf15eb0381b6229918e38ac"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9e4bfcd20b70"
+    },
+    {
+      "n": "18",
+      "claim": "WSL1 is not supported for bubblewrap sandboxing because it cannot create the required user namespaces; Codex surfaces a warning.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "WSL1 is detected from /proc/version and a warning is built; the rejection of sandboxed shell commands on that path was not separately traced.",
+      "user_impact": null,
+      "note": "Detection and warning are confirmed in code; the README's \"rejects sandboxed shell commands\" clause was not traced to its call site.",
+      "source": {
+        "file": "codex-rs/linux-sandbox/README.md",
+        "line_start": 26,
+        "line_end": 28,
+        "quote": "WSL1 is not supported for bubblewrap sandboxing because\nit cannot create the required user namespaces, so Codex rejects sandboxed shell\ncommands that would enter the bubblewrap path."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/sandboxing/src/bwrap.rs",
+          "line_start": 30,
+          "line_end": 32,
+          "quote": "pub(crate) const WSL1_BWRAP_WARNING: &str = concat!(\n    \"Codex's Linux sandbox uses bubblewrap, which is not supported on WSL1 \",\n    \"because WSL1 cannot create the required user namespaces. \",",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/sandboxing/src/bwrap.rs:30-32",
+            "file_sha256": "ec31c6bc4b844183ae3c6e5fcea5e97db95e6f26cfaeb4c9bedb37cdf01534ee"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/sandboxing/src/bwrap.rs",
+          "line_start": 151,
+          "quote": ".is_ok_and(|proc_version| proc_version_indicates_wsl1(&proc_version))",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/sandboxing/src/bwrap.rs:151",
+            "file_sha256": "ec31c6bc4b844183ae3c6e5fcea5e97db95e6f26cfaeb4c9bedb37cdf01534ee"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_92919d7116c8"
+    },
+    {
+      "n": "19",
+      "claim": "Non-interactive mode (codex exec) defaults to RUST_LOG=error with messages printed inline.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "EnvFilter::try_from_default_env falls back to \"error\" when RUST_LOG is unset.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/install.md",
+        "line_start": 63,
+        "quote": "The non-interactive mode (`codex exec`) defaults to `RUST_LOG=error`, but messages are printed inline, so there is no need to monitor a separate file."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/exec/src/lib.rs",
+          "line_start": 264,
+          "quote": ".unwrap_or_else(|_| EnvFilter::new(\"error\"))",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/exec/src/lib.rs:264",
+            "file_sha256": "cb9a1eb6239ece15d0f761fbf64369013469ccf7850408c40b54b9cf0b576eba"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_766d74b745d1"
+    },
+    {
+      "n": "20",
+      "claim": "Direct WebSocket listeners support app-server's opt-in auth flags, including --ws-auth capability-token --ws-token-sha256 HEX, token files and signed bearer tokens.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Flags exist in the shared websocket-auth crate; modes capability-token and signed-bearer-token exist; non-loopback listeners without auth are refused.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/exec-server/README.md",
+        "line_start": 50,
+        "quote": "Direct WebSocket listeners support app-server's opt-in auth flags, including `--ws-auth capability-token --ws-token-sha256 HEX`, token files, and signed bearer tokens;"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/websocket-auth/src/lib.rs",
+          "line_start": 33,
+          "line_end": 34,
+          "quote": "#[arg(long = \"ws-auth\", value_name = \"MODE\", value_enum)]",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/websocket-auth/src/lib.rs:33-34",
+            "file_sha256": "337fd79f2c8411bcb6b65d12f20bd842031654ab2e66d937a493a397a0c0dd05"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/websocket-auth/src/lib.rs",
+          "line_start": 41,
+          "quote": "#[arg(long = \"ws-token-sha256\", value_name = \"HEX\")]",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/websocket-auth/src/lib.rs:41",
+            "file_sha256": "337fd79f2c8411bcb6b65d12f20bd842031654ab2e66d937a493a397a0c0dd05"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/app-server-transport/src/transport/websocket.rs",
+          "line_start": 170,
+          "quote": "\"refusing to start non-loopback websocket listener {bind_address} without auth; configure `--ws-auth capability-token` or `--ws-auth signed-bearer-token`\"",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/app-server-transport/src/transport/websocket.rs:170",
+            "file_sha256": "38cb8c3e8e3fb77da1849644d1230814828973f19ec94eb8f6bba40dd62995cc"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_1d943d361678"
+    },
+    {
+      "n": "21",
+      "claim": "Explicit gateway-OAuth opt-in is shared within the process and cannot be undone by a later connection that omits the capability.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "require_explicit_login is set on opt-in and only allow_automatic_login (first client only, via get_or_init) can restore automatic login.",
+      "user_impact": null,
+      "note": "The cross-manager sharing (same home and network config) was not traced.",
+      "source": {
+        "file": "codex-rs/app-server/README.md",
+        "line_start": 533,
+        "line_end": 535,
+        "quote": "Explicit opt-in is shared by gateway\nmanagers using the same home and network configuration within the process and\ncannot be undone by a later connection that omits the capability."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/app-server/src/request_processors/initialize_processor.rs",
+          "line_start": 154,
+          "line_end": 155,
+          "quote": "// Only the first originating client may restore legacy automatic login.\n            // Any explicit opt-in is sticky across subsequent connections.",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/app-server/src/request_processors/initialize_processor.rs:154-155",
+            "file_sha256": "4535560b07ab10d1538acd461560a55c1bdf0c9b4049e72775d6b770421f117f"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/app-server/src/request_processors/initialize_processor.rs",
+          "line_start": 161,
+          "line_end": 162,
+          "quote": "if capabilities.explicit_gateway_oauth {\n                self.gateway_login_control.require_explicit_login();",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/app-server/src/request_processors/initialize_processor.rs:161-162",
+            "file_sha256": "4535560b07ab10d1538acd461560a55c1bdf0c9b4049e72775d6b770421f117f"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_d9760a94de6e"
+    },
+    {
+      "n": "22",
+      "claim": "With --http-shutdown, an unprivileged user can make a GET request to /shutdown to stop the privileged proxy (with exit code 0).",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Shutdown has no authentication: any local process that can reach the loopback port can stop it, exactly as the README warns. The listener binds only 127.0.0.1.",
+      "user_impact": null,
+      "note": "Documented trade-off: any local user can shut it down when the flag is enabled.",
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 153,
+        "quote": "Optional `--http-shutdown` enables `GET /shutdown` to terminate the process with exit code `0`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/lib.rs",
+          "line_start": 182,
+          "line_end": 184,
+          "quote": "if http_shutdown && request.method() == &Method::Get && request.url() == \"/shutdown\" {\n                let _ = request.respond(Response::new_empty(StatusCode(200)));\n                std::process::exit(0);",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/lib.rs:182-184",
+            "file_sha256": "e080ce9ef9b8e858ceee145842ad8b84ce3b38056c892e3f2115d5caeae71b71"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/lib.rs",
+          "line_start": 203,
+          "quote": "let addr = SocketAddr::from(([127, 0, 0, 1], port.unwrap_or(0)));",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/lib.rs:203",
+            "file_sha256": "e080ce9ef9b8e858ceee145842ad8b84ce3b38056c892e3f2115d5caeae71b71"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_6dde997f3b86"
+    },
+    {
+      "n": "1",
+      "claim": "OIDC renewal failures delay further exchange attempts by one second, doubling after each failure up to 30 seconds.",
+      "verdict": "VERIFIED",
+      "severity": "low",
+      "explanation": "Backoff starts at 1s and doubles but is capped at MAX_RENEWAL_BACKOFF = 61 seconds, not 30.",
+      "user_impact": "Operators sizing retry behaviour from the docs expect at most 30s between exchange attempts; the code allows up to 61s (1,2,4,8,16,32,61), so recovery after a token-endpoint outage can take about twice as long as documented.",
+      "note": "Real discrepancy (cap 61s vs documented 30s), but a retry backoff detail that misleads nobody materially. Severity low is appropriate.",
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 126,
+        "quote": "by one second, doubling after each failure up to 30 seconds."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/auth.rs",
+          "line_start": 46,
+          "quote": "const MAX_RENEWAL_BACKOFF: Duration = Duration::from_secs(61);",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/auth.rs:46",
+            "file_sha256": "136a85830b566ea875b7c8023b8239b960b546c1a4b5e937e5afbc850113bb4e"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/auth.rs",
+          "line_start": 252,
+          "quote": ".map(|failure| (failure.delay * 2).min(MAX_RENEWAL_BACKOFF))",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/auth.rs:252",
+            "file_sha256": "136a85830b566ea875b7c8023b8239b960b546c1a4b5e937e5afbc850113bb4e"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "downgrade",
+        "reason": "Real discrepancy (cap 61s vs documented 30s), but a retry backoff detail that misleads nobody materially. Severity low is appropriate.",
+        "severity": null,
+        "evidence": [],
+        "at": "2026-10-22T21:28:40.027Z"
+      },
+      "receipt": "rcpt_74d349d46cae",
+      "original_verdict": "PARTIAL"
+    }
+  ],
+  "rejected": [
+    {
+      "claim": "Rollout tracing is not telemetry: Codex does not upload traces and writes local bundles only when CODEX_ROLLOUT_TRACE_ROOT is set.",
+      "verdict": "VERIFIED",
+      "problems": [
+        "evidence absent:reqwest: pattern found in code: MODULE.bazel.lock:1053:      \"axum_0.8.8\": \"{\\\"dependencies\\\":[{\\\"kind\\\":\\\"dev\\\",\\\"name\\\":\\\"anyhow\\\",\\\"req\\\":\\\"^1.0\\\"},{\\\"name\\\":\\\"axum-core\\\",\\\"req\\\":\\\"^0.5.5\\\"},{\\\"name\\\":\\\"axum-macros\\\",\\\"optional\\\":true,\\\"req\\\":\\\"^0.5.0\\\"},{\\\"name\\\":\\\"base64\\\",\\\"optional\\\":true,\\\"req\\\":\\\"^0.22.1\\\"},{\\\"name\\\":\\\"bytes\\\",\\\"req\\\":\\\"^1.0\\\"},{\\\"name\\\":\\\"form_urlencoded\\\",\\\"optional\\\":true,\\\"req\\\":\\\"^1.1.0\\\"},{\\\"default_features\\\":false,\\\"features\\\":[\\\"alloc\\\"],\\\"name\\\":\\\"futures-util\\\",\\\"req\\\":\\\"^0.3\\\"},{\\\"name\\\":\\\"http\\\",\\\"req\\\":\\\"^1.0.0\\\"},{\\\"name\\\":\\\"http-body\\\",\\\"req\\\":\\\"^1.0.0\\\"},{\\\"name\\\":\\\"http-body-util\\\",\\\"req\\\":\\\"^0.1.0\\\"},{\\\"name\\\":\\\"hyper\\\",\\\"optional\\\":true,\\\"req\\\":\\\"^1.1.0\\\"},{\\\"features\\\":[\\\"client\\\"],\\\"kind\\\":\\\"dev\\\",\\\"name\\\":\\\"hyper\\\",\\\"req\\\":\\\"^1.1.0\\\"},{\\\"features\\\":[\\\"tokio\\\",\\\"server\\\",\\\"service\\\"],\\\"name\\\":\\\"hyper-util\\\",\\\"optional\\\":true,\\\"req\\\":\\\"^0.1.3\\\"},{\\\"name\\\":\\\"itoa\\\",\\\"req\\\":\\\"^1.0.5\\\"},{\\\"name\\\":\\\"matchit\\\",\\\"req\\\":\\\"=0.8.4\\\"},{\\\"name\\\":\\\"memchr\\\",\\\"req\\\":\\\"^2.4.1\\\"},{\\\"name\\\":\\\"mime\\\",\\\"req\\\":\\\"^0.3.16\\\"},{\\\"name\\\":\\\"multer\\\",\\\"optional\\\":true,\\\"req\\\":\\\"^3.0.0\\\"},{\\\"name\\\":\\\"percent-encoding\\\",\\\"req\\\":\\\"^2.1\\\"},{\\\"name\\\":\\\"pin-project-lite\\\",\\\"req\\\":\\\"^0.2.7\\\"},{\\\"kind\\\":\\\"dev\\\",\\\"name\\\":\\\"quickcheck\\\",\\\"req\\\":\\\"^1.0\\\"},{\\\"kind\\\":\\\"dev\\\",\\\"name\\\":\\\"quickcheck_macros\\\",\\\"req\\\":\\\"^1.0\\\"},{\\\"default_features\\\":false,\\\"features\\\":[\\\"json\\\",\\\"stream\\\",\\\"multipart\\\"],\\\"name\\\":\\\"reqwest\\\",\\\"optional\\\":true,\\\"req\\\":\\\"^0.12\\\"},{\\\"default_features\\\":false,\\\"features\\\":[\\\"json\\\",\\\"stream\\\",\\\"multipart\\\"],\\\"kind\\\":\\\"dev\\\",\\\"name\\\":\\\"reqwest\\\",\\\"req\\\":\\\"^0.12\\\"},{\\\"name\\\":\\\"serde\\\",\\\"optional\\\":true,\\\"req\\\":\\\"^1.0.211\\\"},{\\\"features\\\":[\\\"derive\\\"],\\\"kind\\\":\\\"dev\\\",\\\"name\\\":\\\"serde\\\",\\\"req\\\":\\\"^1.0.221\\\"},{\\\"name\\\":\\\"serde_core\\\",\\\"req\\\":\\\"^1.0.221\\\"},{\\\"features\\\":[\\\"raw_value\\\"],\\\"name\\\":\\\"serde_json\\\",\\\"optional\\\":true,\\\"req\\\":\\\"^1.0\\\"},{\\\"features\\\":[\\\"raw_value\\\"],\\\"kind\\\":\\\"dev\\\",\\\"name\\\":\\\"serde_json\\\",\\\"req\\\":\\\"^1.0\\\"},{\\\"name\\\":\\\"serde_path_to_error\\\",\\\"optional\\\":true,\\\"req\\\":\\\"^0.1.8\\\"},{\\\"name\\\":\\\"serde_urlencoded\\\",\\\"optional\\\":true,\\\"req\\\":\\\"^0.7\\\"},{\\\"name\\\":\\\"sha1\\\",\\\"optional\\\":true,\\\"req\\\":\\\"^0.10\\\"},{\\\"name\\\":\\\"sync_wrapper\\\",\\\"req\\\":\\\"^1.0.0\\\"},{\\\"features\\\":[\\\"serde-human-readable\\\"],\\\"kind\\\":\\\"dev\\\",\\\"name\\\":\\\"time\\\",\\\"req\\\":\\\"^0.3\\\"},{\\\"features\\\":[\\\"time\\\"],\\\"name\\\":\\\"tokio\\\",\\\"optional\\\":true,\\\"package\\\":\\\"tokio\\\",\\\"req\\\":\\\"^1.44\\\"},{\\\"features\\\":[\\\"macros\\\",\\\"rt\\\",\\\"rt-multi-thread\\\",\\\"net\\\",\\\"test-util\\\"],\\\"kind\\\":\\\"dev\\\",\\\"name\\\":\\\"tokio\\\",\\\"package\\\":\\\"tokio\\\",\\\"req\\\":\\\"^1.44.2\\\"},{\\\"kind\\\":\\\"dev\\\",\\\"name\\\":\\\"tokio-stream\\\",\\\"req\\\":\\\"^0.1\\\"},{\\\"name\\\":\\\"tokio-tungstenite\\\",\\\"optional\\\":true,\\\"req\\\":\\\"^0.28.0\\\"},{\\\"kind\\\":\\\"dev\\\",\\\"name\\\":\\\"tokio-tungstenite\\\",\\\"req\\\":\\\"^0.28.0\\\"},{\\\"default_features\\\":false,\\\"features\\\":[\\\"util\\\"],\\\"name\\\":\\\"tower\\\",\\\"req\\\":\\\"^0.5.2\\\"},{\\\"features\\\":[\\\"util\\\",\\\"timeout\\\",\\\"limit\\\",\\\"load-shed\\\",\\\"steer\\\",\\\"filter\\\"],\\\"kind\\\":\\\"dev\\\",\\\"name\\\":\\\"tower\\\",\\\"package\\\":\\\"tower\\\",\\\"req\\\":\\\"^0.5.2\\\"},{\\\"features\\\":[\\\"add-extension\\\",\\\"auth\\\",\\\"catch-panic\\\",\\\"compression-br\\\",\\\"compression-deflate\\\",\\\"compression-gzip\\\",\\\"cors\\\",\\\"decompression-br\\\",\\\"decompression-deflate\\\",\\\"decompression-gzip\\\",\\\"follow-redirect\\\",\\\"fs\\\",\\\"limit\\\",\\\"map-request-body\\\",\\\"map-response-body\\\",\\\"metrics\\\",\\\"normalize-path\\\",\\\"propagate-header\\\",\\\"redirect\\\",\\\"request-id\\\",\\\"sensitive-headers\\\",\\\"set-header\\\",\\\"set-status\\\",\\\"timeout\\\",\\\"trace\\\",\\\"util\\\",\\\"validate-request\\\"],\\\"name\\\":\\\"tower-http\\\",\\\"optional\\\":true,\\\"req\\\":\\\"^0.6.0\\\"},{\\\"features\\\":[\\\"add-extension\\\",\\\"auth\\\",\\\"catch-panic\\\",\\\"compression-br\\\",\\\"compression-deflate\\\",\\\"compression-gzip\\\",\\\"cors\\\",\\\"decompression-br\\\",\\\"decompression-deflate\\\",\\\"decompression-gzip\\\",\\\"follow-redirect\\\",\\\"fs\\\",\\\"limit\\\",\\\"map-request-body\\\",\\\"map-response-body\\\",\\\"metrics\\\",\\\"normalize-path\\\",\\\"propagate-header\\\",\\\"redirect\\\",\\\"request-id\\\",\\\"sensitive-headers\\\",\\\"set-header\\\",\\\"set-status\\\",\\\"timeout\\\",\\\"trace\\\",\\\"util\\\",\\\"validate-request\\\"],\\\"kind\\\":\\\"dev\\\",\\\"name\\\":\\\"tower-http\\\",\\\"req\\\":\\\"^0.6.0\\\"},{\\\"name\\\":\\\"tower-layer\\\",\\\"req\\\":\\\"^0.3.2\\\"},{\\\"name\\\":\\\"tower-service\\\",\\\"req\\\":\\\"^0.3\\\"},{\\\"default_features\\\":false,\\\"name\\\":\\\"tracing\\\",\\\"optional\\\":true,\\\"req\\\":\\\"^0.1\\\"},{\\\"kind\\\":\\\"dev\\\",\\\"name\\\":\\\"tracing\\\",\\\"req\\\":\\\"^0.1\\\"},{\\\"features\\\":[\\\"json\\\"],\\\"kind\\\":\\\"dev\\\",\\\"name\\\":\\\"tracing-subscriber\\\",\\\"req\\\":\\\"^0.3\\\"},{\\\"features\\\":[\\\"serde\\\",\\\"v4\\\"],\\\"kind\\\":\\\"dev\\\",\\\"name\\\":\\\"uuid\\\",\\\"req\\\":\\\"^1.0\\\"}],\\\"features\\\":{\\\"__private\\\":[\\\"tokio\\\",\\\"http1\\\",\\\"dep:reqwest\\\"],\\\"__private_docs\\\":[\\\"axum-core/__private_docs\\\",\\\"tower/full\\\",\\\"dep:serde\\\",\\\"dep:tower-http\\\"],\\\"default\\\":[\\\"form\\\",\\\"http1\\\",\\\"json\\\",\\\"matched-path\\\",\\\"original-uri\\\",\\\"query\\\",\\\"tokio\\\",\\\"tower-log\\\",\\\"tracing\\\"],\\\"form\\\":[\\\"dep:form_urlencoded\\\",\\\"dep:serde_urlencoded\\\",\\\"dep:serde_path_to_error\\\"],\\\"http1\\\":[\\\"dep:hyper\\\",\\\"hyper?/http1\\\",\\\"hyper-util?/http1\\\"],\\\"http2\\\":[\\\"dep:hyper\\\",\\\"hyper?/http2\\\",\\\"hyper-util?/http2\\\"],\\\"json\\\":[\\\"dep:serde_json\\\",\\\"dep:serde_path_to_error\\\"],\\\"macros\\\":[\\\"dep:axum-macros\\\"],\\\"matched-path\\\":[],\\\"multipart\\\":[\\\"dep:multer\\\"],\\\"original-uri\\\":[],\\\"query\\\":[\\\"dep:form_urlencoded\\\",\\\"dep:serde_urlencoded\\\",\\\"dep:serde_path_to_error\\\"],\\\"tokio\\\":[\\\"dep:hyper-util\\\",\\\"dep:tokio\\\",\\\"tokio/net\\\",\\\"tokio/rt\\\",\\\"tower/make\\\",\\\"tokio/macros\\\"],\\\"tower-log\\\":[\\\"tower/log\\\"],\\\"tracing\\\":[\\\"dep:tracing\\\",\\\"axum-core/tracing\\\"],\\\"ws\\\":[\\\"dep:hyper\\\",\\\"tokio\\\",\\\"dep:tokio-tungstenite\\\",\\\"dep:sha1\\\",\\\"dep:base64\\\"]}}\", | MODULE.bazel.lock:1311:      \"eventsource-stream_0.2.3\": \"{\\\"dependencies\\\":[{\\\"kind\\\":\\\"dev\\\",\\\"name\\\":\\\"futures\\\",\\\"req\\\":\\\"^0.3\\\"},{\\\"default_features\\\":false,\\\"name\\\":\\\"futures-core\\\",\\\"req\\\":\\\"^0.3\\\"},{\\\"kind\\\":\\\"dev\\\",\\\"name\\\":\\\"http\\\",\\\"req\\\":\\\"^0.2\\\"},{\\\"default_features\\\":false,\\\"name\\\":\\\"nom\\\",\\\"req\\\":\\\"^7.1\\\"},{\\\"name\\\":\\\"pin-project-lite\\\",\\\"req\\\":\\\"^0.2.8\\\"},{\\\"features\\\":[\\\"stream\\\"],\\\"kind\\\":\\\"dev\\\",\\\"name\\\":\\\"reqwest\\\",\\\"req\\\":\\\"^0.11\\\"},{\\\"features\\\":[\\\"macros\\\",\\\"rt\\\"],\\\"kind\\\":\\\"dev\\\",\\\"name\\\":\\\"tokio\\\",\\\"req\\\":\\\"^1.0\\\"},{\\\"kind\\\":\\\"dev\\\",\\\"name\\\":\\\"url\\\",\\\"req\\\":\\\"^2.2\\\"}],\\\"features\\\":{\\\"default\\\":[\\\"std\\\"],\\\"std\\\":[\\\"futures-core/std\\\",\\\"nom/std\\\"]}}\", | MODULE.bazel.lock:1392:      \"git+https://github.com/modelcontextprotocol/rust-sdk?rev=98a54789b80110ad210495c4ad845c89e1980471#98a54789b80110ad210495c4ad845c89e1980471_rmcp\": \"{\\\"dependencies\\\":[{\\\"default_features\\\":true,\\\"features\\\":[],\\\"name\\\":\\\"async-trait\\\",\\\"optional\\\":true,\\\"req\\\":\\\"0.1.89\\\"},{\\\"default_features\\\":true,\\\"features\\\":[],\\\"name\\\":\\\"base64\\\",\\\"optional\\\":true,\\\"req\\\":\\\"0.23\\\"},{\\\"default_features\\\":true,\\\"features\\\":[],\\\"name\\\":\\\"bytes\\\",\\\"optional\\\":true,\\\"req\\\":\\\"1\\\"},{\\\"name\\\":\\\"futures\\\",\\\"req\\\":\\\"0.3\\\"},{\\\"default_features\\\":true,\\\"features\\\":[],\\\"name\\\":\\\"hmac\\\",\\\"optional\\\":true,\\\"req\\\":\\\"0.13\\\"},{\\\"default_features\\\":true,\\\"features\\\":[],\\\"name\\\":\\\"http\\\",\\\"optional\\\":true,\\\"req\\\":\\\"1\\\"},{\\\"default_features\\\":true,\\\"features\\\":[],\\\"name\\\":\\\"http-body\\\",\\\"optional\\\":true,\\\"req\\\":\\\"1\\\"},{\\\"default_features\\\":true,\\\"features\\\":[],\\\"name\\\":\\\"http-body-util\\\",\\\"optional\\\":true,\\\"req\\\":\\\"0.1\\\"},{\\\"default_features\\\":true,\\\"features\\\":[\\\"client\\\",\\\"http1\\\"],\\\"name\\\":\\\"hyper\\\",\\\"optional\\\":true,\\\"req\\\":\\\"1\\\"},{\\\"default_features\\\":true,\\\"features\\\":[\\\"tokio\\\"],\\\"name\\\":\\\"hyper-util\\\",\\\"optional\\\":true,\\\"req\\\":\\\"0.1\\\"},{\\\"default_features\\\":true,\\\"features\\\":[\\\"serde\\\"],\\\"name\\\":\\\"indexmap\\\",\\\"optional\\\":false,\\\"req\\\":\\\"2\\\"},{\\\"default_features\\\":true,\\\"features\\\":[\\\"aws_lc_rs\\\"],\\\"name\\\":\\\"jsonwebtoken\\\",\\\"optional\\\":true,\\\"req\\\":\\\"11\\\"},{\\\"default_features\\\":false,\\\"features\\\":[],\\\"name\\\":\\\"oauth2\\\",\\\"optional\\\":true,\\\"req\\\":\\\"5.0\\\"},{\\\"default_features\\\":true,\\\"features\\\":[],\\\"name\\\":\\\"pastey\\\",\\\"optional\\\":true,\\\"req\\\":\\\"0.2.0\\\"},{\\\"name\\\":\\\"pin-project-lite\\\",\\\"req\\\":\\\"0.2\\\"},{\\\"default_features\\\":true,\\\"features\\\":[\\\"tokio1\\\"],\\\"name\\\":\\\"process-wrap\\\",\\\"optional\\\":true,\\\"req\\\":\\\"10.0\\\"},{\\\"default_features\\\":true,\\\"features\\\":[],\\\"name\\\":\\\"rand\\\",\\\"optional\\\":true,\\\"req\\\":\\\"0.10\\\"},{\\\"default_features\\\":false,\\\"features\\\":[\\\"json\\\",\\\"stream\\\"],\\\"name\\\":\\\"reqwest\\\",\\\"optional\\\":true,\\\"req\\\":\\\"0.13.2\\\"},{\\\"default_features\\\":true,\\\"features\\\":[],\\\"name\\\":\\\"rmcp-macros\\\",\\\"optional\\\":true,\\\"req\\\":\\\"3.5.1\\\"},{\\\"default_features\\\":true,\\\"features\\\":[\\\"chrono04\\\"],\\\"name\\\":\\\"schemars\\\",\\\"optional\\\":true,\\\"req\\\":\\\"1.0\\\"},{\\\"default_features\\\":true,\\\"features\\\":[\\\"derive\\\",\\\"rc\\\"],\\\"name\\\":\\\"serde\\\",\\\"optional\\\":false,\\\"req\\\":\\\"1.0\\\"},{\\\"name\\\":\\\"serde_json\\\",\\\"req\\\":\\\"1.0\\\"},{\\\"default_features\\\":true,\\\"features\\\":[],\\\"name\\\":\\\"sha2\\\",\\\"optional\\\":true,\\\"req\\\":\\\"0.11\\\"},{\\\"default_features\\\":true,\\\"features\\\":[],\\\"name\\\":\\\"sse-stream\\\",\\\"optional\\\":true,\\\"req\\\":\\\"0.2.4\\\"},{\\\"name\\\":\\\"thiserror\\\",\\\"req\\\":\\\"2\\\"},{\\\"default_features\\\":true,\\\"features\\\":[\\\"sync\\\",\\\"macros\\\",\\\"rt\\\",\\\"time\\\"],\\\"name\\\":\\\"tokio\\\",\\\"optional\\\":false,\\\"req\\\":\\\"1\\\"},{\\\"default_features\\\":true,\\\"features\\\":[],\\\"name\\\":\\\"tokio-stream\\\",\\\"optional\\\":true,\\\"req\\\":\\\"0.1\\\"},{\\\"default_features\\\":true,\\\"features\\\":[],\\\"name\\\":\\\"tokio-util\\\",\\\"optional\\\":false,\\\"req\\\":\\\"0.7\\\"},{\\\"default_features\\\":true,\\\"features\\\":[],\\\"name\\\":\\\"tower-service\\\",\\\"optional\\\":true,\\\"req\\\":\\\"0.3\\\"},{\\\"default_features\\\":true,\\\"features\\\":[],\\\"name\\\":\\\"tracing\\\",\\\"optional\\\":false,\\\"req\\\":\\\"0.1\\\"},{\\\"default_features\\\":true,\\\"features\\\":[],\\\"name\\\":\\\"url\\\",\\\"optional\\\":true,\\\"req\\\":\\\"2.4\\\"},{\\\"default_features\\\":true,\\\"features\\\":[\\\"v4\\\"],\\\"name\\\":\\\"uuid\\\",\\\"optional\\\":true,\\\"req\\\":\\\"1\\\"},{\\\"default_features\\\":true,\\\"features\\\":[],\\\"name\\\":\\\"which\\\",\\\"optional\\\":true,\\\"req\\\":\\\"8\\\"},{\\\"default_features\\\":true,\\\"features\\\":[],\\\"name\\\":\\\"zeroize\\\",\\\"optional\\\":true,\\\"req\\\":\\\"1\\\"},{\\\"default_features\\\":false,\\\"features\\\":[\\\"serde\\\",\\\"clock\\\",\\\"std\\\",\\\"oldtime\\\"],\\\"name\\\":\\\"chrono\\\",\\\"optional\\\":false,\\\"req\\\":\\\"0.4.38\\\",\\\"target\\\":\\\"cfg(all(target_family = \\\\\\\"wasm\\\\\\\", target_os = \\\\\\\"unknown\\\\\\\"))\\\"},{\\\"default_features\\\":false,\\\"features\\\":[\\\"serde\\\",\\\"now\\\"],\\\"name\\\":\\\"chrono\\\",\\\"optional\\\":false,\\\"req\\\":\\\"0.4.38\\\",\\\"target\\\":\\\"cfg(not(all(target_family = \\\\\\\"wasm\\\\\\\", target_os = \\\\\\\"unknown\\\\\\\")))\\\"},{\\\"name\\\":\\\"libc\\\",\\\"req\\\":\\\"0.2\\\",\\\"target\\\":\\\"cfg(target_os = \\\\\\\"linux\\\\\\\")\\\"}],\\\"features\\\":{\\\"__reqwest\\\":[\\\"dep:reqwest\\\"],\\\"auth\\\":[\\\"dep:async-trait\\\",\\\"dep:oauth2\\\",\\\"__reqwest\\\",\\\"dep:url\\\"],\\\"auth-client-credentials-jwt\\\":[\\\"auth\\\",\\\"dep:jsonwebtoken\\\",\\\"uuid\\\"],\\\"auth-enterprise-managed\\\":[\\\"auth\\\",\\\"base64\\\"],\\\"client\\\":[\\\"dep:tokio-stream\\\"],\\\"client-side-sse\\\":[\\\"dep:sse-stream\\\",\\\"dep:http\\\",\\\"dep:bytes\\\",\\\"base64\\\"],\\\"default\\\":[\\\"base64\\\",\\\"macros\\\",\\\"server\\\"],\\\"elicitation\\\":[\\\"dep:url\\\"],\\\"local\\\":[\\\"rmcp-macros?/local\\\"],\\\"macros\\\":[\\\"dep:rmcp-macros\\\",\\\"dep:pastey\\\"],\\\"request-state\\\":[\\\"dep:hmac\\\",\\\"dep:sha2\\\",\\\"dep:zeroize\\\",\\\"base64\\\"],\\\"reqwest\\\":[\\\"__reqwest\\\",\\\"reqwest?/rustls\\\"],\\\"reqwest-native-tls\\\":[\\\"__reqwest\\\",\\\"reqwest?/native-tls\\\"],\\\"reqwest-tls-no-provider\\\":[\\\"__reqwest\\\",\\\"reqwest?/rustls-no-provider\\\"],\\\"schemars\\\":[\\\"dep:schemars\\\"],\\\"server\\\":[\\\"transport-async-rw\\\",\\\"schemars\\\",\\\"dep:pastey\\\",\\\"uuid\\\"],\\\"server-side-http\\\":[\\\"uuid\\\",\\\"dep:rand\\\",\\\"dep:tokio-stream\\\",\\\"dep:http\\\",\\\"dep:http-body\\\",\\\"dep:http-body-util\\\",\\\"dep:bytes\\\",\\\"dep:sse-stream\\\",\\\"tower\\\",\\\"base64\\\"],\\\"tower\\\":[\\\"dep:tower-service\\\"],\\\"transport-async-rw\\\":[\\\"tokio/io-util\\\",\\\"tokio-util/codec\\\"],\\\"transport-child-process\\\":[\\\"transport-async-rw\\\",\\\"tokio/process\\\",\\\"dep:process-wrap\\\"],\\\"transport-io\\\":[\\\"transport-async-rw\\\",\\\"tokio/io-std\\\",\\\"tokio/net\\\"],\\\"transport-streamable-http-client\\\":[\\\"client-side-sse\\\",\\\"transport-worker\\\"],\\\"transport-streamable-http-client-reqwest\\\":[\\\"transport-streamable-http-client\\\",\\\"__reqwest\\\"],\\\"transport-streamable-http-client-unix-socket\\\":[\\\"transport-streamable-http-client\\\",\\\"dep:hyper\\\",\\\"dep:hyper-util\\\",\\\"dep:http-body-util\\\",\\\"dep:http\\\",\\\"dep:bytes\\\",\\\"tokio/net\\\"],\\\"transport-streamable-http-server\\\":[\\\"transport-streamable-http-server-session\\\",\\\"server-side-http\\\",\\\"transport-worker\\\"],\\\"transport-streamable-http-server-session\\\":[\\\"transport-async-rw\\\",\\\"dep:async-trait\\\",\\\"dep:tokio-stream\\\"],\\\"transport-worker\\\":[\\\"dep:tokio-stream\\\"],\\\"which-command\\\":[\\\"transport-child-process\\\",\\\"dep:which\\\"]},\\\"strip_prefix\\\":\\\"./crates/rmcp\\\"}\","
+      ],
+      "at": "2026-10-22T21:26:02.526Z"
+    }
+  ],
+  "finished_at": "2026-10-22T21:29:07.662Z",
+  "behaviors": [
+    {
+      "n": "b1",
+      "behavior": "Codex sends product analytics events (thread/turn, tool-call, plugin, hook, guardian, error and token-usage facts) to <chatgpt_base_url>/codex/analytics-events/events for ChatGPT-authenticated sessions. The queue is created whenever analytics.enabled is not explicitly false, so it is on by default.",
+      "signal": "telemetry",
+      "severity": "medium",
+      "user_impact": "Users who read the README, install guide and config docs are not told that usage analytics are collected by default or that analytics.enabled = false in config.toml opts out. Users who need to keep usage data private would not know to set it.",
+      "docs_searched": "README.md, docs/install.md, docs/config.md (16 lines, links out), docs/authentication.md, docs/sandbox.md, SECURITY.md: none mention analytics or an opt-out. A repo-wide search of *.md for \"analytics\" only hits the app-server-test-client README (debug capture) and unrelated skill docs.",
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/analytics/src/client.rs",
+          "line_start": 321,
+          "quote": "queue: (analytics_enabled != Some(false))",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/analytics/src/client.rs:321",
+            "file_sha256": "4d7c7c9f1adece502981b5bc4663dcd5213c9aed39b804cf69e64b21bbcc0bb4"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/analytics/src/client.rs",
+          "line_start": 154,
+          "quote": "url: format!(\"{base_url}/codex/analytics-events/events\"),",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/analytics/src/client.rs:154",
+            "file_sha256": "4d7c7c9f1adece502981b5bc4663dcd5213c9aed39b804cf69e64b21bbcc0bb4"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/core/src/config/mod.rs",
+          "line_start": 4664,
+          "quote": "analytics_enabled: cfg.analytics.as_ref().and_then(|a| a.enabled),",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/core/src/config/mod.rs:4664",
+            "file_sha256": "b9786bf33ed36546b100578ce26f6884033c404d11c72ed1e234c1b519605c04"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/tui/src/startup_orchestration.rs",
+          "line_start": 673,
+          "quote": "/*default_analytics_enabled*/ true,",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/tui/src/startup_orchestration.rs:673",
+            "file_sha256": "fe3a5988dedc067857c72bb9564c7f5bc5d2b34fce7b9f811b012c9eaedaf931"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "Analytics queue is enabled unless analytics.enabled is explicitly false, sending events to a ChatGPT endpoint, and the searched docs do not mention it or the opt-out. Genuine undisclosed default-on telemetry.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "codex-rs/analytics/src/client.rs",
+            "line_start": 321,
+            "quote": "queue: (analytics_enabled != Some(false))",
+            "checked": {
+              "ok": true,
+              "where": "codex-rs/analytics/src/client.rs:321",
+              "file_sha256": "4d7c7c9f1adece502981b5bc4663dcd5213c9aed39b804cf69e64b21bbcc0bb4"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:28:43.359Z"
+      },
+      "receipt": "rcpt_1d10704d29d5"
+    },
+    {
+      "n": "b2",
+      "behavior": "By default otel.metrics_exporter is Statsig, so the TUI/CLI export OTLP/HTTP metrics to Statsig unless analytics.enabled is set to false (the analytics opt-out also switches the built-in Statsig exporter off).",
+      "signal": "telemetry",
+      "severity": "medium",
+      "user_impact": "The otel README states that default log and trace exporters are \"none\" and only describes Statsig as an available shorthand, so a reader would conclude nothing is exported by default. In fact metrics go to Statsig by default; the only opt-out is analytics.enabled = false, which the user-facing docs do not mention.",
+      "docs_searched": "codex-rs/otel/README.md (says exporter defaults to \"none\" and describes Statsig only as an available shorthand), README.md, docs/install.md, docs/config.md, SECURITY.md: no statement that metrics are exported by default or how to disable.",
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/config/src/types.rs",
+          "line_start": 681,
+          "quote": "metrics_exporter: OtelExporterKind::Statsig,",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/config/src/types.rs:681",
+            "file_sha256": "56fcd0268c1147f3f03f5ac45726ae9b4a327878caf15eb0381b6229918e38ac"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/core/src/otel_init.rs",
+          "line_start": 70,
+          "line_end": 75,
+          "quote": "// Analytics consent controls the built-in exporter, not explicit OTLP collectors.\n    let metrics_exporter = if matches!(config.otel.metrics_exporter, Kind::Statsig)\n        && !config\n            .analytics_enabled\n            .unwrap_or(default_analytics_enabled)",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/core/src/otel_init.rs:70-75",
+            "file_sha256": "5909cd6924ad14ea9e84151eced8e3d5aad57f47b12f9dd14c8f98a9dd3978c0"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/tui/src/startup_orchestration.rs",
+          "line_start": 673,
+          "quote": "/*default_analytics_enabled*/ true,",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/tui/src/startup_orchestration.rs:673",
+            "file_sha256": "fe3a5988dedc067857c72bb9564c7f5bc5d2b34fce7b9f811b012c9eaedaf931"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "Default metrics exporter is Statsig and is only disabled when analytics is turned off, with default consent true in the TUI. The otel README implies defaults are none, so metrics export is undisclosed. Related to b1 but a distinct data path.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "codex-rs/config/src/types.rs",
+            "line_start": 681,
+            "quote": "metrics_exporter: OtelExporterKind::Statsig,",
+            "checked": {
+              "ok": true,
+              "where": "codex-rs/config/src/types.rs:681",
+              "file_sha256": "56fcd0268c1147f3f03f5ac45726ae9b4a327878caf15eb0381b6229918e38ac"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:28:45.216Z"
+      },
+      "receipt": "rcpt_cb2192ae8d64"
+    }
+  ],
+  "review_requested_at": "2026-10-22T21:28:21.930Z",
+  "skipped": [
+    {
+      "candidate": "c1",
+      "reason": "Stdin key reading and the OIDC request-credential variant were traced in read_api_key.rs and github_oidc.rs and are covered by the recorded API-key and OIDC claims."
+    },
+    {
+      "candidate": "c2",
+      "reason": "Prompt template for the memory-consolidation model, not a user-facing promise."
+    },
+    {
+      "candidate": "c3",
+      "reason": "Model prompt template about escalation policy, not a documented user-facing guarantee."
+    },
+    {
+      "candidate": "c4",
+      "reason": "Instructions inside a bundled sample skill for the model, not a promise made by this project."
+    },
+    {
+      "candidate": "c5",
+      "reason": "Bazel contributor build documentation (internal developer doc), not a user-facing promise."
+    },
+    {
+      "candidate": "c9",
+      "reason": "Same WSL1 bubblewrap statement as the linux-sandbox README, which is recorded as a claim."
+    },
+    {
+      "candidate": "c11",
+      "reason": "Same WSL1 sentence as the recorded linux-sandbox README claim (lines 26-28)."
+    },
+    {
+      "candidate": "c13",
+      "reason": "Introductory description of the proxy's auth modes; OIDC behavior is covered by the recorded OIDC claims."
+    },
+    {
+      "candidate": "c14",
+      "reason": "Shutdown behavior is covered by the recorded /shutdown and exact-route claims; the rest is operational advice."
+    },
+    {
+      "candidate": "c15",
+      "reason": "OIDC request-credential stdin semantics; covered by the recorded OIDC claims."
+    },
+    {
+      "candidate": "c16",
+      "reason": "States what the OIDC path does not guarantee (no mlock); consistent with the code, which uses Zeroizing buffers."
+    },
+    {
+      "candidate": "c17",
+      "reason": "Describes the Bearer header; built in read_api_key.rs and auth.rs bearer_header with no discrepancy."
+    },
+    {
+      "candidate": "c18",
+      "reason": "Recorded as a rollout-trace privacy claim."
+    },
+    {
+      "candidate": "c19",
+      "reason": "Guardian classifier prompt template, not a user-facing guarantee."
+    },
+    {
+      "candidate": "c20",
+      "reason": "Guardian policy prompt template, not a user-facing guarantee."
+    },
+    {
+      "candidate": "c22",
+      "reason": "Internal app-server protocol detail for client developers; not traced, no user-facing guarantee."
+    },
+    {
+      "candidate": "c23",
+      "reason": "Internal app-server protocol size limit for client developers; not traced."
+    },
+    {
+      "candidate": "c24",
+      "reason": "mitm default false and unknown-field rejection are visible in NetworkProxyConfig (deny_unknown_fields, mitm default); no discrepancy found."
+    },
+    {
+      "candidate": "c28",
+      "reason": "Developer build/test requirements for a vendored third-party voice component."
+    },
+    {
+      "candidate": "c29",
+      "reason": "Instruction text in a sample skill for the model, not a project promise."
+    },
+    {
+      "candidate": "c31",
+      "reason": "Internal exec-server transport detail, not traced."
+    },
+    {
+      "candidate": "c33",
+      "reason": "Contributor build note about third-party V8 packaging."
+    },
+    {
+      "candidate": "c34",
+      "reason": "Sample skill documentation about an image model, not a project promise."
+    },
+    {
+      "candidate": "c35",
+      "reason": "Sample skill documentation about an image model, not a project promise."
+    },
+    {
+      "candidate": "c36",
+      "reason": "Sample skill documentation about an image model, not a project promise."
+    },
+    {
+      "candidate": "c37",
+      "reason": "Sample skill documentation about an image model, not a project promise."
+    },
+    {
+      "candidate": "c38",
+      "reason": "Sample skill instruction for the model, not a project promise."
+    },
+    {
+      "candidate": "c39",
+      "reason": "Internal crate API default channel capacity; not a user-facing promise."
+    },
+    {
+      "signal": "permission_bypass",
+      "reason": "Hits are the opt-in --dangerously-bypass-approvals-and-sandbox flag (help text says EXTREMELY DANGEROUS), a generated hook-schema enum value, and a label reporting approval policy Never to hooks as bypassPermissions; no silent bypass found."
+    }
+  ],
+  "notes": [
+    {
+      "n": "1",
+      "claim": "OIDC renewal failures delay further exchange attempts by one second, doubling after each failure up to 30 seconds.",
+      "verdict": "VERIFIED",
+      "severity": "low",
+      "explanation": "Backoff starts at 1s and doubles but is capped at MAX_RENEWAL_BACKOFF = 61 seconds, not 30.",
+      "user_impact": "Operators sizing retry behaviour from the docs expect at most 30s between exchange attempts; the code allows up to 61s (1,2,4,8,16,32,61), so recovery after a token-endpoint outage can take about twice as long as documented.",
+      "note": "Real discrepancy (cap 61s vs documented 30s), but a retry backoff detail that misleads nobody materially. Severity low is appropriate.",
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 126,
+        "quote": "by one second, doubling after each failure up to 30 seconds."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/auth.rs",
+          "line_start": 46,
+          "quote": "const MAX_RENEWAL_BACKOFF: Duration = Duration::from_secs(61);",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/auth.rs:46",
+            "file_sha256": "136a85830b566ea875b7c8023b8239b960b546c1a4b5e937e5afbc850113bb4e"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/auth.rs",
+          "line_start": 252,
+          "quote": ".map(|failure| (failure.delay * 2).min(MAX_RENEWAL_BACKOFF))",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/auth.rs:252",
+            "file_sha256": "136a85830b566ea875b7c8023b8239b960b546c1a4b5e937e5afbc850113bb4e"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "downgrade",
+        "reason": "Real discrepancy (cap 61s vs documented 30s), but a retry backoff detail that misleads nobody materially. Severity low is appropriate.",
+        "severity": null,
+        "evidence": [],
+        "at": "2026-10-22T21:28:40.027Z"
+      },
+      "receipt": "rcpt_74d349d46cae",
+      "original_verdict": "PARTIAL"
+    }
+  ],
+  "retracted": [],
+  "raw_claims": [
+    {
+      "n": "1",
+      "claim": "OIDC renewal failures delay further exchange attempts by one second, doubling after each failure up to 30 seconds.",
+      "verdict": "PARTIAL",
+      "severity": "low",
+      "explanation": "Backoff starts at 1s and doubles but is capped at MAX_RENEWAL_BACKOFF = 61 seconds, not 30.",
+      "user_impact": "Operators sizing retry behaviour from the docs expect at most 30s between exchange attempts; the code allows up to 61s (1,2,4,8,16,32,61), so recovery after a token-endpoint outage can take about twice as long as documented.",
+      "note": null,
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 126,
+        "quote": "by one second, doubling after each failure up to 30 seconds."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/auth.rs",
+          "line_start": 46,
+          "quote": "const MAX_RENEWAL_BACKOFF: Duration = Duration::from_secs(61);",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/auth.rs:46",
+            "file_sha256": "136a85830b566ea875b7c8023b8239b960b546c1a4b5e937e5afbc850113bb4e"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/auth.rs",
+          "line_start": 252,
+          "quote": ".map(|failure| (failure.delay * 2).min(MAX_RENEWAL_BACKOFF))",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/auth.rs:252",
+            "file_sha256": "136a85830b566ea875b7c8023b8239b960b546c1a4b5e937e5afbc850113bb4e"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "downgrade",
+        "reason": "Real discrepancy (cap 61s vs documented 30s), but a retry backoff detail that misleads nobody materially. Severity low is appropriate.",
+        "severity": null,
+        "evidence": [],
+        "at": "2026-10-22T21:28:40.027Z"
+      },
+      "receipt": "rcpt_74d349d46cae"
+    },
+    {
+      "n": "2",
+      "claim": "The proxy accepts exactly POST /v1/responses (no query string); other requests get 403, except the optional GET /shutdown.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Exact path equality on the raw URL (a query string fails), 403 otherwise; shutdown only when --http-shutdown is set.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 150,
+        "quote": "Accepts exactly `POST /v1/responses` (no query string)."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/lib.rs",
+          "line_start": 237,
+          "quote": "let allow = method == Method::Post && url_path == \"/v1/responses\";",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/lib.rs:237",
+            "file_sha256": "e080ce9ef9b8e858ceee145842ad8b84ce3b38056c892e3f2115d5caeae71b71"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/lib.rs",
+          "line_start": 182,
+          "quote": "if http_shutdown && request.method() == &Method::Get && request.url() == \"/shutdown\" {",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/lib.rs:182",
+            "file_sha256": "e080ce9ef9b8e858ceee145842ad8b84ce3b38056c892e3f2115d5caeae71b71"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_cfe1f0b2110a"
+    },
+    {
+      "n": "3",
+      "claim": "Dump files redact Authorization and any header whose name includes cookie; all other header values are dumped in full.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Request and response header conversions both use should_redact_header.",
+      "user_impact": null,
+      "note": "Bodies are dumped verbatim, so prompts and outputs land on disk; the docs state bodies are written.",
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 152,
+        "quote": "Header values are dumped in full except `Authorization` and any header whose name includes `cookie`, which are redacted."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/dump.rs",
+          "line_start": 186,
+          "line_end": 189,
+          "quote": "name.eq_ignore_ascii_case(AUTHORIZATION_HEADER_NAME)\n        || name.to_ascii_lowercase().contains(\"cookie\")",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/dump.rs:186-189",
+            "file_sha256": "1f2850c9b0af53fa7d7bcbd28389898322d4b42a16260d4980105f7833479ccb"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_01ff091be2ef"
+    },
+    {
+      "n": "4",
+      "claim": "In API-key mode the key is read from stdin into a 1024-byte stack buffer, validated, the buffer zeroized, the String leaked and mlock(2)ed on UNIX.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Implemented as described. mlock failure is silently ignored (README says \"attempts\") and it is a no-op on Windows.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 189,
+        "quote": "At startup, we allocate a `1024` byte buffer on the stack and copy `\"Bearer \"` into the start of the buffer."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/read_api_key.rs",
+          "line_start": 8,
+          "quote": "const BUFFER_SIZE: usize = 1024;",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/read_api_key.rs:8",
+            "file_sha256": "8e38a6bd5f75c5d08ac006ce0ce0e474d76f7acf265f2586188c92db63cbcf77"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/read_api_key.rs",
+          "line_start": 157,
+          "line_end": 160,
+          "quote": "buf.zeroize();\n\n    let leaked: &'static mut str = header_value.leak();\n    mlock_str(leaked);",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/read_api_key.rs:157-160",
+            "file_sha256": "8e38a6bd5f75c5d08ac006ce0ce0e474d76f7acf265f2586188c92db63cbcf77"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/read_api_key.rs",
+          "line_start": 201,
+          "quote": "let _ = unsafe { mlock(start as *const c_void, size) };",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/read_api_key.rs:201",
+            "file_sha256": "8e38a6bd5f75c5d08ac006ce0ce0e474d76f7acf265f2586188c92db63cbcf77"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9d0c8f5a2710"
+    },
+    {
+      "n": "5",
+      "claim": "In OIDC mode only the default OpenAI upstream is allowed and redirects are disabled; the request URL must be HTTPS.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Upstream equality check, no-redirect policy on the Responses client, token client built without redirects, HTTPS scheme enforced.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 111,
+        "quote": "In OIDC mode only the default `https://api.openai.com/v1/responses` upstream is"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/auth.rs",
+          "line_start": 124,
+          "quote": "if upstream != OPENAI_RESPONSES_URL {",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/auth.rs:124",
+            "file_sha256": "136a85830b566ea875b7c8023b8239b960b546c1a4b5e937e5afbc850113bb4e"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/auth.rs",
+          "line_start": 162,
+          "quote": "Self::Federated { .. } => reqwest::redirect::Policy::none(),",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/auth.rs:162",
+            "file_sha256": "136a85830b566ea875b7c8023b8239b960b546c1a4b5e937e5afbc850113bb4e"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/github_oidc.rs",
+          "line_start": 36,
+          "quote": "if request_url.scheme() != \"https\"",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/github_oidc.rs:36",
+            "file_sha256": "fd3067662367f1ee984ec02a319cfcec13ce34c332f4bda8f95747eac05079f6"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_b49b40ae7152"
+    },
+    {
+      "n": "6",
+      "claim": "Cloud client requires HTTPS except direct loopback HTTP with an unrestricted, unmanaged factory, which bypasses proxies; redirects rejected; 64 MiB message bound; 150-second setup deadline.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Scheme/loopback validation, managed or restricted policies rejected for plaintext, direct (non-proxy) client for local HTTP, redirects disabled, 150s and 64 MiB constants all match.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/cloud-client/README.md",
+        "line_start": 9,
+        "line_end": 10,
+        "quote": "HTTPS is required except for direct loopback HTTP with an unrestricted, unmanaged\nfactory. This exception bypasses proxies to keep plaintext credentials local."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/cloud-client/src/lib.rs",
+          "line_start": 56,
+          "quote": "if (endpoint.scheme() != \"https\" && !(endpoint.scheme() == \"http\" && loopback))",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/cloud-client/src/lib.rs:56",
+            "file_sha256": "3a8e910a517b9b11e263cf706981a6bdb160a4c3b612069044c5756f437fbee9"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/cloud-client/src/lib.rs",
+          "line_start": 80,
+          "line_end": 82,
+          "quote": "let http = if local_http {\n            // Plaintext credentials must never leave loopback through an outbound proxy.\n            builder.build_direct()",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/cloud-client/src/lib.rs:80-82",
+            "file_sha256": "3a8e910a517b9b11e263cf706981a6bdb160a4c3b612069044c5756f437fbee9"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/cloud-client/src/lib.rs",
+          "line_start": 32,
+          "line_end": 33,
+          "quote": "const REQUEST_TIMEOUT: Duration = Duration::from_secs(150);\nconst MAX_MESSAGE_BYTES: usize = 64 * 1024 * 1024;",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/cloud-client/src/lib.rs:32-33",
+            "file_sha256": "3a8e910a517b9b11e263cf706981a6bdb160a4c3b612069044c5756f437fbee9"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_451d94da59b1"
+    },
+    {
+      "n": "7",
+      "claim": "The TypeScript SDK requires Node.js 18+.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "package.json engines matches.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "sdk/typescript/README.md",
+        "line_start": 13,
+        "quote": "Requires Node.js 18+."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "sdk/typescript/package.json",
+          "line_start": 19,
+          "line_end": 20,
+          "quote": "\"engines\": {\n    \"node\": \">=18\"",
+          "checked": {
+            "ok": true,
+            "where": "sdk/typescript/package.json:19-20",
+            "file_sha256": "bc908b2ca2823217d19e56fc472b895b18a451a57411046b131992b34977b02c"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_3e87ce75aa40"
+    },
+    {
+      "n": "8",
+      "claim": "By default the Codex CLI inherits the Node.js process environment; the optional env parameter fully controls variables; the SDK still injects required variables such as CODEX_API_KEY.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Matches; the SDK also sets an originator variable when absent, which the README's \"such as\" covers.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "sdk/typescript/README.md",
+        "line_start": 121,
+        "quote": "By default, the Codex CLI inherits the Node.js process environment."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "sdk/typescript/src/exec.ts",
+          "line_start": 184,
+          "line_end": 192,
+          "quote": "if (this.envOverride) {\n      Object.assign(env, this.envOverride);\n    } else {\n      for (const [key, value] of Object.entries(process.env)) {",
+          "checked": {
+            "ok": true,
+            "where": "sdk/typescript/src/exec.ts:184-192",
+            "file_sha256": "0df2fe1ccd90e05b2f2fb0cb3e1bd3293e23f36e3bbb369258edc6a63ae8655c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "sdk/typescript/src/exec.ts",
+          "line_start": 196,
+          "line_end": 198,
+          "quote": "if (args.apiKey) {\n      env.CODEX_API_KEY = args.apiKey;",
+          "checked": {
+            "ok": true,
+            "where": "sdk/typescript/src/exec.ts:196-198",
+            "file_sha256": "0df2fe1ccd90e05b2f2fb0cb3e1bd3293e23f36e3bbb369258edc6a63ae8655c"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_1bd0b60cb019"
+    },
+    {
+      "n": "9",
+      "claim": "Rollout tracing is not telemetry: Codex does not upload traces and writes local bundles only when CODEX_ROLLOUT_TRACE_ROOT is set.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Tracing is off unless the env var is set; the crate depends on no HTTP client (only the http types crate) and a grep of its sources for reqwest/hyper/upload/TcpStream found nothing.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/rollout-trace/README.md",
+        "line_start": 3,
+        "line_end": 5,
+        "quote": "Rollout tracing is not telemetry. Codex does **not** upload or\n> report these traces; it writes local bundles only when\n> `CODEX_ROLLOUT_TRACE_ROOT` is set."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/rollout-trace/src/thread.rs",
+          "line_start": 107,
+          "quote": "let Some(root) = std::env::var_os(CODEX_ROLLOUT_TRACE_ROOT_ENV) else {",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/rollout-trace/src/thread.rs:107",
+            "file_sha256": "0763d39148d68a61b9d1c2381bb49b985dad4f029b75d64e1491daea36e0a82d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/rollout-trace/Cargo.toml",
+          "line_start": 15,
+          "line_end": 23,
+          "quote": "anyhow = { workspace = true }\ncodex-code-mode = { workspace = true }\ncodex-protocol = { workspace = true }\nhttp = { workspace = true }",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/rollout-trace/Cargo.toml:15-23",
+            "file_sha256": "1945dfdbca622a193f680d98cc0a733eec58510e9d3bc3a6efe0e3db153f4c62"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_70cccf1d2d4c"
+    },
+    {
+      "n": "10",
+      "claim": "The TUI records diagnostics in bounded local stores by default; setting log_dir explicitly enables a plaintext TUI log (codex-tui.log) for a run.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The file layer exists only when log_dir is present in the effective config (including -c overrides); otherwise only the state-DB and in-memory feedback layers are registered. File is created with mode 0600 on Unix.",
+      "user_impact": null,
+      "note": "Whether the default stores are actually size-bounded was not traced; the in-memory feedback buffer and SQLite log DB also feed /feedback uploads when the user submits feedback.",
+      "source": {
+        "file": "docs/install.md",
+        "line_start": 56,
+        "quote": "The TUI records diagnostics in bounded local stores by default. Set `log_dir` explicitly to enable a plaintext TUI log for a run:"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/tui/src/startup_orchestration.rs",
+          "line_start": 845,
+          "quote": "let (tui_file_layer, _tui_file_log_guard) = if config_toml_log_dir_configured {",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/tui/src/startup_orchestration.rs:845",
+            "file_sha256": "fe3a5988dedc067857c72bb9564c7f5bc5d2b34fce7b9f811b012c9eaedaf931"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/tui/src/startup_orchestration.rs",
+          "line_start": 860,
+          "quote": "let log_file = log_file_opts.open(log_dir.join(TUI_LOG_FILE_NAME))?;",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/tui/src/startup_orchestration.rs:860",
+            "file_sha256": "fe3a5988dedc067857c72bb9564c7f5bc5d2b34fce7b9f811b012c9eaedaf931"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/tui/src/startup_orchestration.rs",
+          "line_start": 913,
+          "line_end": 915,
+          "quote": "let log_db = state_db\n        .clone()\n        .map(|state_db| log_db::start(state_db, std::sync::Arc::new(feedback.clone())));",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/tui/src/startup_orchestration.rs:913-915",
+            "file_sha256": "fe3a5988dedc067857c72bb9564c7f5bc5d2b34fce7b9f811b012c9eaedaf931"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9cfa770ede36"
+    },
+    {
+      "n": "11",
+      "claim": "When bubblewrap is active, the filesystem is read-only by default via --ro-bind / /.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "--ro-bind / / is used for full-read policies; restricted-read policies instead start from an empty tmpfs root, which is stricter. A separate full-write branch uses --bind / /.",
+      "user_impact": null,
+      "note": "Under restricted-read policies the root is a tmpfs rather than ro-bind; this is stricter than documented, so it misleads nobody toward unsafe use.",
+      "source": {
+        "file": "codex-rs/linux-sandbox/README.md",
+        "line_start": 58,
+        "quote": "- When bubblewrap is active, the filesystem is read-only by default via `--ro-bind / /`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/linux-sandbox/src/bwrap.rs",
+          "line_start": 503,
+          "line_end": 511,
+          "quote": "let mut args = if file_system_sandbox_policy.has_full_disk_read_access() {\n        // Read-only root, then mount a minimal device tree.",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/linux-sandbox/src/bwrap.rs:503-511",
+            "file_sha256": "69a23ea16d525de5938c1fd47561c90d6047eb58f9864ca47749d696e5d9fa76"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/linux-sandbox/src/bwrap.rs",
+          "line_start": 517,
+          "line_end": 520,
+          "quote": "// Start from an empty filesystem and add only the approved readable\n        // roots plus a minimal `/dev`.\n        let mut args = vec![\n            \"--tmpfs\".to_string(),",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/linux-sandbox/src/bwrap.rs:517-520",
+            "file_sha256": "69a23ea16d525de5938c1fd47561c90d6047eb58f9864ca47749d696e5d9fa76"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_b315d88f20d8"
+    },
+    {
+      "n": "12",
+      "claim": "With bubblewrap, the helper explicitly isolates the user namespace via --unshare-user, creates a PID namespace by default, and unshares the network namespace when network is restricted.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Matches; PID unshare is skipped only with the startup-only inherit_pid_namespace option, and the code also drops all capabilities (--cap-drop ALL).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/linux-sandbox/README.md",
+        "line_start": 91,
+        "line_end": 94,
+        "quote": "- When bubblewrap is active, the helper explicitly isolates the user namespace via\n  `--unshare-user`. By default it also creates a PID namespace via `--unshare-pid`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/linux-sandbox/src/bwrap.rs",
+          "line_start": 284,
+          "line_end": 292,
+          "quote": "\"--unshare-user\".to_string(),\n        \"--unshare-ipc\".to_string(),\n    ];\n    if !options.inherit_pid_namespace {\n        args.push(\"--unshare-pid\".to_string());\n    }\n    if options.network_mode.should_unshare_network() {",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/linux-sandbox/src/bwrap.rs:284-292",
+            "file_sha256": "69a23ea16d525de5938c1fd47561c90d6047eb58f9864ca47749d696e5d9fa76"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_0368f2295d0a"
+    },
+    {
+      "n": "13",
+      "claim": "The standalone installers download from https://releases.openai.com/codex by default and fall back to GitHub Releases; setting CODEX_INSTALLER_USE_RELEASES_OPENAI_COM=false forces GitHub.",
+      "verdict": "PARTIAL",
+      "severity": "medium",
+      "explanation": "install.sh defaults the preference to false, so it resolves from GitHub unless the env var enables releases.openai.com; install.ps1 defaults to true and falls back to GitHub with a warning.",
+      "user_impact": "On Mac/Linux, the install.sh in this repo defaults to GitHub Releases and only uses releases.openai.com when the env var is set to 1/true/yes. A user or admin who relies on the README to allowlist only releases.openai.com, or to pick the download origin, would see the shell installer fetch from GitHub instead. The Windows script does default to releases.openai.com. The hosted copy at chatgpt.com/codex/install.sh is outside the repo and could not be checked.",
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 28,
+        "quote": "The standalone installers download from `https://releases.openai.com/codex` by default and fall back to GitHub Releases if a metadata or asset download is unavailable."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "scripts/install/install.sh",
+          "line_start": 8,
+          "line_end": 9,
+          "quote": "DEFAULT_PREFER_RELEASES_OPENAI_COM=\"false\"\nPREFER_RELEASES_OPENAI_COM=\"${CODEX_INSTALLER_USE_RELEASES_OPENAI_COM:-$DEFAULT_PREFER_RELEASES_OPENAI_COM}\"",
+          "checked": {
+            "ok": true,
+            "where": "scripts/install/install.sh:8-9",
+            "file_sha256": "0f896aeed686ede604c4d5ffe197524e30a886545c8b78bc6340a699d8fad908"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "scripts/install/install.sh",
+          "line_start": 420,
+          "line_end": 421,
+          "quote": "case \"$PREFER_RELEASES_OPENAI_COM\" in\n    1 | [Tt][Rr][Uu][Ee] | [Yy][Ee][Ss])",
+          "checked": {
+            "ok": true,
+            "where": "scripts/install/install.sh:420-421",
+            "file_sha256": "0f896aeed686ede604c4d5ffe197524e30a886545c8b78bc6340a699d8fad908"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "scripts/install/install.ps1",
+          "line_start": 15,
+          "quote": "$DefaultPreferReleasesOpenAICom = $true",
+          "checked": {
+            "ok": true,
+            "where": "scripts/install/install.ps1:15",
+            "file_sha256": "96f80f28581f354ca60c9d5cce0b437949cd8c50a5c274c139872701ef372d1d"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "README says installers default to releases.openai.com, but install.sh defaults to false (GitHub) and only uses releases.openai.com when the env var is set. Real contradiction for Mac/Linux users. Severity medium is somewhat high, since the Windows script matches and the hosted script could not be checked; low-medium is more apt.",
+        "severity": "low",
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "scripts/install/install.sh",
+            "line_start": 8,
+            "line_end": 9,
+            "quote": "DEFAULT_PREFER_RELEASES_OPENAI_COM=\"false\"",
+            "checked": {
+              "ok": true,
+              "where": "scripts/install/install.sh:8-9",
+              "file_sha256": "0f896aeed686ede604c4d5ffe197524e30a886545c8b78bc6340a699d8fad908"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:28:42.219Z"
+      },
+      "receipt": "rcpt_5761b4ff0d3e"
+    },
+    {
+      "n": "14",
+      "claim": "Python SDK thread starts default to ApprovalMode.auto_review; turn starts accept an optional approval_mode override.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "thread_start/async variants default to auto_review (lines 138, 396); thread resume/fork and turn methods take Optional overrides defaulting to None.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "sdk/python/docs/api-reference.md",
+        "line_start": 6,
+        "quote": "Thread starts default to `ApprovalMode.auto_review`; turn starts accept an optional `approval_mode` override."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "sdk/python/src/openai_codex/api.py",
+          "line_start": 138,
+          "quote": "approval_mode: ApprovalMode = ApprovalMode.auto_review,",
+          "checked": {
+            "ok": true,
+            "where": "sdk/python/src/openai_codex/api.py:138",
+            "file_sha256": "bd9cac51820997fa4d3fa4ac5c24894f45b92da8ba481d49c44cb96dcc9af430"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "sdk/python/src/openai_codex/api.py",
+          "line_start": 210,
+          "quote": "approval_mode: ApprovalMode | None = None,",
+          "checked": {
+            "ok": true,
+            "where": "sdk/python/src/openai_codex/api.py:210",
+            "file_sha256": "bd9cac51820997fa4d3fa4ac5c24894f45b92da8ba481d49c44cb96dcc9af430"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_e613370e867a"
+    },
+    {
+      "n": "15",
+      "claim": "For daemon updater-triggered restarts, shutdownGraceSeconds defaults to 60 and has a five-minute maximum.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Constants match; tests show values above the max are rejected.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/app-server-daemon/README.md",
+        "line_start": 73,
+        "quote": "updater-triggered restarts, `shutdownGraceSeconds` defaults to 60 and accepts"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/app-server-daemon/src/settings.rs",
+          "line_start": 15,
+          "line_end": 16,
+          "quote": "pub(crate) const DEFAULT_SHUTDOWN_GRACE_SECONDS: u32 = 60;\npub(crate) const MAX_SHUTDOWN_GRACE_SECONDS: u32 = 5 * 60;",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/app-server-daemon/src/settings.rs:15-16",
+            "file_sha256": "18f31688ebd807957a454f7a84997632f54306256ec39ed727911503cb573d5c"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_edbfdf7150e3"
+    },
+    {
+      "n": "16",
+      "claim": "The network proxy runs a SOCKS5 proxy on default 127.0.0.1:8081, enabled by default.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default struct has enable_socks5 = true and socks_url 127.0.0.1:8081; non-loopback binds are clamped to loopback unless dangerously_allow_non_loopback_proxy.",
+      "user_impact": null,
+      "note": "The README's JSON example sets enable_socks5 false explicitly; the serde field has #[serde(default)] at struct level so omitted fields take the Default values (true).",
+      "source": {
+        "file": "codex-rs/network-proxy/README.md",
+        "line_start": 6,
+        "quote": "- a SOCKS5 proxy (default `127.0.0.1:8081`, enabled by default)"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/network-proxy/src/config.rs",
+          "line_start": 186,
+          "quote": "enable_socks5: true,",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/network-proxy/src/config.rs:186",
+            "file_sha256": "da340a929f67d51a71959ab70208ca152e9f2dfcc4cfeeca28c11b4b63db5f78"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/network-proxy/src/config.rs",
+          "line_start": 415,
+          "line_end": 416,
+          "quote": "fn default_socks_url() -> String {\n    \"http://127.0.0.1:8081\".to_string()",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/network-proxy/src/config.rs:415-416",
+            "file_sha256": "da340a929f67d51a71959ab70208ca152e9f2dfcc4cfeeca28c11b4b63db5f78"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_5c9a01284ba6"
+    },
+    {
+      "n": "17",
+      "claim": "otel.log_agent_responses defaults to false, independent of otel.log_user_prompt; the default otel.exporter = \"none\" exports no logs.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both flags default false independently and the log exporter defaults to None.",
+      "user_impact": null,
+      "note": "Metrics exporter defaults to Statsig (recorded separately as an undisclosed behavior).",
+      "source": {
+        "file": "codex-rs/otel/README.md",
+        "line_start": 129,
+        "quote": "`final_answer`. The default is false, independent of `otel.log_user_prompt`;"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/config/src/types.rs",
+          "line_start": 675,
+          "line_end": 676,
+          "quote": "log_user_prompt: false,\n            log_agent_responses: false,",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/config/src/types.rs:675-676",
+            "file_sha256": "56fcd0268c1147f3f03f5ac45726ae9b4a327878caf15eb0381b6229918e38ac"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/config/src/types.rs",
+          "line_start": 679,
+          "quote": "exporter: OtelExporterKind::None,",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/config/src/types.rs:679",
+            "file_sha256": "56fcd0268c1147f3f03f5ac45726ae9b4a327878caf15eb0381b6229918e38ac"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9e4bfcd20b70"
+    },
+    {
+      "n": "18",
+      "claim": "WSL1 is not supported for bubblewrap sandboxing because it cannot create the required user namespaces; Codex surfaces a warning.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "WSL1 is detected from /proc/version and a warning is built; the rejection of sandboxed shell commands on that path was not separately traced.",
+      "user_impact": null,
+      "note": "Detection and warning are confirmed in code; the README's \"rejects sandboxed shell commands\" clause was not traced to its call site.",
+      "source": {
+        "file": "codex-rs/linux-sandbox/README.md",
+        "line_start": 26,
+        "line_end": 28,
+        "quote": "WSL1 is not supported for bubblewrap sandboxing because\nit cannot create the required user namespaces, so Codex rejects sandboxed shell\ncommands that would enter the bubblewrap path."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/sandboxing/src/bwrap.rs",
+          "line_start": 30,
+          "line_end": 32,
+          "quote": "pub(crate) const WSL1_BWRAP_WARNING: &str = concat!(\n    \"Codex's Linux sandbox uses bubblewrap, which is not supported on WSL1 \",\n    \"because WSL1 cannot create the required user namespaces. \",",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/sandboxing/src/bwrap.rs:30-32",
+            "file_sha256": "ec31c6bc4b844183ae3c6e5fcea5e97db95e6f26cfaeb4c9bedb37cdf01534ee"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/sandboxing/src/bwrap.rs",
+          "line_start": 151,
+          "quote": ".is_ok_and(|proc_version| proc_version_indicates_wsl1(&proc_version))",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/sandboxing/src/bwrap.rs:151",
+            "file_sha256": "ec31c6bc4b844183ae3c6e5fcea5e97db95e6f26cfaeb4c9bedb37cdf01534ee"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_92919d7116c8"
+    },
+    {
+      "n": "19",
+      "claim": "Non-interactive mode (codex exec) defaults to RUST_LOG=error with messages printed inline.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "EnvFilter::try_from_default_env falls back to \"error\" when RUST_LOG is unset.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/install.md",
+        "line_start": 63,
+        "quote": "The non-interactive mode (`codex exec`) defaults to `RUST_LOG=error`, but messages are printed inline, so there is no need to monitor a separate file."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/exec/src/lib.rs",
+          "line_start": 264,
+          "quote": ".unwrap_or_else(|_| EnvFilter::new(\"error\"))",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/exec/src/lib.rs:264",
+            "file_sha256": "cb9a1eb6239ece15d0f761fbf64369013469ccf7850408c40b54b9cf0b576eba"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_766d74b745d1"
+    },
+    {
+      "n": "20",
+      "claim": "Direct WebSocket listeners support app-server's opt-in auth flags, including --ws-auth capability-token --ws-token-sha256 HEX, token files and signed bearer tokens.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Flags exist in the shared websocket-auth crate; modes capability-token and signed-bearer-token exist; non-loopback listeners without auth are refused.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/exec-server/README.md",
+        "line_start": 50,
+        "quote": "Direct WebSocket listeners support app-server's opt-in auth flags, including `--ws-auth capability-token --ws-token-sha256 HEX`, token files, and signed bearer tokens;"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/websocket-auth/src/lib.rs",
+          "line_start": 33,
+          "line_end": 34,
+          "quote": "#[arg(long = \"ws-auth\", value_name = \"MODE\", value_enum)]",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/websocket-auth/src/lib.rs:33-34",
+            "file_sha256": "337fd79f2c8411bcb6b65d12f20bd842031654ab2e66d937a493a397a0c0dd05"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/websocket-auth/src/lib.rs",
+          "line_start": 41,
+          "quote": "#[arg(long = \"ws-token-sha256\", value_name = \"HEX\")]",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/websocket-auth/src/lib.rs:41",
+            "file_sha256": "337fd79f2c8411bcb6b65d12f20bd842031654ab2e66d937a493a397a0c0dd05"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/app-server-transport/src/transport/websocket.rs",
+          "line_start": 170,
+          "quote": "\"refusing to start non-loopback websocket listener {bind_address} without auth; configure `--ws-auth capability-token` or `--ws-auth signed-bearer-token`\"",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/app-server-transport/src/transport/websocket.rs:170",
+            "file_sha256": "38cb8c3e8e3fb77da1849644d1230814828973f19ec94eb8f6bba40dd62995cc"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_1d943d361678"
+    },
+    {
+      "n": "21",
+      "claim": "Explicit gateway-OAuth opt-in is shared within the process and cannot be undone by a later connection that omits the capability.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "require_explicit_login is set on opt-in and only allow_automatic_login (first client only, via get_or_init) can restore automatic login.",
+      "user_impact": null,
+      "note": "The cross-manager sharing (same home and network config) was not traced.",
+      "source": {
+        "file": "codex-rs/app-server/README.md",
+        "line_start": 533,
+        "line_end": 535,
+        "quote": "Explicit opt-in is shared by gateway\nmanagers using the same home and network configuration within the process and\ncannot be undone by a later connection that omits the capability."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/app-server/src/request_processors/initialize_processor.rs",
+          "line_start": 154,
+          "line_end": 155,
+          "quote": "// Only the first originating client may restore legacy automatic login.\n            // Any explicit opt-in is sticky across subsequent connections.",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/app-server/src/request_processors/initialize_processor.rs:154-155",
+            "file_sha256": "4535560b07ab10d1538acd461560a55c1bdf0c9b4049e72775d6b770421f117f"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/app-server/src/request_processors/initialize_processor.rs",
+          "line_start": 161,
+          "line_end": 162,
+          "quote": "if capabilities.explicit_gateway_oauth {\n                self.gateway_login_control.require_explicit_login();",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/app-server/src/request_processors/initialize_processor.rs:161-162",
+            "file_sha256": "4535560b07ab10d1538acd461560a55c1bdf0c9b4049e72775d6b770421f117f"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_d9760a94de6e"
+    },
+    {
+      "n": "22",
+      "claim": "With --http-shutdown, an unprivileged user can make a GET request to /shutdown to stop the privileged proxy (with exit code 0).",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Shutdown has no authentication: any local process that can reach the loopback port can stop it, exactly as the README warns. The listener binds only 127.0.0.1.",
+      "user_impact": null,
+      "note": "Documented trade-off: any local user can shut it down when the flag is enabled.",
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 153,
+        "quote": "Optional `--http-shutdown` enables `GET /shutdown` to terminate the process with exit code `0`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/lib.rs",
+          "line_start": 182,
+          "line_end": 184,
+          "quote": "if http_shutdown && request.method() == &Method::Get && request.url() == \"/shutdown\" {\n                let _ = request.respond(Response::new_empty(StatusCode(200)));\n                std::process::exit(0);",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/lib.rs:182-184",
+            "file_sha256": "e080ce9ef9b8e858ceee145842ad8b84ce3b38056c892e3f2115d5caeae71b71"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/lib.rs",
+          "line_start": 203,
+          "quote": "let addr = SocketAddr::from(([127, 0, 0, 1], port.unwrap_or(0)));",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/lib.rs:203",
+            "file_sha256": "e080ce9ef9b8e858ceee145842ad8b84ce3b38056c892e3f2115d5caeae71b71"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_6dde997f3b86"
+    }
+  ],
+  "totals": {
+    "claims": 22,
+    "VERIFIED": 21,
+    "PARTIAL": 1,
+    "FALSE": 0,
+    "UNVERIFIABLE": 0,
+    "behaviors": 2,
+    "downgraded": 1,
+    "retracted": 0,
+    "rejected_citations": 1
+  }
+}

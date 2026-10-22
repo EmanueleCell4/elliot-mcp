@@ -1,0 +1,8 @@
+anthropics_anthropic-sdk-python 9313f13a5a643ceed10fafba6785eab8e04b6e6e https://github.com/anthropics/anthropic-sdk-python.git
+modelcontextprotocol_python-sdk 2af9e3089ac66b35c1550c500aae86a82efb1e17 https://github.com/modelcontextprotocol/python-sdk.git
+modelcontextprotocol_typescript-sdk c05225a636c679870b65f8ca4fe83a76ea1cf113 https://github.com/modelcontextprotocol/typescript-sdk.git
+openai_codex 9a8a85bc539325f2819dd0717f88b6ba6286495e https://github.com/openai/codex.git
+openai_openai-agents-python 841dfdd938bfd4ca052475eb76d6245a356868e0 https://github.com/openai/openai-agents-python.git
+openai_openai-node 802a3239e91b46c408c350e11ecff84b76fb17d4 https://github.com/openai/openai-node.git
+openai_openai-python 7db9d884c33b0d5ef252e9a4b6e7ae0bbd217e5b https://github.com/openai/openai-python.git
+vercel_ai aac602641e65b62f569f9bf77204f52031bddbff https://github.com/vercel/ai.git

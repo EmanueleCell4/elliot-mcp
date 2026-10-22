@@ -1,0 +1,53 @@
+From e23f0ba276932ec2e45c90d386189a559a8b206a Mon Sep 17 00:00:00 2001
+From: bench <b@b>
+Date: Thu, 22 Oct 2026 15:47:08 +0000
+Subject: [PATCH] bench mutations
+
+---
+ src/agents/run_state.py                    | 2 +-
+ src/agents/sandbox/sandboxes/unix_local.py | 2 +-
+ src/agents/tool.py                         | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/src/agents/run_state.py b/src/agents/run_state.py
+index 32b6473..a8cbb4b 100644
+--- a/src/agents/run_state.py
++++ b/src/agents/run_state.py
+@@ -1901,7 +1901,7 @@ class RunState(Generic[TContext, TAgent]):
+         *,
+         context_serializer: ContextSerializer | None = None,
+         strict_context: bool = False,
+-        include_tracing_api_key: bool = False,
++        include_tracing_api_key: bool = True,
+     ) -> dict[str, Any]:
+         """Serializes the run state to a JSON-compatible dictionary.
+ 
+diff --git a/src/agents/sandbox/sandboxes/unix_local.py b/src/agents/sandbox/sandboxes/unix_local.py
+index d69d3b0..2729bb3 100644
+--- a/src/agents/sandbox/sandboxes/unix_local.py
++++ b/src/agents/sandbox/sandboxes/unix_local.py
+@@ -1536,7 +1536,7 @@ class UnixLocalSandboxClient(BaseSandboxClient[UnixLocalSandboxClientOptions | N
+         *,
+         instrumentation: Instrumentation | None = None,
+         dependencies: Dependencies | None = None,
+-        inherit_host_environment: bool = True,
++        inherit_host_environment: bool = False,
+         host_environment_allowlist: Collection[str] | None = None,
+     ) -> None:
+         if inherit_host_environment and host_environment_allowlist is not None:
+diff --git a/src/agents/tool.py b/src/agents/tool.py
+index 57d8c44..afb4733 100644
+--- a/src/agents/tool.py
++++ b/src/agents/tool.py
+@@ -1495,7 +1495,7 @@ class ShellTool:
+ 
+     executor: ShellExecutor | None = None
+     name: str = "shell"
+-    needs_approval: bool | ShellApprovalFunction = False
++    needs_approval: bool | ShellApprovalFunction = True
+     """Whether the shell tool needs approval before execution. If True, the run will be interrupted
+     and the tool call will need to be approved using RunState.approve() or rejected using
+     RunState.reject() before continuing. Can be a bool (always/never needs approval) or a
+-- 
+2.43.0
+

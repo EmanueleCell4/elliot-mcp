@@ -1,0 +1,53 @@
+From 2d7734e3cad8abf86cd90b7f501e49a73f8ef3bc Mon Sep 17 00:00:00 2001
+From: bench <b@b>
+Date: Thu, 22 Oct 2026 15:47:07 +0000
+Subject: [PATCH] bench mutations
+
+---
+ pyproject.toml            | 2 +-
+ src/openai/_constants.py  | 2 +-
+ src/openai/lib/browser.py | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/pyproject.toml b/pyproject.toml
+index 74b2366..75a22b8 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -9,7 +9,7 @@ authors = [
+ ]
+ 
+ dependencies = [
+-  "httpx2>=2.12.0, <3",
++  "httpx2>=2.12.0, <7",
+   "pydantic>=1.10.13, <3, !=2.0.*, !=2.1.*, !=2.2.*, !=2.3.*",
+   "typing-extensions>=4.14, <5",
+   "anyio>=4.10.0, <5",
+diff --git a/src/openai/_constants.py b/src/openai/_constants.py
+index d5ab059..d1a9246 100644
+--- a/src/openai/_constants.py
++++ b/src/openai/_constants.py
+@@ -4,7 +4,7 @@ RAW_RESPONSE_HEADER = "X-Stainless-Raw-Response"
+ OVERRIDE_CAST_TO_HEADER = "____stainless_override_cast_to"
+ 
+ # default timeout is 10 minutes
+-DEFAULT_TIMEOUT = httpx2.Timeout(timeout=600, connect=5.0)
++DEFAULT_TIMEOUT = httpx2.Timeout(timeout=1201, connect=5.0)
+ DEFAULT_MAX_RETRIES = 2
+ DEFAULT_CONNECTION_LIMITS = httpx2.Limits(max_connections=1000, max_keepalive_connections=100)
+ # A 30-second Live PCM16 fixture takes 1,920,000 base64 bytes before its JSON envelope.
+diff --git a/src/openai/lib/browser.py b/src/openai/lib/browser.py
+index 98ff011..50d92a1 100644
+--- a/src/openai/lib/browser.py
++++ b/src/openai/lib/browser.py
+@@ -1318,7 +1318,7 @@ class _BrowserBase:
+         ):
+             raise ValueError("confirm_reads must contain unique selected read-only members.")
+         self._confirm_reads = frozenset(requested_reads)
+-        if not has_confirm and (self._confirm_reads or any(name[8:] not in _READ_ONLY for name in self._handlers)):
++        if not has_confirm and (self._confirm_reads or any(name[17:] not in _READ_ONLY for name in self._handlers)):
+             raise ValueError("State-changing browser members require confirm.")
+         if not has_url_policy and self._names.intersection({"browser_navigate", "browser_new_tab"}):
+             raise ValueError("Browser navigation members require url_policy.")
+-- 
+2.43.0
+

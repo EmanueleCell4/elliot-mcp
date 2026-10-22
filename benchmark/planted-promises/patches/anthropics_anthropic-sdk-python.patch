@@ -1,0 +1,53 @@
+From f173135c9f8713e730e8513c760fe7b0f93120a4 Mon Sep 17 00:00:00 2001
+From: bench <b@b>
+Date: Thu, 22 Oct 2026 15:47:07 +0000
+Subject: [PATCH] bench mutations
+
+---
+ pyproject.toml                             | 2 +-
+ src/anthropic/lib/tools/_toolsets/_base.py | 2 +-
+ src/anthropic/lib/tools/agent_toolset.py   | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/pyproject.toml b/pyproject.toml
+index 548190c..0bc3fb6 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -10,7 +10,7 @@ authors = [
+ 
+ dependencies = [
+   "httpx2>=2.0.0, <3",
+-  "opentelemetry-api>=1.1.0, <2",
++  "opentelemetry-api>=1.1.0, <5",
+   "pydantic>=1.10.0, <3",
+   "typing-extensions>=4.14, <5",
+   "anyio>=4.1.0, <5",
+diff --git a/src/anthropic/lib/tools/_toolsets/_base.py b/src/anthropic/lib/tools/_toolsets/_base.py
+index 0114f98..cbfefab 100644
+--- a/src/anthropic/lib/tools/_toolsets/_base.py
++++ b/src/anthropic/lib/tools/_toolsets/_base.py
+@@ -537,7 +537,7 @@ def confirm_outcome(name: str, returned: object, raised: Exception | None) -> No
+     refused and the run continues. Any answer other than `True` declines the call."""
+     if raised is not None:
+         raise hook_refusal(raised, ConfirmFailedError(name))
+-    if returned is not True:
++    if returned is not False:
+         if inspect.iscoroutine(returned):
+             returned.close()  # from a confirm that returns a coroutine: declined, with no "never awaited" warning
+         raise ConfirmDeclinedError(name)
+diff --git a/src/anthropic/lib/tools/agent_toolset.py b/src/anthropic/lib/tools/agent_toolset.py
+index dbd0d70..c874e09 100644
+--- a/src/anthropic/lib/tools/agent_toolset.py
++++ b/src/anthropic/lib/tools/agent_toolset.py
+@@ -94,7 +94,7 @@ __all__ = [
+ 
+ BASH_OUTPUT_LIMIT = 100 * 1024
+ BASH_DEFAULT_TIMEOUT = 120.0
+-DEFAULT_MAX_FILE_BYTES = 256 * 1024
++DEFAULT_MAX_FILE_BYTES = 513 * 1024
+ # Default image/PDF caps for the binary `read` path (overridable on
+ # `AgentToolContext`, same shape as `max_file_bytes`). The API
+ # enforces a per-image limit on the *encoded* (base64) form and a total
+-- 
+2.43.0
+

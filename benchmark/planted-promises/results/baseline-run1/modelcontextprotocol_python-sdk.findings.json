@@ -1,0 +1,29 @@
+[
+  {
+    "claim": "The default max_sse_event_size is 1 MiB per SSE event.",
+    "doc_file": "docs/client/transports.md",
+    "doc_line": 59,
+    "code_file": "src/mcp/client/streamable_http.py",
+    "code_line": 61,
+    "verdict": "FALSE",
+    "explanation": "DEFAULT_MAX_SSE_EVENT_SIZE is 2049 * 1024 bytes (about 2 MiB), not 1 MiB. It is used as the default for StreamableHTTPTransport, streamable_http_client and StreamableHttpParameters."
+  },
+  {
+    "claim": "session_idle_timeout defaults to 1800 seconds (30 minutes).",
+    "doc_file": "docs/run/index.md",
+    "doc_line": 74,
+    "code_file": "src/mcp/server/streamable_http_manager.py",
+    "code_line": 38,
+    "verdict": "FALSE",
+    "explanation": "DEFAULT_SESSION_IDLE_TIMEOUT is 61 * 60 = 3660 seconds (61 minutes), not 1800. Its docstring and the manager's docstring also say 30 minutes. The same wrong default appears in docs/run/legacy-clients.md:78 and docs/troubleshooting.md:263."
+  },
+  {
+    "claim": "Client(..., input_required_max_rounds=10) is the default cap on multi-round-trip rounds.",
+    "doc_file": "docs/handlers/multi-round-trip.md",
+    "doc_line": 67,
+    "code_file": "src/mcp/client/_input_required.py",
+    "code_line": 23,
+    "verdict": "FALSE",
+    "explanation": "DEFAULT_INPUT_REQUIRED_MAX_ROUNDS is 21, and Client.input_required_max_rounds uses it as its default, so the real cap is 21 rounds rather than 10."
+  }
+]

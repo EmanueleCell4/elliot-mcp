@@ -1,0 +1,3463 @@
+{
+  "elliot": "0.5.0",
+  "id": "aud_a7fb9ccd952c",
+  "root": "/home/claude/elliot-runs/bench/repos/modelcontextprotocol_typescript-sdk",
+  "project": "modelcontextprotocol_typescript-sdk",
+  "commit": "b1a4b1c4fca83389ee200c2edd6cd8c355053982",
+  "date": "2026-10-22T15:47:08+00:00",
+  "dirty": true,
+  "remote": "https://github.com/modelcontextprotocol/typescript-sdk.git",
+  "tree_fingerprint": "e9470a080888771392a22c24f7a4e0c60cf1f4a525c9e60c0faad04f61a1d20e",
+  "started_at": "2026-10-22T21:24:27.869Z",
+  "sources": [
+    {
+      "file": "README.md",
+      "lines": 178
+    },
+    {
+      "file": "SECURITY.md",
+      "lines": 22
+    },
+    {
+      "file": "docs/_meta/CONVENTIONS.md",
+      "lines": 250
+    },
+    {
+      "file": "docs/advanced/custom-methods.md",
+      "lines": 132
+    },
+    {
+      "file": "docs/advanced/custom-transports.md",
+      "lines": 204
+    },
+    {
+      "file": "docs/advanced/gateway.md",
+      "lines": 248
+    },
+    {
+      "file": "docs/advanced/low-level-server.md",
+      "lines": 165
+    },
+    {
+      "file": "docs/advanced/schema-libraries.md",
+      "lines": 165
+    },
+    {
+      "file": "docs/advanced/wire-schemas.md",
+      "lines": 160
+    },
+    {
+      "file": "docs/behavior-surface-pins.md",
+      "lines": 52
+    },
+    {
+      "file": "docs/clients/caching.md",
+      "lines": 109
+    },
+    {
+      "file": "docs/clients/calling.md",
+      "lines": 199
+    },
+    {
+      "file": "docs/clients/connect.md",
+      "lines": 120
+    },
+    {
+      "file": "docs/clients/machine-auth.md",
+      "lines": 109
+    },
+    {
+      "file": "docs/clients/middleware.md",
+      "lines": 134
+    },
+    {
+      "file": "docs/clients/oauth.md",
+      "lines": 172
+    },
+    {
+      "file": "docs/clients/roots.md",
+      "lines": 87
+    },
+    {
+      "file": "docs/clients/server-requests.md",
+      "lines": 115
+    },
+    {
+      "file": "docs/clients/skills.md",
+      "lines": 154
+    },
+    {
+      "file": "docs/clients/subscriptions.md",
+      "lines": 138
+    },
+    {
+      "file": "docs/get-started/examples.md",
+      "lines": 10
+    },
+    {
+      "file": "docs/get-started/first-client.md",
+      "lines": 158
+    },
+    {
+      "file": "docs/get-started/first-server.md",
+      "lines": 137
+    },
+    {
+      "file": "docs/get-started/packages.md",
+      "lines": 82
+    },
+    {
+      "file": "docs/get-started/real-host.md",
+      "lines": 137
+    },
+    {
+      "file": "docs/index.md",
+      "lines": 54
+    },
+    {
+      "file": "docs/migration/index.md",
+      "lines": 59
+    },
+    {
+      "file": "docs/migration/support-2026-07-28.md",
+      "lines": 747
+    },
+    {
+      "file": "docs/migration/upgrade-to-v2.md",
+      "lines": 60
+    },
+    {
+      "file": "docs/protocol-versions.md",
+      "lines": 196
+    },
+    {
+      "file": "docs/servers/completion.md",
+      "lines": 169
+    },
+    {
+      "file": "docs/servers/elicitation.md",
+      "lines": 319
+    },
+    {
+      "file": "docs/servers/errors.md",
+      "lines": 210
+    },
+    {
+      "file": "docs/servers/input-required.md",
+      "lines": 269
+    },
+    {
+      "file": "docs/servers/logging-progress-cancellation.md",
+      "lines": 227
+    },
+    {
+      "file": "docs/servers/notifications.md",
+      "lines": 114
+    },
+    {
+      "file": "docs/servers/prompts.md",
+      "lines": 247
+    },
+    {
+      "file": "docs/servers/resources.md",
+      "lines": 269
+    },
+    {
+      "file": "docs/servers/sampling.md",
+      "lines": 81
+    },
+    {
+      "file": "docs/servers/skills.md",
+      "lines": 197
+    },
+    {
+      "file": "docs/servers/tools.md",
+      "lines": 235
+    },
+    {
+      "file": "docs/serving/authorization.md",
+      "lines": 181
+    },
+    {
+      "file": "docs/serving/express.md",
+      "lines": 91
+    },
+    {
+      "file": "docs/serving/fastify.md",
+      "lines": 91
+    },
+    {
+      "file": "docs/serving/hono.md",
+      "lines": 90
+    },
+    {
+      "file": "docs/serving/http.md",
+      "lines": 136
+    },
+    {
+      "file": "docs/serving/legacy-clients.md",
+      "lines": 136
+    },
+    {
+      "file": "docs/serving/sessions-state-scaling.md",
+      "lines": 133
+    },
+    {
+      "file": "docs/serving/stdio.md",
+      "lines": 98
+    },
+    {
+      "file": "docs/serving/web-standard.md",
+      "lines": 89
+    },
+    {
+      "file": "docs/testing.md",
+      "lines": 135
+    },
+    {
+      "file": "docs/troubleshooting.md",
+      "lines": 182
+    },
+    {
+      "file": ".changeset/README.md",
+      "lines": 7
+    },
+    {
+      "file": "packages/client/README.md",
+      "lines": 21
+    },
+    {
+      "file": "packages/codemod/batch-test/README.md",
+      "lines": 139
+    },
+    {
+      "file": "packages/codemod/README.md",
+      "lines": 78
+    },
+    {
+      "file": "packages/core-internal/src/types/README.md",
+      "lines": 25
+    },
+    {
+      "file": "packages/core/README.md",
+      "lines": 41
+    },
+    {
+      "file": "packages/middleware/express/README.md",
+      "lines": 68
+    },
+    {
+      "file": "packages/middleware/fastify/README.md",
+      "lines": 71
+    },
+    {
+      "file": "packages/middleware/hono/README.md",
+      "lines": 51
+    },
+    {
+      "file": "packages/middleware/node/README.md",
+      "lines": 74
+    },
+    {
+      "file": "packages/middleware/README.md",
+      "lines": 25
+    },
+    {
+      "file": "packages/server-legacy/README.md",
+      "lines": 40
+    },
+    {
+      "file": "packages/server/README.md",
+      "lines": 25
+    },
+    {
+      "file": ".changeset/forwarded-notification-params.md",
+      "lines": 6
+    },
+    {
+      "file": ".changeset/mcp-param-check-number-declaration.md",
+      "lines": 6
+    },
+    {
+      "file": ".changeset/per-request-transport-revision.md",
+      "lines": 6
+    },
+    {
+      "file": ".changeset/resource-title-updates.md",
+      "lines": 6
+    },
+    {
+      "file": ".changeset/skills-extension.md",
+      "lines": 19
+    },
+    {
+      "file": ".changeset/x-mcp-header-reject-number.md",
+      "lines": 8
+    },
+    {
+      "file": "DEPENDENCY_POLICY.md",
+      "lines": 36
+    },
+    {
+      "file": "elliot-report-v1/2026-10-22-b1a4b1c/report.md",
+      "lines": 257
+    },
+    {
+      "file": "packages/codemod/batch-test/analyze-prompt.md",
+      "lines": 90
+    },
+    {
+      "file": "REVIEW.md",
+      "lines": 6
+    },
+    {
+      "file": "ROADMAP.md",
+      "lines": 36
+    },
+    {
+      "file": "skills/mcp-typescript-sdk-upgrade-to-v2/references/auth.md",
+      "lines": 287
+    },
+    {
+      "file": "skills/mcp-typescript-sdk-upgrade-to-v2/references/behavioral-changes.md",
+      "lines": 260
+    },
+    {
+      "file": "skills/mcp-typescript-sdk-upgrade-to-v2/references/enhancements.md",
+      "lines": 33
+    },
+    {
+      "file": "skills/mcp-typescript-sdk-upgrade-to-v2/references/errors.md",
+      "lines": 204
+    }
+  ],
+  "focused": false,
+  "candidates": [
+    {
+      "id": "c1",
+      "file": "docs/advanced/gateway.md",
+      "line": 99,
+      "text": "Never share a persisted `DiscoverResult` across principals — key the blob on the authorization context that obtained it (a credential hash works). The server still authorizes every request, so a wider `prior` grants noth",
+      "risk": "high"
+    },
+    {
+      "id": "c2",
+      "file": "docs/servers/elicitation.md",
+      "line": 295,
+      "text": "Never collect sensitive information — passwords, API keys, payment details — through form elicitation. Use URL mode or an out-of-band flow instead.",
+      "risk": "high"
+    },
+    {
+      "id": "c3",
+      "file": "docs/_meta/CONVENTIONS.md",
+      "line": 226,
+      "text": "Writers run ONLY the read-only check, never the mutating form:",
+      "risk": "high"
+    },
+    {
+      "id": "c4",
+      "file": "docs/clients/machine-auth.md",
+      "line": 63,
+      "text": "**Cross-app access** (Enterprise Managed Authorization, SEP-990) lets a service reach an MCP server for a user who already authenticated with the enterprise IdP, with no second consent screen. Two exchanges get it there:",
+      "risk": "high"
+    },
+    {
+      "id": "c5",
+      "file": "docs/clients/server-requests.md",
+      "line": 110,
+      "text": "- Declare a capability in the `Client` constructor or the server never sends that request.",
+      "risk": "high"
+    },
+    {
+      "id": "c6",
+      "file": "docs/get-started/packages.md",
+      "line": 49,
+      "text": "The root entry of every package is **runtime-neutral**: its module graph never reaches `node:child_process` or any other Node builtin a browser or Cloudflare Workers bundler cannot resolve. Importing `./stdio` is the exp",
+      "risk": "high"
+    },
+    {
+      "id": "c7",
+      "file": "docs/migration/support-2026-07-28.md",
+      "line": 14,
+      "text": "for. Serving or speaking 2026-07-28 is always an explicit opt-in via one of the entries",
+      "risk": "high"
+    },
+    {
+      "id": "c8",
+      "file": "docs/migration/support-2026-07-28.md",
+      "line": 615,
+      "text": "server never sends an un-requested notification type.",
+      "risk": "high"
+    },
+    {
+      "id": "c9",
+      "file": "docs/servers/input-required.md",
+      "line": 245,
+      "text": "With the hook in place, the accessor hands the handler `verify`'s decoded payload, and tampered or expired state never reaches the handler at all. Retrying `wipe-cache` with `requestState: 'tampered'` answers a wire-leve",
+      "risk": "high"
+    },
+    {
+      "id": "c10",
+      "file": "docs/servers/input-required.md",
+      "line": 252,
+      "text": "The codec is signed, not encrypted — the client can base64url-decode the payload. Keep secrets out of it.",
+      "risk": "high"
+    },
+    {
+      "id": "c11",
+      "file": "docs/servers/logging-progress-cancellation.md",
+      "line": 189,
+      "text": "The first line is the client's rejection, the second is the handler's `console.error` on the server. The SDK never sends a response for a cancelled request and discards whatever the handler still returns.",
+      "risk": "high"
+    },
+    {
+      "id": "c12",
+      "file": "docs/servers/tools.md",
+      "line": 214,
+      "text": "A tool that takes no arguments omits `inputSchema`. Annotations never change how the SDK runs the tool — clients use them to decide what to put in front of the end user: a host can auto-approve a read-only tool and requi",
+      "risk": "high"
+    },
+    {
+      "id": "c13",
+      "file": "skills/mcp-typescript-sdk-upgrade-to-v2/references/auth.md",
+      "line": 275,
+      "text": "encrypted-at-rest store, never `localStorage` / plain files / logs.",
+      "risk": "high"
+    },
+    {
+      "id": "c14",
+      "file": "docs/migration/support-2026-07-28.md",
+      "line": 44,
+      "text": "byte for byte. To negotiate the 2026-07-28 era, opt in via `ClientOptions.versionNegotiation` —",
+      "risk": "high"
+    },
+    {
+      "id": "c15",
+      "file": "docs/migration/support-2026-07-28.md",
+      "line": 244,
+      "text": "`TransportSendOptions.requestSignal` may opt in by declaring",
+      "risk": "high"
+    },
+    {
+      "id": "c16",
+      "file": "docs/migration/support-2026-07-28.md",
+      "line": 252,
+      "text": "`notifications/message` for that request — absence is opt-out, not \"no filter\". The SDK",
+      "risk": "high"
+    },
+    {
+      "id": "c17",
+      "file": "docs/migration/support-2026-07-28.md",
+      "line": 276,
+      "text": "is exactly the function you assign to the hook. The codec is **signed, not encrypted**",
+      "risk": "high"
+    },
+    {
+      "id": "c18",
+      "file": "docs/migration/support-2026-07-28.md",
+      "line": 467,
+      "text": "identity is simply anonymous: the connection works, `getServerVersion()` is",
+      "risk": "high"
+    },
+    {
+      "id": "c19",
+      "file": "docs/migration/support-2026-07-28.md",
+      "line": 512,
+      "text": "opt out via `ClientOptions.inputRequired` (`{ autoFulfill: false }`); drive manually per",
+      "risk": "high"
+    },
+    {
+      "id": "c20",
+      "file": "docs/migration/support-2026-07-28.md",
+      "line": 744,
+      "text": "| `ctx.mcpReq.log()` level filter | session-scoped `logging/setLevel` | per-request `_meta.logLevel` envelope key (absent = opt-out) |",
+      "risk": "high"
+    },
+    {
+      "id": "c21",
+      "file": "docs/clients/machine-auth.md",
+      "line": 42,
+      "text": "The transport calls `token()` before every request and sets the `Authorization` header from whatever it returns. Without `onUnauthorized`, a 401 throws `UnauthorizedError`. Add `onUnauthorized(ctx)` to refresh the creden",
+      "risk": "default"
+    },
+    {
+      "id": "c22",
+      "file": "docs/clients/middleware.md",
+      "line": 87,
+      "text": "`withOAuth(provider, serverUrl)` is the OAuth flow expressed as one middleware layer: it adds the `Authorization` header, and on a `401` it re-authenticates against `serverUrl` and retries the request once.",
+      "risk": "default"
+    },
+    {
+      "id": "c23",
+      "file": "docs/clients/skills.md",
+      "line": 144,
+      "text": "Accept skills up to `SKILL_LIMITS` (512 files, 16 MiB) and explain why you decline one, get approval before you load a skill from a server, and record which server each skill came from. Read a skill's files when you load",
+      "risk": "default"
+    },
+    {
+      "id": "c24",
+      "file": "docs/protocol-versions.md",
+      "line": 180,
+      "text": "Deprecation is not an era difference. `sampling`, `roots`, and the `logging` capability behind `ctx.mcpReq.log()` are deprecated as of `2026-07-28` (SEP-2577) but stay in the specification for at least twelve months; whi",
+      "risk": "default"
+    },
+    {
+      "id": "c25",
+      "file": "docs/serving/authorization.md",
+      "line": 99,
+      "text": "The router mounts two well-known routes: `/.well-known/oauth-protected-resource/mcp` — the path-aware RFC 9728 location, the same string `getOAuthProtectedResourceMetadataUrl(mcpServerUrl)` put into the challenge — and `",
+      "risk": "default"
+    },
+    {
+      "id": "c26",
+      "file": "docs/serving/legacy-clients.md",
+      "line": 96,
+      "text": "Mount the frozen transport on two Express routes: `GET /sse` opens the stream and `POST /messages` delivers each client message to the session its `sessionId` query names. `createMcpExpressApp` takes the same options as ",
+      "risk": "default"
+    },
+    {
+      "id": "c27",
+      "file": "docs/troubleshooting.md",
+      "line": 54,
+      "text": "The OAuth client helpers sign and verify through the Web Crypto API at `globalThis.crypto`. Every `@modelcontextprotocol/*` package requires Node.js 20, where that global is always defined — this error means the process ",
+      "risk": "default"
+    },
+    {
+      "id": "c28",
+      "file": "docs/troubleshooting.md",
+      "line": 165,
+      "text": "The Resource Server helpers did not move there: `requireBearerAuth`, `mcpAuthMetadataRouter` and `OAuthTokenVerifier` are first-class in `@modelcontextprotocol/express` — see [Authorization](./serving/authorization.md). ",
+      "risk": "default"
+    },
+    {
+      "id": "c29",
+      "file": "skills/mcp-typescript-sdk-upgrade-to-v2/references/behavioral-changes.md",
+      "line": 145,
+      "text": "localhost-class `host` now also validate the `Origin` header by default. Browser-served",
+      "risk": "default"
+    },
+    {
+      "id": "c30",
+      "file": "docs/clients/caching.md",
+      "line": 59,
+      "text": "`responseCacheStore` swaps the backing store; the default is a fresh `InMemoryResponseCacheStore` per client, holding at most 512 `resources/read` entries.",
+      "risk": "default"
+    },
+    {
+      "id": "c31",
+      "file": "docs/clients/caching.md",
+      "line": 85,
+      "text": "`defaultCacheTtlMs` is the TTL applied when a cacheable result arrives without a `ttlMs`. The default is `0`: a result with no hint is never served from cache.",
+      "risk": "default"
+    },
+    {
+      "id": "c32",
+      "file": "docs/clients/calling.md",
+      "line": 52,
+      "text": "`ClientOptions.listMaxPages` (default 64) caps the aggregate walk; a server whose pagination never terminates rejects the call with an `SdkError` whose code is `LIST_PAGINATION_EXCEEDED`. `listMaxPages: 0` removes the ca",
+      "risk": "default"
+    },
+    {
+      "id": "c33",
+      "file": "docs/migration/support-2026-07-28.md",
+      "line": 347,
+      "text": "version default to the 2025 era). An edge classification (`MessageExtraInfo.classification`)",
+      "risk": "default"
+    },
+    {
+      "id": "c34",
+      "file": "docs/migration/support-2026-07-28.md",
+      "line": 572,
+      "text": "| `roundTimeoutMs` | `600_000` | Per-leg timeout (with `resetTimeoutOnProgress`) — embedded requests are human-paced, so the 60s protocol default does not apply |",
+      "risk": "default"
+    },
+    {
+      "id": "c35",
+      "file": "docs/protocol-versions.md",
+      "line": 191,
+      "text": "- `versionNegotiation` picks the client handshake; the default is the unchanged 2025 `initialize`, no probe.",
+      "risk": "default"
+    },
+    {
+      "id": "c36",
+      "file": "docs/servers/elicitation.md",
+      "line": 199,
+      "text": "The client learns that the end user finished at the URL from a `notifications/elicitation/complete` notification that carries the same `elicitationId`. `server.server.createElicitationCompletionNotifier` returns the func",
+      "risk": "default"
+    },
+    {
+      "id": "c37",
+      "file": "docs/servers/input-required.md",
+      "line": 257,
+      "text": "The handlers above already serve every connection. On a connection that predates 2026-07-28, the SDK's legacy shim — on by default — fulfils an `input_required` return by pushing real `elicitation/create`, `sampling/crea",
+      "risk": "default"
+    },
+    {
+      "id": "c38",
+      "file": "docs/servers/tools.md",
+      "line": 224,
+      "text": "It is off by default — leave it unset and behavior is unchanged. When it is set and a call exceeds it, that call comes back as an `isError: true` tool result naming the limit, before the schema runs, and the server keeps",
+      "risk": "default"
+    },
+    {
+      "id": "c39",
+      "file": "docs/serving/http.md",
+      "line": 112,
+      "text": "The handler serves 2025-era clients statelessly from the same factory by default. The `legacy` option — and where the SSE transport went — is on [Support legacy clients](./legacy-clients.md).",
+      "risk": "default"
+    },
+    {
+      "id": "c40",
+      "file": "docs/serving/sessions-state-scaling.md",
+      "line": 6,
+      "text": "`createMcpHandler` builds a fresh server instance from your factory for every HTTP request and holds nothing between requests, so a v2 server is stateless and scales horizontally by default — [Serve over HTTP](./http.md)",
+      "risk": "default"
+    }
+  ],
+  "signals": [
+    {
+      "id": "plaintext_secret",
+      "label": "secrets or API keys written to disk or storage",
+      "hit_count": 2,
+      "files": [
+        "elliot-report-v1/2026-10-22-b1a4b1c/claims.json",
+        "packages/core-internal/src/shared/protocol.ts"
+      ],
+      "examples": [
+        {
+          "file": "elliot-report-v1/2026-10-22-b1a4b1c/claims.json",
+          "line": 488,
+          "text": "\"text\": \"this._onerror(new Error(`Received a progress notification for an unknown token: ${JSON.stringify(notification)}`));\""
+        },
+        {
+          "file": "packages/core-internal/src/shared/protocol.ts",
+          "line": 1184,
+          "text": "this._onerror(new Error(`Received a progress notification for an unknown token: ${JSON.stringify(notification)}`));"
+        }
+      ]
+    }
+  ],
+  "file_count": 1236,
+  "claims": [
+    {
+      "n": "1",
+      "claim": "Default response cache store is InMemoryResponseCacheStore holding at most 512 resources/read entries",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The cap of 512 applies to resources/read keys; list singleton methods are exempt, consistent with the sentence.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/clients/caching.md",
+        "line_start": 59,
+        "quote": "holding at most 512 `resources/read` entries"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/responseCache.ts",
+          "line_start": 168,
+          "quote": "this._maxEntries = options?.maxEntries ?? 512;",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/responseCache.ts:168",
+            "file_sha256": "d784a947780510106c0cc8dcca5925ca8b5d651388e447ed5331c2c59258340f"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/responseCache.ts",
+          "line_start": 188,
+          "quote": "if (!exempt && isNew && this._maxEntries > 0 && this._cappedSize >= this._maxEntries) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/responseCache.ts:188",
+            "file_sha256": "d784a947780510106c0cc8dcca5925ca8b5d651388e447ed5331c2c59258340f"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_d52095ab7aa4"
+    },
+    {
+      "n": "2",
+      "claim": "defaultCacheTtlMs defaults to 0 so a result with no ttl hint is never served from cache",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Missing ttlMs falls back to 0, so expiresAt equals now and the entry is stored but never served.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/clients/caching.md",
+        "line_start": 85,
+        "quote": "The default is `0`: a result with no hint is never served from cache."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/client.ts",
+          "line_start": 676,
+          "quote": "this._defaultCacheTtlMs = options?.defaultCacheTtlMs ?? 0;",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/client.ts:676",
+            "file_sha256": "09a4fbb4ab901299c13a10c3dc395a1c250cd6efff32a7c947bf27cddf6026df"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/client.ts",
+          "line_start": 1816,
+          "quote": "const ttlMs = typeof body.ttlMs === 'number' ? body.ttlMs : this._defaultCacheTtlMs;",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/client.ts:1816",
+            "file_sha256": "09a4fbb4ab901299c13a10c3dc395a1c250cd6efff32a7c947bf27cddf6026df"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_420804089576"
+    },
+    {
+      "n": "3",
+      "claim": "listMaxPages (default 64) caps aggregate pagination walk, rejecting with SdkError LIST_PAGINATION_EXCEEDED; 0 removes the cap",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default 64, throws SdkError with that code when exceeded, and 0 disables the check.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/clients/calling.md",
+        "line_start": 52,
+        "quote": "`ClientOptions.listMaxPages` (default 64) caps the aggregate walk"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/client.ts",
+          "line_start": 436,
+          "quote": "const DEFAULT_LIST_MAX_PAGES = 64;",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/client.ts:436",
+            "file_sha256": "09a4fbb4ab901299c13a10c3dc395a1c250cd6efff32a7c947bf27cddf6026df"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/client.ts",
+          "line_start": 1782,
+          "quote": "if (this._listMaxPages !== 0 && pages >= this._listMaxPages) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/client.ts:1782",
+            "file_sha256": "09a4fbb4ab901299c13a10c3dc395a1c250cd6efff32a7c947bf27cddf6026df"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/core-internal/src/errors/sdkErrors.ts",
+          "line_start": 56,
+          "quote": "ListPaginationExceeded = 'LIST_PAGINATION_EXCEEDED',",
+          "checked": {
+            "ok": true,
+            "where": "packages/core-internal/src/errors/sdkErrors.ts:56",
+            "file_sha256": "bca635f94d3a32caaded3543579ed58d42834e81b6dcbc602315a8c6ae365294"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_20ec1537f293"
+    },
+    {
+      "n": "4",
+      "claim": "Legacy input-required shim roundTimeoutMs defaults to 600_000",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default applied as documented.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/migration/support-2026-07-28.md",
+        "line_start": 572,
+        "quote": "| `roundTimeoutMs` | `600_000` |"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/legacyInputRequiredShim.ts",
+          "line_start": 51,
+          "quote": "const DEFAULT_LEGACY_SHIM_ROUND_TIMEOUT_MS = 600_000;",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/legacyInputRequiredShim.ts:51",
+            "file_sha256": "4ca0bca69b2713745a6ec693287b9f2080cd24a394d6570bdeb84e609c5f288c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/legacyInputRequiredShim.ts",
+          "line_start": 72,
+          "quote": "roundTimeoutMs: options?.roundTimeoutMs ?? DEFAULT_LEGACY_SHIM_ROUND_TIMEOUT_MS,",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/legacyInputRequiredShim.ts:72",
+            "file_sha256": "4ca0bca69b2713745a6ec693287b9f2080cd24a394d6570bdeb84e609c5f288c"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9bb406761243"
+    },
+    {
+      "n": "5",
+      "claim": "maxToolInputElements is off by default; when exceeded the call returns an isError tool result naming the limit, before the schema runs",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The check only runs when the option is set, happens before schema validation, and the thrown error is caught and converted to an isError result.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/servers/tools.md",
+        "line_start": 224,
+        "quote": "It is off by default — leave it unset and behavior is unchanged."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/mcp.ts",
+          "line_start": 356,
+          "quote": "this._maxToolInputElements !== undefined &&",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/mcp.ts:356",
+            "file_sha256": "83be84bbaefbf93364c72ccca8bc48269cb28cbebbdc1a826c48d364b3f15451"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/mcp.ts",
+          "line_start": 362,
+          "quote": "arguments contain more than the maximum of ${this._maxToolInputElements} elements",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/mcp.ts:362",
+            "file_sha256": "83be84bbaefbf93364c72ccca8bc48269cb28cbebbdc1a826c48d364b3f15451"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/mcp.ts",
+          "line_start": 320,
+          "quote": "return this.createToolError(error instanceof Error ? error.message : String(error));",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/mcp.ts:320",
+            "file_sha256": "83be84bbaefbf93364c72ccca8bc48269cb28cbebbdc1a826c48d364b3f15451"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_2a2e7a94d061"
+    },
+    {
+      "n": "6",
+      "claim": "Transport maxRequestBodySize is 4 MiB by default",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default is 4 MiB and used by the streamable HTTP transport and handlers.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/servers/tools.md",
+        "line_start": 224,
+        "quote": "`maxRequestBodySize` (4 MiB by default)"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/requestBody.ts",
+          "line_start": 2,
+          "quote": "export const DEFAULT_MAX_REQUEST_BODY_SIZE = 4 * 1024 * 1024;",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/requestBody.ts:2",
+            "file_sha256": "6761bea97b83769d13c01ff67ffe8dbfdab9c949943b7ba026fc5516906c485c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/streamableHttp.ts",
+          "line_start": 300,
+          "quote": "this._maxRequestBodySize = resolveMaxRequestBodySize(options.maxRequestBodySize);",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/streamableHttp.ts:300",
+            "file_sha256": "ab9cc9359184e30c1fedf357c795534231ab703c13497cbec69932cab56e26c6"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_251ea49e77f7"
+    },
+    {
+      "n": "7",
+      "claim": "Legacy shim is on by default with maxRounds 8",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "maxRounds defaults to 8 and legacyShim to true.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/migration/support-2026-07-28.md",
+        "line_start": 571,
+        "quote": "| `maxRounds`      | `8`       |"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/legacyInputRequiredShim.ts",
+          "line_start": 71,
+          "quote": "maxRounds: options?.maxRounds ?? DEFAULT_LEGACY_SHIM_MAX_ROUNDS,",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/legacyInputRequiredShim.ts:71",
+            "file_sha256": "4ca0bca69b2713745a6ec693287b9f2080cd24a394d6570bdeb84e609c5f288c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/legacyInputRequiredShim.ts",
+          "line_start": 73,
+          "quote": "legacyShim: options?.legacyShim ?? true",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/legacyInputRequiredShim.ts:73",
+            "file_sha256": "4ca0bca69b2713745a6ec693287b9f2080cd24a394d6570bdeb84e609c5f288c"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_5d62a296314e"
+    },
+    {
+      "n": "8",
+      "claim": "With requestState.verify configured, tampered or expired state never reaches the handler and is answered with -32602 \"Invalid or expired requestState\"",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Verification runs before the handler is invoked; any hook failure becomes a frozen InvalidParams (-32602) error. Non-string state is rejected even without a hook.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/servers/input-required.md",
+        "line_start": 245,
+        "quote": "tampered or expired state never reaches the handler at all"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/server.ts",
+          "line_start": 644,
+          "quote": "const decoded = await this._verifyRequestState(rawRequestState, ctx, method);",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/server.ts:644",
+            "file_sha256": "a4ecf29025e18a56d912f202a1d829ecb3963af3084c1db1b8de98479a900e88"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/server.ts",
+          "line_start": 744,
+          "quote": "throw new ProtocolError(ProtocolErrorCode.InvalidParams, 'Invalid or expired requestState', {",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/server.ts:744",
+            "file_sha256": "a4ecf29025e18a56d912f202a1d829ecb3963af3084c1db1b8de98479a900e88"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/requestStateCodec.ts",
+          "line_start": 247,
+          "quote": "if (typeof envelope.exp !== 'number' || envelope.exp < Math.floor(Date.now() / 1000)) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/requestStateCodec.ts:247",
+            "file_sha256": "4f9856de5135b57198a33aeaa82c5e1343315cc0d528f199ff3388ef87fe2204"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9fa1edc361a8"
+    },
+    {
+      "n": "9",
+      "claim": "The requestState codec is signed (HMAC-SHA256), not encrypted; the client can decode the payload",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The payload is plain base64url JSON with an HMAC; no encryption exists. Docs statement is accurate; the key must be >=32 bytes as the docs example implies.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/servers/input-required.md",
+        "line_start": 252,
+        "quote": "The codec is signed, not encrypted"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/requestStateCodec.ts",
+          "line_start": 204,
+          "quote": "const body = bytesToBase64Url(utf8.encode(JSON.stringify(envelope)));",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/requestStateCodec.ts:204",
+            "file_sha256": "4f9856de5135b57198a33aeaa82c5e1343315cc0d528f199ff3388ef87fe2204"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/requestStateCodec.ts",
+          "line_start": 177,
+          "quote": "subtle.importKey('raw', keyBytes, { name: 'HMAC', hash: 'SHA-256' }, false, ['sign', 'verify'])",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/requestStateCodec.ts:177",
+            "file_sha256": "4f9856de5135b57198a33aeaa82c5e1343315cc0d528f199ff3388ef87fe2204"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_05f2b0551648"
+    },
+    {
+      "n": "10",
+      "claim": "The SDK never sends a response for a cancelled request and discards whatever the handler still returns",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both the success and error branches return early without sending when the per-request controller was aborted by notifications/cancelled.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/servers/logging-progress-cancellation.md",
+        "line_start": 189,
+        "quote": "The SDK never sends a response for a cancelled request and discards whatever the handler still returns."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/core-internal/src/shared/protocol.ts",
+          "line_start": 1118,
+          "quote": "if (abortController.signal.aborted) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/core-internal/src/shared/protocol.ts:1118",
+            "file_sha256": "8ba10c7ef2ece310837b23e905c12335d8e6e38dcfcc3154c85c72b7508bac25"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/core-internal/src/shared/protocol.ts",
+          "line_start": 1148,
+          "quote": "if (abortController.signal.aborted) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/core-internal/src/shared/protocol.ts:1148",
+            "file_sha256": "8ba10c7ef2ece310837b23e905c12335d8e6e38dcfcc3154c85c72b7508bac25"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/core-internal/src/shared/protocol.ts",
+          "line_start": 743,
+          "quote": "controller?.abort(notification.params.reason);",
+          "checked": {
+            "ok": true,
+            "where": "packages/core-internal/src/shared/protocol.ts:743",
+            "file_sha256": "8ba10c7ef2ece310837b23e905c12335d8e6e38dcfcc3154c85c72b7508bac25"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_08e6c0a6edf5"
+    },
+    {
+      "n": "11",
+      "claim": "Root entry of every package is runtime-neutral: its module graph never reaches node:child_process or other Node builtins a browser/Workers bundler cannot resolve",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Stdio and skills-node code live behind subpaths. The only Node builtin in the root graph is node:process in shimsNode, which is selected by export conditions and replaced by workerd/browser shims.",
+      "user_impact": null,
+      "note": "A bundler that sets none of the browser/workerd/node conditions falls to the `default` condition, which selects the Node shim (node:process).",
+      "source": {
+        "file": "docs/get-started/packages.md",
+        "line_start": 49,
+        "quote": "its module graph never reaches `node:child_process` or any other Node builtin"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/index.ts",
+          "line_start": 66,
+          "quote": "// StdioServerTransport and the serveStdio entry are exported from the './stdio' subpath",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/index.ts:66",
+            "file_sha256": "56019c46ba453ca783d08daf40b723d52f3c9c54a6e1afeeea4b20f73b127572"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/package.json",
+          "line_start": 84,
+          "quote": "\"workerd\": {",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/package.json:84",
+            "file_sha256": "87393c6b39d3de8e481baef9dad407b5dd84c4bacae284fce1854bfd74acc6ce"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/shimsNode.ts",
+          "line_start": 7,
+          "quote": "export { default as process } from 'node:process';",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/shimsNode.ts:7",
+            "file_sha256": "a02f33fdbfd9ed6b9d911098f0e5563c36352a0d4566506434f6f90e0b523f7e"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_b26afaeb6c51"
+    },
+    {
+      "n": "12",
+      "claim": "withOAuth adds the Authorization header and on a 401 re-authenticates against serverUrl and retries the request once",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "One auth() round followed by a single retry; a second 401 throws UnauthorizedError.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/clients/middleware.md",
+        "line_start": 87,
+        "quote": "on a `401` it re-authenticates against `serverUrl` and retries the request once"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/middleware.ts",
+          "line_start": 61,
+          "quote": "headers.set('Authorization', `Bearer ${tokens.access_token}`);",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/middleware.ts:61",
+            "file_sha256": "d94e18d1c416f0d4689ffcfbfa9170d45876dd9a21b3073659b40ac2c5feead8"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/middleware.ts",
+          "line_start": 93,
+          "quote": "response = await makeRequest();",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/middleware.ts:93",
+            "file_sha256": "d94e18d1c416f0d4689ffcfbfa9170d45876dd9a21b3073659b40ac2c5feead8"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/middleware.ts",
+          "line_start": 103,
+          "quote": "if (response.status === 401) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/middleware.ts:103",
+            "file_sha256": "d94e18d1c416f0d4689ffcfbfa9170d45876dd9a21b3073659b40ac2c5feead8"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_91e80e39203f"
+    },
+    {
+      "n": "13",
+      "claim": "mcpAuthMetadataRouter mounts a path-aware protected-resource route and /.well-known/oauth-authorization-server mirroring oauthMetadata",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Exactly two routes are mounted, with the resource path appended for the protected-resource document.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/serving/authorization.md",
+        "line_start": 99,
+        "quote": "The router mounts two well-known routes"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/middleware/express/src/auth/metadataRouter.ts",
+          "line_start": 97,
+          "quote": "router.use(`/.well-known/oauth-protected-resource${rsPath === '/' ? '' : rsPath}`, metadataHandler(protectedResourceMetadata));",
+          "checked": {
+            "ok": true,
+            "where": "packages/middleware/express/src/auth/metadataRouter.ts:97",
+            "file_sha256": "4d0c706dc711a49b96b8f9e81d0af53f20febc79aae919770078b4fc9414c9f6"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/middleware/express/src/auth/metadataRouter.ts",
+          "line_start": 100,
+          "quote": "router.use('/.well-known/oauth-authorization-server', metadataHandler(options.oauthMetadata));",
+          "checked": {
+            "ok": true,
+            "where": "packages/middleware/express/src/auth/metadataRouter.ts:100",
+            "file_sha256": "4d0c706dc711a49b96b8f9e81d0af53f20febc79aae919770078b4fc9414c9f6"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_d2f4f795c8ef"
+    },
+    {
+      "n": "14",
+      "claim": "With expectedResource set, requireBearerAuth accepts a token only if AuthInfo.resource matches (one trailing slash aside) and answers 401 invalid_token otherwise; unset means no comparison",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "A resource that is missing or different throws an OAuthError with code InvalidToken. The comparison is skipped when expectedResource is undefined.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/serving/authorization.md",
+        "line_start": 87,
+        "quote": "answers `401 invalid_token` for a token reported for another value or for none"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/middleware/bearerAuth.ts",
+          "line_start": 163,
+          "quote": "if (expectedResource !== undefined && !sameResource(authInfo.resource, expectedResource)) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/middleware/bearerAuth.ts:163",
+            "file_sha256": "9979688692db6634fd40642e37b8acf4b9e08e05a90a42788939dc136e19879f"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/middleware/bearerAuth.ts",
+          "line_start": 94,
+          "quote": "if (!reported) return false;",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/middleware/bearerAuth.ts:94",
+            "file_sha256": "9979688692db6634fd40642e37b8acf4b9e08e05a90a42788939dc136e19879f"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_ee18253f61c4"
+    },
+    {
+      "n": "15",
+      "claim": "PrivateKeyJwtProvider's jwtLifetimeSeconds overrides a 300-second default for the signed assertion",
+      "verdict": "PARTIAL",
+      "severity": "low",
+      "explanation": "The override option exists and works, but the real default is 601 seconds. The in-code comment also says 300, so docs and JSDoc disagree with the implementation.",
+      "user_impact": "A user relying on the documented 300-second assertion lifetime (for example to match an authorization server that rejects assertions valid for more than 5 minutes) gets assertions valid for 601 seconds unless they set jwtLifetimeSeconds explicitly, so the token request can be rejected or the replay window is twice as long as documented.",
+      "note": null,
+      "source": {
+        "file": "docs/clients/machine-auth.md",
+        "line_start": 59,
+        "quote": "`jwtLifetimeSeconds` overrides the 300-second default"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/authExtensions.ts",
+          "line_start": 47,
+          "quote": "const lifetimeSeconds = options.lifetimeSeconds ?? 601;",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/authExtensions.ts:47",
+            "file_sha256": "5ee01faf51428e004fc92b5e33ad3e4633a8f37271ad1969217a4e45c442801e"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/authExtensions.ts",
+          "line_start": 261,
+          "quote": "Optional JWT lifetime in seconds (default: 300).",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/authExtensions.ts:261",
+            "file_sha256": "5ee01faf51428e004fc92b5e33ad3e4633a8f37271ad1969217a4e45c442801e"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/authExtensions.ts",
+          "line_start": 334,
+          "quote": "lifetimeSeconds: options.jwtLifetimeSeconds,",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/authExtensions.ts:334",
+            "file_sha256": "5ee01faf51428e004fc92b5e33ad3e4633a8f37271ad1969217a4e45c442801e"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "Docs say default is 300s; code defaults lifetimeSeconds to 601 (the in-code doc comment also says 300). Real mismatch, though a low-impact one; severity low is appropriate.",
+        "severity": "low",
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "packages/client/src/client/authExtensions.ts",
+            "line_start": 47,
+            "quote": "const lifetimeSeconds = options.lifetimeSeconds ?? 601;",
+            "checked": {
+              "ok": true,
+              "where": "packages/client/src/client/authExtensions.ts:47",
+              "file_sha256": "5ee01faf51428e004fc92b5e33ad3e4633a8f37271ad1969217a4e45c442801e"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:29:03.679Z"
+      },
+      "receipt": "rcpt_243304421e98"
+    },
+    {
+      "n": "16",
+      "claim": "AuthProvider: without onUnauthorized a 401 throws UnauthorizedError; with onUnauthorized the transport retries the request once",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The retry is made once (isAuthRetry=true); a second 401 raises an SdkHttpError, and with no hook UnauthorizedError is thrown.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/clients/machine-auth.md",
+        "line_start": 42,
+        "quote": "Without `onUnauthorized`, a 401 throws `UnauthorizedError`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/streamableHttp.ts",
+          "line_start": 1082,
+          "quote": "if (this._authProvider.onUnauthorized && !isAuthRetry) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/streamableHttp.ts:1082",
+            "file_sha256": "c4ee438509150f1425e1a3adb5e6394fa44ebec1e035e986bf7c296790937916"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/streamableHttp.ts",
+          "line_start": 1096,
+          "quote": "return this._send(message, options, true, stepUpRetries);",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/streamableHttp.ts:1096",
+            "file_sha256": "c4ee438509150f1425e1a3adb5e6394fa44ebec1e035e986bf7c296790937916"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/streamableHttp.ts",
+          "line_start": 1107,
+          "quote": "throw markAuthSeamEscape(new UnauthorizedError());",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/streamableHttp.ts:1107",
+            "file_sha256": "c4ee438509150f1425e1a3adb5e6394fa44ebec1e035e986bf7c296790937916"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_f94a4dd608a9"
+    },
+    {
+      "n": "17",
+      "claim": "versionNegotiation defaults to the unchanged 2025 initialize handshake with no probe; the 2026-07-28 era is opt-in",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Absent option resolves to 'legacy', which returns early without any probe.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/protocol-versions.md",
+        "line_start": 191,
+        "quote": "the default is the unchanged 2025 `initialize`, no probe."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/versionNegotiation.ts",
+          "line_start": 112,
+          "quote": "const DEFAULT_VERSION_NEGOTIATION_MODE: VersionNegotiationMode = 'legacy';",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/versionNegotiation.ts:112",
+            "file_sha256": "0e30e69cd7dba669af267770c155624bc2d4c1d3c15e99a5764f9406141bdc8b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/versionNegotiation.ts",
+          "line_start": 136,
+          "quote": "const mode = options?.mode ?? DEFAULT_VERSION_NEGOTIATION_MODE;",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/versionNegotiation.ts:136",
+            "file_sha256": "0e30e69cd7dba669af267770c155624bc2d4c1d3c15e99a5764f9406141bdc8b"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_3540aa96beba"
+    },
+    {
+      "n": "18",
+      "claim": "createMcpHandler builds a fresh server instance from the factory for every HTTP request and holds nothing between requests",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both the modern path and the stateless legacy path call the factory per request and use stateless transports.",
+      "user_impact": null,
+      "note": "Open subscriptions/listen streams are held in an in-process bus, so multi-node change notifications need a shared ServerEventBus, which the docs mention separately.",
+      "source": {
+        "file": "docs/serving/sessions-state-scaling.md",
+        "line_start": 6,
+        "quote": "`createMcpHandler` builds a fresh server instance from your factory for every HTTP request"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/createMcpHandler.ts",
+          "line_start": 790,
+          "quote": "const product = await factory({",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/createMcpHandler.ts:790",
+            "file_sha256": "33095ad5d7aa24360da0d21f851a213f6b0716cdb3a800b7042d0683fb2f19db"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/createMcpHandler.ts",
+          "line_start": 347,
+          "quote": "sessionIdGenerator: undefined,",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/createMcpHandler.ts:347",
+            "file_sha256": "33095ad5d7aa24360da0d21f851a213f6b0716cdb3a800b7042d0683fb2f19db"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_1f25ac458ea6"
+    },
+    {
+      "n": "19",
+      "claim": "createMcpExpressApp with a localhost-class host validates the Origin header by default; a present unparseable Origin (including \"null\") is rejected with 403 and cannot be allowlisted; requests without Origin pass",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The localhost default is armed when no allowedOrigins is given, a missing Origin passes, and an opaque origin has no hostname and is refused regardless of the allowlist.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "skills/mcp-typescript-sdk-upgrade-to-v2/references/behavioral-changes.md",
+        "line_start": 144,
+        "quote": "localhost-class `host` now also validate the `Origin` header by default."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/middleware/express/src/express.ts",
+          "line_start": 109,
+          "quote": "} else if (['127.0.0.1', 'localhost', '::1'].includes(host)) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/middleware/express/src/express.ts:109",
+            "file_sha256": "8dcca27e094685b6626d081774eadabbb83bef5ba78f684b582899e9bcb1853d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/middleware/originValidation.ts",
+          "line_start": 44,
+          "quote": "if (originHeader === null || originHeader === undefined || originHeader === '') {",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/middleware/originValidation.ts:44",
+            "file_sha256": "494c573ce55b8948ddbe8f603c0c3c4235079d4cc62de27ecf318bce58a89dc2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/middleware/originValidation.ts",
+          "line_start": 57,
+          "quote": "if (hostname === '') {",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/middleware/originValidation.ts:57",
+            "file_sha256": "494c573ce55b8948ddbe8f603c0c3c4235079d4cc62de27ecf318bce58a89dc2"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_d74ee4c6f2b3"
+    },
+    {
+      "n": "20",
+      "claim": "Every @modelcontextprotocol/* package requires Node.js 20",
+      "verdict": "PARTIAL",
+      "severity": "medium",
+      "explanation": "Client, core, core-internal, server-legacy and codemod declare >=20, but the server package declares >=41, contradicting the documented requirement. The middleware packages declare no engines field at all.",
+      "user_impact": "@modelcontextprotocol/server declares engines.node \">=41\", a Node version that does not exist. A user on Node 20, 22 or 24 who follows the docs gets EBADENGINE warnings, and installs fail outright under engine-strict (npm config or pnpm), so the server package may be uninstallable on the very runtime the docs say it supports.",
+      "note": null,
+      "source": {
+        "file": "docs/troubleshooting.md",
+        "line_start": 54,
+        "quote": "Every `@modelcontextprotocol/*` package requires Node.js 20"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/package.json",
+          "line_start": 15,
+          "quote": "\"node\": \">=41\"",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/package.json:15",
+            "file_sha256": "87393c6b39d3de8e481baef9dad407b5dd84c4bacae284fce1854bfd74acc6ce"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/package.json",
+          "line_start": 15,
+          "quote": "\"node\": \">=20\"",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/package.json:15",
+            "file_sha256": "49bd25122f1206b787ef9c12dc86c4dc671703323d2f5add8c8bc802d00f2604"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "Server package declares engines.node \">=41\", which no Node version satisfies. This contradicts the docs claim that every package requires Node 20 and breaks installs under engine-strict. Medium severity is reasonable.",
+        "severity": "medium",
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "packages/server/package.json",
+            "line_start": 15,
+            "quote": "\"node\": \">=41\"",
+            "checked": {
+              "ok": true,
+              "where": "packages/server/package.json:15",
+              "file_sha256": "87393c6b39d3de8e481baef9dad407b5dd84c4bacae284fce1854bfd74acc6ce"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:29:04.949Z"
+      },
+      "receipt": "rcpt_58b942fb6f04"
+    },
+    {
+      "n": "21",
+      "claim": "Client inputRequired caps interactive rounds at maxRounds (default 10), rejecting with SdkError INPUT_REQUIRED_ROUNDS_EXCEEDED; autoFulfill: false turns the loop off",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default 10 rounds, typed error code exists, and autoFulfill false surfaces the input_required instead of looping.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/clients/server-requests.md",
+        "line_start": 106,
+        "quote": "Past `maxRounds` (default 10) the call rejects with an `SdkError` coded `INPUT_REQUIRED_ROUNDS_EXCEEDED`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/core-internal/src/shared/inputRequiredDriver.ts",
+          "line_start": 36,
+          "quote": "export const DEFAULT_INPUT_REQUIRED_MAX_ROUNDS = 10;",
+          "checked": {
+            "ok": true,
+            "where": "packages/core-internal/src/shared/inputRequiredDriver.ts:36",
+            "file_sha256": "80fba9664b651fa51177c1d1846a7097ddd8117f94575b0304e0f79d09c97acb"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/core-internal/src/errors/sdkErrors.ts",
+          "line_start": 47,
+          "quote": "InputRequiredRoundsExceeded = 'INPUT_REQUIRED_ROUNDS_EXCEEDED',",
+          "checked": {
+            "ok": true,
+            "where": "packages/core-internal/src/errors/sdkErrors.ts:47",
+            "file_sha256": "bca635f94d3a32caaded3543579ed58d42834e81b6dcbc602315a8c6ae365294"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/client.ts",
+          "line_start": 747,
+          "quote": "if (!this._inputRequiredDriverConfig.autoFulfill) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/client.ts:747",
+            "file_sha256": "09a4fbb4ab901299c13a10c3dc395a1c250cd6efff32a7c947bf27cddf6026df"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_ba082f621710"
+    },
+    {
+      "n": "22",
+      "claim": "A client must declare a capability in its constructor or the server never sends that request",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The server asserts the client's declared capabilities before sending sampling, elicitation and roots requests and throws rather than sending.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/clients/server-requests.md",
+        "line_start": 110,
+        "quote": "Declare a capability in the `Client` constructor or the server never sends that request."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/server.ts",
+          "line_start": 787,
+          "quote": "throw new SdkError(SdkErrorCode.CapabilityNotSupported, `Client does not support sampling (required for ${method})`);",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/server.ts:787",
+            "file_sha256": "a4ecf29025e18a56d912f202a1d829ecb3963af3084c1db1b8de98479a900e88"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/server.ts",
+          "line_start": 794,
+          "quote": "throw new SdkError(SdkErrorCode.CapabilityNotSupported, `Client does not support elicitation (required for ${method})`);",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/server.ts:794",
+            "file_sha256": "a4ecf29025e18a56d912f202a1d829ecb3963af3084c1db1b8de98479a900e88"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_41a53d11a512"
+    },
+    {
+      "n": "23",
+      "claim": "Tool annotations never change how the SDK runs the tool; they are only advertised to clients",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "annotations is only copied into the tools/list entry; the tools/call path (validate, execute, project) never reads it.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/servers/tools.md",
+        "line_start": 214,
+        "quote": "Annotations never change how the SDK runs the tool"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/mcp.ts",
+          "line_start": 277,
+          "quote": "annotations: tool.annotations,",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/mcp.ts:277",
+            "file_sha256": "83be84bbaefbf93364c72ccca8bc48269cb28cbebbdc1a826c48d364b3f15451"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/mcp.ts",
+          "line_start": 307,
+          "quote": "const result = await this.executeToolHandler(tool, args, ctx);",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/mcp.ts:307",
+            "file_sha256": "83be84bbaefbf93364c72ccca8bc48269cb28cbebbdc1a826c48d364b3f15451"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_56ed5b21f023"
+    },
+    {
+      "n": "24",
+      "claim": "The frozen SSE server transport ships as @modelcontextprotocol/server-legacy/sse and itself accepts messages up to 4mb; binding beyond localhost drops the default Host/Origin validation",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The ./sse subpath exists with a 4mb body cap, and Host and Origin validation are only armed for localhost hosts or an explicit allowlist.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/serving/legacy-clients.md",
+        "line_start": 96,
+        "quote": "binding beyond localhost drops the default `Host`/`Origin` validation"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server-legacy/src/sse/sse.ts",
+          "line_start": 10,
+          "quote": "const MAXIMUM_MESSAGE_SIZE = '4mb';",
+          "checked": {
+            "ok": true,
+            "where": "packages/server-legacy/src/sse/sse.ts:10",
+            "file_sha256": "d68d17921918cd34640fffb57664d177624348ba3c64b4e2952bfe9421476653"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/middleware/express/src/express.ts",
+          "line_start": 93,
+          "quote": "} else if (host === '0.0.0.0' || host === '::') {",
+          "checked": {
+            "ok": true,
+            "where": "packages/middleware/express/src/express.ts:93",
+            "file_sha256": "8dcca27e094685b6626d081774eadabbb83bef5ba78f684b582899e9bcb1853d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server-legacy/package.json",
+          "line_start": 38,
+          "quote": "\"./sse\": {",
+          "checked": {
+            "ok": true,
+            "where": "packages/server-legacy/package.json:38",
+            "file_sha256": "7c287715363fe762b6a54b9a63b037189f319c1674a8ffd262d1a65d7fe5d596"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_8d051262d979"
+    },
+    {
+      "n": "25",
+      "claim": "On a 2026-07-28 request ctx.mcpReq.log() reads its level from the _meta logLevel key; when absent the server emits no notifications/message (opt-out, not no filter), and the SDK Client does not auto-attach logLevel",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Absent key returns without sending in the modern era; 2025-era keeps the session-scoped level. The client package has no logLevel reference, so it never auto-attaches it.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/migration/support-2026-07-28.md",
+        "line_start": 252,
+        "quote": "`notifications/message` for that request"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/server.ts",
+          "line_start": 429,
+          "quote": "threshold = ctx.mcpReq.envelope?.[LOG_LEVEL_META_KEY] as LoggingLevel | undefined;",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/server.ts:429",
+            "file_sha256": "a4ecf29025e18a56d912f202a1d829ecb3963af3084c1db1b8de98479a900e88"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/server.ts",
+          "line_start": 430,
+          "quote": "if (threshold === undefined) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/server.ts:430",
+            "file_sha256": "a4ecf29025e18a56d912f202a1d829ecb3963af3084c1db1b8de98479a900e88"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/server.ts",
+          "line_start": 434,
+          "quote": "threshold = this._loggingLevels.get(ctx.sessionId) ?? this._loggingLevels.get(undefined);",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/server.ts:434",
+            "file_sha256": "a4ecf29025e18a56d912f202a1d829ecb3963af3084c1db1b8de98479a900e88"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_8a012cceda22"
+    },
+    {
+      "n": "26",
+      "claim": "If discovery resolves an issuer different from expectedIssuer, the SDK throws AuthorizationServerMismatchError instead of sending the secret; omitting expectedIssuer is deprecated",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The static credential carries an issuer stamp; auth() throws the typed error when the resolved AS differs, before a token request. Omitting the option logs a deprecation warning.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/clients/machine-auth.md",
+        "line_start": 30,
+        "quote": "the SDK throws `AuthorizationServerMismatchError` instead of sending the secret"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/auth.ts",
+          "line_start": 1296,
+          "quote": "throw new AuthorizationServerMismatchError(rawClientInfo.issuer, issuer);",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/auth.ts:1296",
+            "file_sha256": "c8d02e8f762b85c2d36cea8d580c6696cfc1d63aeb469da434278a59dd461b85"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/authExtensions.ts",
+          "line_start": 102,
+          "quote": "if (expectedIssuer === undefined) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/authExtensions.ts:102",
+            "file_sha256": "5ee01faf51428e004fc92b5e33ad3e4633a8f37271ad1969217a4e45c442801e"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_fba033e6ba64"
+    },
+    {
+      "n": "27",
+      "claim": "Server stamps serverInfo on every 2026-era response; requests without clientInfo are served while a malformed present value is rejected; a server with no identity is anonymous (getServerVersion() undefined)",
+      "verdict": "UNVERIFIABLE",
+      "severity": null,
+      "explanation": "I did not trace the surrogate partitioning path through the cache in enough depth to confirm it, so I make no verdict on it.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/migration/support-2026-07-28.md",
+        "line_start": 467,
+        "quote": "identity is simply anonymous: the connection works, `getServerVersion()` is"
+      },
+      "evidence": [
+        {
+          "type": "absent",
+          "pattern": "anonymous surrogate",
+          "checked": {
+            "ok": true,
+            "where": "absent:anonymous surrogate",
+            "doc_hits": 0
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_248d5cb518c8"
+    },
+    {
+      "n": "28",
+      "claim": "Server stamps the _meta serverInfo identity on every 2026-era response, and a server that stamps none is anonymous with a per-connection cache surrogate",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The modern codec's encodeResult stamps serverInfo on every result, and the client falls back to a generated per-connection key for cache partitioning when no identity exists. This supersedes my earlier UNVERIFIABLE entry (#27) on the neighbouring sentence, which I recorded without finishing the trace.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/migration/support-2026-07-28.md",
+        "line_start": 460,
+        "quote": "Every 2026-era response gets the `_meta` serverInfo"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/core-internal/src/wire/rev2026-07-28/codec.ts",
+          "line_start": 270,
+          "quote": "return stampServerInfoMeta(fillCacheFields(method, stampResultType(method, enforceDeletedFields(method, result))), serverInfo);",
+          "checked": {
+            "ok": true,
+            "where": "packages/core-internal/src/wire/rev2026-07-28/codec.ts:270",
+            "file_sha256": "a8fc27ff6c5254df970e1dd294033266f899be84923ba744c1ad81ef0c64550a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/client.ts",
+          "line_start": 1378,
+          "quote": "return transport.sessionId ?? `anonymous:${Date.now()}-${Math.random().toString(36).slice(2)}`;",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/client.ts:1378",
+            "file_sha256": "09a4fbb4ab901299c13a10c3dc395a1c250cd6efff32a7c947bf27cddf6026df"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_3d4052cc746c"
+    },
+    {
+      "n": "29",
+      "claim": "On a pre-2026-07-28 connection the legacy shim is on by default and fulfils an input_required return by pushing real elicitation/sampling requests",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The shim defaults to enabled and is used for legacy-era input_required returns.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/servers/input-required.md",
+        "line_start": 257,
+        "quote": "the SDK's legacy shim — on by default — fulfils an `input_required` return"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/legacyInputRequiredShim.ts",
+          "line_start": 73,
+          "quote": "legacyShim: options?.legacyShim ?? true",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/legacyInputRequiredShim.ts:73",
+            "file_sha256": "4ca0bca69b2713745a6ec693287b9f2080cd24a394d6570bdeb84e609c5f288c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/server.ts",
+          "line_start": 615,
+          "quote": "return is fulfilled by the default-on legacy shim, whose own gate",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/server.ts:615",
+            "file_sha256": "a4ecf29025e18a56d912f202a1d829ecb3963af3084c1db1b8de98479a900e88"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_6a42bf404895"
+    },
+    {
+      "n": "30",
+      "claim": "createMcpHandler serves 2025-era clients statelessly from the same factory by default (legacy option)",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The legacy option selects stateless or reject, and the default path builds a stateless per-request transport from the same factory.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/serving/http.md",
+        "line_start": 112,
+        "quote": "The handler serves 2025-era clients statelessly from the same factory by default."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/createMcpHandler.ts",
+          "line_start": 168,
+          "quote": "legacy?: 'stateless' | 'reject';",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/createMcpHandler.ts:168",
+            "file_sha256": "33095ad5d7aa24360da0d21f851a213f6b0716cdb3a800b7042d0683fb2f19db"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/createMcpHandler.ts",
+          "line_start": 347,
+          "quote": "sessionIdGenerator: undefined,",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/createMcpHandler.ts:347",
+            "file_sha256": "33095ad5d7aa24360da0d21f851a213f6b0716cdb3a800b7042d0683fb2f19db"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_497304d53585"
+    }
+  ],
+  "rejected": [
+    {
+      "claim": "With expectedResource set, requireBearerAuth accepts a token only if AuthInfo.resource matches (one trailing slash aside) and answers 401 invalid_token otherwise; unset means no comparison",
+      "verdict": "VERIFIED",
+      "problems": [
+        "the explanation describes a mismatch between the claim and the code, but the verdict is VERIFIED. If the code contradicts the claim, record PARTIAL or FALSE with user_impact; if it doesn't, rewrite the explanation"
+      ],
+      "at": "2026-10-22T21:26:09.156Z"
+    },
+    {
+      "claim": "With expectedResource set, requireBearerAuth accepts a token only if AuthInfo.resource matches (one trailing slash aside) and answers 401 invalid_token otherwise; unset means no comparison",
+      "verdict": "VERIFIED",
+      "problems": [
+        "the explanation describes a mismatch between the claim and the code, but the verdict is VERIFIED. If the code contradicts the claim, record PARTIAL or FALSE with user_impact; if it doesn't, rewrite the explanation"
+      ],
+      "at": "2026-10-22T21:26:20.026Z"
+    }
+  ],
+  "finished_at": "2026-10-22T21:29:33.740Z",
+  "review_requested_at": "2026-10-22T21:28:52.944Z",
+  "skipped": [
+    {
+      "candidate": "c1",
+      "reason": "Usage guidance about not sharing a persisted DiscoverResult across principals; the SDK stores no principal and nothing in code can enforce it."
+    },
+    {
+      "candidate": "c2",
+      "reason": "Advice to developers not to collect secrets via form elicitation; not a behaviour the SDK promises, and the SDK has no field-name filtering to check."
+    },
+    {
+      "candidate": "c3",
+      "reason": "Internal docs-writing convention for contributors in docs/_meta, not a promise to users."
+    },
+    {
+      "candidate": "c4",
+      "reason": "Describes the SEP-990 cross-app access protocol flow; the IdP behaviour depends on external services."
+    },
+    {
+      "candidate": "c7",
+      "reason": "Migration prose restating the opt-in default already verified through the versionNegotiation default claim."
+    },
+    {
+      "candidate": "c8",
+      "reason": "Spec-level statement about subscriptions/listen; not traced in this audit."
+    },
+    {
+      "candidate": "c13",
+      "reason": "Obligation on OAuthClientProvider implementers about their own token storage; the SDK ships no storage to check."
+    },
+    {
+      "candidate": "c14",
+      "reason": "Same opt-in default as c7, covered by the verified versionNegotiation default claim."
+    },
+    {
+      "candidate": "c15",
+      "reason": "Transport opt-in detail for requestSignal; cancellation was checked via the protocol.ts claim instead."
+    },
+    {
+      "candidate": "c17",
+      "reason": "Duplicate of the signed-not-encrypted requestState claim already recorded."
+    },
+    {
+      "candidate": "c19",
+      "reason": "Covered by the verified client maxRounds and autoFulfill claim."
+    },
+    {
+      "candidate": "c20",
+      "reason": "Table row duplicating the per-request logLevel behaviour already verified."
+    },
+    {
+      "candidate": "c23",
+      "reason": "Responsibilities placed on host applications, not a behaviour of the SDK; the 512 file / 16 MiB default itself is in code."
+    },
+    {
+      "candidate": "c24",
+      "reason": "Statement about the specification's deprecation policy, not SDK behaviour."
+    },
+    {
+      "candidate": "c28",
+      "reason": "Pointer to where helpers live; the Express package does export requireBearerAuth and the metadata router, already exercised in other claims."
+    },
+    {
+      "candidate": "c33",
+      "reason": "Internal edge-classification detail; not traced in this audit."
+    },
+    {
+      "candidate": "c36",
+      "reason": "Not traced in this audit."
+    },
+    {
+      "signal": "plaintext_secret",
+      "reason": "False positive: the hit is an onerror message printing a progress notification for an unknown progress token, plus a copy of that line in a prior audit report. No secret is written to disk or storage."
+    }
+  ],
+  "behaviors": [],
+  "notes": [],
+  "retracted": [],
+  "raw_claims": [
+    {
+      "n": "1",
+      "claim": "Default response cache store is InMemoryResponseCacheStore holding at most 512 resources/read entries",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The cap of 512 applies to resources/read keys; list singleton methods are exempt, consistent with the sentence.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/clients/caching.md",
+        "line_start": 59,
+        "quote": "holding at most 512 `resources/read` entries"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/responseCache.ts",
+          "line_start": 168,
+          "quote": "this._maxEntries = options?.maxEntries ?? 512;",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/responseCache.ts:168",
+            "file_sha256": "d784a947780510106c0cc8dcca5925ca8b5d651388e447ed5331c2c59258340f"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/responseCache.ts",
+          "line_start": 188,
+          "quote": "if (!exempt && isNew && this._maxEntries > 0 && this._cappedSize >= this._maxEntries) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/responseCache.ts:188",
+            "file_sha256": "d784a947780510106c0cc8dcca5925ca8b5d651388e447ed5331c2c59258340f"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_d52095ab7aa4"
+    },
+    {
+      "n": "2",
+      "claim": "defaultCacheTtlMs defaults to 0 so a result with no ttl hint is never served from cache",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Missing ttlMs falls back to 0, so expiresAt equals now and the entry is stored but never served.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/clients/caching.md",
+        "line_start": 85,
+        "quote": "The default is `0`: a result with no hint is never served from cache."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/client.ts",
+          "line_start": 676,
+          "quote": "this._defaultCacheTtlMs = options?.defaultCacheTtlMs ?? 0;",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/client.ts:676",
+            "file_sha256": "09a4fbb4ab901299c13a10c3dc395a1c250cd6efff32a7c947bf27cddf6026df"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/client.ts",
+          "line_start": 1816,
+          "quote": "const ttlMs = typeof body.ttlMs === 'number' ? body.ttlMs : this._defaultCacheTtlMs;",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/client.ts:1816",
+            "file_sha256": "09a4fbb4ab901299c13a10c3dc395a1c250cd6efff32a7c947bf27cddf6026df"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_420804089576"
+    },
+    {
+      "n": "3",
+      "claim": "listMaxPages (default 64) caps aggregate pagination walk, rejecting with SdkError LIST_PAGINATION_EXCEEDED; 0 removes the cap",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default 64, throws SdkError with that code when exceeded, and 0 disables the check.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/clients/calling.md",
+        "line_start": 52,
+        "quote": "`ClientOptions.listMaxPages` (default 64) caps the aggregate walk"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/client.ts",
+          "line_start": 436,
+          "quote": "const DEFAULT_LIST_MAX_PAGES = 64;",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/client.ts:436",
+            "file_sha256": "09a4fbb4ab901299c13a10c3dc395a1c250cd6efff32a7c947bf27cddf6026df"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/client.ts",
+          "line_start": 1782,
+          "quote": "if (this._listMaxPages !== 0 && pages >= this._listMaxPages) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/client.ts:1782",
+            "file_sha256": "09a4fbb4ab901299c13a10c3dc395a1c250cd6efff32a7c947bf27cddf6026df"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/core-internal/src/errors/sdkErrors.ts",
+          "line_start": 56,
+          "quote": "ListPaginationExceeded = 'LIST_PAGINATION_EXCEEDED',",
+          "checked": {
+            "ok": true,
+            "where": "packages/core-internal/src/errors/sdkErrors.ts:56",
+            "file_sha256": "bca635f94d3a32caaded3543579ed58d42834e81b6dcbc602315a8c6ae365294"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_20ec1537f293"
+    },
+    {
+      "n": "4",
+      "claim": "Legacy input-required shim roundTimeoutMs defaults to 600_000",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default applied as documented.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/migration/support-2026-07-28.md",
+        "line_start": 572,
+        "quote": "| `roundTimeoutMs` | `600_000` |"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/legacyInputRequiredShim.ts",
+          "line_start": 51,
+          "quote": "const DEFAULT_LEGACY_SHIM_ROUND_TIMEOUT_MS = 600_000;",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/legacyInputRequiredShim.ts:51",
+            "file_sha256": "4ca0bca69b2713745a6ec693287b9f2080cd24a394d6570bdeb84e609c5f288c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/legacyInputRequiredShim.ts",
+          "line_start": 72,
+          "quote": "roundTimeoutMs: options?.roundTimeoutMs ?? DEFAULT_LEGACY_SHIM_ROUND_TIMEOUT_MS,",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/legacyInputRequiredShim.ts:72",
+            "file_sha256": "4ca0bca69b2713745a6ec693287b9f2080cd24a394d6570bdeb84e609c5f288c"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9bb406761243"
+    },
+    {
+      "n": "5",
+      "claim": "maxToolInputElements is off by default; when exceeded the call returns an isError tool result naming the limit, before the schema runs",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The check only runs when the option is set, happens before schema validation, and the thrown error is caught and converted to an isError result.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/servers/tools.md",
+        "line_start": 224,
+        "quote": "It is off by default — leave it unset and behavior is unchanged."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/mcp.ts",
+          "line_start": 356,
+          "quote": "this._maxToolInputElements !== undefined &&",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/mcp.ts:356",
+            "file_sha256": "83be84bbaefbf93364c72ccca8bc48269cb28cbebbdc1a826c48d364b3f15451"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/mcp.ts",
+          "line_start": 362,
+          "quote": "arguments contain more than the maximum of ${this._maxToolInputElements} elements",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/mcp.ts:362",
+            "file_sha256": "83be84bbaefbf93364c72ccca8bc48269cb28cbebbdc1a826c48d364b3f15451"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/mcp.ts",
+          "line_start": 320,
+          "quote": "return this.createToolError(error instanceof Error ? error.message : String(error));",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/mcp.ts:320",
+            "file_sha256": "83be84bbaefbf93364c72ccca8bc48269cb28cbebbdc1a826c48d364b3f15451"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_2a2e7a94d061"
+    },
+    {
+      "n": "6",
+      "claim": "Transport maxRequestBodySize is 4 MiB by default",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default is 4 MiB and used by the streamable HTTP transport and handlers.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/servers/tools.md",
+        "line_start": 224,
+        "quote": "`maxRequestBodySize` (4 MiB by default)"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/requestBody.ts",
+          "line_start": 2,
+          "quote": "export const DEFAULT_MAX_REQUEST_BODY_SIZE = 4 * 1024 * 1024;",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/requestBody.ts:2",
+            "file_sha256": "6761bea97b83769d13c01ff67ffe8dbfdab9c949943b7ba026fc5516906c485c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/streamableHttp.ts",
+          "line_start": 300,
+          "quote": "this._maxRequestBodySize = resolveMaxRequestBodySize(options.maxRequestBodySize);",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/streamableHttp.ts:300",
+            "file_sha256": "ab9cc9359184e30c1fedf357c795534231ab703c13497cbec69932cab56e26c6"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_251ea49e77f7"
+    },
+    {
+      "n": "7",
+      "claim": "Legacy shim is on by default with maxRounds 8",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "maxRounds defaults to 8 and legacyShim to true.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/migration/support-2026-07-28.md",
+        "line_start": 571,
+        "quote": "| `maxRounds`      | `8`       |"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/legacyInputRequiredShim.ts",
+          "line_start": 71,
+          "quote": "maxRounds: options?.maxRounds ?? DEFAULT_LEGACY_SHIM_MAX_ROUNDS,",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/legacyInputRequiredShim.ts:71",
+            "file_sha256": "4ca0bca69b2713745a6ec693287b9f2080cd24a394d6570bdeb84e609c5f288c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/legacyInputRequiredShim.ts",
+          "line_start": 73,
+          "quote": "legacyShim: options?.legacyShim ?? true",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/legacyInputRequiredShim.ts:73",
+            "file_sha256": "4ca0bca69b2713745a6ec693287b9f2080cd24a394d6570bdeb84e609c5f288c"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_5d62a296314e"
+    },
+    {
+      "n": "8",
+      "claim": "With requestState.verify configured, tampered or expired state never reaches the handler and is answered with -32602 \"Invalid or expired requestState\"",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Verification runs before the handler is invoked; any hook failure becomes a frozen InvalidParams (-32602) error. Non-string state is rejected even without a hook.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/servers/input-required.md",
+        "line_start": 245,
+        "quote": "tampered or expired state never reaches the handler at all"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/server.ts",
+          "line_start": 644,
+          "quote": "const decoded = await this._verifyRequestState(rawRequestState, ctx, method);",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/server.ts:644",
+            "file_sha256": "a4ecf29025e18a56d912f202a1d829ecb3963af3084c1db1b8de98479a900e88"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/server.ts",
+          "line_start": 744,
+          "quote": "throw new ProtocolError(ProtocolErrorCode.InvalidParams, 'Invalid or expired requestState', {",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/server.ts:744",
+            "file_sha256": "a4ecf29025e18a56d912f202a1d829ecb3963af3084c1db1b8de98479a900e88"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/requestStateCodec.ts",
+          "line_start": 247,
+          "quote": "if (typeof envelope.exp !== 'number' || envelope.exp < Math.floor(Date.now() / 1000)) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/requestStateCodec.ts:247",
+            "file_sha256": "4f9856de5135b57198a33aeaa82c5e1343315cc0d528f199ff3388ef87fe2204"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9fa1edc361a8"
+    },
+    {
+      "n": "9",
+      "claim": "The requestState codec is signed (HMAC-SHA256), not encrypted; the client can decode the payload",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The payload is plain base64url JSON with an HMAC; no encryption exists. Docs statement is accurate; the key must be >=32 bytes as the docs example implies.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/servers/input-required.md",
+        "line_start": 252,
+        "quote": "The codec is signed, not encrypted"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/requestStateCodec.ts",
+          "line_start": 204,
+          "quote": "const body = bytesToBase64Url(utf8.encode(JSON.stringify(envelope)));",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/requestStateCodec.ts:204",
+            "file_sha256": "4f9856de5135b57198a33aeaa82c5e1343315cc0d528f199ff3388ef87fe2204"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/requestStateCodec.ts",
+          "line_start": 177,
+          "quote": "subtle.importKey('raw', keyBytes, { name: 'HMAC', hash: 'SHA-256' }, false, ['sign', 'verify'])",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/requestStateCodec.ts:177",
+            "file_sha256": "4f9856de5135b57198a33aeaa82c5e1343315cc0d528f199ff3388ef87fe2204"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_05f2b0551648"
+    },
+    {
+      "n": "10",
+      "claim": "The SDK never sends a response for a cancelled request and discards whatever the handler still returns",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both the success and error branches return early without sending when the per-request controller was aborted by notifications/cancelled.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/servers/logging-progress-cancellation.md",
+        "line_start": 189,
+        "quote": "The SDK never sends a response for a cancelled request and discards whatever the handler still returns."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/core-internal/src/shared/protocol.ts",
+          "line_start": 1118,
+          "quote": "if (abortController.signal.aborted) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/core-internal/src/shared/protocol.ts:1118",
+            "file_sha256": "8ba10c7ef2ece310837b23e905c12335d8e6e38dcfcc3154c85c72b7508bac25"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/core-internal/src/shared/protocol.ts",
+          "line_start": 1148,
+          "quote": "if (abortController.signal.aborted) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/core-internal/src/shared/protocol.ts:1148",
+            "file_sha256": "8ba10c7ef2ece310837b23e905c12335d8e6e38dcfcc3154c85c72b7508bac25"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/core-internal/src/shared/protocol.ts",
+          "line_start": 743,
+          "quote": "controller?.abort(notification.params.reason);",
+          "checked": {
+            "ok": true,
+            "where": "packages/core-internal/src/shared/protocol.ts:743",
+            "file_sha256": "8ba10c7ef2ece310837b23e905c12335d8e6e38dcfcc3154c85c72b7508bac25"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_08e6c0a6edf5"
+    },
+    {
+      "n": "11",
+      "claim": "Root entry of every package is runtime-neutral: its module graph never reaches node:child_process or other Node builtins a browser/Workers bundler cannot resolve",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Stdio and skills-node code live behind subpaths. The only Node builtin in the root graph is node:process in shimsNode, which is selected by export conditions and replaced by workerd/browser shims.",
+      "user_impact": null,
+      "note": "A bundler that sets none of the browser/workerd/node conditions falls to the `default` condition, which selects the Node shim (node:process).",
+      "source": {
+        "file": "docs/get-started/packages.md",
+        "line_start": 49,
+        "quote": "its module graph never reaches `node:child_process` or any other Node builtin"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/index.ts",
+          "line_start": 66,
+          "quote": "// StdioServerTransport and the serveStdio entry are exported from the './stdio' subpath",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/index.ts:66",
+            "file_sha256": "56019c46ba453ca783d08daf40b723d52f3c9c54a6e1afeeea4b20f73b127572"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/package.json",
+          "line_start": 84,
+          "quote": "\"workerd\": {",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/package.json:84",
+            "file_sha256": "87393c6b39d3de8e481baef9dad407b5dd84c4bacae284fce1854bfd74acc6ce"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/shimsNode.ts",
+          "line_start": 7,
+          "quote": "export { default as process } from 'node:process';",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/shimsNode.ts:7",
+            "file_sha256": "a02f33fdbfd9ed6b9d911098f0e5563c36352a0d4566506434f6f90e0b523f7e"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_b26afaeb6c51"
+    },
+    {
+      "n": "12",
+      "claim": "withOAuth adds the Authorization header and on a 401 re-authenticates against serverUrl and retries the request once",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "One auth() round followed by a single retry; a second 401 throws UnauthorizedError.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/clients/middleware.md",
+        "line_start": 87,
+        "quote": "on a `401` it re-authenticates against `serverUrl` and retries the request once"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/middleware.ts",
+          "line_start": 61,
+          "quote": "headers.set('Authorization', `Bearer ${tokens.access_token}`);",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/middleware.ts:61",
+            "file_sha256": "d94e18d1c416f0d4689ffcfbfa9170d45876dd9a21b3073659b40ac2c5feead8"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/middleware.ts",
+          "line_start": 93,
+          "quote": "response = await makeRequest();",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/middleware.ts:93",
+            "file_sha256": "d94e18d1c416f0d4689ffcfbfa9170d45876dd9a21b3073659b40ac2c5feead8"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/middleware.ts",
+          "line_start": 103,
+          "quote": "if (response.status === 401) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/middleware.ts:103",
+            "file_sha256": "d94e18d1c416f0d4689ffcfbfa9170d45876dd9a21b3073659b40ac2c5feead8"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_91e80e39203f"
+    },
+    {
+      "n": "13",
+      "claim": "mcpAuthMetadataRouter mounts a path-aware protected-resource route and /.well-known/oauth-authorization-server mirroring oauthMetadata",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Exactly two routes are mounted, with the resource path appended for the protected-resource document.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/serving/authorization.md",
+        "line_start": 99,
+        "quote": "The router mounts two well-known routes"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/middleware/express/src/auth/metadataRouter.ts",
+          "line_start": 97,
+          "quote": "router.use(`/.well-known/oauth-protected-resource${rsPath === '/' ? '' : rsPath}`, metadataHandler(protectedResourceMetadata));",
+          "checked": {
+            "ok": true,
+            "where": "packages/middleware/express/src/auth/metadataRouter.ts:97",
+            "file_sha256": "4d0c706dc711a49b96b8f9e81d0af53f20febc79aae919770078b4fc9414c9f6"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/middleware/express/src/auth/metadataRouter.ts",
+          "line_start": 100,
+          "quote": "router.use('/.well-known/oauth-authorization-server', metadataHandler(options.oauthMetadata));",
+          "checked": {
+            "ok": true,
+            "where": "packages/middleware/express/src/auth/metadataRouter.ts:100",
+            "file_sha256": "4d0c706dc711a49b96b8f9e81d0af53f20febc79aae919770078b4fc9414c9f6"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_d2f4f795c8ef"
+    },
+    {
+      "n": "14",
+      "claim": "With expectedResource set, requireBearerAuth accepts a token only if AuthInfo.resource matches (one trailing slash aside) and answers 401 invalid_token otherwise; unset means no comparison",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "A resource that is missing or different throws an OAuthError with code InvalidToken. The comparison is skipped when expectedResource is undefined.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/serving/authorization.md",
+        "line_start": 87,
+        "quote": "answers `401 invalid_token` for a token reported for another value or for none"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/middleware/bearerAuth.ts",
+          "line_start": 163,
+          "quote": "if (expectedResource !== undefined && !sameResource(authInfo.resource, expectedResource)) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/middleware/bearerAuth.ts:163",
+            "file_sha256": "9979688692db6634fd40642e37b8acf4b9e08e05a90a42788939dc136e19879f"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/middleware/bearerAuth.ts",
+          "line_start": 94,
+          "quote": "if (!reported) return false;",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/middleware/bearerAuth.ts:94",
+            "file_sha256": "9979688692db6634fd40642e37b8acf4b9e08e05a90a42788939dc136e19879f"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_ee18253f61c4"
+    },
+    {
+      "n": "15",
+      "claim": "PrivateKeyJwtProvider's jwtLifetimeSeconds overrides a 300-second default for the signed assertion",
+      "verdict": "PARTIAL",
+      "severity": "low",
+      "explanation": "The override option exists and works, but the real default is 601 seconds. The in-code comment also says 300, so docs and JSDoc disagree with the implementation.",
+      "user_impact": "A user relying on the documented 300-second assertion lifetime (for example to match an authorization server that rejects assertions valid for more than 5 minutes) gets assertions valid for 601 seconds unless they set jwtLifetimeSeconds explicitly, so the token request can be rejected or the replay window is twice as long as documented.",
+      "note": null,
+      "source": {
+        "file": "docs/clients/machine-auth.md",
+        "line_start": 59,
+        "quote": "`jwtLifetimeSeconds` overrides the 300-second default"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/authExtensions.ts",
+          "line_start": 47,
+          "quote": "const lifetimeSeconds = options.lifetimeSeconds ?? 601;",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/authExtensions.ts:47",
+            "file_sha256": "5ee01faf51428e004fc92b5e33ad3e4633a8f37271ad1969217a4e45c442801e"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/authExtensions.ts",
+          "line_start": 261,
+          "quote": "Optional JWT lifetime in seconds (default: 300).",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/authExtensions.ts:261",
+            "file_sha256": "5ee01faf51428e004fc92b5e33ad3e4633a8f37271ad1969217a4e45c442801e"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/authExtensions.ts",
+          "line_start": 334,
+          "quote": "lifetimeSeconds: options.jwtLifetimeSeconds,",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/authExtensions.ts:334",
+            "file_sha256": "5ee01faf51428e004fc92b5e33ad3e4633a8f37271ad1969217a4e45c442801e"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "Docs say default is 300s; code defaults lifetimeSeconds to 601 (the in-code doc comment also says 300). Real mismatch, though a low-impact one; severity low is appropriate.",
+        "severity": "low",
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "packages/client/src/client/authExtensions.ts",
+            "line_start": 47,
+            "quote": "const lifetimeSeconds = options.lifetimeSeconds ?? 601;",
+            "checked": {
+              "ok": true,
+              "where": "packages/client/src/client/authExtensions.ts:47",
+              "file_sha256": "5ee01faf51428e004fc92b5e33ad3e4633a8f37271ad1969217a4e45c442801e"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:29:03.679Z"
+      },
+      "receipt": "rcpt_243304421e98"
+    },
+    {
+      "n": "16",
+      "claim": "AuthProvider: without onUnauthorized a 401 throws UnauthorizedError; with onUnauthorized the transport retries the request once",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The retry is made once (isAuthRetry=true); a second 401 raises an SdkHttpError, and with no hook UnauthorizedError is thrown.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/clients/machine-auth.md",
+        "line_start": 42,
+        "quote": "Without `onUnauthorized`, a 401 throws `UnauthorizedError`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/streamableHttp.ts",
+          "line_start": 1082,
+          "quote": "if (this._authProvider.onUnauthorized && !isAuthRetry) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/streamableHttp.ts:1082",
+            "file_sha256": "c4ee438509150f1425e1a3adb5e6394fa44ebec1e035e986bf7c296790937916"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/streamableHttp.ts",
+          "line_start": 1096,
+          "quote": "return this._send(message, options, true, stepUpRetries);",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/streamableHttp.ts:1096",
+            "file_sha256": "c4ee438509150f1425e1a3adb5e6394fa44ebec1e035e986bf7c296790937916"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/streamableHttp.ts",
+          "line_start": 1107,
+          "quote": "throw markAuthSeamEscape(new UnauthorizedError());",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/streamableHttp.ts:1107",
+            "file_sha256": "c4ee438509150f1425e1a3adb5e6394fa44ebec1e035e986bf7c296790937916"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_f94a4dd608a9"
+    },
+    {
+      "n": "17",
+      "claim": "versionNegotiation defaults to the unchanged 2025 initialize handshake with no probe; the 2026-07-28 era is opt-in",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Absent option resolves to 'legacy', which returns early without any probe.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/protocol-versions.md",
+        "line_start": 191,
+        "quote": "the default is the unchanged 2025 `initialize`, no probe."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/versionNegotiation.ts",
+          "line_start": 112,
+          "quote": "const DEFAULT_VERSION_NEGOTIATION_MODE: VersionNegotiationMode = 'legacy';",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/versionNegotiation.ts:112",
+            "file_sha256": "0e30e69cd7dba669af267770c155624bc2d4c1d3c15e99a5764f9406141bdc8b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/versionNegotiation.ts",
+          "line_start": 136,
+          "quote": "const mode = options?.mode ?? DEFAULT_VERSION_NEGOTIATION_MODE;",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/versionNegotiation.ts:136",
+            "file_sha256": "0e30e69cd7dba669af267770c155624bc2d4c1d3c15e99a5764f9406141bdc8b"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_3540aa96beba"
+    },
+    {
+      "n": "18",
+      "claim": "createMcpHandler builds a fresh server instance from the factory for every HTTP request and holds nothing between requests",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both the modern path and the stateless legacy path call the factory per request and use stateless transports.",
+      "user_impact": null,
+      "note": "Open subscriptions/listen streams are held in an in-process bus, so multi-node change notifications need a shared ServerEventBus, which the docs mention separately.",
+      "source": {
+        "file": "docs/serving/sessions-state-scaling.md",
+        "line_start": 6,
+        "quote": "`createMcpHandler` builds a fresh server instance from your factory for every HTTP request"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/createMcpHandler.ts",
+          "line_start": 790,
+          "quote": "const product = await factory({",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/createMcpHandler.ts:790",
+            "file_sha256": "33095ad5d7aa24360da0d21f851a213f6b0716cdb3a800b7042d0683fb2f19db"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/createMcpHandler.ts",
+          "line_start": 347,
+          "quote": "sessionIdGenerator: undefined,",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/createMcpHandler.ts:347",
+            "file_sha256": "33095ad5d7aa24360da0d21f851a213f6b0716cdb3a800b7042d0683fb2f19db"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_1f25ac458ea6"
+    },
+    {
+      "n": "19",
+      "claim": "createMcpExpressApp with a localhost-class host validates the Origin header by default; a present unparseable Origin (including \"null\") is rejected with 403 and cannot be allowlisted; requests without Origin pass",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The localhost default is armed when no allowedOrigins is given, a missing Origin passes, and an opaque origin has no hostname and is refused regardless of the allowlist.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "skills/mcp-typescript-sdk-upgrade-to-v2/references/behavioral-changes.md",
+        "line_start": 144,
+        "quote": "localhost-class `host` now also validate the `Origin` header by default."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/middleware/express/src/express.ts",
+          "line_start": 109,
+          "quote": "} else if (['127.0.0.1', 'localhost', '::1'].includes(host)) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/middleware/express/src/express.ts:109",
+            "file_sha256": "8dcca27e094685b6626d081774eadabbb83bef5ba78f684b582899e9bcb1853d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/middleware/originValidation.ts",
+          "line_start": 44,
+          "quote": "if (originHeader === null || originHeader === undefined || originHeader === '') {",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/middleware/originValidation.ts:44",
+            "file_sha256": "494c573ce55b8948ddbe8f603c0c3c4235079d4cc62de27ecf318bce58a89dc2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/middleware/originValidation.ts",
+          "line_start": 57,
+          "quote": "if (hostname === '') {",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/middleware/originValidation.ts:57",
+            "file_sha256": "494c573ce55b8948ddbe8f603c0c3c4235079d4cc62de27ecf318bce58a89dc2"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_d74ee4c6f2b3"
+    },
+    {
+      "n": "20",
+      "claim": "Every @modelcontextprotocol/* package requires Node.js 20",
+      "verdict": "PARTIAL",
+      "severity": "medium",
+      "explanation": "Client, core, core-internal, server-legacy and codemod declare >=20, but the server package declares >=41, contradicting the documented requirement. The middleware packages declare no engines field at all.",
+      "user_impact": "@modelcontextprotocol/server declares engines.node \">=41\", a Node version that does not exist. A user on Node 20, 22 or 24 who follows the docs gets EBADENGINE warnings, and installs fail outright under engine-strict (npm config or pnpm), so the server package may be uninstallable on the very runtime the docs say it supports.",
+      "note": null,
+      "source": {
+        "file": "docs/troubleshooting.md",
+        "line_start": 54,
+        "quote": "Every `@modelcontextprotocol/*` package requires Node.js 20"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/package.json",
+          "line_start": 15,
+          "quote": "\"node\": \">=41\"",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/package.json:15",
+            "file_sha256": "87393c6b39d3de8e481baef9dad407b5dd84c4bacae284fce1854bfd74acc6ce"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/package.json",
+          "line_start": 15,
+          "quote": "\"node\": \">=20\"",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/package.json:15",
+            "file_sha256": "49bd25122f1206b787ef9c12dc86c4dc671703323d2f5add8c8bc802d00f2604"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "Server package declares engines.node \">=41\", which no Node version satisfies. This contradicts the docs claim that every package requires Node 20 and breaks installs under engine-strict. Medium severity is reasonable.",
+        "severity": "medium",
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "packages/server/package.json",
+            "line_start": 15,
+            "quote": "\"node\": \">=41\"",
+            "checked": {
+              "ok": true,
+              "where": "packages/server/package.json:15",
+              "file_sha256": "87393c6b39d3de8e481baef9dad407b5dd84c4bacae284fce1854bfd74acc6ce"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:29:04.949Z"
+      },
+      "receipt": "rcpt_58b942fb6f04"
+    },
+    {
+      "n": "21",
+      "claim": "Client inputRequired caps interactive rounds at maxRounds (default 10), rejecting with SdkError INPUT_REQUIRED_ROUNDS_EXCEEDED; autoFulfill: false turns the loop off",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default 10 rounds, typed error code exists, and autoFulfill false surfaces the input_required instead of looping.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/clients/server-requests.md",
+        "line_start": 106,
+        "quote": "Past `maxRounds` (default 10) the call rejects with an `SdkError` coded `INPUT_REQUIRED_ROUNDS_EXCEEDED`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/core-internal/src/shared/inputRequiredDriver.ts",
+          "line_start": 36,
+          "quote": "export const DEFAULT_INPUT_REQUIRED_MAX_ROUNDS = 10;",
+          "checked": {
+            "ok": true,
+            "where": "packages/core-internal/src/shared/inputRequiredDriver.ts:36",
+            "file_sha256": "80fba9664b651fa51177c1d1846a7097ddd8117f94575b0304e0f79d09c97acb"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/core-internal/src/errors/sdkErrors.ts",
+          "line_start": 47,
+          "quote": "InputRequiredRoundsExceeded = 'INPUT_REQUIRED_ROUNDS_EXCEEDED',",
+          "checked": {
+            "ok": true,
+            "where": "packages/core-internal/src/errors/sdkErrors.ts:47",
+            "file_sha256": "bca635f94d3a32caaded3543579ed58d42834e81b6dcbc602315a8c6ae365294"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/client.ts",
+          "line_start": 747,
+          "quote": "if (!this._inputRequiredDriverConfig.autoFulfill) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/client.ts:747",
+            "file_sha256": "09a4fbb4ab901299c13a10c3dc395a1c250cd6efff32a7c947bf27cddf6026df"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_ba082f621710"
+    },
+    {
+      "n": "22",
+      "claim": "A client must declare a capability in its constructor or the server never sends that request",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The server asserts the client's declared capabilities before sending sampling, elicitation and roots requests and throws rather than sending.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/clients/server-requests.md",
+        "line_start": 110,
+        "quote": "Declare a capability in the `Client` constructor or the server never sends that request."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/server.ts",
+          "line_start": 787,
+          "quote": "throw new SdkError(SdkErrorCode.CapabilityNotSupported, `Client does not support sampling (required for ${method})`);",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/server.ts:787",
+            "file_sha256": "a4ecf29025e18a56d912f202a1d829ecb3963af3084c1db1b8de98479a900e88"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/server.ts",
+          "line_start": 794,
+          "quote": "throw new SdkError(SdkErrorCode.CapabilityNotSupported, `Client does not support elicitation (required for ${method})`);",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/server.ts:794",
+            "file_sha256": "a4ecf29025e18a56d912f202a1d829ecb3963af3084c1db1b8de98479a900e88"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_41a53d11a512"
+    },
+    {
+      "n": "23",
+      "claim": "Tool annotations never change how the SDK runs the tool; they are only advertised to clients",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "annotations is only copied into the tools/list entry; the tools/call path (validate, execute, project) never reads it.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/servers/tools.md",
+        "line_start": 214,
+        "quote": "Annotations never change how the SDK runs the tool"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/mcp.ts",
+          "line_start": 277,
+          "quote": "annotations: tool.annotations,",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/mcp.ts:277",
+            "file_sha256": "83be84bbaefbf93364c72ccca8bc48269cb28cbebbdc1a826c48d364b3f15451"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/mcp.ts",
+          "line_start": 307,
+          "quote": "const result = await this.executeToolHandler(tool, args, ctx);",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/mcp.ts:307",
+            "file_sha256": "83be84bbaefbf93364c72ccca8bc48269cb28cbebbdc1a826c48d364b3f15451"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_56ed5b21f023"
+    },
+    {
+      "n": "24",
+      "claim": "The frozen SSE server transport ships as @modelcontextprotocol/server-legacy/sse and itself accepts messages up to 4mb; binding beyond localhost drops the default Host/Origin validation",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The ./sse subpath exists with a 4mb body cap, and Host and Origin validation are only armed for localhost hosts or an explicit allowlist.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/serving/legacy-clients.md",
+        "line_start": 96,
+        "quote": "binding beyond localhost drops the default `Host`/`Origin` validation"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server-legacy/src/sse/sse.ts",
+          "line_start": 10,
+          "quote": "const MAXIMUM_MESSAGE_SIZE = '4mb';",
+          "checked": {
+            "ok": true,
+            "where": "packages/server-legacy/src/sse/sse.ts:10",
+            "file_sha256": "d68d17921918cd34640fffb57664d177624348ba3c64b4e2952bfe9421476653"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/middleware/express/src/express.ts",
+          "line_start": 93,
+          "quote": "} else if (host === '0.0.0.0' || host === '::') {",
+          "checked": {
+            "ok": true,
+            "where": "packages/middleware/express/src/express.ts:93",
+            "file_sha256": "8dcca27e094685b6626d081774eadabbb83bef5ba78f684b582899e9bcb1853d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server-legacy/package.json",
+          "line_start": 38,
+          "quote": "\"./sse\": {",
+          "checked": {
+            "ok": true,
+            "where": "packages/server-legacy/package.json:38",
+            "file_sha256": "7c287715363fe762b6a54b9a63b037189f319c1674a8ffd262d1a65d7fe5d596"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_8d051262d979"
+    },
+    {
+      "n": "25",
+      "claim": "On a 2026-07-28 request ctx.mcpReq.log() reads its level from the _meta logLevel key; when absent the server emits no notifications/message (opt-out, not no filter), and the SDK Client does not auto-attach logLevel",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Absent key returns without sending in the modern era; 2025-era keeps the session-scoped level. The client package has no logLevel reference, so it never auto-attaches it.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/migration/support-2026-07-28.md",
+        "line_start": 252,
+        "quote": "`notifications/message` for that request"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/server.ts",
+          "line_start": 429,
+          "quote": "threshold = ctx.mcpReq.envelope?.[LOG_LEVEL_META_KEY] as LoggingLevel | undefined;",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/server.ts:429",
+            "file_sha256": "a4ecf29025e18a56d912f202a1d829ecb3963af3084c1db1b8de98479a900e88"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/server.ts",
+          "line_start": 430,
+          "quote": "if (threshold === undefined) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/server.ts:430",
+            "file_sha256": "a4ecf29025e18a56d912f202a1d829ecb3963af3084c1db1b8de98479a900e88"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/server.ts",
+          "line_start": 434,
+          "quote": "threshold = this._loggingLevels.get(ctx.sessionId) ?? this._loggingLevels.get(undefined);",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/server.ts:434",
+            "file_sha256": "a4ecf29025e18a56d912f202a1d829ecb3963af3084c1db1b8de98479a900e88"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_8a012cceda22"
+    },
+    {
+      "n": "26",
+      "claim": "If discovery resolves an issuer different from expectedIssuer, the SDK throws AuthorizationServerMismatchError instead of sending the secret; omitting expectedIssuer is deprecated",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The static credential carries an issuer stamp; auth() throws the typed error when the resolved AS differs, before a token request. Omitting the option logs a deprecation warning.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/clients/machine-auth.md",
+        "line_start": 30,
+        "quote": "the SDK throws `AuthorizationServerMismatchError` instead of sending the secret"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/auth.ts",
+          "line_start": 1296,
+          "quote": "throw new AuthorizationServerMismatchError(rawClientInfo.issuer, issuer);",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/auth.ts:1296",
+            "file_sha256": "c8d02e8f762b85c2d36cea8d580c6696cfc1d63aeb469da434278a59dd461b85"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/authExtensions.ts",
+          "line_start": 102,
+          "quote": "if (expectedIssuer === undefined) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/authExtensions.ts:102",
+            "file_sha256": "5ee01faf51428e004fc92b5e33ad3e4633a8f37271ad1969217a4e45c442801e"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_fba033e6ba64"
+    },
+    {
+      "n": "27",
+      "claim": "Server stamps serverInfo on every 2026-era response; requests without clientInfo are served while a malformed present value is rejected; a server with no identity is anonymous (getServerVersion() undefined)",
+      "verdict": "UNVERIFIABLE",
+      "severity": null,
+      "explanation": "I did not trace the surrogate partitioning path through the cache in enough depth to confirm it, so I make no verdict on it.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/migration/support-2026-07-28.md",
+        "line_start": 467,
+        "quote": "identity is simply anonymous: the connection works, `getServerVersion()` is"
+      },
+      "evidence": [
+        {
+          "type": "absent",
+          "pattern": "anonymous surrogate",
+          "checked": {
+            "ok": true,
+            "where": "absent:anonymous surrogate",
+            "doc_hits": 0
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_248d5cb518c8"
+    },
+    {
+      "n": "28",
+      "claim": "Server stamps the _meta serverInfo identity on every 2026-era response, and a server that stamps none is anonymous with a per-connection cache surrogate",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The modern codec's encodeResult stamps serverInfo on every result, and the client falls back to a generated per-connection key for cache partitioning when no identity exists. This supersedes my earlier UNVERIFIABLE entry (#27) on the neighbouring sentence, which I recorded without finishing the trace.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/migration/support-2026-07-28.md",
+        "line_start": 460,
+        "quote": "Every 2026-era response gets the `_meta` serverInfo"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/core-internal/src/wire/rev2026-07-28/codec.ts",
+          "line_start": 270,
+          "quote": "return stampServerInfoMeta(fillCacheFields(method, stampResultType(method, enforceDeletedFields(method, result))), serverInfo);",
+          "checked": {
+            "ok": true,
+            "where": "packages/core-internal/src/wire/rev2026-07-28/codec.ts:270",
+            "file_sha256": "a8fc27ff6c5254df970e1dd294033266f899be84923ba744c1ad81ef0c64550a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/client/src/client/client.ts",
+          "line_start": 1378,
+          "quote": "return transport.sessionId ?? `anonymous:${Date.now()}-${Math.random().toString(36).slice(2)}`;",
+          "checked": {
+            "ok": true,
+            "where": "packages/client/src/client/client.ts:1378",
+            "file_sha256": "09a4fbb4ab901299c13a10c3dc395a1c250cd6efff32a7c947bf27cddf6026df"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_3d4052cc746c"
+    },
+    {
+      "n": "29",
+      "claim": "On a pre-2026-07-28 connection the legacy shim is on by default and fulfils an input_required return by pushing real elicitation/sampling requests",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The shim defaults to enabled and is used for legacy-era input_required returns.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/servers/input-required.md",
+        "line_start": 257,
+        "quote": "the SDK's legacy shim — on by default — fulfils an `input_required` return"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/legacyInputRequiredShim.ts",
+          "line_start": 73,
+          "quote": "legacyShim: options?.legacyShim ?? true",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/legacyInputRequiredShim.ts:73",
+            "file_sha256": "4ca0bca69b2713745a6ec693287b9f2080cd24a394d6570bdeb84e609c5f288c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/server.ts",
+          "line_start": 615,
+          "quote": "return is fulfilled by the default-on legacy shim, whose own gate",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/server.ts:615",
+            "file_sha256": "a4ecf29025e18a56d912f202a1d829ecb3963af3084c1db1b8de98479a900e88"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_6a42bf404895"
+    },
+    {
+      "n": "30",
+      "claim": "createMcpHandler serves 2025-era clients statelessly from the same factory by default (legacy option)",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The legacy option selects stateless or reject, and the default path builds a stateless per-request transport from the same factory.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/serving/http.md",
+        "line_start": 112,
+        "quote": "The handler serves 2025-era clients statelessly from the same factory by default."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/createMcpHandler.ts",
+          "line_start": 168,
+          "quote": "legacy?: 'stateless' | 'reject';",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/createMcpHandler.ts:168",
+            "file_sha256": "33095ad5d7aa24360da0d21f851a213f6b0716cdb3a800b7042d0683fb2f19db"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/server/src/server/createMcpHandler.ts",
+          "line_start": 347,
+          "quote": "sessionIdGenerator: undefined,",
+          "checked": {
+            "ok": true,
+            "where": "packages/server/src/server/createMcpHandler.ts:347",
+            "file_sha256": "33095ad5d7aa24360da0d21f851a213f6b0716cdb3a800b7042d0683fb2f19db"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_497304d53585"
+    }
+  ],
+  "totals": {
+    "claims": 30,
+    "VERIFIED": 27,
+    "PARTIAL": 2,
+    "FALSE": 0,
+    "UNVERIFIABLE": 1,
+    "behaviors": 0,
+    "downgraded": 0,
+    "retracted": 0,
+    "rejected_citations": 2
+  }
+}

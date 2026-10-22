@@ -1,0 +1,56 @@
+[
+  {
+    "claim": "OIDC token renewal failures delay further exchange attempts by one second, doubling after each failure up to 30 seconds.",
+    "doc_file": "codex-rs/responses-api-proxy/README.md",
+    "doc_line": 126,
+    "code_file": "codex-rs/responses-api-proxy/src/auth.rs",
+    "code_line": 46,
+    "verdict": "FALSE",
+    "explanation": "MAX_RENEWAL_BACKOFF is Duration::from_secs(61), and the delay is computed as (previous * 2).min(MAX_RENEWAL_BACKOFF) at auth.rs:252. The sequence is 1,2,4,8,16,32,61 seconds, so the cap is 61 seconds, not the documented 30."
+  },
+  {
+    "claim": "The standalone installers download from releases.openai.com by default and fall back to GitHub Releases; setting CODEX_INSTALLER_USE_RELEASES_OPENAI_COM to false forces GitHub.",
+    "doc_file": "README.md",
+    "doc_line": 28,
+    "code_file": "scripts/install/install.sh",
+    "code_line": 8,
+    "verdict": "PARTIAL",
+    "explanation": "install.sh sets DEFAULT_PREFER_RELEASES_OPENAI_COM=\"false\", and resolve_release() only tries releases.openai.com when the variable is 1/true/yes. On macOS/Linux the default is therefore GitHub Releases, not releases.openai.com. Only install.ps1 (line 15) defaults to releases.openai.com."
+  },
+  {
+    "claim": "Launcher environment payloads are limited to 1,000,000 UTF-8 bytes and chunks to 4096 bytes.",
+    "doc_file": "codex-rs/mxc-sandbox/README.md",
+    "doc_line": 56,
+    "code_file": "codex-rs/windows-sandbox-rs/src/environment_transport.rs",
+    "code_line": 14,
+    "verdict": "FALSE",
+    "explanation": "mxc-sandbox transport.rs delegates to codex_windows_sandbox::environment_transport, which uses CHUNK_BYTES = 16 KiB and MAX_BYTES = 16 MiB. No 1,000,000-byte or 4096-byte limit exists anywhere in the mxc-sandbox crate."
+  },
+  {
+    "claim": "When a request is blocked the proxy responds 403 with x-proxy-error set to one of blocked-by-allowlist, blocked-by-denylist, blocked-by-method-policy, or blocked-by-policy.",
+    "doc_file": "codex-rs/network-proxy/README.md",
+    "doc_line": 141,
+    "code_file": "codex-rs/network-proxy/src/responses.rs",
+    "code_line": 54,
+    "verdict": "PARTIAL",
+    "explanation": "blocked_header_value also emits blocked-by-mitm-hook and blocked-by-mitm-required (responses.rs:57-58), which are not in the documented list of possible values."
+  },
+  {
+    "claim": "If system bwrap is present but too old to support --argv0, the helper keeps using system bubblewrap with a no-argv0 compatibility path.",
+    "doc_file": "codex-rs/linux-sandbox/README.md",
+    "doc_line": 18,
+    "code_file": "codex-rs/linux-sandbox/src/launcher.rs",
+    "code_line": 212,
+    "verdict": "PARTIAL",
+    "explanation": "A system bwrap is only kept if its --help output advertises --as-pid-1 (line 212) and --perms (system_bwrap_launcher_for_path_with_probe requires supports_perms: true, line 173). Older builds that lack either option are silently rejected and the bundled bwrap is used instead, so the no-argv0 path applies only to bwrap that has those flags but lacks --argv0."
+  },
+  {
+    "claim": "Supported operating systems are macOS 12+, Ubuntu 20.04+/Debian 10+, or Windows 11 via WSL2.",
+    "doc_file": "docs/install.md",
+    "doc_line": 7,
+    "code_file": "scripts/install/install.ps1",
+    "code_line": 950,
+    "verdict": "PARTIAL",
+    "explanation": "The repo ships a native Windows installer and release targets (x86_64/aarch64-pc-windows-msvc), plus native Windows sandbox backends (windows-sandbox-rs, mxc-sandbox). Windows is not limited to WSL2 as the table implies."
+  }
+]

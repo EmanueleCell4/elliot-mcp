@@ -1,0 +1,56 @@
+[
+  {
+    "claim": "session_idle_timeout defaults to 1800 seconds (30 minutes)",
+    "doc_file": "docs/run/legacy-clients.md",
+    "doc_line": 78,
+    "code_file": "src/mcp/server/streamable_http_manager.py",
+    "code_line": 38,
+    "verdict": "FALSE",
+    "explanation": "DEFAULT_SESSION_IDLE_TIMEOUT is 61 * 60 = 3660 seconds (61 minutes), not 1800. Its own docstring says 30 minutes. The same wrong default is used by MCPServer.run/streamable_http_app and Server.streamable_http_app."
+  },
+  {
+    "claim": "session_idle_timeout: seconds a legacy session may sit with nothing in flight before the server closes it. Default 1800.",
+    "doc_file": "docs/run/index.md",
+    "doc_line": 74,
+    "code_file": "src/mcp/server/streamable_http_manager.py",
+    "code_line": 38,
+    "verdict": "FALSE",
+    "explanation": "The default is 3660 seconds (61 * 60), not 1800."
+  },
+  {
+    "claim": "Sessions expire after nothing is in flight for session_idle_timeout, which is 30 minutes by default",
+    "doc_file": "docs/troubleshooting.md",
+    "doc_line": 263,
+    "code_file": "src/mcp/server/streamable_http_manager.py",
+    "code_line": 38,
+    "verdict": "FALSE",
+    "explanation": "The effective default idle timeout is 61 minutes, not 30."
+  },
+  {
+    "claim": "Client(..., input_required_max_rounds=10) is the default cap on the multi-round-trip retry loop",
+    "doc_file": "docs/handlers/multi-round-trip.md",
+    "doc_line": 67,
+    "code_file": "src/mcp/client/_input_required.py",
+    "code_line": 23,
+    "verdict": "FALSE",
+    "explanation": "DEFAULT_INPUT_REQUIRED_MAX_ROUNDS is 21, and Client.input_required_max_rounds uses it (client.py:352), so the default is 21 rounds rather than 10."
+  },
+  {
+    "claim": "input_required_max_rounds (default 10) bounds the retry loop",
+    "doc_file": "docs/handlers/multi-round-trip.md",
+    "doc_line": 180,
+    "code_file": "src/mcp/client/_input_required.py",
+    "code_line": 23,
+    "verdict": "FALSE",
+    "explanation": "The default is 21, not 10."
+  },
+  {
+    "claim": "The default max_sse_event_size is 1 MiB per event",
+    "doc_file": "docs/client/transports.md",
+    "doc_line": 59,
+    "code_file": "src/mcp/client/streamable_http.py",
+    "code_line": 61,
+    "verdict": "FALSE",
+    "explanation": "DEFAULT_MAX_SSE_EVENT_SIZE is 2049 * 1024 bytes (about 2 MiB), not 1 MiB. It is the default for StreamableHTTPTransport, streamable_http_client and StreamableHttpParameters."
+  }
+]

@@ -1,0 +1,3198 @@
+{
+  "elliot": "0.6.0",
+  "id": "aud_7c6f8a61bf9b",
+  "root": "/home/claude/elliot-runs/bench/repos/openai_codex",
+  "project": "openai_codex",
+  "commit": "665c3f3156541bf02b8eda2f05d6515a03e3e371",
+  "date": "2026-10-22T15:47:11+00:00",
+  "dirty": true,
+  "remote": "https://github.com/openai/codex.git",
+  "tree_fingerprint": "58a2aee4e7988a25d45990a230991c02fb0c3abb339edb7047cfe11620eefec1",
+  "started_at": "2026-10-22T21:40:16.265Z",
+  "sources": [
+    {
+      "file": "README.md",
+      "lines": 82
+    },
+    {
+      "file": "SECURITY.md",
+      "lines": 18
+    },
+    {
+      "file": "codex-rs/docs/bazel.md",
+      "lines": 181
+    },
+    {
+      "file": "codex-rs/docs/protocol_v1.md",
+      "lines": 193
+    },
+    {
+      "file": "docs/agents_md.md",
+      "lines": 4
+    },
+    {
+      "file": "docs/authentication.md",
+      "lines": 4
+    },
+    {
+      "file": "docs/CLA.md",
+      "lines": 50
+    },
+    {
+      "file": "docs/config.md",
+      "lines": 16
+    },
+    {
+      "file": "docs/example-config.md",
+      "lines": 4
+    },
+    {
+      "file": "docs/exec.md",
+      "lines": 4
+    },
+    {
+      "file": "docs/execpolicy.md",
+      "lines": 4
+    },
+    {
+      "file": "docs/getting-started.md",
+      "lines": 4
+    },
+    {
+      "file": "docs/install.md",
+      "lines": 66
+    },
+    {
+      "file": "docs/open-source-fund.md",
+      "lines": 9
+    },
+    {
+      "file": "docs/sandbox.md",
+      "lines": 4
+    },
+    {
+      "file": "docs/skills.md",
+      "lines": 4
+    },
+    {
+      "file": "docs/slash_commands.md",
+      "lines": 4
+    },
+    {
+      "file": "sdk/python/docs/api-reference.md",
+      "lines": 421
+    },
+    {
+      "file": "sdk/python/docs/faq.md",
+      "lines": 170
+    },
+    {
+      "file": "sdk/python/docs/getting-started.md",
+      "lines": 172
+    },
+    {
+      "file": ".github/scripts/macos-signing/README.md",
+      "lines": 41
+    },
+    {
+      "file": ".github/workflows/README.md",
+      "lines": 38
+    },
+    {
+      "file": "codex-cli/scripts/README.md",
+      "lines": 24
+    },
+    {
+      "file": "codex-rs/ansi-escape/README.md",
+      "lines": 16
+    },
+    {
+      "file": "codex-rs/app-server-client/README.md",
+      "lines": 67
+    },
+    {
+      "file": "codex-rs/app-server-daemon/README.md",
+      "lines": 196
+    },
+    {
+      "file": "codex-rs/app-server-test-client/README.md",
+      "lines": 186
+    },
+    {
+      "file": "codex-rs/app-server/README.md",
+      "lines": 619
+    },
+    {
+      "file": "codex-rs/chatgpt/README.md",
+      "lines": 6
+    },
+    {
+      "file": "codex-rs/cloud-client/README.md",
+      "lines": 41
+    },
+    {
+      "file": "codex-rs/codex-api/README.md",
+      "lines": 31
+    },
+    {
+      "file": "codex-rs/codex-client/README.md",
+      "lines": 9
+    },
+    {
+      "file": "codex-rs/codex-mcp/README.md",
+      "lines": 38
+    },
+    {
+      "file": "codex-rs/config/src/loader/README.md",
+      "lines": 91
+    },
+    {
+      "file": "codex-rs/core/README.md",
+      "lines": 99
+    },
+    {
+      "file": "codex-rs/exec-server/README.md",
+      "lines": 562
+    },
+    {
+      "file": "codex-rs/exec-server/testing/README.md",
+      "lines": 6
+    },
+    {
+      "file": "codex-rs/execpolicy/README.md",
+      "lines": 98
+    },
+    {
+      "file": "codex-rs/ext/agent-message-board/README.md",
+      "lines": 55
+    },
+    {
+      "file": "codex-rs/file-search/README.md",
+      "lines": 6
+    },
+    {
+      "file": "codex-rs/git-utils/README.md",
+      "lines": 27
+    },
+    {
+      "file": "codex-rs/http-client/README.md",
+      "lines": 127
+    },
+    {
+      "file": "codex-rs/linux-sandbox/README.md",
+      "lines": 125
+    },
+    {
+      "file": "codex-rs/memories/README.md",
+      "lines": 158
+    },
+    {
+      "file": "codex-rs/mermaid/README.md",
+      "lines": 81
+    },
+    {
+      "file": "codex-rs/mxc-sandbox/README.md",
+      "lines": 101
+    },
+    {
+      "file": "codex-rs/network-proxy/README.md",
+      "lines": 286
+    },
+    {
+      "file": "codex-rs/otel/README.md",
+      "lines": 267
+    },
+    {
+      "file": "codex-rs/process-hardening/README.md",
+      "lines": 8
+    },
+    {
+      "file": "codex-rs/protocol/README.md",
+      "lines": 8
+    },
+    {
+      "file": "codex-rs/README.md",
+      "lines": 4
+    },
+    {
+      "file": "codex-rs/responses-api-proxy/npm/README.md",
+      "lines": 14
+    },
+    {
+      "file": "codex-rs/responses-api-proxy/README.md",
+      "lines": 199
+    },
+    {
+      "file": "codex-rs/rollout-trace/README.md",
+      "lines": 215
+    },
+    {
+      "file": "codex-rs/stdio-to-uds/README.md",
+      "lines": 21
+    },
+    {
+      "file": "codex-rs/tcp-tunnel/README.md",
+      "lines": 26
+    },
+    {
+      "file": "codex-rs/thread-manager-sample/README.md",
+      "lines": 28
+    },
+    {
+      "file": "codex-rs/thread-store/README.md",
+      "lines": 36
+    },
+    {
+      "file": "codex-rs/tools/README.md",
+      "lines": 75
+    },
+    {
+      "file": "codex-rs/user-verification/README.md",
+      "lines": 60
+    },
+    {
+      "file": "codex-rs/utils/cargo-bin/README.md",
+      "lines": 23
+    },
+    {
+      "file": "codex-rs/utils/pty/README.md",
+      "lines": 65
+    },
+    {
+      "file": "codex-rs/utils/stream-parser/README.md",
+      "lines": 98
+    },
+    {
+      "file": "codex-rs/utils/template/README.md",
+      "lines": 42
+    },
+    {
+      "file": "codex-rs/voice-host/README.md",
+      "lines": 107
+    },
+    {
+      "file": "scripts/codex_package/README.md",
+      "lines": 102
+    },
+    {
+      "file": "scripts/mcp_conformance/README.md",
+      "lines": 122
+    },
+    {
+      "file": "sdk/python-runtime/README.md",
+      "lines": 10
+    },
+    {
+      "file": "sdk/python/README.md",
+      "lines": 76
+    },
+    {
+      "file": "sdk/typescript/README.md",
+      "lines": 161
+    },
+    {
+      "file": "third_party/v8/README.md",
+      "lines": 138
+    },
+    {
+      "file": "third_party/voice/README.md",
+      "lines": 307
+    },
+    {
+      "file": "tools/argument-comment-lint/README.md",
+      "lines": 177
+    },
+    {
+      "file": ".github/actions/publish-dotslash/requirements.txt",
+      "lines": 112
+    },
+    {
+      "file": ".github/blob-size-allowlist.txt",
+      "lines": 12
+    },
+    {
+      "file": ".github/codex/labels/codex-attempt.md",
+      "lines": 10
+    },
+    {
+      "file": ".github/codex/labels/codex-review.md",
+      "lines": 8
+    },
+    {
+      "file": ".github/codex/labels/codex-rust-review.md",
+      "lines": 140
+    },
+    {
+      "file": ".github/codex/labels/codex-triage.md",
+      "lines": 8
+    },
+    {
+      "file": "codex-rs/collaboration-mode-templates/templates/default.md",
+      "lines": 20
+    }
+  ],
+  "focused": false,
+  "candidates": [
+    {
+      "id": "c1",
+      "file": "codex-rs/responses-api-proxy/README.md",
+      "line": 147,
+      "text": "- By default reads the API key from `stdin`. With `--github-oidc`, reads the GitHub OIDC request credential instead; see above.",
+      "risk": "high"
+    },
+    {
+      "id": "c2",
+      "file": "codex-rs/memories/write/templates/memories/consolidation.md",
+      "line": 45,
+      "text": "- Redact secrets: never store tokens/keys/passwords; replace with [REDACTED_SECRET].",
+      "risk": "high"
+    },
+    {
+      "id": "c3",
+      "file": "codex-rs/prompts/templates/permissions/approval_policy/on_request_rule_request_permission.md",
+      "line": 23,
+      "text": "Use full escalation only when sandboxed additional permissions cannot satisfy the task.",
+      "risk": "high"
+    },
+    {
+      "id": "c4",
+      "file": "codex-rs/skills/src/assets/samples/openai-docs/references/mcp-diagnostics.md",
+      "line": 27,
+      "text": "Only perform a local installation or configuration change when the user explicitly authorizes that change. Never request sandbox escalation, edit hosted configuration, install a dependency, or ask the user to restart a h",
+      "risk": "high"
+    },
+    {
+      "id": "c5",
+      "file": "codex-rs/docs/bazel.md",
+      "line": 170,
+      "text": "test itself uses Seatbelt (the sandbox does as well, and it cannot be nested).",
+      "risk": "high"
+    },
+    {
+      "id": "c6",
+      "file": "docs/install.md",
+      "line": 56,
+      "text": "The TUI records diagnostics in bounded local stores by default. Set `log_dir` explicitly to enable a plaintext TUI log for a run:",
+      "risk": "high"
+    },
+    {
+      "id": "c7",
+      "file": "codex-rs/app-server/README.md",
+      "line": 533,
+      "text": "cannot open a browser before initialization. Explicit opt-in is shared by gateway",
+      "risk": "high"
+    },
+    {
+      "id": "c8",
+      "file": "codex-rs/cloud-client/README.md",
+      "line": 10,
+      "text": "factory. This exception bypasses proxies to keep plaintext credentials local.",
+      "risk": "high"
+    },
+    {
+      "id": "c9",
+      "file": "codex-rs/core/README.md",
+      "line": 61,
+      "text": "for bubblewrap sandboxing because it cannot create the required user",
+      "risk": "high"
+    },
+    {
+      "id": "c10",
+      "file": "codex-rs/exec-server/README.md",
+      "line": 50,
+      "text": "Direct WebSocket listeners support app-server's opt-in auth flags, including `--ws-auth capability-token --ws-token-sha256 HEX`, token files, and signed bearer tokens; clients send `Authorization: Bearer TOKEN` on each c",
+      "risk": "high"
+    },
+    {
+      "id": "c11",
+      "file": "codex-rs/linux-sandbox/README.md",
+      "line": 27,
+      "text": "it cannot create the required user namespaces, so Codex rejects sandboxed shell",
+      "risk": "high"
+    },
+    {
+      "id": "c12",
+      "file": "codex-rs/linux-sandbox/README.md",
+      "line": 58,
+      "text": "- When bubblewrap is active, the filesystem is read-only by default via `--ro-bind / /`.",
+      "risk": "high"
+    },
+    {
+      "id": "c13",
+      "file": "codex-rs/responses-api-proxy/README.md",
+      "line": 33,
+      "text": "short-lived OpenAI credentials obtained through GitHub Actions OIDC. Other",
+      "risk": "high"
+    },
+    {
+      "id": "c14",
+      "file": "codex-rs/responses-api-proxy/README.md",
+      "line": 39,
+      "text": "**IMPORTANT:** `codex-responses-api-proxy` is designed to be run by a privileged user with access to `OPENAI_API_KEY` so that an unprivileged user cannot inspect or tamper with the process. Though if `--http-shutdown` is",
+      "risk": "high"
+    },
+    {
+      "id": "c15",
+      "file": "codex-rs/responses-api-proxy/README.md",
+      "line": 75,
+      "text": "the minted GitHub OIDC JWT or an OpenAI API key. The proxy needs that request",
+      "risk": "high"
+    },
+    {
+      "id": "c16",
+      "file": "codex-rs/responses-api-proxy/README.md",
+      "line": 141,
+      "text": "OIDC mode uses sensitive HTTP headers and zeroizes temporary credential",
+      "risk": "high"
+    },
+    {
+      "id": "c17",
+      "file": "codex-rs/responses-api-proxy/README.md",
+      "line": 168,
+      "text": "- Authentication is `Authorization: Bearer <key>` in API-key mode and `Authorization: Bearer <OpenAI access token>` in OIDC mode.",
+      "risk": "high"
+    },
+    {
+      "id": "c18",
+      "file": "codex-rs/rollout-trace/README.md",
+      "line": 3,
+      "text": "> **Privacy:** Rollout tracing is not telemetry. Codex does **not** upload or",
+      "risk": "high"
+    },
+    {
+      "id": "c19",
+      "file": "codex-rs/prompts/templates/guardian/classifier_instructions.md",
+      "line": 42,
+      "text": "- Do not assign `high` or `critical` to a user-requested deletion of a specific local path solely because it uses `rm -rf`. If a read-only check shows the target is missing, empty, or narrowly scoped, such as a single sm",
+      "risk": "high"
+    },
+    {
+      "id": "c20",
+      "file": "codex-rs/prompts/templates/guardian/policy.md",
+      "line": 4,
+      "text": "- No organization-specific code hosts, storage systems, or third-party SaaS destinations are trusted by default unless this config or read-only evidence clearly marks them as trusted.",
+      "risk": "high"
+    },
+    {
+      "id": "c21",
+      "file": "sdk/python/docs/api-reference.md",
+      "line": 6,
+      "text": "Thread starts default to `ApprovalMode.auto_review`; turn starts accept an optional `approval_mode` override.",
+      "risk": "default"
+    },
+    {
+      "id": "c22",
+      "file": "codex-rs/app-server/README.md",
+      "line": 151,
+      "text": "The host-owned HTTP `codex_apps` server uses Legacy by default in app-server and",
+      "risk": "default"
+    },
+    {
+      "id": "c23",
+      "file": "codex-rs/app-server/README.md",
+      "line": 246,
+      "text": "description is at most 4096 bytes. The UI obtains approval for that display",
+      "risk": "default"
+    },
+    {
+      "id": "c24",
+      "file": "codex-rs/network-proxy/README.md",
+      "line": 113,
+      "text": "`true` to enable it explicitly. The proxy requires `network.enabled = true` and rejects unknown",
+      "risk": "default"
+    },
+    {
+      "id": "c25",
+      "file": "codex-rs/otel/README.md",
+      "line": 129,
+      "text": "`final_answer`. The default is false, independent of `otel.log_user_prompt`;",
+      "risk": "default"
+    },
+    {
+      "id": "c26",
+      "file": "sdk/typescript/README.md",
+      "line": 13,
+      "text": "Requires Node.js 18+.",
+      "risk": "default"
+    },
+    {
+      "id": "c27",
+      "file": "sdk/typescript/README.md",
+      "line": 121,
+      "text": "By default, the Codex CLI inherits the Node.js process environment. Provide the optional `env` parameter when instantiating the",
+      "risk": "default"
+    },
+    {
+      "id": "c28",
+      "file": "third_party/voice/README.md",
+      "line": 197,
+      "text": "path-bearing imports are rejected. Native tests require Python 3.12, a C compiler",
+      "risk": "default"
+    },
+    {
+      "id": "c29",
+      "file": "codex-rs/skills/src/assets/samples/skill-creator/references/openai_yaml.md",
+      "line": 39,
+      "text": "- `interface.icon_large`: Path to a larger logo asset (relative to skill dir). Default to `./assets/` and place icons in the skill's `assets/` folder.",
+      "risk": "default"
+    },
+    {
+      "id": "c30",
+      "file": "README.md",
+      "line": 28,
+      "text": "The standalone installers download from `https://releases.openai.com/codex` by default and fall back to GitHub Releases if a metadata or asset download is unavailable. To force GitHub Releases, set `CODEX_INSTALLER_USE_R",
+      "risk": "default"
+    },
+    {
+      "id": "c31",
+      "file": "codex-rs/exec-server/README.md",
+      "line": 102,
+      "text": "Noise remains the default transport. Direct requires `--aws-sigv4`, which",
+      "risk": "default"
+    },
+    {
+      "id": "c32",
+      "file": "codex-rs/network-proxy/README.md",
+      "line": 6,
+      "text": "- a SOCKS5 proxy (default `127.0.0.1:8081`, enabled by default)",
+      "risk": "default"
+    },
+    {
+      "id": "c33",
+      "file": "third_party/v8/README.md",
+      "line": 11,
+      "text": "Local Cargo builds still use upstream prebuilt `rusty_v8` archives by default.",
+      "risk": "default"
+    },
+    {
+      "id": "c34",
+      "file": "codex-rs/skills/src/assets/samples/imagegen/references/cli.md",
+      "line": 75,
+      "text": "`gpt-image-2` is the default model for new CLI fallback work.",
+      "risk": "default"
+    },
+    {
+      "id": "c35",
+      "file": "codex-rs/skills/src/assets/samples/imagegen/references/image-api.md",
+      "line": 15,
+      "text": "| `gpt-image-2` | `low`, `medium`, `high`, `auto` | Always high fidelity for image inputs; do not set `input_fidelity` | `auto` or flexible sizes that satisfy the constraints below | Default for new CLI/API workflows: hi",
+      "risk": "default"
+    },
+    {
+      "id": "c36",
+      "file": "codex-rs/skills/src/assets/samples/imagegen/references/image-api.md",
+      "line": 52,
+      "text": "- `size`: `auto` by default for `gpt-image-2`; flexible `WIDTHxHEIGHT` sizes are allowed only for `gpt-image-2`; older GPT Image models use `1024x1024`, `1536x1024`, `1024x1536`, or `auto`",
+      "risk": "default"
+    },
+    {
+      "id": "c37",
+      "file": "codex-rs/skills/src/assets/samples/imagegen/references/prompting.md",
+      "line": 82,
+      "text": "- In CLI fallback mode, `gpt-image-2` is the default. It supports `quality=low|medium|high|auto`; use `low` for fast drafts and thumbnails, and move to `medium`, `high`, or `auto` for final assets.",
+      "risk": "default"
+    },
+    {
+      "id": "c38",
+      "file": "codex-rs/skills/src/assets/samples/imagegen/SKILL.md",
+      "line": 105,
+      "text": "10. Use the built-in `image_gen` tool by default.",
+      "risk": "default"
+    },
+    {
+      "id": "c39",
+      "file": "codex-rs/app-server-client/README.md",
+      "line": 61,
+      "text": "`DEFAULT_IN_PROCESS_CHANNEL_CAPACITY` by default.",
+      "risk": "default"
+    },
+    {
+      "id": "c40",
+      "file": "codex-rs/app-server-daemon/README.md",
+      "line": 73,
+      "text": "updater-triggered restarts, `shutdownGraceSeconds` defaults to 60 and accepts",
+      "risk": "default"
+    }
+  ],
+  "signals": [
+    {
+      "id": "telemetry",
+      "label": "telemetry or analytics SDK, or user identification",
+      "hit_count": 90,
+      "files": [
+        "codex-rs/analytics/src/client.rs",
+        "codex-rs/analytics/src/client_product_tests.rs",
+        "codex-rs/analytics/src/client_tests.rs",
+        "codex-rs/analytics/src/facts.rs",
+        "codex-rs/analytics/src/lib.rs",
+        "codex-rs/core/src/hook_runtime.rs",
+        "codex-rs/core/src/mcp_tool_call.rs",
+        "codex-rs/core/src/session/turn.rs",
+        "codex-rs/core/src/skills.rs",
+        "codex-rs/core/src/tools/events.rs",
+        "codex-rs/core/src/tools/handlers/request_plugin_install.rs",
+        "codex-rs/ext/skills/src/tools/mod.rs",
+        "codex-rs/thread-store/src/local/rollout_migration/rollback_replay.rs",
+        "codex-rs/tui/src/app/owned_transcript.rs",
+        "codex-rs/tui/src/app/owned_transcript_browsing_tests.rs",
+        "codex-rs/tui/src/app/owned_transcript_tests.rs",
+        "codex-rs/tui/src/app/warning_notice_tests.rs",
+        "codex-rs/tui/src/app_backtrack/legacy_input.rs",
+        "codex-rs/tui/src/chatwidget/realtime.rs",
+        "codex-rs/tui/src/chatwidget/realtime/recording_controls.rs",
+        "codex-rs/tui/src/chatwidget/realtime/recording_controls_tests.rs",
+        "codex-rs/tui/src/chatwidget/realtime_split_flap.rs",
+        "elliot-report-v1/2026-10-22-665c3f3/claims.json"
+      ],
+      "examples": [
+        {
+          "file": "codex-rs/analytics/src/client.rs",
+          "line": 209,
+          "text": "send_track_events(&auth_manager, &destination, events, &thread_products)"
+        },
+        {
+          "file": "codex-rs/analytics/src/client.rs",
+          "line": 217,
+          "text": "send_track_events(&auth_manager, &destination, events, &thread_products)"
+        },
+        {
+          "file": "codex-rs/analytics/src/client.rs",
+          "line": 225,
+          "text": "send_track_events(&auth_manager, &destination, events, &thread_products).await;"
+        },
+        {
+          "file": "codex-rs/analytics/src/client.rs",
+          "line": 959,
+          "text": "async fn send_track_events("
+        }
+      ]
+    },
+    {
+      "id": "permission_bypass",
+      "label": "permission or sandbox checks turned off",
+      "hit_count": 16,
+      "files": [
+        "codex-rs/core/src/hook_runtime.rs",
+        "codex-rs/hooks/schema/generated/interrupt.command.input.schema.json",
+        "codex-rs/hooks/schema/generated/permission-request.command.input.schema.json",
+        "codex-rs/hooks/schema/generated/post-tool-use.command.input.schema.json",
+        "codex-rs/hooks/schema/generated/pre-tool-use.command.input.schema.json",
+        "codex-rs/hooks/schema/generated/session-start.command.input.schema.json",
+        "codex-rs/hooks/schema/generated/stop.command.input.schema.json",
+        "codex-rs/hooks/schema/generated/subagent-start.command.input.schema.json",
+        "codex-rs/hooks/schema/generated/subagent-stop.command.input.schema.json",
+        "codex-rs/hooks/schema/generated/user-prompt-submit.command.input.schema.json",
+        "codex-rs/hooks/src/schema.rs",
+        "elliot-report-v1/2026-10-22-665c3f3/claims.json"
+      ],
+      "examples": [
+        {
+          "file": "codex-rs/core/src/hook_runtime.rs",
+          "line": 998,
+          "text": "AskForApproval::Never => \"bypassPermissions\","
+        },
+        {
+          "file": "codex-rs/hooks/schema/generated/interrupt.command.input.schema.json",
+          "line": 29,
+          "text": "\"bypassPermissions\""
+        },
+        {
+          "file": "codex-rs/hooks/schema/generated/permission-request.command.input.schema.json",
+          "line": 35,
+          "text": "\"bypassPermissions\""
+        },
+        {
+          "file": "codex-rs/hooks/schema/generated/post-tool-use.command.input.schema.json",
+          "line": 35,
+          "text": "\"bypassPermissions\""
+        }
+      ]
+    }
+  ],
+  "file_count": 9448,
+  "claims": [
+    {
+      "n": "1",
+      "claim": "In API-key mode the proxy reads the key from stdin, formats it as `Bearer <key>` and attempts to mlock(2) the memory holding that header.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The key is read with read(2) into a stack buffer prefixed with \"Bearer \", copied into a leaked String and mlocked. mlock failure is ignored, which matches the README's word 'attempts'.",
+      "user_impact": null,
+      "note": "On Windows mlock_str is a no-op; the README only says 'attempts'.",
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 147,
+        "line_end": 148,
+        "quote": "By default reads the API key from `stdin`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/read_api_key.rs",
+          "line_start": 159,
+          "line_end": 160,
+          "quote": "let leaked: &'static mut str = header_value.leak();\n    mlock_str(leaked);",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/read_api_key.rs:159-160",
+            "file_sha256": "8e38a6bd5f75c5d08ac006ce0ce0e474d76f7acf265f2586188c92db63cbcf77"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/read_api_key.rs",
+          "line_start": 201,
+          "quote": "let _ = unsafe { mlock(start as *const c_void, size) };",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/read_api_key.rs:201",
+            "file_sha256": "8e38a6bd5f75c5d08ac006ce0ce0e474d76f7acf265f2586188c92db63cbcf77"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9009ffec4dfd"
+    },
+    {
+      "n": "2",
+      "claim": "Dump files redact `Authorization` and any header whose name includes `cookie`; other header values are dumped in full.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both request and response header conversions call should_redact_header, which redacts Authorization and any header containing 'cookie'.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 152,
+        "quote": "Header values are dumped in full except `Authorization` and any header whose name includes `cookie`, which are redacted."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/dump.rs",
+          "line_start": 186,
+          "line_end": 189,
+          "quote": "fn should_redact_header(name: &str) -> bool {\n    name.eq_ignore_ascii_case(AUTHORIZATION_HEADER_NAME)\n        || name.to_ascii_lowercase().contains(\"cookie\")\n}",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/dump.rs:186-189",
+            "file_sha256": "1f2850c9b0af53fa7d7bcbd28389898322d4b42a16260d4980105f7833479ccb"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_e8f4e56a4682"
+    },
+    {
+      "n": "3",
+      "claim": "The proxy accepts exactly POST /v1/responses (no query string) and answers everything else with 403, apart from the optional GET /shutdown.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The path comparison is exact (so a query string fails it), and /shutdown is only handled when --http-shutdown is set.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 33,
+        "line_end": 35,
+        "quote": "Other\nrequests are rejected with `403 Forbidden`, except for the optional shutdown\nendpoint described below."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/lib.rs",
+          "line_start": 237,
+          "line_end": 240,
+          "quote": "let allow = method == Method::Post && url_path == \"/v1/responses\";\n\n    if !allow {\n        let resp = Response::new_empty(StatusCode(403));",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/lib.rs:237-240",
+            "file_sha256": "e080ce9ef9b8e858ceee145842ad8b84ce3b38056c892e3f2115d5caeae71b71"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/lib.rs",
+          "line_start": 182,
+          "quote": "if http_shutdown && request.method() == &Method::Get && request.url() == \"/shutdown\" {",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/lib.rs:182",
+            "file_sha256": "e080ce9ef9b8e858ceee145842ad8b84ce3b38056c892e3f2115d5caeae71b71"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_f6518be2cfa1"
+    },
+    {
+      "n": "4",
+      "claim": "The API key is checked against /^[a-zA-Z0-9_-]+$/ and must fit the 1024-byte buffer, after which the stack buffer is zeroized.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Validation, the String copy and the zeroize of the stack buffer all happen as described.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 191,
+        "quote": "After verifying the key matches `/^[a-zA-Z0-9_-]+$/` (and does not exceed the buffer), we create a `String` from that buffer (so the data is now on the heap)."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/read_api_key.rs",
+          "line_start": 221,
+          "line_end": 224,
+          "quote": "if key_bytes\n        .iter()\n        .all(|byte| byte.is_ascii_alphanumeric() || matches!(byte, b'-' | b'_'))",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/read_api_key.rs:221-224",
+            "file_sha256": "8e38a6bd5f75c5d08ac006ce0ce0e474d76f7acf265f2586188c92db63cbcf77"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/read_api_key.rs",
+          "line_start": 156,
+          "line_end": 157,
+          "quote": "let header_value = String::from(header_str);\n    buf.zeroize();",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/read_api_key.rs:156-157",
+            "file_sha256": "8e38a6bd5f75c5d08ac006ce0ce0e474d76f7acf265f2586188c92db63cbcf77"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_1ac38765e1a0"
+    },
+    {
+      "n": "5",
+      "claim": "Rollout tracing is not telemetry: nothing is uploaded, and local bundles are written only when CODEX_ROLLOUT_TRACE_ROOT is set.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Tracing starts only when the env var is set, otherwise a disabled context is used. The crate depends only on the `http` types crate and no HTTP client, and its only entry point writes to the local root directory.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/rollout-trace/README.md",
+        "line_start": 3,
+        "line_end": 5,
+        "quote": "> **Privacy:** Rollout tracing is not telemetry. Codex does **not** upload or\n> report these traces; it writes local bundles only when\n> `CODEX_ROLLOUT_TRACE_ROOT` is set."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/rollout-trace/src/thread.rs",
+          "line_start": 107,
+          "line_end": 109,
+          "quote": "let Some(root) = std::env::var_os(CODEX_ROLLOUT_TRACE_ROOT_ENV) else {\n            return Self::disabled();\n        };",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/rollout-trace/src/thread.rs:107-109",
+            "file_sha256": "0763d39148d68a61b9d1c2381bb49b985dad4f029b75d64e1491daea36e0a82d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/rollout-trace/Cargo.toml",
+          "line_start": 19,
+          "quote": "http = { workspace = true }",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/rollout-trace/Cargo.toml:19",
+            "file_sha256": "1945dfdbca622a193f680d98cc0a733eec58510e9d3bc3a6efe0e3db153f4c62"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_0120cda82c79"
+    },
+    {
+      "n": "6",
+      "claim": "The TUI writes a plaintext log only when `log_dir` is set explicitly; otherwise it keeps diagnostics in bounded local stores.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The file layer is created only if log_dir is present in the effective config or requirements; the file is opened with mode 0600 on Unix and named codex-tui.log.",
+      "user_impact": null,
+      "note": "I did not audit the 'bounded local stores' (state DB / feedback ring buffer) beyond seeing they exist.",
+      "source": {
+        "file": "docs/install.md",
+        "line_start": 56,
+        "quote": "The TUI records diagnostics in bounded local stores by default. Set `log_dir` explicitly to enable a plaintext TUI log for a run:"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/tui/src/startup_orchestration.rs",
+          "line_start": 845,
+          "line_end": 847,
+          "quote": "let (tui_file_layer, _tui_file_log_guard) = if config_toml_log_dir_configured {\n        let log_dir = config.log_dir.clone();\n        std::fs::create_dir_all(&log_dir)?;",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/tui/src/startup_orchestration.rs:845-847",
+            "file_sha256": "fe3a5988dedc067857c72bb9564c7f5bc5d2b34fce7b9f811b012c9eaedaf931"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/tui/src/startup_orchestration.rs",
+          "line_start": 877,
+          "line_end": 878,
+          "quote": "} else {\n        (None, None)",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/tui/src/startup_orchestration.rs:877-878",
+            "file_sha256": "fe3a5988dedc067857c72bb9564c7f5bc5d2b34fce7b9f811b012c9eaedaf931"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_985c7bd4ad54"
+    },
+    {
+      "n": "7",
+      "claim": "Under bubblewrap the helper isolates the user namespace and (by default) the PID namespace, mounts the filesystem read-only via `--ro-bind / /`, and blocks io_uring in all seccomp filter modes.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The io_uring denials are unconditional; user and PID namespaces are unshared as described.",
+      "user_impact": null,
+      "note": "`--ro-bind / /` is used when the policy has full-disk read access; for restricted-read policies it starts from an empty filesystem with scoped read-only mounts (bwrap.rs:516-517). Both are read-only by default.",
+      "source": {
+        "file": "codex-rs/linux-sandbox/README.md",
+        "line_start": 56,
+        "line_end": 58,
+        "quote": "All filter\n  modes block `io_uring` to prevent bypassing socket-family restrictions.\n- When bubblewrap is active, the filesystem is read-only by default via `--ro-bind / /`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/linux-sandbox/src/bwrap.rs",
+          "line_start": 509,
+          "line_end": 512,
+          "quote": "vec![\n            \"--ro-bind\".to_string(),\n            \"/\".to_string(),\n            \"/\".to_string(),",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/linux-sandbox/src/bwrap.rs:509-512",
+            "file_sha256": "69a23ea16d525de5938c1fd47561c90d6047eb58f9864ca47749d696e5d9fa76"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/linux-sandbox/src/bwrap.rs",
+          "line_start": 284,
+          "line_end": 289,
+          "quote": "\"--unshare-user\".to_string(),\n        \"--unshare-ipc\".to_string(),\n    ];\n    if !options.inherit_pid_namespace {\n        args.push(\"--unshare-pid\".to_string());",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/linux-sandbox/src/bwrap.rs:284-289",
+            "file_sha256": "69a23ea16d525de5938c1fd47561c90d6047eb58f9864ca47749d696e5d9fa76"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/linux-sandbox/src/seccomp.rs",
+          "line_start": 199,
+          "line_end": 201,
+          "quote": "deny_syscall(&mut rules, libc::SYS_io_uring_setup);\n    deny_syscall(&mut rules, libc::SYS_io_uring_enter);\n    deny_syscall(&mut rules, libc::SYS_io_uring_register);",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/linux-sandbox/src/seccomp.rs:199-201",
+            "file_sha256": "d93f82501f9d9a0f25e198e47c2e1247b889546b37d9e2dab16210b541a2f41b"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_7a4c22a6c4a0"
+    },
+    {
+      "n": "8",
+      "claim": "Setting CODEX_INSTALLER_USE_RELEASES_OPENAI_COM to false (0 and no also accepted) forces GitHub Releases; the installers default to releases.openai.com and fall back to GitHub.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both scripts read the variable and fall back to GitHub when releases.openai.com is unavailable. In install.ps1 only 1/true/yes enable the preference, so false, 0 and no disable it.",
+      "user_impact": null,
+      "note": "Did not independently inspect install.sh's value parsing at line 9 beyond the variable being read.",
+      "source": {
+        "file": "README.md",
+        "line_start": 28,
+        "quote": "The standalone installers download from `https://releases.openai.com/codex` by default and fall back to GitHub Releases if a metadata or asset download is unavailable."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "scripts/install/install.sh",
+          "line_start": 10,
+          "quote": "RELEASES_BASE_URL=\"https://releases.openai.com/codex\"",
+          "checked": {
+            "ok": true,
+            "where": "scripts/install/install.sh:10",
+            "file_sha256": "0f896aeed686ede604c4d5ffe197524e30a886545c8b78bc6340a699d8fad908"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "scripts/install/install.sh",
+          "line_start": 426,
+          "quote": "warn \"releases.openai.com is unavailable; falling back to GitHub Releases.\"",
+          "checked": {
+            "ok": true,
+            "where": "scripts/install/install.sh:426",
+            "file_sha256": "0f896aeed686ede604c4d5ffe197524e30a886545c8b78bc6340a699d8fad908"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "scripts/install/install.ps1",
+          "line_start": 19,
+          "quote": "$env:CODEX_INSTALLER_USE_RELEASES_OPENAI_COM -match \"^(?i:1|true|yes)$\"",
+          "checked": {
+            "ok": true,
+            "where": "scripts/install/install.ps1:19",
+            "file_sha256": "96f80f28581f354ca60c9d5cce0b437949cd8c50a5c274c139872701ef372d1d"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_30c3a7840dbc"
+    },
+    {
+      "n": "9",
+      "claim": "The standalone installers (macOS/Linux and Windows) download from releases.openai.com by default.",
+      "verdict": "PARTIAL",
+      "severity": "low",
+      "explanation": "In the repo, install.sh defaults the preference to false and uses GitHub Releases unless the variable is 1/true/yes; install.ps1 defaults to true. The hosted chatgpt.com script may differ from this copy.",
+      "user_impact": "A Mac/Linux user running the repository's install.sh who expects downloads from releases.openai.com gets GitHub Releases unless they set CODEX_INSTALLER_USE_RELEASES_OPENAI_COM=true. Only the Windows script defaults to releases.openai.com. This corrects my earlier claim #8, which wrongly treated the default as releases.openai.com.",
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 28,
+        "quote": "The standalone installers download from `https://releases.openai.com/codex` by default and fall back to GitHub Releases if a metadata or asset download is unavailable."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "scripts/install/install.sh",
+          "line_start": 8,
+          "line_end": 9,
+          "quote": "DEFAULT_PREFER_RELEASES_OPENAI_COM=\"false\"\nPREFER_RELEASES_OPENAI_COM=\"${CODEX_INSTALLER_USE_RELEASES_OPENAI_COM:-$DEFAULT_PREFER_RELEASES_OPENAI_COM}\"",
+          "checked": {
+            "ok": true,
+            "where": "scripts/install/install.sh:8-9",
+            "file_sha256": "0f896aeed686ede604c4d5ffe197524e30a886545c8b78bc6340a699d8fad908"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "scripts/install/install.ps1",
+          "line_start": 15,
+          "quote": "$DefaultPreferReleasesOpenAICom = $true",
+          "checked": {
+            "ok": true,
+            "where": "scripts/install/install.ps1:15",
+            "file_sha256": "96f80f28581f354ca60c9d5cce0b437949cd8c50a5c274c139872701ef372d1d"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "README says installers default to releases.openai.com, but install.sh defaults the preference to false (GitHub Releases) while only install.ps1 defaults to true. Real mismatch for Mac/Linux; low severity is appropriate.",
+        "severity": "low",
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "scripts/install/install.sh",
+            "line_start": 8,
+            "line_end": 9,
+            "quote": "DEFAULT_PREFER_RELEASES_OPENAI_COM=\"false\"",
+            "checked": {
+              "ok": true,
+              "where": "scripts/install/install.sh:8-9",
+              "file_sha256": "0f896aeed686ede604c4d5ffe197524e30a886545c8b78bc6340a699d8fad908"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:45:39.189Z"
+      },
+      "receipt": "rcpt_a7c0ccb924ee"
+    },
+    {
+      "n": "10",
+      "claim": "The network proxy's SOCKS5 listener is enabled by default on 127.0.0.1:8081 and the HTTP proxy defaults to 127.0.0.1:3128.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Defaults match. The proxy as a whole is off unless network.enabled is true (default false).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/network-proxy/README.md",
+        "line_start": 5,
+        "line_end": 6,
+        "quote": "- an HTTP proxy (default `127.0.0.1:3128`)\n- a SOCKS5 proxy (default `127.0.0.1:8081`, enabled by default)"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/network-proxy/src/config.rs",
+          "line_start": 185,
+          "line_end": 188,
+          "quote": "proxy_url: default_proxy_url(),\n            enable_socks5: true,\n            socks_url: default_socks_url(),\n            enable_socks5_udp: true,",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/network-proxy/src/config.rs:185-188",
+            "file_sha256": "da340a929f67d51a71959ab70208ca152e9f2dfcc4cfeeca28c11b4b63db5f78"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/network-proxy/src/config.rs",
+          "line_start": 411,
+          "line_end": 416,
+          "quote": "fn default_proxy_url() -> String {\n    \"http://127.0.0.1:3128\".to_string()\n}\n\nfn default_socks_url() -> String {\n    \"http://127.0.0.1:8081\".to_string()",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/network-proxy/src/config.rs:411-416",
+            "file_sha256": "da340a929f67d51a71959ab70208ca152e9f2dfcc4cfeeca28c11b4b63db5f78"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9b0ae0360fba"
+    },
+    {
+      "n": "11",
+      "claim": "The app-server daemon's `shutdownGraceSeconds` defaults to 60 and accepts an integer from 0 through 300.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The default is 60 and anything above 300 is rejected. The stop path falls back to 60 when a stored value is invalid.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/app-server-daemon/README.md",
+        "line_start": 72,
+        "line_end": 74,
+        "quote": "`shutdownGraceSeconds` defaults to 60 and accepts\nan integer from 0 through 300."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/app-server-daemon/src/settings.rs",
+          "line_start": 15,
+          "line_end": 16,
+          "quote": "pub(crate) const DEFAULT_SHUTDOWN_GRACE_SECONDS: u32 = 60;\npub(crate) const MAX_SHUTDOWN_GRACE_SECONDS: u32 = 5 * 60;",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/app-server-daemon/src/settings.rs:15-16",
+            "file_sha256": "18f31688ebd807957a454f7a84997632f54306256ec39ed727911503cb573d5c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/app-server-daemon/src/settings.rs",
+          "line_start": 100,
+          "line_end": 103,
+          "quote": "ensure!(\n        seconds <= MAX_SHUTDOWN_GRACE_SECONDS,\n        \"shutdown grace must be between 0 and {MAX_SHUTDOWN_GRACE_SECONDS} seconds\"",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/app-server-daemon/src/settings.rs:100-103",
+            "file_sha256": "18f31688ebd807957a454f7a84997632f54306256ec39ed727911503cb573d5c"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_45c70a1549cb"
+    },
+    {
+      "n": "12",
+      "claim": "`otel.log_agent_responses` defaults to false, independent of `otel.log_user_prompt`; no otel exporter is configured by default.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both flags default false and exporters default to None, so no agent responses or prompts are exported unless the user configures them.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/otel/README.md",
+        "line_start": 129,
+        "quote": "`final_answer`. The default is false, independent of `otel.log_user_prompt`;"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/config/src/types.rs",
+          "line_start": 675,
+          "line_end": 680,
+          "quote": "log_user_prompt: false,\n            log_agent_responses: false,",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/config/src/types.rs:675-680",
+            "file_sha256": "56fcd0268c1147f3f03f5ac45726ae9b4a327878caf15eb0381b6229918e38ac"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/config/src/types.rs",
+          "line_start": 679,
+          "line_end": 680,
+          "quote": "exporter: OtelExporterKind::None,\n            trace_exporter: OtelExporterKind::None,",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/config/src/types.rs:679-680",
+            "file_sha256": "56fcd0268c1147f3f03f5ac45726ae9b4a327878caf15eb0381b6229918e38ac"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_25dbc521afa2"
+    },
+    {
+      "n": "13",
+      "claim": "Python SDK thread starts default to `ApprovalMode.auto_review`; turn starts accept an optional `approval_mode` override.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Thread start/resume-style methods default to auto_review; turn methods take Optional approval_mode defaulting to None (no override).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "sdk/python/docs/api-reference.md",
+        "line_start": 6,
+        "quote": "Thread starts default to `ApprovalMode.auto_review`; turn starts accept an optional `approval_mode` override."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "sdk/python/src/openai_codex/api.py",
+          "line_start": 138,
+          "quote": "approval_mode: ApprovalMode = ApprovalMode.auto_review,",
+          "checked": {
+            "ok": true,
+            "where": "sdk/python/src/openai_codex/api.py:138",
+            "file_sha256": "bd9cac51820997fa4d3fa4ac5c24894f45b92da8ba481d49c44cb96dcc9af430"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "sdk/python/src/openai_codex/api.py",
+          "line_start": 210,
+          "quote": "approval_mode: ApprovalMode | None = None,",
+          "checked": {
+            "ok": true,
+            "where": "sdk/python/src/openai_codex/api.py:210",
+            "file_sha256": "bd9cac51820997fa4d3fa4ac5c24894f45b92da8ba481d49c44cb96dcc9af430"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_136c459d8248"
+    },
+    {
+      "n": "14",
+      "claim": "By default the TypeScript SDK's Codex CLI inherits the Node.js process environment; passing `env` fully replaces it, and the SDK still injects required variables such as CODEX_API_KEY.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "With env given, only it is used; otherwise process.env is copied. The SDK adds the originator variable, CODEX_API_KEY when an apiKey is set, and PATH directories for the bundled binary.",
+      "user_impact": null,
+      "note": "The SDK also always sets an internal originator variable and may prepend PATH entries, beyond just CODEX_API_KEY.",
+      "source": {
+        "file": "sdk/typescript/README.md",
+        "line_start": 121,
+        "line_end": 122,
+        "quote": "By default, the Codex CLI inherits the Node.js process environment. Provide the optional `env` parameter when instantiating the\n`Codex` client to fully control which variables the CLI receives"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "sdk/typescript/src/exec.ts",
+          "line_start": 184,
+          "line_end": 192,
+          "quote": "if (this.envOverride) {\n      Object.assign(env, this.envOverride);\n    } else {\n      for (const [key, value] of Object.entries(process.env)) {\n        if (value !== undefined) {\n          env[key] = value;\n        }\n      }\n    }",
+          "checked": {
+            "ok": true,
+            "where": "sdk/typescript/src/exec.ts:184-192",
+            "file_sha256": "0df2fe1ccd90e05b2f2fb0cb3e1bd3293e23f36e3bbb369258edc6a63ae8655c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "sdk/typescript/src/exec.ts",
+          "line_start": 196,
+          "line_end": 198,
+          "quote": "if (args.apiKey) {\n      env.CODEX_API_KEY = args.apiKey;\n    }",
+          "checked": {
+            "ok": true,
+            "where": "sdk/typescript/src/exec.ts:196-198",
+            "file_sha256": "0df2fe1ccd90e05b2f2fb0cb3e1bd3293e23f36e3bbb369258edc6a63ae8655c"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_73c36d0e6db1"
+    },
+    {
+      "n": "15",
+      "claim": "Raw `configOverrides` are applied after structured `config` overrides, and SDK-managed settings like `baseUrl` and thread options are applied after both.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The argument order is structured config, then raw overrides, then baseUrl and thread options such as web_search and approval_policy, so later --config flags win on duplicates.",
+      "user_impact": null,
+      "note": "Precedence among repeated --config flags is determined by the CLI, which I did not trace; the SDK's emission order matches the README.",
+      "source": {
+        "file": "sdk/typescript/README.md",
+        "line_start": 159,
+        "line_end": 160,
+        "quote": "Raw overrides are applied after structured `config` overrides and take precedence over them. SDK-managed settings, such as\n`baseUrl`, and thread-specific options are applied afterward and take precedence."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "sdk/typescript/src/exec.ts",
+          "line_start": 97,
+          "line_end": 114,
+          "quote": "if (this.configOverrides) {\n      for (const override of serializeConfigOverrides(this.configOverrides)) {\n        commandArgs.push(\"--config\", override);\n      }\n    }\n\n    if (this.rawConfigOverrides) {\n      for (const override of this.rawConfigOverrides) {\n        commandArgs.push(\"--config\", override);\n      }\n    }\n\n    if (args.baseUrl) {",
+          "checked": {
+            "ok": true,
+            "where": "sdk/typescript/src/exec.ts:97-114",
+            "file_sha256": "0df2fe1ccd90e05b2f2fb0cb3e1bd3293e23f36e3bbb369258edc6a63ae8655c"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_92d060b38f09"
+    },
+    {
+      "n": "16",
+      "claim": "The TypeScript SDK requires Node.js 18+.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "package.json engines declares node >=18, matching the README.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "sdk/typescript/README.md",
+        "line_start": 13,
+        "quote": "Requires Node.js 18+."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "sdk/typescript/package.json",
+          "line_start": 20,
+          "quote": "\"node\": \">=18\"",
+          "checked": {
+            "ok": true,
+            "where": "sdk/typescript/package.json:20",
+            "file_sha256": "bc908b2ca2823217d19e56fc472b895b18a451a57411046b131992b34977b02c"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_e2ffbe051bb0"
+    },
+    {
+      "n": "17",
+      "claim": "The cloud client requires HTTPS except for direct loopback HTTP with an unrestricted, unmanaged factory; the loopback exception bypasses proxies; redirects are rejected; messages are bounded to 64 MiB; setup has a 150-second deadline.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Non-HTTPS endpoints are rejected unless they are http on loopback, and then only for an unmanaged, unrestricted network policy; that path builds a direct client with no proxy. Redirects are disabled and the 150s and 64 MiB limits match.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/cloud-client/README.md",
+        "line_start": 9,
+        "line_end": 10,
+        "quote": "HTTPS is required except for direct loopback HTTP with an unrestricted, unmanaged\nfactory. This exception bypasses proxies to keep plaintext credentials local."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/cloud-client/src/lib.rs",
+          "line_start": 56,
+          "quote": "if (endpoint.scheme() != \"https\" && !(endpoint.scheme() == \"http\" && loopback))",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/cloud-client/src/lib.rs:56",
+            "file_sha256": "3a8e910a517b9b11e263cf706981a6bdb160a4c3b612069044c5756f437fbee9"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/cloud-client/src/lib.rs",
+          "line_start": 66,
+          "line_end": 73,
+          "quote": "if local_http\n            && (factory.network_policy().is_managed()\n                || factory\n                    .network_policy()\n                    .acquire_for_unsupported_sdk()\n                    .is_err())\n        {\n            return Err(Error::InvalidEndpoint);",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/cloud-client/src/lib.rs:66-73",
+            "file_sha256": "3a8e910a517b9b11e263cf706981a6bdb160a4c3b612069044c5756f437fbee9"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/cloud-client/src/lib.rs",
+          "line_start": 80,
+          "line_end": 82,
+          "quote": "let http = if local_http {\n            // Plaintext credentials must never leave loopback through an outbound proxy.\n            builder.build_direct().map_err(|_| Error::ClientBuild)?",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/cloud-client/src/lib.rs:80-82",
+            "file_sha256": "3a8e910a517b9b11e263cf706981a6bdb160a4c3b612069044c5756f437fbee9"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/cloud-client/src/lib.rs",
+          "line_start": 32,
+          "line_end": 33,
+          "quote": "const REQUEST_TIMEOUT: Duration = Duration::from_secs(150);\nconst MAX_MESSAGE_BYTES: usize = 64 * 1024 * 1024;",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/cloud-client/src/lib.rs:32-33",
+            "file_sha256": "3a8e910a517b9b11e263cf706981a6bdb160a4c3b612069044c5756f437fbee9"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_7b354ad4fe0f"
+    },
+    {
+      "n": "18",
+      "claim": "In OIDC mode the proxy requires an HTTPS GitHub request URL, refuses redirects for credential requests, and uses sensitive HTTP headers and zeroized buffers for temporary credentials.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The URL scheme must be https, the federated client uses no-redirect policy, and the credential buffers use Zeroizing plus sensitive headers, as documented. The README is honest that the destination host is not verified.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 107,
+        "line_end": 109,
+        "quote": "URL. It requires HTTPS and refuses redirects, but it does not verify that GitHub\nowns the destination."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/github_oidc.rs",
+          "line_start": 36,
+          "quote": "if request_url.scheme() != \"https\"",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/github_oidc.rs:36",
+            "file_sha256": "fd3067662367f1ee984ec02a319cfcec13ce34c332f4bda8f95747eac05079f6"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/auth.rs",
+          "line_start": 161,
+          "line_end": 162,
+          "quote": "// A federated credential must never be sent to a redirect target.\n            Self::Federated { .. } => reqwest::redirect::Policy::none(),",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/auth.rs:161-162",
+            "file_sha256": "136a85830b566ea875b7c8023b8239b960b546c1a4b5e937e5afbc850113bb4e"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/github_oidc.rs",
+          "line_start": 83,
+          "quote": "value: Zeroizing<String>,",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/github_oidc.rs:83",
+            "file_sha256": "fd3067662367f1ee984ec02a319cfcec13ce34c332f4bda8f95747eac05079f6"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/github_oidc.rs",
+          "line_start": 103,
+          "quote": "header.set_sensitive(true);",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/github_oidc.rs:103",
+            "file_sha256": "fd3067662367f1ee984ec02a319cfcec13ce34c332f4bda8f95747eac05079f6"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_e5a5f65c6583"
+    },
+    {
+      "n": "19",
+      "claim": "WSL1 is not supported for bubblewrap sandboxing; Codex rejects sandboxed shell commands that would enter the bubblewrap path.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "On WSL1 the sandbox transform returns an error when the policy needs bubblewrap, before any bwrap invocation.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/linux-sandbox/README.md",
+        "line_start": 45,
+        "line_end": 46,
+        "quote": "- WSL1 is not supported for bubblewrap sandboxing; Codex rejects sandboxed\n  shell commands that would require the bubblewrap path before invoking `bwrap`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/sandboxing/src/manager.rs",
+          "line_start": 808,
+          "line_end": 812,
+          "quote": "let requires_bubblewrap = allow_network_for_proxy\n        || (!use_legacy_landlock && !file_system_sandbox_policy.has_full_disk_write_access());\n    if is_wsl1 && requires_bubblewrap {\n        return Err(SandboxTransformError::Wsl1UnsupportedForBubblewrap);",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/sandboxing/src/manager.rs:808-812",
+            "file_sha256": "8abe2a5f66f8101a669dd0c1571fb7c5edbab9eff2e80c8d13d9064bc5bc175d"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_13867d8e758e"
+    },
+    {
+      "n": "20",
+      "claim": "Exec-server direct WebSocket listeners support app-server's opt-in auth flags (capability-token with --ws-token-sha256, token files, signed bearer tokens), checked at connection time.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The WebSocket upgrade handler authorizes each connection against the policy built from the shared websocket-auth settings; without flags the default settings apply no authentication, which the README calls opt-in.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/exec-server/README.md",
+        "line_start": 50,
+        "quote": "Direct WebSocket listeners support app-server's opt-in auth flags, including `--ws-auth capability-token --ws-token-sha256 HEX`, token files, and signed bearer tokens"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/websocket-auth/src/lib.rs",
+          "line_start": 41,
+          "line_end": 42,
+          "quote": "#[arg(long = \"ws-token-sha256\", value_name = \"HEX\")]\n    pub ws_token_sha256: Option<String>,",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/websocket-auth/src/lib.rs:41-42",
+            "file_sha256": "337fd79f2c8411bcb6b65d12f20bd842031654ab2e66d937a493a397a0c0dd05"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/exec-server/src/server/transport.rs",
+          "line_start": 246,
+          "line_end": 248,
+          "quote": "if let Err(err) = authorize_upgrade(&headers, &state.auth_policy) {\n        return (err.status_code(), err.message()).into_response();",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/exec-server/src/server/transport.rs:246-248",
+            "file_sha256": "44d0c5309e66fa5740543b08467bcea7e23dcb900ac3a116b2146173fe730276"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_40469ec4cf3a"
+    },
+    {
+      "n": "21",
+      "claim": "The proxy can authenticate with short-lived OpenAI credentials obtained by exchanging a GitHub Actions OIDC identity token.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The federated path performs an RFC 8693 token exchange of the GitHub-minted JWT at auth.openai.com and uses the returned access token as the bearer credential.",
+      "user_impact": null,
+      "note": "Whether the exchange succeeds depends on an OpenAI-side workload identity configuration outside the repo.",
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 33,
+        "quote": "short-lived OpenAI credentials obtained through GitHub Actions OIDC."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/auth.rs",
+          "line_start": 38,
+          "quote": "const OPENAI_TOKEN_URL: &str = \"https://auth.openai.com/oauth/token\";",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/auth.rs:38",
+            "file_sha256": "136a85830b566ea875b7c8023b8239b960b546c1a4b5e937e5afbc850113bb4e"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/auth.rs",
+          "line_start": 272,
+          "line_end": 274,
+          "quote": "grant_type: \"urn:ietf:params:oauth:grant-type:token-exchange\",\n                subject_token_type: \"urn:ietf:params:oauth:token-type:jwt\",\n                subject_token: subject.as_str(),",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/auth.rs:272-274",
+            "file_sha256": "136a85830b566ea875b7c8023b8239b960b546c1a4b5e937e5afbc850113bb4e"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_b7856b583212"
+    },
+    {
+      "n": "22",
+      "claim": "With --http-shutdown, an unprivileged user can make a GET to /shutdown to stop the proxy, as designed.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The shutdown endpoint has no authentication and any local process that can reach 127.0.0.1 can stop the proxy; the README states this openly. The same holds for using the proxy: any local user can send Responses requests that are authenticated with the privileged user's key.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 39,
+        "quote": "Though if `--http-shutdown` is specified, an unprivileged user _can_ make a `GET` request to `/shutdown` to shutdown the server"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/lib.rs",
+          "line_start": 182,
+          "line_end": 185,
+          "quote": "if http_shutdown && request.method() == &Method::Get && request.url() == \"/shutdown\" {\n                let _ = request.respond(Response::new_empty(StatusCode(200)));\n                std::process::exit(0);",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/lib.rs:182-185",
+            "file_sha256": "e080ce9ef9b8e858ceee145842ad8b84ce3b38056c892e3f2115d5caeae71b71"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/lib.rs",
+          "line_start": 203,
+          "quote": "let addr = SocketAddr::from(([127, 0, 0, 1], port.unwrap_or(0)));",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/lib.rs:203",
+            "file_sha256": "e080ce9ef9b8e858ceee145842ad8b84ce3b38056c892e3f2115d5caeae71b71"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_53503668e601"
+    },
+    {
+      "n": "23",
+      "claim": "In OIDC mode the proxy uses sensitive HTTP headers and zeroizes temporary credential buffers.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The temporary Bearer buffer is Zeroizing and the header is marked sensitive, as stated.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 141,
+        "quote": "OIDC mode uses sensitive HTTP headers and zeroizes temporary credential"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/auth.rs",
+          "line_start": 413,
+          "line_end": 418,
+          "quote": "let mut bytes = Zeroizing::new(Vec::with_capacity(15 + token.len()));\n    bytes.extend_from_slice(b\"Bearer \");\n    bytes.extend_from_slice(token);\n    let mut header = HeaderValue::from_bytes(&bytes)\n        .map_err(|_| anyhow!(\"invalid workload identity bearer credential\"))?;\n    header.set_sensitive(true);",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/auth.rs:413-418",
+            "file_sha256": "136a85830b566ea875b7c8023b8239b960b546c1a4b5e937e5afbc850113bb4e"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_089ba563a6b3"
+    },
+    {
+      "n": "24",
+      "claim": "Authentication is `Authorization: Bearer <key>` in API-key mode and `Authorization: Bearer <OpenAI access token>` in OIDC mode; the incoming Authorization header is never forwarded.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Client-supplied Authorization and Host headers are dropped and replaced by the proxy's Bearer header in both modes.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 168,
+        "quote": "- Authentication is `Authorization: Bearer <key>` in API-key mode and `Authorization: Bearer <OpenAI access token>` in OIDC mode."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/lib.rs",
+          "line_start": 266,
+          "line_end": 268,
+          "quote": "if lower.as_str() == \"authorization\" || lower.as_str() == \"host\" {\n            continue;\n        }",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/lib.rs:266-268",
+            "file_sha256": "e080ce9ef9b8e858ceee145842ad8b84ce3b38056c892e3f2115d5caeae71b71"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/auth.rs",
+          "line_start": 414,
+          "quote": "bytes.extend_from_slice(b\"Bearer \");",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/auth.rs:414",
+            "file_sha256": "136a85830b566ea875b7c8023b8239b960b546c1a4b5e937e5afbc850113bb4e"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_0b4c43c49c28"
+    },
+    {
+      "n": "25",
+      "claim": "The standalone network proxy enables HTTPS MITM automatically for limited mode or when MITM hooks are configured, and `mitm` otherwise defaults to false.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The standalone loader ORs mitm with limited mode or non-empty hooks; the Codex permissions path does the same in permissions_toml.rs. Lower-level validation requires mitm=true whenever hooks exist, which this auto-enable satisfies.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/network-proxy/README.md",
+        "line_start": 111,
+        "line_end": 113,
+        "quote": "`mitm` defaults to `false`. `mitm_ca` defaults to `None` and is omitted from serialized JSON when\nunset. HTTPS MITM is enabled automatically for limited mode or configured `mitm_hooks`. Set `mitm` to\n`true` to enable it explicitly."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/network-proxy/src/main.rs",
+          "line_start": 50,
+          "line_end": 51,
+          "quote": "config.network.mitm |=\n        config.network.mode == NetworkMode::Limited || !config.network.mitm_hooks.is_empty();",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/network-proxy/src/main.rs:50-51",
+            "file_sha256": "810f210d61450f6eea42c986a42390ec4a086bb47d236fd85ecc220d313e0137"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/network-proxy/src/config.rs",
+          "line_start": 197,
+          "quote": "mitm: false,",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/network-proxy/src/config.rs:197",
+            "file_sha256": "da340a929f67d51a71959ab70208ca152e9f2dfcc4cfeeca28c11b4b63db5f78"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_d81264e8e740"
+    },
+    {
+      "n": "26",
+      "claim": "In OIDC mode, stdin supplies GitHub's ACTIONS_ID_TOKEN_REQUEST_TOKEN, not the minted JWT or an OpenAI API key.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The OIDC source reads the request credential from stdin and sends it as the Authorization header of the GitHub request-URL call to mint subject tokens; the OpenAI access token comes from the exchange.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 74,
+        "line_end": 75,
+        "quote": "In this mode, stdin supplies GitHub's `ACTIONS_ID_TOKEN_REQUEST_TOKEN`, **not**\nthe minted GitHub OIDC JWT or an OpenAI API key."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/github_oidc.rs",
+          "line_start": 97,
+          "quote": "let value = read_auth_header_with::<REQUEST_AUTH_BUFFER_SIZE>(",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/github_oidc.rs:97",
+            "file_sha256": "fd3067662367f1ee984ec02a319cfcec13ce34c332f4bda8f95747eac05079f6"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/github_oidc.rs",
+          "line_start": 32,
+          "quote": "pub(crate) fn from_stdin(request_url: &str, audience: &str) -> Result<Self> {",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/github_oidc.rs:32",
+            "file_sha256": "fd3067662367f1ee984ec02a319cfcec13ce34c332f4bda8f95747eac05079f6"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_7edb037b93b0"
+    }
+  ],
+  "rejected": [],
+  "finished_at": "2026-10-22T21:46:04.602Z",
+  "behaviors": [
+    {
+      "n": "b1",
+      "behavior": "Codex sends product analytics events to the ChatGPT backend (<chatgpt_base_url>/codex/analytics-events/events) whenever the user is signed in with ChatGPT/Codex-backend auth (and a reduced set of event types with API-key auth). The analytics queue is created unless analytics.enabled is explicitly false, so it is on by default.",
+      "signal": "telemetry",
+      "severity": "medium",
+      "user_impact": "Users who read the README, install guide or SECURITY.md are never told that usage analytics are collected by default or that analytics.enabled = false in config.toml opts out. The opt-out is only visible in a code comment on the config struct.",
+      "docs_searched": "README.md, docs/install.md, docs/config.md, docs/authentication.md, docs/sandbox.md, SECURITY.md and a repo-wide case-insensitive search of every *.md for 'analytics': only codex-rs/app-server-test-client/README.md (a test tool) mentions it; none of the user-facing docs describe default analytics or the opt-out.",
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/analytics/src/client.rs",
+          "line_start": 321,
+          "line_end": 322,
+          "quote": "queue: (analytics_enabled != Some(false))\n                .then(|| AnalyticsEventsQueue::new(Arc::clone(&auth_manager), destination)),",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/analytics/src/client.rs:321-322",
+            "file_sha256": "4d7c7c9f1adece502981b5bc4663dcd5213c9aed39b804cf69e64b21bbcc0bb4"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/analytics/src/client.rs",
+          "line_start": 153,
+          "line_end": 154,
+          "quote": "Self::Http {\n            url: format!(\"{base_url}/codex/analytics-events/events\"),",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/analytics/src/client.rs:153-154",
+            "file_sha256": "4d7c7c9f1adece502981b5bc4663dcd5213c9aed39b804cf69e64b21bbcc0bb4"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/tui/src/startup_orchestration.rs",
+          "line_start": 673,
+          "quote": "/*default_analytics_enabled*/ true,",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/tui/src/startup_orchestration.rs:673",
+            "file_sha256": "fe3a5988dedc067857c72bb9564c7f5bc5d2b34fce7b9f811b012c9eaedaf931"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/config/src/types.rs",
+          "line_start": 249,
+          "quote": "/// When `false`, disables OpenAI analytics across Codex product surfaces in this profile.",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/config/src/types.rs:249",
+            "file_sha256": "56fcd0268c1147f3f03f5ac45726ae9b4a327878caf15eb0381b6229918e38ac"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "Analytics queue is created unless analytics.enabled is explicitly false, so it is on by default and posts to the ChatGPT backend. User-facing docs searched do not disclose it or the opt-out. Medium severity is reasonable, though possibly slightly high since it is tied to signed-in use.",
+        "severity": "medium",
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "codex-rs/analytics/src/client.rs",
+            "line_start": 321,
+            "line_end": 322,
+            "quote": "queue: (analytics_enabled != Some(false))",
+            "checked": {
+              "ok": true,
+              "where": "codex-rs/analytics/src/client.rs:321-322",
+              "file_sha256": "4d7c7c9f1adece502981b5bc4663dcd5213c9aed39b804cf69e64b21bbcc0bb4"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:45:40.935Z"
+      },
+      "receipt": "rcpt_460976768c84"
+    },
+    {
+      "n": "b2",
+      "behavior": "In release builds, OTel metrics are exported by default to OpenAI's Statsig endpoint (https://ab.chatgpt.com/otlp/v1/metrics) with an embedded client API key. The default metrics_exporter is Statsig and it follows analytics.enabled; debug builds turn it off. This also means the otel README claim I recorded as #12 ('no otel exporter is configured by default') is true only for the log and trace exporters, not for metrics.",
+      "signal": "telemetry",
+      "severity": "medium",
+      "user_impact": "Users are not told that release builds send metrics to a Statsig-backed endpoint by default, or that analytics.enabled = false or otel.metrics_exporter = \"none\" stops it. The otel README only describes Statsig as a 'shorthand', not as the default.",
+      "docs_searched": "README.md, docs/install.md, docs/config.md, SECURITY.md, codex-rs/otel/README.md (mentions Statsig only as an available exporter shorthand at lines 187-190, not as the default) and a repo-wide search of *.md for statsig/analytics.",
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/config/src/types.rs",
+          "line_start": 645,
+          "line_end": 646,
+          "quote": "/// Metrics exporter. Defaults to `statsig`, which follows `analytics.enabled`.\n    /// Custom OTLP exporters are independent of `analytics.enabled`; `none` disables metrics export.",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/config/src/types.rs:645-646",
+            "file_sha256": "56fcd0268c1147f3f03f5ac45726ae9b4a327878caf15eb0381b6229918e38ac"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/otel/src/config.rs",
+          "line_start": 9,
+          "quote": "pub(crate) const STATSIG_OTLP_HTTP_ENDPOINT: &str = \"https://ab.chatgpt.com/otlp/v1/metrics\";",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/otel/src/config.rs:9",
+            "file_sha256": "53a9bd419c8f86fa8da64266fb5cce04808acc5e916d0eeb0c4560c03bf32d75"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/core/src/config/otel.rs",
+          "line_start": 21,
+          "quote": "let metrics_exporter = config.metrics_exporter.unwrap_or(OtelExporterKind::Statsig);",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/core/src/config/otel.rs:21",
+            "file_sha256": "6af9794a087b90c87356a31a9110064632205a1b2efd336b2fce10ac648990be"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "Metrics exporter defaults to Statsig (an OpenAI endpoint) when unset, and docs only mention Statsig as an available shorthand. Undisclosed default telemetry. Overlaps with b1; severity medium is acceptable but could be low.",
+        "severity": "medium",
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "codex-rs/core/src/config/otel.rs",
+            "line_start": 21,
+            "quote": "let metrics_exporter = config.metrics_exporter.unwrap_or(OtelExporterKind::Statsig);",
+            "checked": {
+              "ok": true,
+              "where": "codex-rs/core/src/config/otel.rs:21",
+              "file_sha256": "6af9794a087b90c87356a31a9110064632205a1b2efd336b2fce10ac648990be"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:45:42.712Z"
+      },
+      "receipt": "rcpt_7c699af59cb0"
+    }
+  ],
+  "review_requested_at": "2026-10-22T21:45:25.975Z",
+  "skipped": [
+    {
+      "candidate": "c2",
+      "reason": "Instruction text inside a memory-consolidation prompt template for the model, not a promise to users about product behaviour."
+    },
+    {
+      "candidate": "c3",
+      "reason": "Prompt template text that instructs the model when to request escalation; it is not a user-facing guarantee."
+    },
+    {
+      "candidate": "c4",
+      "reason": "Guidance inside a bundled sample skill's reference file telling the model what to do; not a product promise."
+    },
+    {
+      "candidate": "c5",
+      "reason": "Internal Bazel developer doc about nested Seatbelt in test builds; not a user-facing promise."
+    },
+    {
+      "candidate": "c7",
+      "reason": "App-server protocol developer README describing client capability negotiation for login; internal API documentation, not traced in this audit."
+    },
+    {
+      "candidate": "c9",
+      "reason": "Same WSL1 bubblewrap statement as the linux-sandbox README, which is recorded and verified as claim 19; the core README repeats it."
+    },
+    {
+      "candidate": "c11",
+      "reason": "Same WSL1 statement as linux-sandbox README lines 45-46, which is recorded and verified as claim 19."
+    },
+    {
+      "candidate": "c19",
+      "reason": "Guardian classifier prompt template guiding model risk grading; not a user-facing guarantee."
+    },
+    {
+      "candidate": "c20",
+      "reason": "Guardian policy prompt template for the model; not a user-facing guarantee."
+    },
+    {
+      "candidate": "c22",
+      "reason": "App-server protocol developer README on an internal server's default mode; internal API documentation, not traced in this audit."
+    },
+    {
+      "candidate": "c23",
+      "reason": "App-server protocol developer README on a field size limit; internal API documentation, not traced in this audit."
+    },
+    {
+      "candidate": "c28",
+      "reason": "Build and test prerequisites for a third-party voice component; developer documentation, not traced."
+    },
+    {
+      "candidate": "c29",
+      "reason": "Reference text inside a bundled sample skill for authors; not a product promise."
+    },
+    {
+      "candidate": "c31",
+      "reason": "Exec-server transport developer README about a default transport; internal protocol documentation, not traced in this audit."
+    },
+    {
+      "candidate": "c33",
+      "reason": "Developer build note on V8 archives for Cargo builds; not a user-facing promise."
+    },
+    {
+      "candidate": "c34",
+      "reason": "Reference text in a bundled sample imagegen skill about OpenAI model choice; describes a third-party API, not this project's code."
+    },
+    {
+      "candidate": "c35",
+      "reason": "Reference text in a bundled sample imagegen skill describing the OpenAI image API; not this project's code."
+    },
+    {
+      "candidate": "c36",
+      "reason": "Reference text in a bundled sample imagegen skill describing the OpenAI image API; not this project's code."
+    },
+    {
+      "candidate": "c37",
+      "reason": "Prompting guidance in a bundled sample imagegen skill; not a product promise."
+    },
+    {
+      "candidate": "c38",
+      "reason": "Instruction to the model in a bundled sample skill; not a product promise."
+    },
+    {
+      "candidate": "c39",
+      "reason": "Developer README for an in-process client crate naming a capacity constant; internal API documentation, not traced."
+    },
+    {
+      "signal": "permission_bypass",
+      "reason": "Hits are the explicit --dangerously-bypass-approvals-and-sandbox/--yolo opt-in flag (whose help text warns EXTREMELY DANGEROUS), a hook_runtime label mapping approval policy Never to the string bypassPermissions for hook input only, and generated hook schemas; none disables checks by default."
+    }
+  ],
+  "notes": [],
+  "retracted": [],
+  "raw_claims": [
+    {
+      "n": "1",
+      "claim": "In API-key mode the proxy reads the key from stdin, formats it as `Bearer <key>` and attempts to mlock(2) the memory holding that header.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The key is read with read(2) into a stack buffer prefixed with \"Bearer \", copied into a leaked String and mlocked. mlock failure is ignored, which matches the README's word 'attempts'.",
+      "user_impact": null,
+      "note": "On Windows mlock_str is a no-op; the README only says 'attempts'.",
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 147,
+        "line_end": 148,
+        "quote": "By default reads the API key from `stdin`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/read_api_key.rs",
+          "line_start": 159,
+          "line_end": 160,
+          "quote": "let leaked: &'static mut str = header_value.leak();\n    mlock_str(leaked);",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/read_api_key.rs:159-160",
+            "file_sha256": "8e38a6bd5f75c5d08ac006ce0ce0e474d76f7acf265f2586188c92db63cbcf77"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/read_api_key.rs",
+          "line_start": 201,
+          "quote": "let _ = unsafe { mlock(start as *const c_void, size) };",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/read_api_key.rs:201",
+            "file_sha256": "8e38a6bd5f75c5d08ac006ce0ce0e474d76f7acf265f2586188c92db63cbcf77"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9009ffec4dfd"
+    },
+    {
+      "n": "2",
+      "claim": "Dump files redact `Authorization` and any header whose name includes `cookie`; other header values are dumped in full.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both request and response header conversions call should_redact_header, which redacts Authorization and any header containing 'cookie'.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 152,
+        "quote": "Header values are dumped in full except `Authorization` and any header whose name includes `cookie`, which are redacted."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/dump.rs",
+          "line_start": 186,
+          "line_end": 189,
+          "quote": "fn should_redact_header(name: &str) -> bool {\n    name.eq_ignore_ascii_case(AUTHORIZATION_HEADER_NAME)\n        || name.to_ascii_lowercase().contains(\"cookie\")\n}",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/dump.rs:186-189",
+            "file_sha256": "1f2850c9b0af53fa7d7bcbd28389898322d4b42a16260d4980105f7833479ccb"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_e8f4e56a4682"
+    },
+    {
+      "n": "3",
+      "claim": "The proxy accepts exactly POST /v1/responses (no query string) and answers everything else with 403, apart from the optional GET /shutdown.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The path comparison is exact (so a query string fails it), and /shutdown is only handled when --http-shutdown is set.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 33,
+        "line_end": 35,
+        "quote": "Other\nrequests are rejected with `403 Forbidden`, except for the optional shutdown\nendpoint described below."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/lib.rs",
+          "line_start": 237,
+          "line_end": 240,
+          "quote": "let allow = method == Method::Post && url_path == \"/v1/responses\";\n\n    if !allow {\n        let resp = Response::new_empty(StatusCode(403));",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/lib.rs:237-240",
+            "file_sha256": "e080ce9ef9b8e858ceee145842ad8b84ce3b38056c892e3f2115d5caeae71b71"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/lib.rs",
+          "line_start": 182,
+          "quote": "if http_shutdown && request.method() == &Method::Get && request.url() == \"/shutdown\" {",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/lib.rs:182",
+            "file_sha256": "e080ce9ef9b8e858ceee145842ad8b84ce3b38056c892e3f2115d5caeae71b71"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_f6518be2cfa1"
+    },
+    {
+      "n": "4",
+      "claim": "The API key is checked against /^[a-zA-Z0-9_-]+$/ and must fit the 1024-byte buffer, after which the stack buffer is zeroized.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Validation, the String copy and the zeroize of the stack buffer all happen as described.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 191,
+        "quote": "After verifying the key matches `/^[a-zA-Z0-9_-]+$/` (and does not exceed the buffer), we create a `String` from that buffer (so the data is now on the heap)."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/read_api_key.rs",
+          "line_start": 221,
+          "line_end": 224,
+          "quote": "if key_bytes\n        .iter()\n        .all(|byte| byte.is_ascii_alphanumeric() || matches!(byte, b'-' | b'_'))",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/read_api_key.rs:221-224",
+            "file_sha256": "8e38a6bd5f75c5d08ac006ce0ce0e474d76f7acf265f2586188c92db63cbcf77"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/read_api_key.rs",
+          "line_start": 156,
+          "line_end": 157,
+          "quote": "let header_value = String::from(header_str);\n    buf.zeroize();",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/read_api_key.rs:156-157",
+            "file_sha256": "8e38a6bd5f75c5d08ac006ce0ce0e474d76f7acf265f2586188c92db63cbcf77"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_1ac38765e1a0"
+    },
+    {
+      "n": "5",
+      "claim": "Rollout tracing is not telemetry: nothing is uploaded, and local bundles are written only when CODEX_ROLLOUT_TRACE_ROOT is set.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Tracing starts only when the env var is set, otherwise a disabled context is used. The crate depends only on the `http` types crate and no HTTP client, and its only entry point writes to the local root directory.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/rollout-trace/README.md",
+        "line_start": 3,
+        "line_end": 5,
+        "quote": "> **Privacy:** Rollout tracing is not telemetry. Codex does **not** upload or\n> report these traces; it writes local bundles only when\n> `CODEX_ROLLOUT_TRACE_ROOT` is set."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/rollout-trace/src/thread.rs",
+          "line_start": 107,
+          "line_end": 109,
+          "quote": "let Some(root) = std::env::var_os(CODEX_ROLLOUT_TRACE_ROOT_ENV) else {\n            return Self::disabled();\n        };",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/rollout-trace/src/thread.rs:107-109",
+            "file_sha256": "0763d39148d68a61b9d1c2381bb49b985dad4f029b75d64e1491daea36e0a82d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/rollout-trace/Cargo.toml",
+          "line_start": 19,
+          "quote": "http = { workspace = true }",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/rollout-trace/Cargo.toml:19",
+            "file_sha256": "1945dfdbca622a193f680d98cc0a733eec58510e9d3bc3a6efe0e3db153f4c62"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_0120cda82c79"
+    },
+    {
+      "n": "6",
+      "claim": "The TUI writes a plaintext log only when `log_dir` is set explicitly; otherwise it keeps diagnostics in bounded local stores.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The file layer is created only if log_dir is present in the effective config or requirements; the file is opened with mode 0600 on Unix and named codex-tui.log.",
+      "user_impact": null,
+      "note": "I did not audit the 'bounded local stores' (state DB / feedback ring buffer) beyond seeing they exist.",
+      "source": {
+        "file": "docs/install.md",
+        "line_start": 56,
+        "quote": "The TUI records diagnostics in bounded local stores by default. Set `log_dir` explicitly to enable a plaintext TUI log for a run:"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/tui/src/startup_orchestration.rs",
+          "line_start": 845,
+          "line_end": 847,
+          "quote": "let (tui_file_layer, _tui_file_log_guard) = if config_toml_log_dir_configured {\n        let log_dir = config.log_dir.clone();\n        std::fs::create_dir_all(&log_dir)?;",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/tui/src/startup_orchestration.rs:845-847",
+            "file_sha256": "fe3a5988dedc067857c72bb9564c7f5bc5d2b34fce7b9f811b012c9eaedaf931"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/tui/src/startup_orchestration.rs",
+          "line_start": 877,
+          "line_end": 878,
+          "quote": "} else {\n        (None, None)",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/tui/src/startup_orchestration.rs:877-878",
+            "file_sha256": "fe3a5988dedc067857c72bb9564c7f5bc5d2b34fce7b9f811b012c9eaedaf931"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_985c7bd4ad54"
+    },
+    {
+      "n": "7",
+      "claim": "Under bubblewrap the helper isolates the user namespace and (by default) the PID namespace, mounts the filesystem read-only via `--ro-bind / /`, and blocks io_uring in all seccomp filter modes.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The io_uring denials are unconditional; user and PID namespaces are unshared as described.",
+      "user_impact": null,
+      "note": "`--ro-bind / /` is used when the policy has full-disk read access; for restricted-read policies it starts from an empty filesystem with scoped read-only mounts (bwrap.rs:516-517). Both are read-only by default.",
+      "source": {
+        "file": "codex-rs/linux-sandbox/README.md",
+        "line_start": 56,
+        "line_end": 58,
+        "quote": "All filter\n  modes block `io_uring` to prevent bypassing socket-family restrictions.\n- When bubblewrap is active, the filesystem is read-only by default via `--ro-bind / /`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/linux-sandbox/src/bwrap.rs",
+          "line_start": 509,
+          "line_end": 512,
+          "quote": "vec![\n            \"--ro-bind\".to_string(),\n            \"/\".to_string(),\n            \"/\".to_string(),",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/linux-sandbox/src/bwrap.rs:509-512",
+            "file_sha256": "69a23ea16d525de5938c1fd47561c90d6047eb58f9864ca47749d696e5d9fa76"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/linux-sandbox/src/bwrap.rs",
+          "line_start": 284,
+          "line_end": 289,
+          "quote": "\"--unshare-user\".to_string(),\n        \"--unshare-ipc\".to_string(),\n    ];\n    if !options.inherit_pid_namespace {\n        args.push(\"--unshare-pid\".to_string());",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/linux-sandbox/src/bwrap.rs:284-289",
+            "file_sha256": "69a23ea16d525de5938c1fd47561c90d6047eb58f9864ca47749d696e5d9fa76"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/linux-sandbox/src/seccomp.rs",
+          "line_start": 199,
+          "line_end": 201,
+          "quote": "deny_syscall(&mut rules, libc::SYS_io_uring_setup);\n    deny_syscall(&mut rules, libc::SYS_io_uring_enter);\n    deny_syscall(&mut rules, libc::SYS_io_uring_register);",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/linux-sandbox/src/seccomp.rs:199-201",
+            "file_sha256": "d93f82501f9d9a0f25e198e47c2e1247b889546b37d9e2dab16210b541a2f41b"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_7a4c22a6c4a0"
+    },
+    {
+      "n": "8",
+      "claim": "Setting CODEX_INSTALLER_USE_RELEASES_OPENAI_COM to false (0 and no also accepted) forces GitHub Releases; the installers default to releases.openai.com and fall back to GitHub.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both scripts read the variable and fall back to GitHub when releases.openai.com is unavailable. In install.ps1 only 1/true/yes enable the preference, so false, 0 and no disable it.",
+      "user_impact": null,
+      "note": "Did not independently inspect install.sh's value parsing at line 9 beyond the variable being read.",
+      "source": {
+        "file": "README.md",
+        "line_start": 28,
+        "quote": "The standalone installers download from `https://releases.openai.com/codex` by default and fall back to GitHub Releases if a metadata or asset download is unavailable."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "scripts/install/install.sh",
+          "line_start": 10,
+          "quote": "RELEASES_BASE_URL=\"https://releases.openai.com/codex\"",
+          "checked": {
+            "ok": true,
+            "where": "scripts/install/install.sh:10",
+            "file_sha256": "0f896aeed686ede604c4d5ffe197524e30a886545c8b78bc6340a699d8fad908"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "scripts/install/install.sh",
+          "line_start": 426,
+          "quote": "warn \"releases.openai.com is unavailable; falling back to GitHub Releases.\"",
+          "checked": {
+            "ok": true,
+            "where": "scripts/install/install.sh:426",
+            "file_sha256": "0f896aeed686ede604c4d5ffe197524e30a886545c8b78bc6340a699d8fad908"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "scripts/install/install.ps1",
+          "line_start": 19,
+          "quote": "$env:CODEX_INSTALLER_USE_RELEASES_OPENAI_COM -match \"^(?i:1|true|yes)$\"",
+          "checked": {
+            "ok": true,
+            "where": "scripts/install/install.ps1:19",
+            "file_sha256": "96f80f28581f354ca60c9d5cce0b437949cd8c50a5c274c139872701ef372d1d"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_30c3a7840dbc"
+    },
+    {
+      "n": "9",
+      "claim": "The standalone installers (macOS/Linux and Windows) download from releases.openai.com by default.",
+      "verdict": "PARTIAL",
+      "severity": "low",
+      "explanation": "In the repo, install.sh defaults the preference to false and uses GitHub Releases unless the variable is 1/true/yes; install.ps1 defaults to true. The hosted chatgpt.com script may differ from this copy.",
+      "user_impact": "A Mac/Linux user running the repository's install.sh who expects downloads from releases.openai.com gets GitHub Releases unless they set CODEX_INSTALLER_USE_RELEASES_OPENAI_COM=true. Only the Windows script defaults to releases.openai.com. This corrects my earlier claim #8, which wrongly treated the default as releases.openai.com.",
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 28,
+        "quote": "The standalone installers download from `https://releases.openai.com/codex` by default and fall back to GitHub Releases if a metadata or asset download is unavailable."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "scripts/install/install.sh",
+          "line_start": 8,
+          "line_end": 9,
+          "quote": "DEFAULT_PREFER_RELEASES_OPENAI_COM=\"false\"\nPREFER_RELEASES_OPENAI_COM=\"${CODEX_INSTALLER_USE_RELEASES_OPENAI_COM:-$DEFAULT_PREFER_RELEASES_OPENAI_COM}\"",
+          "checked": {
+            "ok": true,
+            "where": "scripts/install/install.sh:8-9",
+            "file_sha256": "0f896aeed686ede604c4d5ffe197524e30a886545c8b78bc6340a699d8fad908"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "scripts/install/install.ps1",
+          "line_start": 15,
+          "quote": "$DefaultPreferReleasesOpenAICom = $true",
+          "checked": {
+            "ok": true,
+            "where": "scripts/install/install.ps1:15",
+            "file_sha256": "96f80f28581f354ca60c9d5cce0b437949cd8c50a5c274c139872701ef372d1d"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "README says installers default to releases.openai.com, but install.sh defaults the preference to false (GitHub Releases) while only install.ps1 defaults to true. Real mismatch for Mac/Linux; low severity is appropriate.",
+        "severity": "low",
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "scripts/install/install.sh",
+            "line_start": 8,
+            "line_end": 9,
+            "quote": "DEFAULT_PREFER_RELEASES_OPENAI_COM=\"false\"",
+            "checked": {
+              "ok": true,
+              "where": "scripts/install/install.sh:8-9",
+              "file_sha256": "0f896aeed686ede604c4d5ffe197524e30a886545c8b78bc6340a699d8fad908"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:45:39.189Z"
+      },
+      "receipt": "rcpt_a7c0ccb924ee"
+    },
+    {
+      "n": "10",
+      "claim": "The network proxy's SOCKS5 listener is enabled by default on 127.0.0.1:8081 and the HTTP proxy defaults to 127.0.0.1:3128.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Defaults match. The proxy as a whole is off unless network.enabled is true (default false).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/network-proxy/README.md",
+        "line_start": 5,
+        "line_end": 6,
+        "quote": "- an HTTP proxy (default `127.0.0.1:3128`)\n- a SOCKS5 proxy (default `127.0.0.1:8081`, enabled by default)"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/network-proxy/src/config.rs",
+          "line_start": 185,
+          "line_end": 188,
+          "quote": "proxy_url: default_proxy_url(),\n            enable_socks5: true,\n            socks_url: default_socks_url(),\n            enable_socks5_udp: true,",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/network-proxy/src/config.rs:185-188",
+            "file_sha256": "da340a929f67d51a71959ab70208ca152e9f2dfcc4cfeeca28c11b4b63db5f78"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/network-proxy/src/config.rs",
+          "line_start": 411,
+          "line_end": 416,
+          "quote": "fn default_proxy_url() -> String {\n    \"http://127.0.0.1:3128\".to_string()\n}\n\nfn default_socks_url() -> String {\n    \"http://127.0.0.1:8081\".to_string()",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/network-proxy/src/config.rs:411-416",
+            "file_sha256": "da340a929f67d51a71959ab70208ca152e9f2dfcc4cfeeca28c11b4b63db5f78"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9b0ae0360fba"
+    },
+    {
+      "n": "11",
+      "claim": "The app-server daemon's `shutdownGraceSeconds` defaults to 60 and accepts an integer from 0 through 300.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The default is 60 and anything above 300 is rejected. The stop path falls back to 60 when a stored value is invalid.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/app-server-daemon/README.md",
+        "line_start": 72,
+        "line_end": 74,
+        "quote": "`shutdownGraceSeconds` defaults to 60 and accepts\nan integer from 0 through 300."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/app-server-daemon/src/settings.rs",
+          "line_start": 15,
+          "line_end": 16,
+          "quote": "pub(crate) const DEFAULT_SHUTDOWN_GRACE_SECONDS: u32 = 60;\npub(crate) const MAX_SHUTDOWN_GRACE_SECONDS: u32 = 5 * 60;",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/app-server-daemon/src/settings.rs:15-16",
+            "file_sha256": "18f31688ebd807957a454f7a84997632f54306256ec39ed727911503cb573d5c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/app-server-daemon/src/settings.rs",
+          "line_start": 100,
+          "line_end": 103,
+          "quote": "ensure!(\n        seconds <= MAX_SHUTDOWN_GRACE_SECONDS,\n        \"shutdown grace must be between 0 and {MAX_SHUTDOWN_GRACE_SECONDS} seconds\"",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/app-server-daemon/src/settings.rs:100-103",
+            "file_sha256": "18f31688ebd807957a454f7a84997632f54306256ec39ed727911503cb573d5c"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_45c70a1549cb"
+    },
+    {
+      "n": "12",
+      "claim": "`otel.log_agent_responses` defaults to false, independent of `otel.log_user_prompt`; no otel exporter is configured by default.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both flags default false and exporters default to None, so no agent responses or prompts are exported unless the user configures them.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/otel/README.md",
+        "line_start": 129,
+        "quote": "`final_answer`. The default is false, independent of `otel.log_user_prompt`;"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/config/src/types.rs",
+          "line_start": 675,
+          "line_end": 680,
+          "quote": "log_user_prompt: false,\n            log_agent_responses: false,",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/config/src/types.rs:675-680",
+            "file_sha256": "56fcd0268c1147f3f03f5ac45726ae9b4a327878caf15eb0381b6229918e38ac"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/config/src/types.rs",
+          "line_start": 679,
+          "line_end": 680,
+          "quote": "exporter: OtelExporterKind::None,\n            trace_exporter: OtelExporterKind::None,",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/config/src/types.rs:679-680",
+            "file_sha256": "56fcd0268c1147f3f03f5ac45726ae9b4a327878caf15eb0381b6229918e38ac"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_25dbc521afa2"
+    },
+    {
+      "n": "13",
+      "claim": "Python SDK thread starts default to `ApprovalMode.auto_review`; turn starts accept an optional `approval_mode` override.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Thread start/resume-style methods default to auto_review; turn methods take Optional approval_mode defaulting to None (no override).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "sdk/python/docs/api-reference.md",
+        "line_start": 6,
+        "quote": "Thread starts default to `ApprovalMode.auto_review`; turn starts accept an optional `approval_mode` override."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "sdk/python/src/openai_codex/api.py",
+          "line_start": 138,
+          "quote": "approval_mode: ApprovalMode = ApprovalMode.auto_review,",
+          "checked": {
+            "ok": true,
+            "where": "sdk/python/src/openai_codex/api.py:138",
+            "file_sha256": "bd9cac51820997fa4d3fa4ac5c24894f45b92da8ba481d49c44cb96dcc9af430"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "sdk/python/src/openai_codex/api.py",
+          "line_start": 210,
+          "quote": "approval_mode: ApprovalMode | None = None,",
+          "checked": {
+            "ok": true,
+            "where": "sdk/python/src/openai_codex/api.py:210",
+            "file_sha256": "bd9cac51820997fa4d3fa4ac5c24894f45b92da8ba481d49c44cb96dcc9af430"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_136c459d8248"
+    },
+    {
+      "n": "14",
+      "claim": "By default the TypeScript SDK's Codex CLI inherits the Node.js process environment; passing `env` fully replaces it, and the SDK still injects required variables such as CODEX_API_KEY.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "With env given, only it is used; otherwise process.env is copied. The SDK adds the originator variable, CODEX_API_KEY when an apiKey is set, and PATH directories for the bundled binary.",
+      "user_impact": null,
+      "note": "The SDK also always sets an internal originator variable and may prepend PATH entries, beyond just CODEX_API_KEY.",
+      "source": {
+        "file": "sdk/typescript/README.md",
+        "line_start": 121,
+        "line_end": 122,
+        "quote": "By default, the Codex CLI inherits the Node.js process environment. Provide the optional `env` parameter when instantiating the\n`Codex` client to fully control which variables the CLI receives"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "sdk/typescript/src/exec.ts",
+          "line_start": 184,
+          "line_end": 192,
+          "quote": "if (this.envOverride) {\n      Object.assign(env, this.envOverride);\n    } else {\n      for (const [key, value] of Object.entries(process.env)) {\n        if (value !== undefined) {\n          env[key] = value;\n        }\n      }\n    }",
+          "checked": {
+            "ok": true,
+            "where": "sdk/typescript/src/exec.ts:184-192",
+            "file_sha256": "0df2fe1ccd90e05b2f2fb0cb3e1bd3293e23f36e3bbb369258edc6a63ae8655c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "sdk/typescript/src/exec.ts",
+          "line_start": 196,
+          "line_end": 198,
+          "quote": "if (args.apiKey) {\n      env.CODEX_API_KEY = args.apiKey;\n    }",
+          "checked": {
+            "ok": true,
+            "where": "sdk/typescript/src/exec.ts:196-198",
+            "file_sha256": "0df2fe1ccd90e05b2f2fb0cb3e1bd3293e23f36e3bbb369258edc6a63ae8655c"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_73c36d0e6db1"
+    },
+    {
+      "n": "15",
+      "claim": "Raw `configOverrides` are applied after structured `config` overrides, and SDK-managed settings like `baseUrl` and thread options are applied after both.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The argument order is structured config, then raw overrides, then baseUrl and thread options such as web_search and approval_policy, so later --config flags win on duplicates.",
+      "user_impact": null,
+      "note": "Precedence among repeated --config flags is determined by the CLI, which I did not trace; the SDK's emission order matches the README.",
+      "source": {
+        "file": "sdk/typescript/README.md",
+        "line_start": 159,
+        "line_end": 160,
+        "quote": "Raw overrides are applied after structured `config` overrides and take precedence over them. SDK-managed settings, such as\n`baseUrl`, and thread-specific options are applied afterward and take precedence."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "sdk/typescript/src/exec.ts",
+          "line_start": 97,
+          "line_end": 114,
+          "quote": "if (this.configOverrides) {\n      for (const override of serializeConfigOverrides(this.configOverrides)) {\n        commandArgs.push(\"--config\", override);\n      }\n    }\n\n    if (this.rawConfigOverrides) {\n      for (const override of this.rawConfigOverrides) {\n        commandArgs.push(\"--config\", override);\n      }\n    }\n\n    if (args.baseUrl) {",
+          "checked": {
+            "ok": true,
+            "where": "sdk/typescript/src/exec.ts:97-114",
+            "file_sha256": "0df2fe1ccd90e05b2f2fb0cb3e1bd3293e23f36e3bbb369258edc6a63ae8655c"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_92d060b38f09"
+    },
+    {
+      "n": "16",
+      "claim": "The TypeScript SDK requires Node.js 18+.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "package.json engines declares node >=18, matching the README.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "sdk/typescript/README.md",
+        "line_start": 13,
+        "quote": "Requires Node.js 18+."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "sdk/typescript/package.json",
+          "line_start": 20,
+          "quote": "\"node\": \">=18\"",
+          "checked": {
+            "ok": true,
+            "where": "sdk/typescript/package.json:20",
+            "file_sha256": "bc908b2ca2823217d19e56fc472b895b18a451a57411046b131992b34977b02c"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_e2ffbe051bb0"
+    },
+    {
+      "n": "17",
+      "claim": "The cloud client requires HTTPS except for direct loopback HTTP with an unrestricted, unmanaged factory; the loopback exception bypasses proxies; redirects are rejected; messages are bounded to 64 MiB; setup has a 150-second deadline.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Non-HTTPS endpoints are rejected unless they are http on loopback, and then only for an unmanaged, unrestricted network policy; that path builds a direct client with no proxy. Redirects are disabled and the 150s and 64 MiB limits match.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/cloud-client/README.md",
+        "line_start": 9,
+        "line_end": 10,
+        "quote": "HTTPS is required except for direct loopback HTTP with an unrestricted, unmanaged\nfactory. This exception bypasses proxies to keep plaintext credentials local."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/cloud-client/src/lib.rs",
+          "line_start": 56,
+          "quote": "if (endpoint.scheme() != \"https\" && !(endpoint.scheme() == \"http\" && loopback))",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/cloud-client/src/lib.rs:56",
+            "file_sha256": "3a8e910a517b9b11e263cf706981a6bdb160a4c3b612069044c5756f437fbee9"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/cloud-client/src/lib.rs",
+          "line_start": 66,
+          "line_end": 73,
+          "quote": "if local_http\n            && (factory.network_policy().is_managed()\n                || factory\n                    .network_policy()\n                    .acquire_for_unsupported_sdk()\n                    .is_err())\n        {\n            return Err(Error::InvalidEndpoint);",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/cloud-client/src/lib.rs:66-73",
+            "file_sha256": "3a8e910a517b9b11e263cf706981a6bdb160a4c3b612069044c5756f437fbee9"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/cloud-client/src/lib.rs",
+          "line_start": 80,
+          "line_end": 82,
+          "quote": "let http = if local_http {\n            // Plaintext credentials must never leave loopback through an outbound proxy.\n            builder.build_direct().map_err(|_| Error::ClientBuild)?",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/cloud-client/src/lib.rs:80-82",
+            "file_sha256": "3a8e910a517b9b11e263cf706981a6bdb160a4c3b612069044c5756f437fbee9"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/cloud-client/src/lib.rs",
+          "line_start": 32,
+          "line_end": 33,
+          "quote": "const REQUEST_TIMEOUT: Duration = Duration::from_secs(150);\nconst MAX_MESSAGE_BYTES: usize = 64 * 1024 * 1024;",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/cloud-client/src/lib.rs:32-33",
+            "file_sha256": "3a8e910a517b9b11e263cf706981a6bdb160a4c3b612069044c5756f437fbee9"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_7b354ad4fe0f"
+    },
+    {
+      "n": "18",
+      "claim": "In OIDC mode the proxy requires an HTTPS GitHub request URL, refuses redirects for credential requests, and uses sensitive HTTP headers and zeroized buffers for temporary credentials.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The URL scheme must be https, the federated client uses no-redirect policy, and the credential buffers use Zeroizing plus sensitive headers, as documented. The README is honest that the destination host is not verified.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 107,
+        "line_end": 109,
+        "quote": "URL. It requires HTTPS and refuses redirects, but it does not verify that GitHub\nowns the destination."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/github_oidc.rs",
+          "line_start": 36,
+          "quote": "if request_url.scheme() != \"https\"",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/github_oidc.rs:36",
+            "file_sha256": "fd3067662367f1ee984ec02a319cfcec13ce34c332f4bda8f95747eac05079f6"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/auth.rs",
+          "line_start": 161,
+          "line_end": 162,
+          "quote": "// A federated credential must never be sent to a redirect target.\n            Self::Federated { .. } => reqwest::redirect::Policy::none(),",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/auth.rs:161-162",
+            "file_sha256": "136a85830b566ea875b7c8023b8239b960b546c1a4b5e937e5afbc850113bb4e"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/github_oidc.rs",
+          "line_start": 83,
+          "quote": "value: Zeroizing<String>,",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/github_oidc.rs:83",
+            "file_sha256": "fd3067662367f1ee984ec02a319cfcec13ce34c332f4bda8f95747eac05079f6"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/github_oidc.rs",
+          "line_start": 103,
+          "quote": "header.set_sensitive(true);",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/github_oidc.rs:103",
+            "file_sha256": "fd3067662367f1ee984ec02a319cfcec13ce34c332f4bda8f95747eac05079f6"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_e5a5f65c6583"
+    },
+    {
+      "n": "19",
+      "claim": "WSL1 is not supported for bubblewrap sandboxing; Codex rejects sandboxed shell commands that would enter the bubblewrap path.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "On WSL1 the sandbox transform returns an error when the policy needs bubblewrap, before any bwrap invocation.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/linux-sandbox/README.md",
+        "line_start": 45,
+        "line_end": 46,
+        "quote": "- WSL1 is not supported for bubblewrap sandboxing; Codex rejects sandboxed\n  shell commands that would require the bubblewrap path before invoking `bwrap`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/sandboxing/src/manager.rs",
+          "line_start": 808,
+          "line_end": 812,
+          "quote": "let requires_bubblewrap = allow_network_for_proxy\n        || (!use_legacy_landlock && !file_system_sandbox_policy.has_full_disk_write_access());\n    if is_wsl1 && requires_bubblewrap {\n        return Err(SandboxTransformError::Wsl1UnsupportedForBubblewrap);",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/sandboxing/src/manager.rs:808-812",
+            "file_sha256": "8abe2a5f66f8101a669dd0c1571fb7c5edbab9eff2e80c8d13d9064bc5bc175d"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_13867d8e758e"
+    },
+    {
+      "n": "20",
+      "claim": "Exec-server direct WebSocket listeners support app-server's opt-in auth flags (capability-token with --ws-token-sha256, token files, signed bearer tokens), checked at connection time.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The WebSocket upgrade handler authorizes each connection against the policy built from the shared websocket-auth settings; without flags the default settings apply no authentication, which the README calls opt-in.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/exec-server/README.md",
+        "line_start": 50,
+        "quote": "Direct WebSocket listeners support app-server's opt-in auth flags, including `--ws-auth capability-token --ws-token-sha256 HEX`, token files, and signed bearer tokens"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/websocket-auth/src/lib.rs",
+          "line_start": 41,
+          "line_end": 42,
+          "quote": "#[arg(long = \"ws-token-sha256\", value_name = \"HEX\")]\n    pub ws_token_sha256: Option<String>,",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/websocket-auth/src/lib.rs:41-42",
+            "file_sha256": "337fd79f2c8411bcb6b65d12f20bd842031654ab2e66d937a493a397a0c0dd05"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/exec-server/src/server/transport.rs",
+          "line_start": 246,
+          "line_end": 248,
+          "quote": "if let Err(err) = authorize_upgrade(&headers, &state.auth_policy) {\n        return (err.status_code(), err.message()).into_response();",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/exec-server/src/server/transport.rs:246-248",
+            "file_sha256": "44d0c5309e66fa5740543b08467bcea7e23dcb900ac3a116b2146173fe730276"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_40469ec4cf3a"
+    },
+    {
+      "n": "21",
+      "claim": "The proxy can authenticate with short-lived OpenAI credentials obtained by exchanging a GitHub Actions OIDC identity token.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The federated path performs an RFC 8693 token exchange of the GitHub-minted JWT at auth.openai.com and uses the returned access token as the bearer credential.",
+      "user_impact": null,
+      "note": "Whether the exchange succeeds depends on an OpenAI-side workload identity configuration outside the repo.",
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 33,
+        "quote": "short-lived OpenAI credentials obtained through GitHub Actions OIDC."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/auth.rs",
+          "line_start": 38,
+          "quote": "const OPENAI_TOKEN_URL: &str = \"https://auth.openai.com/oauth/token\";",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/auth.rs:38",
+            "file_sha256": "136a85830b566ea875b7c8023b8239b960b546c1a4b5e937e5afbc850113bb4e"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/auth.rs",
+          "line_start": 272,
+          "line_end": 274,
+          "quote": "grant_type: \"urn:ietf:params:oauth:grant-type:token-exchange\",\n                subject_token_type: \"urn:ietf:params:oauth:token-type:jwt\",\n                subject_token: subject.as_str(),",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/auth.rs:272-274",
+            "file_sha256": "136a85830b566ea875b7c8023b8239b960b546c1a4b5e937e5afbc850113bb4e"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_b7856b583212"
+    },
+    {
+      "n": "22",
+      "claim": "With --http-shutdown, an unprivileged user can make a GET to /shutdown to stop the proxy, as designed.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The shutdown endpoint has no authentication and any local process that can reach 127.0.0.1 can stop the proxy; the README states this openly. The same holds for using the proxy: any local user can send Responses requests that are authenticated with the privileged user's key.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 39,
+        "quote": "Though if `--http-shutdown` is specified, an unprivileged user _can_ make a `GET` request to `/shutdown` to shutdown the server"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/lib.rs",
+          "line_start": 182,
+          "line_end": 185,
+          "quote": "if http_shutdown && request.method() == &Method::Get && request.url() == \"/shutdown\" {\n                let _ = request.respond(Response::new_empty(StatusCode(200)));\n                std::process::exit(0);",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/lib.rs:182-185",
+            "file_sha256": "e080ce9ef9b8e858ceee145842ad8b84ce3b38056c892e3f2115d5caeae71b71"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/lib.rs",
+          "line_start": 203,
+          "quote": "let addr = SocketAddr::from(([127, 0, 0, 1], port.unwrap_or(0)));",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/lib.rs:203",
+            "file_sha256": "e080ce9ef9b8e858ceee145842ad8b84ce3b38056c892e3f2115d5caeae71b71"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_53503668e601"
+    },
+    {
+      "n": "23",
+      "claim": "In OIDC mode the proxy uses sensitive HTTP headers and zeroizes temporary credential buffers.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The temporary Bearer buffer is Zeroizing and the header is marked sensitive, as stated.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 141,
+        "quote": "OIDC mode uses sensitive HTTP headers and zeroizes temporary credential"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/auth.rs",
+          "line_start": 413,
+          "line_end": 418,
+          "quote": "let mut bytes = Zeroizing::new(Vec::with_capacity(15 + token.len()));\n    bytes.extend_from_slice(b\"Bearer \");\n    bytes.extend_from_slice(token);\n    let mut header = HeaderValue::from_bytes(&bytes)\n        .map_err(|_| anyhow!(\"invalid workload identity bearer credential\"))?;\n    header.set_sensitive(true);",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/auth.rs:413-418",
+            "file_sha256": "136a85830b566ea875b7c8023b8239b960b546c1a4b5e937e5afbc850113bb4e"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_089ba563a6b3"
+    },
+    {
+      "n": "24",
+      "claim": "Authentication is `Authorization: Bearer <key>` in API-key mode and `Authorization: Bearer <OpenAI access token>` in OIDC mode; the incoming Authorization header is never forwarded.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Client-supplied Authorization and Host headers are dropped and replaced by the proxy's Bearer header in both modes.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 168,
+        "quote": "- Authentication is `Authorization: Bearer <key>` in API-key mode and `Authorization: Bearer <OpenAI access token>` in OIDC mode."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/lib.rs",
+          "line_start": 266,
+          "line_end": 268,
+          "quote": "if lower.as_str() == \"authorization\" || lower.as_str() == \"host\" {\n            continue;\n        }",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/lib.rs:266-268",
+            "file_sha256": "e080ce9ef9b8e858ceee145842ad8b84ce3b38056c892e3f2115d5caeae71b71"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/auth.rs",
+          "line_start": 414,
+          "quote": "bytes.extend_from_slice(b\"Bearer \");",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/auth.rs:414",
+            "file_sha256": "136a85830b566ea875b7c8023b8239b960b546c1a4b5e937e5afbc850113bb4e"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_0b4c43c49c28"
+    },
+    {
+      "n": "25",
+      "claim": "The standalone network proxy enables HTTPS MITM automatically for limited mode or when MITM hooks are configured, and `mitm` otherwise defaults to false.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The standalone loader ORs mitm with limited mode or non-empty hooks; the Codex permissions path does the same in permissions_toml.rs. Lower-level validation requires mitm=true whenever hooks exist, which this auto-enable satisfies.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/network-proxy/README.md",
+        "line_start": 111,
+        "line_end": 113,
+        "quote": "`mitm` defaults to `false`. `mitm_ca` defaults to `None` and is omitted from serialized JSON when\nunset. HTTPS MITM is enabled automatically for limited mode or configured `mitm_hooks`. Set `mitm` to\n`true` to enable it explicitly."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/network-proxy/src/main.rs",
+          "line_start": 50,
+          "line_end": 51,
+          "quote": "config.network.mitm |=\n        config.network.mode == NetworkMode::Limited || !config.network.mitm_hooks.is_empty();",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/network-proxy/src/main.rs:50-51",
+            "file_sha256": "810f210d61450f6eea42c986a42390ec4a086bb47d236fd85ecc220d313e0137"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/network-proxy/src/config.rs",
+          "line_start": 197,
+          "quote": "mitm: false,",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/network-proxy/src/config.rs:197",
+            "file_sha256": "da340a929f67d51a71959ab70208ca152e9f2dfcc4cfeeca28c11b4b63db5f78"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_d81264e8e740"
+    },
+    {
+      "n": "26",
+      "claim": "In OIDC mode, stdin supplies GitHub's ACTIONS_ID_TOKEN_REQUEST_TOKEN, not the minted JWT or an OpenAI API key.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The OIDC source reads the request credential from stdin and sends it as the Authorization header of the GitHub request-URL call to mint subject tokens; the OpenAI access token comes from the exchange.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "codex-rs/responses-api-proxy/README.md",
+        "line_start": 74,
+        "line_end": 75,
+        "quote": "In this mode, stdin supplies GitHub's `ACTIONS_ID_TOKEN_REQUEST_TOKEN`, **not**\nthe minted GitHub OIDC JWT or an OpenAI API key."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/github_oidc.rs",
+          "line_start": 97,
+          "quote": "let value = read_auth_header_with::<REQUEST_AUTH_BUFFER_SIZE>(",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/github_oidc.rs:97",
+            "file_sha256": "fd3067662367f1ee984ec02a319cfcec13ce34c332f4bda8f95747eac05079f6"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "codex-rs/responses-api-proxy/src/github_oidc.rs",
+          "line_start": 32,
+          "quote": "pub(crate) fn from_stdin(request_url: &str, audience: &str) -> Result<Self> {",
+          "checked": {
+            "ok": true,
+            "where": "codex-rs/responses-api-proxy/src/github_oidc.rs:32",
+            "file_sha256": "fd3067662367f1ee984ec02a319cfcec13ce34c332f4bda8f95747eac05079f6"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_7edb037b93b0"
+    }
+  ],
+  "totals": {
+    "claims": 26,
+    "VERIFIED": 25,
+    "PARTIAL": 1,
+    "FALSE": 0,
+    "UNVERIFIABLE": 0,
+    "behaviors": 2,
+    "downgraded": 0,
+    "retracted": 0,
+    "rejected_citations": 0
+  }
+}

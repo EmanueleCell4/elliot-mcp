@@ -1,0 +1,47 @@
+[
+  {
+    "claim": "Realtime WebSocket transport_config max_size: the SDK default is None, leaving incoming message size unlimited.",
+    "doc_file": "docs/realtime/transport.md",
+    "doc_line": 64,
+    "code_file": "src/agents/realtime/openai_realtime.py",
+    "code_line": 689,
+    "verdict": "FALSE",
+    "explanation": "The realtime connection always starts with connect_kwargs max_size set to 8 * 1024 * 1024 and only overrides it if transport_config supplies max_size. The default is therefore an 8 MiB limit, not unlimited. (The unlimited default is true only for the Responses websocket transport, which sets max_size None.)"
+  },
+  {
+    "claim": "By default, UnixLocalSandboxClient starts every command environment from the complete host process environment.",
+    "doc_file": "docs/sandbox/clients.md",
+    "doc_line": 44,
+    "code_file": "src/agents/sandbox/sandboxes/unix_local.py",
+    "code_line": 1539,
+    "verdict": "FALSE",
+    "explanation": "UnixLocalSandboxClient.__init__ defaults inherit_host_environment to False. In that case _host_environment_allowlist is set to the conservative _HOST_ENVIRONMENT_ALLOWLIST (PATH, LANG, LC_*, TZ, and so on), so host variables outside the allowlist are not passed. Full inheritance is opt-in, the opposite of what the docs say."
+  },
+  {
+    "claim": "Local ShellTool and ApplyPatchTool default to needs_approval=False.",
+    "doc_file": "docs/tools.md",
+    "doc_line": 254,
+    "code_file": "src/agents/tool.py",
+    "code_line": 1498,
+    "verdict": "PARTIAL",
+    "explanation": "ApplyPatchTool.needs_approval defaults to False (tool.py:1553), but ShellTool.needs_approval defaults to True (tool.py:1498). Local shell calls therefore require approval by default."
+  },
+  {
+    "claim": "For local ShellTool and ApplyPatchTool, approval is opt-in: needs_approval defaults to False.",
+    "doc_file": "docs/human_in_the_loop.md",
+    "doc_line": 45,
+    "code_file": "src/agents/tool.py",
+    "code_line": 1498,
+    "verdict": "PARTIAL",
+    "explanation": "Same discrepancy: ShellTool declares needs_approval: bool | ShellApprovalFunction = True, so approval is opt-out for local shell. Only ApplyPatchTool defaults to False."
+  },
+  {
+    "claim": "Retries are opt in. The SDK does not retry general model requests unless you set ModelSettings(retry=...) and your retry policy chooses to retry.",
+    "doc_file": "docs/models/index.md",
+    "doc_line": 568,
+    "code_file": "src/agents/run_internal/model_retry.py",
+    "code_line": 545,
+    "verdict": "PARTIAL",
+    "explanation": "With no retry settings, _should_disable_provider_managed_retries returns False on the initial attempt (and on later attempts when there is no policy), so the underlying OpenAI client's built-in retries stay active. The code comments say provider retries are the only transient-failure recovery in that case. Model requests are therefore retried by default; only the runner-managed retry layer is opt-in."
+  }
+]

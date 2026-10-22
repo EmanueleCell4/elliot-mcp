@@ -1,0 +1,29 @@
+[
+  {
+    "claim": "By default requests time out after 10 minutes (timeout default is 10 minutes).",
+    "doc_file": "README.md",
+    "doc_line": 790,
+    "code_file": "src/openai/_constants.py",
+    "code_line": 7,
+    "verdict": "FALSE",
+    "explanation": "DEFAULT_TIMEOUT is httpx2.Timeout(timeout=1201, connect=5.0): a 1201-second (about 20 minute) overall timeout, not 600 seconds / 10 minutes, and with a 5s connect timeout. The same value is applied to the SDK default sync, async and aiohttp HTTP clients. The README repeats the 10-minute claim in the code sample comment at line 799."
+  },
+  {
+    "claim": "The token refresh buffer defaults to 1200 seconds (20 minutes) before expiration.",
+    "doc_file": "README.md",
+    "doc_line": 152,
+    "code_file": "src/openai/auth/_workload.py",
+    "code_line": 326,
+    "verdict": "PARTIAL",
+    "explanation": "The configured or default buffer (1200s) is clamped with min(configured_buffer, expires_in / 2). For tokens with a lifetime under 40 minutes the effective refresh buffer is less than 1200 seconds, and a user-supplied refresh_buffer_seconds is also silently clamped to half the token lifetime."
+  },
+  {
+    "claim": "Realtime API: no errors are raised directly by the SDK when an `error` event comes in; the connection stays usable and you must handle it yourself.",
+    "doc_file": "README.md",
+    "doc_line": 435,
+    "code_file": "src/openai/resources/realtime/realtime.py",
+    "code_line": 485,
+    "verdict": "PARTIAL",
+    "explanation": "When using the connection's dispatch_events() loop with no handler registered for \"error\" or \"event\", the SDK raises OpenAIError(\"WebSocket error: ...\") for an incoming RealtimeErrorEvent (sync path likewise at line 928 for the other connection class). So the 'no errors raised directly' promise only holds for plain iteration."
+  }
+]

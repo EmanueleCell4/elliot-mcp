@@ -1,0 +1,155 @@
+[
+ {
+  "repo": "openai_codex",
+  "system": "baseline",
+  "claim": "When a request is blocked the proxy responds 403 with x-proxy-error set to one of blocked-by-allowlist, blocked-by-denylist, blocked-by-method-policy, or blocked-by-policy.",
+  "doc": "codex-rs/network-proxy/README.md:141",
+  "code": "codex-rs/network-proxy/src/responses.rs:54",
+  "explanation": "blocked_header_value also emits blocked-by-mitm-hook and blocked-by-mitm-required (responses.rs:57-58), which are not in the documented list of possible values.",
+  "id": "j1"
+ },
+ {
+  "repo": "openai_codex",
+  "system": "baseline",
+  "claim": "Launcher environment payloads are limited to 1,000,000 UTF-8 bytes and chunks to 4096 bytes.",
+  "doc": "codex-rs/mxc-sandbox/README.md:56",
+  "code": "codex-rs/windows-sandbox-rs/src/environment_transport.rs:14",
+  "explanation": "mxc-sandbox transport.rs delegates to codex_windows_sandbox::environment_transport, which uses CHUNK_BYTES = 16 KiB and MAX_BYTES = 16 MiB. No 1,000,000-byte or 4096-byte limit exists anywhere in the mxc-sandbox crate.",
+  "id": "j2"
+ },
+ {
+  "repo": "openai_codex",
+  "system": "baseline",
+  "claim": "If system bwrap is present but too old to support --argv0, the helper keeps using system bubblewrap with a no-argv0 compatibility path.",
+  "doc": "codex-rs/linux-sandbox/README.md:18",
+  "code": "codex-rs/linux-sandbox/src/launcher.rs:212",
+  "explanation": "A system bwrap is only kept if its --help output advertises --as-pid-1 (line 212) and --perms (system_bwrap_launcher_for_path_with_probe requires supports_perms: true, line 173). Older builds that lack either option are silently rejected and the bundled bwrap is used instead, so the no-argv0 path applies only to bwrap that has those flags but lacks --argv0.",
+  "id": "j3"
+ },
+ {
+  "repo": "anthropics_anthropic-sdk-python",
+  "system": "baseline",
+  "claim": "bytes header values no longer work: passing bytes as a header value now raises an error",
+  "doc": "MIGRATION.md:370",
+  "code": "src/anthropic/_base_client.py:2781",
+  "explanation": "build_headers only checks for `Omit` and then does `headers[name] = value` on an httpx2.Headers, which accepts bytes. Nothing in the SDK type-checks or rejects non-str header values (a grep for such a check found none). The only bytes-related TypeError is for `body=` (line 676). bytes header values are not rejected, except possibly by an AttributeError on the x-stainless-helper path. I did not run this, and I did not inspect httpx2's own Headers implementation.",
+  "id": "j4"
+ },
+ {
+  "repo": "openai_openai-python",
+  "system": "baseline",
+  "claim": "Realtime API: no errors are raised directly by the SDK when an `error` event comes in; the connection stays usable and you must handle it yourself.",
+  "doc": "README.md:435",
+  "code": "src/openai/resources/realtime/realtime.py:485",
+  "explanation": "When using the connection's dispatch_events() loop with no handler registered for \"error\" or \"event\", the SDK raises OpenAIError(\"WebSocket error: ...\") for an incoming RealtimeErrorEvent (sync path likewise at line 928 for the other connection class). So the 'no errors raised directly' promise only holds for plain iteration.",
+  "id": "j5"
+ },
+ {
+  "repo": "openai_openai-python",
+  "system": "baseline",
+  "claim": "The token refresh buffer defaults to 1200 seconds (20 minutes) before expiration.",
+  "doc": "README.md:152",
+  "code": "src/openai/auth/_workload.py:326",
+  "explanation": "The configured or default buffer (1200s) is clamped with min(configured_buffer, expires_in / 2). For tokens with a lifetime under 40 minutes the effective refresh buffer is less than 1200 seconds, and a user-supplied refresh_buffer_seconds is also silently clamped to half the token lifetime.",
+  "id": "j6"
+ },
+ {
+  "repo": "anthropics_anthropic-sdk-python",
+  "system": "baseline",
+  "claim": "A header entry in default_headers, extra_headers, with_options or ANTHROPIC_CUSTOM_HEADERS replaces a header of the same name whatever its casing, including the headers the SDK sets itself",
+  "doc": "MIGRATION.md:351",
+  "code": "src/anthropic/_base_client.py:2779",
+  "explanation": "build_headers special-cases `x-stainless-helper` (_APPEND_HEADERS). A later layer does not replace it. Its value is appended to the earlier value as a comma-separated, de-duplicated list. Every other header is replaced as documented.",
+  "id": "j7"
+ },
+ {
+  "repo": "openai_openai-node",
+  "system": "elliot",
+  "claim": "Web browsers: disabled by default; enable by explicitly setting dangerouslyAllowBrowser to true.",
+  "doc": "README.md:873",
+  "code": "src/azure.ts:105",
+  "explanation": "For AzureOpenAI, supplying an azureADTokenProvider silently turns browser use on unless the caller passes an explicit false. Only the internal security-model doc mentions this; README and azure docs do not.",
+  "id": "j8"
+ },
+ {
+  "repo": "vercel_ai",
+  "system": "elliot",
+  "claim": "authToken defaults to the ANTHROPIC_AUTH_TOKEN environment variable.",
+  "doc": "content/providers/01-ai-sdk-providers/05-anthropic.mdx:103",
+  "code": "packages/anthropic/src/anthropic-provider.ts:161",
+  "explanation": "The provider reads authToken only from options. Without it, it falls back to ANTHROPIC_API_KEY. The repo's own example passes process.env.ANTHROPIC_AUTH_TOKEN by hand, and the provider source never references the variable.",
+  "id": "j9"
+ },
+ {
+  "repo": "vercel_ai",
+  "system": "baseline",
+  "claim": "Non-http(s) schemes are rejected when fetching a URL taken from a provider response.",
+  "doc": "content/docs/06-advanced/11-secure-url-fetching.mdx:32",
+  "code": "packages/provider-utils/src/validate-download-url.ts:25",
+  "explanation": "validateDownloadUrl returns early for `data:` URLs and only rejects other non-http(s) schemes. The docs say non-http(s) schemes are rejected without mentioning this exception.",
+  "id": "j10"
+ },
+ {
+  "repo": "anthropics_anthropic-sdk-python",
+  "system": "baseline",
+  "claim": "The Google Cloud client never reads ANTHROPIC_API_KEY, ANTHROPIC_AUTH_TOKEN or ANTHROPIC_BASE_URL; it authenticates with Google credentials only",
+  "doc": "src/anthropic/lib/google_cloud/README.md:9",
+  "code": "src/anthropic/lib/google_cloud/_client.py:321",
+  "explanation": "The constructor calls Anthropic.__init__, which does read ANTHROPIC_API_KEY and ANTHROPIC_AUTH_TOKEN when none is passed (the comment at lines 335-338 says so). The client then overwrites api_key and auth_token with None, and passes base_url \"\" so the parent skips ANTHROPIC_BASE_URL. The values are read but never used for auth or the URL, so the promise holds in effect but not literally.",
+  "id": "j11"
+ },
+ {
+  "repo": "openai_codex",
+  "system": "baseline",
+  "claim": "OIDC token renewal failures delay further exchange attempts by one second, doubling after each failure up to 30 seconds.",
+  "doc": "codex-rs/responses-api-proxy/README.md:126",
+  "code": "codex-rs/responses-api-proxy/src/auth.rs:46",
+  "explanation": "MAX_RENEWAL_BACKOFF is Duration::from_secs(61), and the delay is computed as (previous * 2).min(MAX_RENEWAL_BACKOFF) at auth.rs:252. The sequence is 1,2,4,8,16,32,61 seconds, so the cap is 61 seconds, not the documented 30.",
+  "id": "j12"
+ },
+ {
+  "repo": "openai_openai-agents-python",
+  "system": "baseline",
+  "claim": "Retries are opt in. The SDK does not retry general model requests unless you set ModelSettings(retry=...) and your retry policy chooses to retry.",
+  "doc": "docs/models/index.md:568",
+  "code": "src/agents/run_internal/model_retry.py:545",
+  "explanation": "With no retry settings, _should_disable_provider_managed_retries returns False on the initial attempt (and on later attempts when there is no policy), so the underlying OpenAI client's built-in retries stay active. The code comments say provider retries are the only transient-failure recovery in that case. Model requests are therefore retried by default; only the runner-managed retry layer is opt-in.",
+  "id": "j13"
+ },
+ {
+  "repo": "openai_openai-agents-python",
+  "system": "baseline",
+  "claim": "Realtime WebSocket transport_config max_size: the SDK default is None, leaving incoming message size unlimited.",
+  "doc": "docs/realtime/transport.md:64",
+  "code": "src/agents/realtime/openai_realtime.py:689",
+  "explanation": "The realtime connection always starts with connect_kwargs max_size set to 8 * 1024 * 1024 and only overrides it if transport_config supplies max_size. The default is therefore an 8 MiB limit, not unlimited. (The unlimited default is true only for the Responses websocket transport, which sets max_size None.)",
+  "id": "j14"
+ },
+ {
+  "repo": "openai_codex",
+  "system": "baseline",
+  "claim": "Supported operating systems are macOS 12+, Ubuntu 20.04+/Debian 10+, or Windows 11 via WSL2.",
+  "doc": "docs/install.md:7",
+  "code": "scripts/install/install.ps1:950",
+  "explanation": "The repo ships a native Windows installer and release targets (x86_64/aarch64-pc-windows-msvc), plus native Windows sandbox backends (windows-sandbox-rs, mxc-sandbox). Windows is not limited to WSL2 as the table implies.",
+  "id": "j15"
+ },
+ {
+  "repo": "vercel_ai",
+  "system": "elliot",
+  "claim": "OpenAI compaction items are returned as text parts with special providerMetadata and sent back as compaction input items.",
+  "doc": "content/providers/01-ai-sdk-providers/03-openai.mdx:2186",
+  "code": "packages/openai/src/responses/openai-responses-language-model.ts:1485",
+  "explanation": "Round-tripping works, but compaction items come back as `custom` content parts with kind openai.compaction, not as `text` parts.",
+  "id": "j16"
+ },
+ {
+  "repo": "vercel_ai",
+  "system": "baseline",
+  "claim": "Caller headers (Authorization, Cookie, provider API-key headers) are not sent to a host on a different origin than the provider's.",
+  "doc": "content/docs/06-advanced/11-secure-url-fetching.mdx:41",
+  "code": "packages/provider-utils/src/fetch-with-validated-redirects.ts:142",
+  "explanation": "fetchWithValidatedRedirects only sanitizes risky headers on the first request. It still sends Authorization and custom API-key headers to whatever origin the response-supplied URL points to, and drops them only on a later cross-origin redirect. Only the opt-in fetchUntrustedUrl isolates credentials on the first hop. The same page admits this at line 81, which contradicts the unconditional claim at line 41.",
+  "id": "j17"
+ }
+]

@@ -1,0 +1,2909 @@
+{
+  "elliot": "0.6.0",
+  "id": "aud_7e4b5e366ad4",
+  "root": "/home/claude/elliot-runs/bench/repos/openai_openai-python",
+  "project": "openai_openai-python",
+  "commit": "2d7734e3cad8abf86cd90b7f501e49a73f8ef3bc",
+  "date": "2026-10-22T15:47:07+00:00",
+  "dirty": true,
+  "remote": "https://github.com/openai/openai-python.git",
+  "tree_fingerprint": "7a70e36f3cc889223da94c6e9a89b5ecbdadbcfc8d560a54e9fbeda74deaa5fb",
+  "started_at": "2026-10-22T21:40:23.655Z",
+  "sources": [
+    {
+      "file": "README.md",
+      "lines": 1257
+    },
+    {
+      "file": "SECURITY.md",
+      "lines": 45
+    },
+    {
+      "file": "docs/architecture/security-model.md",
+      "lines": 410
+    },
+    {
+      "file": "docs/browser-forms.md",
+      "lines": 22
+    },
+    {
+      "file": "docs/browser-navigation.md",
+      "lines": 27
+    },
+    {
+      "file": "docs/browser-providers.md",
+      "lines": 38
+    },
+    {
+      "file": "docs/browser.md",
+      "lines": 825
+    },
+    {
+      "file": "docs/castiron-generated-code-transition.md",
+      "lines": 462
+    },
+    {
+      "file": "docs/castiron-polling-runtime-preparation.md",
+      "lines": 55
+    },
+    {
+      "file": "docs/realtime-translation.md",
+      "lines": 46
+    },
+    {
+      "file": "scripts/castiron/README.md",
+      "lines": 30
+    },
+    {
+      "file": "src/openai/_vendor/httpx_aiohttp/README.md",
+      "lines": 26
+    },
+    {
+      "file": "src/openai/lib/live/README.md",
+      "lines": 34
+    },
+    {
+      "file": "src/openai/lib/responses_websocket/README.md",
+      "lines": 280
+    },
+    {
+      "file": ".github/codex/prompts/python-version-review.md",
+      "lines": 83
+    },
+    {
+      "file": ".github/pull_request_template.md",
+      "lines": 10
+    },
+    {
+      "file": "api.md",
+      "lines": 2091
+    },
+    {
+      "file": "bedrock.md",
+      "lines": 190
+    },
+    {
+      "file": "elliot-report-v1/2026-10-22-2d7734e/report.md",
+      "lines": 469
+    },
+    {
+      "file": "helpers.md",
+      "lines": 766
+    },
+    {
+      "file": "httpx2.md",
+      "lines": 302
+    },
+    {
+      "file": "PYTHON_VERSION_POLICY.md",
+      "lines": 83
+    },
+    {
+      "file": "scripts/castiron/CUSTOM_CODE.md",
+      "lines": 218
+    },
+    {
+      "file": "src/openai/_vendor/httpx_aiohttp/FORK.md",
+      "lines": 21
+    },
+    {
+      "file": "src/openai/resources/conversations/api.md",
+      "lines": 43
+    },
+    {
+      "file": "src/openai/resources/live/api.md",
+      "lines": 108
+    },
+    {
+      "file": "src/openai/resources/realtime/api.md",
+      "lines": 150
+    },
+    {
+      "file": "src/openai/resources/responses/api.md",
+      "lines": 209
+    },
+    {
+      "file": "src/openai/resources/webhooks/api.md",
+      "lines": 62
+    },
+    {
+      "file": "vertex.md",
+      "lines": 31
+    }
+  ],
+  "focused": false,
+  "candidates": [
+    {
+      "id": "c1",
+      "file": "README.md",
+      "line": 1177,
+      "text": "The default AWS credential chain supports environment credentials, shared credentials and config files, named profiles, SSO and assume-role profiles, and workload credentials such as ECS, EKS, and EC2 metadata. To select",
+      "risk": "high"
+    },
+    {
+      "id": "c2",
+      "file": "docs/architecture/security-model.md",
+      "line": 68,
+      "text": "| `ci.yml` pull-request jobs | PR checkout execution | PR code and config are checked out and run in CI. | Tracked executable files from the PR checkout. | Read-only CI runner. | Workflow permissions are read-only, check",
+      "risk": "high"
+    },
+    {
+      "id": "c3",
+      "file": "docs/browser.md",
+      "line": 23,
+      "text": "On Linux, if bundled Chromium cannot start with its sandbox enabled, select",
+      "risk": "high"
+    },
+    {
+      "id": "c4",
+      "file": "docs/browser.md",
+      "line": 504,
+      "text": "An empty `always: {}` or `never: {}` filter applies to every tool. Read-only",
+      "risk": "high"
+    },
+    {
+      "id": "c5",
+      "file": "bedrock.md",
+      "line": 82,
+      "text": "authentication, model selection, AWS profiles, and opt-in streaming.",
+      "risk": "high"
+    },
+    {
+      "id": "c6",
+      "file": "bedrock.md",
+      "line": 179,
+      "text": "The existing live harness requires explicit opt-in and valid AWS credentials:",
+      "risk": "high"
+    },
+    {
+      "id": "c7",
+      "file": "scripts/castiron/CUSTOM_CODE.md",
+      "line": 79,
+      "text": "on `pull_request` with read-only permissions.",
+      "risk": "high"
+    },
+    {
+      "id": "c8",
+      "file": "docs/architecture/security-model.md",
+      "line": 241,
+      "text": "read-only pull-request statement: on a same-repository push to `main`, it",
+      "risk": "high"
+    },
+    {
+      "id": "c9",
+      "file": "docs/architecture/security-model.md",
+      "line": 254,
+      "text": "- The read-only statement above is specific to `ci.yml`. CodeQL is a distinct",
+      "risk": "high"
+    },
+    {
+      "id": "c10",
+      "file": "docs/architecture/security-model.md",
+      "line": 301,
+      "text": "reportable independently from PyPI's later upload-only OIDC boundary",
+      "risk": "high"
+    },
+    {
+      "id": "c11",
+      "file": "docs/architecture/security-model.md",
+      "line": 378,
+      "text": "PR-controlled tracked code in read-only CI is not Critical without a path to",
+      "risk": "high"
+    },
+    {
+      "id": "c12",
+      "file": "docs/browser-forms.md",
+      "line": 16,
+      "text": "complete select request before changing a field. Check disabled/read-only",
+      "risk": "high"
+    },
+    {
+      "id": "c13",
+      "file": "docs/browser.md",
+      "line": 8,
+      "text": "driver's session. See [the read-only quickstart](../examples/browser/README_read_only.md)",
+      "risk": "high"
+    },
+    {
+      "id": "c14",
+      "file": "docs/browser.md",
+      "line": 31,
+      "text": "keep the browser sandbox enabled.",
+      "risk": "high"
+    },
+    {
+      "id": "c15",
+      "file": "docs/browser.md",
+      "line": 163,
+      "text": "including `state`, navigation, reads, input, and opt-in methods, may declare",
+      "risk": "high"
+    },
+    {
+      "id": "c16",
+      "file": "docs/browser.md",
+      "line": 176,
+      "text": "raise `BrowserError` before state reads or consent. Omitting `members` preserves",
+      "risk": "high"
+    },
+    {
+      "id": "c17",
+      "file": "docs/browser.md",
+      "line": 353,
+      "text": "read-only methods do not call `confirm`. To protect selected reads, also pass",
+      "risk": "high"
+    },
+    {
+      "id": "c18",
+      "file": "docs/browser.md",
+      "line": 375,
+      "text": "For consent tied to a specific page or control, the driver must check the original target at execution.",
+      "risk": "high"
+    },
+    {
+      "id": "c19",
+      "file": "docs/browser.md",
+      "line": 527,
+      "text": "screen or focus while a person decides. If consent must apply to a particular",
+      "risk": "high"
+    },
+    {
+      "id": "c20",
+      "file": "docs/browser.md",
+      "line": 635,
+      "text": "eager calls without a ledger. In a local-only eager",
+      "risk": "high"
+    },
+    {
+      "id": "c21",
+      "file": "README.md",
+      "line": 152,
+      "text": "You can also customize the token refresh buffer (default is 1200 seconds (20 minutes) before expiration):",
+      "risk": "default"
+    },
+    {
+      "id": "c22",
+      "file": "docs/browser.md",
+      "line": 274,
+      "text": "and at most 256 UTF-8 bytes. The grant identifies one approved, task-scoped file;",
+      "risk": "default"
+    },
+    {
+      "id": "c23",
+      "file": "docs/browser.md",
+      "line": 501,
+      "text": "Approval is required by default. The runner enforces `always`, `never`, and unambiguous",
+      "risk": "default"
+    },
+    {
+      "id": "c24",
+      "file": "docs/castiron-generated-code-transition.md",
+      "line": 338,
+      "text": "Preserve exact `upload_file_chunked` overloads: path/in-memory variants, required filename/bytes for in-memory inputs, inferred path metadata and explicit overrides, 64 MiB default parts, sequential part order, completio",
+      "risk": "default"
+    },
+    {
+      "id": "c25",
+      "file": "bedrock.md",
+      "line": 33,
+      "text": "such as `global.openai.gpt-5.6-sol`, require an AWS account and permissions that allow the corresponding profile.",
+      "risk": "default"
+    },
+    {
+      "id": "c26",
+      "file": "README.md",
+      "line": 304,
+      "text": "By default, the async client uses HTTPX2. For improved concurrency performance, you may also use `aiohttp` as the HTTPX2 transport.",
+      "risk": "default"
+    },
+    {
+      "id": "c27",
+      "file": "docs/architecture/security-model.md",
+      "line": 55,
+      "text": "| Default routing | API origin | Explicit `base_url`, then `OPENAI_BASE_URL`, then default. | `https://api.openai.com/v1` by default. | HTTP transport and remote API. | Caller controls non-X.509 overrides; relative resou",
+      "risk": "default"
+    },
+    {
+      "id": "c28",
+      "file": "docs/castiron-generated-code-transition.md",
+      "line": 368,
+      "text": "- Embeddings (48 lines): default to base64 only when `encoding_format` is omitted, preserve explicit formats and post-decoding through `lib/_parsing/_embeddings.py`, plus sync/async type/return behavior. Verify `tests/li",
+      "risk": "default"
+    },
+    {
+      "id": "c29",
+      "file": "docs/browser-navigation.md",
+      "line": 15,
+      "text": "256 UTF-8 bytes, and timeout must be an integer from 1 to 30000. A timeout is",
+      "risk": "default"
+    },
+    {
+      "id": "c30",
+      "file": "src/openai/lib/responses_websocket/README.md",
+      "line": 265,
+      "text": "Connections last up to 60 minutes. Plan rotation at completed-turn boundaries.",
+      "risk": "default"
+    },
+    {
+      "id": "c31",
+      "file": "bedrock.md",
+      "line": 11,
+      "text": "Runtime endpoint selection requires a Python SDK release that includes SDK-290. The SDK supports Python 3.10 and newer.",
+      "risk": "default"
+    },
+    {
+      "id": "c32",
+      "file": "helpers.md",
+      "line": 170,
+      "text": "Unlike `.create(stream=True)`, the `.stream()` method requires usage within a context manager to prevent accidental leakage of the response:",
+      "risk": "default"
+    },
+    {
+      "id": "c33",
+      "file": "helpers.md",
+      "line": 645,
+      "text": "creation requires `stream=True`. Existing dictionary handlers still work.",
+      "risk": "default"
+    },
+    {
+      "id": "c34",
+      "file": "httpx2.md",
+      "line": 115,
+      "text": "| `httpx.Timeout` | `httpx2.Timeout` |",
+      "risk": "default"
+    }
+  ],
+  "signals": [],
+  "file_count": 2581,
+  "claims": [
+    {
+      "n": "1",
+      "claim": "By default requests time out after 10 minutes.",
+      "verdict": "PARTIAL",
+      "severity": "medium",
+      "explanation": "DEFAULT_TIMEOUT is httpx2.Timeout(timeout=1201, connect=5.0). The code comment still says 10 minutes, but the value is 1201 seconds, and connect is 5s. No other override of the default was found.",
+      "user_impact": "The default read/overall timeout is 1201 seconds (about 20 minutes), twice what the docs say. Users sizing their own watchdogs or SLAs around 10 minutes will see requests hang about twice as long.",
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 790,
+        "quote": "By default requests time out after 10 minutes."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/_constants.py",
+          "line_start": 6,
+          "line_end": 7,
+          "quote": "# default timeout is 10 minutes\nDEFAULT_TIMEOUT = httpx2.Timeout(timeout=1201, connect=5.0)",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/_constants.py:6-7",
+            "file_sha256": "2e2ee8d0d8a1d33aa989dc390d21e8280e9a1700cbcc11265c77a42aa19aadcb"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "README says the default is 10 minutes. The code sets DEFAULT_TIMEOUT to 1201 seconds (about 20 minutes), and the adjacent comment still says 10 minutes. This is a real mismatch of about 2x. The severity is arguably a bit high, since only users who size their own watchdogs on the documented value are affected, and low-to-medium would fit.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/openai/_constants.py",
+            "line_start": 6,
+            "line_end": 7,
+            "quote": "# default timeout is 10 minutes\nDEFAULT_TIMEOUT = httpx2.Timeout(timeout=1201, connect=5.0)",
+            "checked": {
+              "ok": true,
+              "where": "src/openai/_constants.py:6-7",
+              "file_sha256": "2e2ee8d0d8a1d33aa989dc390d21e8280e9a1700cbcc11265c77a42aa19aadcb"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:45:07.874Z"
+      },
+      "receipt": "rcpt_da774a9f0755"
+    },
+    {
+      "n": "2",
+      "claim": "Connection errors, 408, 409, 429 and >=500 are retried 2 times by default with short exponential backoff.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default 2 retries; 408/409/429/>=500 are retried; backoff starts at 0.5s and caps at 8s with jitter.",
+      "user_impact": null,
+      "note": "Retry is skipped if Retry-After exceeds 120s or x-should-retry says false; this is not documented in the README section.",
+      "source": {
+        "file": "README.md",
+        "line_start": 752,
+        "line_end": 754,
+        "quote": "Certain errors are automatically retried 2 times by default, with a short exponential backoff."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/_constants.py",
+          "line_start": 8,
+          "quote": "DEFAULT_MAX_RETRIES = 2",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/_constants.py:8",
+            "file_sha256": "2e2ee8d0d8a1d33aa989dc390d21e8280e9a1700cbcc11265c77a42aa19aadcb"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/_base_client.py",
+          "line_start": 941,
+          "line_end": 943,
+          "quote": "if response.status_code == 408:\n            log.debug(\"Retrying due to status code %i\", response.status_code)\n            return True",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/_base_client.py:941-943",
+            "file_sha256": "b9d642ace7d6217bb4fb3c7c9fedd2ac45ae24def32daa696326f076ce179a3d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/_base_client.py",
+          "line_start": 955,
+          "line_end": 957,
+          "quote": "# Retry internal errors.\n        if response.status_code >= 500:\n            log.debug(\"Retrying due to status code %i\", response.status_code)",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/_base_client.py:955-957",
+            "file_sha256": "b9d642ace7d6217bb4fb3c7c9fedd2ac45ae24def32daa696326f076ce179a3d"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_30787056744d"
+    },
+    {
+      "n": "3",
+      "claim": "max_retries must be a non-negative integer; 0 disables retries; other values raise an error before a request is sent.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Validation runs in the constructor and per request before the retry loop sends anything.",
+      "user_impact": null,
+      "note": "bool is an int subclass so True/False pass validation.",
+      "source": {
+        "file": "README.md",
+        "line_start": 781,
+        "line_end": 783,
+        "quote": "`max_retries` must be a non-negative integer. `0` disables retries. Use a large\ninteger, such as `1000`, for a larger retry budget. Other values raise an error\nbefore a request is sent."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/_base_client.py",
+          "line_start": 890,
+          "line_end": 893,
+          "quote": "if not isinstance(value, int):\n            raise TypeError(\"max_retries must be a non-negative integer\")\n        if value < 0:\n            raise ValueError(\"max_retries must be a non-negative integer\")",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/_base_client.py:890-893",
+            "file_sha256": "b9d642ace7d6217bb4fb3c7c9fedd2ac45ae24def32daa696326f076ce179a3d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/_base_client.py",
+          "line_start": 1153,
+          "line_end": 1154,
+          "quote": "max_retries = input_options.get_max_retries(self.max_retries)\n        self._validate_max_retries(max_retries)",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/_base_client.py:1153-1154",
+            "file_sha256": "b9d642ace7d6217bb4fb3c7c9fedd2ac45ae24def32daa696326f076ce179a3d"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_6d47a661d6e1"
+    },
+    {
+      "n": "4",
+      "claim": "Token refresh buffer default is 1200 seconds (20 minutes) before expiration.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default is 1200s, but the effective buffer is capped at half the token lifetime.",
+      "user_impact": null,
+      "note": "For tokens lived under 40 minutes the buffer is shortened to expires_in/2.",
+      "source": {
+        "file": "README.md",
+        "line_start": 152,
+        "quote": "You can also customize the token refresh buffer (default is 1200 seconds (20 minutes) before expiration):"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/auth/_workload.py",
+          "line_start": 18,
+          "quote": "DEFAULT_REFRESH_BUFFER_SECONDS = 1200",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/auth/_workload.py:18",
+            "file_sha256": "f61ff8db00ec65d293e7cea656289ac6b0c47faa0997fa70c1731ecf57949512"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/auth/_workload.py",
+          "line_start": 326,
+          "line_end": 328,
+          "quote": "configured_buffer = self.workload_identity.get(\"refresh_buffer_seconds\", DEFAULT_REFRESH_BUFFER_SECONDS)\n        effective_buffer = min(configured_buffer, expires_in / 2)\n        return max(expires_in - effective_buffer, 0.0)",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/auth/_workload.py:326-328",
+            "file_sha256": "f61ff8db00ec65d293e7cea656289ac6b0c47faa0997fa70c1731ecf57949512"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_67cd28747ae5"
+    },
+    {
+      "n": "5",
+      "claim": "Bedrock auth order: explicit credentials first, then AWS_BEARER_TOKEN_BEDROCK unless api_key=None, then default AWS chain; explicit bearer and AWS modes cannot be combined.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The provider implements exactly this precedence and raises on combined explicit modes. README line 1204 repeats the env-bearer precedence and is consistent.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "bedrock.md",
+        "line_start": 86,
+        "line_end": 93,
+        "quote": "2. The bearer token in `AWS_BEARER_TOKEN_BEDROCK`, unless `api_key=None` disables this fallback."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/providers/bedrock.py",
+          "line_start": 465,
+          "line_end": 471,
+          "quote": "skip_environment_bearer = not isinstance(api_key, NotGiven) and api_key is None\n    use_environment_bearer = (\n        not explicit_bearer\n        and not aws_modes\n        and not skip_environment_bearer\n        and bool(os.environ.get(\"AWS_BEARER_TOKEN_BEDROCK\"))\n    )",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/providers/bedrock.py:465-471",
+            "file_sha256": "0959f11aeecb5692482b7ca9eb550c4c33d1c0bcdb552e1f7ea95160a92afc16"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/providers/bedrock.py",
+          "line_start": 459,
+          "line_end": 463,
+          "quote": "if explicit_bearer and aws_modes:\n        raise OpenAIError(\n            \"Bedrock authentication is ambiguous. Configure exactly one explicit mode: bearer credential, \"\n            \"static AWS credentials, profile, or credential provider.\"",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/providers/bedrock.py:459-463",
+            "file_sha256": "0959f11aeecb5692482b7ca9eb550c4c33d1c0bcdb552e1f7ea95160a92afc16"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9461943db763"
+    },
+    {
+      "n": "6",
+      "claim": "Bedrock credentials are never attached to a request whose origin differs from the configured API root.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both bearer and SigV4 paths compare scheme/host/port to the configured base URL before attaching credentials, and SigV4 disables automatic redirects.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "bedrock.md",
+        "line_start": 173,
+        "line_end": 175,
+        "quote": "Bedrock credentials are\nnever attached to a request whose origin differs from the configured API root."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/providers/bedrock.py",
+          "line_start": 146,
+          "line_end": 151,
+          "quote": "def _validate_request(self, request: httpx2.Request) -> None:\n        _assert_provider_owns_authorization(request)\n        if not _same_origin(request.url, self._base_url):\n            raise OpenAIError(\n                \"Refusing to authenticate a Bedrock request for an origin other than the configured provider URL.\"",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/providers/bedrock.py:146-151",
+            "file_sha256": "0959f11aeecb5692482b7ca9eb550c4c33d1c0bcdb552e1f7ea95160a92afc16"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/providers/bedrock.py",
+          "line_start": 205,
+          "line_end": 210,
+          "quote": "def _validate_request(self, request: httpx2.Request) -> bytes:\n        _assert_provider_owns_authorization(request)\n        if not _same_origin(request.url, self._base_url):\n            raise OpenAIError(\n                \"Refusing to sign a Bedrock request for an origin other than the configured provider URL.\"",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/providers/bedrock.py:205-210",
+            "file_sha256": "0959f11aeecb5692482b7ca9eb550c4c33d1c0bcdb552e1f7ea95160a92afc16"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_228b19081608"
+    },
+    {
+      "n": "7",
+      "claim": "The default AWS credential chain supports environment, shared files, named profiles, SSO, assume-role and workload (ECS/EKS/EC2) credentials.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Credentials come from botocore's Session.get_credentials(), which implements the standard chain. The SDK delegates; the specific sources depend on the installed botocore (pinned >=1.40,<2) rather than SDK code.",
+      "user_impact": null,
+      "note": "Requires the optional openai[bedrock] extra (botocore); the chain itself is botocore's behavior, not code in this repo.",
+      "source": {
+        "file": "README.md",
+        "line_start": 1177,
+        "quote": "The default AWS credential chain supports environment credentials, shared credentials and config files, named profiles, SSO and assume-role profiles, and workload credentials such as ECS, EKS, and EC2 metadata."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/lib/_bedrock_auth.py",
+          "line_start": 95,
+          "line_end": 97,
+          "quote": "session = session_cls(profile=profile)\n            resolved_region, region_source = resolve_aws_region_with_source(region, session=session)",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/_bedrock_auth.py:95-97",
+            "file_sha256": "fd2def7f2303608093b533e647e0550bf27803c767edd7bd0add2ace5fad97b9"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/lib/_bedrock_auth.py",
+          "line_start": 131,
+          "line_end": 135,
+          "quote": "credentials = (\n                self._credentials_provider()\n                if self._credentials_provider is not None\n                else self._explicit_credentials or self._session.get_credentials()\n            )",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/_bedrock_auth.py:131-135",
+            "file_sha256": "fd2def7f2303608093b533e647e0550bf27803c767edd7bd0add2ace5fad97b9"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_96e228b3e247"
+    },
+    {
+      "n": "8",
+      "claim": "Signed (SigV4) requests require replayable bodies and do not automatically follow redirects.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Redirects are disabled for SigV4 (explicit follow_redirects raises), and non-replayable bodies raise.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "bedrock.md",
+        "line_start": 148,
+        "line_end": 149,
+        "quote": "Signed requests require replayable request bodies and do not automatically follow redirects."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/providers/bedrock.py",
+          "line_start": 131,
+          "line_end": 138,
+          "quote": "def _without_redirects(options: FinalRequestOptions) -> FinalRequestOptions:\n    if options.follow_redirects:\n        raise OpenAIError(\n            \"Bedrock SigV4 authentication does not support automatic redirects. \"\n            \"Send a new request to the redirect target so it can be signed again.\"\n        )\n    options.follow_redirects = False",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/providers/bedrock.py:131-138",
+            "file_sha256": "0959f11aeecb5692482b7ca9eb550c4c33d1c0bcdb552e1f7ea95160a92afc16"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/providers/bedrock.py",
+          "line_start": 120,
+          "line_end": 123,
+          "quote": "raise OpenAIError(\n            \"Bedrock SigV4 authentication requires a replayable request body. \"\n            \"Buffer the body before sending or use bearer authentication.\"",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/providers/bedrock.py:120-123",
+            "file_sha256": "0959f11aeecb5692482b7ca9eb550c4c33d1c0bcdb552e1f7ea95160a92afc16"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_c909ce68039c"
+    },
+    {
+      "n": "9",
+      "claim": "The live harness requires explicit opt-in; runtime defaults to all three US GPT-5.6 profiles; BEDROCK_LIVE_AUTHS/MODELS/STREAM/RESPONSES select modes.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Opt-in gate, default models and env vars all exist as documented.",
+      "user_impact": null,
+      "note": "The harness also silently loads a repo-root .env (or BEDROCK_LIVE_ENV_FILE) into the environment; developer-only and not mentioned.",
+      "source": {
+        "file": "bedrock.md",
+        "line_start": 177,
+        "line_end": 189,
+        "quote": "Runtime verification defaults to all three US GPT-5.6 inference profiles."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "tests/lib/bedrock_live.py",
+          "line_start": 115,
+          "line_end": 116,
+          "quote": "if os.environ.get(\"BEDROCK_LIVE_TEST\") != \"1\":\n        raise RuntimeError(\"Refusing live AWS requests. Set BEDROCK_LIVE_TEST=1 to run this test.\")",
+          "checked": {
+            "ok": true,
+            "where": "tests/lib/bedrock_live.py:115-116",
+            "file_sha256": "91f0a79d837a2a1ea98d2d2af8e261ca23c0f293148383ca18bf259b05a6a93b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "tests/lib/bedrock_live.py",
+          "line_start": 30,
+          "line_end": 34,
+          "quote": "_RUNTIME_MODELS = (\n    \"us.openai.gpt-5.6-sol\",\n    \"us.openai.gpt-5.6-terra\",\n    \"us.openai.gpt-5.6-luna\",\n)",
+          "checked": {
+            "ok": true,
+            "where": "tests/lib/bedrock_live.py:30-34",
+            "file_sha256": "91f0a79d837a2a1ea98d2d2af8e261ca23c0f293148383ca18bf259b05a6a93b"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_3563c7d40743"
+    },
+    {
+      "n": "10",
+      "claim": "The SDK supports Python 3.10 and newer.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "requires-python is >=3.10.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "bedrock.md",
+        "line_start": 11,
+        "quote": "The SDK supports Python 3.10 and newer."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "pyproject.toml",
+          "line_start": 20,
+          "quote": "requires-python = \">= 3.10\"",
+          "checked": {
+            "ok": true,
+            "where": "pyproject.toml:20",
+            "file_sha256": "c2eb1f94d867a2ac1a7aa7fcefdbd5bbc3b76afff7ea76c5b47501b2db9be97a"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_f15dc2f1f57a"
+    },
+    {
+      "n": "11",
+      "claim": "ci.yml pull-request jobs run with read-only workflow permissions and non-persisted checkout credentials.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Top-level permissions are contents: read; every checkout sets persist-credentials: false; downstream jobs need dependency-locks, which verifies lock provenance first.",
+      "user_impact": null,
+      "note": "The doc's line references to ci.yml (e.g. :218, :240) are stale; the examples job is now at lines 314-343. Compatibility and python-policy jobs do not need dependency-locks for python-policy.",
+      "source": {
+        "file": "docs/architecture/security-model.md",
+        "line_start": 68,
+        "quote": "Workflow permissions are read-only, checkout credentials are not persisted, and dependency/build provenance is checked before installation."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": ".github/workflows/ci.yml",
+          "line_start": 18,
+          "line_end": 19,
+          "quote": "permissions:\n  contents: read",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/ci.yml:18-19",
+            "file_sha256": "6d3e69122c378f11f8f8e9d4e57935c5be4b170f21daa0785da749672fbf2abb"
+          }
+        },
+        {
+          "type": "quote",
+          "file": ".github/workflows/ci.yml",
+          "line_start": 33,
+          "line_end": 35,
+          "quote": "- uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1\n        with:\n          persist-credentials: false",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/ci.yml:33-35",
+            "file_sha256": "6d3e69122c378f11f8f8e9d4e57935c5be4b170f21daa0785da749672fbf2abb"
+          }
+        },
+        {
+          "type": "quote",
+          "file": ".github/workflows/ci.yml",
+          "line_start": 73,
+          "quote": "needs: dependency-locks",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/ci.yml:73",
+            "file_sha256": "6d3e69122c378f11f8f8e9d4e57935c5be4b170f21daa0785da749672fbf2abb"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_42b2aa01d091"
+    },
+    {
+      "n": "12",
+      "claim": "The ci.yml examples job (secret OPENAI_API_KEY) runs only on same-repository push to main and selects environment: ci, separate from the read-only PR boundary.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Exactly as described. The secret is only exposed in the two example steps.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/architecture/security-model.md",
+        "line_start": 240,
+        "line_end": 243,
+        "quote": "on a same-repository push to `main`, it\n  checks out the merged revision and runs `examples/demo.py` and\n  `examples/async_demo.py` with `OPENAI_API_KEY` in each process environment."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": ".github/workflows/ci.yml",
+          "line_start": 317,
+          "line_end": 320,
+          "quote": "environment: ci\n    runs-on: ubuntu-latest\n    needs: dependency-locks\n    if: github.repository == 'openai/openai-python' && github.event_name == 'push' && github.ref == 'refs/heads/main'",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/ci.yml:317-320",
+            "file_sha256": "6d3e69122c378f11f8f8e9d4e57935c5be4b170f21daa0785da749672fbf2abb"
+          }
+        },
+        {
+          "type": "quote",
+          "file": ".github/workflows/ci.yml",
+          "line_start": 336,
+          "line_end": 339,
+          "quote": "- env:\n          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}\n        run: |\n            uv run --locked --all-extras python examples/demo.py",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/ci.yml:336-339",
+            "file_sha256": "6d3e69122c378f11f8f8e9d4e57935c5be4b170f21daa0785da749672fbf2abb"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_b55cc1aa5031"
+    },
+    {
+      "n": "13",
+      "claim": "PyPI publishing uses an upload-only OIDC job; build jobs have no id-token permission.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both publish workflows grant id-token: write only to the upload job that downloads the built artifact; build jobs have contents: read. The create-releases release job mints an app token with write access and has permissions: {} for GITHUB_TOKEN.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/architecture/security-model.md",
+        "line_start": 66,
+        "quote": "Locked/provenance-checked build requirements; no OIDC in build; `id-token: write` only in the publish job."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": ".github/workflows/publish-pypi.yml",
+          "line_start": 14,
+          "line_end": 15,
+          "quote": "permissions:\n      contents: read",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/publish-pypi.yml:14-15",
+            "file_sha256": "da89ed4b8e3c1d3c29d83c094534e17568eef1ee56ea45df0d10b31e3175f04f"
+          }
+        },
+        {
+          "type": "quote",
+          "file": ".github/workflows/publish-pypi.yml",
+          "line_start": 48,
+          "line_end": 49,
+          "quote": "permissions:\n      id-token: write",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/publish-pypi.yml:48-49",
+            "file_sha256": "da89ed4b8e3c1d3c29d83c094534e17568eef1ee56ea45df0d10b31e3175f04f"
+          }
+        },
+        {
+          "type": "quote",
+          "file": ".github/workflows/create-releases.yml",
+          "line_start": 76,
+          "line_end": 77,
+          "quote": "permissions:\n      id-token: write",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/create-releases.yml:76-77",
+            "file_sha256": "7eae9b637f14d202e7d659f3382c60480a017ad4b90b132f04272c4b78a3e5c9"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_48c281ffc8de"
+    },
+    {
+      "n": "14",
+      "claim": "castiron-custom-code.yml runs proposed offline tests and advisory report on pull_request with read-only permissions.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Workflow-level permissions are contents: read; no job overrides to write; the report job's GH_TOKEN inherits that read-only grant.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "scripts/castiron/CUSTOM_CODE.md",
+        "line_start": 78,
+        "line_end": 79,
+        "quote": "- `castiron-custom-code.yml` runs proposed offline tests and the advisory report\n  on `pull_request` with read-only permissions."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": ".github/workflows/castiron-custom-code.yml",
+          "line_start": 4,
+          "line_end": 12,
+          "quote": "on:\n  pull_request:\n    types: [opened, synchronize, reopened, ready_for_review, edited]\n  # Notify the existing trusted handler for queue candidates.\n  merge_group:\n    types: [checks_requested]\n\npermissions:\n  contents: read",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/castiron-custom-code.yml:4-12",
+            "file_sha256": "402da2fd16cc575eef7f4bf6bb1cff25272ee350452cb776f17c1589c036a3a1"
+          }
+        },
+        {
+          "type": "quote",
+          "file": ".github/workflows/castiron-custom-code.yml",
+          "line_start": 46,
+          "quote": "run: python3 -m unittest discover -s scripts/castiron -p 'test_custom_code*.py'",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/castiron-custom-code.yml:46",
+            "file_sha256": "402da2fd16cc575eef7f4bf6bb1cff25272ee350452cb776f17c1589c036a3a1"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_f29695e8e1d7"
+    },
+    {
+      "n": "15",
+      "claim": "CodeQL is a separate same-repo PR boundary with security-events: write that does not run repository scripts at checkout.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The workflow matches the description: pull_request trigger, security-events: write, pinned actions, no repo run step.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/architecture/security-model.md",
+        "line_start": 254,
+        "line_end": 259,
+        "quote": "- The read-only statement above is specific to `ci.yml`. CodeQL is a distinct\n  same-repository PR boundary because pinned analyzer actions process candidate\n  source while the job token has `security-events: write`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": ".github/workflows/codeql.yml",
+          "line_start": 15,
+          "line_end": 18,
+          "quote": "permissions:\n  actions: read\n  contents: read\n  security-events: write",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/codeql.yml:15-18",
+            "file_sha256": "dfa8755b29d15116fd5f47fde6252b2e4113162d8708750eb995010dc9f512ff"
+          }
+        },
+        {
+          "type": "quote",
+          "file": ".github/workflows/codeql.yml",
+          "line_start": 32,
+          "line_end": 35,
+          "quote": "- name: Initialize CodeQL\n        uses: github/codeql-action/init@2892aa5e19bbd11bc0cff5427e3b750a04d9e3c2 # v4.38.2\n        with:\n          languages: python",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/codeql.yml:32-35",
+            "file_sha256": "dfa8755b29d15116fd5f47fde6252b2e4113162d8708750eb995010dc9f512ff"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_437bcd874d0f"
+    },
+    {
+      "n": "16",
+      "claim": "Both Playwright's bundled Chromium and the chrome channel keep the browser sandbox enabled in the quickstart.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The example launches with chromium_sandbox=True regardless of channel; any other channel value is rejected. No --no-sandbox flag appears in examples.",
+      "user_impact": null,
+      "note": "This concerns the shipped examples/quickstart; BrowserToolset itself does not launch a browser.",
+      "source": {
+        "file": "docs/browser.md",
+        "line_start": 30,
+        "line_end": 31,
+        "quote": "Leave the variable unset to use Playwright's bundled Chromium. Both choices\nkeep the browser sandbox enabled."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "examples/browser/read_only.py",
+          "line_start": 91,
+          "line_end": 97,
+          "quote": "def example_browser_channel() -> Literal[\"chrome\"] | None:\n    channel = os.environ.get(\"OPENAI_EXAMPLE_BROWSER_CHANNEL\")\n    if channel is None:\n        return None\n    if channel != \"chrome\":\n        raise ValueError(\"OPENAI_EXAMPLE_BROWSER_CHANNEL must be unset or chrome.\")",
+          "checked": {
+            "ok": true,
+            "where": "examples/browser/read_only.py:91-97",
+            "file_sha256": "8a3782435da346af380b636a0b24cd16d52d49b9472a8b41c627244f760c8ae7"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "examples/browser/read_only.py",
+          "line_start": 215,
+          "line_end": 218,
+          "quote": "browser = await playwright.chromium.launch(\n            headless=True,\n            channel=channel,\n            chromium_sandbox=True,",
+          "checked": {
+            "ok": true,
+            "where": "examples/browser/read_only.py:215-218",
+            "file_sha256": "8a3782435da346af380b636a0b24cd16d52d49b9472a8b41c627244f760c8ae7"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_2d90bc83016e"
+    },
+    {
+      "n": "17",
+      "claim": "MCP approval is required by default; an empty always: {} or never: {} filter applies to every tool; read_only and ambiguous filters are left to the API.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "None defaults to always; a filter without tool_names matches every tool; read_only or overlapping filters return None (no local enforcement); a call needing approval without a request id raises.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/browser.md",
+        "line_start": 501,
+        "line_end": 506,
+        "quote": "An empty `always: {}` or `never: {}` filter applies to every tool. Read-only\nfilters and ambiguous filter combinations remain API policies because the response does\nnot contain enough information to verify them."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/lib/responses_tool_runner.py",
+          "line_start": 306,
+          "line_end": 308,
+          "quote": "policy = declaration.get(\"require_approval\")\n    if policy is None:\n        return \"always\"",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/responses_tool_runner.py:306-308",
+            "file_sha256": "a99ae5f415b23e14f66a68db5147a8618989d35f9819362d5487a765c9ea8b8b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/lib/responses_tool_runner.py",
+          "line_start": 325,
+          "line_end": 330,
+          "quote": "if \"read_only\" in tool_filter or (\"tool_names\" in tool_filter and not isinstance(names, list)):\n            return None\n        if \"tool_names\" not in tool_filter or (isinstance(names, list) and name in names):\n            if matched is not None:\n                return None\n            matched = rule",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/responses_tool_runner.py:325-330",
+            "file_sha256": "a99ae5f415b23e14f66a68db5147a8618989d35f9819362d5487a765c9ea8b8b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/lib/responses_tool_runner.py",
+          "line_start": 1503,
+          "line_end": 1504,
+          "quote": "if item.type == \"mcp_call\" and policy == \"always\" and item.approval_request_id is None:\n            raise self.error(\"MCP call requires a matching approval request.\")",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/responses_tool_runner.py:1503-1504",
+            "file_sha256": "a99ae5f415b23e14f66a68db5147a8618989d35f9819362d5487a765c9ea8b8b"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_6560e08d9edf"
+    },
+    {
+      "n": "18",
+      "claim": "wait_for text is nonempty, at most 256 UTF-8 bytes after whitespace normalization; timeout is an integer 1-30000 ms; run_script timeout 1-30000; diagnostics limit 1-100; file grant_id nonempty at most 256 UTF-8 bytes.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Limits are enforced exactly as documented; invalid values raise BrowserError.",
+      "user_impact": null,
+      "note": "The same limits also appear in the JSON schema (maximum: 30000, etc.).",
+      "source": {
+        "file": "docs/browser-navigation.md",
+        "line_start": 14,
+        "line_end": 15,
+        "quote": "Normalized text must be nonempty and at most\n256 UTF-8 bytes, and timeout must be an integer from 1 to 30000."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/lib/browser.py",
+          "line_start": 1185,
+          "line_end": 1191,
+          "quote": "or (kind == \"timeout\" and isinstance(value, int) and not isinstance(value, bool) and 1 <= value <= 30000)\n            or (kind == \"region\" and _zoom_region(cast(object, value)))\n            or (\n                kind == \"wait_text\"\n                and isinstance(value, str)\n                and _state_text(\" \".join(value.split()), 256, allow_empty=False)\n            )",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/browser.py:1185-1191",
+            "file_sha256": "cfe6ce79b8ca6ce3c58679a2e21eb0a42b4c1641caae5e073760d838138ca92f"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/lib/browser.py",
+          "line_start": 1174,
+          "line_end": 1176,
+          "quote": "or (kind == \"diagnostic_limit\" and type(value) is int and 1 <= value <= 100)\n            or (kind == \"script\" and _read_text(value, None, allow_empty=False))\n            or (kind == \"file_grant\" and _read_text(value, 256, allow_empty=False))",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/browser.py:1174-1176",
+            "file_sha256": "cfe6ce79b8ca6ce3c58679a2e21eb0a42b4c1641caae5e073760d838138ca92f"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/lib/browser.py",
+          "line_start": 598,
+          "line_end": 603,
+          "quote": "def _state_text(value: object, limit: int | None, *, allow_empty: bool) -> TypeGuard[str]:\n    if not isinstance(value, str) or (not allow_empty and not value):\n        return False\n    if limit is None:\n        return re.search(r\"[\\ud800-\\udfff]\", value) is None\n    return len(value.encode(\"utf-8\")) <= limit",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/browser.py:598-603",
+            "file_sha256": "cfe6ce79b8ca6ce3c58679a2e21eb0a42b4c1641caae5e073760d838138ca92f"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_46a62059e12a"
+    },
+    {
+      "n": "19",
+      "claim": "State-changing browser members need confirm(ctx); navigation also needs url_policy checked before confirmation; callbacks must return exactly True; read-only methods do not call confirm unless listed in confirm_reads.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Construction raises without confirm/url_policy; at execution the URL policy runs before confirm, both require `is True`, and the context is deep-copied so callbacks cannot alter the dispatched action.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/browser.md",
+        "line_start": 352,
+        "line_end": 355,
+        "quote": "The SDK asks for confirmation before state-changing methods. By default,\nread-only methods do not call `confirm`. To protect selected reads, also pass\n`confirm_reads=[\"list_tabs\", \"get_page_text\", \"screenshot\"]`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/lib/browser.py",
+          "line_start": 1321,
+          "line_end": 1324,
+          "quote": "if not has_confirm and (self._confirm_reads or any(name[17:] not in _READ_ONLY for name in self._handlers)):\n            raise ValueError(\"State-changing browser members require confirm.\")\n        if not has_url_policy and self._names.intersection({\"browser_navigate\", \"browser_new_tab\"}):\n            raise ValueError(\"Browser navigation members require url_policy.\")",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/browser.py:1321-1324",
+            "file_sha256": "cfe6ce79b8ca6ce3c58679a2e21eb0a42b4c1641caae5e073760d838138ca92f"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/lib/browser.py",
+          "line_start": 1559,
+          "line_end": 1566,
+          "quote": "if ctx[\"member\"] in {\"navigate\", \"new_tab\"} and isinstance(url, str):\n                if url_policy is None or invoke(url_policy, deepcopy(ctx), url, cancelled=cancelled) is not True:\n                    raise BrowserError(\"Browser navigation was not approved.\")\n                _check_cancelled(cancelled)\n            if ctx[\"member\"] not in _READ_ONLY and (\n                confirm is None or invoke(confirm, deepcopy(ctx), cancelled=cancelled) is not True\n            ):\n                raise BrowserError(\"Browser action was not approved. Do not retry it unless the user asks.\")",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/browser.py:1559-1566",
+            "file_sha256": "cfe6ce79b8ca6ce3c58679a2e21eb0a42b4c1641caae5e073760d838138ca92f"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_6a42ba11a688"
+    },
+    {
+      "n": "20",
+      "claim": "HTTPX2 is the default HTTP client, and aiohttp is optional via DefaultAioHttpClient.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The default async client subclasses httpx2.AsyncClient; DefaultAioHttpClient is exported and chosen only when explicitly supplied (installed variant vs missing-dependency stub).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 304,
+        "quote": "By default, the async client uses HTTPX2. For improved concurrency performance, you may also use `aiohttp` as the HTTPX2 transport."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/_base_client.py",
+          "line_start": 1563,
+          "quote": "class _DefaultAsyncHttpxClient(httpx2.AsyncClient):",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/_base_client.py:1563",
+            "file_sha256": "b9d642ace7d6217bb4fb3c7c9fedd2ac45ae24def32daa696326f076ce179a3d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/__init__.py",
+          "line_start": 40,
+          "quote": "from ._base_client import DefaultHttpxClient, DefaultAioHttpClient, DefaultAsyncHttpxClient",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/__init__.py:40",
+            "file_sha256": "8f4fdba5193967d09ca79bc4504e79bd8c20ba4bd8f09c2df3817501540a39db"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_2f0626d17bee"
+    },
+    {
+      "n": "21",
+      "claim": "API origin precedence: explicit base_url, then OPENAI_BASE_URL, then https://api.openai.com/v1 (X.509 mode defaults to https://mtls.api.openai.com/v1).",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Precedence is exactly as documented, including the X.509 default in README line 203.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/architecture/security-model.md",
+        "line_start": 55,
+        "quote": "Explicit `base_url`, then `OPENAI_BASE_URL`, then default. | `https://api.openai.com/v1` by default."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/_client.py",
+          "line_start": 328,
+          "line_end": 333,
+          "quote": "elif base_url is None:\n            base_url = os.environ.get(\"OPENAI_BASE_URL\")\n        self._base_url_was_default = provider_runtime is None and base_url is None\n        self._data_residency = data_residency\n        if base_url is None:\n            base_url = MTLS_API_BASE_URL if x509_identity is not None else \"https://api.openai.com/v1\"",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/_client.py:328-333",
+            "file_sha256": "6de3a89ee9cb99104118fddd0b44ba13dbe94b78d088cd025ebae85e4c3b884e"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/auth/_x509.py",
+          "line_start": 25,
+          "quote": "MTLS_API_BASE_URL = \"https://mtls.api.openai.com/v1\"",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/auth/_x509.py:25",
+            "file_sha256": "1c08b7b35f9fabbbd0c32193a19ca1b78091151be38c058ab376f96a0d909ac5"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9b9ebfc69441"
+    },
+    {
+      "n": "22",
+      "claim": "Azure clients do not support X.509 workload identity.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both Azure clients raise on an X.509 identity at construction.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 215,
+        "line_end": 217,
+        "quote": "Azure clients do not support X.509 workload\nidentity."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/lib/azure.py",
+          "line_start": 294,
+          "line_end": 295,
+          "quote": "if is_x509_workload_identity(workload_identity):\n            raise OpenAIError(\"X.509 workload identity is not supported by Azure clients\")",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/azure.py:294-295",
+            "file_sha256": "96ccc9508eb7c0b3e38fa720ed53af3121e4e47626ec29fbc610f66f94b32d00"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9e3bb48b6ee2"
+    },
+    {
+      "n": "23",
+      "claim": "OPENAI_LOG accepts info, debug, warning, error, critical and configures the openai logger only, not HTTP transport loggers.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Only the \\\"openai\\\" logger level is set. Unknown values are silently ignored. Authorization, api-key and x-amz-security-token headers are redacted in logged headers.",
+      "user_impact": null,
+      "note": "Values are case-sensitive (\\\"INFO\\\" would be silently ignored).",
+      "source": {
+        "file": "README.md",
+        "line_start": 836,
+        "line_end": 838,
+        "quote": "Set it to `warning`, `error`, or `critical`\nto show only messages at that level or higher. `OPENAI_LOG` configures the `openai`\nlogger; configure HTTP transport loggers separately using Python logging."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/_utils/_logs.py",
+          "line_start": 38,
+          "line_end": 47,
+          "quote": "env = os.environ.get(\"OPENAI_LOG\")\n    if env is None:\n        return\n\n    level = _LOG_LEVELS.get(env)\n    if level is None:\n        return\n\n    _basic_config()\n    logger.setLevel(level)",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/_utils/_logs.py:38-47",
+            "file_sha256": "c12687068d6cc97c6a24675824f7ccc601bef26c069297b3ffe55ff5067a367b"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_b668a8bb20f2"
+    },
+    {
+      "n": "24",
+      "claim": "Webhook verification uses HMAC-SHA256 with constant-time comparison and a bounded-age timestamp check (not replay prevention).",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "As documented: default 300s tolerance, no id store. The code comment says the timestamp check is to 'prevent replay attacks' but the docs correctly describe it as bounded age only.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/architecture/security-model.md",
+        "line_start": 62,
+        "quote": "Timestamp tolerance is a bounded-age check, not uniqueness or replay prevention; HMAC-SHA256 and constant-time comparison authenticate bytes; `unwrap` verifies before JSON parsing; caller owns webhook-id deduplication."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/lib/_webhooks.py",
+          "line_start": 59,
+          "line_end": 64,
+          "quote": "expected_signature = base64.b64encode(\n        hmac.new(decoded_secret, signed_payload.encode(), hashlib.sha256).digest()\n    ).decode()\n\n    # Accept if any signature matches\n    return any(hmac.compare_digest(expected_signature, sig) for sig in signatures)",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/_webhooks.py:59-64",
+            "file_sha256": "ef636b9c0cdfcccd782fece682cf341cef9aad455719c312eec8dab75734e33c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/lib/_webhooks.py",
+          "line_start": 33,
+          "line_end": 37,
+          "quote": "if now - timestamp_seconds > tolerance:\n        raise InvalidWebhookSignatureError(\"Webhook timestamp is too old\") from None\n\n    if timestamp_seconds > now + tolerance:\n        raise InvalidWebhookSignatureError(\"Webhook timestamp is too new\") from None",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/_webhooks.py:33-37",
+            "file_sha256": "ef636b9c0cdfcccd782fece682cf341cef9aad455719c312eec8dab75734e33c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/resources/webhooks/webhooks.py",
+          "line_start": 511,
+          "quote": "tolerance: int = 300,",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/resources/webhooks/webhooks.py:511",
+            "file_sha256": "f730653c5937f4c723f5519c7e86823fcba0ee088c270ecbd8e02fd10e49c654"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_a64a917b64e4"
+    },
+    {
+      "n": "25",
+      "claim": "max_concurrent_calls defaults to 2, must be a positive integer, and applies to opted-in independent eager calls; defaults remain serial.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default 2 and validation exist in sync and async runners; a ThreadPoolExecutor with that many workers is used for eager calls.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/browser.md",
+        "line_start": 630,
+        "line_end": 632,
+        "quote": "Set `max_concurrent_calls`\non `run()` or `iterate()` to a positive integer (default 2)."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/lib/responses_tool_runner.py",
+          "line_start": 1863,
+          "quote": "max_concurrent_calls: int = 2,",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/responses_tool_runner.py:1863",
+            "file_sha256": "a99ae5f415b23e14f66a68db5147a8618989d35f9819362d5487a765c9ea8b8b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/lib/responses_tool_runner.py",
+          "line_start": 1929,
+          "line_end": 1930,
+          "quote": "if type(max_concurrent_calls) is not int or max_concurrent_calls < 1:\n                raise ValueError(\"max_concurrent_calls must be a positive integer.\")",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/responses_tool_runner.py:1929-1930",
+            "file_sha256": "a99ae5f415b23e14f66a68db5147a8618989d35f9819362d5487a765c9ea8b8b"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_109bbd009c90"
+    },
+    {
+      "n": "26",
+      "claim": "The .stream() helper must be used inside a context manager so the response cannot leak; the request is only made on entering.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The API request is deferred until __enter__ and the stream is closed in __exit__, so no response is opened without the context manager.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "helpers.md",
+        "line_start": 170,
+        "quote": "Unlike `.create(stream=True)`, the `.stream()` method requires usage within a context manager to prevent accidental leakage of the response:"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/lib/streaming/chat/_completions.py",
+          "line_start": 148,
+          "line_end": 149,
+          "quote": "def __enter__(self) -> ChatCompletionStream[ResponseFormatT]:\n        raw_stream = self.__api_request()",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/streaming/chat/_completions.py:148-149",
+            "file_sha256": "a7c98ba7e43bfbcaa54cac470845523eef446239ff04624c542e2cff36d17a1d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/lib/streaming/chat/_completions.py",
+          "line_start": 165,
+          "line_end": 166,
+          "quote": "if self.__stream is not None:\n            self.__stream.close()",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/streaming/chat/_completions.py:165-166",
+            "file_sha256": "a7c98ba7e43bfbcaa54cac470845523eef446239ff04624c542e2cff36d17a1d"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_233f32fd0634"
+    },
+    {
+      "n": "27",
+      "claim": "The existing DefaultHttpxClient and DefaultAsyncHttpxClient names now construct HTTPX2 clients.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both legacy names alias subclasses of httpx2 clients.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "httpx2.md",
+        "line_start": 95,
+        "line_end": 97,
+        "quote": "The existing `DefaultHttpxClient` and `DefaultAsyncHttpxClient` names continue\nto work, but now construct HTTPX2 clients."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/_base_client.py",
+          "line_start": 967,
+          "quote": "class _DefaultHttpxClient(httpx2.Client):",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/_base_client.py:967",
+            "file_sha256": "b9d642ace7d6217bb4fb3c7c9fedd2ac45ae24def32daa696326f076ce179a3d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/_base_client.py",
+          "line_start": 1563,
+          "quote": "class _DefaultAsyncHttpxClient(httpx2.AsyncClient):",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/_base_client.py:1563",
+            "file_sha256": "b9d642ace7d6217bb4fb3c7c9fedd2ac45ae24def32daa696326f076ce179a3d"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_07f36040a78d"
+    }
+  ],
+  "rejected": [
+    {
+      "claim": "Responses WebSocket connections last up to 60 minutes.",
+      "verdict": "UNVERIFIABLE",
+      "problems": [
+        "claim source src/openai/lib/responses_websocket/README.md is a changelog, plan or internal developer doc, not a promise to users. Use README, user docs or product pages"
+      ],
+      "at": "2026-10-22T21:44:24.517Z"
+    }
+  ],
+  "finished_at": "2026-10-22T21:45:22.766Z",
+  "review_requested_at": "2026-10-22T21:44:55.141Z",
+  "skipped": [
+    {
+      "candidate": "c3",
+      "reason": "Sandbox-enabled Chromium channel guidance; covered by the recorded claim on docs/browser.md:30-31."
+    },
+    {
+      "candidate": "c4",
+      "reason": "Approval filter semantics are covered by the recorded claim on docs/browser.md:501-506."
+    },
+    {
+      "candidate": "c11",
+      "reason": "Severity calibration is internal triage guidance for vulnerability reports, not a user-facing promise."
+    },
+    {
+      "candidate": "c12",
+      "reason": "Guidance to driver authors about form fields; the SDK does not implement forms."
+    },
+    {
+      "candidate": "c13",
+      "reason": "A pointer to a read-only quickstart; no behavioural promise."
+    },
+    {
+      "candidate": "c14",
+      "reason": "Same sandbox statement as c3, covered by the recorded claim."
+    },
+    {
+      "candidate": "c15",
+      "reason": "Optional cancelled parameter is a driver contract; the confirm and members behaviour is covered by other claims."
+    },
+    {
+      "candidate": "c16",
+      "reason": "Members selection is driver-facing API behaviour; construction checks are covered by the confirm/url_policy claim."
+    },
+    {
+      "candidate": "c17",
+      "reason": "Covered by the recorded claim on docs/browser.md:352-355."
+    },
+    {
+      "candidate": "c18",
+      "reason": "Says the driver must bind consent to a target, which is a responsibility placed on the caller, not an SDK promise."
+    },
+    {
+      "candidate": "c19",
+      "reason": "Documents a limit of computer approval and tells the caller to isolate, not an SDK guarantee."
+    },
+    {
+      "candidate": "c20",
+      "reason": "Covered by the recorded max_concurrent_calls claim."
+    },
+    {
+      "candidate": "c21",
+      "reason": "Covered by the recorded refresh-buffer claim."
+    },
+    {
+      "candidate": "c22",
+      "reason": "Covered by the recorded limits claim, which includes grant_id."
+    },
+    {
+      "candidate": "c23",
+      "reason": "Covered by the recorded approval default claim."
+    },
+    {
+      "candidate": "c24",
+      "reason": "Internal Castiron transition plan, not a user promise."
+    },
+    {
+      "candidate": "c25",
+      "reason": "Depends on AWS account permissions outside the repository."
+    },
+    {
+      "candidate": "c26",
+      "reason": "Covered by the recorded HTTPX2 default claim."
+    },
+    {
+      "candidate": "c27",
+      "reason": "Covered by the recorded base URL precedence claim."
+    },
+    {
+      "candidate": "c28",
+      "reason": "Internal Castiron transition plan, not a user promise."
+    },
+    {
+      "candidate": "c29",
+      "reason": "Covered by the recorded wait_for limits claim."
+    },
+    {
+      "candidate": "c30",
+      "reason": "Elliot rejected this internal README as a source. The 60-minute limit is enforced by the server, not the SDK."
+    },
+    {
+      "candidate": "c31",
+      "reason": "Python 3.10 verified; SDK-290 is an internal release-tracking reference that cannot be checked in the repository."
+    },
+    {
+      "candidate": "c32",
+      "reason": "Covered by the recorded stream context manager claim."
+    },
+    {
+      "candidate": "c33",
+      "reason": "Minor helper API compatibility note, not a security or default claim."
+    },
+    {
+      "candidate": "c34",
+      "reason": "A migration mapping table; the HTTPX2 default claims are covered."
+    },
+    {
+      "candidate": "c5",
+      "reason": "Pointer to an example file that exists; covered by the Bedrock claims."
+    },
+    {
+      "candidate": "c6",
+      "reason": "Covered by the recorded live harness claim."
+    },
+    {
+      "candidate": "c7",
+      "reason": "Covered by the recorded CUSTOM_CODE.md claim."
+    },
+    {
+      "candidate": "c8",
+      "reason": "Covered by the recorded examples-job claim."
+    },
+    {
+      "candidate": "c9",
+      "reason": "Covered by the recorded CodeQL claim."
+    },
+    {
+      "candidate": "c10",
+      "reason": "Covered by the recorded PyPI OIDC claim and the release workflow check."
+    },
+    {
+      "candidate": "c2",
+      "reason": "Covered by the recorded ci.yml pull-request claim."
+    },
+    {
+      "candidate": "c1",
+      "reason": "Covered by the recorded AWS credential chain claim."
+    }
+  ],
+  "behaviors": [],
+  "notes": [],
+  "retracted": [],
+  "raw_claims": [
+    {
+      "n": "1",
+      "claim": "By default requests time out after 10 minutes.",
+      "verdict": "PARTIAL",
+      "severity": "medium",
+      "explanation": "DEFAULT_TIMEOUT is httpx2.Timeout(timeout=1201, connect=5.0). The code comment still says 10 minutes, but the value is 1201 seconds, and connect is 5s. No other override of the default was found.",
+      "user_impact": "The default read/overall timeout is 1201 seconds (about 20 minutes), twice what the docs say. Users sizing their own watchdogs or SLAs around 10 minutes will see requests hang about twice as long.",
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 790,
+        "quote": "By default requests time out after 10 minutes."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/_constants.py",
+          "line_start": 6,
+          "line_end": 7,
+          "quote": "# default timeout is 10 minutes\nDEFAULT_TIMEOUT = httpx2.Timeout(timeout=1201, connect=5.0)",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/_constants.py:6-7",
+            "file_sha256": "2e2ee8d0d8a1d33aa989dc390d21e8280e9a1700cbcc11265c77a42aa19aadcb"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "README says the default is 10 minutes. The code sets DEFAULT_TIMEOUT to 1201 seconds (about 20 minutes), and the adjacent comment still says 10 minutes. This is a real mismatch of about 2x. The severity is arguably a bit high, since only users who size their own watchdogs on the documented value are affected, and low-to-medium would fit.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/openai/_constants.py",
+            "line_start": 6,
+            "line_end": 7,
+            "quote": "# default timeout is 10 minutes\nDEFAULT_TIMEOUT = httpx2.Timeout(timeout=1201, connect=5.0)",
+            "checked": {
+              "ok": true,
+              "where": "src/openai/_constants.py:6-7",
+              "file_sha256": "2e2ee8d0d8a1d33aa989dc390d21e8280e9a1700cbcc11265c77a42aa19aadcb"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:45:07.874Z"
+      },
+      "receipt": "rcpt_da774a9f0755"
+    },
+    {
+      "n": "2",
+      "claim": "Connection errors, 408, 409, 429 and >=500 are retried 2 times by default with short exponential backoff.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default 2 retries; 408/409/429/>=500 are retried; backoff starts at 0.5s and caps at 8s with jitter.",
+      "user_impact": null,
+      "note": "Retry is skipped if Retry-After exceeds 120s or x-should-retry says false; this is not documented in the README section.",
+      "source": {
+        "file": "README.md",
+        "line_start": 752,
+        "line_end": 754,
+        "quote": "Certain errors are automatically retried 2 times by default, with a short exponential backoff."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/_constants.py",
+          "line_start": 8,
+          "quote": "DEFAULT_MAX_RETRIES = 2",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/_constants.py:8",
+            "file_sha256": "2e2ee8d0d8a1d33aa989dc390d21e8280e9a1700cbcc11265c77a42aa19aadcb"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/_base_client.py",
+          "line_start": 941,
+          "line_end": 943,
+          "quote": "if response.status_code == 408:\n            log.debug(\"Retrying due to status code %i\", response.status_code)\n            return True",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/_base_client.py:941-943",
+            "file_sha256": "b9d642ace7d6217bb4fb3c7c9fedd2ac45ae24def32daa696326f076ce179a3d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/_base_client.py",
+          "line_start": 955,
+          "line_end": 957,
+          "quote": "# Retry internal errors.\n        if response.status_code >= 500:\n            log.debug(\"Retrying due to status code %i\", response.status_code)",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/_base_client.py:955-957",
+            "file_sha256": "b9d642ace7d6217bb4fb3c7c9fedd2ac45ae24def32daa696326f076ce179a3d"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_30787056744d"
+    },
+    {
+      "n": "3",
+      "claim": "max_retries must be a non-negative integer; 0 disables retries; other values raise an error before a request is sent.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Validation runs in the constructor and per request before the retry loop sends anything.",
+      "user_impact": null,
+      "note": "bool is an int subclass so True/False pass validation.",
+      "source": {
+        "file": "README.md",
+        "line_start": 781,
+        "line_end": 783,
+        "quote": "`max_retries` must be a non-negative integer. `0` disables retries. Use a large\ninteger, such as `1000`, for a larger retry budget. Other values raise an error\nbefore a request is sent."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/_base_client.py",
+          "line_start": 890,
+          "line_end": 893,
+          "quote": "if not isinstance(value, int):\n            raise TypeError(\"max_retries must be a non-negative integer\")\n        if value < 0:\n            raise ValueError(\"max_retries must be a non-negative integer\")",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/_base_client.py:890-893",
+            "file_sha256": "b9d642ace7d6217bb4fb3c7c9fedd2ac45ae24def32daa696326f076ce179a3d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/_base_client.py",
+          "line_start": 1153,
+          "line_end": 1154,
+          "quote": "max_retries = input_options.get_max_retries(self.max_retries)\n        self._validate_max_retries(max_retries)",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/_base_client.py:1153-1154",
+            "file_sha256": "b9d642ace7d6217bb4fb3c7c9fedd2ac45ae24def32daa696326f076ce179a3d"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_6d47a661d6e1"
+    },
+    {
+      "n": "4",
+      "claim": "Token refresh buffer default is 1200 seconds (20 minutes) before expiration.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default is 1200s, but the effective buffer is capped at half the token lifetime.",
+      "user_impact": null,
+      "note": "For tokens lived under 40 minutes the buffer is shortened to expires_in/2.",
+      "source": {
+        "file": "README.md",
+        "line_start": 152,
+        "quote": "You can also customize the token refresh buffer (default is 1200 seconds (20 minutes) before expiration):"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/auth/_workload.py",
+          "line_start": 18,
+          "quote": "DEFAULT_REFRESH_BUFFER_SECONDS = 1200",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/auth/_workload.py:18",
+            "file_sha256": "f61ff8db00ec65d293e7cea656289ac6b0c47faa0997fa70c1731ecf57949512"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/auth/_workload.py",
+          "line_start": 326,
+          "line_end": 328,
+          "quote": "configured_buffer = self.workload_identity.get(\"refresh_buffer_seconds\", DEFAULT_REFRESH_BUFFER_SECONDS)\n        effective_buffer = min(configured_buffer, expires_in / 2)\n        return max(expires_in - effective_buffer, 0.0)",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/auth/_workload.py:326-328",
+            "file_sha256": "f61ff8db00ec65d293e7cea656289ac6b0c47faa0997fa70c1731ecf57949512"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_67cd28747ae5"
+    },
+    {
+      "n": "5",
+      "claim": "Bedrock auth order: explicit credentials first, then AWS_BEARER_TOKEN_BEDROCK unless api_key=None, then default AWS chain; explicit bearer and AWS modes cannot be combined.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The provider implements exactly this precedence and raises on combined explicit modes. README line 1204 repeats the env-bearer precedence and is consistent.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "bedrock.md",
+        "line_start": 86,
+        "line_end": 93,
+        "quote": "2. The bearer token in `AWS_BEARER_TOKEN_BEDROCK`, unless `api_key=None` disables this fallback."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/providers/bedrock.py",
+          "line_start": 465,
+          "line_end": 471,
+          "quote": "skip_environment_bearer = not isinstance(api_key, NotGiven) and api_key is None\n    use_environment_bearer = (\n        not explicit_bearer\n        and not aws_modes\n        and not skip_environment_bearer\n        and bool(os.environ.get(\"AWS_BEARER_TOKEN_BEDROCK\"))\n    )",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/providers/bedrock.py:465-471",
+            "file_sha256": "0959f11aeecb5692482b7ca9eb550c4c33d1c0bcdb552e1f7ea95160a92afc16"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/providers/bedrock.py",
+          "line_start": 459,
+          "line_end": 463,
+          "quote": "if explicit_bearer and aws_modes:\n        raise OpenAIError(\n            \"Bedrock authentication is ambiguous. Configure exactly one explicit mode: bearer credential, \"\n            \"static AWS credentials, profile, or credential provider.\"",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/providers/bedrock.py:459-463",
+            "file_sha256": "0959f11aeecb5692482b7ca9eb550c4c33d1c0bcdb552e1f7ea95160a92afc16"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9461943db763"
+    },
+    {
+      "n": "6",
+      "claim": "Bedrock credentials are never attached to a request whose origin differs from the configured API root.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both bearer and SigV4 paths compare scheme/host/port to the configured base URL before attaching credentials, and SigV4 disables automatic redirects.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "bedrock.md",
+        "line_start": 173,
+        "line_end": 175,
+        "quote": "Bedrock credentials are\nnever attached to a request whose origin differs from the configured API root."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/providers/bedrock.py",
+          "line_start": 146,
+          "line_end": 151,
+          "quote": "def _validate_request(self, request: httpx2.Request) -> None:\n        _assert_provider_owns_authorization(request)\n        if not _same_origin(request.url, self._base_url):\n            raise OpenAIError(\n                \"Refusing to authenticate a Bedrock request for an origin other than the configured provider URL.\"",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/providers/bedrock.py:146-151",
+            "file_sha256": "0959f11aeecb5692482b7ca9eb550c4c33d1c0bcdb552e1f7ea95160a92afc16"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/providers/bedrock.py",
+          "line_start": 205,
+          "line_end": 210,
+          "quote": "def _validate_request(self, request: httpx2.Request) -> bytes:\n        _assert_provider_owns_authorization(request)\n        if not _same_origin(request.url, self._base_url):\n            raise OpenAIError(\n                \"Refusing to sign a Bedrock request for an origin other than the configured provider URL.\"",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/providers/bedrock.py:205-210",
+            "file_sha256": "0959f11aeecb5692482b7ca9eb550c4c33d1c0bcdb552e1f7ea95160a92afc16"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_228b19081608"
+    },
+    {
+      "n": "7",
+      "claim": "The default AWS credential chain supports environment, shared files, named profiles, SSO, assume-role and workload (ECS/EKS/EC2) credentials.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Credentials come from botocore's Session.get_credentials(), which implements the standard chain. The SDK delegates; the specific sources depend on the installed botocore (pinned >=1.40,<2) rather than SDK code.",
+      "user_impact": null,
+      "note": "Requires the optional openai[bedrock] extra (botocore); the chain itself is botocore's behavior, not code in this repo.",
+      "source": {
+        "file": "README.md",
+        "line_start": 1177,
+        "quote": "The default AWS credential chain supports environment credentials, shared credentials and config files, named profiles, SSO and assume-role profiles, and workload credentials such as ECS, EKS, and EC2 metadata."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/lib/_bedrock_auth.py",
+          "line_start": 95,
+          "line_end": 97,
+          "quote": "session = session_cls(profile=profile)\n            resolved_region, region_source = resolve_aws_region_with_source(region, session=session)",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/_bedrock_auth.py:95-97",
+            "file_sha256": "fd2def7f2303608093b533e647e0550bf27803c767edd7bd0add2ace5fad97b9"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/lib/_bedrock_auth.py",
+          "line_start": 131,
+          "line_end": 135,
+          "quote": "credentials = (\n                self._credentials_provider()\n                if self._credentials_provider is not None\n                else self._explicit_credentials or self._session.get_credentials()\n            )",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/_bedrock_auth.py:131-135",
+            "file_sha256": "fd2def7f2303608093b533e647e0550bf27803c767edd7bd0add2ace5fad97b9"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_96e228b3e247"
+    },
+    {
+      "n": "8",
+      "claim": "Signed (SigV4) requests require replayable bodies and do not automatically follow redirects.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Redirects are disabled for SigV4 (explicit follow_redirects raises), and non-replayable bodies raise.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "bedrock.md",
+        "line_start": 148,
+        "line_end": 149,
+        "quote": "Signed requests require replayable request bodies and do not automatically follow redirects."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/providers/bedrock.py",
+          "line_start": 131,
+          "line_end": 138,
+          "quote": "def _without_redirects(options: FinalRequestOptions) -> FinalRequestOptions:\n    if options.follow_redirects:\n        raise OpenAIError(\n            \"Bedrock SigV4 authentication does not support automatic redirects. \"\n            \"Send a new request to the redirect target so it can be signed again.\"\n        )\n    options.follow_redirects = False",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/providers/bedrock.py:131-138",
+            "file_sha256": "0959f11aeecb5692482b7ca9eb550c4c33d1c0bcdb552e1f7ea95160a92afc16"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/providers/bedrock.py",
+          "line_start": 120,
+          "line_end": 123,
+          "quote": "raise OpenAIError(\n            \"Bedrock SigV4 authentication requires a replayable request body. \"\n            \"Buffer the body before sending or use bearer authentication.\"",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/providers/bedrock.py:120-123",
+            "file_sha256": "0959f11aeecb5692482b7ca9eb550c4c33d1c0bcdb552e1f7ea95160a92afc16"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_c909ce68039c"
+    },
+    {
+      "n": "9",
+      "claim": "The live harness requires explicit opt-in; runtime defaults to all three US GPT-5.6 profiles; BEDROCK_LIVE_AUTHS/MODELS/STREAM/RESPONSES select modes.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Opt-in gate, default models and env vars all exist as documented.",
+      "user_impact": null,
+      "note": "The harness also silently loads a repo-root .env (or BEDROCK_LIVE_ENV_FILE) into the environment; developer-only and not mentioned.",
+      "source": {
+        "file": "bedrock.md",
+        "line_start": 177,
+        "line_end": 189,
+        "quote": "Runtime verification defaults to all three US GPT-5.6 inference profiles."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "tests/lib/bedrock_live.py",
+          "line_start": 115,
+          "line_end": 116,
+          "quote": "if os.environ.get(\"BEDROCK_LIVE_TEST\") != \"1\":\n        raise RuntimeError(\"Refusing live AWS requests. Set BEDROCK_LIVE_TEST=1 to run this test.\")",
+          "checked": {
+            "ok": true,
+            "where": "tests/lib/bedrock_live.py:115-116",
+            "file_sha256": "91f0a79d837a2a1ea98d2d2af8e261ca23c0f293148383ca18bf259b05a6a93b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "tests/lib/bedrock_live.py",
+          "line_start": 30,
+          "line_end": 34,
+          "quote": "_RUNTIME_MODELS = (\n    \"us.openai.gpt-5.6-sol\",\n    \"us.openai.gpt-5.6-terra\",\n    \"us.openai.gpt-5.6-luna\",\n)",
+          "checked": {
+            "ok": true,
+            "where": "tests/lib/bedrock_live.py:30-34",
+            "file_sha256": "91f0a79d837a2a1ea98d2d2af8e261ca23c0f293148383ca18bf259b05a6a93b"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_3563c7d40743"
+    },
+    {
+      "n": "10",
+      "claim": "The SDK supports Python 3.10 and newer.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "requires-python is >=3.10.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "bedrock.md",
+        "line_start": 11,
+        "quote": "The SDK supports Python 3.10 and newer."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "pyproject.toml",
+          "line_start": 20,
+          "quote": "requires-python = \">= 3.10\"",
+          "checked": {
+            "ok": true,
+            "where": "pyproject.toml:20",
+            "file_sha256": "c2eb1f94d867a2ac1a7aa7fcefdbd5bbc3b76afff7ea76c5b47501b2db9be97a"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_f15dc2f1f57a"
+    },
+    {
+      "n": "11",
+      "claim": "ci.yml pull-request jobs run with read-only workflow permissions and non-persisted checkout credentials.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Top-level permissions are contents: read; every checkout sets persist-credentials: false; downstream jobs need dependency-locks, which verifies lock provenance first.",
+      "user_impact": null,
+      "note": "The doc's line references to ci.yml (e.g. :218, :240) are stale; the examples job is now at lines 314-343. Compatibility and python-policy jobs do not need dependency-locks for python-policy.",
+      "source": {
+        "file": "docs/architecture/security-model.md",
+        "line_start": 68,
+        "quote": "Workflow permissions are read-only, checkout credentials are not persisted, and dependency/build provenance is checked before installation."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": ".github/workflows/ci.yml",
+          "line_start": 18,
+          "line_end": 19,
+          "quote": "permissions:\n  contents: read",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/ci.yml:18-19",
+            "file_sha256": "6d3e69122c378f11f8f8e9d4e57935c5be4b170f21daa0785da749672fbf2abb"
+          }
+        },
+        {
+          "type": "quote",
+          "file": ".github/workflows/ci.yml",
+          "line_start": 33,
+          "line_end": 35,
+          "quote": "- uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1\n        with:\n          persist-credentials: false",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/ci.yml:33-35",
+            "file_sha256": "6d3e69122c378f11f8f8e9d4e57935c5be4b170f21daa0785da749672fbf2abb"
+          }
+        },
+        {
+          "type": "quote",
+          "file": ".github/workflows/ci.yml",
+          "line_start": 73,
+          "quote": "needs: dependency-locks",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/ci.yml:73",
+            "file_sha256": "6d3e69122c378f11f8f8e9d4e57935c5be4b170f21daa0785da749672fbf2abb"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_42b2aa01d091"
+    },
+    {
+      "n": "12",
+      "claim": "The ci.yml examples job (secret OPENAI_API_KEY) runs only on same-repository push to main and selects environment: ci, separate from the read-only PR boundary.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Exactly as described. The secret is only exposed in the two example steps.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/architecture/security-model.md",
+        "line_start": 240,
+        "line_end": 243,
+        "quote": "on a same-repository push to `main`, it\n  checks out the merged revision and runs `examples/demo.py` and\n  `examples/async_demo.py` with `OPENAI_API_KEY` in each process environment."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": ".github/workflows/ci.yml",
+          "line_start": 317,
+          "line_end": 320,
+          "quote": "environment: ci\n    runs-on: ubuntu-latest\n    needs: dependency-locks\n    if: github.repository == 'openai/openai-python' && github.event_name == 'push' && github.ref == 'refs/heads/main'",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/ci.yml:317-320",
+            "file_sha256": "6d3e69122c378f11f8f8e9d4e57935c5be4b170f21daa0785da749672fbf2abb"
+          }
+        },
+        {
+          "type": "quote",
+          "file": ".github/workflows/ci.yml",
+          "line_start": 336,
+          "line_end": 339,
+          "quote": "- env:\n          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}\n        run: |\n            uv run --locked --all-extras python examples/demo.py",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/ci.yml:336-339",
+            "file_sha256": "6d3e69122c378f11f8f8e9d4e57935c5be4b170f21daa0785da749672fbf2abb"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_b55cc1aa5031"
+    },
+    {
+      "n": "13",
+      "claim": "PyPI publishing uses an upload-only OIDC job; build jobs have no id-token permission.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both publish workflows grant id-token: write only to the upload job that downloads the built artifact; build jobs have contents: read. The create-releases release job mints an app token with write access and has permissions: {} for GITHUB_TOKEN.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/architecture/security-model.md",
+        "line_start": 66,
+        "quote": "Locked/provenance-checked build requirements; no OIDC in build; `id-token: write` only in the publish job."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": ".github/workflows/publish-pypi.yml",
+          "line_start": 14,
+          "line_end": 15,
+          "quote": "permissions:\n      contents: read",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/publish-pypi.yml:14-15",
+            "file_sha256": "da89ed4b8e3c1d3c29d83c094534e17568eef1ee56ea45df0d10b31e3175f04f"
+          }
+        },
+        {
+          "type": "quote",
+          "file": ".github/workflows/publish-pypi.yml",
+          "line_start": 48,
+          "line_end": 49,
+          "quote": "permissions:\n      id-token: write",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/publish-pypi.yml:48-49",
+            "file_sha256": "da89ed4b8e3c1d3c29d83c094534e17568eef1ee56ea45df0d10b31e3175f04f"
+          }
+        },
+        {
+          "type": "quote",
+          "file": ".github/workflows/create-releases.yml",
+          "line_start": 76,
+          "line_end": 77,
+          "quote": "permissions:\n      id-token: write",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/create-releases.yml:76-77",
+            "file_sha256": "7eae9b637f14d202e7d659f3382c60480a017ad4b90b132f04272c4b78a3e5c9"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_48c281ffc8de"
+    },
+    {
+      "n": "14",
+      "claim": "castiron-custom-code.yml runs proposed offline tests and advisory report on pull_request with read-only permissions.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Workflow-level permissions are contents: read; no job overrides to write; the report job's GH_TOKEN inherits that read-only grant.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "scripts/castiron/CUSTOM_CODE.md",
+        "line_start": 78,
+        "line_end": 79,
+        "quote": "- `castiron-custom-code.yml` runs proposed offline tests and the advisory report\n  on `pull_request` with read-only permissions."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": ".github/workflows/castiron-custom-code.yml",
+          "line_start": 4,
+          "line_end": 12,
+          "quote": "on:\n  pull_request:\n    types: [opened, synchronize, reopened, ready_for_review, edited]\n  # Notify the existing trusted handler for queue candidates.\n  merge_group:\n    types: [checks_requested]\n\npermissions:\n  contents: read",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/castiron-custom-code.yml:4-12",
+            "file_sha256": "402da2fd16cc575eef7f4bf6bb1cff25272ee350452cb776f17c1589c036a3a1"
+          }
+        },
+        {
+          "type": "quote",
+          "file": ".github/workflows/castiron-custom-code.yml",
+          "line_start": 46,
+          "quote": "run: python3 -m unittest discover -s scripts/castiron -p 'test_custom_code*.py'",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/castiron-custom-code.yml:46",
+            "file_sha256": "402da2fd16cc575eef7f4bf6bb1cff25272ee350452cb776f17c1589c036a3a1"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_f29695e8e1d7"
+    },
+    {
+      "n": "15",
+      "claim": "CodeQL is a separate same-repo PR boundary with security-events: write that does not run repository scripts at checkout.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The workflow matches the description: pull_request trigger, security-events: write, pinned actions, no repo run step.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/architecture/security-model.md",
+        "line_start": 254,
+        "line_end": 259,
+        "quote": "- The read-only statement above is specific to `ci.yml`. CodeQL is a distinct\n  same-repository PR boundary because pinned analyzer actions process candidate\n  source while the job token has `security-events: write`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": ".github/workflows/codeql.yml",
+          "line_start": 15,
+          "line_end": 18,
+          "quote": "permissions:\n  actions: read\n  contents: read\n  security-events: write",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/codeql.yml:15-18",
+            "file_sha256": "dfa8755b29d15116fd5f47fde6252b2e4113162d8708750eb995010dc9f512ff"
+          }
+        },
+        {
+          "type": "quote",
+          "file": ".github/workflows/codeql.yml",
+          "line_start": 32,
+          "line_end": 35,
+          "quote": "- name: Initialize CodeQL\n        uses: github/codeql-action/init@2892aa5e19bbd11bc0cff5427e3b750a04d9e3c2 # v4.38.2\n        with:\n          languages: python",
+          "checked": {
+            "ok": true,
+            "where": ".github/workflows/codeql.yml:32-35",
+            "file_sha256": "dfa8755b29d15116fd5f47fde6252b2e4113162d8708750eb995010dc9f512ff"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_437bcd874d0f"
+    },
+    {
+      "n": "16",
+      "claim": "Both Playwright's bundled Chromium and the chrome channel keep the browser sandbox enabled in the quickstart.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The example launches with chromium_sandbox=True regardless of channel; any other channel value is rejected. No --no-sandbox flag appears in examples.",
+      "user_impact": null,
+      "note": "This concerns the shipped examples/quickstart; BrowserToolset itself does not launch a browser.",
+      "source": {
+        "file": "docs/browser.md",
+        "line_start": 30,
+        "line_end": 31,
+        "quote": "Leave the variable unset to use Playwright's bundled Chromium. Both choices\nkeep the browser sandbox enabled."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "examples/browser/read_only.py",
+          "line_start": 91,
+          "line_end": 97,
+          "quote": "def example_browser_channel() -> Literal[\"chrome\"] | None:\n    channel = os.environ.get(\"OPENAI_EXAMPLE_BROWSER_CHANNEL\")\n    if channel is None:\n        return None\n    if channel != \"chrome\":\n        raise ValueError(\"OPENAI_EXAMPLE_BROWSER_CHANNEL must be unset or chrome.\")",
+          "checked": {
+            "ok": true,
+            "where": "examples/browser/read_only.py:91-97",
+            "file_sha256": "8a3782435da346af380b636a0b24cd16d52d49b9472a8b41c627244f760c8ae7"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "examples/browser/read_only.py",
+          "line_start": 215,
+          "line_end": 218,
+          "quote": "browser = await playwright.chromium.launch(\n            headless=True,\n            channel=channel,\n            chromium_sandbox=True,",
+          "checked": {
+            "ok": true,
+            "where": "examples/browser/read_only.py:215-218",
+            "file_sha256": "8a3782435da346af380b636a0b24cd16d52d49b9472a8b41c627244f760c8ae7"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_2d90bc83016e"
+    },
+    {
+      "n": "17",
+      "claim": "MCP approval is required by default; an empty always: {} or never: {} filter applies to every tool; read_only and ambiguous filters are left to the API.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "None defaults to always; a filter without tool_names matches every tool; read_only or overlapping filters return None (no local enforcement); a call needing approval without a request id raises.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/browser.md",
+        "line_start": 501,
+        "line_end": 506,
+        "quote": "An empty `always: {}` or `never: {}` filter applies to every tool. Read-only\nfilters and ambiguous filter combinations remain API policies because the response does\nnot contain enough information to verify them."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/lib/responses_tool_runner.py",
+          "line_start": 306,
+          "line_end": 308,
+          "quote": "policy = declaration.get(\"require_approval\")\n    if policy is None:\n        return \"always\"",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/responses_tool_runner.py:306-308",
+            "file_sha256": "a99ae5f415b23e14f66a68db5147a8618989d35f9819362d5487a765c9ea8b8b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/lib/responses_tool_runner.py",
+          "line_start": 325,
+          "line_end": 330,
+          "quote": "if \"read_only\" in tool_filter or (\"tool_names\" in tool_filter and not isinstance(names, list)):\n            return None\n        if \"tool_names\" not in tool_filter or (isinstance(names, list) and name in names):\n            if matched is not None:\n                return None\n            matched = rule",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/responses_tool_runner.py:325-330",
+            "file_sha256": "a99ae5f415b23e14f66a68db5147a8618989d35f9819362d5487a765c9ea8b8b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/lib/responses_tool_runner.py",
+          "line_start": 1503,
+          "line_end": 1504,
+          "quote": "if item.type == \"mcp_call\" and policy == \"always\" and item.approval_request_id is None:\n            raise self.error(\"MCP call requires a matching approval request.\")",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/responses_tool_runner.py:1503-1504",
+            "file_sha256": "a99ae5f415b23e14f66a68db5147a8618989d35f9819362d5487a765c9ea8b8b"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_6560e08d9edf"
+    },
+    {
+      "n": "18",
+      "claim": "wait_for text is nonempty, at most 256 UTF-8 bytes after whitespace normalization; timeout is an integer 1-30000 ms; run_script timeout 1-30000; diagnostics limit 1-100; file grant_id nonempty at most 256 UTF-8 bytes.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Limits are enforced exactly as documented; invalid values raise BrowserError.",
+      "user_impact": null,
+      "note": "The same limits also appear in the JSON schema (maximum: 30000, etc.).",
+      "source": {
+        "file": "docs/browser-navigation.md",
+        "line_start": 14,
+        "line_end": 15,
+        "quote": "Normalized text must be nonempty and at most\n256 UTF-8 bytes, and timeout must be an integer from 1 to 30000."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/lib/browser.py",
+          "line_start": 1185,
+          "line_end": 1191,
+          "quote": "or (kind == \"timeout\" and isinstance(value, int) and not isinstance(value, bool) and 1 <= value <= 30000)\n            or (kind == \"region\" and _zoom_region(cast(object, value)))\n            or (\n                kind == \"wait_text\"\n                and isinstance(value, str)\n                and _state_text(\" \".join(value.split()), 256, allow_empty=False)\n            )",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/browser.py:1185-1191",
+            "file_sha256": "cfe6ce79b8ca6ce3c58679a2e21eb0a42b4c1641caae5e073760d838138ca92f"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/lib/browser.py",
+          "line_start": 1174,
+          "line_end": 1176,
+          "quote": "or (kind == \"diagnostic_limit\" and type(value) is int and 1 <= value <= 100)\n            or (kind == \"script\" and _read_text(value, None, allow_empty=False))\n            or (kind == \"file_grant\" and _read_text(value, 256, allow_empty=False))",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/browser.py:1174-1176",
+            "file_sha256": "cfe6ce79b8ca6ce3c58679a2e21eb0a42b4c1641caae5e073760d838138ca92f"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/lib/browser.py",
+          "line_start": 598,
+          "line_end": 603,
+          "quote": "def _state_text(value: object, limit: int | None, *, allow_empty: bool) -> TypeGuard[str]:\n    if not isinstance(value, str) or (not allow_empty and not value):\n        return False\n    if limit is None:\n        return re.search(r\"[\\ud800-\\udfff]\", value) is None\n    return len(value.encode(\"utf-8\")) <= limit",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/browser.py:598-603",
+            "file_sha256": "cfe6ce79b8ca6ce3c58679a2e21eb0a42b4c1641caae5e073760d838138ca92f"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_46a62059e12a"
+    },
+    {
+      "n": "19",
+      "claim": "State-changing browser members need confirm(ctx); navigation also needs url_policy checked before confirmation; callbacks must return exactly True; read-only methods do not call confirm unless listed in confirm_reads.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Construction raises without confirm/url_policy; at execution the URL policy runs before confirm, both require `is True`, and the context is deep-copied so callbacks cannot alter the dispatched action.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/browser.md",
+        "line_start": 352,
+        "line_end": 355,
+        "quote": "The SDK asks for confirmation before state-changing methods. By default,\nread-only methods do not call `confirm`. To protect selected reads, also pass\n`confirm_reads=[\"list_tabs\", \"get_page_text\", \"screenshot\"]`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/lib/browser.py",
+          "line_start": 1321,
+          "line_end": 1324,
+          "quote": "if not has_confirm and (self._confirm_reads or any(name[17:] not in _READ_ONLY for name in self._handlers)):\n            raise ValueError(\"State-changing browser members require confirm.\")\n        if not has_url_policy and self._names.intersection({\"browser_navigate\", \"browser_new_tab\"}):\n            raise ValueError(\"Browser navigation members require url_policy.\")",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/browser.py:1321-1324",
+            "file_sha256": "cfe6ce79b8ca6ce3c58679a2e21eb0a42b4c1641caae5e073760d838138ca92f"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/lib/browser.py",
+          "line_start": 1559,
+          "line_end": 1566,
+          "quote": "if ctx[\"member\"] in {\"navigate\", \"new_tab\"} and isinstance(url, str):\n                if url_policy is None or invoke(url_policy, deepcopy(ctx), url, cancelled=cancelled) is not True:\n                    raise BrowserError(\"Browser navigation was not approved.\")\n                _check_cancelled(cancelled)\n            if ctx[\"member\"] not in _READ_ONLY and (\n                confirm is None or invoke(confirm, deepcopy(ctx), cancelled=cancelled) is not True\n            ):\n                raise BrowserError(\"Browser action was not approved. Do not retry it unless the user asks.\")",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/browser.py:1559-1566",
+            "file_sha256": "cfe6ce79b8ca6ce3c58679a2e21eb0a42b4c1641caae5e073760d838138ca92f"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_6a42ba11a688"
+    },
+    {
+      "n": "20",
+      "claim": "HTTPX2 is the default HTTP client, and aiohttp is optional via DefaultAioHttpClient.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The default async client subclasses httpx2.AsyncClient; DefaultAioHttpClient is exported and chosen only when explicitly supplied (installed variant vs missing-dependency stub).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 304,
+        "quote": "By default, the async client uses HTTPX2. For improved concurrency performance, you may also use `aiohttp` as the HTTPX2 transport."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/_base_client.py",
+          "line_start": 1563,
+          "quote": "class _DefaultAsyncHttpxClient(httpx2.AsyncClient):",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/_base_client.py:1563",
+            "file_sha256": "b9d642ace7d6217bb4fb3c7c9fedd2ac45ae24def32daa696326f076ce179a3d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/__init__.py",
+          "line_start": 40,
+          "quote": "from ._base_client import DefaultHttpxClient, DefaultAioHttpClient, DefaultAsyncHttpxClient",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/__init__.py:40",
+            "file_sha256": "8f4fdba5193967d09ca79bc4504e79bd8c20ba4bd8f09c2df3817501540a39db"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_2f0626d17bee"
+    },
+    {
+      "n": "21",
+      "claim": "API origin precedence: explicit base_url, then OPENAI_BASE_URL, then https://api.openai.com/v1 (X.509 mode defaults to https://mtls.api.openai.com/v1).",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Precedence is exactly as documented, including the X.509 default in README line 203.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/architecture/security-model.md",
+        "line_start": 55,
+        "quote": "Explicit `base_url`, then `OPENAI_BASE_URL`, then default. | `https://api.openai.com/v1` by default."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/_client.py",
+          "line_start": 328,
+          "line_end": 333,
+          "quote": "elif base_url is None:\n            base_url = os.environ.get(\"OPENAI_BASE_URL\")\n        self._base_url_was_default = provider_runtime is None and base_url is None\n        self._data_residency = data_residency\n        if base_url is None:\n            base_url = MTLS_API_BASE_URL if x509_identity is not None else \"https://api.openai.com/v1\"",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/_client.py:328-333",
+            "file_sha256": "6de3a89ee9cb99104118fddd0b44ba13dbe94b78d088cd025ebae85e4c3b884e"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/auth/_x509.py",
+          "line_start": 25,
+          "quote": "MTLS_API_BASE_URL = \"https://mtls.api.openai.com/v1\"",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/auth/_x509.py:25",
+            "file_sha256": "1c08b7b35f9fabbbd0c32193a19ca1b78091151be38c058ab376f96a0d909ac5"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9b9ebfc69441"
+    },
+    {
+      "n": "22",
+      "claim": "Azure clients do not support X.509 workload identity.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both Azure clients raise on an X.509 identity at construction.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 215,
+        "line_end": 217,
+        "quote": "Azure clients do not support X.509 workload\nidentity."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/lib/azure.py",
+          "line_start": 294,
+          "line_end": 295,
+          "quote": "if is_x509_workload_identity(workload_identity):\n            raise OpenAIError(\"X.509 workload identity is not supported by Azure clients\")",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/azure.py:294-295",
+            "file_sha256": "96ccc9508eb7c0b3e38fa720ed53af3121e4e47626ec29fbc610f66f94b32d00"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9e3bb48b6ee2"
+    },
+    {
+      "n": "23",
+      "claim": "OPENAI_LOG accepts info, debug, warning, error, critical and configures the openai logger only, not HTTP transport loggers.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Only the \\\"openai\\\" logger level is set. Unknown values are silently ignored. Authorization, api-key and x-amz-security-token headers are redacted in logged headers.",
+      "user_impact": null,
+      "note": "Values are case-sensitive (\\\"INFO\\\" would be silently ignored).",
+      "source": {
+        "file": "README.md",
+        "line_start": 836,
+        "line_end": 838,
+        "quote": "Set it to `warning`, `error`, or `critical`\nto show only messages at that level or higher. `OPENAI_LOG` configures the `openai`\nlogger; configure HTTP transport loggers separately using Python logging."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/_utils/_logs.py",
+          "line_start": 38,
+          "line_end": 47,
+          "quote": "env = os.environ.get(\"OPENAI_LOG\")\n    if env is None:\n        return\n\n    level = _LOG_LEVELS.get(env)\n    if level is None:\n        return\n\n    _basic_config()\n    logger.setLevel(level)",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/_utils/_logs.py:38-47",
+            "file_sha256": "c12687068d6cc97c6a24675824f7ccc601bef26c069297b3ffe55ff5067a367b"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_b668a8bb20f2"
+    },
+    {
+      "n": "24",
+      "claim": "Webhook verification uses HMAC-SHA256 with constant-time comparison and a bounded-age timestamp check (not replay prevention).",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "As documented: default 300s tolerance, no id store. The code comment says the timestamp check is to 'prevent replay attacks' but the docs correctly describe it as bounded age only.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/architecture/security-model.md",
+        "line_start": 62,
+        "quote": "Timestamp tolerance is a bounded-age check, not uniqueness or replay prevention; HMAC-SHA256 and constant-time comparison authenticate bytes; `unwrap` verifies before JSON parsing; caller owns webhook-id deduplication."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/lib/_webhooks.py",
+          "line_start": 59,
+          "line_end": 64,
+          "quote": "expected_signature = base64.b64encode(\n        hmac.new(decoded_secret, signed_payload.encode(), hashlib.sha256).digest()\n    ).decode()\n\n    # Accept if any signature matches\n    return any(hmac.compare_digest(expected_signature, sig) for sig in signatures)",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/_webhooks.py:59-64",
+            "file_sha256": "ef636b9c0cdfcccd782fece682cf341cef9aad455719c312eec8dab75734e33c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/lib/_webhooks.py",
+          "line_start": 33,
+          "line_end": 37,
+          "quote": "if now - timestamp_seconds > tolerance:\n        raise InvalidWebhookSignatureError(\"Webhook timestamp is too old\") from None\n\n    if timestamp_seconds > now + tolerance:\n        raise InvalidWebhookSignatureError(\"Webhook timestamp is too new\") from None",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/_webhooks.py:33-37",
+            "file_sha256": "ef636b9c0cdfcccd782fece682cf341cef9aad455719c312eec8dab75734e33c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/resources/webhooks/webhooks.py",
+          "line_start": 511,
+          "quote": "tolerance: int = 300,",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/resources/webhooks/webhooks.py:511",
+            "file_sha256": "f730653c5937f4c723f5519c7e86823fcba0ee088c270ecbd8e02fd10e49c654"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_a64a917b64e4"
+    },
+    {
+      "n": "25",
+      "claim": "max_concurrent_calls defaults to 2, must be a positive integer, and applies to opted-in independent eager calls; defaults remain serial.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Default 2 and validation exist in sync and async runners; a ThreadPoolExecutor with that many workers is used for eager calls.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "docs/browser.md",
+        "line_start": 630,
+        "line_end": 632,
+        "quote": "Set `max_concurrent_calls`\non `run()` or `iterate()` to a positive integer (default 2)."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/lib/responses_tool_runner.py",
+          "line_start": 1863,
+          "quote": "max_concurrent_calls: int = 2,",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/responses_tool_runner.py:1863",
+            "file_sha256": "a99ae5f415b23e14f66a68db5147a8618989d35f9819362d5487a765c9ea8b8b"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/lib/responses_tool_runner.py",
+          "line_start": 1929,
+          "line_end": 1930,
+          "quote": "if type(max_concurrent_calls) is not int or max_concurrent_calls < 1:\n                raise ValueError(\"max_concurrent_calls must be a positive integer.\")",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/responses_tool_runner.py:1929-1930",
+            "file_sha256": "a99ae5f415b23e14f66a68db5147a8618989d35f9819362d5487a765c9ea8b8b"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_109bbd009c90"
+    },
+    {
+      "n": "26",
+      "claim": "The .stream() helper must be used inside a context manager so the response cannot leak; the request is only made on entering.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The API request is deferred until __enter__ and the stream is closed in __exit__, so no response is opened without the context manager.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "helpers.md",
+        "line_start": 170,
+        "quote": "Unlike `.create(stream=True)`, the `.stream()` method requires usage within a context manager to prevent accidental leakage of the response:"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/lib/streaming/chat/_completions.py",
+          "line_start": 148,
+          "line_end": 149,
+          "quote": "def __enter__(self) -> ChatCompletionStream[ResponseFormatT]:\n        raw_stream = self.__api_request()",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/streaming/chat/_completions.py:148-149",
+            "file_sha256": "a7c98ba7e43bfbcaa54cac470845523eef446239ff04624c542e2cff36d17a1d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/lib/streaming/chat/_completions.py",
+          "line_start": 165,
+          "line_end": 166,
+          "quote": "if self.__stream is not None:\n            self.__stream.close()",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/lib/streaming/chat/_completions.py:165-166",
+            "file_sha256": "a7c98ba7e43bfbcaa54cac470845523eef446239ff04624c542e2cff36d17a1d"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_233f32fd0634"
+    },
+    {
+      "n": "27",
+      "claim": "The existing DefaultHttpxClient and DefaultAsyncHttpxClient names now construct HTTPX2 clients.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both legacy names alias subclasses of httpx2 clients.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "httpx2.md",
+        "line_start": 95,
+        "line_end": 97,
+        "quote": "The existing `DefaultHttpxClient` and `DefaultAsyncHttpxClient` names continue\nto work, but now construct HTTPX2 clients."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/openai/_base_client.py",
+          "line_start": 967,
+          "quote": "class _DefaultHttpxClient(httpx2.Client):",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/_base_client.py:967",
+            "file_sha256": "b9d642ace7d6217bb4fb3c7c9fedd2ac45ae24def32daa696326f076ce179a3d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/openai/_base_client.py",
+          "line_start": 1563,
+          "quote": "class _DefaultAsyncHttpxClient(httpx2.AsyncClient):",
+          "checked": {
+            "ok": true,
+            "where": "src/openai/_base_client.py:1563",
+            "file_sha256": "b9d642ace7d6217bb4fb3c7c9fedd2ac45ae24def32daa696326f076ce179a3d"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_07f36040a78d"
+    }
+  ],
+  "totals": {
+    "claims": 27,
+    "VERIFIED": 26,
+    "PARTIAL": 1,
+    "FALSE": 0,
+    "UNVERIFIABLE": 0,
+    "behaviors": 0,
+    "downgraded": 0,
+    "retracted": 0,
+    "rejected_citations": 1
+  }
+}

@@ -1,0 +1,3811 @@
+{
+  "elliot": "0.6.0",
+  "id": "aud_3839ef1086ae",
+  "root": "/home/claude/elliot-runs/bench/repos/vercel_ai",
+  "project": "vercel_ai",
+  "commit": "ec72a5410f4cfd2ff446a3b0d87f5dcc2c18515c",
+  "date": "2026-10-22T15:47:10+00:00",
+  "dirty": true,
+  "remote": "https://github.com/vercel/ai.git",
+  "tree_fingerprint": "a3df7ff811dd282d7622eaa397bbeaeace18b9ced16a377e51f046b789b18cb8",
+  "started_at": "2026-10-22T21:40:13.727Z",
+  "sources": [
+    {
+      "file": ".github/SECURITY.md",
+      "lines": 10
+    },
+    {
+      "file": "apps/docs/README.md",
+      "lines": 110
+    },
+    {
+      "file": "content/docs/00-introduction/index.mdx",
+      "lines": 84
+    },
+    {
+      "file": "content/docs/02-foundations/01-overview.mdx",
+      "lines": 44
+    },
+    {
+      "file": "content/docs/02-foundations/02-providers-and-models.mdx",
+      "lines": 191
+    },
+    {
+      "file": "content/docs/02-foundations/03-prompts.mdx",
+      "lines": 628
+    },
+    {
+      "file": "content/docs/02-foundations/04-tools.mdx",
+      "lines": 314
+    },
+    {
+      "file": "content/docs/02-foundations/05-streaming.mdx",
+      "lines": 63
+    },
+    {
+      "file": "content/docs/02-foundations/06-provider-options.mdx",
+      "lines": 354
+    },
+    {
+      "file": "content/docs/02-foundations/index.mdx",
+      "lines": 50
+    },
+    {
+      "file": "content/docs/02-getting-started/00-choosing-a-provider.mdx",
+      "lines": 96
+    },
+    {
+      "file": "content/docs/02-getting-started/01-navigating-the-library.mdx",
+      "lines": 87
+    },
+    {
+      "file": "content/docs/02-getting-started/02-nextjs-app-router.mdx",
+      "lines": 550
+    },
+    {
+      "file": "content/docs/02-getting-started/03-nextjs-pages-router.mdx",
+      "lines": 533
+    },
+    {
+      "file": "content/docs/02-getting-started/04-svelte.mdx",
+      "lines": 611
+    },
+    {
+      "file": "content/docs/02-getting-started/05-nuxt.mdx",
+      "lines": 548
+    },
+    {
+      "file": "content/docs/02-getting-started/06-nodejs.mdx",
+      "lines": 495
+    },
+    {
+      "file": "content/docs/02-getting-started/07-expo.mdx",
+      "lines": 733
+    },
+    {
+      "file": "content/docs/02-getting-started/08-tanstack-start.mdx",
+      "lines": 574
+    },
+    {
+      "file": "content/docs/02-getting-started/09-coding-agents.mdx",
+      "lines": 147
+    },
+    {
+      "file": "content/docs/02-getting-started/index.mdx",
+      "lines": 45
+    },
+    {
+      "file": "content/docs/03-agents/01-overview.mdx",
+      "lines": 142
+    },
+    {
+      "file": "content/docs/03-agents/02-building-agents.mdx",
+      "lines": 589
+    },
+    {
+      "file": "content/docs/03-agents/03-workflows.mdx",
+      "lines": 387
+    },
+    {
+      "file": "content/docs/03-agents/04-loop-control.mdx",
+      "lines": 520
+    },
+    {
+      "file": "content/docs/03-agents/05-configuring-call-options.mdx",
+      "lines": 289
+    },
+    {
+      "file": "content/docs/03-agents/06-memory.mdx",
+      "lines": 271
+    },
+    {
+      "file": "content/docs/03-agents/06-policy-tool-approvals.mdx",
+      "lines": 414
+    },
+    {
+      "file": "content/docs/03-agents/06-subagents.mdx",
+      "lines": 365
+    },
+    {
+      "file": "content/docs/03-agents/06-tool-approvals.mdx",
+      "lines": 355
+    },
+    {
+      "file": "content/docs/03-agents/07-workflow-agent.mdx",
+      "lines": 904
+    },
+    {
+      "file": "content/docs/03-agents/08-terminal-ui.mdx",
+      "lines": 188
+    },
+    {
+      "file": "content/docs/03-agents/index.mdx",
+      "lines": 73
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/01-overview.mdx",
+      "lines": 32
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/05-generating-text.mdx",
+      "lines": 873
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/10-generating-structured-data.mdx",
+      "lines": 526
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/15-tools-and-tool-calling.mdx",
+      "lines": 1563
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/16-mcp-tools.mdx",
+      "lines": 808
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/17-mcp-apps.mdx",
+      "lines": 270
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/17-mcp-events.mdx",
+      "lines": 227
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/17-runtime-and-tool-context.mdx",
+      "lines": 233
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/18-code-mode.mdx",
+      "lines": 310
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/18-tools.mdx",
+      "lines": 157
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/19-tool-search.mdx",
+      "lines": 119
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/20-prompt-engineering.mdx",
+      "lines": 162
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/25-settings.mdx",
+      "lines": 274
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/26-reasoning.mdx",
+      "lines": 199
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/30-embeddings.mdx",
+      "lines": 267
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/31-reranking.mdx",
+      "lines": 221
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/32-decisions.mdx",
+      "lines": 352
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/35-image-generation.mdx",
+      "lines": 417
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/36-realtime.mdx",
+      "lines": 300
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/36-transcription.mdx",
+      "lines": 376
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/36-translation.mdx",
+      "lines": 210
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/37-speech.mdx",
+      "lines": 192
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/38-video-generation.mdx",
+      "lines": 488
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/39-file-uploads.mdx",
+      "lines": 181
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/40-middleware.mdx",
+      "lines": 607
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/41-skill-uploads.mdx",
+      "lines": 212
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/42-batch.mdx",
+      "lines": 372
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/45-provider-management.mdx",
+      "lines": 481
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/50-error-handling.mdx",
+      "lines": 242
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/55-testing.mdx",
+      "lines": 295
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/60-telemetry.mdx",
+      "lines": 966
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/65-devtools.mdx",
+      "lines": 202
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/65-lifecycle-callbacks.mdx",
+      "lines": 1278
+    },
+    {
+      "file": "content/docs/03-ai-sdk-core/index.mdx",
+      "lines": 150
+    },
+    {
+      "file": "content/docs/03-ai-sdk-harnesses/01-overview.mdx",
+      "lines": 118
+    },
+    {
+      "file": "content/docs/03-ai-sdk-harnesses/02-harness-agent.mdx",
+      "lines": 779
+    },
+    {
+      "file": "content/docs/03-ai-sdk-harnesses/03-tools.mdx",
+      "lines": 298
+    },
+    {
+      "file": "content/docs/03-ai-sdk-harnesses/04-skills.mdx",
+      "lines": 66
+    },
+    {
+      "file": "content/docs/03-ai-sdk-harnesses/05-harness-adapters.mdx",
+      "lines": 48
+    },
+    {
+      "file": "content/docs/03-ai-sdk-harnesses/06-workflow-utilities.mdx",
+      "lines": 477
+    },
+    {
+      "file": "content/docs/03-ai-sdk-harnesses/07-ui.mdx",
+      "lines": 254
+    },
+    {
+      "file": "content/docs/03-ai-sdk-harnesses/08-terminal-ui.mdx",
+      "lines": 85
+    },
+    {
+      "file": "content/docs/03-ai-sdk-harnesses/index.mdx",
+      "lines": 61
+    },
+    {
+      "file": "content/docs/04-ai-sdk-ui/01-overview.mdx",
+      "lines": 45
+    },
+    {
+      "file": "content/docs/04-ai-sdk-ui/02-chatbot.mdx",
+      "lines": 1395
+    },
+    {
+      "file": "content/docs/04-ai-sdk-ui/03-chatbot-message-persistence.mdx",
+      "lines": 650
+    }
+  ],
+  "focused": false,
+  "candidates": [
+    {
+      "id": "c1",
+      "file": "content/docs/03-ai-sdk-core/15-tools-and-tool-calling.mdx",
+      "line": 1009,
+      "text": "The `Experimental_SandboxSession` interface is only a contract. Its isolation guarantees depend on your implementation or experimental sandbox provider. A local implementation that uses",
+      "risk": "high"
+    },
+    {
+      "id": "c2",
+      "file": "content/docs/03-ai-sdk-harnesses/02-harness-agent.mdx",
+      "line": 459,
+      "text": "`sandboxSession.destroy()` deletes it, that ID cannot be resumed.",
+      "risk": "high"
+    },
+    {
+      "id": "c3",
+      "file": "content/docs/07-reference/01-ai-sdk-core/34-sandbox.mdx",
+      "line": 81,
+      "text": "'Optional environment variables to set for the command. Merged with the experimental sandbox default environment, with these values taking precedence. Passing secrets here instead of inlining them into the command avoids",
+      "risk": "high"
+    },
+    {
+      "id": "c4",
+      "file": "packages/policy-opa/README.md",
+      "line": 470,
+      "text": "The framework's job here is to give you one obvious place to write per-action authorization for the cases this design covers. For stronger guarantees against arbitrary side effects, run untrusted execution in an out-of-b",
+      "risk": "high"
+    },
+    {
+      "id": "c5",
+      "file": "content/providers/01-ai-sdk-providers/00-ai-gateway.mdx",
+      "line": 174,
+      "text": "- OIDC authentication is automatically handled",
+      "risk": "high"
+    },
+    {
+      "id": "c6",
+      "file": "content/providers/01-ai-sdk-providers/03-openai.mdx",
+      "line": 2186,
+      "text": "The compaction item returned by the server is opaque and encrypted — it carries forward key prior state and reasoning into the next turn using fewer tokens. The AI SDK handles this automatically: compaction items are ret",
+      "risk": "high"
+    },
+    {
+      "id": "c7",
+      "file": "content/docs/02-foundations/04-tools.mdx",
+      "line": 284,
+      "text": "- **[bash-tool](https://www.npmjs.com/package/bash-tool)** - Provides `bash`, `readFile`, and `writeFile` tools for AI agents. Supports [@vercel/sandbox](https://vercel.com/docs/vercel-sandbox) for full VM isolation.",
+      "risk": "high"
+    },
+    {
+      "id": "c8",
+      "file": "content/docs/02-getting-started/00-choosing-a-provider.mdx",
+      "line": 22,
+      "text": "The [Vercel AI Gateway](/providers/ai-sdk-providers/ai-gateway) is the fastest way to get started with the AI SDK. Access models from OpenAI, Anthropic, Google, and other providers. Authenticate with [OIDC](https://ai-sd",
+      "risk": "high"
+    },
+    {
+      "id": "c9",
+      "file": "content/docs/02-getting-started/02-nextjs-app-router.mdx",
+      "line": 210,
+      "text": "The LLM's response is accessed through the message `parts` array. Each message contains an ordered array of `parts` that represents everything the model generated in its response. These parts can include plain text, reas",
+      "risk": "high"
+    },
+    {
+      "id": "c10",
+      "file": "content/docs/02-getting-started/09-coding-agents.mdx",
+      "line": 71,
+      "text": "Once an integration is registered, [telemetry](/docs/ai-sdk-core/telemetry) is enabled automatically for all your AI SDK calls:",
+      "risk": "high"
+    },
+    {
+      "id": "c11",
+      "file": "content/docs/03-agents/02-building-agents.mdx",
+      "line": 186,
+      "text": "The experimental sandbox description is not added to the model prompt automatically. Include",
+      "risk": "high"
+    },
+    {
+      "id": "c12",
+      "file": "content/docs/03-agents/06-tool-approvals.mdx",
+      "line": 303,
+      "text": "When you provide a secret, the server HMAC-signs each approval request at issuance and verifies the signature when the approval is replayed. A forged or tampered approval is rejected before the tool executes. Configure t",
+      "risk": "high"
+    },
+    {
+      "id": "c13",
+      "file": "content/docs/03-ai-sdk-core/15-tools-and-tool-calling.mdx",
+      "line": 998,
+      "text": "The experimental sandbox description is not added to the model prompt automatically. If the model should know about details such as the root directory, exposed ports, or public hostname, include `experimental_sandbox.des",
+      "risk": "high"
+    },
+    {
+      "id": "c14",
+      "file": "content/docs/03-ai-sdk-core/16-mcp-tools.mdx",
+      "line": 506,
+      "text": "Ask the client to read, delete, or create a note. The read-only tool executes",
+      "risk": "high"
+    },
+    {
+      "id": "c15",
+      "file": "content/docs/03-ai-sdk-core/18-code-mode.mdx",
+      "line": 9,
+      "text": "tools. The generated code runs in an isolated QuickJS sandbox and returns a JSON-serializable result.",
+      "risk": "high"
+    },
+    {
+      "id": "c16",
+      "file": "content/docs/03-ai-sdk-core/18-code-mode.mdx",
+      "line": 291,
+      "text": "Each invocation receives a fresh QuickJS context. Sandboxed code cannot access:",
+      "risk": "high"
+    },
+    {
+      "id": "c17",
+      "file": "content/docs/03-ai-sdk-core/60-telemetry.mdx",
+      "line": 57,
+      "text": "telemetry events by default. This includes text and object generation,",
+      "risk": "high"
+    },
+    {
+      "id": "c18",
+      "file": "content/docs/03-ai-sdk-core/60-telemetry.mdx",
+      "line": 81,
+      "text": "never included in telemetry events. Streaming transcription reports its final",
+      "risk": "high"
+    },
+    {
+      "id": "c19",
+      "file": "content/docs/03-ai-sdk-core/60-telemetry.mdx",
+      "line": 142,
+      "text": "`runtimeContext` can contain values that are useful inside your application but should not be sent to telemetry providers, such as user identifiers, tenant IDs, or credentials. Use `telemetry.includeRuntimeContext` to ma",
+      "risk": "high"
+    },
+    {
+      "id": "c20",
+      "file": "content/docs/03-ai-sdk-core/60-telemetry.mdx",
+      "line": 170,
+      "text": "Tool-specific context can also contain values that are useful during execution but should not be sent to telemetry providers, such as API keys or access tokens.",
+      "risk": "high"
+    },
+    {
+      "id": "c21",
+      "file": "content/docs/03-agents/04-loop-control.mdx",
+      "line": 21,
+      "text": "If this default limit stops a tool loop that could otherwise continue, the SDK logs a warning with guidance on configuring `stopWhen`. Set `stopWhen` explicitly to choose a limit, even if you want to keep `isStepCount(20",
+      "risk": "default"
+    },
+    {
+      "id": "c22",
+      "file": "content/docs/03-agents/06-policy-tool-approvals.mdx",
+      "line": 383,
+      "text": "- Switching backends with one env var (`POLICY_MODE`): in-process WASM by default, or a live OPA HTTP server for hot-reloading policies in dev.",
+      "risk": "default"
+    },
+    {
+      "id": "c23",
+      "file": "content/docs/03-agents/06-tool-approvals.mdx",
+      "line": 8,
+      "text": "By default, tools with an `execute` function run automatically when the model calls them. Use `toolApproval` on `ToolLoopAgent` to review, approve, or deny selected tool calls before they execute.",
+      "risk": "default"
+    },
+    {
+      "id": "c24",
+      "file": "content/docs/03-agents/07-workflow-agent.mdx",
+      "line": 386,
+      "text": "Use a high-entropy secret of at least 32 bytes and make the same secret",
+      "risk": "default"
+    },
+    {
+      "id": "c25",
+      "file": "content/docs/03-ai-sdk-core/15-tools-and-tool-calling.mdx",
+      "line": 161,
+      "text": "By default, tools with an `execute` function run automatically as the model calls them. Configure approval with `toolApproval` on `generateText`, `streamText`, or `ToolLoopAgent`.",
+      "risk": "default"
+    },
+    {
+      "id": "c26",
+      "file": "content/docs/03-ai-sdk-core/18-code-mode.mdx",
+      "line": 22,
+      "text": "requires Node.js 22 or newer and is not available in browser or edge runtimes.",
+      "risk": "default"
+    },
+    {
+      "id": "c27",
+      "file": "content/docs/03-ai-sdk-core/18-tools.mdx",
+      "line": 35,
+      "text": "Requires Node.js 22.13 or newer.",
+      "risk": "default"
+    },
+    {
+      "id": "c28",
+      "file": "content/docs/08-migration-guides/23-migration-guide-7-0.mdx",
+      "line": 1755,
+      "text": "The `redirect` option on `MCPTransportConfig` (used by both HTTP and SSE transports) now defaults to `'error'` instead of `'follow'`. This means HTTP redirects are rejected by default to prevent server-side request forge",
+      "risk": "default"
+    },
+    {
+      "id": "c29",
+      "file": "packages/alibaba/README.md",
+      "line": 201,
+      "text": "**Note:** The minimum content length for a cache block is 1,024 tokens.",
+      "risk": "default"
+    },
+    {
+      "id": "c30",
+      "file": "packages/code-mode/README.md",
+      "line": 17,
+      "text": "This package runs on the server and requires Node.js 22.13 or newer.",
+      "risk": "default"
+    },
+    {
+      "id": "c31",
+      "file": "packages/policy-opa/README.md",
+      "line": 619,
+      "text": "- `wrapMcpTools(tools, approval, opts?)`: bundle a discovered tool set with a fallback approval policy so the resulting `toolApproval` configuration is total over the discovered surface. `opts.default` controls what happ",
+      "risk": "default"
+    },
+    {
+      "id": "c32",
+      "file": "architecture/provider-abstraction.md",
+      "line": 65,
+      "text": "- **Budget mapping** (use `mapReasoningToProviderBudget`): Maps the spec enum to an absolute token budget. Takes the model's maximum reasoning budget (or overall max output tokens if no separate reasoning limit exists), ",
+      "risk": "default"
+    },
+    {
+      "id": "c33",
+      "file": "content/providers/01-ai-sdk-providers/00-ai-gateway.mdx",
+      "line": 97,
+      "text": "header. It defaults to the `AI_GATEWAY_API_KEY` environment variable.",
+      "risk": "default"
+    },
+    {
+      "id": "c34",
+      "file": "content/providers/01-ai-sdk-providers/00-ai-gateway.mdx",
+      "line": 1119,
+      "text": "Route the request through Browserbase's proxy network. Defaults to `false`.",
+      "risk": "default"
+    },
+    {
+      "id": "c35",
+      "file": "content/providers/01-ai-sdk-providers/03-openai.mdx",
+      "line": 95,
+      "text": "It defaults to the `OPENAI_BASE_URL` environment variable, and then to",
+      "risk": "default"
+    },
+    {
+      "id": "c36",
+      "file": "content/providers/01-ai-sdk-providers/03-openai.mdx",
+      "line": 105,
+      "text": "It defaults to the `OPENAI_API_KEY` environment variable.",
+      "risk": "default"
+    },
+    {
+      "id": "c37",
+      "file": "content/providers/01-ai-sdk-providers/04-azure.mdx",
+      "line": 119,
+      "text": "It defaults to the `AZURE_RESOURCE_NAME` environment variable.",
+      "risk": "default"
+    },
+    {
+      "id": "c38",
+      "file": "content/providers/01-ai-sdk-providers/04-azure.mdx",
+      "line": 128,
+      "text": "It defaults to the `AZURE_API_KEY` environment variable.",
+      "risk": "default"
+    },
+    {
+      "id": "c39",
+      "file": "content/providers/01-ai-sdk-providers/05-anthropic.mdx",
+      "line": 97,
+      "text": "It defaults to the `ANTHROPIC_API_KEY` environment variable.",
+      "risk": "default"
+    },
+    {
+      "id": "c40",
+      "file": "content/providers/01-ai-sdk-providers/05-anthropic.mdx",
+      "line": 103,
+      "text": "It defaults to the `ANTHROPIC_AUTH_TOKEN` environment variable.",
+      "risk": "default"
+    }
+  ],
+  "signals": [
+    {
+      "id": "telemetry",
+      "label": "telemetry or analytics SDK, or user identification",
+      "hit_count": 7,
+      "files": [
+        "elliot-report-v1/2026-10-22-ec72a54/claims.json",
+        "packages/google/src/speech-translation/google-speech-translation-model.ts",
+        "packages/openai/src/responses/__fixtures__/openai-mcp-tool.1.json",
+        "pnpm-workspace.yaml"
+      ],
+      "examples": [
+        {
+          "file": "elliot-report-v1/2026-10-22-ec72a54/claims.json",
+          "line": 486,
+          "text": "\"text\": \"const pcm16SilenceAmplitudeThreshold = 128;\""
+        },
+        {
+          "file": "elliot-report-v1/2026-10-22-ec72a54/claims.json",
+          "line": 491,
+          "text": "\"text\": \"if (Math.abs(view.getInt16(i * 2, true)) > pcm16SilenceAmplitudeThreshold) {\""
+        },
+        {
+          "file": "elliot-report-v1/2026-10-22-ec72a54/claims.json",
+          "line": 501,
+          "text": "\"text\": \"'@sentry/cli': false\""
+        },
+        {
+          "file": "packages/google/src/speech-translation/google-speech-translation-model.ts",
+          "line": 41,
+          "text": "const pcm16SilenceAmplitudeThreshold = 128;"
+        }
+      ]
+    },
+    {
+      "id": "permission_bypass",
+      "label": "permission or sandbox checks turned off",
+      "hit_count": 13,
+      "files": [
+        "elliot-report-v1/2026-10-22-ec72a54/claims.json",
+        "elliot-report-v1/2026-10-22-ec72a54/report.html",
+        "packages/harness-claude-code/src/bridge/index.ts",
+        "packages/harness-claude-code/src/claude-code-harness.ts"
+      ],
+      "examples": [
+        {
+          "file": "elliot-report-v1/2026-10-22-ec72a54/claims.json",
+          "line": 517,
+          "text": "\"text\": \"? 'bypassPermissions'\""
+        },
+        {
+          "file": "elliot-report-v1/2026-10-22-ec72a54/claims.json",
+          "line": 522,
+          "text": "\"text\": \"* that bypassPermissions guarantees it will never invoke.\""
+        },
+        {
+          "file": "elliot-report-v1/2026-10-22-ec72a54/claims.json",
+          "line": 527,
+          "text": "\"text\": \"'bypassPermissions',\""
+        },
+        {
+          "file": "elliot-report-v1/2026-10-22-ec72a54/claims.json",
+          "line": 858,
+          "text": "\"explanation\": \"In the Claude Code bridge the default maps to bypassPermissions with allowDangerouslySkipPermissions, as the docs describe (allow-all is the def"
+        }
+      ]
+    }
+  ],
+  "file_count": 9493,
+  "claims": [
+    {
+      "n": "1",
+      "claim": "Code mode: generated code runs in an isolated QuickJS sandbox and returns a JSON-serializable result.",
+      "verdict": "UNVERIFIABLE",
+      "severity": null,
+      "explanation": "The repo only wraps the third-party `run` package (createRunner/runner.run) with limits and host functions. The QuickJS isolation itself lives in that dependency, which is not in the repo or installed, so it cannot be confirmed here.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "content/docs/03-ai-sdk-core/18-code-mode.mdx",
+        "line_start": 9,
+        "quote": "tools. The generated code runs in an isolated QuickJS sandbox and returns a JSON-serializable result."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/code-mode/src/run-code-mode.ts",
+          "line_start": 103,
+          "quote": "const runner = createRunner({",
+          "checked": {
+            "ok": true,
+            "where": "packages/code-mode/src/run-code-mode.ts:103",
+            "file_sha256": "817f7913a6e1d9c220fdb8236e7f34de805041ef88858294ecc9cba8bd7b8790"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/code-mode/package.json",
+          "line_start": 77,
+          "quote": "\"run\": \"^2.1.8\"",
+          "checked": {
+            "ok": true,
+            "where": "packages/code-mode/package.json:77",
+            "file_sha256": "5129b9d11de1a09b38666cfbd3fcf695672bf7eeef8f463fbde93cbb13e16dba"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_f8b271abe5f5"
+    },
+    {
+      "n": "2",
+      "claim": "Code mode execution limits have defaults (30s timeout, 10s CPU, 64 MiB memory) and are passed to the sandbox.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Every listed limit is resolved with a default and handed to the runner as run limits.",
+      "user_impact": null,
+      "note": "Result and tool byte limits are passed to the runner expanded (value*2+1024) to allow serialization overhead, so the effective cap is a little above the nominal number.",
+      "source": {
+        "file": "content/docs/03-ai-sdk-core/18-code-mode.mdx",
+        "line_start": 246,
+        "quote": "Every invocation has limits for runtime, memory, source size, results, tool"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/code-mode/src/run-code-mode.ts",
+          "line_start": 50,
+          "quote": "const DEFAULT_TIMEOUT_MS = 30_000;",
+          "checked": {
+            "ok": true,
+            "where": "packages/code-mode/src/run-code-mode.ts:50",
+            "file_sha256": "817f7913a6e1d9c220fdb8236e7f34de805041ef88858294ecc9cba8bd7b8790"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/code-mode/src/run-code-mode.ts",
+          "line_start": 52,
+          "quote": "const DEFAULT_MEMORY_LIMIT_BYTES = 64 * 1024 * 1024;",
+          "checked": {
+            "ok": true,
+            "where": "packages/code-mode/src/run-code-mode.ts:52",
+            "file_sha256": "817f7913a6e1d9c220fdb8236e7f34de805041ef88858294ecc9cba8bd7b8790"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/code-mode/src/run-code-mode.ts",
+          "line_start": 371,
+          "quote": "memoryLimitBytes: policy.memoryLimitBytes,",
+          "checked": {
+            "ok": true,
+            "where": "packages/code-mode/src/run-code-mode.ts:371",
+            "file_sha256": "817f7913a6e1d9c220fdb8236e7f34de805041ef88858294ecc9cba8bd7b8790"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_f3157284b1eb"
+    },
+    {
+      "n": "4",
+      "claim": "The code-mode package requires Node.js 22.13 or newer.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The package.json engines field matches the README.",
+      "user_impact": null,
+      "note": "The docs page says \"Node.js 22 or newer\"; the engines field is 22.13.",
+      "source": {
+        "file": "packages/code-mode/README.md",
+        "line_start": 17,
+        "quote": "This package runs on the server and requires Node.js 22.13 or newer."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/code-mode/package.json",
+          "line_start": 61,
+          "quote": "\"node\": \">=22.13.0\"",
+          "checked": {
+            "ok": true,
+            "where": "packages/code-mode/package.json:61",
+            "file_sha256": "5129b9d11de1a09b38666cfbd3fcf695672bf7eeef8f463fbde93cbb13e16dba"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_cc34d3cac0f7"
+    },
+    {
+      "n": "5",
+      "claim": "`telemetry.includeRuntimeContext` marks which top-level runtimeContext properties are sent to telemetry; with `{requestId: true}` telemetry receives only `{requestId}`, and properties set to `false` or omitted are excluded.",
+      "verdict": "FALSE",
+      "severity": "high",
+      "explanation": "filterIncludedContext keeps only keys whose flag is exactly `false`. The condition is inverted relative to the docs, the type comment and the test. A key set to `true` is dropped, an omitted key is dropped, and a key set to `false` is passed to telemetry. So `{requestId: true}` yields `{}`, and `{secret: false}` sends the secret.",
+      "user_impact": "A user who writes `includeRuntimeContext: { userId: false }` to keep an identifier out of telemetry sends that identifier to every registered integration. A user who sets `true` on the fields they want gets none of them. The same function filters events for all telemetry integrations.",
+      "note": null,
+      "source": {
+        "file": "content/docs/03-ai-sdk-core/60-telemetry.mdx",
+        "line_start": 160,
+        "quote": "In this example, telemetry integrations receive `runtimeContext` as `{ requestId: 'req_abc' }`. Properties set to `false` or omitted are excluded."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/ai/src/telemetry/filter-included-context.ts",
+          "line_start": 29,
+          "quote": "([key]) => includeContext?.[key as keyof CONTEXT] === false,",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/telemetry/filter-included-context.ts:29",
+            "file_sha256": "a27311b7c3d071526f8a9ad55352cf6c8f05424a97c9e8ed13fcf47fc1a42a28"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/telemetry/telemetry-options.ts",
+          "line_start": 57,
+          "quote": "Runtime context properties are excluded unless they are explicitly set to `true`.",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/telemetry/telemetry-options.ts:57",
+            "file_sha256": "3e260ff00cf9524a6063b858dd044b8747b6e4cbf47b8af968c15c6ea90b0128"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/decide/decide.test.ts",
+          "line_start": 754,
+          "quote": "includeRuntimeContext: { requestId: true },",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/decide/decide.test.ts:754",
+            "file_sha256": "1ced29daa347375c4186d14b350bbb81e9a8be1e8a6323c8dd1c2e3b7fd60ad4"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "The filter keeps only entries whose include flag is === false, so true and omitted keys are dropped and false keys are sent. This is the inverse of the docs. Severity high is fair.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "packages/ai/src/telemetry/filter-included-context.ts",
+            "line_start": 29,
+            "quote": "([key]) => includeContext?.[key as keyof CONTEXT] === false,",
+            "checked": {
+              "ok": true,
+              "where": "packages/ai/src/telemetry/filter-included-context.ts:29",
+              "file_sha256": "a27311b7c3d071526f8a9ad55352cf6c8f05424a97c9e8ed13fcf47fc1a42a28"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:47:10.525Z"
+      },
+      "receipt": "rcpt_b76bda748d6b"
+    },
+    {
+      "n": "6",
+      "claim": "Tool context such as API keys is kept out of telemetry unless selected with `telemetry.includeToolsContext`.",
+      "verdict": "FALSE",
+      "severity": "high",
+      "explanation": "Tool context uses the same inverted filter. A tool-context key set to `true` is removed, and a key set to `false` is forwarded to telemetry. The default with no `includeToolsContext` is an empty object, which is safe.",
+      "user_impact": "A user who sets `includeToolsContext: { weather: { weatherApiKey: false } }` to hide the key would send the API key to telemetry providers. Opting fields in with `true` silently removes them.",
+      "note": null,
+      "source": {
+        "file": "content/docs/03-ai-sdk-core/60-telemetry.mdx",
+        "line_start": 170,
+        "quote": "Tool-specific context can also contain values that are useful during execution but should not be sent to telemetry providers, such as API keys or access tokens."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/ai/src/telemetry/filter-included-context.ts",
+          "line_start": 75,
+          "quote": "return filterIncludedContext({",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/telemetry/filter-included-context.ts:75",
+            "file_sha256": "a27311b7c3d071526f8a9ad55352cf6c8f05424a97c9e8ed13fcf47fc1a42a28"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/telemetry/filter-included-context.ts",
+          "line_start": 29,
+          "quote": "([key]) => includeContext?.[key as keyof CONTEXT] === false,",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/telemetry/filter-included-context.ts:29",
+            "file_sha256": "a27311b7c3d071526f8a9ad55352cf6c8f05424a97c9e8ed13fcf47fc1a42a28"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/telemetry/telemetry-options.ts",
+          "line_start": 65,
+          "quote": "Tool context properties are excluded unless they are explicitly set to `true`.",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/telemetry/telemetry-options.ts:65",
+            "file_sha256": "3e260ff00cf9524a6063b858dd044b8747b6e4cbf47b8af968c15c6ea90b0128"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "Tool context goes through the same inverted filter (filterToolContext calls filterIncludedContext), so keys set to false are sent and keys set to true are removed.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "packages/ai/src/telemetry/filter-included-context.ts",
+            "line_start": 75,
+            "quote": "return filterIncludedContext({",
+            "checked": {
+              "ok": true,
+              "where": "packages/ai/src/telemetry/filter-included-context.ts:75",
+              "file_sha256": "a27311b7c3d071526f8a9ad55352cf6c8f05424a97c9e8ed13fcf47fc1a42a28"
+            }
+          },
+          {
+            "type": "quote",
+            "file": "packages/ai/src/telemetry/filter-included-context.ts",
+            "line_start": 29,
+            "quote": "([key]) => includeContext?.[key as keyof CONTEXT] === false,",
+            "checked": {
+              "ok": true,
+              "where": "packages/ai/src/telemetry/filter-included-context.ts:29",
+              "file_sha256": "a27311b7c3d071526f8a9ad55352cf6c8f05424a97c9e8ed13fcf47fc1a42a28"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:47:11.979Z"
+      },
+      "receipt": "rcpt_3cb04f4a1c65"
+    },
+    {
+      "n": "7",
+      "claim": "Telemetry is opt-out: passing `telemetry: { isEnabled: false }` disables telemetry events for that call, including tracing-channel events.",
+      "verdict": "FALSE",
+      "severity": "high",
+      "explanation": "The early return that builds the no-op dispatcher fires on `isEnabled === true`, not `false`, which contradicts the comment above it, the docs and the unit tests. With `isEnabled: false` the normal dispatcher is built and all registered or per-call integrations still receive events. `isEnabled: true` is what silences telemetry. Nothing else in the package reads `isEnabled`, so there is no other opt-out switch. The only stream-text path that checks `isEnabled !== false` does not stop the dispatcher.",
+      "user_impact": "A user who sets `isEnabled: false` on a call carrying sensitive prompts, expecting it to stay out of OpenTelemetry or other registered integrations, still has inputs and outputs sent. The explicit per-call opt-out does not work.",
+      "note": null,
+      "source": {
+        "file": "content/docs/03-ai-sdk-core/60-telemetry.mdx",
+        "line_start": 107,
+        "quote": "Telemetry is opt-out. To disable telemetry for a specific call, set `isEnabled: false`:"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/ai/src/telemetry/create-telemetry-dispatcher.ts",
+          "line_start": 125,
+          "quote": "if (telemetry?.isEnabled === true) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/telemetry/create-telemetry-dispatcher.ts:125",
+            "file_sha256": "febfe490b5ce6cbebafcd7fc7229033abc8ebf057d46a99b054d5869e1759b5a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/telemetry/create-telemetry-dispatcher.ts",
+          "line_start": 123,
+          "quote": "// When telemetry is explicitly disabled, return a dispatcher",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/telemetry/create-telemetry-dispatcher.ts:123",
+            "file_sha256": "febfe490b5ce6cbebafcd7fc7229033abc8ebf057d46a99b054d5869e1759b5a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/telemetry/create-telemetry-dispatcher.test.ts",
+          "line_start": 267,
+          "quote": "it('does not invoke any integration callbacks when isEnabled is false', async () => {",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/telemetry/create-telemetry-dispatcher.test.ts:267",
+            "file_sha256": "d3e9ec1daf88221ab3de27202e61dd3d2fda76ced6bb083f7a739aeaeee26cd6"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "The no-op dispatcher is returned when isEnabled === true, not false. The condition is inverted, so isEnabled false keeps telemetry on.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "packages/ai/src/telemetry/create-telemetry-dispatcher.ts",
+            "line_start": 125,
+            "quote": "if (telemetry?.isEnabled === true) {",
+            "checked": {
+              "ok": true,
+              "where": "packages/ai/src/telemetry/create-telemetry-dispatcher.ts:125",
+              "file_sha256": "febfe490b5ce6cbebafcd7fc7229033abc8ebf057d46a99b054d5869e1759b5a"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:47:13.294Z"
+      },
+      "receipt": "rcpt_0e8530317401"
+    },
+    {
+      "n": "8",
+      "claim": "For `transcribe` and `experimental_streamTranscribe`, telemetry contains only input audio byte length and media type plus the transcript; raw audio is never included.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The start and end events carry `audio: { byteLength, mediaType }`. The audio bytes go only to the model call (`audio: audioData`), not into the event objects.",
+      "user_impact": null,
+      "note": "This sentence is only about what is in the event. Whether events reach integrations at all is the subject of the isEnabled finding.",
+      "source": {
+        "file": "content/docs/03-ai-sdk-core/60-telemetry.mdx",
+        "line_start": 79,
+        "quote": "For `transcribe` and `experimental_streamTranscribe`, telemetry contains the"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/ai/src/transcribe/transcribe.ts",
+          "line_start": 159,
+          "quote": "audio: {",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/transcribe/transcribe.ts:159",
+            "file_sha256": "6c55023ffdb4489af83a365ef57d9a47a3919e585396a239d5880b68b50946a8"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/transcribe/transcribe.ts",
+          "line_start": 271,
+          "quote": "byteLength: audioData.byteLength,",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/transcribe/transcribe.ts:271",
+            "file_sha256": "6c55023ffdb4489af83a365ef57d9a47a3919e585396a239d5880b68b50946a8"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/transcribe/stream-transcribe.ts",
+          "line_start": 283,
+          "quote": "byteLength: audioByteLength,",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/transcribe/stream-transcribe.ts:283",
+            "file_sha256": "40a190535dde7b823c9deaadb7c33cefec5f2fde5ce7a216472b8f7205c2a812"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_8ecc2f783bcb"
+    },
+    {
+      "n": "9",
+      "claim": "With `experimental_toolApprovalSecret`, the server HMAC-signs each approval request and verifies the signature on replay; a forged or tampered approval is rejected before the tool executes, and the signature binds tool name, call ID and input.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The payload covers approvalId, toolCallId, toolName and a canonical digest of the input. When a secret is set, a missing or invalid signature throws before the tool executes.",
+      "user_impact": null,
+      "note": "The \"at least 32 bytes\" guidance is not enforced; any non-null secret is accepted. A legacy newline-joined signature format is still accepted when no field contains a newline.",
+      "source": {
+        "file": "content/docs/03-agents/06-tool-approvals.mdx",
+        "line_start": 303,
+        "quote": "When you provide a secret, the server HMAC-signs each approval request at issuance and verifies the signature when the approval is replayed."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/ai/src/generate-text/tool-approval-signature.ts",
+          "line_start": 77,
+          "quote": "const sig = await crypto.subtle.sign('HMAC', key, payload);",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/generate-text/tool-approval-signature.ts:77",
+            "file_sha256": "c2b53536f59ed5aef4d7feea9155122ef15dab16399e6f70805bfdd36ceb52c9"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/generate-text/tool-approval-signature.ts",
+          "line_start": 101,
+          "quote": "if (await crypto.subtle.verify('HMAC', key, sigBytes, payload)) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/generate-text/tool-approval-signature.ts:101",
+            "file_sha256": "c2b53536f59ed5aef4d7feea9155122ef15dab16399e6f70805bfdd36ceb52c9"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/generate-text/validate-tool-approvals.ts",
+          "line_start": 69,
+          "quote": "if (approvalRequest.signature == null) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/generate-text/validate-tool-approvals.ts:69",
+            "file_sha256": "b8307d8d1d65e1a2632d429ba4f44ae9809d17e21e6572bc4533fb6595889ac2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/generate-text/validate-tool-approvals.ts",
+          "line_start": 86,
+          "quote": "if (!valid) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/generate-text/validate-tool-approvals.ts:86",
+            "file_sha256": "b8307d8d1d65e1a2632d429ba4f44ae9809d17e21e6572bc4533fb6595889ac2"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_041686330a97"
+    },
+    {
+      "n": "10",
+      "claim": "The `redirect` option on MCP HTTP and SSE transports defaults to 'error', so HTTP redirects are rejected by default.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both transport constructors default redirect to 'error' and pass it to every fetch call.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "content/docs/08-migration-guides/23-migration-guide-7-0.mdx",
+        "line_start": 1755,
+        "quote": "The `redirect` option on `MCPTransportConfig` (used by both HTTP and SSE transports) now defaults to `'error'` instead of `'follow'`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/mcp/src/tool/mcp-http-transport.ts",
+          "line_start": 76,
+          "quote": "redirect = 'error',",
+          "checked": {
+            "ok": true,
+            "where": "packages/mcp/src/tool/mcp-http-transport.ts:76",
+            "file_sha256": "25a388f498743e4554a34717e244239f076c40a54c35e8954ce11c7772d934d3"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/mcp/src/tool/mcp-sse-transport.ts",
+          "line_start": 48,
+          "quote": "redirect = 'error',",
+          "checked": {
+            "ok": true,
+            "where": "packages/mcp/src/tool/mcp-sse-transport.ts:48",
+            "file_sha256": "2bb3480172c8727afc5e681be67a8e9be83b2f6c02ad0221b0b5e124b5359e9e"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/mcp/src/tool/mcp-http-transport.ts",
+          "line_start": 253,
+          "quote": "redirect: this.redirectMode,",
+          "checked": {
+            "ok": true,
+            "where": "packages/mcp/src/tool/mcp-http-transport.ts:253",
+            "file_sha256": "25a388f498743e4554a34717e244239f076c40a54c35e8954ce11c7772d934d3"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_5bbc41ffd40a"
+    },
+    {
+      "n": "11",
+      "claim": "The OpenAI provider's `baseURL` defaults to `OPENAI_BASE_URL` and then to the OpenAI API URL, and `apiKey` defaults to `OPENAI_API_KEY`.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both settings are loaded from the option, then the env var, with the fallback URL as documented.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "content/providers/01-ai-sdk-providers/03-openai.mdx",
+        "line_start": 105,
+        "quote": "It defaults to the `OPENAI_API_KEY` environment variable."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/openai/src/openai-provider.ts",
+          "line_start": 225,
+          "quote": "environmentVariableName: 'OPENAI_BASE_URL',",
+          "checked": {
+            "ok": true,
+            "where": "packages/openai/src/openai-provider.ts:225",
+            "file_sha256": "49701273cc13a1a5f854f4f5cabf75394c9b1d00d0286891b17b2e5936852694"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/openai/src/openai-provider.ts",
+          "line_start": 228,
+          "quote": ") ?? 'https://api.openai.com/v1';",
+          "checked": {
+            "ok": true,
+            "where": "packages/openai/src/openai-provider.ts:228",
+            "file_sha256": "49701273cc13a1a5f854f4f5cabf75394c9b1d00d0286891b17b2e5936852694"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/openai/src/openai-provider.ts",
+          "line_start": 237,
+          "quote": "environmentVariableName: 'OPENAI_API_KEY',",
+          "checked": {
+            "ok": true,
+            "where": "packages/openai/src/openai-provider.ts:237",
+            "file_sha256": "49701273cc13a1a5f854f4f5cabf75394c9b1d00d0286891b17b2e5936852694"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_ada2a6697d7e"
+    },
+    {
+      "n": "12",
+      "claim": "The Azure provider's `resourceName` defaults to `AZURE_RESOURCE_NAME` and `apiKey` to `AZURE_API_KEY`.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both values are loaded with the named env vars as the fallback.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "content/providers/01-ai-sdk-providers/04-azure.mdx",
+        "line_start": 128,
+        "quote": "It defaults to the `AZURE_API_KEY` environment variable."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/azure/src/azure-openai-provider.ts",
+          "line_start": 303,
+          "quote": "environmentVariableName: 'AZURE_API_KEY',",
+          "checked": {
+            "ok": true,
+            "where": "packages/azure/src/azure-openai-provider.ts:303",
+            "file_sha256": "357365ecb299d6362eb5ed4b1e20e366c0b56f499f35ae8475af9e450f13ccf3"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/azure/src/azure-openai-provider.ts",
+          "line_start": 341,
+          "quote": "environmentVariableName: 'AZURE_RESOURCE_NAME',",
+          "checked": {
+            "ok": true,
+            "where": "packages/azure/src/azure-openai-provider.ts:341",
+            "file_sha256": "357365ecb299d6362eb5ed4b1e20e366c0b56f499f35ae8475af9e450f13ccf3"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_50dfad91399f"
+    },
+    {
+      "n": "13",
+      "claim": "The AI Gateway API key defaults to the `AI_GATEWAY_API_KEY` environment variable.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The gateway loads the key from the option, then the env var, and falls back to OIDC if neither is set (the tests cover this).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "content/providers/01-ai-sdk-providers/00-ai-gateway.mdx",
+        "line_start": 97,
+        "quote": "header. It defaults to the `AI_GATEWAY_API_KEY` environment variable."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/gateway/src/gateway-provider.ts",
+          "line_start": 711,
+          "quote": "environmentVariableName: 'AI_GATEWAY_API_KEY',",
+          "checked": {
+            "ok": true,
+            "where": "packages/gateway/src/gateway-provider.ts:711",
+            "file_sha256": "a6396f1dbcfce74079ba12d2bf9817d043e1c333bb5cf2007873501ce27588ca"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_c546ed3a88ad"
+    },
+    {
+      "n": "14",
+      "claim": "The Anthropic provider's `authToken` defaults to the `ANTHROPIC_AUTH_TOKEN` environment variable.",
+      "verdict": "FALSE",
+      "severity": "medium",
+      "explanation": "`packages/anthropic/src` mentions ANTHROPIC_AUTH_TOKEN only in a doc comment. The header builder uses `options.authToken` if passed and otherwise requires `ANTHROPIC_API_KEY`. The repo's own example reads the env var itself and passes it as `authToken`, which shows the provider does not.",
+      "user_impact": "A user who sets only `ANTHROPIC_AUTH_TOKEN` (for example for a Bearer-token proxy) gets a \"missing API key\" error on the first call. They must pass `authToken` explicitly in code.",
+      "note": null,
+      "source": {
+        "file": "content/providers/01-ai-sdk-providers/05-anthropic.mdx",
+        "line_start": 103,
+        "quote": "It defaults to the `ANTHROPIC_AUTH_TOKEN` environment variable."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/anthropic/src/anthropic-provider.ts",
+          "line_start": 161,
+          "quote": "const authHeaders: Record<string, string> = options.authToken",
+          "checked": {
+            "ok": true,
+            "where": "packages/anthropic/src/anthropic-provider.ts:161",
+            "file_sha256": "ee77b6cfc62272c278cebeb8e73bfd2894dc0ea622dc65a67b2141535d10793d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/anthropic/src/anthropic-provider.ts",
+          "line_start": 166,
+          "quote": "environmentVariableName: 'ANTHROPIC_API_KEY',",
+          "checked": {
+            "ok": true,
+            "where": "packages/anthropic/src/anthropic-provider.ts:166",
+            "file_sha256": "ee77b6cfc62272c278cebeb8e73bfd2894dc0ea622dc65a67b2141535d10793d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "examples/ai-functions/src/generate-text/anthropic/auth-token.ts",
+          "line_start": 8,
+          "quote": "authToken: process.env.ANTHROPIC_AUTH_TOKEN,",
+          "checked": {
+            "ok": true,
+            "where": "examples/ai-functions/src/generate-text/anthropic/auth-token.ts:8",
+            "file_sha256": "488be56b192269205250511c6efb4dce2e5f0fd240693d9ef879e0e82165a9b3"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "Only ANTHROPIC_API_KEY is loaded from the environment. authToken is read only from options, with no ANTHROPIC_AUTH_TOKEN fallback. Severity medium is fair.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "packages/anthropic/src/anthropic-provider.ts",
+            "line_start": 161,
+            "quote": "const authHeaders: Record<string, string> = options.authToken",
+            "checked": {
+              "ok": true,
+              "where": "packages/anthropic/src/anthropic-provider.ts:161",
+              "file_sha256": "ee77b6cfc62272c278cebeb8e73bfd2894dc0ea622dc65a67b2141535d10793d"
+            }
+          },
+          {
+            "type": "quote",
+            "file": "packages/anthropic/src/anthropic-provider.ts",
+            "line_start": 166,
+            "quote": "environmentVariableName: 'ANTHROPIC_API_KEY',",
+            "checked": {
+              "ok": true,
+              "where": "packages/anthropic/src/anthropic-provider.ts:166",
+              "file_sha256": "ee77b6cfc62272c278cebeb8e73bfd2894dc0ea622dc65a67b2141535d10793d"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:47:15.001Z"
+      },
+      "receipt": "rcpt_7227cfca3e28"
+    },
+    {
+      "n": "15",
+      "claim": "ToolLoopAgent stops after 20 steps by default and logs a warning with stopWhen guidance when that default limit stops a loop that could otherwise continue.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The default is used only when no stopWhen is set. Stop conditions run only when the loop could continue, so the warning fires only in that case.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "content/docs/03-agents/04-loop-control.mdx",
+        "line_start": 21,
+        "quote": "If this default limit stops a tool loop that could otherwise continue, the SDK logs a warning with guidance on configuring `stopWhen`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/ai/src/agent/tool-loop-agent.ts",
+          "line_start": 132,
+          "quote": "stopWhen: this.settings.stopWhen ?? createDefaultStopCondition(20),",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/agent/tool-loop-agent.ts:132",
+            "file_sha256": "924f2565de21773bb96a3b7894b86025c82bd0b019354eabbfc5142a660c2b10"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/agent/default-stop-condition.ts",
+          "line_start": 12,
+          "quote": "if (steps.length !== stepCount) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/agent/default-stop-condition.ts:12",
+            "file_sha256": "2e0e2ad6bd8930f440d77c8f3391dcec379d02980d30f65b03802e2c08cb4ca4"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/agent/default-stop-condition.ts",
+          "line_start": 24,
+          "quote": "`The tool loop stopped because it reached the default stopWhen condition, isStepCount(${stepCount}). ` +",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/agent/default-stop-condition.ts:24",
+            "file_sha256": "2e0e2ad6bd8930f440d77c8f3391dcec379d02980d30f65b03802e2c08cb4ca4"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_008cf364f79c"
+    },
+    {
+      "n": "16",
+      "claim": "HarnessAgent `permissionMode` defaults to `allow-all`, allowing built-in reads, edits and shell commands; `allow-edits` and `allow-reads` request approval for the rest where the adapter supports it.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "In the Claude Code bridge the default maps to Claude Code's bypassPermissions mode with the skip-permissions flag. allow-edits maps to acceptEdits and allow-reads to default, with a canUseTool callback gating the rest. This is documented, but the docs don't name the underlying bypass mode.",
+      "user_impact": null,
+      "note": "An agent built with a Claude Code harness and no permissionMode runs with Claude Code's permission checks bypassed. The docs say \"allow-all ... This is the default\", so this is disclosed.",
+      "source": {
+        "file": "content/docs/03-ai-sdk-harnesses/03-tools.mdx",
+        "line_start": 253,
+        "quote": "- `allow-all`: allow built-in reads, edits, and shell commands. This is the"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/harness-claude-code/src/bridge/index.ts",
+          "line_start": 176,
+          "quote": "const permissionMode = input.start.permissionMode ?? 'allow-all';",
+          "checked": {
+            "ok": true,
+            "where": "packages/harness-claude-code/src/bridge/index.ts:176",
+            "file_sha256": "e2574244f76b62f74823166a5a798a433deaf5fe99ec571aec1e986eb1c110b1"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/harness-claude-code/src/bridge/index.ts",
+          "line_start": 186,
+          "quote": "? 'bypassPermissions'",
+          "checked": {
+            "ok": true,
+            "where": "packages/harness-claude-code/src/bridge/index.ts:186",
+            "file_sha256": "e2574244f76b62f74823166a5a798a433deaf5fe99ec571aec1e986eb1c110b1"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/harness-claude-code/src/bridge/index.ts",
+          "line_start": 190,
+          "quote": "allowDangerouslySkipPermissions: permissionMode === 'allow-all',",
+          "checked": {
+            "ok": true,
+            "where": "packages/harness-claude-code/src/bridge/index.ts:190",
+            "file_sha256": "e2574244f76b62f74823166a5a798a433deaf5fe99ec571aec1e986eb1c110b1"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_12b34d75a2e5"
+    },
+    {
+      "n": "17",
+      "claim": "`sandboxSession.destroy()` deletes the Vercel sandbox, so that ID cannot be resumed afterwards.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "destroy() stops and then deletes the Vercel sandbox, so there is nothing left to resume.",
+      "user_impact": null,
+      "note": "HarnessAgentSession.destroy() swallows errors from the underlying destroy calls with .catch(() => {}), so a failed deletion is not surfaced to the caller.",
+      "source": {
+        "file": "content/docs/03-ai-sdk-harnesses/02-harness-agent.mdx",
+        "line_start": 459,
+        "quote": "`sandboxSession.destroy()` deletes it, that ID cannot be resumed."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/sandbox-vercel/src/vercel-network-sandbox-session.ts",
+          "line_start": 121,
+          "quote": "await this.sandbox.stop().catch(() => {});",
+          "checked": {
+            "ok": true,
+            "where": "packages/sandbox-vercel/src/vercel-network-sandbox-session.ts:121",
+            "file_sha256": "1a795930fe149b0da14dc31b5a607e773b296781600ed18f810a2248a57d237e"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/sandbox-vercel/src/vercel-network-sandbox-session.ts",
+          "line_start": 122,
+          "quote": "await this.sandbox.delete();",
+          "checked": {
+            "ok": true,
+            "where": "packages/sandbox-vercel/src/vercel-network-sandbox-session.ts:122",
+            "file_sha256": "1a795930fe149b0da14dc31b5a607e773b296781600ed18f810a2248a57d237e"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_3e7870d1533a"
+    },
+    {
+      "n": "18",
+      "claim": "Passing secrets through the sandbox `run` option `env`, instead of inlining them in the command, avoids leaking them in logs.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Vercel sessions pass env as a separate field. The just-bash session passes values as positional arguments to the script rather than interpolating them into the script text, so the command string never contains the secret.",
+      "user_impact": null,
+      "note": "With just-bash the values are still process arguments, so anything that logs argv would see them.",
+      "source": {
+        "file": "content/docs/07-reference/01-ai-sdk-core/34-sandbox.mdx",
+        "line_start": 81,
+        "quote": "Passing secrets here instead of inlining them into the command avoids leaking them in logs."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/sandbox-just-bash/src/just-bash-sandbox-session.ts",
+          "line_start": 202,
+          "quote": "// just-bash applies runCommand's env to the outer execution, but its `bash`",
+          "checked": {
+            "ok": true,
+            "where": "packages/sandbox-just-bash/src/just-bash-sandbox-session.ts:202",
+            "file_sha256": "b3641095c6ff4d88f44748537815eb7cf1187b223181a27241cd78da14324b15"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/sandbox-just-bash/src/just-bash-sandbox-session.ts",
+          "line_start": 216,
+          "quote": "`${assignments.map(() => 'export -- \"$1\"; shift').join('\\n')}\\n${command}`,",
+          "checked": {
+            "ok": true,
+            "where": "packages/sandbox-just-bash/src/just-bash-sandbox-session.ts:216",
+            "file_sha256": "b3641095c6ff4d88f44748537815eb7cf1187b223181a27241cd78da14324b15"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/sandbox-vercel/src/vercel-sandbox-session.ts",
+          "line_start": 43,
+          "quote": "...(env !== undefined ? { env } : {}),",
+          "checked": {
+            "ok": true,
+            "where": "packages/sandbox-vercel/src/vercel-sandbox-session.ts:43",
+            "file_sha256": "f3d88fbd7971ace201e29219216964ab27e3bde6e98d758d76322e02d86bcf4f"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_08e724231273"
+    },
+    {
+      "n": "19",
+      "claim": "The experimental sandbox description is not added to the model prompt automatically by the SDK; users must include `experimental_sandbox.description` themselves.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The core generateText/streamText code never reads the sandbox description when building the prompt. The only consumers are tool packages that embed it in their own tool description.",
+      "user_impact": null,
+      "note": "The bash tool package and the Cline harness do embed the sandbox description in their own tool or prompt text.",
+      "source": {
+        "file": "content/docs/03-ai-sdk-core/15-tools-and-tool-calling.mdx",
+        "line_start": 998,
+        "quote": "The experimental sandbox description is not added to the model prompt automatically."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/provider-utils/src/types/sandbox.ts",
+          "line_start": 75,
+          "quote": "readonly description: string;",
+          "checked": {
+            "ok": true,
+            "where": "packages/provider-utils/src/types/sandbox.ts:75",
+            "file_sha256": "f135afed51a2e3a7e11bfa4abcd12eeabcacafb18c859bd00bbd8e62c5ea2476"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/tool-bash/src/bash-tool.ts",
+          "line_start": 114,
+          "quote": "sandbox.description,",
+          "checked": {
+            "ok": true,
+            "where": "packages/tool-bash/src/bash-tool.ts:114",
+            "file_sha256": "930cbc747b1605be13e09f9664cef7063913d179b52f5dee3292fce678a38fbc"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_5dab8dc3370d"
+    },
+    {
+      "n": "20",
+      "claim": "`opaPolicy` fails closed (denies the call) if the policy backend errors, and unrecognized or malformed policy output is denied.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "A backend failure returns a `denied` decision. Unknown decision shapes are also denied. A null result is treated as \"no opinion\" (not-applicable), which the SDK handles as approved by default.",
+      "user_impact": null,
+      "note": "A Rego rule that returns nothing for a tool does not block it. This is stated in the normalizer's comment, not in the README.",
+      "source": {
+        "file": "packages/policy-opa/README.md",
+        "line_start": 627,
+        "quote": "Fails closed (denies) if the backend errors."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/policy-opa/src/opa/opa-policy.ts",
+          "line_start": 81,
+          "quote": "if (!outcome.ok) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/policy-opa/src/opa/opa-policy.ts:81",
+            "file_sha256": "881829ae1846006918118c3e2986a15b85e113e8bc88149074794106d20be656"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/policy-opa/src/opa/opa-policy.ts",
+          "line_start": 84,
+          "quote": "reason: `policy evaluation failed: ${errorMessage(outcome.error)}`,",
+          "checked": {
+            "ok": true,
+            "where": "packages/policy-opa/src/opa/opa-policy.ts:84",
+            "file_sha256": "881829ae1846006918118c3e2986a15b85e113e8bc88149074794106d20be656"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/policy-opa/src/opa/normalize-opa-decision.ts",
+          "line_start": 55,
+          "quote": "reason: 'unrecognized OPA policy decision',",
+          "checked": {
+            "ok": true,
+            "where": "packages/policy-opa/src/opa/normalize-opa-decision.ts:55",
+            "file_sha256": "16c05c9004cde8232ef1ba21189fd8748725fe79102c9bca6dfe52e5f57d7bde"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_0bdec5f7c11f"
+    },
+    {
+      "n": "21",
+      "claim": "`wrapMcpTools` falls back to `'user-approval'` by default for tools the supplied approval does not match; `'denied'` gives hard allowlist mode.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The fallback defaults to 'user-approval' and is configurable.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "packages/policy-opa/README.md",
+        "line_start": 619,
+        "quote": "`opts.default` controls what happens to tools the supplied approval does not match (`'user-approval'` by default; use `'denied'` for hard allowlist mode)."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/policy-opa/src/wrap-mcp-tools.ts",
+          "line_start": 59,
+          "quote": "const fallback: ApprovalLiteralStatus = opts?.default ?? 'user-approval';",
+          "checked": {
+            "ok": true,
+            "where": "packages/policy-opa/src/wrap-mcp-tools.ts:59",
+            "file_sha256": "316b31cb9d10735cdf5ff771b2533c42c0b7ea6eb3426bfd3a12f4ebe5ca0bc3"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_04eed99a4953"
+    },
+    {
+      "n": "22",
+      "claim": "Policy enforcement happens at the model's tool-call boundary only: a tool approved by the policy can still perform side effects the policy can't see, and a stronger guarantee needs an out-of-band sandbox.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "opaPolicy is a ToolApprovalConfiguration callback. It evaluates the tool call and returns a decision, and it does not isolate or monitor tool execution. The README states this limitation.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "packages/policy-opa/README.md",
+        "line_start": 470,
+        "quote": "For stronger guarantees against arbitrary side effects, run untrusted execution in an out-of-band sandbox"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/policy-opa/src/opa/opa-policy.ts",
+          "line_start": 61,
+          "quote": "return async ({",
+          "checked": {
+            "ok": true,
+            "where": "packages/policy-opa/src/opa/opa-policy.ts:61",
+            "file_sha256": "881829ae1846006918118c3e2986a15b85e113e8bc88149074794106d20be656"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/policy-opa/src/opa/opa-policy.ts",
+          "line_start": 88,
+          "quote": "return normalizeOpaDecision(outcome.result);",
+          "checked": {
+            "ok": true,
+            "where": "packages/policy-opa/src/opa/opa-policy.ts:88",
+            "file_sha256": "881829ae1846006918118c3e2986a15b85e113e8bc88149074794106d20be656"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_8b2e87703b17"
+    },
+    {
+      "n": "23",
+      "claim": "On Vercel deployments, AI Gateway OIDC authentication is handled automatically, with tokens obtained and refreshed without manual configuration.",
+      "verdict": "UNVERIFIABLE",
+      "severity": null,
+      "explanation": "The gateway uses the API key when one is set and otherwise calls getVercelOidcToken() from the external @vercel/oidc package. Token acquisition and refresh happen in that package and in the Vercel runtime, which are outside this repo.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "content/providers/01-ai-sdk-providers/00-ai-gateway.mdx",
+        "line_start": 174,
+        "quote": "- OIDC authentication is automatically handled"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/gateway/src/gateway-provider.ts",
+          "line_start": 721,
+          "quote": "const oidcToken = await getVercelOidcToken();",
+          "checked": {
+            "ok": true,
+            "where": "packages/gateway/src/gateway-provider.ts:721",
+            "file_sha256": "a6396f1dbcfce74079ba12d2bf9817d043e1c333bb5cf2007873501ce27588ca"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/gateway/src/vercel-environment.ts",
+          "line_start": 2,
+          "quote": "export { getVercelOidcToken } from '@vercel/oidc';",
+          "checked": {
+            "ok": true,
+            "where": "packages/gateway/src/vercel-environment.ts:2",
+            "file_sha256": "0c4cc997d33053bb4ed7164eded8d2685cf7355bdd3363dd1eaa56a967b97cb8"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_acc0aad93d16"
+    },
+    {
+      "n": "25",
+      "claim": "Once a telemetry integration is registered (for example DevToolsTelemetry), telemetry is enabled automatically for all AI SDK calls with no per-call setup.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "With no per-call `telemetry` option, the dispatcher falls back to the globally registered integrations, so every call reports to them.",
+      "user_impact": null,
+      "note": "This is the other side of the isEnabled defect: because `isEnabled: false` does not stop dispatch, there is no working per-call way to opt out.",
+      "source": {
+        "file": "content/docs/02-getting-started/09-coding-agents.mdx",
+        "line_start": 71,
+        "quote": "Once an integration is registered, [telemetry](/docs/ai-sdk-core/telemetry) is enabled automatically for all your AI SDK calls:"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/ai/src/telemetry/create-telemetry-dispatcher.ts",
+          "line_start": 129,
+          "quote": "const localIntegrations = telemetry?.integrations;",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/telemetry/create-telemetry-dispatcher.ts:129",
+            "file_sha256": "febfe490b5ce6cbebafcd7fc7229033abc8ebf057d46a99b054d5869e1759b5a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/telemetry/create-telemetry-dispatcher.ts",
+          "line_start": 133,
+          "quote": ": getGlobalTelemetryIntegrations();",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/telemetry/create-telemetry-dispatcher.ts:133",
+            "file_sha256": "febfe490b5ce6cbebafcd7fc7229033abc8ebf057d46a99b054d5869e1759b5a"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_dc354de91c2f"
+    },
+    {
+      "n": "26",
+      "claim": "OpenAI compaction items are returned as text parts with special providerMetadata and sent back as compaction input items on later requests.",
+      "verdict": "PARTIAL",
+      "severity": "low",
+      "explanation": "The round trip works, but the returned parts have type `custom` and kind `openai.compaction`, not `text`. On the way back, the converter sends an item reference when `store` is on, skips the item when a conversation is used, and sends the encrypted compaction item otherwise.",
+      "user_impact": "A user who persists only parts with type `text` (as the docs imply they can recognise compaction items) drops the compaction state, which breaks the carried-forward context on the next turn.",
+      "note": null,
+      "source": {
+        "file": "content/providers/01-ai-sdk-providers/03-openai.mdx",
+        "line_start": 2186,
+        "quote": "compaction items are returned as text parts with special `providerMetadata`, and when passed back in subsequent requests they are sent as compaction input items."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/openai/src/responses/openai-responses-language-model.ts",
+          "line_start": 1487,
+          "quote": "type: 'custom',",
+          "checked": {
+            "ok": true,
+            "where": "packages/openai/src/responses/openai-responses-language-model.ts:1487",
+            "file_sha256": "a4405f56c9ffdcbe09622f649c24066a4c2c63a36b433bc0f2ba45e24b494fb0"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/openai/src/responses/openai-responses-language-model.ts",
+          "line_start": 1488,
+          "quote": "kind: 'openai.compaction',",
+          "checked": {
+            "ok": true,
+            "where": "packages/openai/src/responses/openai-responses-language-model.ts:1488",
+            "file_sha256": "a4405f56c9ffdcbe09622f649c24066a4c2c63a36b433bc0f2ba45e24b494fb0"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/openai/src/responses/convert-to-openai-responses-input.ts",
+          "line_start": 1393,
+          "quote": "type: 'compaction',",
+          "checked": {
+            "ok": true,
+            "where": "packages/openai/src/responses/convert-to-openai-responses-input.ts:1393",
+            "file_sha256": "72f0770d3d839b1d6e78e497a7fadc9bcd8895bfd73a5eb5a645c494d924446a"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "The code emits the compaction item as a part of type 'custom' with kind 'openai.compaction', not as a text part as the docs say. Persisting only text parts would lose it. Low severity fits.",
+        "severity": "low",
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "packages/openai/src/responses/openai-responses-language-model.ts",
+            "line_start": 1487,
+            "quote": "type: 'custom',",
+            "checked": {
+              "ok": true,
+              "where": "packages/openai/src/responses/openai-responses-language-model.ts:1487",
+              "file_sha256": "a4405f56c9ffdcbe09622f649c24066a4c2c63a36b433bc0f2ba45e24b494fb0"
+            }
+          },
+          {
+            "type": "quote",
+            "file": "packages/openai/src/responses/openai-responses-language-model.ts",
+            "line_start": 1488,
+            "quote": "kind: 'openai.compaction',",
+            "checked": {
+              "ok": true,
+              "where": "packages/openai/src/responses/openai-responses-language-model.ts:1488",
+              "file_sha256": "a4405f56c9ffdcbe09622f649c24066a4c2c63a36b433bc0f2ba45e24b494fb0"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:47:18.681Z"
+      },
+      "receipt": "rcpt_d618574a11f1"
+    },
+    {
+      "n": "27",
+      "claim": "Code-mode generated code cannot access Node.js globals (process, require, module), the host file system or module loader, fetch, WebCrypto or performance APIs, or eval / dynamic Function construction.",
+      "verdict": "UNVERIFIABLE",
+      "severity": null,
+      "explanation": "code-mode contains no code that removes or blocks these globals. It hands the source to the external `run` runner, and the list holds only if that dependency's QuickJS context exposes none of them. The package's own tests have no assertions on process, require, fetch or eval being absent. The only in-repo statement is the prompt telling the model fetch is unavailable.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "content/docs/03-ai-sdk-core/18-code-mode.mdx",
+        "line_start": 291,
+        "quote": "Each invocation receives a fresh QuickJS context. Sandboxed code cannot access:"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/code-mode/src/tool-prompt.ts",
+          "line_start": 27,
+          "quote": "'Fetch: `fetch` is not available.',",
+          "checked": {
+            "ok": true,
+            "where": "packages/code-mode/src/tool-prompt.ts:27",
+            "file_sha256": "6e87e6090e4b96592fc2cd671b001beb3b0e5688cbd89f0e0a38d188c9f2a98e"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/code-mode/src/run-code-mode.ts",
+          "line_start": 114,
+          "quote": "const result = await runner.run({",
+          "checked": {
+            "ok": true,
+            "where": "packages/code-mode/src/run-code-mode.ts:114",
+            "file_sha256": "817f7913a6e1d9c220fdb8236e7f34de805041ef88858294ecc9cba8bd7b8790"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_e9cb6f4804bd"
+    },
+    {
+      "n": "28",
+      "claim": "In the MCP tool-annotations example, the read-only tool executes immediately while destructive and unannotated tools prompt for approval.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The MCP client copies annotations into tool metadata. The example's toolApproval returns not-applicable only for an explicit readOnlyHint, and user-approval for everything else, including the unannotated create-note tool.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "content/docs/03-ai-sdk-core/16-mcp-tools.mdx",
+        "line_start": 506,
+        "quote": "Ask the client to read, delete, or create a note. The read-only tool executes"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "examples/mcp/src/tool-annotations/client.ts",
+          "line_start": 53,
+          "quote": "return annotations?.readOnlyHint === true",
+          "checked": {
+            "ok": true,
+            "where": "examples/mcp/src/tool-annotations/client.ts:53",
+            "file_sha256": "4786cddce5f8fac0d7bea57964af53d620f4403b42ec7a9cf0dfe29037e2d1cd"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "examples/mcp/src/tool-annotations/server.ts",
+          "line_start": 27,
+          "quote": "readOnlyHint: true,",
+          "checked": {
+            "ok": true,
+            "where": "examples/mcp/src/tool-annotations/server.ts:27",
+            "file_sha256": "2daa28cad853d98ba14b3619a9be8c3fec17bd50643b4e5b548ea54fb239c3fd"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/mcp/src/tool/mcp-client.ts",
+          "line_start": 1280,
+          "quote": "...(annotations.readOnlyHint != null",
+          "checked": {
+            "ok": true,
+            "where": "packages/mcp/src/tool/mcp-client.ts:1280",
+            "file_sha256": "6748ab8b807c9d044f39e0b491c5bf7dcc9e9687c74bfdb11687363eaeb60ae2"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_799ab100f1f7"
+    },
+    {
+      "n": "3",
+      "claim": "Code mode does not currently integrate with AI SDK tool approval flows; a nested tool requiring approval is rejected rather than executed.",
+      "verdict": "VERIFIED",
+      "severity": "low",
+      "explanation": "The default matches the docs: with no callback, a nested call that needs approval throws instead of running. But the code also has an `approval` option with a callback mode and an interrupt/resume mode that does pause for approval. The docs don't mention it and say no integration exists.",
+      "user_impact": "Users are told to keep approval-requiring tools out of code mode, so they miss a supported way to gate them. The default stays safe, because an unapproved call is rejected.",
+      "note": "The docs sentence matches the default behavior, since the code throws an approval-required error. The 'interrupt' mode in the types is not shown to be an approval integration. The gap is immaterial and the default is safe.",
+      "source": {
+        "file": "content/docs/03-ai-sdk-core/18-code-mode.mdx",
+        "line_start": 235,
+        "quote": "Code mode does not currently integrate with AI SDK tool approval flows. Tool"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/code-mode/src/types.ts",
+          "line_start": 208,
+          "quote": "mode?: 'callback' | 'interrupt';",
+          "checked": {
+            "ok": true,
+            "where": "packages/code-mode/src/types.ts:208",
+            "file_sha256": "a763060902779a8ebca172c13deea0d68d253438abc883a2d8c744eea58cac25"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/code-mode/src/tool-invocation.ts",
+          "line_start": 119,
+          "quote": "throw new CodeModeToolApprovalRequiredError(",
+          "checked": {
+            "ok": true,
+            "where": "packages/code-mode/src/tool-invocation.ts:119",
+            "file_sha256": "c824fe929786c9e7930b34a897d3b3351375e1328a95275b1304ed7f0303a702"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "downgrade",
+        "reason": "The docs sentence matches the default behavior, since the code throws an approval-required error. The 'interrupt' mode in the types is not shown to be an approval integration. The gap is immaterial and the default is safe.",
+        "severity": null,
+        "evidence": [],
+        "at": "2026-10-22T21:47:16.073Z"
+      },
+      "receipt": "rcpt_6e7f1b381493",
+      "original_verdict": "PARTIAL"
+    },
+    {
+      "n": "24",
+      "claim": "The DevTools integration automatically adds `.devtools` to your `.gitignore` file.",
+      "verdict": "VERIFIED",
+      "severity": "low",
+      "explanation": "The entry is added only when `.devtools/` doesn't exist yet and a `.gitignore` already exists in the current working directory. With no `.gitignore` there, or when the process runs from a subdirectory, the folder holding prompts and responses is created and nothing is ignored. The docs do add \"verify that .devtools is in your .gitignore\".",
+      "user_impact": "A user in a repo with no `.gitignore` in the working directory, such as a monorepo package started from a subfolder, can commit full prompts, outputs and raw provider payloads, which may be sensitive, if they trust the automatic step.",
+      "note": "The auto-add works in the normal case. It is skipped only in the edge case where no .gitignore exists, so this is a minor omission.",
+      "source": {
+        "file": "content/docs/03-ai-sdk-core/65-devtools.mdx",
+        "line_start": 187,
+        "quote": "The integration automatically adds `.devtools` to your `.gitignore` file."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/devtools/src/db.ts",
+          "line_start": 90,
+          "quote": "if (!fs.existsSync(gitignorePath)) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/devtools/src/db.ts:90",
+            "file_sha256": "9b1a814b5c88665e3c2c3f80863362a4ff5571ec68dea7f6d28d3ec11bde174c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/devtools/src/db.ts",
+          "line_start": 123,
+          "quote": "const isFirstRun = !fs.existsSync(DB_DIR);",
+          "checked": {
+            "ok": true,
+            "where": "packages/devtools/src/db.ts:123",
+            "file_sha256": "9b1a814b5c88665e3c2c3f80863362a4ff5571ec68dea7f6d28d3ec11bde174c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/devtools/src/db.ts",
+          "line_start": 127,
+          "quote": "ensureGitignore();",
+          "checked": {
+            "ok": true,
+            "where": "packages/devtools/src/db.ts:127",
+            "file_sha256": "9b1a814b5c88665e3c2c3f80863362a4ff5571ec68dea7f6d28d3ec11bde174c"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "downgrade",
+        "reason": "The auto-add works in the normal case. It is skipped only in the edge case where no .gitignore exists, so this is a minor omission.",
+        "severity": null,
+        "evidence": [],
+        "at": "2026-10-22T21:47:17.009Z"
+      },
+      "receipt": "rcpt_8d996152e425",
+      "original_verdict": "PARTIAL"
+    }
+  ],
+  "rejected": [
+    {
+      "claim": "The Anthropic provider's `authToken` defaults to the `ANTHROPIC_AUTH_TOKEN` environment variable.",
+      "verdict": "FALSE",
+      "problems": [
+        "evidence absent:process.env.ANTHROPIC_AUTH_TOKEN: pattern found in code: examples/ai-functions/src/generate-text/anthropic/auth-token.ts:8:  authToken: process.env.ANTHROPIC_AUTH_TOKEN, | examples/ai-functions/src/harness-agent/claude-code/native-subscription.ts:8:  delete process.env.ANTHROPIC_AUTH_TOKEN; | examples/ai-functions/src/harness-agent/pi/native-subscription.ts:8:  delete process.env.ANTHROPIC_AUTH_TOKEN;",
+        "evidence absent:environmentVariableName: 'ANTHROPIC_AUTH_TOKEN': pattern found in code: packages/harness-claude-code/src/claude-code-harness.test.ts:941:        environmentVariableName: 'ANTHROPIC_AUTH_TOKEN',"
+      ],
+      "at": "2026-10-22T21:43:23.206Z"
+    }
+  ],
+  "finished_at": "2026-10-22T21:47:43.125Z",
+  "behaviors": [
+    {
+      "n": "b1",
+      "behavior": "When no auth environment variable is set, the Claude Code harness reads the user's own Claude Code OAuth credentials from ~/.claude/.credentials.json or the macOS Keychain. It refreshes the token against platform.claude.com and writes the refreshed credentials back to the user's keychain entry or file, then supplies the access token to the agent as CLAUDE_CODE_OAUTH_TOKEN.",
+      "signal": "permission_bypass",
+      "severity": "medium",
+      "user_impact": "Developers who run the harness locally with no API key set have their personal Claude subscription login used, and the stored login is silently rewritten with a rotated refresh token. The access token is also handed to the agent runtime, which can end up in a remote sandbox when that sandbox lacks request-transformation support. The docs say only that the adapter \"attempts to resolve a native subscription from the host system\"; they don't mention the keychain or credential-file reads, the token refresh, or the write-back.",
+      "docs_searched": "content/providers/02-ai-sdk-harnesses/01-claude-code.mdx (auth section, lines 141-185) and all of content/ for \"native subscription\", \"keychain\" and \"credentials.json\". Only a one-line mention of resolving a native subscription exists, repeated across the harness pages.",
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/harness-claude-code/src/claude-code-subscription.ts",
+          "line_start": 190,
+          "quote": "const keychainText = await readMacOSKeychainPassword({",
+          "checked": {
+            "ok": true,
+            "where": "packages/harness-claude-code/src/claude-code-subscription.ts:190",
+            "file_sha256": "7db83b5f26820a0b6919d8ee1367c473da21e6666c90166169eaca6482e21a27"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/harness-claude-code/src/claude-code-subscription.ts",
+          "line_start": 200,
+          "quote": "execFileSync(",
+          "checked": {
+            "ok": true,
+            "where": "packages/harness-claude-code/src/claude-code-subscription.ts:200",
+            "file_sha256": "7db83b5f26820a0b6919d8ee1367c473da21e6666c90166169eaca6482e21a27"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/harness-claude-code/src/claude-code-subscription.ts",
+          "line_start": 26,
+          "quote": "const CLAUDE_TOKEN_URL = 'https://platform.claude.com/v1/oauth/token';",
+          "checked": {
+            "ok": true,
+            "where": "packages/harness-claude-code/src/claude-code-subscription.ts:26",
+            "file_sha256": "7db83b5f26820a0b6919d8ee1367c473da21e6666c90166169eaca6482e21a27"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/harness-claude-code/src/claude-code-subscription.ts",
+          "line_start": 140,
+          "quote": "CLAUDE_CODE_OAUTH_TOKEN: resolvedAccessToken,",
+          "checked": {
+            "ok": true,
+            "where": "packages/harness-claude-code/src/claude-code-subscription.ts:140",
+            "file_sha256": "7db83b5f26820a0b6919d8ee1367c473da21e6666c90166169eaca6482e21a27"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "The code reads the keychain, refreshes the token against platform.claude.com and passes the result as CLAUDE_CODE_OAUTH_TOKEN. The docs say only that the adapter resolves a native subscription. Medium severity is fair.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "packages/harness-claude-code/src/claude-code-subscription.ts",
+            "line_start": 26,
+            "quote": "const CLAUDE_TOKEN_URL = 'https://platform.claude.com/v1/oauth/token';",
+            "checked": {
+              "ok": true,
+              "where": "packages/harness-claude-code/src/claude-code-subscription.ts:26",
+              "file_sha256": "7db83b5f26820a0b6919d8ee1367c473da21e6666c90166169eaca6482e21a27"
+            }
+          },
+          {
+            "type": "quote",
+            "file": "packages/harness-claude-code/src/claude-code-subscription.ts",
+            "line_start": 140,
+            "quote": "CLAUDE_CODE_OAUTH_TOKEN: resolvedAccessToken,",
+            "checked": {
+              "ok": true,
+              "where": "packages/harness-claude-code/src/claude-code-subscription.ts:140",
+              "file_sha256": "7db83b5f26820a0b6919d8ee1367c473da21e6666c90166169eaca6482e21a27"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:47:20.359Z"
+      },
+      "receipt": "rcpt_6b4d5afec8c7"
+    }
+  ],
+  "review_requested_at": "2026-10-22T21:46:41.273Z",
+  "skipped": [
+    {
+      "candidate": "c1",
+      "reason": "States that the sandbox interface is only a contract and that isolation depends on the implementation. The SDK ships no sandbox of its own here, so there is nothing to contradict."
+    },
+    {
+      "candidate": "c7",
+      "reason": "Describes a third-party npm package (bash-tool) in a community tool list, not behavior of this project."
+    },
+    {
+      "candidate": "c8",
+      "reason": "Introductory sentence about the AI Gateway and OIDC. The OIDC behaviour is covered by the claim on the gateway provider page."
+    },
+    {
+      "candidate": "c9",
+      "reason": "Tutorial prose describing the message parts array in the UI. It makes no checkable security or default promise."
+    },
+    {
+      "candidate": "c11",
+      "reason": "Same sentence as c13 on a different page (experimental sandbox description not added to the prompt). Recorded once as a verified claim."
+    },
+    {
+      "candidate": "c17",
+      "reason": "The default-emission sentence is covered by the claims on isEnabled (finding 7) and on registered integrations being enabled automatically (claim 25)."
+    },
+    {
+      "candidate": "c19",
+      "reason": "The same includeRuntimeContext promise is recorded as a FALSE claim on the example sentence at line 160 of the same page (finding 5)."
+    },
+    {
+      "candidate": "c22",
+      "reason": "Describes a POLICY_MODE switch in an example application's walkthrough, not a package API. Not traced into the example code in this audit."
+    },
+    {
+      "candidate": "c23",
+      "reason": "Generic statement that tools with execute run automatically unless toolApproval is set. Not traced separately; the approval signing and policy paths are covered by other claims."
+    },
+    {
+      "candidate": "c24",
+      "reason": "Secret-length guidance, same as the tool-approval secret guidance in claim 9, where the code does not enforce a minimum length."
+    },
+    {
+      "candidate": "c25",
+      "reason": "Same default-run-automatically sentence as c23 on another page. Not traced separately."
+    },
+    {
+      "candidate": "c26",
+      "reason": "Node 22 requirement for code mode; covered by the verified engines claim (claim 4)."
+    },
+    {
+      "candidate": "c27",
+      "reason": "Node 22.13 requirement on the tools page; the same engines constraint as claim 4, not traced for that package."
+    },
+    {
+      "candidate": "c29",
+      "reason": "A 1,024-token minimum cache block is a limit enforced by the Alibaba API, not by code in this repo."
+    },
+    {
+      "candidate": "c32",
+      "reason": "Internal architecture note for contributors, not a user-facing promise."
+    },
+    {
+      "candidate": "c34",
+      "reason": "Describes a Browserbase tool option whose default is applied by the gateway service, outside this repo."
+    },
+    {
+      "candidate": "c35",
+      "reason": "OPENAI_BASE_URL default; covered by the verified OpenAI claim (claim 11)."
+    },
+    {
+      "candidate": "c37",
+      "reason": "AZURE_RESOURCE_NAME default; covered by the verified Azure claim (claim 12)."
+    },
+    {
+      "candidate": "c39",
+      "reason": "ANTHROPIC_API_KEY default; the Anthropic provider code reads it (anthropic-provider.ts line 166), as seen in finding 14's evidence."
+    },
+    {
+      "signal": "telemetry",
+      "reason": "All hits are false positives: the '@sentry/cli': false entry in pnpm-workspace.yaml only disables a build script, the PCM silence threshold is an audio constant, and the rest are in the earlier elliot-report-v1 output. No analytics SDK or user identification exists in the code."
+    },
+    {
+      "signal": "permission_bypass",
+      "reason": "The Claude Code bridge maps allow-all to bypassPermissions, which the docs state is the default (recorded as a verified claim). The other hits are an enum in a tool schema, a changelog line and the earlier report. The undisclosed credential handling is recorded as behavior b1."
+    }
+  ],
+  "notes": [
+    {
+      "n": "3",
+      "claim": "Code mode does not currently integrate with AI SDK tool approval flows; a nested tool requiring approval is rejected rather than executed.",
+      "verdict": "VERIFIED",
+      "severity": "low",
+      "explanation": "The default matches the docs: with no callback, a nested call that needs approval throws instead of running. But the code also has an `approval` option with a callback mode and an interrupt/resume mode that does pause for approval. The docs don't mention it and say no integration exists.",
+      "user_impact": "Users are told to keep approval-requiring tools out of code mode, so they miss a supported way to gate them. The default stays safe, because an unapproved call is rejected.",
+      "note": "The docs sentence matches the default behavior, since the code throws an approval-required error. The 'interrupt' mode in the types is not shown to be an approval integration. The gap is immaterial and the default is safe.",
+      "source": {
+        "file": "content/docs/03-ai-sdk-core/18-code-mode.mdx",
+        "line_start": 235,
+        "quote": "Code mode does not currently integrate with AI SDK tool approval flows. Tool"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/code-mode/src/types.ts",
+          "line_start": 208,
+          "quote": "mode?: 'callback' | 'interrupt';",
+          "checked": {
+            "ok": true,
+            "where": "packages/code-mode/src/types.ts:208",
+            "file_sha256": "a763060902779a8ebca172c13deea0d68d253438abc883a2d8c744eea58cac25"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/code-mode/src/tool-invocation.ts",
+          "line_start": 119,
+          "quote": "throw new CodeModeToolApprovalRequiredError(",
+          "checked": {
+            "ok": true,
+            "where": "packages/code-mode/src/tool-invocation.ts:119",
+            "file_sha256": "c824fe929786c9e7930b34a897d3b3351375e1328a95275b1304ed7f0303a702"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "downgrade",
+        "reason": "The docs sentence matches the default behavior, since the code throws an approval-required error. The 'interrupt' mode in the types is not shown to be an approval integration. The gap is immaterial and the default is safe.",
+        "severity": null,
+        "evidence": [],
+        "at": "2026-10-22T21:47:16.073Z"
+      },
+      "receipt": "rcpt_6e7f1b381493",
+      "original_verdict": "PARTIAL"
+    },
+    {
+      "n": "24",
+      "claim": "The DevTools integration automatically adds `.devtools` to your `.gitignore` file.",
+      "verdict": "VERIFIED",
+      "severity": "low",
+      "explanation": "The entry is added only when `.devtools/` doesn't exist yet and a `.gitignore` already exists in the current working directory. With no `.gitignore` there, or when the process runs from a subdirectory, the folder holding prompts and responses is created and nothing is ignored. The docs do add \"verify that .devtools is in your .gitignore\".",
+      "user_impact": "A user in a repo with no `.gitignore` in the working directory, such as a monorepo package started from a subfolder, can commit full prompts, outputs and raw provider payloads, which may be sensitive, if they trust the automatic step.",
+      "note": "The auto-add works in the normal case. It is skipped only in the edge case where no .gitignore exists, so this is a minor omission.",
+      "source": {
+        "file": "content/docs/03-ai-sdk-core/65-devtools.mdx",
+        "line_start": 187,
+        "quote": "The integration automatically adds `.devtools` to your `.gitignore` file."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/devtools/src/db.ts",
+          "line_start": 90,
+          "quote": "if (!fs.existsSync(gitignorePath)) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/devtools/src/db.ts:90",
+            "file_sha256": "9b1a814b5c88665e3c2c3f80863362a4ff5571ec68dea7f6d28d3ec11bde174c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/devtools/src/db.ts",
+          "line_start": 123,
+          "quote": "const isFirstRun = !fs.existsSync(DB_DIR);",
+          "checked": {
+            "ok": true,
+            "where": "packages/devtools/src/db.ts:123",
+            "file_sha256": "9b1a814b5c88665e3c2c3f80863362a4ff5571ec68dea7f6d28d3ec11bde174c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/devtools/src/db.ts",
+          "line_start": 127,
+          "quote": "ensureGitignore();",
+          "checked": {
+            "ok": true,
+            "where": "packages/devtools/src/db.ts:127",
+            "file_sha256": "9b1a814b5c88665e3c2c3f80863362a4ff5571ec68dea7f6d28d3ec11bde174c"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "downgrade",
+        "reason": "The auto-add works in the normal case. It is skipped only in the edge case where no .gitignore exists, so this is a minor omission.",
+        "severity": null,
+        "evidence": [],
+        "at": "2026-10-22T21:47:17.009Z"
+      },
+      "receipt": "rcpt_8d996152e425",
+      "original_verdict": "PARTIAL"
+    }
+  ],
+  "retracted": [],
+  "raw_claims": [
+    {
+      "n": "1",
+      "claim": "Code mode: generated code runs in an isolated QuickJS sandbox and returns a JSON-serializable result.",
+      "verdict": "UNVERIFIABLE",
+      "severity": null,
+      "explanation": "The repo only wraps the third-party `run` package (createRunner/runner.run) with limits and host functions. The QuickJS isolation itself lives in that dependency, which is not in the repo or installed, so it cannot be confirmed here.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "content/docs/03-ai-sdk-core/18-code-mode.mdx",
+        "line_start": 9,
+        "quote": "tools. The generated code runs in an isolated QuickJS sandbox and returns a JSON-serializable result."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/code-mode/src/run-code-mode.ts",
+          "line_start": 103,
+          "quote": "const runner = createRunner({",
+          "checked": {
+            "ok": true,
+            "where": "packages/code-mode/src/run-code-mode.ts:103",
+            "file_sha256": "817f7913a6e1d9c220fdb8236e7f34de805041ef88858294ecc9cba8bd7b8790"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/code-mode/package.json",
+          "line_start": 77,
+          "quote": "\"run\": \"^2.1.8\"",
+          "checked": {
+            "ok": true,
+            "where": "packages/code-mode/package.json:77",
+            "file_sha256": "5129b9d11de1a09b38666cfbd3fcf695672bf7eeef8f463fbde93cbb13e16dba"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_f8b271abe5f5"
+    },
+    {
+      "n": "2",
+      "claim": "Code mode execution limits have defaults (30s timeout, 10s CPU, 64 MiB memory) and are passed to the sandbox.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Every listed limit is resolved with a default and handed to the runner as run limits.",
+      "user_impact": null,
+      "note": "Result and tool byte limits are passed to the runner expanded (value*2+1024) to allow serialization overhead, so the effective cap is a little above the nominal number.",
+      "source": {
+        "file": "content/docs/03-ai-sdk-core/18-code-mode.mdx",
+        "line_start": 246,
+        "quote": "Every invocation has limits for runtime, memory, source size, results, tool"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/code-mode/src/run-code-mode.ts",
+          "line_start": 50,
+          "quote": "const DEFAULT_TIMEOUT_MS = 30_000;",
+          "checked": {
+            "ok": true,
+            "where": "packages/code-mode/src/run-code-mode.ts:50",
+            "file_sha256": "817f7913a6e1d9c220fdb8236e7f34de805041ef88858294ecc9cba8bd7b8790"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/code-mode/src/run-code-mode.ts",
+          "line_start": 52,
+          "quote": "const DEFAULT_MEMORY_LIMIT_BYTES = 64 * 1024 * 1024;",
+          "checked": {
+            "ok": true,
+            "where": "packages/code-mode/src/run-code-mode.ts:52",
+            "file_sha256": "817f7913a6e1d9c220fdb8236e7f34de805041ef88858294ecc9cba8bd7b8790"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/code-mode/src/run-code-mode.ts",
+          "line_start": 371,
+          "quote": "memoryLimitBytes: policy.memoryLimitBytes,",
+          "checked": {
+            "ok": true,
+            "where": "packages/code-mode/src/run-code-mode.ts:371",
+            "file_sha256": "817f7913a6e1d9c220fdb8236e7f34de805041ef88858294ecc9cba8bd7b8790"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_f3157284b1eb"
+    },
+    {
+      "n": "3",
+      "claim": "Code mode does not currently integrate with AI SDK tool approval flows; a nested tool requiring approval is rejected rather than executed.",
+      "verdict": "PARTIAL",
+      "severity": "low",
+      "explanation": "The default matches the docs: with no callback, a nested call that needs approval throws instead of running. But the code also has an `approval` option with a callback mode and an interrupt/resume mode that does pause for approval. The docs don't mention it and say no integration exists.",
+      "user_impact": "Users are told to keep approval-requiring tools out of code mode, so they miss a supported way to gate them. The default stays safe, because an unapproved call is rejected.",
+      "note": null,
+      "source": {
+        "file": "content/docs/03-ai-sdk-core/18-code-mode.mdx",
+        "line_start": 235,
+        "quote": "Code mode does not currently integrate with AI SDK tool approval flows. Tool"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/code-mode/src/types.ts",
+          "line_start": 208,
+          "quote": "mode?: 'callback' | 'interrupt';",
+          "checked": {
+            "ok": true,
+            "where": "packages/code-mode/src/types.ts:208",
+            "file_sha256": "a763060902779a8ebca172c13deea0d68d253438abc883a2d8c744eea58cac25"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/code-mode/src/tool-invocation.ts",
+          "line_start": 119,
+          "quote": "throw new CodeModeToolApprovalRequiredError(",
+          "checked": {
+            "ok": true,
+            "where": "packages/code-mode/src/tool-invocation.ts:119",
+            "file_sha256": "c824fe929786c9e7930b34a897d3b3351375e1328a95275b1304ed7f0303a702"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "downgrade",
+        "reason": "The docs sentence matches the default behavior, since the code throws an approval-required error. The 'interrupt' mode in the types is not shown to be an approval integration. The gap is immaterial and the default is safe.",
+        "severity": null,
+        "evidence": [],
+        "at": "2026-10-22T21:47:16.073Z"
+      },
+      "receipt": "rcpt_6e7f1b381493"
+    },
+    {
+      "n": "4",
+      "claim": "The code-mode package requires Node.js 22.13 or newer.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The package.json engines field matches the README.",
+      "user_impact": null,
+      "note": "The docs page says \"Node.js 22 or newer\"; the engines field is 22.13.",
+      "source": {
+        "file": "packages/code-mode/README.md",
+        "line_start": 17,
+        "quote": "This package runs on the server and requires Node.js 22.13 or newer."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/code-mode/package.json",
+          "line_start": 61,
+          "quote": "\"node\": \">=22.13.0\"",
+          "checked": {
+            "ok": true,
+            "where": "packages/code-mode/package.json:61",
+            "file_sha256": "5129b9d11de1a09b38666cfbd3fcf695672bf7eeef8f463fbde93cbb13e16dba"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_cc34d3cac0f7"
+    },
+    {
+      "n": "5",
+      "claim": "`telemetry.includeRuntimeContext` marks which top-level runtimeContext properties are sent to telemetry; with `{requestId: true}` telemetry receives only `{requestId}`, and properties set to `false` or omitted are excluded.",
+      "verdict": "FALSE",
+      "severity": "high",
+      "explanation": "filterIncludedContext keeps only keys whose flag is exactly `false`. The condition is inverted relative to the docs, the type comment and the test. A key set to `true` is dropped, an omitted key is dropped, and a key set to `false` is passed to telemetry. So `{requestId: true}` yields `{}`, and `{secret: false}` sends the secret.",
+      "user_impact": "A user who writes `includeRuntimeContext: { userId: false }` to keep an identifier out of telemetry sends that identifier to every registered integration. A user who sets `true` on the fields they want gets none of them. The same function filters events for all telemetry integrations.",
+      "note": null,
+      "source": {
+        "file": "content/docs/03-ai-sdk-core/60-telemetry.mdx",
+        "line_start": 160,
+        "quote": "In this example, telemetry integrations receive `runtimeContext` as `{ requestId: 'req_abc' }`. Properties set to `false` or omitted are excluded."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/ai/src/telemetry/filter-included-context.ts",
+          "line_start": 29,
+          "quote": "([key]) => includeContext?.[key as keyof CONTEXT] === false,",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/telemetry/filter-included-context.ts:29",
+            "file_sha256": "a27311b7c3d071526f8a9ad55352cf6c8f05424a97c9e8ed13fcf47fc1a42a28"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/telemetry/telemetry-options.ts",
+          "line_start": 57,
+          "quote": "Runtime context properties are excluded unless they are explicitly set to `true`.",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/telemetry/telemetry-options.ts:57",
+            "file_sha256": "3e260ff00cf9524a6063b858dd044b8747b6e4cbf47b8af968c15c6ea90b0128"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/decide/decide.test.ts",
+          "line_start": 754,
+          "quote": "includeRuntimeContext: { requestId: true },",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/decide/decide.test.ts:754",
+            "file_sha256": "1ced29daa347375c4186d14b350bbb81e9a8be1e8a6323c8dd1c2e3b7fd60ad4"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "The filter keeps only entries whose include flag is === false, so true and omitted keys are dropped and false keys are sent. This is the inverse of the docs. Severity high is fair.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "packages/ai/src/telemetry/filter-included-context.ts",
+            "line_start": 29,
+            "quote": "([key]) => includeContext?.[key as keyof CONTEXT] === false,",
+            "checked": {
+              "ok": true,
+              "where": "packages/ai/src/telemetry/filter-included-context.ts:29",
+              "file_sha256": "a27311b7c3d071526f8a9ad55352cf6c8f05424a97c9e8ed13fcf47fc1a42a28"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:47:10.525Z"
+      },
+      "receipt": "rcpt_b76bda748d6b"
+    },
+    {
+      "n": "6",
+      "claim": "Tool context such as API keys is kept out of telemetry unless selected with `telemetry.includeToolsContext`.",
+      "verdict": "FALSE",
+      "severity": "high",
+      "explanation": "Tool context uses the same inverted filter. A tool-context key set to `true` is removed, and a key set to `false` is forwarded to telemetry. The default with no `includeToolsContext` is an empty object, which is safe.",
+      "user_impact": "A user who sets `includeToolsContext: { weather: { weatherApiKey: false } }` to hide the key would send the API key to telemetry providers. Opting fields in with `true` silently removes them.",
+      "note": null,
+      "source": {
+        "file": "content/docs/03-ai-sdk-core/60-telemetry.mdx",
+        "line_start": 170,
+        "quote": "Tool-specific context can also contain values that are useful during execution but should not be sent to telemetry providers, such as API keys or access tokens."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/ai/src/telemetry/filter-included-context.ts",
+          "line_start": 75,
+          "quote": "return filterIncludedContext({",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/telemetry/filter-included-context.ts:75",
+            "file_sha256": "a27311b7c3d071526f8a9ad55352cf6c8f05424a97c9e8ed13fcf47fc1a42a28"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/telemetry/filter-included-context.ts",
+          "line_start": 29,
+          "quote": "([key]) => includeContext?.[key as keyof CONTEXT] === false,",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/telemetry/filter-included-context.ts:29",
+            "file_sha256": "a27311b7c3d071526f8a9ad55352cf6c8f05424a97c9e8ed13fcf47fc1a42a28"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/telemetry/telemetry-options.ts",
+          "line_start": 65,
+          "quote": "Tool context properties are excluded unless they are explicitly set to `true`.",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/telemetry/telemetry-options.ts:65",
+            "file_sha256": "3e260ff00cf9524a6063b858dd044b8747b6e4cbf47b8af968c15c6ea90b0128"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "Tool context goes through the same inverted filter (filterToolContext calls filterIncludedContext), so keys set to false are sent and keys set to true are removed.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "packages/ai/src/telemetry/filter-included-context.ts",
+            "line_start": 75,
+            "quote": "return filterIncludedContext({",
+            "checked": {
+              "ok": true,
+              "where": "packages/ai/src/telemetry/filter-included-context.ts:75",
+              "file_sha256": "a27311b7c3d071526f8a9ad55352cf6c8f05424a97c9e8ed13fcf47fc1a42a28"
+            }
+          },
+          {
+            "type": "quote",
+            "file": "packages/ai/src/telemetry/filter-included-context.ts",
+            "line_start": 29,
+            "quote": "([key]) => includeContext?.[key as keyof CONTEXT] === false,",
+            "checked": {
+              "ok": true,
+              "where": "packages/ai/src/telemetry/filter-included-context.ts:29",
+              "file_sha256": "a27311b7c3d071526f8a9ad55352cf6c8f05424a97c9e8ed13fcf47fc1a42a28"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:47:11.979Z"
+      },
+      "receipt": "rcpt_3cb04f4a1c65"
+    },
+    {
+      "n": "7",
+      "claim": "Telemetry is opt-out: passing `telemetry: { isEnabled: false }` disables telemetry events for that call, including tracing-channel events.",
+      "verdict": "FALSE",
+      "severity": "high",
+      "explanation": "The early return that builds the no-op dispatcher fires on `isEnabled === true`, not `false`, which contradicts the comment above it, the docs and the unit tests. With `isEnabled: false` the normal dispatcher is built and all registered or per-call integrations still receive events. `isEnabled: true` is what silences telemetry. Nothing else in the package reads `isEnabled`, so there is no other opt-out switch. The only stream-text path that checks `isEnabled !== false` does not stop the dispatcher.",
+      "user_impact": "A user who sets `isEnabled: false` on a call carrying sensitive prompts, expecting it to stay out of OpenTelemetry or other registered integrations, still has inputs and outputs sent. The explicit per-call opt-out does not work.",
+      "note": null,
+      "source": {
+        "file": "content/docs/03-ai-sdk-core/60-telemetry.mdx",
+        "line_start": 107,
+        "quote": "Telemetry is opt-out. To disable telemetry for a specific call, set `isEnabled: false`:"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/ai/src/telemetry/create-telemetry-dispatcher.ts",
+          "line_start": 125,
+          "quote": "if (telemetry?.isEnabled === true) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/telemetry/create-telemetry-dispatcher.ts:125",
+            "file_sha256": "febfe490b5ce6cbebafcd7fc7229033abc8ebf057d46a99b054d5869e1759b5a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/telemetry/create-telemetry-dispatcher.ts",
+          "line_start": 123,
+          "quote": "// When telemetry is explicitly disabled, return a dispatcher",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/telemetry/create-telemetry-dispatcher.ts:123",
+            "file_sha256": "febfe490b5ce6cbebafcd7fc7229033abc8ebf057d46a99b054d5869e1759b5a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/telemetry/create-telemetry-dispatcher.test.ts",
+          "line_start": 267,
+          "quote": "it('does not invoke any integration callbacks when isEnabled is false', async () => {",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/telemetry/create-telemetry-dispatcher.test.ts:267",
+            "file_sha256": "d3e9ec1daf88221ab3de27202e61dd3d2fda76ced6bb083f7a739aeaeee26cd6"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "The no-op dispatcher is returned when isEnabled === true, not false. The condition is inverted, so isEnabled false keeps telemetry on.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "packages/ai/src/telemetry/create-telemetry-dispatcher.ts",
+            "line_start": 125,
+            "quote": "if (telemetry?.isEnabled === true) {",
+            "checked": {
+              "ok": true,
+              "where": "packages/ai/src/telemetry/create-telemetry-dispatcher.ts:125",
+              "file_sha256": "febfe490b5ce6cbebafcd7fc7229033abc8ebf057d46a99b054d5869e1759b5a"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:47:13.294Z"
+      },
+      "receipt": "rcpt_0e8530317401"
+    },
+    {
+      "n": "8",
+      "claim": "For `transcribe` and `experimental_streamTranscribe`, telemetry contains only input audio byte length and media type plus the transcript; raw audio is never included.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The start and end events carry `audio: { byteLength, mediaType }`. The audio bytes go only to the model call (`audio: audioData`), not into the event objects.",
+      "user_impact": null,
+      "note": "This sentence is only about what is in the event. Whether events reach integrations at all is the subject of the isEnabled finding.",
+      "source": {
+        "file": "content/docs/03-ai-sdk-core/60-telemetry.mdx",
+        "line_start": 79,
+        "quote": "For `transcribe` and `experimental_streamTranscribe`, telemetry contains the"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/ai/src/transcribe/transcribe.ts",
+          "line_start": 159,
+          "quote": "audio: {",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/transcribe/transcribe.ts:159",
+            "file_sha256": "6c55023ffdb4489af83a365ef57d9a47a3919e585396a239d5880b68b50946a8"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/transcribe/transcribe.ts",
+          "line_start": 271,
+          "quote": "byteLength: audioData.byteLength,",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/transcribe/transcribe.ts:271",
+            "file_sha256": "6c55023ffdb4489af83a365ef57d9a47a3919e585396a239d5880b68b50946a8"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/transcribe/stream-transcribe.ts",
+          "line_start": 283,
+          "quote": "byteLength: audioByteLength,",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/transcribe/stream-transcribe.ts:283",
+            "file_sha256": "40a190535dde7b823c9deaadb7c33cefec5f2fde5ce7a216472b8f7205c2a812"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_8ecc2f783bcb"
+    },
+    {
+      "n": "9",
+      "claim": "With `experimental_toolApprovalSecret`, the server HMAC-signs each approval request and verifies the signature on replay; a forged or tampered approval is rejected before the tool executes, and the signature binds tool name, call ID and input.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The payload covers approvalId, toolCallId, toolName and a canonical digest of the input. When a secret is set, a missing or invalid signature throws before the tool executes.",
+      "user_impact": null,
+      "note": "The \"at least 32 bytes\" guidance is not enforced; any non-null secret is accepted. A legacy newline-joined signature format is still accepted when no field contains a newline.",
+      "source": {
+        "file": "content/docs/03-agents/06-tool-approvals.mdx",
+        "line_start": 303,
+        "quote": "When you provide a secret, the server HMAC-signs each approval request at issuance and verifies the signature when the approval is replayed."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/ai/src/generate-text/tool-approval-signature.ts",
+          "line_start": 77,
+          "quote": "const sig = await crypto.subtle.sign('HMAC', key, payload);",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/generate-text/tool-approval-signature.ts:77",
+            "file_sha256": "c2b53536f59ed5aef4d7feea9155122ef15dab16399e6f70805bfdd36ceb52c9"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/generate-text/tool-approval-signature.ts",
+          "line_start": 101,
+          "quote": "if (await crypto.subtle.verify('HMAC', key, sigBytes, payload)) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/generate-text/tool-approval-signature.ts:101",
+            "file_sha256": "c2b53536f59ed5aef4d7feea9155122ef15dab16399e6f70805bfdd36ceb52c9"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/generate-text/validate-tool-approvals.ts",
+          "line_start": 69,
+          "quote": "if (approvalRequest.signature == null) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/generate-text/validate-tool-approvals.ts:69",
+            "file_sha256": "b8307d8d1d65e1a2632d429ba4f44ae9809d17e21e6572bc4533fb6595889ac2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/generate-text/validate-tool-approvals.ts",
+          "line_start": 86,
+          "quote": "if (!valid) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/generate-text/validate-tool-approvals.ts:86",
+            "file_sha256": "b8307d8d1d65e1a2632d429ba4f44ae9809d17e21e6572bc4533fb6595889ac2"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_041686330a97"
+    },
+    {
+      "n": "10",
+      "claim": "The `redirect` option on MCP HTTP and SSE transports defaults to 'error', so HTTP redirects are rejected by default.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both transport constructors default redirect to 'error' and pass it to every fetch call.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "content/docs/08-migration-guides/23-migration-guide-7-0.mdx",
+        "line_start": 1755,
+        "quote": "The `redirect` option on `MCPTransportConfig` (used by both HTTP and SSE transports) now defaults to `'error'` instead of `'follow'`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/mcp/src/tool/mcp-http-transport.ts",
+          "line_start": 76,
+          "quote": "redirect = 'error',",
+          "checked": {
+            "ok": true,
+            "where": "packages/mcp/src/tool/mcp-http-transport.ts:76",
+            "file_sha256": "25a388f498743e4554a34717e244239f076c40a54c35e8954ce11c7772d934d3"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/mcp/src/tool/mcp-sse-transport.ts",
+          "line_start": 48,
+          "quote": "redirect = 'error',",
+          "checked": {
+            "ok": true,
+            "where": "packages/mcp/src/tool/mcp-sse-transport.ts:48",
+            "file_sha256": "2bb3480172c8727afc5e681be67a8e9be83b2f6c02ad0221b0b5e124b5359e9e"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/mcp/src/tool/mcp-http-transport.ts",
+          "line_start": 253,
+          "quote": "redirect: this.redirectMode,",
+          "checked": {
+            "ok": true,
+            "where": "packages/mcp/src/tool/mcp-http-transport.ts:253",
+            "file_sha256": "25a388f498743e4554a34717e244239f076c40a54c35e8954ce11c7772d934d3"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_5bbc41ffd40a"
+    },
+    {
+      "n": "11",
+      "claim": "The OpenAI provider's `baseURL` defaults to `OPENAI_BASE_URL` and then to the OpenAI API URL, and `apiKey` defaults to `OPENAI_API_KEY`.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both settings are loaded from the option, then the env var, with the fallback URL as documented.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "content/providers/01-ai-sdk-providers/03-openai.mdx",
+        "line_start": 105,
+        "quote": "It defaults to the `OPENAI_API_KEY` environment variable."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/openai/src/openai-provider.ts",
+          "line_start": 225,
+          "quote": "environmentVariableName: 'OPENAI_BASE_URL',",
+          "checked": {
+            "ok": true,
+            "where": "packages/openai/src/openai-provider.ts:225",
+            "file_sha256": "49701273cc13a1a5f854f4f5cabf75394c9b1d00d0286891b17b2e5936852694"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/openai/src/openai-provider.ts",
+          "line_start": 228,
+          "quote": ") ?? 'https://api.openai.com/v1';",
+          "checked": {
+            "ok": true,
+            "where": "packages/openai/src/openai-provider.ts:228",
+            "file_sha256": "49701273cc13a1a5f854f4f5cabf75394c9b1d00d0286891b17b2e5936852694"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/openai/src/openai-provider.ts",
+          "line_start": 237,
+          "quote": "environmentVariableName: 'OPENAI_API_KEY',",
+          "checked": {
+            "ok": true,
+            "where": "packages/openai/src/openai-provider.ts:237",
+            "file_sha256": "49701273cc13a1a5f854f4f5cabf75394c9b1d00d0286891b17b2e5936852694"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_ada2a6697d7e"
+    },
+    {
+      "n": "12",
+      "claim": "The Azure provider's `resourceName` defaults to `AZURE_RESOURCE_NAME` and `apiKey` to `AZURE_API_KEY`.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both values are loaded with the named env vars as the fallback.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "content/providers/01-ai-sdk-providers/04-azure.mdx",
+        "line_start": 128,
+        "quote": "It defaults to the `AZURE_API_KEY` environment variable."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/azure/src/azure-openai-provider.ts",
+          "line_start": 303,
+          "quote": "environmentVariableName: 'AZURE_API_KEY',",
+          "checked": {
+            "ok": true,
+            "where": "packages/azure/src/azure-openai-provider.ts:303",
+            "file_sha256": "357365ecb299d6362eb5ed4b1e20e366c0b56f499f35ae8475af9e450f13ccf3"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/azure/src/azure-openai-provider.ts",
+          "line_start": 341,
+          "quote": "environmentVariableName: 'AZURE_RESOURCE_NAME',",
+          "checked": {
+            "ok": true,
+            "where": "packages/azure/src/azure-openai-provider.ts:341",
+            "file_sha256": "357365ecb299d6362eb5ed4b1e20e366c0b56f499f35ae8475af9e450f13ccf3"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_50dfad91399f"
+    },
+    {
+      "n": "13",
+      "claim": "The AI Gateway API key defaults to the `AI_GATEWAY_API_KEY` environment variable.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The gateway loads the key from the option, then the env var, and falls back to OIDC if neither is set (the tests cover this).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "content/providers/01-ai-sdk-providers/00-ai-gateway.mdx",
+        "line_start": 97,
+        "quote": "header. It defaults to the `AI_GATEWAY_API_KEY` environment variable."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/gateway/src/gateway-provider.ts",
+          "line_start": 711,
+          "quote": "environmentVariableName: 'AI_GATEWAY_API_KEY',",
+          "checked": {
+            "ok": true,
+            "where": "packages/gateway/src/gateway-provider.ts:711",
+            "file_sha256": "a6396f1dbcfce74079ba12d2bf9817d043e1c333bb5cf2007873501ce27588ca"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_c546ed3a88ad"
+    },
+    {
+      "n": "14",
+      "claim": "The Anthropic provider's `authToken` defaults to the `ANTHROPIC_AUTH_TOKEN` environment variable.",
+      "verdict": "FALSE",
+      "severity": "medium",
+      "explanation": "`packages/anthropic/src` mentions ANTHROPIC_AUTH_TOKEN only in a doc comment. The header builder uses `options.authToken` if passed and otherwise requires `ANTHROPIC_API_KEY`. The repo's own example reads the env var itself and passes it as `authToken`, which shows the provider does not.",
+      "user_impact": "A user who sets only `ANTHROPIC_AUTH_TOKEN` (for example for a Bearer-token proxy) gets a \"missing API key\" error on the first call. They must pass `authToken` explicitly in code.",
+      "note": null,
+      "source": {
+        "file": "content/providers/01-ai-sdk-providers/05-anthropic.mdx",
+        "line_start": 103,
+        "quote": "It defaults to the `ANTHROPIC_AUTH_TOKEN` environment variable."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/anthropic/src/anthropic-provider.ts",
+          "line_start": 161,
+          "quote": "const authHeaders: Record<string, string> = options.authToken",
+          "checked": {
+            "ok": true,
+            "where": "packages/anthropic/src/anthropic-provider.ts:161",
+            "file_sha256": "ee77b6cfc62272c278cebeb8e73bfd2894dc0ea622dc65a67b2141535d10793d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/anthropic/src/anthropic-provider.ts",
+          "line_start": 166,
+          "quote": "environmentVariableName: 'ANTHROPIC_API_KEY',",
+          "checked": {
+            "ok": true,
+            "where": "packages/anthropic/src/anthropic-provider.ts:166",
+            "file_sha256": "ee77b6cfc62272c278cebeb8e73bfd2894dc0ea622dc65a67b2141535d10793d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "examples/ai-functions/src/generate-text/anthropic/auth-token.ts",
+          "line_start": 8,
+          "quote": "authToken: process.env.ANTHROPIC_AUTH_TOKEN,",
+          "checked": {
+            "ok": true,
+            "where": "examples/ai-functions/src/generate-text/anthropic/auth-token.ts:8",
+            "file_sha256": "488be56b192269205250511c6efb4dce2e5f0fd240693d9ef879e0e82165a9b3"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "Only ANTHROPIC_API_KEY is loaded from the environment. authToken is read only from options, with no ANTHROPIC_AUTH_TOKEN fallback. Severity medium is fair.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "packages/anthropic/src/anthropic-provider.ts",
+            "line_start": 161,
+            "quote": "const authHeaders: Record<string, string> = options.authToken",
+            "checked": {
+              "ok": true,
+              "where": "packages/anthropic/src/anthropic-provider.ts:161",
+              "file_sha256": "ee77b6cfc62272c278cebeb8e73bfd2894dc0ea622dc65a67b2141535d10793d"
+            }
+          },
+          {
+            "type": "quote",
+            "file": "packages/anthropic/src/anthropic-provider.ts",
+            "line_start": 166,
+            "quote": "environmentVariableName: 'ANTHROPIC_API_KEY',",
+            "checked": {
+              "ok": true,
+              "where": "packages/anthropic/src/anthropic-provider.ts:166",
+              "file_sha256": "ee77b6cfc62272c278cebeb8e73bfd2894dc0ea622dc65a67b2141535d10793d"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:47:15.001Z"
+      },
+      "receipt": "rcpt_7227cfca3e28"
+    },
+    {
+      "n": "15",
+      "claim": "ToolLoopAgent stops after 20 steps by default and logs a warning with stopWhen guidance when that default limit stops a loop that could otherwise continue.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The default is used only when no stopWhen is set. Stop conditions run only when the loop could continue, so the warning fires only in that case.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "content/docs/03-agents/04-loop-control.mdx",
+        "line_start": 21,
+        "quote": "If this default limit stops a tool loop that could otherwise continue, the SDK logs a warning with guidance on configuring `stopWhen`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/ai/src/agent/tool-loop-agent.ts",
+          "line_start": 132,
+          "quote": "stopWhen: this.settings.stopWhen ?? createDefaultStopCondition(20),",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/agent/tool-loop-agent.ts:132",
+            "file_sha256": "924f2565de21773bb96a3b7894b86025c82bd0b019354eabbfc5142a660c2b10"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/agent/default-stop-condition.ts",
+          "line_start": 12,
+          "quote": "if (steps.length !== stepCount) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/agent/default-stop-condition.ts:12",
+            "file_sha256": "2e0e2ad6bd8930f440d77c8f3391dcec379d02980d30f65b03802e2c08cb4ca4"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/agent/default-stop-condition.ts",
+          "line_start": 24,
+          "quote": "`The tool loop stopped because it reached the default stopWhen condition, isStepCount(${stepCount}). ` +",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/agent/default-stop-condition.ts:24",
+            "file_sha256": "2e0e2ad6bd8930f440d77c8f3391dcec379d02980d30f65b03802e2c08cb4ca4"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_008cf364f79c"
+    },
+    {
+      "n": "16",
+      "claim": "HarnessAgent `permissionMode` defaults to `allow-all`, allowing built-in reads, edits and shell commands; `allow-edits` and `allow-reads` request approval for the rest where the adapter supports it.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "In the Claude Code bridge the default maps to Claude Code's bypassPermissions mode with the skip-permissions flag. allow-edits maps to acceptEdits and allow-reads to default, with a canUseTool callback gating the rest. This is documented, but the docs don't name the underlying bypass mode.",
+      "user_impact": null,
+      "note": "An agent built with a Claude Code harness and no permissionMode runs with Claude Code's permission checks bypassed. The docs say \"allow-all ... This is the default\", so this is disclosed.",
+      "source": {
+        "file": "content/docs/03-ai-sdk-harnesses/03-tools.mdx",
+        "line_start": 253,
+        "quote": "- `allow-all`: allow built-in reads, edits, and shell commands. This is the"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/harness-claude-code/src/bridge/index.ts",
+          "line_start": 176,
+          "quote": "const permissionMode = input.start.permissionMode ?? 'allow-all';",
+          "checked": {
+            "ok": true,
+            "where": "packages/harness-claude-code/src/bridge/index.ts:176",
+            "file_sha256": "e2574244f76b62f74823166a5a798a433deaf5fe99ec571aec1e986eb1c110b1"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/harness-claude-code/src/bridge/index.ts",
+          "line_start": 186,
+          "quote": "? 'bypassPermissions'",
+          "checked": {
+            "ok": true,
+            "where": "packages/harness-claude-code/src/bridge/index.ts:186",
+            "file_sha256": "e2574244f76b62f74823166a5a798a433deaf5fe99ec571aec1e986eb1c110b1"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/harness-claude-code/src/bridge/index.ts",
+          "line_start": 190,
+          "quote": "allowDangerouslySkipPermissions: permissionMode === 'allow-all',",
+          "checked": {
+            "ok": true,
+            "where": "packages/harness-claude-code/src/bridge/index.ts:190",
+            "file_sha256": "e2574244f76b62f74823166a5a798a433deaf5fe99ec571aec1e986eb1c110b1"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_12b34d75a2e5"
+    },
+    {
+      "n": "17",
+      "claim": "`sandboxSession.destroy()` deletes the Vercel sandbox, so that ID cannot be resumed afterwards.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "destroy() stops and then deletes the Vercel sandbox, so there is nothing left to resume.",
+      "user_impact": null,
+      "note": "HarnessAgentSession.destroy() swallows errors from the underlying destroy calls with .catch(() => {}), so a failed deletion is not surfaced to the caller.",
+      "source": {
+        "file": "content/docs/03-ai-sdk-harnesses/02-harness-agent.mdx",
+        "line_start": 459,
+        "quote": "`sandboxSession.destroy()` deletes it, that ID cannot be resumed."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/sandbox-vercel/src/vercel-network-sandbox-session.ts",
+          "line_start": 121,
+          "quote": "await this.sandbox.stop().catch(() => {});",
+          "checked": {
+            "ok": true,
+            "where": "packages/sandbox-vercel/src/vercel-network-sandbox-session.ts:121",
+            "file_sha256": "1a795930fe149b0da14dc31b5a607e773b296781600ed18f810a2248a57d237e"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/sandbox-vercel/src/vercel-network-sandbox-session.ts",
+          "line_start": 122,
+          "quote": "await this.sandbox.delete();",
+          "checked": {
+            "ok": true,
+            "where": "packages/sandbox-vercel/src/vercel-network-sandbox-session.ts:122",
+            "file_sha256": "1a795930fe149b0da14dc31b5a607e773b296781600ed18f810a2248a57d237e"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_3e7870d1533a"
+    },
+    {
+      "n": "18",
+      "claim": "Passing secrets through the sandbox `run` option `env`, instead of inlining them in the command, avoids leaking them in logs.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Vercel sessions pass env as a separate field. The just-bash session passes values as positional arguments to the script rather than interpolating them into the script text, so the command string never contains the secret.",
+      "user_impact": null,
+      "note": "With just-bash the values are still process arguments, so anything that logs argv would see them.",
+      "source": {
+        "file": "content/docs/07-reference/01-ai-sdk-core/34-sandbox.mdx",
+        "line_start": 81,
+        "quote": "Passing secrets here instead of inlining them into the command avoids leaking them in logs."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/sandbox-just-bash/src/just-bash-sandbox-session.ts",
+          "line_start": 202,
+          "quote": "// just-bash applies runCommand's env to the outer execution, but its `bash`",
+          "checked": {
+            "ok": true,
+            "where": "packages/sandbox-just-bash/src/just-bash-sandbox-session.ts:202",
+            "file_sha256": "b3641095c6ff4d88f44748537815eb7cf1187b223181a27241cd78da14324b15"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/sandbox-just-bash/src/just-bash-sandbox-session.ts",
+          "line_start": 216,
+          "quote": "`${assignments.map(() => 'export -- \"$1\"; shift').join('\\n')}\\n${command}`,",
+          "checked": {
+            "ok": true,
+            "where": "packages/sandbox-just-bash/src/just-bash-sandbox-session.ts:216",
+            "file_sha256": "b3641095c6ff4d88f44748537815eb7cf1187b223181a27241cd78da14324b15"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/sandbox-vercel/src/vercel-sandbox-session.ts",
+          "line_start": 43,
+          "quote": "...(env !== undefined ? { env } : {}),",
+          "checked": {
+            "ok": true,
+            "where": "packages/sandbox-vercel/src/vercel-sandbox-session.ts:43",
+            "file_sha256": "f3d88fbd7971ace201e29219216964ab27e3bde6e98d758d76322e02d86bcf4f"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_08e724231273"
+    },
+    {
+      "n": "19",
+      "claim": "The experimental sandbox description is not added to the model prompt automatically by the SDK; users must include `experimental_sandbox.description` themselves.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The core generateText/streamText code never reads the sandbox description when building the prompt. The only consumers are tool packages that embed it in their own tool description.",
+      "user_impact": null,
+      "note": "The bash tool package and the Cline harness do embed the sandbox description in their own tool or prompt text.",
+      "source": {
+        "file": "content/docs/03-ai-sdk-core/15-tools-and-tool-calling.mdx",
+        "line_start": 998,
+        "quote": "The experimental sandbox description is not added to the model prompt automatically."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/provider-utils/src/types/sandbox.ts",
+          "line_start": 75,
+          "quote": "readonly description: string;",
+          "checked": {
+            "ok": true,
+            "where": "packages/provider-utils/src/types/sandbox.ts:75",
+            "file_sha256": "f135afed51a2e3a7e11bfa4abcd12eeabcacafb18c859bd00bbd8e62c5ea2476"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/tool-bash/src/bash-tool.ts",
+          "line_start": 114,
+          "quote": "sandbox.description,",
+          "checked": {
+            "ok": true,
+            "where": "packages/tool-bash/src/bash-tool.ts:114",
+            "file_sha256": "930cbc747b1605be13e09f9664cef7063913d179b52f5dee3292fce678a38fbc"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_5dab8dc3370d"
+    },
+    {
+      "n": "20",
+      "claim": "`opaPolicy` fails closed (denies the call) if the policy backend errors, and unrecognized or malformed policy output is denied.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "A backend failure returns a `denied` decision. Unknown decision shapes are also denied. A null result is treated as \"no opinion\" (not-applicable), which the SDK handles as approved by default.",
+      "user_impact": null,
+      "note": "A Rego rule that returns nothing for a tool does not block it. This is stated in the normalizer's comment, not in the README.",
+      "source": {
+        "file": "packages/policy-opa/README.md",
+        "line_start": 627,
+        "quote": "Fails closed (denies) if the backend errors."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/policy-opa/src/opa/opa-policy.ts",
+          "line_start": 81,
+          "quote": "if (!outcome.ok) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/policy-opa/src/opa/opa-policy.ts:81",
+            "file_sha256": "881829ae1846006918118c3e2986a15b85e113e8bc88149074794106d20be656"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/policy-opa/src/opa/opa-policy.ts",
+          "line_start": 84,
+          "quote": "reason: `policy evaluation failed: ${errorMessage(outcome.error)}`,",
+          "checked": {
+            "ok": true,
+            "where": "packages/policy-opa/src/opa/opa-policy.ts:84",
+            "file_sha256": "881829ae1846006918118c3e2986a15b85e113e8bc88149074794106d20be656"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/policy-opa/src/opa/normalize-opa-decision.ts",
+          "line_start": 55,
+          "quote": "reason: 'unrecognized OPA policy decision',",
+          "checked": {
+            "ok": true,
+            "where": "packages/policy-opa/src/opa/normalize-opa-decision.ts:55",
+            "file_sha256": "16c05c9004cde8232ef1ba21189fd8748725fe79102c9bca6dfe52e5f57d7bde"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_0bdec5f7c11f"
+    },
+    {
+      "n": "21",
+      "claim": "`wrapMcpTools` falls back to `'user-approval'` by default for tools the supplied approval does not match; `'denied'` gives hard allowlist mode.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The fallback defaults to 'user-approval' and is configurable.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "packages/policy-opa/README.md",
+        "line_start": 619,
+        "quote": "`opts.default` controls what happens to tools the supplied approval does not match (`'user-approval'` by default; use `'denied'` for hard allowlist mode)."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/policy-opa/src/wrap-mcp-tools.ts",
+          "line_start": 59,
+          "quote": "const fallback: ApprovalLiteralStatus = opts?.default ?? 'user-approval';",
+          "checked": {
+            "ok": true,
+            "where": "packages/policy-opa/src/wrap-mcp-tools.ts:59",
+            "file_sha256": "316b31cb9d10735cdf5ff771b2533c42c0b7ea6eb3426bfd3a12f4ebe5ca0bc3"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_04eed99a4953"
+    },
+    {
+      "n": "22",
+      "claim": "Policy enforcement happens at the model's tool-call boundary only: a tool approved by the policy can still perform side effects the policy can't see, and a stronger guarantee needs an out-of-band sandbox.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "opaPolicy is a ToolApprovalConfiguration callback. It evaluates the tool call and returns a decision, and it does not isolate or monitor tool execution. The README states this limitation.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "packages/policy-opa/README.md",
+        "line_start": 470,
+        "quote": "For stronger guarantees against arbitrary side effects, run untrusted execution in an out-of-band sandbox"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/policy-opa/src/opa/opa-policy.ts",
+          "line_start": 61,
+          "quote": "return async ({",
+          "checked": {
+            "ok": true,
+            "where": "packages/policy-opa/src/opa/opa-policy.ts:61",
+            "file_sha256": "881829ae1846006918118c3e2986a15b85e113e8bc88149074794106d20be656"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/policy-opa/src/opa/opa-policy.ts",
+          "line_start": 88,
+          "quote": "return normalizeOpaDecision(outcome.result);",
+          "checked": {
+            "ok": true,
+            "where": "packages/policy-opa/src/opa/opa-policy.ts:88",
+            "file_sha256": "881829ae1846006918118c3e2986a15b85e113e8bc88149074794106d20be656"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_8b2e87703b17"
+    },
+    {
+      "n": "23",
+      "claim": "On Vercel deployments, AI Gateway OIDC authentication is handled automatically, with tokens obtained and refreshed without manual configuration.",
+      "verdict": "UNVERIFIABLE",
+      "severity": null,
+      "explanation": "The gateway uses the API key when one is set and otherwise calls getVercelOidcToken() from the external @vercel/oidc package. Token acquisition and refresh happen in that package and in the Vercel runtime, which are outside this repo.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "content/providers/01-ai-sdk-providers/00-ai-gateway.mdx",
+        "line_start": 174,
+        "quote": "- OIDC authentication is automatically handled"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/gateway/src/gateway-provider.ts",
+          "line_start": 721,
+          "quote": "const oidcToken = await getVercelOidcToken();",
+          "checked": {
+            "ok": true,
+            "where": "packages/gateway/src/gateway-provider.ts:721",
+            "file_sha256": "a6396f1dbcfce74079ba12d2bf9817d043e1c333bb5cf2007873501ce27588ca"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/gateway/src/vercel-environment.ts",
+          "line_start": 2,
+          "quote": "export { getVercelOidcToken } from '@vercel/oidc';",
+          "checked": {
+            "ok": true,
+            "where": "packages/gateway/src/vercel-environment.ts:2",
+            "file_sha256": "0c4cc997d33053bb4ed7164eded8d2685cf7355bdd3363dd1eaa56a967b97cb8"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_acc0aad93d16"
+    },
+    {
+      "n": "24",
+      "claim": "The DevTools integration automatically adds `.devtools` to your `.gitignore` file.",
+      "verdict": "PARTIAL",
+      "severity": "low",
+      "explanation": "The entry is added only when `.devtools/` doesn't exist yet and a `.gitignore` already exists in the current working directory. With no `.gitignore` there, or when the process runs from a subdirectory, the folder holding prompts and responses is created and nothing is ignored. The docs do add \"verify that .devtools is in your .gitignore\".",
+      "user_impact": "A user in a repo with no `.gitignore` in the working directory, such as a monorepo package started from a subfolder, can commit full prompts, outputs and raw provider payloads, which may be sensitive, if they trust the automatic step.",
+      "note": null,
+      "source": {
+        "file": "content/docs/03-ai-sdk-core/65-devtools.mdx",
+        "line_start": 187,
+        "quote": "The integration automatically adds `.devtools` to your `.gitignore` file."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/devtools/src/db.ts",
+          "line_start": 90,
+          "quote": "if (!fs.existsSync(gitignorePath)) {",
+          "checked": {
+            "ok": true,
+            "where": "packages/devtools/src/db.ts:90",
+            "file_sha256": "9b1a814b5c88665e3c2c3f80863362a4ff5571ec68dea7f6d28d3ec11bde174c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/devtools/src/db.ts",
+          "line_start": 123,
+          "quote": "const isFirstRun = !fs.existsSync(DB_DIR);",
+          "checked": {
+            "ok": true,
+            "where": "packages/devtools/src/db.ts:123",
+            "file_sha256": "9b1a814b5c88665e3c2c3f80863362a4ff5571ec68dea7f6d28d3ec11bde174c"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/devtools/src/db.ts",
+          "line_start": 127,
+          "quote": "ensureGitignore();",
+          "checked": {
+            "ok": true,
+            "where": "packages/devtools/src/db.ts:127",
+            "file_sha256": "9b1a814b5c88665e3c2c3f80863362a4ff5571ec68dea7f6d28d3ec11bde174c"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "downgrade",
+        "reason": "The auto-add works in the normal case. It is skipped only in the edge case where no .gitignore exists, so this is a minor omission.",
+        "severity": null,
+        "evidence": [],
+        "at": "2026-10-22T21:47:17.009Z"
+      },
+      "receipt": "rcpt_8d996152e425"
+    },
+    {
+      "n": "25",
+      "claim": "Once a telemetry integration is registered (for example DevToolsTelemetry), telemetry is enabled automatically for all AI SDK calls with no per-call setup.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "With no per-call `telemetry` option, the dispatcher falls back to the globally registered integrations, so every call reports to them.",
+      "user_impact": null,
+      "note": "This is the other side of the isEnabled defect: because `isEnabled: false` does not stop dispatch, there is no working per-call way to opt out.",
+      "source": {
+        "file": "content/docs/02-getting-started/09-coding-agents.mdx",
+        "line_start": 71,
+        "quote": "Once an integration is registered, [telemetry](/docs/ai-sdk-core/telemetry) is enabled automatically for all your AI SDK calls:"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/ai/src/telemetry/create-telemetry-dispatcher.ts",
+          "line_start": 129,
+          "quote": "const localIntegrations = telemetry?.integrations;",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/telemetry/create-telemetry-dispatcher.ts:129",
+            "file_sha256": "febfe490b5ce6cbebafcd7fc7229033abc8ebf057d46a99b054d5869e1759b5a"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/ai/src/telemetry/create-telemetry-dispatcher.ts",
+          "line_start": 133,
+          "quote": ": getGlobalTelemetryIntegrations();",
+          "checked": {
+            "ok": true,
+            "where": "packages/ai/src/telemetry/create-telemetry-dispatcher.ts:133",
+            "file_sha256": "febfe490b5ce6cbebafcd7fc7229033abc8ebf057d46a99b054d5869e1759b5a"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_dc354de91c2f"
+    },
+    {
+      "n": "26",
+      "claim": "OpenAI compaction items are returned as text parts with special providerMetadata and sent back as compaction input items on later requests.",
+      "verdict": "PARTIAL",
+      "severity": "low",
+      "explanation": "The round trip works, but the returned parts have type `custom` and kind `openai.compaction`, not `text`. On the way back, the converter sends an item reference when `store` is on, skips the item when a conversation is used, and sends the encrypted compaction item otherwise.",
+      "user_impact": "A user who persists only parts with type `text` (as the docs imply they can recognise compaction items) drops the compaction state, which breaks the carried-forward context on the next turn.",
+      "note": null,
+      "source": {
+        "file": "content/providers/01-ai-sdk-providers/03-openai.mdx",
+        "line_start": 2186,
+        "quote": "compaction items are returned as text parts with special `providerMetadata`, and when passed back in subsequent requests they are sent as compaction input items."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/openai/src/responses/openai-responses-language-model.ts",
+          "line_start": 1487,
+          "quote": "type: 'custom',",
+          "checked": {
+            "ok": true,
+            "where": "packages/openai/src/responses/openai-responses-language-model.ts:1487",
+            "file_sha256": "a4405f56c9ffdcbe09622f649c24066a4c2c63a36b433bc0f2ba45e24b494fb0"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/openai/src/responses/openai-responses-language-model.ts",
+          "line_start": 1488,
+          "quote": "kind: 'openai.compaction',",
+          "checked": {
+            "ok": true,
+            "where": "packages/openai/src/responses/openai-responses-language-model.ts:1488",
+            "file_sha256": "a4405f56c9ffdcbe09622f649c24066a4c2c63a36b433bc0f2ba45e24b494fb0"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/openai/src/responses/convert-to-openai-responses-input.ts",
+          "line_start": 1393,
+          "quote": "type: 'compaction',",
+          "checked": {
+            "ok": true,
+            "where": "packages/openai/src/responses/convert-to-openai-responses-input.ts:1393",
+            "file_sha256": "72f0770d3d839b1d6e78e497a7fadc9bcd8895bfd73a5eb5a645c494d924446a"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "The code emits the compaction item as a part of type 'custom' with kind 'openai.compaction', not as a text part as the docs say. Persisting only text parts would lose it. Low severity fits.",
+        "severity": "low",
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "packages/openai/src/responses/openai-responses-language-model.ts",
+            "line_start": 1487,
+            "quote": "type: 'custom',",
+            "checked": {
+              "ok": true,
+              "where": "packages/openai/src/responses/openai-responses-language-model.ts:1487",
+              "file_sha256": "a4405f56c9ffdcbe09622f649c24066a4c2c63a36b433bc0f2ba45e24b494fb0"
+            }
+          },
+          {
+            "type": "quote",
+            "file": "packages/openai/src/responses/openai-responses-language-model.ts",
+            "line_start": 1488,
+            "quote": "kind: 'openai.compaction',",
+            "checked": {
+              "ok": true,
+              "where": "packages/openai/src/responses/openai-responses-language-model.ts:1488",
+              "file_sha256": "a4405f56c9ffdcbe09622f649c24066a4c2c63a36b433bc0f2ba45e24b494fb0"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:47:18.681Z"
+      },
+      "receipt": "rcpt_d618574a11f1"
+    },
+    {
+      "n": "27",
+      "claim": "Code-mode generated code cannot access Node.js globals (process, require, module), the host file system or module loader, fetch, WebCrypto or performance APIs, or eval / dynamic Function construction.",
+      "verdict": "UNVERIFIABLE",
+      "severity": null,
+      "explanation": "code-mode contains no code that removes or blocks these globals. It hands the source to the external `run` runner, and the list holds only if that dependency's QuickJS context exposes none of them. The package's own tests have no assertions on process, require, fetch or eval being absent. The only in-repo statement is the prompt telling the model fetch is unavailable.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "content/docs/03-ai-sdk-core/18-code-mode.mdx",
+        "line_start": 291,
+        "quote": "Each invocation receives a fresh QuickJS context. Sandboxed code cannot access:"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "packages/code-mode/src/tool-prompt.ts",
+          "line_start": 27,
+          "quote": "'Fetch: `fetch` is not available.',",
+          "checked": {
+            "ok": true,
+            "where": "packages/code-mode/src/tool-prompt.ts:27",
+            "file_sha256": "6e87e6090e4b96592fc2cd671b001beb3b0e5688cbd89f0e0a38d188c9f2a98e"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/code-mode/src/run-code-mode.ts",
+          "line_start": 114,
+          "quote": "const result = await runner.run({",
+          "checked": {
+            "ok": true,
+            "where": "packages/code-mode/src/run-code-mode.ts:114",
+            "file_sha256": "817f7913a6e1d9c220fdb8236e7f34de805041ef88858294ecc9cba8bd7b8790"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_e9cb6f4804bd"
+    },
+    {
+      "n": "28",
+      "claim": "In the MCP tool-annotations example, the read-only tool executes immediately while destructive and unannotated tools prompt for approval.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The MCP client copies annotations into tool metadata. The example's toolApproval returns not-applicable only for an explicit readOnlyHint, and user-approval for everything else, including the unannotated create-note tool.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "content/docs/03-ai-sdk-core/16-mcp-tools.mdx",
+        "line_start": 506,
+        "quote": "Ask the client to read, delete, or create a note. The read-only tool executes"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "examples/mcp/src/tool-annotations/client.ts",
+          "line_start": 53,
+          "quote": "return annotations?.readOnlyHint === true",
+          "checked": {
+            "ok": true,
+            "where": "examples/mcp/src/tool-annotations/client.ts:53",
+            "file_sha256": "4786cddce5f8fac0d7bea57964af53d620f4403b42ec7a9cf0dfe29037e2d1cd"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "examples/mcp/src/tool-annotations/server.ts",
+          "line_start": 27,
+          "quote": "readOnlyHint: true,",
+          "checked": {
+            "ok": true,
+            "where": "examples/mcp/src/tool-annotations/server.ts:27",
+            "file_sha256": "2daa28cad853d98ba14b3619a9be8c3fec17bd50643b4e5b548ea54fb239c3fd"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "packages/mcp/src/tool/mcp-client.ts",
+          "line_start": 1280,
+          "quote": "...(annotations.readOnlyHint != null",
+          "checked": {
+            "ok": true,
+            "where": "packages/mcp/src/tool/mcp-client.ts:1280",
+            "file_sha256": "6748ab8b807c9d044f39e0b491c5bf7dcc9e9687c74bfdb11687363eaeb60ae2"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_799ab100f1f7"
+    }
+  ],
+  "totals": {
+    "claims": 28,
+    "VERIFIED": 20,
+    "PARTIAL": 1,
+    "FALSE": 4,
+    "UNVERIFIABLE": 3,
+    "behaviors": 1,
+    "downgraded": 2,
+    "retracted": 0,
+    "rejected_citations": 1
+  }
+}

@@ -1,0 +1,155 @@
+[
+ {
+  "repo": "openai_codex",
+  "system": "baseline",
+  "claim": "When a request is blocked the proxy sets x-proxy-error to one of blocked-by-allowlist, blocked-by-denylist, blocked-by-method-policy, or blocked-by-policy.",
+  "doc": "codex-rs/network-proxy/README.md:141",
+  "code": "codex-rs/network-proxy/src/responses.rs:57",
+  "explanation": "blocked_header_value also emits blocked-by-mitm-hook (REASON_MITM_HOOK_DENIED) and blocked-by-mitm-required (REASON_MITM_REQUIRED). The documented closed set of four values is incomplete, so clients that treat it as exhaustive will mishandle these two.",
+  "id": "k1"
+ },
+ {
+  "repo": "vercel_ai",
+  "system": "baseline",
+  "claim": "The Anthropic provider's `authToken` setting defaults to the `ANTHROPIC_AUTH_TOKEN` environment variable.",
+  "doc": "content/providers/01-ai-sdk-providers/05-anthropic.mdx:103",
+  "code": "packages/anthropic/src/anthropic-provider.ts:161",
+  "explanation": "createAnthropic only uses `options.authToken`. If it is unset, the code falls back to the `x-api-key` header and calls loadApiKey with ANTHROPIC_API_KEY. Nothing in the provider reads ANTHROPIC_AUTH_TOKEN. Searching the whole repository, only the harness packages read that variable, and they do it for their own subprocess environments. Setting only ANTHROPIC_AUTH_TOKEN makes the provider fail with a missing API key error.",
+  "id": "k2"
+ },
+ {
+  "repo": "openai_codex",
+  "system": "baseline",
+  "claim": "When bubblewrap is active, the helper applies PR_SET_NO_NEW_PRIVS and a seccomp filter in-process after establishing the filesystem view.",
+  "doc": "codex-rs/linux-sandbox/README.md:53",
+  "code": "codex-rs/linux-sandbox/src/seccomp.rs:72",
+  "explanation": "set_no_new_privs() runs only if a network seccomp mode is selected or legacy Landlock is used. With full-disk-write access and unrestricted network, network_seccomp_mode is None, so neither NO_NEW_PRIVS nor a seccomp filter is installed even though bubblewrap is active. The code comment says this is deliberate, to keep setuid bwrap working.",
+  "id": "k3"
+ },
+ {
+  "repo": "modelcontextprotocol_python-sdk",
+  "system": "elliot",
+  "claim": "streamable_http_app()/run(\"streamable-http\") with no transport_security defaults to DNS-rebinding protection accepting only localhost Host headers",
+  "doc": "docs/troubleshooting.md:164",
+  "code": "src/mcp/server/lowlevel/server.py:753",
+  "explanation": "The default settings are only built for loopback host values; for any other host (e.g. 0.0.0.0) no settings are passed and the transport security default is protection disabled. The loopback default (the common case in the troubleshooting scenario) behaves as described.",
+  "id": "k4"
+ },
+ {
+  "repo": "openai_openai-node",
+  "system": "elliot",
+  "claim": "wait_for is a read needing nonempty text up to 256 UTF-8 bytes after whitespace normalization and a timeout of 1 through 30000 ms.",
+  "doc": "docs/browser.md:124",
+  "code": "src/helpers/browser.ts:26",
+  "explanation": "Bounds and read classification are implemented, but the field is declared as `timeout`; I did not find `timeout_ms` in the schema.",
+  "id": "k5"
+ },
+ {
+  "repo": "openai_openai-python",
+  "system": "baseline",
+  "claim": "max_retries must be a non-negative integer; other values raise an error before a request is sent",
+  "doc": "README.md:781",
+  "code": "src/openai/_base_client.py:890",
+  "explanation": "_validate_max_retries uses isinstance(value, int), which also accepts bool, so max_retries=True or False passes validation instead of raising.",
+  "id": "k6"
+ },
+ {
+  "repo": "openai_codex",
+  "system": "baseline",
+  "claim": "A failed OIDC renewal delays further exchange attempts by one second, doubling after each failure up to 30 seconds.",
+  "doc": "codex-rs/responses-api-proxy/README.md:126",
+  "code": "codex-rs/responses-api-proxy/src/auth.rs:46",
+  "explanation": "MAX_RENEWAL_BACKOFF is Duration::from_secs(61), and the backoff is computed as (delay * 2).min(MAX_RENEWAL_BACKOFF) at auth.rs:252. The delay sequence is 1,2,4,8,16,32,61 seconds, so it caps at 61 seconds, not 30.",
+  "id": "k7"
+ },
+ {
+  "repo": "openai_openai-python",
+  "system": "baseline",
+  "claim": "By default the library closes underlying HTTP connections whenever the client is garbage collected",
+  "doc": "README.md:1074",
+  "code": "src/openai/_base_client.py:1611",
+  "explanation": "Async clients only schedule aclose() as a task if an event loop is running when __del__ runs. Otherwise the exception is swallowed and nothing is closed. This holds for AsyncOpenAI, which the README itself concedes a few lines later.",
+  "id": "k8"
+ },
+ {
+  "repo": "anthropics_anthropic-sdk-python",
+  "system": "baseline",
+  "claim": "`max_content_bytes` keeps the content of one span within this size.",
+  "doc": "README.md:59",
+  "code": "src/anthropic/lib/_tracing/_content.py:172",
+  "explanation": "fit_content() and the CONTENT_LIMIT comment state that what is kept of an attribute that lost everything (an emptied list, or a message with no parts) can still total more than the limit. So the limit is best-effort, not a hard bound on span content.",
+  "id": "k9"
+ },
+ {
+  "repo": "openai_codex",
+  "system": "baseline",
+  "claim": "For memories with no last_usage, Phase 2 selection falls back to generated_at, and eligible memories are ranked by usage_count and then by the most recent last_usage / generated_at.",
+  "doc": "codex-rs/memories/README.md:91",
+  "code": "codex-rs/state/src/runtime/memories.rs:479",
+  "explanation": "get_phase2_input_selection filters and ranks with COALESCE(last_usage, source_updated_at) and never uses generated_at (memories.rs:479-486). The fallback timestamp is source_updated_at, the rollout's last update time, which can differ materially from when the memory was generated.",
+  "id": "k10"
+ },
+ {
+  "repo": "modelcontextprotocol_typescript-sdk",
+  "system": "elliot",
+  "claim": "The root entry of every package is runtime-neutral: its module graph never reaches node:child_process or any other Node builtin.",
+  "doc": "docs/get-started/packages.md:49",
+  "code": "packages/server-legacy/src/index.ts:2",
+  "explanation": "The server-legacy root re-exports SSEServerTransport, whose module imports node:crypto and node:tls as runtime values. Its auth handlers also import node:crypto. Only the client and server roots keep Node code behind ./stdio.",
+  "id": "k11"
+ },
+ {
+  "repo": "openai_codex",
+  "system": "baseline",
+  "claim": "The Phase 2 memory consolidation agent runs with no approvals, no network, and local write access only.",
+  "doc": "codex-rs/memories/README.md:114",
+  "code": "codex-rs/memories/write/src/phase2.rs:325",
+  "explanation": "Approvals are forced to Never, but the restricted WorkspaceWrite policy with network_access=false is applied only when the parent permission profile is Managed. If the parent profile is Disabled or External{network}, the agent inherits that profile unchanged (phase2.rs:326-331), so it can run unsandboxed and, for External, with the parent's network setting.",
+  "id": "k12"
+ },
+ {
+  "repo": "vercel_ai",
+  "system": "baseline",
+  "claim": "toUIMessageStream's `sendReasoning` option defaults to false, so reasoning parts are not sent to the client unless you opt in.",
+  "doc": "content/docs/07-reference/01-ai-sdk-core/02-stream-text.mdx:4151",
+  "code": "packages/ai/src/ui-message-stream/to-ui-message-stream.ts:25",
+  "explanation": "The code defaults `sendReasoning = true` in to-ui-message-stream.ts:25 and again in to-ui-message-chunk.ts:44. Reasoning parts are therefore forwarded by default and are only dropped when the caller passes `sendReasoning: false`. The direct-chat-transport reference page (50-direct-chat-transport.mdx) already says `Defaults to true`, so the two docs contradict each other.",
+  "id": "k13"
+ },
+ {
+  "repo": "vercel_ai",
+  "system": "elliot",
+  "claim": "OpenAI compaction items are returned as text parts with special providerMetadata and sent back as compaction input items on later requests.",
+  "doc": "content/providers/01-ai-sdk-providers/03-openai.mdx:2186",
+  "code": "packages/openai/src/responses/openai-responses-language-model.ts:1487",
+  "explanation": "The round trip works, but the returned parts have type `custom` and kind `openai.compaction`, not `text`. On the way back, the converter sends an item reference when `store` is on, skips the item when a conversation is used, and sends the encrypted compaction item otherwise.",
+  "id": "k14"
+ },
+ {
+  "repo": "openai_openai-python",
+  "system": "baseline",
+  "claim": "Token refresh buffer defaults to 1200 seconds (20 minutes) before expiration",
+  "doc": "README.md:152",
+  "code": "src/openai/auth/_workload.py:327",
+  "explanation": "The effective buffer is min(configured_buffer, expires_in / 2), so for tokens valid for less than 40 minutes the refresh happens at half the lifetime rather than 20 minutes before expiry.",
+  "id": "k15"
+ },
+ {
+  "repo": "openai_openai-agents-python",
+  "system": "baseline",
+  "claim": "For the Realtime WebSocket transport, the SDK default for max_size is None, which leaves incoming message size unlimited.",
+  "doc": "docs/realtime/transport.md:64",
+  "code": "src/agents/realtime/openai_realtime.py:689",
+  "explanation": "_create_websocket_connection seeds connect_kwargs with `\"max_size\": 8 * 1024 * 1024` and only overrides it when transport_config supplies max_size. The default is 8 MiB, not unlimited. (The Responses WebSocket path does default to None, which is what models/index.md describes.)",
+  "id": "k16"
+ },
+ {
+  "repo": "vercel_ai",
+  "system": "elliot",
+  "claim": "The Anthropic provider's `authToken` defaults to the `ANTHROPIC_AUTH_TOKEN` environment variable.",
+  "doc": "content/providers/01-ai-sdk-providers/05-anthropic.mdx:103",
+  "code": "packages/anthropic/src/anthropic-provider.ts:161",
+  "explanation": "`packages/anthropic/src` mentions ANTHROPIC_AUTH_TOKEN only in a doc comment. The header builder uses `options.authToken` if passed and otherwise requires `ANTHROPIC_API_KEY`. The repo's own example reads the env var itself and passes it as `authToken`, which shows the provider does not.",
+  "id": "k17"
+ }
+]

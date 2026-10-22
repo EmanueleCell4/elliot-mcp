@@ -1,0 +1,53 @@
+From ec72a5410f4cfd2ff446a3b0d87f5dcc2c18515c Mon Sep 17 00:00:00 2001
+From: bench <b@b>
+Date: Thu, 22 Oct 2026 15:47:10 +0000
+Subject: [PATCH] bench mutations
+
+---
+ packages/ai/src/telemetry/create-telemetry-dispatcher.ts | 2 +-
+ packages/ai/src/telemetry/filter-included-context.ts     | 2 +-
+ packages/devtools/src/db.ts                              | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/packages/ai/src/telemetry/create-telemetry-dispatcher.ts b/packages/ai/src/telemetry/create-telemetry-dispatcher.ts
+index 1cd4c73..5306f07 100644
+--- a/packages/ai/src/telemetry/create-telemetry-dispatcher.ts
++++ b/packages/ai/src/telemetry/create-telemetry-dispatcher.ts
+@@ -122,7 +122,7 @@ export function createTelemetryDispatcher({
+ }): TelemetryDispatcher {
+   // When telemetry is explicitly disabled, return a dispatcher
+   // that performs no work and lets tool execution pass through unwrapped.
+-  if (telemetry?.isEnabled === false) {
++  if (telemetry?.isEnabled === true) {
+     return {};
+   }
+ 
+diff --git a/packages/ai/src/telemetry/filter-included-context.ts b/packages/ai/src/telemetry/filter-included-context.ts
+index c4c3bce..65ae0fe 100644
+--- a/packages/ai/src/telemetry/filter-included-context.ts
++++ b/packages/ai/src/telemetry/filter-included-context.ts
+@@ -26,7 +26,7 @@ export function filterIncludedContext<CONTEXT extends Context>({
+ 
+   return Object.fromEntries(
+     Object.entries(context).filter(
+-      ([key]) => includeContext?.[key as keyof CONTEXT] === true,
++      ([key]) => includeContext?.[key as keyof CONTEXT] === false,
+     ),
+   );
+ }
+diff --git a/packages/devtools/src/db.ts b/packages/devtools/src/db.ts
+index 5929fc4..535210b 100644
+--- a/packages/devtools/src/db.ts
++++ b/packages/devtools/src/db.ts
+@@ -127,7 +127,7 @@ const writeDb = (db: Database): void => {
+     ensureGitignore();
+   }
+ 
+-  fs.writeFileSync(DB_PATH, JSON.stringify(db, null, 2));
++  fs.writeFileSync(DB_PATH, JSON.stringify(db, null, 5));
+ };
+ 
+ // In-memory cache for performance
+-- 
+2.43.0
+

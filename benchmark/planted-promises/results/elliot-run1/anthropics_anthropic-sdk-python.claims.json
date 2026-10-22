@@ -1,0 +1,2432 @@
+{
+  "elliot": "0.5.0",
+  "id": "aud_cdd9a817bf82",
+  "root": "/home/claude/elliot-runs/bench/repos/anthropics_anthropic-sdk-python",
+  "project": "anthropics_anthropic-sdk-python",
+  "commit": "f173135c9f8713e730e8513c760fe7b0f93120a4",
+  "date": "2026-10-22T15:47:07+00:00",
+  "dirty": true,
+  "remote": "https://github.com/anthropics/anthropic-sdk-python.git",
+  "tree_fingerprint": "eb7c000c522c6166a773985060386aaf5fb4d04c1fd9f2db09d5c409e89aec12",
+  "started_at": "2026-10-22T21:24:27.385Z",
+  "sources": [
+    {
+      "file": "README.md",
+      "lines": 90
+    },
+    {
+      "file": "SECURITY.md",
+      "lines": 16
+    },
+    {
+      "file": "src/anthropic/lib/google_cloud/README.md",
+      "lines": 162
+    },
+    {
+      "file": "api.md",
+      "lines": 3209
+    },
+    {
+      "file": "browser-toolset.md",
+      "lines": 190
+    },
+    {
+      "file": "computer-toolset.md",
+      "lines": 101
+    },
+    {
+      "file": "elliot-report-v1/2026-10-22-f173135/report.md",
+      "lines": 250
+    },
+    {
+      "file": "helpers.md",
+      "lines": 366
+    },
+    {
+      "file": "MIGRATION.md",
+      "lines": 430
+    },
+    {
+      "file": "REVIEW.md",
+      "lines": 25
+    },
+    {
+      "file": "src/anthropic/lib/foundry.md",
+      "lines": 127
+    },
+    {
+      "file": "tools.md",
+      "lines": 221
+    }
+  ],
+  "focused": false,
+  "candidates": [
+    {
+      "id": "c1",
+      "file": "REVIEW.md",
+      "line": 24,
+      "text": "- What an application can do to its own process, credentials or telemetry",
+      "risk": "high"
+    },
+    {
+      "id": "c2",
+      "file": "helpers.md",
+      "line": 287,
+      "text": "environment id / session id / environment key are already in the environment, so the sandbox case is",
+      "risk": "high"
+    },
+    {
+      "id": "c3",
+      "file": "helpers.md",
+      "line": 362,
+      "text": "check, so they are safe without a sandbox; `bash` is not.) `bash` does not inherit the runner's",
+      "risk": "high"
+    },
+    {
+      "id": "c4",
+      "file": "helpers.md",
+      "line": 365,
+      "text": "See [`examples/managed-agents-self-hosted-sandbox-worker.py`](examples/managed-agents-self-hosted-sandbox-worker.py) for a complete example.",
+      "risk": "high"
+    },
+    {
+      "id": "c5",
+      "file": "browser-toolset.md",
+      "line": 135,
+      "text": "7. **Treat everything a page returns as untrusted.** That includes titles, URLs, file names and downloaded files: never execute, store as trusted or forward them unchecked. URLs reach the model and `confirm` unredacted, ",
+      "risk": "high"
+    },
+    {
+      "id": "c6",
+      "file": "computer-toolset.md",
+      "line": 79,
+      "text": "- `confirm=confirm` is asked before each call runs, and only `True` approves: any other answer refuses the call, and so does an exception (raise `ToolError` to word the refusal). Without one, nothing is asked, clicks inc",
+      "risk": "default"
+    },
+    {
+      "id": "c7",
+      "file": "MIGRATION.md",
+      "line": 313,
+      "text": "The trigger threshold must be at least 50,000 tokens. See [compaction](https://platform.claude.com/docs/en/build-with-claude/compaction)",
+      "risk": "default"
+    },
+    {
+      "id": "c8",
+      "file": "browser-toolset.md",
+      "line": 123,
+      "text": "**Hooks.** Override `execute(context, name, input)` and call `super().execute(...)` to run code around every call, or skip `super()` to forward every call to a remote browser. It runs after the policies and `confirm`, so",
+      "risk": "default"
+    },
+    {
+      "id": "c9",
+      "file": "helpers.md",
+      "line": 148,
+      "text": "> **Requires:** `pip install anthropic[mcp]` (Python 3.10+)",
+      "risk": "default"
+    },
+    {
+      "id": "c10",
+      "file": "MIGRATION.md",
+      "line": 48,
+      "text": "If you only ever pass plain values (`timeout=30.0`, `max_retries=3`, …) there is _likely_ nothing for you to do.",
+      "risk": "default"
+    },
+    {
+      "id": "c11",
+      "file": "tools.md",
+      "line": 83,
+      "text": "By default, the runner runs a reply's tools after your loop body for that reply ends. With `run_tools_eagerly=True` and `stream=True`, each tool runs as soon as the model finishes writing its call. To hold a call until y",
+      "risk": "default"
+    }
+  ],
+  "signals": [],
+  "file_count": 2764,
+  "claims": [
+    {
+      "n": "1",
+      "claim": "The SDK depends on opentelemetry-api, a required dependency, and never on an OpenTelemetry SDK.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "opentelemetry-api is in runtime dependencies; opentelemetry-sdk appears only in the dev dependency group.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 50,
+        "quote": "It depends on `opentelemetry-api`, a required dependency, and never on an OpenTelemetry SDK."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "pyproject.toml",
+          "line_start": 13,
+          "quote": "\"opentelemetry-api>=1.1.0, <5\",",
+          "checked": {
+            "ok": true,
+            "where": "pyproject.toml:13",
+            "file_sha256": "e9474612d42fa228cb49ab7e24b240258d7ca8e39406ee371f4973ee9d5207b2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "pyproject.toml",
+          "line_start": 92,
+          "quote": "\"opentelemetry-sdk\",",
+          "checked": {
+            "ok": true,
+            "where": "pyproject.toml:92",
+            "file_sha256": "e9474612d42fa228cb49ab7e24b240258d7ca8e39406ee371f4973ee9d5207b2"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_c5bd289b6676"
+    },
+    {
+      "n": "2",
+      "claim": "A client given no open_telemetry option reads ANTHROPIC_OPEN_TELEMETRY=false, ..._TRACES_CONTENT_MODE=content, ..._TRACES_MAX_CONTENT_BYTES and ..._PROPAGATION=false; a client given any option (even {}) reads none, and defaults are spans on, headers sent, no content, 750,000 bytes.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Environment variables are consulted only when option is None; otherwise the given option is used and missing fields get defaults (propagation True, enabled True, metadata_only, 750000).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 75,
+        "quote": "A client that is given no `open_telemetry` option reads these environment variables when it is constructed"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/_tracing.py",
+          "line_start": 74,
+          "quote": "if option is None:\n        options = env_open_telemetry()",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/_tracing.py:74",
+            "file_sha256": "6fe1998b98b90416ff36031e23090d51f4080dcd6d725fa43f986774fd8fdaa4"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/_tracing.py",
+          "line_start": 109,
+          "quote": "if os.environ.get(\"ANTHROPIC_OPEN_TELEMETRY\", \"\").lower() == \"false\":",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/_tracing.py:109",
+            "file_sha256": "6fe1998b98b90416ff36031e23090d51f4080dcd6d725fa43f986774fd8fdaa4"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/_tracing.py",
+          "line_start": 56,
+          "quote": "DEFAULT_MAX_CONTENT_BYTES = 750_000",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/_tracing.py:56",
+            "file_sha256": "6fe1998b98b90416ff36031e23090d51f4080dcd6d725fa43f986774fd8fdaa4"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/_tracing.py",
+          "line_start": 117,
+          "quote": "if os.environ.get(\"ANTHROPIC_OPEN_TELEMETRY_PROPAGATION\", \"\").lower() == \"false\":",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/_tracing.py:117",
+            "file_sha256": "6fe1998b98b90416ff36031e23090d51f4080dcd6d725fa43f986774fd8fdaa4"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_b471d3ce6d2d"
+    },
+    {
+      "n": "3",
+      "claim": "A copy made with with_options or copy keeps its client's option unless it is given its own; with_options replaces the whole option, so start from client.open_telemetry.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Copy uses the resolved option of the parent when none is given; a given option replaces it wholesale.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 77,
+        "quote": "A copy made with `with_options` or `copy` keeps its client's option unless it is given its own."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/_base_client.py",
+          "line_start": 494,
+          "quote": "return {**self._open_telemetry} if open_telemetry is None else open_telemetry",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/_base_client.py:494",
+            "file_sha256": "4a290b7162b9212bc187af25f678eb3998e5f3d49bddf27ed296ce791d8ba6f2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/_base_client.py",
+          "line_start": 510,
+          "quote": "return {**self._open_telemetry, \"traces\": {**self._open_telemetry[\"traces\"]}}",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/_base_client.py:510",
+            "file_sha256": "4a290b7162b9212bc187af25f678eb3998e5f3d49bddf27ed296ce791d8ba6f2"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_e3226e4045dc"
+    },
+    {
+      "n": "4",
+      "claim": "Only True from confirm(context) approves a browser call: any other answer refuses the call.",
+      "verdict": "FALSE",
+      "severity": "high",
+      "explanation": "confirm_outcome raises ConfirmDeclinedError whenever the answer is not False, so True (and None, and any other value) declines and only False proceeds. This contradicts both the docstring above it and the documentation; the shared helper serves the sync and async browser and computer toolsets.",
+      "user_impact": "The gate is inverted: a confirm that returns True gets ConfirmDeclinedError, while one that returns False lets the call run. A person who answers \"no\" to a javascript_exec, file_upload, type or click prompt has the action executed, and one who says \"yes\" is refused. Every safety step in the guide that depends on confirm (gating javascript_exec, file_upload, purchases) is defeated.",
+      "note": null,
+      "source": {
+        "file": "browser-toolset.md",
+        "line_start": 105,
+        "quote": "**Approval.** Only `True` from `confirm(context)` approves: any other answer refuses the call (raise `ToolError` to word the refusal)."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_base.py",
+          "line_start": 540,
+          "quote": "if returned is not False:",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_base.py:540",
+            "file_sha256": "82a20349403e8ed0932aefbbe2a8ae039d810d0471c5e7b4ea78ae1d1ca25db8"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_base.py",
+          "line_start": 543,
+          "quote": "raise ConfirmDeclinedError(name)",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_base.py:543",
+            "file_sha256": "82a20349403e8ed0932aefbbe2a8ae039d810d0471c5e7b4ea78ae1d1ca25db8"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_base.py",
+          "line_start": 537,
+          "quote": "refused and the run continues. Any answer other than `True` declines the call.\"\"\"",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_base.py:537",
+            "file_sha256": "82a20349403e8ed0932aefbbe2a8ae039d810d0471c5e7b4ea78ae1d1ca25db8"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "tests/lib/tools/toolsets/test_refusals.py",
+          "line_start": 115,
+          "quote": "def deny(context: BetaConfirmContext) -> bool:\n        return False",
+          "checked": {
+            "ok": true,
+            "where": "tests/lib/tools/toolsets/test_refusals.py:115",
+            "file_sha256": "d683cdd1cf8c48f4ebf165caeec23de53751b92f15d068e01c7709a7794c5df9"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "The checked quote shows the gate declines whenever the answer is not False, so True raises ConfirmDeclinedError and False lets the call run. This contradicts both the docs and the function's own docstring, which says any answer other than True declines. High severity is fair because the confirm gate is a safety control.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/anthropic/lib/tools/_toolsets/_base.py",
+            "line_start": 540,
+            "quote": "if returned is not False:",
+            "checked": {
+              "ok": true,
+              "where": "src/anthropic/lib/tools/_toolsets/_base.py:540",
+              "file_sha256": "82a20349403e8ed0932aefbbe2a8ae039d810d0471c5e7b4ea78ae1d1ca25db8"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:28:54.624Z"
+      },
+      "receipt": "rcpt_bcf0ad5176a0"
+    },
+    {
+      "n": "5",
+      "claim": "Computer toolset: confirm is asked before each call, and only True approves; any other answer or exception refuses the call.",
+      "verdict": "FALSE",
+      "severity": "high",
+      "explanation": "The computer toolset passes confirm through the same confirm_outcome helper, which declines on True and proceeds on False. The exception path (raised is not None) does refuse as documented.",
+      "user_impact": "Same inverted check as the browser toolset: returning True from confirm refuses the call and returning False runs it, so the approval prompt that is meant to gate type/key/hold_key and clicks on a desktop approves exactly what a person denied. Exceptions do still refuse.",
+      "note": null,
+      "source": {
+        "file": "computer-toolset.md",
+        "line_start": 79,
+        "quote": "`confirm=confirm` is asked before each call runs, and only `True` approves: any other answer refuses the call, and so does an exception"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_base.py",
+          "line_start": 540,
+          "quote": "if returned is not False:",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_base.py:540",
+            "file_sha256": "82a20349403e8ed0932aefbbe2a8ae039d810d0471c5e7b4ea78ae1d1ca25db8"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_computer.py",
+          "line_start": 305,
+          "quote": "await self._toolset_confirm(member.name, confirm_context(context, member, parsed))",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_computer.py:305",
+            "file_sha256": "7dc546fd232d94583d3f59c11a5abacc0cc326fa6712f29120ca98fda099404f"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "The computer toolset routes through the same shared _toolset_confirm check, whose condition `returned is not False` declines on True. The docs' claim that only True approves is therefore contradicted. The part about exceptions refusing the call may still hold. High severity is fair because the confirm gate is a safety control.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/anthropic/lib/tools/_toolsets/_base.py",
+            "line_start": 540,
+            "quote": "if returned is not False:",
+            "checked": {
+              "ok": true,
+              "where": "src/anthropic/lib/tools/_toolsets/_base.py:540",
+              "file_sha256": "82a20349403e8ed0932aefbbe2a8ae039d810d0471c5e7b4ea78ae1d1ca25db8"
+            }
+          },
+          {
+            "type": "quote",
+            "file": "src/anthropic/lib/tools/_toolsets/_computer.py",
+            "line_start": 305,
+            "quote": "await self._toolset_confirm(member.name, confirm_context(context, member, parsed))",
+            "checked": {
+              "ok": true,
+              "where": "src/anthropic/lib/tools/_toolsets/_computer.py:305",
+              "file_sha256": "7dc546fd232d94583d3f59c11a5abacc0cc326fa6712f29120ca98fda099404f"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:28:56.475Z"
+      },
+      "receipt": "rcpt_7415244f14b3"
+    },
+    {
+      "n": "6",
+      "claim": "javascript_exec and file_upload cannot be enabled without a confirm; file_upload, read_console, read_network and javascript_exec are off by default.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The constructor raises ToolsetConfigError when an enabled, served member in CONFIRM_REQUIRED has no confirm; the four members are default-disabled in the registry. (Requiring a confirm is separate from the confirm outcome being inverted, see the other finding.)",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "browser-toolset.md",
+        "line_start": 105,
+        "quote": "`javascript_exec` and `file_upload` cannot be enabled without a `confirm`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_browser.py",
+          "line_start": 144,
+          "quote": "required = sorted(name for name in CONFIRM_REQUIRED if name in self.served and self.is_enabled(name))",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_browser.py:144",
+            "file_sha256": "2f89971ff553bcb681c572904a60a1cd2c3f8ecf28f5a1626aa026670a2f4d80"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_registry.py",
+          "line_start": 32,
+          "quote": "CONFIRM_REQUIRED: frozenset[str] = frozenset({\"javascript_exec\", \"file_upload\"})",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_registry.py:32",
+            "file_sha256": "6a974b9480ef1734a0d5f02b1d366cbc7ba3a8b9248b577635c5c7bce659e5a2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_registry.py",
+          "line_start": 66,
+          "quote": "\"file_upload\": (\"none\", \"Uploaded.\", False),",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_registry.py:66",
+            "file_sha256": "6a974b9480ef1734a0d5f02b1d366cbc7ba3a8b9248b577635c5c7bce659e5a2"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_728928609473"
+    },
+    {
+      "n": "7",
+      "claim": "Without a file_policy, uploads are refused and download paths stay hidden; BetaLocalFilePolicy refuses '..' components and requires paths under upload roots.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Download paths are hidden when there is no policy, and path checks are default-deny. The no-policy upload refusal lives in the pipeline's resolve_upload_paths, not read in full here.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "browser-toolset.md",
+        "line_start": 101,
+        "quote": "| `file_policy` | a `BetaFilePolicy`, such as `BetaLocalFilePolicy` | uploads are refused, and download paths stay hidden |"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_render.py",
+          "line_start": 211,
+          "quote": "if file_policy is None:\n        return False",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_render.py:211",
+            "file_sha256": "5878cfc06d3ae4b3854307ba59986732f5435400230127367bc1f6b2600fc86d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_security.py",
+          "line_start": 103,
+          "quote": "raise UploadRefusedError(\"file_upload path must not contain a '..' component\")",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_security.py:103",
+            "file_sha256": "870c29f42a1766b8fc717e186a83152126c3774c8e862ee3e838dc6c3921e05c"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_7f2da04c1838"
+    },
+    {
+      "n": "8",
+      "claim": "The file tools (read/write/edit/glob/grep) confine to the workdir with a symlink-aware check; bash does not inherit the runner's ANTHROPIC_* credentials.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Paths are canonicalised (symlinks followed) before a containment check; glob post-filters, grep skips symlinks; bash's default env drops ANTHROPIC_* variables and an explicit env replaces it entirely.",
+      "user_impact": null,
+      "note": "Confinement also admits any directories the caller lists in allowed_roots, and other (non-ANTHROPIC_) environment variables such as cloud credentials are still inherited by bash.",
+      "source": {
+        "file": "helpers.md",
+        "line_start": 361,
+        "line_end": 363,
+        "quote": "(The file tools — `read`/`write`/`edit`/`glob`/`grep` — confine to the workdir with a symlink-aware\ncheck, so they are safe without a sandbox; `bash` is not.) `bash` does not inherit the runner's\n`ANTHROPIC_*` credentials"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/agent_toolset.py",
+          "line_start": 409,
+          "quote": "if _within(full, root) or any(_within(full, Path(r).resolve()) for r in ctx.allowed_roots):",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/agent_toolset.py:409",
+            "file_sha256": "1bb45dc5941f8e348ab6ff4e36481a10754dce76e1f545e095fc43144542bb27"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/agent_toolset.py",
+          "line_start": 158,
+          "quote": "return {k: v for k, v in os.environ.items() if not k.startswith(\"ANTHROPIC_\")}",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/agent_toolset.py:158",
+            "file_sha256": "1bb45dc5941f8e348ab6ff4e36481a10754dce76e1f545e095fc43144542bb27"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/agent_toolset.py",
+          "line_start": 831,
+          "quote": "matches = list(_confined(matches, root))",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/agent_toolset.py:831",
+            "file_sha256": "1bb45dc5941f8e348ab6ff4e36481a10754dce76e1f545e095fc43144542bb27"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_feb950e8b4f8"
+    },
+    {
+      "n": "9",
+      "claim": "handle_item() with no arguments reads work id / environment id / session id from ANTHROPIC_WORK_ID / ANTHROPIC_ENVIRONMENT_ID / ANTHROPIC_SESSION_ID and the environment key from ANTHROPIC_ENVIRONMENT_KEY, falling back to the worker's key.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The env-var fallbacks exist as documented, and worker() accepts omitted environment_id/environment_key.",
+      "user_impact": null,
+      "note": "The code also reads an undocumented ANTHROPIC_WORK_SECRET, which lets a process run without an environment key.",
+      "source": {
+        "file": "helpers.md",
+        "line_start": 287,
+        "quote": "environment id / session id / environment key are already in the environment, so the sandbox case is"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/environments/_worker.py",
+          "line_start": 622,
+          "quote": "work_id = _require(work_id, name=\"work_id\", env_var=\"ANTHROPIC_WORK_ID\")",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/environments/_worker.py:622",
+            "file_sha256": "119f6f4d957ee51c1f4b119820c5d5403f6e1c725be1b2fd7d2369aa61ccf516"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/environments/_worker.py",
+          "line_start": 633,
+          "quote": "environment_key or self._environment_key or os.environ.get(\"ANTHROPIC_ENVIRONMENT_KEY\") or None",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/environments/_worker.py:633",
+            "file_sha256": "119f6f4d957ee51c1f4b119820c5d5403f6e1c725be1b2fd7d2369aa61ccf516"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/resources/beta/environments/work.py",
+          "line_start": 1331,
+          "quote": "environment_id: str | None = None,",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/resources/beta/environments/work.py:1331",
+            "file_sha256": "bee6df66c0ceb4032182bfe244c8aa07dd1b2c812a59db0dd122fd31dbd7b68c"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_4881a9a7594e"
+    },
+    {
+      "n": "10",
+      "claim": "Each tool call in the session runner has a 150 s limit; a sync tool that runs past it is reported as timed out while its thread keeps running.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The runner wraps each tool in fail_after(150s) and posts an is_error timed-out result.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "helpers.md",
+        "line_start": 355,
+        "quote": "150 s limit. A sync tool that runs past it is reported to the agent as timed out while its thread"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_beta_session_runner.py",
+          "line_start": 127,
+          "quote": "TOOL_TIMEOUT = 150.0",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_beta_session_runner.py:127",
+            "file_sha256": "52d2707bc5302457573098b1f9c99b7636e102831f2407850c5ebcf31dee26d1"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_beta_session_runner.py",
+          "line_start": 968,
+          "quote": "with anyio.fail_after(TOOL_TIMEOUT):",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_beta_session_runner.py:968",
+            "file_sha256": "52d2707bc5302457573098b1f9c99b7636e102831f2407850c5ebcf31dee26d1"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9970e639da63"
+    },
+    {
+      "n": "11",
+      "claim": "AnthropicBedrock raises ValueError at construction when no region is found, resolving from aws_region, AWS_REGION/AWS_DEFAULT_REGION, then the boto3 session for aws_profile (no silent us-east-1 fallback).",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Sync and async clients call _infer_region, which raises ValueError when nothing yields a region.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "MIGRATION.md",
+        "line_start": 382,
+        "line_end": 383,
+        "quote": "AWS region could be found. They now raise a `ValueError` at construction time instead."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/bedrock/_client.py",
+          "line_start": 74,
+          "quote": "aws_region = os.environ.get(\"AWS_REGION\") or os.environ.get(\"AWS_DEFAULT_REGION\")",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/bedrock/_client.py:74",
+            "file_sha256": "60178a436ea46a612d1f2fb5aea905b8693062c6a0230b4064bbfe4dc8cc2dd2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/bedrock/_client.py",
+          "line_start": 79,
+          "quote": "session = boto3.Session(profile_name=aws_profile)",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/bedrock/_client.py:79",
+            "file_sha256": "60178a436ea46a612d1f2fb5aea905b8693062c6a0230b4064bbfe4dc8cc2dd2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/bedrock/_client.py",
+          "line_start": 188,
+          "quote": "self.aws_region = _infer_region(aws_profile) if aws_region is None else aws_region",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/bedrock/_client.py:188",
+            "file_sha256": "60178a436ea46a612d1f2fb5aea905b8693062c6a0230b4064bbfe4dc8cc2dd2"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_924f9904d418"
+    },
+    {
+      "n": "12",
+      "claim": "Passing an httpx.Client / httpx.AsyncClient (from the old package) as http_client= raises a TypeError at construction time.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both sync and async base clients call _reject_httpx_object, which walks the MRO and raises TypeError for any class from the httpx package.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "MIGRATION.md",
+        "line_start": 86,
+        "line_end": 87,
+        "quote": "Passing an `httpx.Client` / `httpx.AsyncClient` (from the old package) as `http_client=` raises a `TypeError`\nat construction time"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/_base_client.py",
+          "line_start": 1086,
+          "quote": "_reject_httpx_object(\"http_client\", http_client)",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/_base_client.py:1086",
+            "file_sha256": "4a290b7162b9212bc187af25f678eb3998e5f3d49bddf27ed296ce791d8ba6f2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/_base_client.py",
+          "line_start": 165,
+          "quote": "raise TypeError(",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/_base_client.py:165",
+            "file_sha256": "4a290b7162b9212bc187af25f678eb3998e5f3d49bddf27ed296ce791d8ba6f2"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_91fc049e562f"
+    },
+    {
+      "n": "13",
+      "claim": "The trigger threshold for server-side compaction must be at least 50,000 tokens.",
+      "verdict": "UNVERIFIABLE",
+      "severity": null,
+      "explanation": "The SDK does not check the threshold; it passes context_management through to the API, which would enforce any minimum. The rule lives in the server.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "MIGRATION.md",
+        "line_start": 313,
+        "quote": "The trigger threshold must be at least 50,000 tokens."
+      },
+      "evidence": [
+        {
+          "type": "absent",
+          "pattern": "context_token_threshold",
+          "checked": {
+            "ok": true,
+            "where": "absent:context_token_threshold",
+            "doc_hits": 1
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_b891833f9962"
+    },
+    {
+      "n": "14",
+      "claim": "agent_toolset.READ_MAX_BYTES was removed in favour of DEFAULT_MAX_FILE_BYTES.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The replacement constant exists and is used; a search of src finds no READ_MAX_BYTES definition in agent_toolset.py (the name only appears in docs and earlier reports).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "MIGRATION.md",
+        "line_start": 267,
+        "quote": "| `anthropic.lib.tools.agent_toolset.READ_MAX_BYTES`                                                      | `anthropic.lib.tools.agent_toolset.DEFAULT_MAX_FILE_BYTES`"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/agent_toolset.py",
+          "line_start": 97,
+          "quote": "DEFAULT_MAX_FILE_BYTES = 513 * 1024",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/agent_toolset.py:97",
+            "file_sha256": "1bb45dc5941f8e348ab6ff4e36481a10754dce76e1f545e095fc43144542bb27"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/agent_toolset.py",
+          "line_start": 131,
+          "quote": "def _resolve_max_bytes(configured: int | None | NotGiven, default: int = DEFAULT_MAX_FILE_BYTES) -> int | None:",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/agent_toolset.py:131",
+            "file_sha256": "1bb45dc5941f8e348ab6ff4e36481a10754dce76e1f545e095fc43144542bb27"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_1b7854d81b76"
+    },
+    {
+      "n": "15",
+      "claim": "Tool runner iteration is driven by stop_reason: tool_use runs tools; pause_turn or compaction sends the turn back unchanged; any other stop reason stops after yielding the final message without running tools.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The step table maps tool_use to run_tools, pause_turn/compaction to resume and everything else, including unknown values, to stop.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "tools.md",
+        "line_start": 66,
+        "quote": "on `pause_turn` or `compaction` it sends the turn back unchanged so the server can resume it, and on any other stop reason it stops after yielding that final message without running tools."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_beta_runner.py",
+          "line_start": 117,
+          "quote": "\"pause_turn\": \"resume\",",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_beta_runner.py:117",
+            "file_sha256": "a543a12e3faa58b9568028e369e3570fe7f0f1fb25be4d68d8708eeb38d32182"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_beta_runner.py",
+          "line_start": 119,
+          "quote": "\"compaction\": \"resume\",",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_beta_runner.py:119",
+            "file_sha256": "a543a12e3faa58b9568028e369e3570fe7f0f1fb25be4d68d8708eeb38d32182"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_beta_runner.py",
+          "line_start": 137,
+          "quote": "# Absent and unknown (forward-compatible) values stop like any other finished turn.",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_beta_runner.py:137",
+            "file_sha256": "a543a12e3faa58b9568028e369e3570fe7f0f1fb25be4d68d8708eeb38d32182"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_fd68a11c3469"
+    },
+    {
+      "n": "16",
+      "claim": "If a plain exception is raised in a tool, its repr() is sent to the model as a text error and logged; ToolError is not logged.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The ToolError branch builds an is_error result without logging; the generic branch logs with log.exception and sends the repr, cut to the field limit.",
+      "user_impact": null,
+      "note": "The repr is cut to a field limit, so very long exception text is truncated.",
+      "source": {
+        "file": "tools.md",
+        "line_start": 220,
+        "quote": "If a plain exception is raised, its `repr()` will be sent to the model as a text error and logged. `ToolError` is not logged since it represents an intentional error response."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_beta_runner.py",
+          "line_start": 727,
+          "quote": "log.exception(f\"Error occurred while calling tool: {tool.name}\", exc_info=exc)",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_beta_runner.py:727",
+            "file_sha256": "a543a12e3faa58b9568028e369e3570fe7f0f1fb25be4d68d8708eeb38d32182"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_tool_dispatch.py",
+          "line_start": 251,
+          "quote": "never cut. Anything else is rendered with `repr` (which, unlike `str`, keeps",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_tool_dispatch.py:251",
+            "file_sha256": "6de983a9a5348ce9c1fe40623a3bb6397ebad91d899c5aea368a156e94df4280"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9310a51ed3cb"
+    },
+    {
+      "n": "17",
+      "claim": "compact_before_next_turn() raises if context_management has a compact_* edit.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The method calls _check_can_compact, which raises ValueError for any edit whose type begins with compact_.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "tools.md",
+        "line_start": 142,
+        "quote": "`compact_before_next_turn()` raises if `context_management` has a `compact_*` edit."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_beta_runner.py",
+          "line_start": 313,
+          "quote": "if any(edit[\"type\"].startswith(\"compact_\") for edit in edits or ()):",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_beta_runner.py:313",
+            "file_sha256": "a543a12e3faa58b9568028e369e3570fe7f0f1fb25be4d68d8708eeb38d32182"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_beta_runner.py",
+          "line_start": 304,
+          "quote": "self._check_can_compact(self._params)",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_beta_runner.py:304",
+            "file_sha256": "a543a12e3faa58b9568028e369e3570fe7f0f1fb25be4d68d8708eeb38d32182"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_7ede3ce70a98"
+    },
+    {
+      "n": "18",
+      "claim": "runner.close() stops a runner you will not resume and also ends its OpenTelemetry span.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "close() closes the generator, whose finally block ends the tool-runner span. If called from inside a running loop it only sets a flag and the loop stops at its next step.",
+      "user_impact": null,
+      "note": "When close() is called from inside a working loop (such as from a tool), the span ends only at the loop's next step.",
+      "source": {
+        "file": "tools.md",
+        "line_start": 79,
+        "quote": "call `runner.close()` (`await runner.close()` for the async runner), which also ends its OpenTelemetry span."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_beta_runner.py",
+          "line_start": 519,
+          "quote": "self._iterator.close()",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_beta_runner.py:519",
+            "file_sha256": "a543a12e3faa58b9568028e369e3570fe7f0f1fb25be4d68d8708eeb38d32182"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_beta_runner.py",
+          "line_start": 572,
+          "quote": "end_tool_runner_span(tool_runner_span)",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_beta_runner.py:572",
+            "file_sha256": "a543a12e3faa58b9568028e369e3570fe7f0f1fb25be4d68d8708eeb38d32182"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_6ae53d8fef6c"
+    },
+    {
+      "n": "19",
+      "claim": "With run_tools_eagerly=True and stream=True each tool runs as soon as the model finishes writing its call (default: after the loop body); defer_tool_call() holds a call and deferred_tool_calls lists held calls.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Eager mode wraps the stream iterator so each call runs once the reader asks for the event after the call's block ends; a held call is skipped until the loop body ends.",
+      "user_impact": null,
+      "note": "\\\"As soon as the model finishes writing\\\" is slightly early: the call runs when the reader asks for the next event, per the code's own docstring.",
+      "source": {
+        "file": "tools.md",
+        "line_start": 83,
+        "quote": "By default, the runner runs a reply's tools after your loop body for that reply ends. With `run_tools_eagerly=True` and `stream=True`, each tool runs as soon as the model finishes writing its call."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_beta_runner.py",
+          "line_start": 847,
+          "quote": "if self._run_tools_eagerly:",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_beta_runner.py:847",
+            "file_sha256": "a543a12e3faa58b9568028e369e3570fe7f0f1fb25be4d68d8708eeb38d32182"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_beta_runner.py",
+          "line_start": 788,
+          "quote": "def defer_tool_call(self, tool_use: BetaToolUseBlock | str) -> None:",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_beta_runner.py:788",
+            "file_sha256": "a543a12e3faa58b9568028e369e3570fe7f0f1fb25be4d68d8708eeb38d32182"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_beta_runner.py",
+          "line_start": 837,
+          "quote": "return [] if self._eager_tool_calls is None else self._eager_tool_calls.held()",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_beta_runner.py:837",
+            "file_sha256": "a543a12e3faa58b9568028e369e3570fe7f0f1fb25be4d68d8708eeb38d32182"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_36d6077c80dd"
+    },
+    {
+      "n": "20",
+      "claim": "URLs (tab URLs, with any credentials and data: bodies) reach the model and confirm unredacted: they are only folded to one line and length-bounded.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "No credential or body stripping is applied; the URL is folded and cut to FIELD_MAX (longer ones are truncated with a leading ellipsis).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "browser-toolset.md",
+        "line_start": 135,
+        "quote": "URLs reach the model and `confirm` unredacted, with any credentials and `data:` bodies."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_sanitize.py",
+          "line_start": 102,
+          "quote": "line = folded(url)",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_sanitize.py:102",
+            "file_sha256": "8b8bb754c2bbfffaeafc8a2e26e7f3540199cee20fda5d6edb928069bf9ee102"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_pipeline.py",
+          "line_start": 393,
+          "quote": "tab_url=None if tab is None else tab[\"url\"],",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_pipeline.py:393",
+            "file_sha256": "09cc3d0ad53b6fb230fd2ccfd30d171728e71cfe740088bc06449ce9fe602b12"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_0c328a974e73"
+    },
+    {
+      "n": "21",
+      "claim": "Overriding execute() runs after the url/file policies and confirm, so nothing checks an input you change there.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The pipeline applies URL policy, upload resolution and confirm before calling execute, with no later re-check.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "browser-toolset.md",
+        "line_start": 123,
+        "quote": "It runs after the policies and `confirm`, so nothing checks an input you change there."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_browser.py",
+          "line_start": 269,
+          "quote": "self.__apply_policy(url, url_context(record))",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_browser.py:269",
+            "file_sha256": "2f89971ff553bcb681c572904a60a1cd2c3f8ecf28f5a1626aa026670a2f4d80"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_browser.py",
+          "line_start": 271,
+          "quote": "self._toolset_confirm(member.name, confirm_context(record, self._toolset_pipeline))",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_browser.py:271",
+            "file_sha256": "2f89971ff553bcb681c572904a60a1cd2c3f8ecf28f5a1626aa026670a2f4d80"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_browser.py",
+          "line_start": 274,
+          "quote": "result = self.execute(record.context, member.name, record.input)",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_browser.py:274",
+            "file_sha256": "2f89971ff553bcb681c572904a60a1cd2c3f8ecf28f5a1626aa026670a2f4d80"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_e704115a1f53"
+    },
+    {
+      "n": "22",
+      "claim": "MCP helpers require pip install anthropic[mcp] (Python 3.10+).",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The mcp extra exists and the package requires Python >= 3.10.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "helpers.md",
+        "line_start": 148,
+        "quote": "> **Requires:** `pip install anthropic[mcp]` (Python 3.10+)"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "pyproject.toml",
+          "line_start": 46,
+          "quote": "mcp = [\"mcp>=1.0, <3; python_version >= '3.10'\"]",
+          "checked": {
+            "ok": true,
+            "where": "pyproject.toml:46",
+            "file_sha256": "e9474612d42fa228cb49ab7e24b240258d7ca8e39406ee371f4973ee9d5207b2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "pyproject.toml",
+          "line_start": 22,
+          "quote": "requires-python = \">= 3.10\"",
+          "checked": {
+            "ok": true,
+            "where": "pyproject.toml:22",
+            "file_sha256": "e9474612d42fa228cb49ab7e24b240258d7ca8e39406ee371f4973ee9d5207b2"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_7bf99313744f"
+    },
+    {
+      "n": "23",
+      "claim": "The low-level request methods no longer accept raw bytes for body=; raw payloads go through content=.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "bytes bodies raise TypeError and content= is forwarded to the HTTP client.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "MIGRATION.md",
+        "line_start": 318,
+        "line_end": 319,
+        "quote": "`body=` is now always\nJSON-serialised and raw payloads go through `content=`"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/_base_client.py",
+          "line_start": 675,
+          "quote": "if isinstance(json_data, bytes):",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/_base_client.py:675",
+            "file_sha256": "4a290b7162b9212bc187af25f678eb3998e5f3d49bddf27ed296ce791d8ba6f2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/_base_client.py",
+          "line_start": 676,
+          "quote": "raise TypeError(\"Passing raw bytes as `body` is not supported, pass them as `content` instead\")",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/_base_client.py:676",
+            "file_sha256": "4a290b7162b9212bc187af25f678eb3998e5f3d49bddf27ed296ce791d8ba6f2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/_base_client.py",
+          "line_start": 677,
+          "quote": "if options.content is not None:",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/_base_client.py:677",
+            "file_sha256": "4a290b7162b9212bc187af25f678eb3998e5f3d49bddf27ed296ce791d8ba6f2"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_fa03c8d6acbe"
+    }
+  ],
+  "rejected": [
+    {
+      "claim": "Computer toolset: confirm is asked before each call, and only True approves; any other answer or exception refuses the call.",
+      "verdict": "FALSE",
+      "problems": [
+        "evidence src/anthropic/lib/tools/_toolsets/_base.py:305: quote does not appear in the file"
+      ],
+      "at": "2026-10-22T21:25:46.236Z"
+    },
+    {
+      "claim": "The deprecated compaction_control argument and READ_MAX_BYTES export have been removed (READ_MAX_BYTES replaced by DEFAULT_MAX_FILE_BYTES).",
+      "verdict": "VERIFIED",
+      "problems": [
+        "evidence absent:READ_MAX_BYTES: pattern found in code: elliot-report-v1/2026-10-22-f173135/claims.json:722:      \"claim\": \"agent_toolset.READ_MAX_BYTES was removed and replaced by DEFAULT_MAX_FILE_BYTES\", | elliot-report-v1/2026-10-22-f173135/claims.json:731:        \"quote\": \"`anthropic.lib.tools.agent_toolset.READ_MAX_BYTES`\" | elliot-report-v1/2026-10-22-f173135/claims.json:746:          \"pattern\": \"READ_MAX_BYTES\","
+      ],
+      "at": "2026-10-22T21:27:04.984Z"
+    },
+    {
+      "claim": "The Google Cloud client never reads ANTHROPIC_API_KEY, ANTHROPIC_AUTH_TOKEN or ANTHROPIC_BASE_URL; it authenticates with Google credentials only.",
+      "verdict": "VERIFIED",
+      "problems": [
+        "claim source src/anthropic/lib/google_cloud/README.md is a changelog, plan or internal developer doc, not a promise to users. Use README, user docs or product pages"
+      ],
+      "at": "2026-10-22T21:27:40.276Z"
+    },
+    {
+      "claim": "skip_auth is mutually exclusive with the credential arguments (token_provider / credentials).",
+      "verdict": "VERIFIED",
+      "problems": [
+        "claim source src/anthropic/lib/google_cloud/README.md is a changelog, plan or internal developer doc, not a promise to users. Use README, user docs or product pages"
+      ],
+      "at": "2026-10-22T21:27:42.670Z"
+    },
+    {
+      "claim": "AnthropicFoundry api_key defaults to the ANTHROPIC_FOUNDRY_API_KEY environment variable.",
+      "verdict": "VERIFIED",
+      "problems": [
+        "claim source src/anthropic/lib/foundry.md is a changelog, plan or internal developer doc, not a promise to users. Use README, user docs or product pages"
+      ],
+      "at": "2026-10-22T21:27:44.523Z"
+    }
+  ],
+  "finished_at": "2026-10-22T21:29:06.091Z",
+  "review_requested_at": "2026-10-22T21:28:43.435Z",
+  "skipped": [
+    {
+      "candidate": "c1",
+      "reason": "REVIEW.md is internal instructions for code reviewers, not a promise to users about the SDK's behaviour."
+    },
+    {
+      "candidate": "c4",
+      "reason": "A pointer to an example file; the example exists and was read, and makes no separate checkable promise."
+    },
+    {
+      "candidate": "c10",
+      "reason": "Hedged advice ('likely nothing for you to do') about migrating to httpx2, not a concrete checkable promise."
+    },
+    {
+      "candidate": "c2",
+      "reason": "Covered by a recorded claim on helpers.md:287."
+    },
+    {
+      "candidate": "c3",
+      "reason": "Covered by a recorded claim on helpers.md:361-363."
+    },
+    {
+      "candidate": "c5",
+      "reason": "Covered by a recorded claim on browser-toolset.md:135."
+    },
+    {
+      "candidate": "c6",
+      "reason": "Covered by a recorded claim on computer-toolset.md:79."
+    },
+    {
+      "candidate": "c7",
+      "reason": "Covered by a recorded claim on MIGRATION.md:313."
+    },
+    {
+      "candidate": "c8",
+      "reason": "Covered by a recorded claim on browser-toolset.md:123."
+    },
+    {
+      "candidate": "c9",
+      "reason": "Covered by a recorded claim on helpers.md:148."
+    },
+    {
+      "candidate": "c11",
+      "reason": "Covered by a recorded claim on tools.md:83."
+    }
+  ],
+  "behaviors": [],
+  "notes": [],
+  "retracted": [],
+  "raw_claims": [
+    {
+      "n": "1",
+      "claim": "The SDK depends on opentelemetry-api, a required dependency, and never on an OpenTelemetry SDK.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "opentelemetry-api is in runtime dependencies; opentelemetry-sdk appears only in the dev dependency group.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 50,
+        "quote": "It depends on `opentelemetry-api`, a required dependency, and never on an OpenTelemetry SDK."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "pyproject.toml",
+          "line_start": 13,
+          "quote": "\"opentelemetry-api>=1.1.0, <5\",",
+          "checked": {
+            "ok": true,
+            "where": "pyproject.toml:13",
+            "file_sha256": "e9474612d42fa228cb49ab7e24b240258d7ca8e39406ee371f4973ee9d5207b2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "pyproject.toml",
+          "line_start": 92,
+          "quote": "\"opentelemetry-sdk\",",
+          "checked": {
+            "ok": true,
+            "where": "pyproject.toml:92",
+            "file_sha256": "e9474612d42fa228cb49ab7e24b240258d7ca8e39406ee371f4973ee9d5207b2"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_c5bd289b6676"
+    },
+    {
+      "n": "2",
+      "claim": "A client given no open_telemetry option reads ANTHROPIC_OPEN_TELEMETRY=false, ..._TRACES_CONTENT_MODE=content, ..._TRACES_MAX_CONTENT_BYTES and ..._PROPAGATION=false; a client given any option (even {}) reads none, and defaults are spans on, headers sent, no content, 750,000 bytes.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Environment variables are consulted only when option is None; otherwise the given option is used and missing fields get defaults (propagation True, enabled True, metadata_only, 750000).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 75,
+        "quote": "A client that is given no `open_telemetry` option reads these environment variables when it is constructed"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/_tracing.py",
+          "line_start": 74,
+          "quote": "if option is None:\n        options = env_open_telemetry()",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/_tracing.py:74",
+            "file_sha256": "6fe1998b98b90416ff36031e23090d51f4080dcd6d725fa43f986774fd8fdaa4"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/_tracing.py",
+          "line_start": 109,
+          "quote": "if os.environ.get(\"ANTHROPIC_OPEN_TELEMETRY\", \"\").lower() == \"false\":",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/_tracing.py:109",
+            "file_sha256": "6fe1998b98b90416ff36031e23090d51f4080dcd6d725fa43f986774fd8fdaa4"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/_tracing.py",
+          "line_start": 56,
+          "quote": "DEFAULT_MAX_CONTENT_BYTES = 750_000",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/_tracing.py:56",
+            "file_sha256": "6fe1998b98b90416ff36031e23090d51f4080dcd6d725fa43f986774fd8fdaa4"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/_tracing.py",
+          "line_start": 117,
+          "quote": "if os.environ.get(\"ANTHROPIC_OPEN_TELEMETRY_PROPAGATION\", \"\").lower() == \"false\":",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/_tracing.py:117",
+            "file_sha256": "6fe1998b98b90416ff36031e23090d51f4080dcd6d725fa43f986774fd8fdaa4"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_b471d3ce6d2d"
+    },
+    {
+      "n": "3",
+      "claim": "A copy made with with_options or copy keeps its client's option unless it is given its own; with_options replaces the whole option, so start from client.open_telemetry.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Copy uses the resolved option of the parent when none is given; a given option replaces it wholesale.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "README.md",
+        "line_start": 77,
+        "quote": "A copy made with `with_options` or `copy` keeps its client's option unless it is given its own."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/_base_client.py",
+          "line_start": 494,
+          "quote": "return {**self._open_telemetry} if open_telemetry is None else open_telemetry",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/_base_client.py:494",
+            "file_sha256": "4a290b7162b9212bc187af25f678eb3998e5f3d49bddf27ed296ce791d8ba6f2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/_base_client.py",
+          "line_start": 510,
+          "quote": "return {**self._open_telemetry, \"traces\": {**self._open_telemetry[\"traces\"]}}",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/_base_client.py:510",
+            "file_sha256": "4a290b7162b9212bc187af25f678eb3998e5f3d49bddf27ed296ce791d8ba6f2"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_e3226e4045dc"
+    },
+    {
+      "n": "4",
+      "claim": "Only True from confirm(context) approves a browser call: any other answer refuses the call.",
+      "verdict": "FALSE",
+      "severity": "high",
+      "explanation": "confirm_outcome raises ConfirmDeclinedError whenever the answer is not False, so True (and None, and any other value) declines and only False proceeds. This contradicts both the docstring above it and the documentation; the shared helper serves the sync and async browser and computer toolsets.",
+      "user_impact": "The gate is inverted: a confirm that returns True gets ConfirmDeclinedError, while one that returns False lets the call run. A person who answers \"no\" to a javascript_exec, file_upload, type or click prompt has the action executed, and one who says \"yes\" is refused. Every safety step in the guide that depends on confirm (gating javascript_exec, file_upload, purchases) is defeated.",
+      "note": null,
+      "source": {
+        "file": "browser-toolset.md",
+        "line_start": 105,
+        "quote": "**Approval.** Only `True` from `confirm(context)` approves: any other answer refuses the call (raise `ToolError` to word the refusal)."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_base.py",
+          "line_start": 540,
+          "quote": "if returned is not False:",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_base.py:540",
+            "file_sha256": "82a20349403e8ed0932aefbbe2a8ae039d810d0471c5e7b4ea78ae1d1ca25db8"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_base.py",
+          "line_start": 543,
+          "quote": "raise ConfirmDeclinedError(name)",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_base.py:543",
+            "file_sha256": "82a20349403e8ed0932aefbbe2a8ae039d810d0471c5e7b4ea78ae1d1ca25db8"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_base.py",
+          "line_start": 537,
+          "quote": "refused and the run continues. Any answer other than `True` declines the call.\"\"\"",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_base.py:537",
+            "file_sha256": "82a20349403e8ed0932aefbbe2a8ae039d810d0471c5e7b4ea78ae1d1ca25db8"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "tests/lib/tools/toolsets/test_refusals.py",
+          "line_start": 115,
+          "quote": "def deny(context: BetaConfirmContext) -> bool:\n        return False",
+          "checked": {
+            "ok": true,
+            "where": "tests/lib/tools/toolsets/test_refusals.py:115",
+            "file_sha256": "d683cdd1cf8c48f4ebf165caeec23de53751b92f15d068e01c7709a7794c5df9"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "The checked quote shows the gate declines whenever the answer is not False, so True raises ConfirmDeclinedError and False lets the call run. This contradicts both the docs and the function's own docstring, which says any answer other than True declines. High severity is fair because the confirm gate is a safety control.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/anthropic/lib/tools/_toolsets/_base.py",
+            "line_start": 540,
+            "quote": "if returned is not False:",
+            "checked": {
+              "ok": true,
+              "where": "src/anthropic/lib/tools/_toolsets/_base.py:540",
+              "file_sha256": "82a20349403e8ed0932aefbbe2a8ae039d810d0471c5e7b4ea78ae1d1ca25db8"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:28:54.624Z"
+      },
+      "receipt": "rcpt_bcf0ad5176a0"
+    },
+    {
+      "n": "5",
+      "claim": "Computer toolset: confirm is asked before each call, and only True approves; any other answer or exception refuses the call.",
+      "verdict": "FALSE",
+      "severity": "high",
+      "explanation": "The computer toolset passes confirm through the same confirm_outcome helper, which declines on True and proceeds on False. The exception path (raised is not None) does refuse as documented.",
+      "user_impact": "Same inverted check as the browser toolset: returning True from confirm refuses the call and returning False runs it, so the approval prompt that is meant to gate type/key/hold_key and clicks on a desktop approves exactly what a person denied. Exceptions do still refuse.",
+      "note": null,
+      "source": {
+        "file": "computer-toolset.md",
+        "line_start": 79,
+        "quote": "`confirm=confirm` is asked before each call runs, and only `True` approves: any other answer refuses the call, and so does an exception"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_base.py",
+          "line_start": 540,
+          "quote": "if returned is not False:",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_base.py:540",
+            "file_sha256": "82a20349403e8ed0932aefbbe2a8ae039d810d0471c5e7b4ea78ae1d1ca25db8"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_computer.py",
+          "line_start": 305,
+          "quote": "await self._toolset_confirm(member.name, confirm_context(context, member, parsed))",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_computer.py:305",
+            "file_sha256": "7dc546fd232d94583d3f59c11a5abacc0cc326fa6712f29120ca98fda099404f"
+          }
+        }
+      ],
+      "review": {
+        "outcome": "confirm",
+        "reason": "The computer toolset routes through the same shared _toolset_confirm check, whose condition `returned is not False` declines on True. The docs' claim that only True approves is therefore contradicted. The part about exceptions refusing the call may still hold. High severity is fair because the confirm gate is a safety control.",
+        "severity": null,
+        "evidence": [
+          {
+            "type": "quote",
+            "file": "src/anthropic/lib/tools/_toolsets/_base.py",
+            "line_start": 540,
+            "quote": "if returned is not False:",
+            "checked": {
+              "ok": true,
+              "where": "src/anthropic/lib/tools/_toolsets/_base.py:540",
+              "file_sha256": "82a20349403e8ed0932aefbbe2a8ae039d810d0471c5e7b4ea78ae1d1ca25db8"
+            }
+          },
+          {
+            "type": "quote",
+            "file": "src/anthropic/lib/tools/_toolsets/_computer.py",
+            "line_start": 305,
+            "quote": "await self._toolset_confirm(member.name, confirm_context(context, member, parsed))",
+            "checked": {
+              "ok": true,
+              "where": "src/anthropic/lib/tools/_toolsets/_computer.py:305",
+              "file_sha256": "7dc546fd232d94583d3f59c11a5abacc0cc326fa6712f29120ca98fda099404f"
+            }
+          }
+        ],
+        "at": "2026-10-22T21:28:56.475Z"
+      },
+      "receipt": "rcpt_7415244f14b3"
+    },
+    {
+      "n": "6",
+      "claim": "javascript_exec and file_upload cannot be enabled without a confirm; file_upload, read_console, read_network and javascript_exec are off by default.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The constructor raises ToolsetConfigError when an enabled, served member in CONFIRM_REQUIRED has no confirm; the four members are default-disabled in the registry. (Requiring a confirm is separate from the confirm outcome being inverted, see the other finding.)",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "browser-toolset.md",
+        "line_start": 105,
+        "quote": "`javascript_exec` and `file_upload` cannot be enabled without a `confirm`."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_browser.py",
+          "line_start": 144,
+          "quote": "required = sorted(name for name in CONFIRM_REQUIRED if name in self.served and self.is_enabled(name))",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_browser.py:144",
+            "file_sha256": "2f89971ff553bcb681c572904a60a1cd2c3f8ecf28f5a1626aa026670a2f4d80"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_registry.py",
+          "line_start": 32,
+          "quote": "CONFIRM_REQUIRED: frozenset[str] = frozenset({\"javascript_exec\", \"file_upload\"})",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_registry.py:32",
+            "file_sha256": "6a974b9480ef1734a0d5f02b1d366cbc7ba3a8b9248b577635c5c7bce659e5a2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_registry.py",
+          "line_start": 66,
+          "quote": "\"file_upload\": (\"none\", \"Uploaded.\", False),",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_registry.py:66",
+            "file_sha256": "6a974b9480ef1734a0d5f02b1d366cbc7ba3a8b9248b577635c5c7bce659e5a2"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_728928609473"
+    },
+    {
+      "n": "7",
+      "claim": "Without a file_policy, uploads are refused and download paths stay hidden; BetaLocalFilePolicy refuses '..' components and requires paths under upload roots.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Download paths are hidden when there is no policy, and path checks are default-deny. The no-policy upload refusal lives in the pipeline's resolve_upload_paths, not read in full here.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "browser-toolset.md",
+        "line_start": 101,
+        "quote": "| `file_policy` | a `BetaFilePolicy`, such as `BetaLocalFilePolicy` | uploads are refused, and download paths stay hidden |"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_render.py",
+          "line_start": 211,
+          "quote": "if file_policy is None:\n        return False",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_render.py:211",
+            "file_sha256": "5878cfc06d3ae4b3854307ba59986732f5435400230127367bc1f6b2600fc86d"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_security.py",
+          "line_start": 103,
+          "quote": "raise UploadRefusedError(\"file_upload path must not contain a '..' component\")",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_security.py:103",
+            "file_sha256": "870c29f42a1766b8fc717e186a83152126c3774c8e862ee3e838dc6c3921e05c"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_7f2da04c1838"
+    },
+    {
+      "n": "8",
+      "claim": "The file tools (read/write/edit/glob/grep) confine to the workdir with a symlink-aware check; bash does not inherit the runner's ANTHROPIC_* credentials.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Paths are canonicalised (symlinks followed) before a containment check; glob post-filters, grep skips symlinks; bash's default env drops ANTHROPIC_* variables and an explicit env replaces it entirely.",
+      "user_impact": null,
+      "note": "Confinement also admits any directories the caller lists in allowed_roots, and other (non-ANTHROPIC_) environment variables such as cloud credentials are still inherited by bash.",
+      "source": {
+        "file": "helpers.md",
+        "line_start": 361,
+        "line_end": 363,
+        "quote": "(The file tools — `read`/`write`/`edit`/`glob`/`grep` — confine to the workdir with a symlink-aware\ncheck, so they are safe without a sandbox; `bash` is not.) `bash` does not inherit the runner's\n`ANTHROPIC_*` credentials"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/agent_toolset.py",
+          "line_start": 409,
+          "quote": "if _within(full, root) or any(_within(full, Path(r).resolve()) for r in ctx.allowed_roots):",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/agent_toolset.py:409",
+            "file_sha256": "1bb45dc5941f8e348ab6ff4e36481a10754dce76e1f545e095fc43144542bb27"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/agent_toolset.py",
+          "line_start": 158,
+          "quote": "return {k: v for k, v in os.environ.items() if not k.startswith(\"ANTHROPIC_\")}",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/agent_toolset.py:158",
+            "file_sha256": "1bb45dc5941f8e348ab6ff4e36481a10754dce76e1f545e095fc43144542bb27"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/agent_toolset.py",
+          "line_start": 831,
+          "quote": "matches = list(_confined(matches, root))",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/agent_toolset.py:831",
+            "file_sha256": "1bb45dc5941f8e348ab6ff4e36481a10754dce76e1f545e095fc43144542bb27"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_feb950e8b4f8"
+    },
+    {
+      "n": "9",
+      "claim": "handle_item() with no arguments reads work id / environment id / session id from ANTHROPIC_WORK_ID / ANTHROPIC_ENVIRONMENT_ID / ANTHROPIC_SESSION_ID and the environment key from ANTHROPIC_ENVIRONMENT_KEY, falling back to the worker's key.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The env-var fallbacks exist as documented, and worker() accepts omitted environment_id/environment_key.",
+      "user_impact": null,
+      "note": "The code also reads an undocumented ANTHROPIC_WORK_SECRET, which lets a process run without an environment key.",
+      "source": {
+        "file": "helpers.md",
+        "line_start": 287,
+        "quote": "environment id / session id / environment key are already in the environment, so the sandbox case is"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/environments/_worker.py",
+          "line_start": 622,
+          "quote": "work_id = _require(work_id, name=\"work_id\", env_var=\"ANTHROPIC_WORK_ID\")",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/environments/_worker.py:622",
+            "file_sha256": "119f6f4d957ee51c1f4b119820c5d5403f6e1c725be1b2fd7d2369aa61ccf516"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/environments/_worker.py",
+          "line_start": 633,
+          "quote": "environment_key or self._environment_key or os.environ.get(\"ANTHROPIC_ENVIRONMENT_KEY\") or None",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/environments/_worker.py:633",
+            "file_sha256": "119f6f4d957ee51c1f4b119820c5d5403f6e1c725be1b2fd7d2369aa61ccf516"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/resources/beta/environments/work.py",
+          "line_start": 1331,
+          "quote": "environment_id: str | None = None,",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/resources/beta/environments/work.py:1331",
+            "file_sha256": "bee6df66c0ceb4032182bfe244c8aa07dd1b2c812a59db0dd122fd31dbd7b68c"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_4881a9a7594e"
+    },
+    {
+      "n": "10",
+      "claim": "Each tool call in the session runner has a 150 s limit; a sync tool that runs past it is reported as timed out while its thread keeps running.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The runner wraps each tool in fail_after(150s) and posts an is_error timed-out result.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "helpers.md",
+        "line_start": 355,
+        "quote": "150 s limit. A sync tool that runs past it is reported to the agent as timed out while its thread"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_beta_session_runner.py",
+          "line_start": 127,
+          "quote": "TOOL_TIMEOUT = 150.0",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_beta_session_runner.py:127",
+            "file_sha256": "52d2707bc5302457573098b1f9c99b7636e102831f2407850c5ebcf31dee26d1"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_beta_session_runner.py",
+          "line_start": 968,
+          "quote": "with anyio.fail_after(TOOL_TIMEOUT):",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_beta_session_runner.py:968",
+            "file_sha256": "52d2707bc5302457573098b1f9c99b7636e102831f2407850c5ebcf31dee26d1"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9970e639da63"
+    },
+    {
+      "n": "11",
+      "claim": "AnthropicBedrock raises ValueError at construction when no region is found, resolving from aws_region, AWS_REGION/AWS_DEFAULT_REGION, then the boto3 session for aws_profile (no silent us-east-1 fallback).",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Sync and async clients call _infer_region, which raises ValueError when nothing yields a region.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "MIGRATION.md",
+        "line_start": 382,
+        "line_end": 383,
+        "quote": "AWS region could be found. They now raise a `ValueError` at construction time instead."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/bedrock/_client.py",
+          "line_start": 74,
+          "quote": "aws_region = os.environ.get(\"AWS_REGION\") or os.environ.get(\"AWS_DEFAULT_REGION\")",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/bedrock/_client.py:74",
+            "file_sha256": "60178a436ea46a612d1f2fb5aea905b8693062c6a0230b4064bbfe4dc8cc2dd2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/bedrock/_client.py",
+          "line_start": 79,
+          "quote": "session = boto3.Session(profile_name=aws_profile)",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/bedrock/_client.py:79",
+            "file_sha256": "60178a436ea46a612d1f2fb5aea905b8693062c6a0230b4064bbfe4dc8cc2dd2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/bedrock/_client.py",
+          "line_start": 188,
+          "quote": "self.aws_region = _infer_region(aws_profile) if aws_region is None else aws_region",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/bedrock/_client.py:188",
+            "file_sha256": "60178a436ea46a612d1f2fb5aea905b8693062c6a0230b4064bbfe4dc8cc2dd2"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_924f9904d418"
+    },
+    {
+      "n": "12",
+      "claim": "Passing an httpx.Client / httpx.AsyncClient (from the old package) as http_client= raises a TypeError at construction time.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Both sync and async base clients call _reject_httpx_object, which walks the MRO and raises TypeError for any class from the httpx package.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "MIGRATION.md",
+        "line_start": 86,
+        "line_end": 87,
+        "quote": "Passing an `httpx.Client` / `httpx.AsyncClient` (from the old package) as `http_client=` raises a `TypeError`\nat construction time"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/_base_client.py",
+          "line_start": 1086,
+          "quote": "_reject_httpx_object(\"http_client\", http_client)",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/_base_client.py:1086",
+            "file_sha256": "4a290b7162b9212bc187af25f678eb3998e5f3d49bddf27ed296ce791d8ba6f2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/_base_client.py",
+          "line_start": 165,
+          "quote": "raise TypeError(",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/_base_client.py:165",
+            "file_sha256": "4a290b7162b9212bc187af25f678eb3998e5f3d49bddf27ed296ce791d8ba6f2"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_91fc049e562f"
+    },
+    {
+      "n": "13",
+      "claim": "The trigger threshold for server-side compaction must be at least 50,000 tokens.",
+      "verdict": "UNVERIFIABLE",
+      "severity": null,
+      "explanation": "The SDK does not check the threshold; it passes context_management through to the API, which would enforce any minimum. The rule lives in the server.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "MIGRATION.md",
+        "line_start": 313,
+        "quote": "The trigger threshold must be at least 50,000 tokens."
+      },
+      "evidence": [
+        {
+          "type": "absent",
+          "pattern": "context_token_threshold",
+          "checked": {
+            "ok": true,
+            "where": "absent:context_token_threshold",
+            "doc_hits": 1
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_b891833f9962"
+    },
+    {
+      "n": "14",
+      "claim": "agent_toolset.READ_MAX_BYTES was removed in favour of DEFAULT_MAX_FILE_BYTES.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The replacement constant exists and is used; a search of src finds no READ_MAX_BYTES definition in agent_toolset.py (the name only appears in docs and earlier reports).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "MIGRATION.md",
+        "line_start": 267,
+        "quote": "| `anthropic.lib.tools.agent_toolset.READ_MAX_BYTES`                                                      | `anthropic.lib.tools.agent_toolset.DEFAULT_MAX_FILE_BYTES`"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/agent_toolset.py",
+          "line_start": 97,
+          "quote": "DEFAULT_MAX_FILE_BYTES = 513 * 1024",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/agent_toolset.py:97",
+            "file_sha256": "1bb45dc5941f8e348ab6ff4e36481a10754dce76e1f545e095fc43144542bb27"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/agent_toolset.py",
+          "line_start": 131,
+          "quote": "def _resolve_max_bytes(configured: int | None | NotGiven, default: int = DEFAULT_MAX_FILE_BYTES) -> int | None:",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/agent_toolset.py:131",
+            "file_sha256": "1bb45dc5941f8e348ab6ff4e36481a10754dce76e1f545e095fc43144542bb27"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_1b7854d81b76"
+    },
+    {
+      "n": "15",
+      "claim": "Tool runner iteration is driven by stop_reason: tool_use runs tools; pause_turn or compaction sends the turn back unchanged; any other stop reason stops after yielding the final message without running tools.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The step table maps tool_use to run_tools, pause_turn/compaction to resume and everything else, including unknown values, to stop.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "tools.md",
+        "line_start": 66,
+        "quote": "on `pause_turn` or `compaction` it sends the turn back unchanged so the server can resume it, and on any other stop reason it stops after yielding that final message without running tools."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_beta_runner.py",
+          "line_start": 117,
+          "quote": "\"pause_turn\": \"resume\",",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_beta_runner.py:117",
+            "file_sha256": "a543a12e3faa58b9568028e369e3570fe7f0f1fb25be4d68d8708eeb38d32182"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_beta_runner.py",
+          "line_start": 119,
+          "quote": "\"compaction\": \"resume\",",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_beta_runner.py:119",
+            "file_sha256": "a543a12e3faa58b9568028e369e3570fe7f0f1fb25be4d68d8708eeb38d32182"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_beta_runner.py",
+          "line_start": 137,
+          "quote": "# Absent and unknown (forward-compatible) values stop like any other finished turn.",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_beta_runner.py:137",
+            "file_sha256": "a543a12e3faa58b9568028e369e3570fe7f0f1fb25be4d68d8708eeb38d32182"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_fd68a11c3469"
+    },
+    {
+      "n": "16",
+      "claim": "If a plain exception is raised in a tool, its repr() is sent to the model as a text error and logged; ToolError is not logged.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The ToolError branch builds an is_error result without logging; the generic branch logs with log.exception and sends the repr, cut to the field limit.",
+      "user_impact": null,
+      "note": "The repr is cut to a field limit, so very long exception text is truncated.",
+      "source": {
+        "file": "tools.md",
+        "line_start": 220,
+        "quote": "If a plain exception is raised, its `repr()` will be sent to the model as a text error and logged. `ToolError` is not logged since it represents an intentional error response."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_beta_runner.py",
+          "line_start": 727,
+          "quote": "log.exception(f\"Error occurred while calling tool: {tool.name}\", exc_info=exc)",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_beta_runner.py:727",
+            "file_sha256": "a543a12e3faa58b9568028e369e3570fe7f0f1fb25be4d68d8708eeb38d32182"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_tool_dispatch.py",
+          "line_start": 251,
+          "quote": "never cut. Anything else is rendered with `repr` (which, unlike `str`, keeps",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_tool_dispatch.py:251",
+            "file_sha256": "6de983a9a5348ce9c1fe40623a3bb6397ebad91d899c5aea368a156e94df4280"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_9310a51ed3cb"
+    },
+    {
+      "n": "17",
+      "claim": "compact_before_next_turn() raises if context_management has a compact_* edit.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The method calls _check_can_compact, which raises ValueError for any edit whose type begins with compact_.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "tools.md",
+        "line_start": 142,
+        "quote": "`compact_before_next_turn()` raises if `context_management` has a `compact_*` edit."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_beta_runner.py",
+          "line_start": 313,
+          "quote": "if any(edit[\"type\"].startswith(\"compact_\") for edit in edits or ()):",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_beta_runner.py:313",
+            "file_sha256": "a543a12e3faa58b9568028e369e3570fe7f0f1fb25be4d68d8708eeb38d32182"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_beta_runner.py",
+          "line_start": 304,
+          "quote": "self._check_can_compact(self._params)",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_beta_runner.py:304",
+            "file_sha256": "a543a12e3faa58b9568028e369e3570fe7f0f1fb25be4d68d8708eeb38d32182"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_7ede3ce70a98"
+    },
+    {
+      "n": "18",
+      "claim": "runner.close() stops a runner you will not resume and also ends its OpenTelemetry span.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "close() closes the generator, whose finally block ends the tool-runner span. If called from inside a running loop it only sets a flag and the loop stops at its next step.",
+      "user_impact": null,
+      "note": "When close() is called from inside a working loop (such as from a tool), the span ends only at the loop's next step.",
+      "source": {
+        "file": "tools.md",
+        "line_start": 79,
+        "quote": "call `runner.close()` (`await runner.close()` for the async runner), which also ends its OpenTelemetry span."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_beta_runner.py",
+          "line_start": 519,
+          "quote": "self._iterator.close()",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_beta_runner.py:519",
+            "file_sha256": "a543a12e3faa58b9568028e369e3570fe7f0f1fb25be4d68d8708eeb38d32182"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_beta_runner.py",
+          "line_start": 572,
+          "quote": "end_tool_runner_span(tool_runner_span)",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_beta_runner.py:572",
+            "file_sha256": "a543a12e3faa58b9568028e369e3570fe7f0f1fb25be4d68d8708eeb38d32182"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_6ae53d8fef6c"
+    },
+    {
+      "n": "19",
+      "claim": "With run_tools_eagerly=True and stream=True each tool runs as soon as the model finishes writing its call (default: after the loop body); defer_tool_call() holds a call and deferred_tool_calls lists held calls.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "Eager mode wraps the stream iterator so each call runs once the reader asks for the event after the call's block ends; a held call is skipped until the loop body ends.",
+      "user_impact": null,
+      "note": "\\\"As soon as the model finishes writing\\\" is slightly early: the call runs when the reader asks for the next event, per the code's own docstring.",
+      "source": {
+        "file": "tools.md",
+        "line_start": 83,
+        "quote": "By default, the runner runs a reply's tools after your loop body for that reply ends. With `run_tools_eagerly=True` and `stream=True`, each tool runs as soon as the model finishes writing its call."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_beta_runner.py",
+          "line_start": 847,
+          "quote": "if self._run_tools_eagerly:",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_beta_runner.py:847",
+            "file_sha256": "a543a12e3faa58b9568028e369e3570fe7f0f1fb25be4d68d8708eeb38d32182"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_beta_runner.py",
+          "line_start": 788,
+          "quote": "def defer_tool_call(self, tool_use: BetaToolUseBlock | str) -> None:",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_beta_runner.py:788",
+            "file_sha256": "a543a12e3faa58b9568028e369e3570fe7f0f1fb25be4d68d8708eeb38d32182"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_beta_runner.py",
+          "line_start": 837,
+          "quote": "return [] if self._eager_tool_calls is None else self._eager_tool_calls.held()",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_beta_runner.py:837",
+            "file_sha256": "a543a12e3faa58b9568028e369e3570fe7f0f1fb25be4d68d8708eeb38d32182"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_36d6077c80dd"
+    },
+    {
+      "n": "20",
+      "claim": "URLs (tab URLs, with any credentials and data: bodies) reach the model and confirm unredacted: they are only folded to one line and length-bounded.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "No credential or body stripping is applied; the URL is folded and cut to FIELD_MAX (longer ones are truncated with a leading ellipsis).",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "browser-toolset.md",
+        "line_start": 135,
+        "quote": "URLs reach the model and `confirm` unredacted, with any credentials and `data:` bodies."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_sanitize.py",
+          "line_start": 102,
+          "quote": "line = folded(url)",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_sanitize.py:102",
+            "file_sha256": "8b8bb754c2bbfffaeafc8a2e26e7f3540199cee20fda5d6edb928069bf9ee102"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_pipeline.py",
+          "line_start": 393,
+          "quote": "tab_url=None if tab is None else tab[\"url\"],",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_pipeline.py:393",
+            "file_sha256": "09cc3d0ad53b6fb230fd2ccfd30d171728e71cfe740088bc06449ce9fe602b12"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_0c328a974e73"
+    },
+    {
+      "n": "21",
+      "claim": "Overriding execute() runs after the url/file policies and confirm, so nothing checks an input you change there.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The pipeline applies URL policy, upload resolution and confirm before calling execute, with no later re-check.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "browser-toolset.md",
+        "line_start": 123,
+        "quote": "It runs after the policies and `confirm`, so nothing checks an input you change there."
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_browser.py",
+          "line_start": 269,
+          "quote": "self.__apply_policy(url, url_context(record))",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_browser.py:269",
+            "file_sha256": "2f89971ff553bcb681c572904a60a1cd2c3f8ecf28f5a1626aa026670a2f4d80"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_browser.py",
+          "line_start": 271,
+          "quote": "self._toolset_confirm(member.name, confirm_context(record, self._toolset_pipeline))",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_browser.py:271",
+            "file_sha256": "2f89971ff553bcb681c572904a60a1cd2c3f8ecf28f5a1626aa026670a2f4d80"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/lib/tools/_toolsets/_browser.py",
+          "line_start": 274,
+          "quote": "result = self.execute(record.context, member.name, record.input)",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/lib/tools/_toolsets/_browser.py:274",
+            "file_sha256": "2f89971ff553bcb681c572904a60a1cd2c3f8ecf28f5a1626aa026670a2f4d80"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_e704115a1f53"
+    },
+    {
+      "n": "22",
+      "claim": "MCP helpers require pip install anthropic[mcp] (Python 3.10+).",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "The mcp extra exists and the package requires Python >= 3.10.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "helpers.md",
+        "line_start": 148,
+        "quote": "> **Requires:** `pip install anthropic[mcp]` (Python 3.10+)"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "pyproject.toml",
+          "line_start": 46,
+          "quote": "mcp = [\"mcp>=1.0, <3; python_version >= '3.10'\"]",
+          "checked": {
+            "ok": true,
+            "where": "pyproject.toml:46",
+            "file_sha256": "e9474612d42fa228cb49ab7e24b240258d7ca8e39406ee371f4973ee9d5207b2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "pyproject.toml",
+          "line_start": 22,
+          "quote": "requires-python = \">= 3.10\"",
+          "checked": {
+            "ok": true,
+            "where": "pyproject.toml:22",
+            "file_sha256": "e9474612d42fa228cb49ab7e24b240258d7ca8e39406ee371f4973ee9d5207b2"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_7bf99313744f"
+    },
+    {
+      "n": "23",
+      "claim": "The low-level request methods no longer accept raw bytes for body=; raw payloads go through content=.",
+      "verdict": "VERIFIED",
+      "severity": null,
+      "explanation": "bytes bodies raise TypeError and content= is forwarded to the HTTP client.",
+      "user_impact": null,
+      "note": null,
+      "source": {
+        "file": "MIGRATION.md",
+        "line_start": 318,
+        "line_end": 319,
+        "quote": "`body=` is now always\nJSON-serialised and raw payloads go through `content=`"
+      },
+      "evidence": [
+        {
+          "type": "quote",
+          "file": "src/anthropic/_base_client.py",
+          "line_start": 675,
+          "quote": "if isinstance(json_data, bytes):",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/_base_client.py:675",
+            "file_sha256": "4a290b7162b9212bc187af25f678eb3998e5f3d49bddf27ed296ce791d8ba6f2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/_base_client.py",
+          "line_start": 676,
+          "quote": "raise TypeError(\"Passing raw bytes as `body` is not supported, pass them as `content` instead\")",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/_base_client.py:676",
+            "file_sha256": "4a290b7162b9212bc187af25f678eb3998e5f3d49bddf27ed296ce791d8ba6f2"
+          }
+        },
+        {
+          "type": "quote",
+          "file": "src/anthropic/_base_client.py",
+          "line_start": 677,
+          "quote": "if options.content is not None:",
+          "checked": {
+            "ok": true,
+            "where": "src/anthropic/_base_client.py:677",
+            "file_sha256": "4a290b7162b9212bc187af25f678eb3998e5f3d49bddf27ed296ce791d8ba6f2"
+          }
+        }
+      ],
+      "review": null,
+      "receipt": "rcpt_fa03c8d6acbe"
+    }
+  ],
+  "totals": {
+    "claims": 23,
+    "VERIFIED": 20,
+    "PARTIAL": 0,
+    "FALSE": 2,
+    "UNVERIFIABLE": 1,
+    "behaviors": 0,
+    "downgraded": 0,
+    "retracted": 0,
+    "rejected_citations": 5
+  }
+}

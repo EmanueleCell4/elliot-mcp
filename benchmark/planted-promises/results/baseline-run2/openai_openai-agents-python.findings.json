@@ -1,0 +1,38 @@
+[
+  {
+    "claim": "Local ShellTool and ApplyPatchTool default to needs_approval=False, so the SDK invokes the executor/editor without requesting approval.",
+    "doc_file": "docs/tools.md",
+    "doc_line": 254,
+    "code_file": "src/agents/tool.py",
+    "code_line": 1498,
+    "verdict": "PARTIAL",
+    "explanation": "ApplyPatchTool defaults to needs_approval=False (tool.py:1553), but ShellTool declares `needs_approval: bool | ShellApprovalFunction = True`. A local ShellTool therefore pauses for approval by default, the opposite of what the docs say."
+  },
+  {
+    "claim": "For local ShellTool and ApplyPatchTool, approval is opt-in: needs_approval defaults to False.",
+    "doc_file": "docs/human_in_the_loop.md",
+    "doc_line": 45,
+    "code_file": "src/agents/tool.py",
+    "code_line": 1498,
+    "verdict": "PARTIAL",
+    "explanation": "Only ApplyPatchTool is opt-in. ShellTool's needs_approval default is True in the dataclass, so approval is opt-out for local shell, and an on_approval callback alone does get invoked."
+  },
+  {
+    "claim": "By default, UnixLocalSandboxClient starts every command environment from the complete host process environment; inherit_host_environment=False restricts it to an allowlist.",
+    "doc_file": "docs/sandbox/clients.md",
+    "doc_line": 44,
+    "code_file": "src/agents/sandbox/sandboxes/unix_local.py",
+    "code_line": 1539,
+    "verdict": "FALSE",
+    "explanation": "The constructor default is `inherit_host_environment: bool = False`, so by default only the conservative allowlist (_HOST_ENVIRONMENT_ALLOWLIST) is passed, not the full host environment. Full inheritance requires explicitly passing True."
+  },
+  {
+    "claim": "For the Realtime WebSocket transport, the SDK default for max_size is None, which leaves incoming message size unlimited.",
+    "doc_file": "docs/realtime/transport.md",
+    "doc_line": 64,
+    "code_file": "src/agents/realtime/openai_realtime.py",
+    "code_line": 689,
+    "verdict": "FALSE",
+    "explanation": "_create_websocket_connection seeds connect_kwargs with `\"max_size\": 8 * 1024 * 1024` and only overrides it when transport_config supplies max_size. The default is 8 MiB, not unlimited. (The Responses WebSocket path does default to None, which is what models/index.md describes.)"
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "claim": "Only `True` from `confirm(context)` approves a browser toolset call: any other answer refuses the call.",
+    "doc_file": "browser-toolset.md",
+    "doc_line": 105,
+    "code_file": "src/anthropic/lib/tools/_toolsets/_base.py",
+    "code_line": 540,
+    "verdict": "FALSE",
+    "explanation": "confirm_outcome() raises ConfirmDeclinedError when `returned is not False`. A confirm that returns True is therefore refused, and one that returns False (or None, or anything else that is exactly False) lets the call run. The check is inverted relative to the docs and to the function's own docstring (\"Any answer other than `True` declines the call\"). Only an exact `False` passes the gate, so approval gating is effectively reversed."
+  },
+  {
+    "claim": "Computer toolset `confirm=confirm` is asked before each call runs, and only `True` approves: any other answer refuses the call.",
+    "doc_file": "computer-toolset.md",
+    "doc_line": 79,
+    "code_file": "src/anthropic/lib/tools/_toolsets/_base.py",
+    "code_line": 540,
+    "verdict": "FALSE",
+    "explanation": "The computer toolset uses the same shared _toolset_confirm -> confirm_outcome gate. It declines when `returned is not False`, so True is refused and only an exact False proceeds. This is the opposite of the documented contract."
+  },
+  {
+    "claim": "`max_content_bytes` keeps the content of one span within this size.",
+    "doc_file": "README.md",
+    "doc_line": 59,
+    "code_file": "src/anthropic/lib/_tracing/_content.py",
+    "code_line": 172,
+    "verdict": "PARTIAL",
+    "explanation": "fit_content() and the CONTENT_LIMIT comment state that what is kept of an attribute that lost everything (an emptied list, or a message with no parts) can still total more than the limit. So the limit is best-effort, not a hard bound on span content."
+  }
+]
