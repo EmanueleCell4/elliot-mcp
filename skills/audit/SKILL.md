@@ -9,7 +9,8 @@ description: Check whether this repository does what its docs claim, with proof 
 2. Follow the protocol it returns, submitting every claim with `elliot_record_claim`.
    Elliot checks each citation against the files; fix and resubmit anything it rejects.
 3. Call `elliot_audit_finish`. The report is written to `elliot-report/` at the repository root.
-4. Reply with the totals, the most important finding and the report path. Nothing else.
+4. Reply with the totals, the most important finding and the report path. If the result includes
+   `readme_badge`, show it and say the user can paste it in their README. Nothing else.
 
 If you wrote or changed code in this repository during this session, run the audit in a fresh
 subagent that has not seen that work, so the auditor is not the author.

@@ -21,6 +21,10 @@ Elliot is an open source tool that runs entirely on your machine, inside your co
 
 The audit itself (`/elliot-audit`, `/elliot:audit`) makes no network calls. Your agent reads your code the way it normally does, with the model and provider you already use. Their privacy terms apply to that, not this policy.
 
+## GitHub Action
+
+The optional GitHub Action runs in your own CI. It sends the pull request description and the code Claude reads to Anthropic's API under your API key, and posts one comment on the pull request. Elliot's author receives nothing.
+
 ## Retention
 
 Elliot keeps nothing outside your repository. Delete `.elliot/` and `elliot-report/` to remove everything it wrote.

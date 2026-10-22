@@ -11,7 +11,7 @@ import { checkNpm } from "./checks/npm.js";
 import { checkGithub } from "./checks/github.js";
 import { snapshot, checkChanges } from "./checks/changes.js";
 import { startAudit, recordClaim, recordBehavior, reviewPacket, recordReview, finishAudit, AUDIT_VERDICTS, SEVERITIES, REVIEW_OUTCOMES } from "./audit.js";
-import { AUDIT_PROTOCOL } from "./audit-protocol.js";
+import { AUDIT_PROTOCOL, FOCUSED_PROTOCOL } from "./audit-protocol.js";
 
 if (process.argv[2] === "init") {
   const { runInit } = await import("./init.js");
@@ -166,7 +166,10 @@ server.registerTool(
   {
     title: "Start a claim audit",
     description: "Start auditing whether this repository does what its README, docs and security/pricing pages say. Pins the commit, lists the files that make claims, and returns the protocol to follow.",
-    inputSchema: { path: z.string().optional().describe("Any path inside the repository (default: the server's working directory).") },
+    inputSchema: {
+      path: z.string().optional().describe("Any path inside the repository (default: the server's working directory)."),
+      sources: z.array(z.string()).max(20).optional().describe("Audit only the claims made in these repo-relative files, e.g. a pull request description saved as .elliot-pr/PR.md. Turns off the repo-wide risk sweep."),
+    },
     annotations: { readOnlyHint: false, openWorldHint: false },
   },
   async (input) => {
@@ -175,8 +178,8 @@ server.registerTool(
     const list = a.sources.map((s) => `- ${s.file} (${s.lines} lines)`).join("\n");
     const cands = a.candidates.map((c) => `- ${c.id} [${c.risk}] ${c.file}:${c.line}  ${c.text}`).join("\n");
     const sigs = a.signals.map((s) => `- ${s.id}: ${s.label}, ${s.hit_count} hits in ${s.files.length} files, e.g.\n${s.examples.map((e) => `    ${e.file}:${e.line}  ${e.text}`).join("\n")}`).join("\n");
-    const sweep = `Risk sweep (found by Elliot, not by you). The audit cannot finish until every [high] candidate and every code signal is addressed.\n\nDoc candidates:\n${cands || "- none"}\n\nCode signals:\n${sigs || "- none"}`;
-    return { content: [{ type: "text", text: `${head}\n\nClaim sources:\n${list || "- none found: read the README and any user-facing pages you can find"}` }, { type: "text", text: sweep }, { type: "text", text: AUDIT_PROTOCOL.replaceAll("{{AUDIT_ID}}", a.id) }] };
+    const sweep = a.focused ? "Focused audit: no repo-wide risk sweep. Audit only the claims in the sources listed above." : `Risk sweep (found by Elliot, not by you). The audit cannot finish until every [high] candidate and every code signal is addressed.\n\nDoc candidates:\n${cands || "- none"}\n\nCode signals:\n${sigs || "- none"}`;
+    return { content: [{ type: "text", text: `${head}\n\nClaim sources:\n${list || "- none found: read the README and any user-facing pages you can find"}` }, { type: "text", text: sweep }, { type: "text", text: (a.focused ? FOCUSED_PROTOCOL : AUDIT_PROTOCOL).replaceAll("{{AUDIT_ID}}", a.id) }] };
   },
 );
 

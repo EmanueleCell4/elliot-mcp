@@ -1,7 +1,7 @@
 {
   "name": "elliot",
   "displayName": "Elliot",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Independent verification for code written by AI agents. Checks your agent's \"done\" claims and whether a repo does what its docs say, with proof from the code.",
   "author": {
     "name": "Emanuele Cella",

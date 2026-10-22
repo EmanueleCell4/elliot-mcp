@@ -8,7 +8,7 @@ import { createHash, randomBytes } from "node:crypto";
 import { mkdir, appendFile, readFile } from "node:fs/promises";
 import path from "node:path";
 
-export const VERSION = "0.3.0";
+export const VERSION = "0.4.0";
 
 export const Verdict = Object.freeze({
   VERIFIED: "VERIFIED",

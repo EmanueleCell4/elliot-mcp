@@ -13,7 +13,7 @@ import { randomBytes } from "node:crypto";
 import { readFile, writeFile, mkdir, stat } from "node:fs/promises";
 import path from "node:path";
 import { VERSION, makeReceipt, saveReceipt, elliotDir } from "./receipt.js";
-import { renderMarkdown, renderHtml } from "./audit-report.js";
+import { renderMarkdown, renderHtml, badge } from "./audit-report.js";
 import { docCandidates, codeSignals, coverage } from "./risk.js";
 
 const run = promisify(execFile);
@@ -91,11 +91,17 @@ async function saveAudit(a) {
   await writeFile(auditFile(a.id), JSON.stringify(a, null, 2));
 }
 
-export async function startAudit({ path: dir } = {}) {
+export async function startAudit({ path: dir, sources: only, sweep = true } = {}) {
   const { root, isGit } = await resolveRoot(dir || process.cwd());
   const head = await headInfo(root);
   const files = await listFiles(root, isGit);
-  const sources = files.filter(isClaimSource).sort((a, b) => rank(a) - rank(b) || a.localeCompare(b)).slice(0, MAX_SOURCES);
+  const focused = Array.isArray(only) && only.length > 0;
+  if (focused) {
+    const missingFiles = only.filter((f) => !files.includes(f));
+    if (missingFiles.length) throw new Error(`source files not found in the repository: ${missingFiles.join(", ")}`);
+  }
+  const sources = focused ? only : files.filter(isClaimSource).sort((a, b) => rank(a) - rank(b) || a.localeCompare(b)).slice(0, MAX_SOURCES);
+  const doSweep = sweep && !focused;
   const withLines = [];
   for (const f of sources) {
     try {
@@ -111,8 +117,9 @@ export async function startAudit({ path: dir } = {}) {
     ...head,
     started_at: new Date().toISOString(),
     sources: withLines,
-    candidates: await docCandidates(root, withLines),
-    signals: await codeSignals(root),
+    focused,
+    candidates: doSweep ? await docCandidates(root, withLines) : [],
+    signals: doSweep ? await codeSignals(root) : [],
     file_count: files.length,
     claims: [],
     rejected: [],
@@ -383,5 +390,6 @@ export async function finishAudit({ audit_id, out_dir, skipped = [] }) {
   await writeFile(path.join(dir, "report.md"), renderMarkdown(data));
   await writeFile(path.join(dir, "report.html"), renderHtml(data));
   await saveAudit(audit);
-  return { finished: true, dir, totals, files: ["report.html", "report.md", "claims.json"].map((f) => path.join(dir, f)) };
+  const b = badge(data);
+  return { finished: true, dir, totals, files: ["report.html", "report.md", "claims.json"].map((f) => path.join(dir, f)), ...(b ? { readme_badge: b.markdown } : {}) };
 }

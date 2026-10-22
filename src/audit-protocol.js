@@ -62,3 +62,37 @@ Call elliot_audit_finish with audit_id "{{AUDIT_ID}}", passing in \`skipped\` th
 claim, each with a real reason. If Elliot answers "Not finished", do what it lists and call again.
 Then tell the user, in a few lines: the totals, the most important confirmed finding, and the report folder.
 `;
+
+// Focused audits check only the claims made in the files the caller named, typically a pull
+// request description saved as a file. There is no risk sweep.
+export const FOCUSED_PROTOCOL = `# Elliot focused audit protocol (audit {{AUDIT_ID}})
+
+Goal: find out whether the statements in the named source files are true in the code at this commit.
+Typical use: the description of a pull request, checked against the code the pull request changes.
+
+## 0. Independence
+If you wrote or changed code in this repository during this session, hand the audit to a fresh
+subagent that has not seen that work. The auditor must not be the author.
+
+## 1. Pick the claims
+Read the source files. Record every concrete, checkable statement about what the code does or now does:
+fixes, new behaviour, tests added, flags, defaults, security or data handling, "no behaviour change".
+Skip intentions, opinions and plans ("next we will...").
+
+## 2. Trace each claim into the code and record it
+Same verdicts and rules as a full audit:
+- VERIFIED: the code at this commit does it. Quote the lines that do it.
+- PARTIAL: done with a gap that would make a reviewer or user who trusts the sentence do something wrong.
+- FALSE: the code contradicts the statement, or the claimed change, test or file is not there.
+- UNVERIFIABLE: depends on something outside the repository (a deploy, a CI run, an external service).
+PARTIAL and FALSE need \`user_impact\` and a severity. When something claimed is missing, add an
+{"type": "absent", "pattern": "<name it would need>"} evidence: Elliot runs that search itself.
+Submit each with elliot_record_claim (source = the exact sentence in the source file).
+
+## 3. Independent review (required for any PARTIAL or FALSE)
+Call elliot_review_packet and give the returned prompt to a FRESH subagent; it records decisions with
+elliot_record_review.
+
+## 4. Finish
+Call elliot_audit_finish with audit_id "{{AUDIT_ID}}". Then report the totals and the most important finding.
+`;

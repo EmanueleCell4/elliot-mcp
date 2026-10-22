@@ -53,6 +53,46 @@ Inside Claude Code:
 
 That adds the Elliot tools, a `/elliot:audit` command, and a skill that makes Claude verify its own "done" claims before reporting them.
 
+### On every pull request (GitHub Action)
+
+Elliot reads the pull request description, checks each claim against the code ("fixes X", "adds tests for Y", "no behaviour change"), and comments with the proof. If an agent wrote the PR, this is where its "done" gets checked.
+
+```yaml
+# .github/workflows/elliot.yml
+name: Elliot
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+permissions:
+  contents: read
+  pull-requests: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: EmanueleCell4/elliot-mcp@v0.4.0
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+```
+
+The comment looks like this:
+
+| Verdict | Claim | Proof |
+|---|---|---|
+| ❌ FALSE | Adds unit tests for the comment builder in test/comment.test.js | searched for `comment.test.js`: not found |
+| ✅ VERIFIED | The badge is only offered when the audit has no findings | `src/audit-report.js:27` |
+
+It runs Claude Code with your API key. One check usually takes 1–2 minutes. Nothing is sent anywhere except Anthropic's API and GitHub.
+
+### README badge
+
+When every claim Elliot checks holds up, the report includes a badge you can paste into your README:
+
+[![Docs verified by Elliot](https://img.shields.io/badge/docs-verified%20by%20Elliot-2EC5FF)](https://github.com/EmanueleCell4/elliot-mcp)
+
 ## Why
 
 Coding agents say "Done ✅" when the work isn't done. They delete failing tests, skip checks, describe security that doesn't exist, and write READMEs that promise what the code never does. CI stays green because tests check the code the agent wrote, not the promises the product makes.
@@ -218,6 +258,7 @@ Elliot has no telemetry and no server of its own. What it touches:
 - **`verify_url`:** sends one GET request to the URL the agent passes in.
 - **`verify_github`:** calls `api.github.com` (or `ELLIOT_GITHUB_API`). If a GitHub token is set (the `GITHUB_TOKEN` env var, or the plugin's optional `github_token` setting), it is sent only to that API.
 - **`verify_npm`:** calls `registry.npmjs.org` (or `ELLIOT_NPM_REGISTRY`).
+- **GitHub Action:** runs Claude Code in your CI with your `ANTHROPIC_API_KEY`, reads the PR description and code, and posts one comment through the GitHub API.
 - **On disk:** receipts in `.elliot/` (or `ELLIOT_DIR`) and reports in `elliot-report/`, both inside your repository.
 
 The Claude Code plugin runs the server bundled in this repository (`node src/index.js`). Claude Code installs its two npm dependencies from `package-lock.json` when you install the plugin.

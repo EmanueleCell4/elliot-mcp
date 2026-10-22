@@ -1,0 +1,38 @@
+name: Elliot PR claim check
+description: Checks that what a pull request description says is true in the code, with file:line proof for every finding.
+author: Emanuele Cella
+branding:
+  icon: check-circle
+  color: blue
+inputs:
+  anthropic_api_key:
+    description: Anthropic API key used by Claude Code to read the code. Store it as a repository secret.
+    required: true
+  github_token:
+    description: Token used to post the comment. The default workflow token is enough with `pull-requests: write`.
+    required: false
+    default: ${{ github.token }}
+  model:
+    description: Optional Claude model id passed to Claude Code.
+    required: false
+    default: ""
+  claude_code_version:
+    description: Claude Code npm version to install.
+    required: false
+    default: "2.1.307"
+outputs:
+  verdict:
+    description: "pass when every checked claim holds up, findings when some don't, skipped when there was nothing to check."
+    value: ${{ steps.run.outputs.verdict }}
+runs:
+  using: composite
+  steps:
+    - id: run
+      shell: bash
+      run: bash "${{ github.action_path }}/action/run.sh"
+      env:
+        ANTHROPIC_API_KEY: ${{ inputs.anthropic_api_key }}
+        GH_TOKEN: ${{ inputs.github_token }}
+        ELLIOT_MODEL: ${{ inputs.model }}
+        ELLIOT_CC_VERSION: ${{ inputs.claude_code_version }}
+        ELLIOT_ACTION_PATH: ${{ github.action_path }}
