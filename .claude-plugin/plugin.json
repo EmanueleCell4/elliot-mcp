@@ -39,5 +39,6 @@
   },
   "icon": "./.claude-plugin/icon.png",
   "documentationUrl": "https://github.com/EmanueleCell4/elliot-mcp#readme",
-  "supportUrl": "https://github.com/EmanueleCell4/elliot-mcp/issues"
+  "supportUrl": "https://github.com/EmanueleCell4/elliot-mcp/issues",
+  "privacyPolicyUrl": "https://github.com/EmanueleCell4/elliot-mcp/blob/main/PRIVACY.md"
 }
