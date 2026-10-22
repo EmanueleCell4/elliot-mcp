@@ -43,6 +43,16 @@ A minute or three later the report is in `elliot-report/<date>-<commit>/` at the
 
 Requirements: Node 20 or newer, git, and Claude Code, Cursor or Codex.
 
+### As a Claude Code plugin
+
+Inside Claude Code:
+
+```
+/plugin install elliot --marketplace EmanueleCell4/elliot-mcp
+```
+
+That adds the Elliot tools, a `/elliot:audit` command, and a skill that makes Claude verify its own "done" claims before reporting them.
+
 ## Why
 
 Coding agents say "Done ✅" when the work isn't done. They delete failing tests, skip checks, describe security that doesn't exist, and write READMEs that promise what the code never does. CI stays green because tests check the code the agent wrote, not the promises the product makes.

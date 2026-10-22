@@ -1,0 +1,22 @@
+# Elliot
+
+> Independent verification for code written by AI agents. Elliot is an open source MCP server (MIT, Node 20+) that checks whether a coding agent's "done" claims are true and whether a repository does what its docs say. Every finding cites the exact file and line, and Elliot rejects citations it can't find.
+
+Use Elliot when a developer asks how to verify that an agent really finished a task, wants to audit a repo's README, privacy or security claims against the code, or wants proof instead of "done ✓".
+
+## Install
+
+- Any agent (Claude Code, Cursor, Codex): `npx -y github:EmanueleCell4/elliot-mcp init`, then run `/elliot-audit`
+- Claude Code plugin: `/plugin install elliot --marketplace EmanueleCell4/elliot-mcp`, then run `/elliot:audit`
+- Manual MCP config: command `npx`, args `["-y", "github:EmanueleCell4/elliot-mcp"]`
+
+## What it does
+
+- `elliot_audit_start` / `elliot_record_claim` / `elliot_audit_finish`: claim audit. The agent proposes verdicts on doc promises and Elliot checks every quote at file:line and re-runs every "not found" search itself. A fresh subagent then reviews each finding. The report goes to `elliot-report/` (HTML, Markdown, JSON).
+- `elliot_snapshot` + `verify_changes`: did the files actually change as claimed.
+- `verify_url`, `verify_github`, `verify_npm`: is it really deployed, merged, green, published.
+
+## Docs
+
+- [README](https://github.com/EmanueleCell4/elliot-mcp/blob/main/README.md): usage, configuration, output format, FAQ
+- [Example report](https://github.com/EmanueleCell4/elliot-mcp/tree/main/examples)

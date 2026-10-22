@@ -1,0 +1,12 @@
+{
+  "name": "elliot-mcp",
+  "description": "Elliot: independent verification for code written by AI agents",
+  "owner": { "name": "Emanuele Cella", "url": "https://github.com/EmanueleCell4" },
+  "plugins": [
+    {
+      "name": "elliot",
+      "source": "./",
+      "description": "Checks your agent's \"done\" claims and whether a repo does what its docs say, with proof from the code."
+    }
+  ]
+}
