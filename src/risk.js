@@ -21,7 +21,7 @@ const GUARANTEE = /\b(never|always|by default|defaults? to|automatically|immedia
 const SKIP_DOC = /(^|\/)(posts?|news|changelog|releases?|legal|privacy-policy|terms|i18n|translations?|ja|zh|zh-cn|zh-tw|ko|es|fr|de|pt|pt-br|ru|it)(\/|\.|-)|(^|\/)blog\/\d{4}|(^|\/)v?\d+\.\d+(\.\d+)?\/|(^|\/)\d{4}-\d{2}-\d{2}/i;
 const MAX_CANDIDATES = 20;
 // Defaults, limits and requirements: concrete, checkable, and the first thing to drift when code changes.
-const DEFAULTISH = /\b(by default|defaults? (to|is)|default(:| value| of)|requires?|minimum|maximum|at (most|least)|up to|timeout|time out|limit(ed)? (to|of)|capped|retries|retry|expires?|tolerance)\b/i;
+const DEFAULTISH = /\b(by default|defaults? (to|is)|default(:| value| of| cap| limit| timeout| size)|(is|are) the default|bounded|caps? (at|of)|requires?|minimum|maximum|at (most|least)|up to|timeout|time out|limit(ed)? (to|of)|capped|retries|retry|expires?|tolerance)\b/i;
 const CONCRETE = /\b\d+(\.\d+)?\s*(ms|s|sec|secs|seconds?|minutes?|mins?|hours?|days?|kb|mb|gb|kib|mib|%|tokens|bytes|rounds|retries|attempts|requests)\b|`[^`]*\d[^`]*`|`[^`]*\b(true|false|True|False|None|null)\b[^`]*`|\b(Node(\.js)?|Python|Go|Rust)\s*v?\d+/i;
 // "By default, `SomeClient` does X" is concrete even without a number: it names the thing.
 const NAMED_DEFAULT = /\b(by default|defaults? to)\b.*`[A-Za-z_][\w.]*`|`[A-Za-z_][\w.]*`.*\b(by default|defaults? to)\b/i;
@@ -63,7 +63,8 @@ export async function docCandidates(root, sources) {
       if (score < 2 && !d) continue;
       if (inFence(lines, i)) continue;
       const risk = a || (b && g) ? "high" : score >= 2 ? "guarantee" : "default";
-      if (risk === "default") score = SENSITIVE_DEFAULT.test(line) ? 1.9 : 1.5;
+      // A line that literally says "default" next to a value is the most checkable kind of promise.
+      if (risk === "default") score = SENSITIVE_DEFAULT.test(line) ? 1.9 : /\bdefault\b/i.test(line) && /\d/.test(line) ? 1.7 : 1.5;
       found.push({ file: s.file, line: i + 1, text: line.replace(/\s+/g, " ").slice(0, 220), risk, score, rankIdx });
     }
   }
