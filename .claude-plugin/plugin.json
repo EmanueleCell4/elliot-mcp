@@ -36,5 +36,8 @@
       "description": "Only needed to check private repos or to raise GitHub's rate limit for verify_github. Sent only to api.github.com.",
       "sensitive": true
     }
-  }
+  },
+  "icon": "./.claude-plugin/icon.png",
+  "documentationUrl": "https://github.com/EmanueleCell4/elliot-mcp#readme",
+  "supportUrl": "https://github.com/EmanueleCell4/elliot-mcp/issues"
 }
