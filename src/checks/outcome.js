@@ -175,6 +175,15 @@ export async function checkOutcome({ path: inputPath = process.cwd(), command, a
     if (result.timedOut) {
       return { target: source, verdict: Verdict.INCONCLUSIVE, reason: "functional check timed out after " + timeout_ms + "ms", evidence: { command, args, exit_code: result.code, signal: result.signal, stdout: result.stdout.slice(-12000), stderr: result.stderr.slice(-12000), isolated_copy: true, os_sandbox: true, network: "blocked", process_group_terminated: true } };
     }
+    if (result.code === null || result.signal) {
+      // Some hosts kill the sandbox wrapper before it can report an exit code.
+      // We cannot establish either a completed functional check or working isolation.
+      return { target: source, verdict: Verdict.INCONCLUSIVE,
+        reason: "sandboxed check terminated without a normal exit status (" + (result.signal || "unknown signal") + "); execution and isolation were not verified",
+        evidence: { command, args, exit_code: result.code, signal: result.signal, stdout: result.stdout.slice(-12000),
+          stderr: result.stderr.slice(-12000), isolated_copy: true, os_sandbox: false,
+          network: "unverified", process_group_terminated: true } };
+    }
     const verdict = result.code === 0 ? Verdict.VERIFIED : Verdict.NOT_VERIFIED;
     return { target: source, verdict, reason: result.code === 0 ? "functional check exited successfully in an OS-sandboxed disposable repository copy" : "functional check exited with code " + (result.code ?? "unknown"), evidence: { command, args, exit_code: result.code, signal: result.signal, stdout: result.stdout.slice(-12000), stderr: result.stderr.slice(-12000), isolated_copy: true, os_sandbox: true, network: "blocked", process_group_terminated: true } };
   } catch (err) {
