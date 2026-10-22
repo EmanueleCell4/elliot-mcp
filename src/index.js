@@ -303,7 +303,7 @@ server.registerTool(
       audit_id: z.string().regex(/^aud_[0-9a-f]{12}$/),
       reviewer_token: z.string().max(200).optional().describe("Per-audit capability included in the evidence packet when isolated review is enabled."),
       finding: z.string().regex(/^(\d+|b\d+)$/).describe("The finding id, e.g. 3 or b1."),
-      outcome: z.enum(REVIEW_OUTCOMES).describe("confirm: real and material. downgrade: true but immaterial. reject: the claim actually holds."),
+      outcome: z.enum(REVIEW_OUTCOMES).describe("confirm: real and material (pass severity to change it, e.g. low). downgrade: the mismatch is real but immaterial and becomes a note; do not pass a severity. reject: the claim actually holds."),
       reason: z.string().min(10).max(800),
       severity: z.enum(SEVERITIES).optional().describe("Corrected severity, when the auditor's is wrong."),
       evidence: z.array(quoteEvidence).max(6).optional(),

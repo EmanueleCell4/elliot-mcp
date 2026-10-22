@@ -400,12 +400,16 @@ export function resolve(audit) {
   for (const c of audit.claims) {
     if (!isFinding(c) || !c.review) { claims.push(c); continue; }
     if (c.review.outcome === "reject") retracted.push(c);
+    // A reviewer who downgrades but still names a severity is lowering the severity of a real
+    // mismatch, not saying the claim holds: keep the finding at that severity.
+    else if (c.review.outcome === "downgrade" && c.review.severity) claims.push({ ...c, severity: c.review.severity });
     else if (c.review.outcome === "downgrade") notes.push({ ...c, original_verdict: c.verdict, verdict: "VERIFIED", note: c.review.reason });
     else claims.push({ ...c, severity: c.review.severity || c.severity });
   }
   const behaviors = [];
   for (const b of audit.behaviors || []) {
     if (b.review?.outcome === "reject") retracted.push(b);
+    else if (b.review?.outcome === "downgrade" && b.review.severity) behaviors.push({ ...b, severity: b.review.severity });
     else if (b.review?.outcome === "downgrade") notes.push({ ...b, note: b.review.reason });
     else behaviors.push({ ...b, severity: b.review?.severity || b.severity });
   }
