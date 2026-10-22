@@ -36,8 +36,8 @@ Corrections made during review: one planted mutation (auth.rs:46, 30 → 61) had
 
 - **Judges are models.** Claude and Codex both judged; disagreements were settled by reading the code, by the author. A third party should re-check `results/judge/adjudication.json`.
 - **Planted bugs are simple.** One flipped literal behind a promise Elliot had already checked once. That favours Elliot's claim selection, which saw these promises in the clean audit. Real breakages are more varied.
-- **Small sample:** 18 planted bugs, 2 runs, 8 repositories. A 4-point difference per run is 2 bugs.
-- **Planted-bug recall is not real-world recall.** The 17 unplanted real problems found across both conditions show that both miss things.
+- **Small sample:** 18 planted bugs, 2 runs, 8 repositories. A difference of 1 bug per run is about 6 points.
+- **Planted-bug recall is not real-world recall.** The 13 unplanted real problems found across both conditions (8 + 5) show that both miss things.
 - Scripts use absolute paths from the machine they ran on. Adjust the paths, then: clone each repo at its commit, `git am patches/<repo>.patch`, run, score.
 
 ## Files
