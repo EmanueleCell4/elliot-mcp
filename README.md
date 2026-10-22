@@ -73,7 +73,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: EmanueleCell4/elliot-mcp@v0.4.0
+      - uses: EmanueleCell4/elliot-mcp@v0.5.0
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
 ```

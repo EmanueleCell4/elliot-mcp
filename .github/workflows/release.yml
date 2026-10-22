@@ -1,0 +1,57 @@
+name: Publish GitHub release
+
+on:
+  push:
+    branches:
+      - 'publish/v*'
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    name: Verify and publish GitHub source release
+    if: github.repository == 'EmanueleCell4/elliot-mcp' && github.event.created == true
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Ensure release branch matches version and main
+        shell: bash
+        run: |
+          set -euo pipefail
+          VERSION="$(node -p 'require("./package.json").version')"
+          test "$GITHUB_REF_NAME" = "publish/v$VERSION"
+          test "$(node -p 'require("./server.json").version')" = "$VERSION"
+          test "$(node -p 'require("./server.json").packages[0].version')" = "$VERSION"
+          test "$(node -p 'require("./package-lock.json").version')" = "$VERSION"
+          test "$(node -p 'require("./package-lock.json").packages[""].version')" = "$VERSION"
+          test "$(node -p 'require("./.claude-plugin/plugin.json").version')" = "$VERSION"
+          test -s "docs/releases/v$VERSION.md"
+          git fetch --no-tags --depth=1 origin main
+          test "$(git rev-parse FETCH_HEAD)" = "$GITHUB_SHA"
+          echo "RELEASE_VERSION=$VERSION" >> "$GITHUB_ENV"
+      - name: Install dependencies
+        run: npm ci
+      - name: Run static checks
+        run: npm run check
+      - name: Run test suite
+        run: npm test
+      - name: Publish source release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view "v$RELEASE_VERSION" >/dev/null 2>&1; then
+            echo "Release already exists; no changes made."
+            exit 0
+          fi
+          gh release create "v$RELEASE_VERSION" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --title "Elliot MCP v$RELEASE_VERSION" --notes-file "docs/releases/v$RELEASE_VERSION.md" --latest
