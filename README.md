@@ -1,6 +1,8 @@
 <p align="center">
-  <img src="docs/assets/hero.png" alt="Elliot: your agent says it's done, Elliot checks. An agent claims access control is enforced; Elliot marks it FALSE with the line of code that bypasses it, and rejects an invented citation." width="100%">
+  <img src="docs/assets/demo.gif" alt="An AI agent reports &quot;Done. Code cleaned 100%.&quot; Elliot stamps it NOT VERIFIED: 0 files changed." width="100%">
 </p>
+
+<h1 align="center">Your agent says it's done. Elliot checks.</h1>
 
 <p align="center">
   <b>Independent verification for code written by AI agents.</b><br>
@@ -54,6 +56,10 @@ The usual fix is to ask a second AI to review the first one. That gives you anot
 Elliot works the other way around: **the agent proposes, Elliot verifies.** Every quote must really be in the file, at that line, at that commit. Every "this doesn't exist" is searched by Elliot itself. A fresh reviewer then tries to prove each finding wrong before it reaches the report.
 
 ## What it found
+
+<p align="center">
+  <img src="docs/assets/hero.png" alt="Elliot results: 12 of 13 findings confirmed by an independent reviewer, 0 wrong, 1 to 3 minutes per repo." width="100%">
+</p>
 
 Elliot 0.3 ran unattended inside Claude Code on 9 popular open-source tools from the AI coding-agent ecosystem (October 2026). A separate reviewer that had not seen the audits then checked every finding against the code.
 
