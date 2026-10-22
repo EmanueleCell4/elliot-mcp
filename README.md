@@ -368,10 +368,11 @@ Please open an issue with the report's `claims.json` entry. False positives are 
 - [x] File, URL, GitHub and npm checks with local receipts
 - [x] `/elliot-audit`: claim audit with checked citations, report in `elliot-report/`
 - [x] Risk sweep, undisclosed behaviours, materiality test and independent review
-- [ ] Authorization checks: unauthenticated handlers, missing ownership checks
+- [x] Authorization gaps: handlers that skip the auth check their sibling handlers perform
+- [ ] Ownership checks: handlers that check the caller is logged in but not that they own the record
 - [x] Run functional outcome checks in an OS sandbox
 - [ ] Hooks that run Elliot automatically when the agent stops (Claude Code, Codex)
-- [ ] A GitHub Action that audits the claims touched by each pull request
+- [x] A GitHub Action that checks the claims in each pull request description
 - [x] Ed25519 signed receipts with offline verification
 
 ## Development
