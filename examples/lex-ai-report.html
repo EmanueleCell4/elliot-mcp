@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Elliot audit: lex-ai</title>
+<style>
+:root{--bg:#F5F6F8;--surface:#FFF;--ink:#151922;--muted:#5A6271;--line:#DCE0E6;--v:#1E7757;--p:#A86300;--f:#BF3328;--u:#8A909C;--f-bg:#FBE5E2;--p-bg:#FBEEDB;--v-bg:#E3F2EC;--u-bg:#ECEEF1;
+--sans:"IBM Plex Sans","Segoe UI",Roboto,Helvetica,Arial,sans-serif;--mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#0E1116;--surface:#151920;--ink:#E6E9EF;--muted:#9AA1AE;--line:#2A303A;--v:#4FC596;--p:#E8A445;--f:#FF6E61;--u:#7C8391;--f-bg:#331714;--p-bg:#2E2210;--v-bg:#13291F;--u-bg:#1E222A;color-scheme:dark}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--sans)}
+main{max-width:960px;margin:0 auto;padding:40px max(16px,env(safe-area-inset-left,0px)) 64px;display:grid;gap:28px}
+h1{font-size:clamp(26px,4vw,38px);line-height:1.15;margin:0;text-wrap:balance}
+.eyebrow{font:12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0}
+.meta{color:var(--muted);margin:0;font-size:14px}code{font-family:var(--mono);font-size:.86em;overflow-wrap:anywhere}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px}
+.stat b{display:block;font-size:28px;font-variant-numeric:tabular-nums}.stat span{font-size:13px;color:var(--muted)}
+.stat.v b{color:var(--v)}.stat.p b{color:var(--p)}.stat.f b{color:var(--f)}
+.bar{display:flex;gap:2px;height:10px;border-radius:2px;overflow:hidden;background:var(--line)}
+.seg.v{background:var(--v)}.seg.p{background:var(--p)}.seg.f{background:var(--f)}.seg.u{background:var(--u)}
+ol{list-style:none;margin:0;padding:0;background:var(--surface);border:1px solid var(--line);border-radius:6px}
+.claim{display:grid;grid-template-columns:120px 1fr;gap:12px;padding:16px 18px;border-top:1px solid var(--line)}.claim:first-child{border-top:0}
+.chips{display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+.verdict{font:500 11px var(--mono);letter-spacing:.08em;padding:3px 7px;border-radius:3px;border:1px solid currentColor}
+.verdict.false{color:var(--f);background:var(--f-bg)}.verdict.partial{color:var(--p);background:var(--p-bg)}.verdict.verified{color:var(--v);background:var(--v-bg)}.verdict.unverifiable{color:var(--u);background:var(--u-bg)}
+.sev{font:11px var(--mono);color:var(--muted)}.sev.high{color:var(--f)}
+.body{min-width:0;display:grid;gap:4px}.body p{margin:0}.text{font-weight:600}.src,.rc{font-size:13px;color:var(--muted)}
+.ev{margin:4px 0 0;padding-left:18px;font-size:13px;display:grid;gap:3px}.q{color:var(--muted);font-family:var(--mono);font-size:12px;overflow-wrap:anywhere}
+footer{font-size:13px;color:var(--muted)}
+@media (max-width:560px){.claim{grid-template-columns:1fr}.chips{flex-direction:row;align-items:center}}
+</style></head><body><main>
+<header style="display:grid;gap:10px">
+<p class="eyebrow">Elliot claim audit &middot; 2026-10-21</p>
+<h1>lex-ai: 6 of 11 claims don&#39;t fully hold up in the code</h1>
+<p class="meta">Commit <code>dd844747fa74</code> &middot; https://github.com/EmanueleCell4/lex-ai.git &middot; Elliot 0.1.0</p>
+</header>
+<div class="stats">
+<div class="stat"><b>11</b><span>claims checked</span></div>
+<div class="stat v"><b>2</b><span>verified</span></div>
+<div class="stat p"><b>2</b><span>partial</span></div>
+<div class="stat f"><b>4</b><span>false</span></div>
+<div class="stat"><b>6</b><span>citations Elliot rejected</span></div>
+</div>
+<div class="bar" role="img" aria-label="2 verified, 2 partial, 4 false, 3 unverifiable"><span class="seg v" style="flex:2"></span><span class="seg p" style="flex:2"></span><span class="seg f" style="flex:4"></span><span class="seg u" style="flex:3"></span></div>
+<ol>
+<li class="claim">
+  <div class="chips"><span class="verdict false">FALSE</span><span class="sev high">severity high</span></div>
+  <div class="body">
+    <p class="text">Role-based access is enforced at the database layer through row-level security.</p>
+    <p class="src">Claimed in <code>app/security/page.tsx:14</code>: &ldquo;Role-based access enforced at the database layer through row-level security.&rdquo;</p>
+    <p class="why">All data access uses the service-role client, which bypasses RLS; auth is removed and a single fixed demo org/user is used. RBAC checks (rbac.ts) are only applied on the audit page, not in the mutating actions, and no SQL/RLS policies are in the repo.</p>
+    <ul class="ev"><li><code>lib/supabase/index.ts:10</code> <span class="q">// identical code paths run against Postgres (RLS-bypassing, by design for the</span></li><li><code>docs/ARCHITECTURE.md:70</code> <span class="q">**No per-user tenancy** — everything is the single demo org via service-role.</span></li></ul>
+    <p class="rc">Receipt <code>rcpt_63b86e128801</code></p>
+  </div>
+</li>
+<li class="claim">
+  <div class="chips"><span class="verdict false">FALSE</span><span class="sev high">severity high</span></div>
+  <div class="body">
+    <p class="text">SSO (SAML, OIDC) is mandatory at the Sovereign edition.</p>
+    <p class="src">Claimed in <code>app/security/page.tsx:14</code>: &ldquo;SSO (SAML, OIDC) is mandatory at the Sovereign edition.&rdquo;</p>
+    <p class="why">There is no authentication at all, let alone SAML/OIDC; lib/auth.ts returns a fixed demo context.</p>
+    <ul class="ev"><li>searched the code for `saml`: not found outside docs</li><li><code>docs/HANDOFF.md:40</code> <span class="q">**No real auth / single-tenant**</span></li></ul>
+    <p class="rc">Receipt <code>rcpt_89b9a8bbfcf6</code></p>
+  </div>
+</li>
+<li class="claim">
+  <div class="chips"><span class="verdict false">FALSE</span><span class="sev medium">severity medium</span></div>
+  <div class="body">
+    <p class="text">Counsel: 50 reviewed documents per month, 3 jurisdictions; Chambers: unlimited reviews, 6 jurisdictions (plan limits).</p>
+    <p class="src">Claimed in <code>app/pricing/page.tsx:13</code>: &ldquo;&#39;50 reviewed documents per month&#39;,&rdquo;</p>
+    <p class="why">No metering or plan enforcement exists; billing_plan is only a seed value (&#39;growth&#39;, not an edition name) and no tier limits are checked.</p>
+    <ul class="ev"><li><code>lib/supabase/seed.ts:39</code> <span class="q">billing_plan: &#39;growth&#39;,</span></li><li>searched the code for `billing_plan\s*(===|==|!==|\))|quota|maxReviews`: not found outside docs</li></ul>
+    <p class="rc">Receipt <code>rcpt_67a548ea1396</code></p>
+  </div>
+</li>
+<li class="claim">
+  <div class="chips"><span class="verdict false">FALSE</span><span class="sev low">severity low</span></div>
+  <div class="body">
+    <p class="text">Pricing is by edition, not by seat — but the Counsel tier is priced per user.</p>
+    <p class="src">Claimed in <code>app/pricing/page.tsx:62</code>: &ldquo;LEXAI is priced by edition, not by seat.&rdquo;</p>
+    <p class="why">The page contradicts itself: Counsel&#39;s $1,500 is explicitly per user per month, i.e. per seat.</p>
+    <ul class="ev"><li><code>app/pricing/page.tsx:9</code> <span class="q">cadence: &#39;per user, per month&#39;,</span></li></ul>
+    <p class="rc">Receipt <code>rcpt_3018d6ffd22d</code></p>
+  </div>
+</li>
+<li class="claim">
+  <div class="chips"><span class="verdict partial">PARTIAL</span><span class="sev medium">severity medium</span></div>
+  <div class="body">
+    <p class="text">Every AI inference, document operation and change to Customer data leaves a tamper-evident record; the controls below are live today.</p>
+    <p class="src">Claimed in <code>app/security/page.tsx:43</code>: &ldquo;Every AI inference, document operation and change to Customer data leaves a tamper-evident record.&rdquo;</p>
+    <p class="why">Audit entries exist for assistant, draft, review, digest, matter and workspace creation, but not for updates, deletes, approvals or exports, and audit is written after the action, non-transactionally. Several &#39;live today&#39; controls (RLS, SSO, tenancy) are not.</p>
+    <ul class="ev"><li><code>lib/actions/matters.ts:71</code> <span class="q">await recordAudit({</span></li><li><code>docs/ARCHITECTURE.md:71</code> <span class="q">the hash-chain audit log is the only safety net.</span></li><li>searched the code for `recordAudit.*delete`: not found outside docs</li></ul>
+    <p class="rc">Receipt <code>rcpt_e919991d0d00</code></p>
+  </div>
+</li>
+<li class="claim">
+  <div class="chips"><span class="verdict partial">PARTIAL</span><span class="sev medium">severity medium</span></div>
+  <div class="body">
+    <p class="text">Workflow is Client → Case → Document → AI-assisted review → human approval → controlled export.</p>
+    <p class="src">Claimed in <code>README.md:9</code>: &ldquo;commercial contracts. The workflow is **Client → Case → Document → AI-assisted review →&rdquo;</p>
+    <p class="why">Review and drafting work, but export is not implemented and approve/export exist only as permission names in rbac.ts; no approval step is enforced.</p>
+    <ul class="ev"><li><code>lib/rbac.ts:38</code> <span class="q">| &#39;contract.export&#39;</span></li><li><code>docs/HANDOFF.md:46</code> <span class="q">**No export** (DOCX/PDF) of drafts/reviews.</span></li></ul>
+    <p class="rc">Receipt <code>rcpt_383a266518f6</code></p>
+  </div>
+</li>
+<li class="claim">
+  <div class="chips"><span class="verdict unverifiable">UNVERIFIABLE</span></div>
+  <div class="body">
+    <p class="text">Data residency: EU (Frankfurt) by default; UAE (Dubai) and KSA (Riyadh) available at Sovereign.</p>
+    <p class="src">Claimed in <code>app/security/page.tsx:18</code>: &ldquo;EU (Frankfurt) by default.&rdquo;</p>
+    <p class="why">Region is determined by wherever the operator&#39;s Supabase project and Anthropic API run; the repo has no region selection or config.</p>
+    <ul class="ev"><li>searched the code for `frankfurt`: not found outside docs</li><li><code>lib/supabase/index.ts:17</code> <span class="q">return createSupabaseClient(env.NEXT_PUBLIC_SUPABASE_URL!, env.SUPABASE_SERVICE_ROLE_KEY!, {</span></li></ul>
+    <p class="rc">Receipt <code>rcpt_2d39e97257ce</code></p>
+  </div>
+</li>
+<li class="claim">
+  <div class="chips"><span class="verdict unverifiable">UNVERIFIABLE</span></div>
+  <div class="body">
+    <p class="text">We use the zero-retention API tier with Anthropic; we do not persist Customer data with the model provider.</p>
+    <p class="src">Claimed in <code>app/security/page.tsx:35</code>: &ldquo;We do not persist Customer data with the model provider. We use the zero-retention API tier with Anthropic.&rdquo;</p>
+    <p class="why">Zero retention is an account/contract arrangement with Anthropic, not a code setting; the code just calls the standard Messages API with an API key and sends full document text.</p>
+    <ul class="ev"><li><code>lib/ai/providers/anthropic.ts:50</code> <span class="q">const resp = await anthropic().messages.create({</span></li></ul>
+    <p class="rc">Receipt <code>rcpt_83c93b244030</code></p>
+  </div>
+</li>
+<li class="claim">
+  <div class="chips"><span class="verdict unverifiable">UNVERIFIABLE</span></div>
+  <div class="body">
+    <p class="text">DIFC, ADGM, KSA PDPL and Bahrain PDPL controls are aligned today.</p>
+    <p class="src">Claimed in <code>app/security/page.tsx:22</code>: &ldquo;controls are aligned today.&rdquo;</p>
+    <p class="why">Regulatory alignment is an organisational/legal assertion that code cannot establish; the code is single-tenant with no auth, which makes the claim doubtful.</p>
+    <ul class="ev"><li><code>docs/ARCHITECTURE.md:70</code> <span class="q">**No per-user tenancy** — everything is the single demo org via service-role.</span></li></ul>
+    <p class="rc">Receipt <code>rcpt_e007eef81570</code></p>
+  </div>
+</li>
+<li class="claim">
+  <div class="chips"><span class="verdict verified">VERIFIED</span></div>
+  <div class="body">
+    <p class="text">Every AI inference writes an append-only record with SHA-256 hashes of the prompt, retrieval and output, chained per tenant.</p>
+    <p class="src">Claimed in <code>app/security/page.tsx:10</code>: &ldquo;Every AI inference writes an append-only record with SHA-256 hashes of the prompt, retrieval and output.&rdquo;</p>
+    <p class="why">recordAudit computes a SHA-256 chain per org_id and is called after assistant, draft, review and digest actions with prompt/retrieval/output hashes. Append-only is enforced only by convention/missing RLS policy, whose SQL is not in the repo; the chain read is non-atomic so concurrent writes can fork it.</p>
+    <ul class="ev"><li><code>lib/audit.ts:67</code> <span class="q">const entryHash = sha256((prevHash ?? &#39;&#39;) + canonical(payload));</span></li><li><code>lib/audit.ts:48</code> <span class="q">.order(&#39;created_at&#39;, { ascending: false })</span></li></ul>
+    <p class="rc">Receipt <code>rcpt_88030e7fe68d</code></p>
+  </div>
+</li>
+<li class="claim">
+  <div class="chips"><span class="verdict verified">VERIFIED</span></div>
+  <div class="body">
+    <p class="text">Runs end-to-end with zero environment variables; adding credentials switches the same code paths to live services.</p>
+    <p class="src">Claimed in <code>README.md:12</code>: &ldquo;Runs end-to-end **with zero environment variables**.&rdquo;</p>
+    <p class="why">All credentials are optional; absent keys select the mock AI provider and in-memory mock database. The live Supabase path has no schema/migrations in the repo, so it could not be exercised.</p>
+    <ul class="ev"><li><code>lib/ai/provider.ts:21</code> <span class="q">return hasAnthropic() ? anthropicProvider : mockProvider;</span></li><li><code>lib/supabase/index.ts:13</code> <span class="q">if (!hasSupabase()) {</span></li><li><code>config/env.ts:17</code> <span class="q">ANTHROPIC_API_KEY: z.string().min(1).optional(),</span></li></ul>
+    <p class="rc">Receipt <code>rcpt_bda1bdb4f8ed</code></p>
+  </div>
+</li></ol>
+<footer>Every quote above was matched by Elliot against the file at this commit, and every &ldquo;not found&rdquo; was searched by Elliot itself. Findings are a static reading of the code, not a run of the software.</footer>
+</main></body></html>

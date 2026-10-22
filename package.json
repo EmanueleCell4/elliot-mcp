@@ -1,0 +1,48 @@
+{
+  "name": "elliot-mcp",
+  "version": "0.3.0",
+  "description": "Your agent says it's done. Elliot checks. Independent verification for code written by AI agents: checks agent claims and audits what a repo promises against its code, with an independent review of every finding.",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai-agents",
+    "verification",
+    "claude-code",
+    "codex",
+    "openclaw",
+    "agent-reliability"
+  ],
+  "author": "Emanuele Cella",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "zod": "^4.6.7"
+  },
+  "type": "module",
+  "bin": {
+    "elliot-mcp": "src/index.js"
+  },
+  "files": [
+    "src",
+    "skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "mcpName": "io.github.emanuelecell4/elliot-mcp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmanueleCell4/elliot-mcp.git"
+  },
+  "homepage": "https://github.com/EmanueleCell4/elliot-mcp"
+}
