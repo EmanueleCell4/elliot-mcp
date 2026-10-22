@@ -82,3 +82,16 @@ test("verify_url refuses loopback, private and metadata addresses", async () => 
     assert.match(r.reason, /local address|private or local/, url);
   }
 });
+
+test("verify_outcome: writes stay in the copy, and a failing step in a bash pipeline fails the check", async (t) => {
+  const { checkOutcome } = await import("../src/checks/outcome.js");
+  const { mkdtemp, writeFile, readFile } = await import("node:fs/promises");
+  const dir = await mkdtemp(path.join(tmpdir(), "elliot-pipe-"));
+  await writeFile(path.join(dir, "keep.txt"), "original");
+  const write = await checkOutcome({ path: dir, command: "bash", args: ["-c", "echo changed > keep.txt && cat keep.txt"] });
+  if (write.evidence.os_sandbox === false) { t.skip("no OS sandbox on this host"); return; }
+  assert.equal(write.verdict, "VERIFIED", write.reason);
+  assert.equal(await readFile(path.join(dir, "keep.txt"), "utf8"), "original");
+  const piped = await checkOutcome({ path: dir, command: "bash", args: ["-c", "false | tail -1"] });
+  assert.equal(piped.verdict, "NOT_VERIFIED");
+});

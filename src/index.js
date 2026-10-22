@@ -83,7 +83,7 @@ server.registerTool(
   "verify_outcome",
   {
     title: "Run a functional check in isolation",
-    description: "Run a command and arguments in a disposable repository copy under the host OS sandbox. Writes stay in the copy, network is blocked, and VERIFIED requires exit code zero. If the OS sandbox cannot start, returns INCONCLUSIVE without running the command.",
+    description: "Run a command and arguments in a disposable repository copy under the host OS sandbox. Writes stay in the copy, network is blocked, and VERIFIED requires exit code zero. For a shell pipeline use command bash with args [\"-c\", \"...\"]; Elliot adds set -o pipefail so a failing step is not hidden by the last one. Put every file the check needs in the repository: files elsewhere (such as /tmp scripts) do not exist inside the sandbox. If the OS sandbox cannot start, returns INCONCLUSIVE without running the command.",
     inputSchema: {
       path: z.string().optional().describe("Repository path (default: server working directory)."),
       command: z.string().min(1).max(500).describe("Executable, for example npm, node or pytest. No shell is used."),

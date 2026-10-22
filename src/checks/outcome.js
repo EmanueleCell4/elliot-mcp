@@ -125,6 +125,11 @@ function runSandbox(executable, args, { cwd, env, timeout }) {
 
 export async function checkOutcome({ path: inputPath = process.cwd(), command, args = [], timeout_ms = 120000 }) {
   const source = path.resolve(inputPath);
+  // `bash -c "pytest ... | tail"` exits with tail's status and hides a failing test. Make a
+  // failure anywhere in a pipeline fail the check.
+  if (path.basename(command) === "bash" && args[0] === "-c" && typeof args[1] === "string" && !/pipefail/.test(args[1])) {
+    args = ["-c", "set -o pipefail; " + args[1], ...args.slice(2)];
+  }
   let temp;
   let isolationCommand;
   let sandboxStarted = false;
@@ -160,7 +165,7 @@ export async function checkOutcome({ path: inputPath = process.cwd(), command, a
       }
       const bwrapArgs = ["--die-with-parent", "--unshare-all", "--tmpfs", "/", "--dir", "/tmp", "--dir", "/workspace"];
       await addBwrapMounts(bwrapArgs, ["/usr/bin", "/usr/lib", "/usr/lib64", "/usr/share", "/usr/local/bin", "/usr/local/lib", "/etc", "/bin", "/sbin", "/lib", "/lib64"], [...new Set(commandDirs)]);
-      bwrapArgs.push("--dir", "/proc", "--dir", "/dev", "--proc", "/proc", "--dev", "/dev", "--bind", scratch, "/tmp", "--ro-bind", copy, "/workspace", "--chdir", "/workspace");
+      bwrapArgs.push("--dir", "/proc", "--dir", "/dev", "--proc", "/proc", "--dev", "/dev", "--bind", scratch, "/tmp", "--bind", copy, "/workspace", "--chdir", "/workspace");
       sandboxArgs = [...bwrapArgs, executable.path, ...args];
       sandboxEnv = { PATH: commandDirs.join(":") + ":/usr/bin:/bin:/usr/sbin:/sbin", HOME: "/tmp/home", TMPDIR: "/tmp", TEMP: "/tmp", CI: "1" };
     } else {
