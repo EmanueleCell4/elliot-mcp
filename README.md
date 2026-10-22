@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/assets/cover.png" alt="Elliot, a white robot leaning with its arms crossed, next to the words: your agent says it's done. elliot checks." width="100%">
+  <img src="docs/assets/cover.png" alt="A blue passport-style stamp reading PASS, checked by Elliot, next to a white robot with its arms crossed and the words: your agent says it's done. elliot checks." width="100%">
 </p>
 
 <p align="center">
