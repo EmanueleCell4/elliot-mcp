@@ -20,6 +20,10 @@ const TIER_B = /\b(privacy|api keys?|secrets?|passwords?|credentials?|tokens?|pe
 const GUARANTEE = /\b(never|always|by default|defaults? to|automatically|immediately|guarantee\w*|no longer|cannot|can't|only (reads?|local))\b/i;
 const SKIP_DOC = /(^|\/)(posts?|news|changelog|releases?|legal|privacy-policy|terms|i18n|translations?)(\/|\.|-)|(^|\/)blog\/\d{4}|(^|\/)v?\d+\.\d+(\.\d+)?\/|(^|\/)\d{4}-\d{2}-\d{2}/i;
 const MAX_CANDIDATES = 20;
+// Defaults, limits and requirements: concrete, checkable, and the first thing to drift when code changes.
+const DEFAULTISH = /\b(by default|defaults? (to|is)|default(:| value| of)|requires?|minimum|maximum|at (most|least)|up to|timeout|time out|limit(ed)? (to|of)|capped|retries|retry|expires?|tolerance)\b/i;
+const CONCRETE = /\b\d+(\.\d+)?\s*(ms|s|sec|secs|seconds?|minutes?|mins?|hours?|days?|kb|mb|gb|kib|mib|%|tokens|bytes|rounds|retries|attempts|requests)\b|`[^`]*\d[^`]*`|`(true|false|True|False|None|null)`|\b(Node(\.js)?|Python|Go|Rust)\s*v?\d+/i;
+const MAX_DEFAULTS = 12;
 
 export const SIGNALS = [
   { id: "telemetry", label: "telemetry or analytics SDK, or user identification", re: "posthog|mixpanel|amplitude|segment\\.(io|com)|@sentry/|sentry_sdk|\\$identify|\\.identify\\(|track_event|captureException|google-analytics|gtag\\(" },
@@ -49,19 +53,25 @@ export async function docCandidates(root, sources) {
       const line = lines[i].trim();
       if (line.length < 15 || line.length > 600 || /^#{1,6}\s/.test(line) || /^(import|export)\s/.test(line)) continue;
       const a = TIER_A.test(line), b = TIER_B.test(line), g = GUARANTEE.test(line);
-      const score = (a ? 3 : 0) + (b ? 1 : 0) + (g ? 1 : 0);
-      if (score < 2) continue;
+      let score = (a ? 3 : 0) + (b ? 1 : 0) + (g ? 1 : 0);
+      const d = DEFAULTISH.test(line) && CONCRETE.test(line);
+      if (score < 2 && !d) continue;
       if (inFence(lines, i)) continue;
-      const risk = a || (b && g) ? "high" : "guarantee";
+      const risk = a || (b && g) ? "high" : score >= 2 ? "guarantee" : "default";
+      if (risk === "default") score = 1.5;
       found.push({ file: s.file, line: i + 1, text: line.replace(/\s+/g, " ").slice(0, 220), risk, score, rankIdx });
     }
   }
   found.sort((a, b) => b.score - a.score || a.rankIdx - b.rankIdx || a.line - b.line);
   const kept = [];
+  let defaults = 0;
   for (const c of found) {
     if (kept.some((k) => (k.file === c.file && Math.abs(k.line - c.line) <= 2) || k.text === c.text)) continue;
+    if (c.risk === "default") {
+      if (defaults >= MAX_DEFAULTS) continue;
+      defaults++;
+    } else if (kept.length - defaults >= MAX_CANDIDATES) continue;
     kept.push(c);
-    if (kept.length >= MAX_CANDIDATES) break;
   }
   return kept.map(({ rankIdx, score, ...c }, i) => ({ id: `c${i + 1}`, ...c }));
 }
@@ -159,7 +169,7 @@ export function coverage(audit, skipped = []) {
   const isSkipped = (pred) => skipped.some(pred);
   const missing = [];
   for (const c of audit.candidates || []) {
-    if (c.risk !== "high") continue;
+    if (c.risk !== "high" && c.risk !== "default") continue;
     const covered = audit.claims.some((cl) => cl.source.file === c.file && Math.abs(cl.source.line_start - c.line) <= 3);
     if (!covered && !isSkipped((s) => s.candidate === c.id)) missing.push({ kind: "candidate", id: c.id, where: `${c.file}:${c.line}`, text: c.text });
   }

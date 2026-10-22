@@ -204,6 +204,8 @@ const CODE_DOC = /(^|\/)(src|lib|main|crates|packages\/[^/]+\/src)\/.*\.(md|mdx|
 const DOCS_SITE = /(^|\/)(content\/docs|docs|guides?|pages|tutorials?)\//i;
 const NON_PROMISE = { test: (f) => NON_PROMISE_HARD.test(f) || (CODE_DOC.test(f) && !DOCS_SITE.test(f)) };
 const MIN_IMPACT = 20;
+// A VERIFIED verdict whose own explanation says the code disagrees is a labelling slip, not a verification.
+const CONTRADICTION = /\b(contradicts?|contradicting|does not match|doesn't match|do not match|don't match|mismatch(es)?|is wrong|incorrect(ly)?|not \d[\d,.]*\b(?! *(or|and)\b)|instead of \d|rather than \d)/i;
 const isFinding = (c) => c.verdict === "FALSE" || c.verdict === "PARTIAL";
 
 async function checkAll(audit, evidence, extraClaimFiles = []) {
@@ -241,6 +243,9 @@ export async function recordClaim(input) {
     problems.push(`${input.verdict} needs user_impact: what a user who relies on this sentence would get wrong. If you cannot name a real consequence, record it as VERIFIED with a note instead`);
   }
   if (input.verdict === "VERIFIED" && evidence.every((e) => e.type === "absent")) problems.push("VERIFIED needs a quote from the code that implements the claim, not only an absence");
+  if (input.verdict === "VERIFIED" && CONTRADICTION.test(`${input.explanation || ""} ${input.note || ""}`)) {
+    problems.push("the explanation describes a mismatch between the claim and the code, but the verdict is VERIFIED. If the code contradicts the claim, record PARTIAL or FALSE with user_impact; if it doesn't, rewrite the explanation");
+  }
   if (input.source?.file && NON_PROMISE.test(input.source.file)) {
     problems.push(`claim source ${input.source.file} is a changelog, plan or internal developer doc, not a promise to users. Use README, user docs or product pages`);
   }
