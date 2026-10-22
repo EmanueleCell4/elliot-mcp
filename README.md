@@ -129,15 +129,15 @@ What it still misses: on the same 9 repos it found 6 of the 10 serious issues I 
 
 ### Benchmark: Claude with Elliot vs Claude alone
 
-Eight widely used SDKs, 17 broken promises planted by flipping a value behind a documented default, two runs per condition, same model and instructions. A blind judge checked every finding that was not a planted bug.
+Eight widely used SDKs, 18 broken promises planted by flipping a value behind a documented default, two runs per condition, same model and instructions. A blind judge checked every finding that was not a planted bug.
 
 | | Claude alone | Claude + Elliot |
 |---|---|---|
-| Planted bugs found (2 runs) | 26 / 34 (76%) | 30 / 34 (88%) |
+| Planted bugs found (2 runs) | 28 / 36 (78%) | 30 / 36 (83%) |
 | False alarms (judged not real) | 21% of findings | 6% of findings |
-| Real unplanted problems found | 12 | 5 |
+| Real unplanted problems found | 8 | 5 |
 
-Elliot finds more of the planted bugs and raises about a third as many false alarms; Claude alone casts a wider net. Method, limits and all raw outputs: [`benchmark/planted-promises`](benchmark/planted-promises).
+Elliot raises about a third as many false alarms and finds slightly more planted bugs; Claude alone casts a wider net. When the two blind judges (Claude and Codex) disagreed, reading the code showed Codex had misstated the code 9 times: a second model is not a check unless something re-reads the source. Method, limits and all raw outputs: [`benchmark/planted-promises`](benchmark/planted-promises).
 
 ## How it works
 

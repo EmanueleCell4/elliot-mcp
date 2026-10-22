@@ -1,0 +1,13 @@
+{
+  "note": "Where the Claude judge and the Codex judge disagreed, the finding was settled by reading the cited code at the pinned commit (benchmark copy). Quotes are the deciding lines.",
+  "j9,k2,k17": {"verdict": "REAL", "evidence": "vercel/ai packages/anthropic/src/anthropic-provider.ts:161-169 uses options.authToken only; ANTHROPIC_AUTH_TOKEN appears only in a doc comment (line 106). Codex said the provider reads the variable: it does not."},
+  "j14,k16": {"verdict": "REAL", "evidence": "openai-agents-python src/agents/realtime/openai_realtime.py:689 sets \"max_size\": 8 * 1024 * 1024; docs say the default is None (unlimited). Codex said the implementation uses None: it does not."},
+  "k13": {"verdict": "REAL", "evidence": "vercel/ai to-ui-message-stream.ts:25 `sendReasoning = true`; reference docs say it defaults to false. Codex said it defaults to false: it does not."},
+  "j16,k14": {"verdict": "REAL", "evidence": "openai-responses-language-model.ts:1486-1487 pushes type: 'custom', kind: 'openai.compaction'; docs say compaction items are returned as text parts."},
+  "j15": {"verdict": "REAL", "evidence": "codex docs/install.md:7 says Windows 11 only via WSL2; scripts/install/install.ps1 installs native x86_64/aarch64-pc-windows-msvc binaries and never mentions WSL (0 matches). Codex said the installer has WSL2 checks: it has none."},
+  "k11": {"verdict": "REAL", "evidence": "docs/get-started/packages.md:49 says the root entry of every package never reaches a Node builtin; packages/server-legacy/src/index.ts re-exports sse/, and sse/sse.ts imports node: builtins. Arguable if server-legacy is not meant to count as a package."},
+  "j12,k7": {"verdict": "PLANTED", "evidence": "auth.rs:46 MAX_RENEWAL_BACKOFF 30 -> 61 was a planted mutation wrongly labelled invalid; relabelled valid. Codex judged the unmutated upstream code, where it holds."},
+  "j13": {"verdict": "UNCLEAR", "evidence": "model_retry.py:540-552 returns False without a policy on the shown paths; the auditors' reading depends on a branch the judges described differently."},
+  "k10": {"verdict": "UNCLEAR", "evidence": "README says fallback to generated_at; the query falls back to source_updated_at. Possibly the same timestamp under another name."},
+  "j4": {"verdict": "UNCLEAR", "evidence": "Depends on httpx2 header handling outside the repository."}
+}

@@ -250,7 +250,8 @@
   "code_line": 46,
   "old": "30",
   "new": "61",
-  "valid": false
+  "valid": true,
+  "note": "relabelled valid on 2026-10-23: the doc says the backoff caps at 30 seconds, the mutation makes it 61"
  },
  {
   "repo": "openai_codex",
