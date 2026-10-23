@@ -377,7 +377,7 @@ Nothing. Elliot is MIT-licensed and the audit runs on the agent and model you al
 Yes. It runs where your code is. Only `verify_github` needs `GITHUB_TOKEN` for private repos.
 
 **Can I trust a PASS?**
-Treat a clean report as "nothing found among the claims checked", not as a certificate. Elliot is a static reading of the code. It does not run your app yet, and it does not look for missing authorization checks yet.
+Treat a clean report as "nothing found among the claims checked", not as a certificate. The claim audit is a static reading of the code; it does not run your app (use `verify_outcome` for that). Authorization checks are covered only where sibling handlers check the caller and one does not; ownership checks are not covered yet.
 
 **I found a false positive.**
 Please open an issue with the report's `claims.json` entry. False positives are the number Elliot is built to keep at zero.
@@ -399,7 +399,7 @@ Please open an issue with the report's `claims.json` entry. False positives are 
 ```bash
 git clone https://github.com/EmanueleCell4/elliot-mcp && cd elliot-mcp
 npm install
-npm test     # 19 end-to-end tests: spawns the server over stdio and drives it with the MCP client
+npm test     # 35 tests, including end-to-end runs that drive the server over stdio with the MCP client
 ```
 
 The server is plain Node (ES modules) with two dependencies: the MCP SDK and zod. The main pieces:
