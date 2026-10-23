@@ -70,7 +70,9 @@ test("sandbox denies host file reads/writes and network; timeout terminates chil
     assert.equal(childProbe.verdict, "INCONCLUSIVE");
     assert.equal(childProbe.evidence.process_group_terminated, true);
     const childPid = Number(childProbe.evidence.stdout.trim().split(/\s+/).at(-1));
-    if (Number.isInteger(childPid) && childPid > 0) assert.throws(() => process.kill(childPid, 0), { code: "ESRCH" });
+    // On Linux bwrap runs the check in its own PID namespace: the printed pid is a namespace pid, not a
+    // host pid, and the kernel kills every process in the namespace when its init exits.
+    if (process.platform !== "linux" && Number.isInteger(childPid) && childPid > 0) assert.throws(() => process.kill(childPid, 0), { code: "ESRCH" });
   } finally {
     listener?.close();
     await rm(source, { recursive: true, force: true });
