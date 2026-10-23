@@ -134,7 +134,8 @@ export async function checkOutcome({ path: inputPath = process.cwd(), command, a
   let isolationCommand;
   let sandboxStarted = false;
   try {
-    temp = await mkdtemp(path.join(tmpdir(), "elliot-outcome-"));
+    // Resolve symlinks (macOS: /var -> /private/var) so the sandbox profile names the real path.
+    temp = await realpath(await mkdtemp(path.join(tmpdir(), "elliot-outcome-")));
     const copy = path.join(temp, "repo");
     const scratch = path.join(temp, "scratch");
     const home = path.join(scratch, "home");
