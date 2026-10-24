@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
   "name": "io.github.emanuelecell4/elliot-mcp",
   "title": "Elliot",
-  "description": "Your agent says it's done. Elliot checks: verifies agent claims (file changes, deploys, PRs, CI, npm) against ground truth, with a receipt per check.",
+  "description": "Independent verifier for AI agents: checks agent claims and doc promises against code, with receipts.",
   "repository": {
     "url": "https://github.com/EmanueleCell4/elliot-mcp",
     "source": "github"
