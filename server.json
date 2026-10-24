@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-  "name": "io.github.emanuelecell4/elliot-mcp",
+  "name": "io.github.EmanueleCell4/elliot-mcp",
   "title": "Elliot",
   "description": "Independent verifier for AI agents: checks agent claims and doc promises against the code.",
   "repository": {

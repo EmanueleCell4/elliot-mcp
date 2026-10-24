@@ -41,7 +41,7 @@
   "engines": {
     "node": ">=20"
   },
-  "mcpName": "io.github.emanuelecell4/elliot-mcp",
+  "mcpName": "io.github.EmanueleCell4/elliot-mcp",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/EmanueleCell4/elliot-mcp.git"
