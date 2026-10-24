@@ -5,17 +5,50 @@ on:
 
 permissions:
   contents: read
-  id-token: write
 
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
     steps:
       - uses: actions/checkout@v4
-      - name: Install mcp-publisher
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Read version
+        run: echo "VERSION=$(node -p 'require("./package.json").version')" >> "$GITHUB_ENV"
+      - name: Build MCPB bundle
+        shell: bash
         run: |
-          curl -fsSL "https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_linux_amd64.tar.gz" | tar xz mcp-publisher
+          set -euo pipefail
+          STAGE="$RUNNER_TEMP/mcpb"
+          mkdir -p "$STAGE"
+          cp -r src skills package.json package-lock.json README.md LICENSE mcpb/manifest.json "$STAGE/"
+          node -e 'const f=process.argv[1];const m=require(f);m.version=process.env.VERSION;require("fs").writeFileSync(f,JSON.stringify(m,null,2))' "$STAGE/manifest.json"
+          (cd "$STAGE" && npm ci --omit=dev)
+          npx -y @anthropic-ai/mcpb@2.1.2 pack "$STAGE" "elliot-mcp-$VERSION.mcpb"
+          echo "SHA=$(sha256sum "elliot-mcp-$VERSION.mcpb" | cut -d' ' -f1)" >> "$GITHUB_ENV"
+      - name: Attach bundle to the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "v$VERSION" "elliot-mcp-$VERSION.mcpb" --clobber --repo "$GITHUB_REPOSITORY"
+      - name: Point server.json at this bundle
+        run: |
+          node -e '
+            const fs=require("fs");const s=require("./server.json");
+            const p=s.packages.find(p=>p.registryType==="mcpb");
+            p.version=process.env.VERSION;
+            p.identifier=`https://github.com/${process.env.GITHUB_REPOSITORY}/releases/download/v${process.env.VERSION}/elliot-mcp-${process.env.VERSION}.mcpb`;
+            p.fileSha256=process.env.SHA;
+            fs.writeFileSync("server.json",JSON.stringify(s,null,2));'
+          cat server.json
+      - name: Install mcp-publisher
+        run: curl -fsSL "https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_linux_amd64.tar.gz" | tar xz mcp-publisher
       - name: Log in with GitHub OIDC
         run: ./mcp-publisher login github-oidc
-      - name: Publish server.json
+      - name: Publish
         run: ./mcp-publisher publish

@@ -1,0 +1,44 @@
+{
+  "manifest_version": "0.2",
+  "name": "elliot-mcp",
+  "version": "0.6.0",
+  "description": "Your agent says it's done. Elliot checks. Independent verification for code written by AI agents: checks agent claims and audits what a repo promises against its code, with an independent review of every finding.",
+  "author": {
+    "name": "Emanuele Cella",
+    "url": "https://github.com/EmanueleCell4"
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "src/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/src/index.js"
+      ],
+      "env": {
+        "GITHUB_TOKEN": "${user_config.github_token}"
+      }
+    }
+  },
+  "license": "MIT",
+  "display_name": "Elliot",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EmanueleCell4/elliot-mcp"
+  },
+  "homepage": "https://github.com/EmanueleCell4/elliot-mcp",
+  "user_config": {
+    "github_token": {
+      "type": "string",
+      "title": "GitHub token (optional)",
+      "description": "For private repos and higher GitHub rate limits.",
+      "required": false,
+      "sensitive": true
+    }
+  },
+  "compatibility": {
+    "runtimes": {
+      "node": ">=20.0.0"
+    }
+  }
+}
