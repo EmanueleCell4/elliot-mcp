@@ -4,7 +4,7 @@ Elliot is a local stdio MCP server (Node.js 20+, git). No account and no API key
 
 ## Cline
 
-Add this to Cline's MCP settings (`cline_mcp_settings.json`):
+Edit only Cline's MCP settings file (`cline_mcp_settings.json`). Do not clone the repository, run `npm link`, run `init`, or change other agents' config files: `npx` fetches the server on first start. Add:
 
 ```json
 {
