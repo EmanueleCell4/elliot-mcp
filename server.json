@@ -3,16 +3,27 @@
   "name": "io.github.emanuelecell4/elliot-mcp",
   "title": "Elliot",
   "description": "Your agent says it's done. Elliot checks: verifies agent claims (file changes, deploys, PRs, CI, npm) against ground truth, with a receipt per check.",
-  "repository": { "url": "https://github.com/EmanueleCell4/elliot-mcp", "source": "github" },
+  "repository": {
+    "url": "https://github.com/EmanueleCell4/elliot-mcp",
+    "source": "github"
+  },
   "version": "0.6.0",
   "packages": [
     {
-      "registryType": "npm",
-      "identifier": "elliot-mcp",
+      "registryType": "mcpb",
+      "identifier": "https://github.com/EmanueleCell4/elliot-mcp/releases/download/v0.6.0/elliot-mcp-0.6.0.mcpb",
       "version": "0.6.0",
-      "transport": { "type": "stdio" },
+      "fileSha256": "4b728e758fed74d760cf10392ca1b2b4f307c3d5de0cb40a7994d055d33e0772",
+      "transport": {
+        "type": "stdio"
+      },
       "environmentVariables": [
-        { "name": "GITHUB_TOKEN", "description": "Optional. For private repos and higher GitHub rate limits.", "isRequired": false, "isSecret": true }
+        {
+          "name": "GITHUB_TOKEN",
+          "description": "Optional. For private repos and higher GitHub rate limits.",
+          "isRequired": false,
+          "isSecret": true
+        }
       ]
     }
   ]
