@@ -10,6 +10,7 @@
 <p align="center">
   <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-2ea44f"></a>
   <a href="https://glama.ai/mcp/servers/EmanueleCell4/elliot-mcp"><img alt="elliot-mcp on Glama: A" src="https://glama.ai/mcp/servers/EmanueleCell4/elliot-mcp/badges/score.svg"></a>
+  <a href="https://mcpservers.org/servers/emanuelecell4/elliot-mcp"><img alt="Listed on mcpservers.org" src="https://mcpservers.org/badge.svg"></a>
   <img alt="Node 20+" src="https://img.shields.io/badge/node-%E2%89%A520-339933">
   <img alt="MCP server" src="https://img.shields.io/badge/MCP-server-F2B544">
   <img alt="Works with Claude Code, Cursor and Codex" src="https://img.shields.io/badge/works%20with-Claude%20Code%20%C2%B7%20Cursor%20%C2%B7%20Codex-8B939E">
