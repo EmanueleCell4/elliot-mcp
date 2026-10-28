@@ -9,6 +9,7 @@
 import { readFileSync, readdirSync, writeFileSync, mkdirSync, copyFileSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { legalPages } from "./legal.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const REPO = process.env.ELLIOT_SCORE_REPO || "EmanueleCell4/elliot-mcp";
@@ -69,7 +70,7 @@ function page({ title, desc, path, body, ogImage }) {
 <link rel="icon" href="${up}assets/elliot.png"><style>${CSS}</style></head><body><div class="wrap">
 <header><a class="brand" href="${up}index.html">ELLIOT</a><nav><a href="${up}leaderboard.html">Leaderboard</a><a href="${up}method.html">Method</a><a href="https://github.com/${REPO}">GitHub</a></nav></header>
 ${body}
-<footer>ELLIOT checks whether software keeps the promises in its own docs. Every score is traced to the exact file and line, challenged by an independent reviewer, and re-checked when the code changes. <a href="${up}method.html">How scores work</a>.</footer>
+<footer>ELLIOT checks whether software keeps the promises in its own docs. Every score is traced to the exact file and line, challenged by an independent reviewer, and re-checked when the code changes. <a href="${up}method.html">How scores work</a>.<br><a href="${up}privacy.html">Privacy</a> · <a href="${up}terms.html">Terms</a> · <a href="${up}disclosure.html">Disclosure policy</a></footer>
 </div></body></html>`;
 }
 
@@ -167,6 +168,7 @@ export function build(dataDir, outDir) {
   write(join(outDir, "index.html"), homePage(records));
   write(join(outDir, "leaderboard.html"), boardPage(records));
   write(join(outDir, "method.html"), methodPage());
+  for (const p of legalPages(REPO)) write(join(outDir, p.path), page(p));
   write(join(outDir, ".nojekyll"), "");
   for (const r of records) {
     write(join(outDir, "r", r.repo, "index.html"), repoPage(r));
