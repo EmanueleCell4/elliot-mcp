@@ -23,3 +23,7 @@ Security lead: Emanuele Cella (maintainer).
 ## Supported versions
 
 Only the latest release receives security fixes.
+
+## Your ELLIOT Score report
+
+If you maintain a repository with an ELLIOT Score and want the full report behind it (every broken promise, with file and line), email cellaemanuele05@gmail.com with "ELLIOT Score report" and the repository in the subject, from an address or account that shows you maintain it. Reports with unfixed findings are shared only with maintainers.

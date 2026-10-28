@@ -95,6 +95,10 @@ When every claim Elliot checks holds up, the report includes a badge you can pas
 
 [![Docs verified by Elliot](https://img.shields.io/badge/docs-verified%20by%20Elliot-2EC5FF)](https://github.com/EmanueleCell4/elliot-mcp)
 
+### ELLIOT Score (no install)
+
+Paste any public GitHub repository at **[emanuelecell4.github.io/elliot-mcp](https://emanuelecell4.github.io/elliot-mcp/)** and get its ELLIOT Score: how many of the promises in its docs hold up in its code, from 0 to 10, with a badge for the README and a public [leaderboard](https://emanuelecell4.github.io/elliot-mcp/leaderboard.html). Every finding still goes through the independent reviewer. Scores and counts are public; details of broken promises go to the maintainers first and are never published while unfixed. [How the score works](https://emanuelecell4.github.io/elliot-mcp/method.html).
+
 ## Why
 
 Coding agents say "Done ✅" when the work isn't done. They delete failing tests, skip checks, describe security that doesn't exist, and write READMEs that promise what the code never does. CI stays green because tests check the code the agent wrote, not the promises the product makes.
