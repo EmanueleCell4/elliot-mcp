@@ -80,9 +80,13 @@ fi
 echo "::endgroup::"
 
 echo "::group::Finish"
-jq -n --arg id "$AUDIT_ID" --argjson sk "$SKIPPED" '{audit_id:$id, out_dir:".elliot-score/report", skipped:$sk}' > "$WORK/finish-args.json"
-(cd "$TARGET" && ELLIOT_ROLE=auditor node "$HERE/mcp-call.mjs" elliot_audit_finish "$WORK/finish-args.json") | tee "$WORK/finish.out" || true
 REPORT="$TARGET/.elliot-score/report/claims.json"
+if [ -f "$REPORT" ]; then
+  echo "the auditor already finished (no findings needed review)"
+else
+  jq -n --arg id "$AUDIT_ID" --argjson sk "$SKIPPED" '{audit_id:$id, out_dir:".elliot-score/report", skipped:$sk}' > "$WORK/finish-args.json"
+  (cd "$TARGET" && ELLIOT_ROLE=auditor node "$HERE/mcp-call.mjs" elliot_audit_finish "$WORK/finish-args.json") | tee "$WORK/finish.out" || true
+fi
 [ -f "$REPORT" ] || { echo "the audit could not be finished"; exit 67; }
 echo "::endgroup::"
 
