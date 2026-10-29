@@ -55,7 +55,8 @@ test("action.yml is valid YAML for GitHub", () => {
 test("action.yml carries the metadata the Marketplace listing needs", () => {
   const doc = parseBlockMapping(source);
   assert.ok(doc.name.length > 0 && doc.name.length <= 80, "name must be present and short enough to list");
-  assert.ok(doc.description.length > 0 && doc.description.length <= 250, "description must be present and listable");
+  // GitHub refuses a Marketplace listing whose description reaches 125 characters.
+  assert.ok(doc.description.length > 0 && doc.description.length < 125, `description must be present and under 125 characters for the Marketplace (currently ${doc.description.length})`);
   assert.ok(doc.branding && doc.branding.icon && doc.branding.color, "the Marketplace listing needs branding.icon and branding.color");
   // GitHub accepts only this set of branding colours.
   assert.ok(["white", "yellow", "blue", "green", "orange", "red", "purple", "gray-dark"].includes(doc.branding.color), `unsupported branding colour: ${doc.branding.color}`);
