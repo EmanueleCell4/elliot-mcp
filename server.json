@@ -7,12 +7,12 @@
     "url": "https://github.com/EmanueleCell4/elliot-mcp",
     "source": "github"
   },
-  "version": "0.7.0",
+  "version": "0.7.1",
   "packages": [
     {
       "registryType": "mcpb",
       "identifier": "https://github.com/EmanueleCell4/elliot-mcp/releases/download/v0.6.0/elliot-mcp-0.6.0.mcpb",
-      "version": "0.7.0",
+      "version": "0.7.1",
       "fileSha256": "4b728e758fed74d760cf10392ca1b2b4f307c3d5de0cb40a7994d055d33e0772",
       "transport": {
         "type": "stdio"
