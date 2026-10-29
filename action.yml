@@ -1,5 +1,5 @@
-name: Elliot PR claim check
-description: Checks that what a pull request description says is true in the code, with file:line proof for every finding.
+name: Elliot - Verify AI Pull Request Claims
+description: "Checks every claim a pull request description makes against the merged code, with file:line proof. In strict mode it fails when an AI agent's claim is not true."
 author: Emanuele Cella
 branding:
   icon: check-circle
@@ -13,7 +13,7 @@ inputs:
     description: Anthropic API key used by Claude Code to read the code. Store it as a repository secret.
     required: true
   github_token:
-    description: Token used to post the comment. The default workflow token is enough with `pull-requests: write`.
+    description: "Token used to post the comment. The default workflow token is enough with `pull-requests: write` permission."
     required: false
     default: ${{ github.token }}
   model:
