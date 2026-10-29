@@ -50,8 +50,11 @@ Requirements: Node 20 or newer, git, and Claude Code, Cursor or Codex.
 Inside Claude Code:
 
 ```
-/plugin install elliot --marketplace EmanueleCell4/elliot-mcp
+/plugin marketplace add EmanueleCell4/elliot-mcp
+/plugin install elliot@elliot-mcp
 ```
+
+The first command registers Elliot's plugin marketplace; the second installs Elliot. After installation, run `/elliot:audit` in your project. This is an opt-in local tool and does not automatically post reports or install itself in other repositories.
 
 That adds the Elliot tools, a `/elliot:audit` command, and a skill that makes Claude verify its own "done" claims before reporting them.
 
