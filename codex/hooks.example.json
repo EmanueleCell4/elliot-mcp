@@ -1,0 +1,11 @@
+{
+  "hooks": {
+    "Stop": [{
+      "hooks": [{
+        "type": "command",
+        "command": "node ./codex/stop-hook.mjs",
+        "statusMessage": "ELLIOT: verifying completion claim"
+      }]
+    }]
+  }
+}
