@@ -1,5 +1,6 @@
 // Turns a focused audit (claims.json) into the pull request comment.
 import { readFileSync, writeFileSync } from "node:fs";
+import { verdictFor } from "./verdict.mjs";
 
 const [, , reportPath, outPath] = process.argv;
 const a = JSON.parse(readFileSync(reportPath, "utf8"));
@@ -15,12 +16,14 @@ const order = { FALSE: 0, PARTIAL: 1, UNVERIFIABLE: 2, VERIFIED: 3 };
 const esc = (s) => String(s ?? "").replace(/\|/g, "\\|").replace(/\n/g, " ");
 
 const broken = t.FALSE + t.PARTIAL;
-const verdict = !t.claims ? "skipped" : broken ? "findings" : "pass";
-const head = !t.claims
-  ? "Elliot found no checkable claims in this description."
-  : broken
-    ? `**${broken} of ${t.claims} claims in this description don't fully hold up in the code.**`
-    : `**All ${t.claims} claims in this description hold up in the code.**`;
+const verdict = verdictFor(t);
+const head = verdict === "skipped"
+  ? "Elliot found no checkable claims in this description. No verification passed."
+  : verdict === "findings"
+    ? `**${broken} incomplete or false claims and ${t.behaviors ?? 0} undisclosed behaviors were found.**`
+    : verdict === "inconclusive"
+      ? "**Elliot could not verify all claims; this report is inconclusive.**"
+      : `**All ${t.claims} claims in this description hold up in the code.**`;
 
 const rows = [...a.claims].sort((x, y) => order[x.verdict] - order[y.verdict]).map((c) =>
   `| ${icon[c.verdict]} ${c.verdict} | ${esc(c.claim)} | ${c.evidence.slice(0, 2).map(link).join("<br>") || "—"} | ${esc(c.verdict === "VERIFIED" ? "" : c.explanation)} |`);
