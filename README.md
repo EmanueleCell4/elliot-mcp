@@ -17,6 +17,7 @@
 </p>
 
 <p align="center">
+  <a href="#track-record">Track record</a> ·
   <a href="#quick-start">Quick start</a> ·
   <a href="#what-it-found">What it found</a> ·
   <a href="#how-it-works">How it works</a> ·
@@ -24,6 +25,24 @@
   <a href="#configuration">Configuration</a> ·
   <a href="#faq">FAQ</a>
 </p>
+
+---
+
+## Track record
+
+Findings from Elliot audits, each verified by hand before it was reported. "Fixed upstream" means the project changed its code or docs on its main branch.
+
+| Project | Finding | Status |
+|---|---|---|
+| **Google ADK** (`google/adk-python`) | Docs said `ContainerCodeExecutor` runs as a non-root user; the container runs as the image's default user (root for `python:3.11-slim`). | **Fixed upstream**: [PR #7714](https://github.com/google/adk-python/pull/7714) merged, [issue #7712](https://github.com/google/adk-python/issues/7712) closed |
+| **Qwen Code** (`QwenLM/qwen-code`) | Privacy notice said no extra data is collected with your own API key; usage statistics are on by default for every auth type. | **Fixed upstream**: [issue #15478](https://github.com/QwenLM/qwen-code/issues/15478) triaged as accurate and closed by [#15554](https://github.com/QwenLM/qwen-code/pull/15554), which rewrote the notice |
+| **dyad** (`dyad-sh/dyad`) | Security page called the script sandbox read-only; scripts can get `write_file` and MCP tools. | **Fixed upstream**: [PR #4881](https://github.com/dyad-sh/dyad/pull/4881) merged, [issue #4879](https://github.com/dyad-sh/dyad/issues/4879) closed |
+| **Gemini CLI** (`google-gemini/gemini-cli`) | Docs say usage statistics include no email or personal data; they include the signed-in account's email. | Reported: [issue #29885](https://github.com/google-gemini/gemini-cli/issues/29885) |
+| **GitHub MCP Server** (`github/github-mcp-server`) | README says `GITHUB_TOOLSETS` overrides `--toolsets`; the flag wins. | Reported: [issue #3578](https://github.com/github/github-mcp-server/issues/3578) |
+| **Anthropic TypeScript SDK** (`foundry-sdk`) | README describes deployment routing the SDK doesn't implement. | Reported: [issue #1283](https://github.com/anthropics/anthropic-sdk-typescript/issues/1283) |
+| **Crush** (`charmbracelet/crush`) | Metrics described as tied to a device hash; on Hyper sign-in they are aliased to the account ID. | Reported: [issue #4134](https://github.com/charmbracelet/crush/issues/4134) |
+| **opcode** (`winfunc/opcode`) | README says "No Telemetry"; analytics are on by default with consent pre-set to yes. | Reported: [issue #481](https://github.com/winfunc/opcode/issues/481) |
+| **vibe-kanban** (`BloopAI/vibe-kanban`) | Logging in turns telemetry back on after the user disabled it, and identifies the user by email. | Reported: [issue #3482](https://github.com/BloopAI/vibe-kanban/issues/3482) |
 
 ---
 
