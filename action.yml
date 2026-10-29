@@ -5,6 +5,10 @@ branding:
   icon: check-circle
   color: blue
 inputs:
+  mode:
+    description: 'report (default, non-blocking) or strict (fail when verdict is not pass).'
+    required: false
+    default: report
   anthropic_api_key:
     description: Anthropic API key used by Claude Code to read the code. Store it as a repository secret.
     required: true
@@ -22,7 +26,7 @@ inputs:
     default: "2.1.307"
 outputs:
   verdict:
-    description: "pass when every checked claim holds up, findings when some don't, skipped when there was nothing to check."
+    description: "pass only on supported evidence; findings, inconclusive, or skipped otherwise."
     value: ${{ steps.run.outputs.verdict }}
 runs:
   using: composite
@@ -36,3 +40,9 @@ runs:
         ELLIOT_MODEL: ${{ inputs.model }}
         ELLIOT_CC_VERSION: ${{ inputs.claude_code_version }}
         ELLIOT_ACTION_PATH: ${{ github.action_path }}
+    - name: Apply verdict policy
+      shell: bash
+      run: node "${{ github.action_path }}/action/enforce.mjs"
+      env:
+        ELLIOT_MODE: ${{ inputs.mode }}
+        ELLIOT_VERDICT: ${{ steps.run.outputs.verdict }}
