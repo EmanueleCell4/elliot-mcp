@@ -78,8 +78,9 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: EmanueleCell4/elliot-mcp@v0.6.0
+      - uses: EmanueleCell4/elliot-mcp@v0.7.0
         with:
+          mode: strict
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
 ```
 
@@ -92,7 +93,7 @@ The comment looks like this:
 
 It runs Claude Code with your API key. One check usually takes 1–2 minutes. Nothing is sent anywhere except Anthropic's API and GitHub.
 
-The Action defaults to **report-only**. After installing a release that includes strict mode, set `mode: strict` in the `with:` block to fail the check for findings, missing evidence, skipped audits and inconclusive results. To enforce merge protection, configure that workflow as a required GitHub status check. Do not enable enforcement on forked PRs without reviewing credential exposure and runner isolation.
+`mode: strict` (shown above, available from v0.7.0) fails the check for findings, missing evidence, skipped audits and inconclusive results, so a merge can be blocked on it: add the job as a required status check in your branch protection rules. Drop `mode` to get the non-blocking report instead. A ready-to-copy workflow is in [`examples/workflows/elliot-strict.yml`](examples/workflows/elliot-strict.yml). Do not enable enforcement on forked PRs without reviewing credential exposure and runner isolation.
 
 ### README badge
 
