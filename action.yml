@@ -1,5 +1,5 @@
 name: Elliot - Verify AI Pull Request Claims
-description: "Checks every claim a pull request description makes against the merged code, with file:line proof. In strict mode it fails when an AI agent's claim is not true."
+description: "Checks every claim in a pull request description against the code, with file:line proof. Can block the merge."
 author: Emanuele Cella
 branding:
   icon: check-circle

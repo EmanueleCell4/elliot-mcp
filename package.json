@@ -1,6 +1,6 @@
 {
   "name": "elliot-mcp",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "Your agent says it's done. Elliot checks. Independent verification for code written by AI agents: checks agent claims and audits what a repo promises against its code, with an independent review of every finding.",
   "main": "src/index.js",
   "directories": {
