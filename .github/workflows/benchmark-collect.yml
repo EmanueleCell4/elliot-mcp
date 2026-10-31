@@ -1,0 +1,89 @@
+name: Benchmark · collect agent PRs
+
+# Builds the sample for benchmark/agent-pr-claims: merged pull requests written by
+# coding agents in maintained public repositories. Collection only reads public
+# data through the GitHub API; it runs no model and costs nothing.
+#
+# Run it from the Actions tab. The sample is uploaded as an artifact and, when
+# `commit` is true, written to the benchmark-sample branch for review.
+
+on:
+  workflow_dispatch:
+    inputs:
+      since:
+        description: "Earliest PR creation date (YYYY-MM-DD)"
+        required: false
+        default: "2026-09-01"
+      until:
+        description: "Latest PR creation date (YYYY-MM-DD)"
+        required: false
+        default: "2026-10-28"
+      min_stars:
+        description: "Minimum repository stars"
+        required: false
+        default: "300"
+      target:
+        description: "How many pull requests to collect"
+        required: false
+        default: "60"
+      commit:
+        description: "Also push the sample to the benchmark-sample branch"
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Collect
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          BM_SINCE: ${{ inputs.since }}
+          BM_UNTIL: ${{ inputs.until }}
+          BM_MIN_STARS: ${{ inputs.min_stars }}
+          BM_TARGET: ${{ inputs.target }}
+        run: node benchmark/agent-pr-claims/scripts/collect.mjs --out sample.json
+
+      - name: Summary
+        run: |
+          set -euo pipefail
+          {
+            echo "### Sample"
+            echo ""
+            echo "- pull requests: $(jq '.sample_size' sample.json)"
+            echo "- repositories scanned: $(jq '.repositories_scanned' sample.json)"
+            echo "- by agent: $(jq -c '.by_agent' sample.json)"
+            echo ""
+            jq -r '.sample[] | "- \(.url) (\(.agent), \(.stars) stars, \(.changed_files) files)"' sample.json | head -60
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: agent-pr-sample
+          path: sample.json
+
+      - name: Push the sample
+        if: inputs.commit
+        run: |
+          set -euo pipefail
+          git config user.name "ELLIOT benchmark"
+          git config user.email "elliot-benchmark@users.noreply.github.com"
+          git fetch origin benchmark-sample --depth 1 || true
+          git checkout -B benchmark-sample
+          mkdir -p benchmark/agent-pr-claims/data
+          cp sample.json benchmark/agent-pr-claims/data/sample.json
+          git add benchmark/agent-pr-claims/data/sample.json
+          git diff --cached --quiet || git commit -q -m "benchmark: sample of $(jq '.sample_size' sample.json) agent-authored pull requests"
+          git push -q origin benchmark-sample
